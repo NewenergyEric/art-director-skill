@@ -29,4 +29,4 @@ jobs:
       - name: Validate the fictional example
         run: python scripts/style_pack.py validate examples/moss-harbor-draft
       - name: Package the mother skill
-        run: python scripts/package_release.py --out build/art-director-v0.1.0.zip
+        run: python scripts/package_release.py --out "${{ runner.temp }}/art-director-v0.1.0.zip"
