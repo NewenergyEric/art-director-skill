@@ -1,0 +1,33 @@
+{
+  "record_type": "art-delivery",
+  "record_version": "1.0",
+  "project_id": null,
+  "pack_version": null,
+  "pack_fingerprint": null,
+  "asset_id": null,
+  "category": null,
+  "entity_id": null,
+  "task": null,
+  "status": "draft",
+  "stage": "concept",
+  "outputs": [],
+  "source_asset_paths": [],
+  "reference_ids": [],
+  "applicable_rule_ids": [],
+  "generation": {
+    "executed": false,
+    "tool": null,
+    "model": null,
+    "model_version": null,
+    "recipe_id": null,
+    "seed": null,
+    "parameters": {},
+    "prompt_record": null
+  },
+  "checks_performed": [],
+  "checks_not_performed": [],
+  "review_record": null,
+  "deviations": [],
+  "provenance": [],
+  "approval": null
+}

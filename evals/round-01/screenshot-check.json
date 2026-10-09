@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "command": "check-image",
+  "ok": false,
+  "source_path": "D:\\livesoftware\\xwechat_files\\Seraphim_Chongqing_b4f5\\temp\\RWTemp\\2026-10\\4f7188ddab5a0a9f4337585d1647b605\\9eb51e76cf9d822ce08701007ca2f1d7.jpg",
+  "sha256": "1948d35b09413068bbcfd2b3dde5b63638f6158a17dc974e399dfb7712671181",
+  "status": "checked",
+  "image": {
+    "width": 1702,
+    "height": 1276,
+    "format": "JPEG",
+    "mode": "RGB",
+    "has_alpha_channel": false,
+    "has_transparency_metadata": false,
+    "has_transparent_pixels": false,
+    "frames": 1,
+    "inspected_frame": 0,
+    "orientation_applied": false
+  },
+  "error": null,
+  "checks": {
+    "width": {
+      "expected": 1024,
+      "actual": 1702,
+      "result": "fail"
+    },
+    "height": {
+      "expected": 1536,
+      "actual": 1276,
+      "result": "fail"
+    },
+    "transparency": {
+      "expected": true,
+      "actual": false,
+      "result": "fail"
+    }
+  },
+  "identity_assessment": "not_performed",
+  "scope_of_check": "Decoded stored raster dimensions and first-frame pixel transparency only. No identity, style, anatomical, readability or artistic judgment; EXIF orientation is not applied."
+}

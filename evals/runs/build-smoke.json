@@ -1,0 +1,474 @@
+[
+  {
+    "command": [
+      "scripts/style_pack.py",
+      "render",
+      "examples/moss-harbor-draft"
+    ],
+    "exit_code": 0,
+    "result": {
+      "ok": true,
+      "command": "render",
+      "pack": "<repo>/examples/moss-harbor-draft",
+      "generated": [
+        "SKILL.md",
+        "STYLE.md",
+        "agents/openai.yaml",
+        "scripts/style_pack.py"
+      ],
+      "fingerprint": "62d59623904e592eea03d1b4829338754c780625e0da603931519613206dc04f",
+      "warnings": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'character'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'character'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'ui'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'ui'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[6].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[7].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "untested_recipe",
+          "path": "$.recipes[0]",
+          "message": "Recipe has no verified outcome; label outputs as unverified until evaluated."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.decisions[0].status",
+          "message": "Resolve proposed decisions before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        }
+      ]
+    }
+  },
+  {
+    "command": [
+      "scripts/style_pack.py",
+      "build",
+      "examples/moss-harbor-draft",
+      "--out",
+      "dist/moss-harbor-0.1.0-draft"
+    ],
+    "exit_code": 0,
+    "result": {
+      "ok": true,
+      "command": "build",
+      "out": "<repo>/dist/moss-harbor-0.1.0-draft",
+      "release": false,
+      "pack": {
+        "id": "moss-harbor",
+        "version": "0.1.0",
+        "status": "draft",
+        "fingerprint": "62d59623904e592eea03d1b4829338754c780625e0da603931519613206dc04f"
+      },
+      "files": 5,
+      "warnings": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'character'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'character'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'ui'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'ui'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[6].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[7].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "untested_recipe",
+          "path": "$.recipes[0]",
+          "message": "Recipe has no verified outcome; label outputs as unverified until evaluated."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.decisions[0].status",
+          "message": "Resolve proposed decisions before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        }
+      ]
+    }
+  },
+  {
+    "command": [
+      "dist/moss-harbor-0.1.0-draft/scripts/style_pack.py",
+      "verify",
+      "dist/moss-harbor-0.1.0-draft"
+    ],
+    "exit_code": 0,
+    "result": {
+      "ok": true,
+      "command": "verify",
+      "pack": {
+        "id": "moss-harbor",
+        "version": "0.1.0",
+        "status": "draft",
+        "fingerprint": "62d59623904e592eea03d1b4829338754c780625e0da603931519613206dc04f"
+      },
+      "release": false,
+      "errors": [],
+      "warnings": [],
+      "scope_of_check": "Unsigned content integrity only; neither origin/approver authentication nor artistic acceptance."
+    }
+  },
+  {
+    "command": [
+      "dist/moss-harbor-0.1.0-draft/scripts/style_pack.py",
+      "brief",
+      "dist/moss-harbor-0.1.0-draft",
+      "--category",
+      "character",
+      "--entity",
+      "lin",
+      "--task",
+      "林蹲在码头修理灯具",
+      "--out",
+      "evals/runs/generated-character-brief.json"
+    ],
+    "exit_code": 0,
+    "result": {
+      "ok": true,
+      "command": "brief",
+      "out": "<repo>/evals/runs/generated-character-brief.json",
+      "pack": {
+        "id": "moss-harbor",
+        "name": "苔港：有人生活的旧港（虚构演示草案）",
+        "version": "0.1.0",
+        "status": "draft",
+        "release": false,
+        "fingerprint": "62d59623904e592eea03d1b4829338754c780625e0da603931519613206dc04f"
+      },
+      "unresolved": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'character'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'character'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'ui'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'ui'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[6].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[7].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "untested_recipe",
+          "path": "$.recipes[0]",
+          "message": "Recipe has no verified outcome; label outputs as unverified until evaluated."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.decisions[0].status",
+          "message": "Resolve proposed decisions before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        },
+        {
+          "code": "unreleased_pack",
+          "path": "$",
+          "message": "This pack has not been built with --release. Treat all delivery as draft exploration."
+        }
+      ]
+    }
+  },
+  {
+    "command": [
+      "scripts/style_pack.py",
+      "archive",
+      "dist/moss-harbor-0.1.0-draft",
+      "--out",
+      "dist/moss-harbor-0.1.0-draft.zip"
+    ],
+    "exit_code": 0,
+    "result": {
+      "ok": true,
+      "command": "archive",
+      "out": "<repo>/dist/moss-harbor-0.1.0-draft.zip",
+      "sha256": "31c3fb1f231faba77a2fe3ede4da448b53d62b17eb72862dcc51f9b3cbdd7fa7",
+      "files": 6,
+      "pack": {
+        "id": "moss-harbor",
+        "version": "0.1.0",
+        "status": "draft",
+        "fingerprint": "62d59623904e592eea03d1b4829338754c780625e0da603931519613206dc04f"
+      },
+      "release": false
+    }
+  },
+  {
+    "command": [
+      "scripts/package_release.py",
+      "--out",
+      "dist/art-director-v0.1.0.zip"
+    ],
+    "exit_code": 0,
+    "result": {
+      "archive": "<repo>/dist/art-director-v0.1.0.zip",
+      "files": 12,
+      "sha256": "5e1332d1bcaa6a3a1dc844895cdff38d59b812ee842d6f88a89b1b159d4d538b"
+    }
+  }
+]

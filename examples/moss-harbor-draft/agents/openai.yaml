@@ -1,0 +1,4 @@
+interface:
+  display_name: "苔港：有人生活的旧港（虚构演示草案） · 美术规范"
+  short_description: "基于项目固定版本、风格规范与角色身份约束，制作并评审游戏美术资产"
+  default_prompt: "使用 $moss-harbor-art-style，为当前项目生成带版本与参考依据的美术任务书，并逐项评审。"

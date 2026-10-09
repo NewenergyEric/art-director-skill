@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "command": "intake",
+  "ok": true,
+  "source_root": "D:\\livesoftware\\xwechat_files\\Seraphim_Chongqing_b4f5\\temp\\RWTemp\\2026-10\\4f7188ddab5a0a9f4337585d1647b605",
+  "files": [
+    {
+      "relative_path": "9eb51e76cf9d822ce08701007ca2f1d7.jpg",
+      "source_path": "D:\\livesoftware\\xwechat_files\\Seraphim_Chongqing_b4f5\\temp\\RWTemp\\2026-10\\4f7188ddab5a0a9f4337585d1647b605\\9eb51e76cf9d822ce08701007ca2f1d7.jpg",
+      "kind": "image",
+      "sha256": "1948d35b09413068bbcfd2b3dde5b63638f6158a17dc974e399dfb7712671181",
+      "bytes": 233780,
+      "read_status": "read",
+      "error": null,
+      "image": {
+        "width": 1702,
+        "height": 1276,
+        "format": "JPEG",
+        "mode": "RGB",
+        "has_alpha_channel": false,
+        "has_transparency_metadata": false,
+        "has_transparent_pixels": false,
+        "frames": 1,
+        "inspected_frame": 0,
+        "orientation_applied": false
+      },
+      "provenance": {
+        "source_kind": "unconfirmed",
+        "identity_reference_eligible": false,
+        "reason": "Intake does not establish that this is an original character reference. A screenshot or extracted preview must not be promoted to an original identity reference without source confirmation."
+      },
+      "visual_rules_inferred": false
+    }
+  ],
+  "excluded": [],
+  "counts": {
+    "listed": 1,
+    "read": 1,
+    "unread": 0,
+    "excluded": 0
+  },
+  "scope_of_check": "Local file inventory and bounded text/image decoding only. Originality, screenshot provenance, identity and visual rules remain unconfirmed. Source files are not modified or copied into an approved pack."
+}

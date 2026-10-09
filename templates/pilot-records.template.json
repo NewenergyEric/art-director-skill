@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "study_id": "UNASSIGNED",
+  "required_review_criteria": ["identity", "style", "task", "technical"],
+  "pilot": {
+    "status": "not_started",
+    "purpose": null,
+    "pack_version": null,
+    "pack_fingerprint": null,
+    "source_materials": [],
+    "source_material_set_hash": null,
+    "identity_dossier_path": null,
+    "identity_dossier_sha256": null,
+    "acceptance_criteria_path": null,
+    "acceptance_criteria_sha256": null,
+    "frozen_at": null,
+    "authorization_evidence": [],
+    "unresolved": []
+  },
+  "conditions": {
+    "A": {
+      "description": "Same original materials and task; executor writes a free description without B-derived skill rules or prompts.",
+      "source_material_ids": [],
+      "executor_context_record": null,
+      "planned_settings_record": null
+    },
+    "B": {
+      "description": "Same original materials and task; fixed project skill with rule, entity and reference bindings.",
+      "source_material_ids": [],
+      "executor_context_record": null,
+      "planned_settings_record": null
+    }
+  },
+  "fairness": {
+    "source_materials": "unknown",
+    "task_information": "unknown",
+    "tool_model_version": "unknown",
+    "dimensions": "unknown",
+    "budget": "unknown",
+    "feedback": "unknown",
+    "context_isolation": "unknown",
+    "evidence": [],
+    "limitations": [],
+    "causal_claim_supported": false
+  },
+  "randomization": {
+    "method": null,
+    "seed": null,
+    "planned_order": [],
+    "actual_order": [],
+    "deviations": []
+  },
+  "blinding": {
+    "method": null,
+    "mapping_record_path": null,
+    "reviewer_ids": [],
+    "achieved": "unknown",
+    "limitations": []
+  },
+  "tasks": [],
+  "records": [],
+  "record_template": {
+    "id": null,
+    "condition": null,
+    "cohort": null,
+    "task_id": null,
+    "participant_id": null,
+    "participant_prior_skill_exposure": "unknown",
+    "execution_status": "not_run",
+    "started_at": null,
+    "finished_at": null,
+    "attempts": [],
+    "failure_reason": null,
+    "manual_work_minutes": null,
+    "notes": null
+  },
+  "attempt_template": {
+    "attempt": 1,
+    "attempt_type": null,
+    "executed_at": null,
+    "artifact_path": null,
+    "artifact_sha256": null,
+    "all_outputs": [],
+    "selection_record_path": null,
+    "blind_asset_id": null,
+    "tool": null,
+    "model": null,
+    "model_version": null,
+    "seed": null,
+    "parameters": {},
+    "prompt_record_path": null,
+    "prompt_sha256": null,
+    "actual_reference_inputs": [],
+    "tool_receipt_path": null,
+    "elapsed_minutes": null,
+    "cost": null,
+    "currency": null,
+    "review": {
+      "identity": "unknown",
+      "style": "unknown",
+      "task": "unknown",
+      "technical": "unknown"
+    },
+    "reviewer": {
+      "id": null,
+      "type": null,
+      "model_version_if_ai": null,
+      "reviewed_at": null,
+      "blind_to_condition": "unknown"
+    },
+    "visual_inspection": {
+      "files_opened": [],
+      "reference_ids_inspected": [],
+      "viewing_context": null,
+      "limitations": []
+    },
+    "technical_measurements": [],
+    "review_evidence": [],
+    "identity_violation_details": [],
+    "feedback_record_path": null,
+    "failure_reason": null,
+    "unknown_settings_reason": null,
+    "notes": null
+  },
+  "field_contracts": {
+    "record_template": "Copy into records only for an assigned real experimental unit. Replace required identifiers and choose condition A/B and cohort ai_proxy/human_team. Do not count this template itself.",
+    "execution_status": "not_run, completed, failed or incomplete. not_run requires attempts=[]; failed/incomplete remain in the attempted denominator.",
+    "attempt_template": "Append only after an actual generation/edit attempt. Use contiguous integers starting at 1; preserve failures with artifact_path=null. Do not append planned retries.",
+    "attempt_type": "Record generation, tool_edit or manual_edit as actually performed. Do not imply that all revisions consume identical time or budget.",
+    "all_outputs": "Record every returned file with path and sha256. artifact_path identifies the output actually reviewed under the predeclared selection policy, not an undisclosed best-of batch.",
+    "actual_reference_inputs": "Each entry: reference_id, source_material_id, path, sha256, role, entity_id, input_method, tool_receipt_path, delivery_verified (true/false/null). This is actual input evidence, not planned references.",
+    "review_evidence": "Each entry: criterion, rule_id, result pass/fail/unknown, source_evidence_location, output_region, observation, correction and reviewer_id. Do not invent observations for missing images.",
+    "technical_measurements": "Each entry: requirement_id, required_value, measured_value, tool_or_method, evidence_path and result pass/fail/unknown. Engine readiness requires actual checks appropriate to the declared task stage.",
+    "review": "Missing criteria are unknown. All required criteria must pass and an artifact must exist for a first-pass success; later success cannot rewrite attempt 1.",
+    "settings": "Record actual tool/model/version/seed/parameters; unknown or unsupported values are null with a reason, not guessed recipe defaults.",
+    "fairness": "Use matched, mismatched or unknown with evidence. AI proxy and human team results must remain separate; descriptive differences do not establish causation.",
+    "approval": "No automatic approval is inferred. Use existing human user authorization and actual decision evidence; AI review alone is not an art-director approval."
+  }
+}

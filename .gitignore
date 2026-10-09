@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+tests/.tmp-style-pack-*/
+.style-build-*/
+.style-render-*/
+dist/
+node_modules/
+motion/out/
+.edge-shot/
+*-preview.png
+!assets/readme/social-preview.png
+.DS_Store
+Thumbs.db

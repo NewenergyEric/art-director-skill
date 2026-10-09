@@ -1,0 +1,4 @@
+interface:
+  display_name: "美术总监 · Art Director"
+  short_description: "把总监的审美、样板与评审反馈沉淀为团队可调用和迭代的项目风格包"
+  default_prompt: "使用 $art-director，结合已有规范和参考资产，为我的游戏团队建立可分发的项目风格 skill，并说明验证方式。"

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "study_id": "claire-round-01",
+  "status": "awaiting_original_materials",
+  "cohort": "ai_proxy",
+  "purpose": "先完成代理预试验，再决定真人团队试点；预试验不能证明真实成员的改善。",
+  "entity": {"id": "CHAR-CLAIRE-001", "name": "克莱尔", "source": "用户提供的屏幕照片中的可见编号", "identity_baseline_status": "unconfirmed"},
+  "materials_directory": "evals/round-01/materials",
+  "required_inputs": [
+    {"kind": "original_identity_reference", "status": "not_supplied", "path": null},
+    {"kind": "existing_character_dossier", "status": "not_supplied", "path": null},
+    {"kind": "project_style_baseline", "status": "not_supplied", "path": null}
+  ],
+  "conditions": {
+    "A": {"name": "自由描述", "input": "原始设定图、现有档案与统一任务要求；全新上下文，不加载母 skill 或生成的项目 skill", "prompt_policy": "由该条件的参与者独立描述并保留原文，不把B组整理过的提示词作为A组基线"},
+    "B": {"name": "使用 skill", "input": "相同原始资料与任务要求，加上从这些材料建立的项目 skill", "prompt_policy": "固定项目版本，按角色绑定规则和参考，保留完整实际调用输入"}
+  },
+  "controls": {
+    "model": null,
+    "model_version": null,
+    "tool": null,
+    "width": 1024,
+    "height": 1536,
+    "size_origin": "本轮拟定的统一试验规格，不是已核实的项目生产规格；生成工具如不支持须两组同时调整",
+    "format": "PNG",
+    "background": "transparent",
+    "max_initial_outputs_per_unit": 1,
+    "max_revision_rounds": 2,
+    "seed_policy": "工具支持时成对控制并记录；不支持则null并在报告中说明",
+    "same_raw_material_access": true,
+    "fresh_context_per_condition": true,
+    "task_order_plan": ["T01-A", "T01-B", "T02-B", "T02-A", "T03-A", "T03-B"],
+    "order_policy": "预先交错，尚未执行；不宣称已随机化",
+    "review_policy": "技术检查与视觉评审分开；交给评审者时隐藏条件标签；是否真正盲审须记入实际记录"
+  },
+  "tasks": [
+    {"id": "T01", "category": "character", "task": "克莱尔认真制作裱花蛋糕，半身；为完成动作允许调整手臂、手部和必要姿态，身份特征沿用实际基线。", "focus": ["身份", "手与工具交互", "动作完成度"]},
+    {"id": "T02", "category": "character", "task": "克莱尔惊讶地看向画面前方，胸像；仅改变表情和必要头部姿态，服装与身份沿用实际基线。", "focus": ["脸型", "发型", "表情范围"]},
+    {"id": "T03", "category": "character", "task": "克莱尔完成工作后放松微笑，四分之三视角半身；身份和服装沿用实际基线。", "focus": ["跨视角身份", "饰品", "服装"]}
+  ],
+  "execution_plan": "拿到原图和档案后先执行T01的一对结果并评审，再按结果决定是否扩展T02/T03；只有实际执行的记录进入样本分母。",
+  "required_review_criteria": ["identity", "style", "task", "technical"],
+  "completion_rule": "真实输出存在，实际参考输入有记录，必要检查有证据，且条件可比性得到说明；准备文件与零样本汇总不算出图试验完成。",
+  "human_team_followup": "代理预试验后由真实成员进行同条件任务，并按cohort单独统计；当前没有真人参与者或真人结果。"
+}

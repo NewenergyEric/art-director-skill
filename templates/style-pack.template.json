@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "project": {"id": "new-game", "name": "新游戏美术规范（草案）", "domain": "game-art", "owner": "待指定"},
+  "version": "0.1.0",
+  "status": "draft",
+  "scope": {
+    "medium": "unspecified",
+    "view": "待确定游戏视角",
+    "target_platform": "待确定",
+    "asset_types": ["character", "environment", "prop", "ui"]
+  },
+  "intent": {
+    "summary": "先从总监现有材料中提炼意图，再确认项目美术基线。",
+    "pillars": [],
+    "avoid": []
+  },
+  "tokens": {"colors": {}, "fonts": {}},
+  "rules": [
+    {
+      "id": "CONTEXT-01",
+      "scope": ["global"],
+      "strength": "must",
+      "statement": "在项目实际显示尺度与背景中检查资产的识别性。",
+      "rationale": "资产需要服务实际游戏画面；具体检查尺度仍需总监或技术美术确认。",
+      "allowed_variation": ["依资产类型确定检查方式"],
+      "evidence": [],
+      "verification": "visual",
+      "status": "proposed"
+    }
+  ],
+  "references": [],
+  "profiles": {
+    "character": {"brief": "确认角色比例、身份特征和游戏中的识别需求。", "fixed": [], "variable": [], "technical": {}},
+    "environment": {"brief": "确认场景空间关系、背景层级及视角。", "fixed": [], "variable": [], "technical": {}},
+    "prop": {"brief": "确认用途、尺度、材质与交互可读性。", "fixed": [], "variable": [], "technical": {}},
+    "ui": {"brief": "确认实际字体、语言覆盖、层级与图标风格。", "fixed": [], "variable": [], "technical": {}}
+  },
+  "entities": [],
+  "recipes": [],
+  "decisions": [],
+  "open_questions": [
+    "总监希望传达的情绪和取舍顺序是什么？",
+    "哪些参考已认可，各自负责风格、身份或构图中的哪一部分？",
+    "实际视角、平台、显示尺度与资产规格是什么？"
+  ],
+  "approval": null
+}

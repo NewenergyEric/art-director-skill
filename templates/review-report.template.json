@@ -1,0 +1,28 @@
+{
+  "record_type": "art-review",
+  "record_version": "1.0",
+  "project_id": null,
+  "pack_version": null,
+  "pack_fingerprint": null,
+  "asset_ids": [],
+  "category": null,
+  "reviewer": null,
+  "reviewed_at": null,
+  "inspection": {
+    "files_opened": [],
+    "reference_ids_inspected": [],
+    "viewing_context": null,
+    "capabilities_available": [],
+    "limitations": []
+  },
+  "technical_checks": [],
+  "rule_checks": [],
+  "identity_checks": [],
+  "context_checks": [],
+  "findings": [],
+  "preserve": [],
+  "unknowns": [],
+  "revision_round": 0,
+  "verdict": "not_evaluated",
+  "director_decision": {"status": "pending", "by": null, "at": null, "evidence": null}
+}

@@ -1,0 +1,96 @@
+{
+  "record_type": "art-production-task",
+  "record_version": "1.0",
+  "task_id": null,
+  "project_id": null,
+  "pack": {
+    "version": null,
+    "fingerprint": null,
+    "status": "unknown"
+  },
+  "task": {
+    "original_request": null,
+    "source_request_record": null,
+    "category": null,
+    "entity_id": null,
+    "goal": null,
+    "purpose": null,
+    "stage": null,
+    "view": null,
+    "pose_or_state": null,
+    "background": null,
+    "deliverables": [],
+    "dimensions": { "width": null, "height": null, "unit": null },
+    "target_display_size": null,
+    "format": null,
+    "target_platform": null,
+    "engine": null
+  },
+  "identity_dossier": { "path": null, "version": null, "sha256": null },
+  "source_materials": [],
+  "reference_bindings": [],
+  "applicable_rule_ids": [],
+  "fixed_features": [],
+  "allowed_variation": [],
+  "unknowns": [],
+  "tool_requirements": {
+    "reference_input_required": null,
+    "identity_preservation_required": null,
+    "capabilities_verified": [],
+    "limitations": []
+  },
+  "production_settings": {
+    "tool": null,
+    "model": null,
+    "model_version": null,
+    "seed": null,
+    "parameters": {},
+    "prompt_record_path": null,
+    "prompt_sha256": null,
+    "settings_status": "not_set"
+  },
+  "budget": {
+    "max_attempts": null,
+    "outputs_per_attempt": null,
+    "max_cost": null,
+    "currency": null,
+    "max_minutes": null,
+    "stop_conditions": []
+  },
+  "acceptance": {
+    "frozen_at": null,
+    "criteria_record": null,
+    "required_review_criteria": ["identity", "style", "task", "technical"],
+    "visual_checks": [],
+    "technical_measurements": [],
+    "context_checks": [],
+    "reviewer_type": null,
+    "decision_authority_from_user": null
+  },
+  "pilot": {
+    "study_id": null,
+    "condition": null,
+    "cohort": null,
+    "shared_material_set_id": null,
+    "shared_task_hash": null,
+    "condition_specific_record_path": null
+  },
+  "execution": {
+    "status": "not_run",
+    "actual_reference_inputs": [],
+    "actual_settings_record": null,
+    "raw_outputs": [],
+    "delivery_record": null,
+    "review_record": null
+  },
+  "existing_authorization_evidence": [],
+  "notes": [
+    "This is an unfilled task template, not an executed prompt or approved asset.",
+    "source_materials entries should record id, path, sha256, type, source, version, permission evidence and observed limitations.",
+    "reference_bindings entries should record reference_id, source_material_id, role, entity_id, evidence_location and status. Do not treat proposed bindings as approved references.",
+    "Keep planned reference bindings separate from actual_reference_inputs verified in tool calls.",
+    "Do not supply B-derived rules, fixed_features or identity_dossier to the A executor; create an isolated A task record from the shared original request and raw materials.",
+    "Visual checks require observed image evidence. Technical checks require recorded measurements or actual engine/context tests appropriate to the task stage.",
+    "Use the user's existing authorization. Do not infer approval from screenshots, filled names or AI review."
+  ]
+}

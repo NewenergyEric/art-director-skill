@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "project": {"id": "moss-harbor", "name": "苔港：有人生活的旧港（虚构演示草案）", "domain": "game-art", "owner": "演示项目，尚无真实总监批准"},
+  "version": "0.1.0",
+  "status": "draft",
+  "scope": {"medium": "2d", "view": "俯视偏侧的二维手绘概念；精确角度未定", "target_platform": "演示假设为桌面平台，尚未验证", "asset_types": ["character", "environment", "prop", "ui"]},
+  "intent": {
+    "summary": "以仍有人维护的旧港表达温暖、手作和日常生活。全部数值与规则仅作功能演示，不代表用户项目选择。",
+    "pillars": ["年代感来自合理使用痕迹", "人物职业和交互用途清楚", "画面保留安静区域"],
+    "avoid": ["用满屏污渍表达古老", "各类别自行切换画风", "把不可辨认的模型字形作为真实UI字体"]
+  },
+  "tokens": {
+    "colors": {"harbor_ink": "#344B47", "warm_paper": "#EEE2C8", "copper_accent": "#B87148"},
+    "fonts": {"body": {"family": "待选择支持中文的正文字体", "fallback": "由项目确认备用字体"}}
+  },
+  "rules": [
+    {"id": "INTENT-01", "scope": ["global"], "strength": "must", "statement": "维护痕迹与使用痕迹同时存在，不将所有表面统一做脏。", "rationale": "港口仍然有人生活和修缮。", "allowed_variation": ["长期废弃区域可更破败，但须与其叙事状态对应"], "evidence": [], "verification": "visual", "status": "proposed"},
+    {"id": "LIGHT-01", "scope": ["global"], "strength": "should", "statement": "主体与背景的明暗关系优先服务识别，避免全画面同等锐利。", "rationale": "把注意力留给玩家需要辨认的内容。", "allowed_variation": ["焦点细节可比背景更清楚"], "evidence": [], "verification": "visual", "status": "proposed"},
+    {"id": "CHAR-01", "scope": ["character"], "strength": "must", "statement": "主角林的短外套、左肩工具带和额前发束是暂定身份特征；姿势变化时保持。", "rationale": "区分同一角色的状态变化与重新设计角色。", "allowed_variation": ["表情、朝向、手持工具和动作可以变化"], "evidence": [], "verification": "visual", "status": "proposed"},
+    {"id": "ENV-01", "scope": ["environment"], "strength": "must", "statement": "行走空间与背景装饰应有明确层级，不能用高密度装饰掩盖入口。", "rationale": "场景需支持路线辨认。", "allowed_variation": ["摊位、住宅与维修区可采用不同生活细节"], "evidence": [], "verification": "visual", "status": "proposed"},
+    {"id": "PROP-01", "scope": ["prop"], "strength": "must", "statement": "道具在目标尺寸下仍能通过整体形状表达功能。", "rationale": "工具和交互物需要易于辨认。", "allowed_variation": ["使用者与年代可通过局部结构表达"], "evidence": [], "verification": "visual", "status": "proposed"},
+    {"id": "MAT-01", "scope": ["character", "prop"], "strength": "should", "statement": "常用金属采用较宽的磨损变化，保留接触部位差异，避免每个表面都出现镜面高光。", "rationale": "让材质服务手作港口的演示方向。", "allowed_variation": ["新维修的局部可以更干净"], "evidence": [], "verification": "visual", "status": "proposed"},
+    {"id": "TYPE-01", "scope": ["ui"], "strength": "must", "statement": "标题、对白和数字用实际字体排版，检查中文字符覆盖和目标尺寸可读性。", "rationale": "生成画面中的字形不能代替可交付字体。", "allowed_variation": ["不同用途可采用经确认的字号与字重层级"], "evidence": [], "verification": "human", "status": "proposed"},
+    {"id": "TECH-01", "scope": ["global"], "strength": "must", "statement": "交付时记录所用规范版本、实际工具、参考、未知项和完成的检查。", "rationale": "下一位成员能追溯资产依据。", "allowed_variation": ["不返回seed的工具将该字段保留为null"], "evidence": [], "verification": "technical", "status": "proposed"}
+  ],
+  "references": [],
+  "profiles": {
+    "character": {"brief": "探索港口修理工林的姿势变化，当前身份设定仅为文字提案。", "fixed": ["暂定的短外套、左肩工具带、额前发束"], "variable": ["动作", "表情", "当前工具"], "technical": {"deliverable": "concept", "dimensions": null, "background": "由任务决定"}},
+    "environment": {"brief": "展示被使用和维护的港口空间。", "fixed": ["入口与主要通道可辨认"], "variable": ["房屋用途", "局部时间与天气"], "technical": {"deliverable": "concept", "dimensions": null}},
+    "prop": {"brief": "制作与修理工及港口生活相关的道具。", "fixed": ["功能可读性", "与人物匹配的材质处理"], "variable": ["用途", "使用痕迹", "使用者"], "technical": {"deliverable": "concept", "dimensions": null}},
+    "ui": {"brief": "验证字体层级与图标在港口画面中的协调。", "fixed": ["实际字体排版和字符覆盖检查"], "variable": ["字号和层级提案"], "technical": {"deliverable": "layout-concept", "target_language": "zh-CN", "font_file": null}}
+  },
+  "entities": [
+    {"id": "lin", "kind": "character", "identity_rules": ["CHAR-01"], "reference_ids": [], "fixed_features": ["短外套", "左肩工具带", "额前发束"], "variations": ["姿势", "表情", "工具"]}
+  ],
+  "recipes": [
+    {"id": "reference-edit-draft", "tool": "目标环境中已授权的参考图编辑工具", "model": "unknown", "capabilities": ["reference-image", "edit"], "instructions": "先补充并查看真实样板图，明确各参考用途。身份变化任务将角色图作为identity输入，任务书只增加本次姿势和工具变化。工具缺失时交付任务书。", "reference_ids": [], "limitations": ["尚未接入或测试实际生成工具", "没有真实参考图，不能宣称身份一致性已经验证"], "status": "untested"}
+  ],
+  "decisions": [
+    {"id": "DEMO-01", "decision": "用有人维护的旧港演示风格规则如何跨类别表达。", "rationale": "用于验证模板、任务拆分和缺少证据时的诚实行为。", "status": "proposed", "source": "开发过程构造的虚构案例；非用户项目和非总监审批"}
+  ],
+  "open_questions": ["需要真实总监确认美术意图和样板", "需要角色设定图及组合画面的真实视觉参考", "需要精确视角、显示尺度和输出规格", "需要确定字体与可分发资源", "需要选择并验证实际生成工具"],
+  "approval": null
+}
