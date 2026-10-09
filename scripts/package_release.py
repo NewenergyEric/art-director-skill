@@ -18,10 +18,15 @@ def main() -> int:
         parser.error("Archive must be outside the source skill folder")
     if destination.exists():
         parser.error("Destination already exists; choose a new release filename")
-    required = ("SKILL.md", "scripts/style_pack.py", "templates/style-pack.template.json")
+    required = ("SKILL.md", "LICENSE", "scripts/style_pack.py", "templates/style-pack.template.json")
     if not all((source / name).is_file() for name in required):
         parser.error("Skill is incomplete")
-    files = [source / "SKILL.md", source / "scripts" / "style_pack.py", source / "scripts" / "pilot.py"]
+    files = [
+        source / "SKILL.md",
+        source / "LICENSE",
+        source / "scripts" / "style_pack.py",
+        source / "scripts" / "pilot.py",
+    ]
     for folder in ("agents", "references", "templates"):
         files.extend(path for path in (source / folder).rglob("*") if path.is_file())
     files = sorted(set(files))

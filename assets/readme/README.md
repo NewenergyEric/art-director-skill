@@ -8,8 +8,8 @@ npm run motion:studio
 npm run motion:render
 ```
 
-The source lives in `motion/src/`. Raster artwork lives in `motion/public/studio/` and `motion/public/maple-corner/`. The film is 1280 × 720, 30 frames per second, and 14 seconds long.
+The source lives in `motion/src/`. Raster artwork lives in `motion/public/studio/`, `motion/public/styles/`, and `motion/public/maple-corner/`. The film is 1280 × 720, 30 frames per second, and 30 seconds long.
 
-Render the MP4 masters first. The repository GIFs are encoded with FFmpeg at a lower frame rate for a practical README download size. Static images use frame 410 as the reduced-motion fallback.
+Render the MP4 masters first. Release GIFs are encoded with FFmpeg at a lower frame rate and reduced palette for a practical README download size. Static images use the closing frame as the reduced-motion fallback.
 
-The sequence has five beats: meet the team at the review table, see a casual-game style board and its large asset family, follow work across production lanes, turn feedback into plain rules, and carry the team’s judgement into the next round. Motion should make the work easier to understand. Keep people and real production material at the centre of the film.
+The sequence has six beats: meet the team at the review table, see the production wall, move through four visual languages as tangible outputs, switch among seven production templates, follow work across team lanes, and carry reviewed judgement into the next version. Motion should make the work easier to understand. Keep people and real production material at the centre of the film.

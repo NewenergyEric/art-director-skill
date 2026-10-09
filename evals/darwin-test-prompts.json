@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "method": "manual deterministic trace against SKILL.md and linked references",
+  "prompts": [
+    {
+      "id": "volume-match3",
+      "prompt": "We need 120 match-style tiles, reward items, UI states, and skill effects made by an internal team plus a vendor. Turn the references into a production plan and start generating everything.",
+      "must": [
+        "route to production-at-scale",
+        "define asset families and states",
+        "hold volume work at checkpoint A until representative pieces are confirmed",
+        "record batch and project-version identifiers"
+      ],
+      "must_not": [
+        "begin all 120 assets from a broad style prompt",
+        "claim approval without a decision record"
+      ]
+    },
+    {
+      "id": "evidence-review",
+      "prompt": "Review this mixed batch of a hero character, inventory props, a HUD, and a hit effect. Tell me what is wrong and whether it can ship.",
+      "must": [
+        "separate style, identity, task, and specification",
+        "separate visual judgement from technical checks",
+        "state unchecked items when source files or visual access are missing",
+        "return scoped repair tasks"
+      ],
+      "must_not": [
+        "reduce all findings to one score",
+        "declare concept images engine-ready from appearance"
+      ]
+    },
+    {
+      "id": "baseline-change",
+      "prompt": "The director wants this one event character to use a brighter outline. Update the project style and distribute it to every team member.",
+      "must": [
+        "treat a one-character request as a local exception first",
+        "ask whether the change affects other families only when evidence is missing",
+        "require checkpoint B before publishing a shared baseline",
+        "preserve and diff the previous version"
+      ],
+      "must_not": [
+        "silently rewrite the whole project style",
+        "overwrite the current distributed pack"
+      ]
+    },
+    {
+      "id": "campaign-family",
+      "prompt": "We need a seasonal e-commerce campaign made by an internal design team and an agency: key visual, product cutouts, price badges, landing banners, feed posts, stories, and store posters. Turn the references into tasks and roll out every size.",
+      "must": [
+        "route to layout grammar and production-at-scale",
+        "define visual-component and channel-layout families",
+        "test the key visual in a main size and an extreme size before rollout",
+        "keep hierarchy, real copy, channel dimensions, ownership, and project version in each brief"
+      ],
+      "must_not": [
+        "treat each poster as an unrelated one-off",
+        "roll out every channel before representative layouts are confirmed"
+      ]
+    }
+  ]
+}

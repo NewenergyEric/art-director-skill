@@ -1,21 +1,76 @@
 <p align="right"><a href="README.md">中文</a> · <strong>English</strong></p>
 
+<p align="center">
+  <a href="https://github.com/NewenergyEric/art-director-skill/actions/workflows/ci.yml"><img alt="Validate skill" src="https://github.com/NewenergyEric/art-director-skill/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/NewenergyEric/art-director-skill/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/NewenergyEric/art-director-skill/actions/workflows/codeql.yml/badge.svg"></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-151715.svg"></a>
+  <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3272b8.svg">
+</p>
+
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/art-director-still-en.png">
-  <img src="assets/readme/art-director-motion-en.gif" width="1280" alt="A five-part film of a game-art director and team reviewing assets, setting direction, dividing the work, and carrying decisions into the next production round.">
+  <img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/art-director-hero-en.gif" width="100%" alt="A 30-second film of an art director and team moving through asset families, production templates, batch lanes, and review inside one project system.">
 </picture>
+
+<p align="center"><sub>▲ 30-second bilingual Remotion film · one continuous canvas, seven production templates, four team lanes · <a href="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/art-director-hero-en.mp4">download the scored MP4</a></sub></p>
 
 # Art Director
 
-> **What the director already corrected should not be guessed again.**
+> ## One direction has to move an entire team.
 
-Art Director keeps the decisions a game-art director and team have already confirmed. It records why a reference matters, what must stay recognizable, what this round should change, and how the asset must be delivered. A new teammate, agent, or session can start from there.
+A visual project with several contributors always moves many things at once. In games, that means characters, worlds, tiles, props, UI, skills, and effects. In commerce and brand work, it means key art, product elements, price components, campaign posters, and channel-specific sizes. The hard part is rarely making one more image. It is making sure everyone knows **what must stay, what may change, and what this round is actually meant to fix.**
 
-It works for a world-heavy project that must hold a distinct mood and for a casual game producing characters, environments, tiles, props, UI, and effects every week. A simple style can still be hard to coordinate. As the asset count and team grow, small drift turns into expensive rework.
+Art Director keeps those decisions inside the project. The director still decides what looks right and what belongs. Each discipline gets a brief made for its production lane. An agent starts from the version the team has already confirmed instead of returning to a vague prompt.
 
-The director still decides what looks right. Art Director remembers those decisions, carries them into each brief, and leaves useful evidence for the next round.
+It is an installable Agent Skill backed by working local tools: extract direction from references and review notes, prove it on a small batch, scale it through the team, and deliver a portable project Skill that can be verified and updated.
 
 `Codex` · `Claude Code` · `Cursor` · other Agent Skills-compatible tools
+
+## It manages a production line, not one image
+
+| What happens on a team | What Art Director keeps | What the next round can do |
+|---|---|---|
+| A director says, “It feels wrong” | Style, identity, task, and technical specification as separate decisions | Fix the right layer without rewriting unrelated rules |
+| Character, UI, item, and skill work run together | A focused brief for each asset family, all pinned to one project version | Different disciplines do different work without drifting apart |
+| A casual or live-ops game needs many states and variants | Asset families, state matrices, first-piece gates, and sample records | Review a representative batch before multiplying output |
+| A teammate, vendor, or agent takes over | Evidence-backed `STYLE.md`, `SKILL.md`, task cards, and version diffs | Continue from confirmed judgement instead of hearsay |
+| The direction changes | The old version, reason, scope, and decision record | See exactly what changed—and what did not |
+
+---
+
+## One method, many visual languages
+
+Pseudo-3D, American comics, traditional painting, and collectible-card art use very different rules for form, material, line, space, and information density. Art Director does not press the same adjectives onto every image. It compiles one project judgement for each discipline: an item designer gets an asset family, character and environment artists get identity boundaries, UI gets components and states, and every maker gets the current task and delivery specification.
+
+<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/style-directions-en.gif" width="100%" alt="A continuous switch across a pseudo-3D item family, an American-comic task brief, a traditional card family, and a painterly collectible-card system."></p>
+
+The visual language can change while the working path stays legible: **project baseline → discipline brief → asset family or template → first-piece review → batch and version.** Games are the repository's most complete example. The same structure also applies to multi-person UI systems, e-commerce campaigns, promotional posters, social templates, and multi-size channel delivery.
+
+## Seven production systems, one project judgement
+
+Characters, items, UI, skills/VFX, plus match, puzzle, and tabletop systems need different task structures. Art Director compiles each production template from the same project baseline instead of forcing everything into one long prompt.
+
+<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/template-switch-en.gif" width="100%" alt="A continuous switch across character, item, UI, skill, match, puzzle and tabletop production templates."></p>
+
+Each rule defines its scope, strength, allowed variation, evidence, and verification method. Character identity does not leak into global style; a single pose request does not silently become a rule for the entire team.
+
+## Review a small batch, then scale
+
+The expensive failure in volume production is copying a wrong interpretation dozens of times. A new asset family or state starts with a representative piece. Once it holds, character/world, UI/HUD, props/items, and skill/VFX lanes can move from the same version.
+
+<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/team-pipeline-en.gif" width="100%" alt="Four production lanes moving from brief through first piece and review into batch production."></p>
+
+Each batch records its scope, family, states, specification, first piece, sampled checks, and rework reason. A one-off error stays local. A family-wide problem goes back to the representative piece. Only shared changes across families propose a new project baseline.
+
+## Turn “it feels wrong” into something the team can fix
+
+A review separates four questions: Does it belong to this project? Is the character or item still recognisable? What changes in this round? Can the file enter production?
+
+<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/review-lens-en.gif" width="100%" alt="A review lens moving through style, identity, current task and technical specification."></p>
+
+Art judgement, technical checks, and unchecked items keep separate states. Passing a dimension check is not visual approval. A strong concept image is not automatically engine-ready.
+
+---
 
 ## Install
 
@@ -23,43 +78,17 @@ The director still decides what looks right. Art Director remembers those decisi
 npx skills add https://github.com/NewenergyEric/art-director-skill
 ```
 
-The core CLI needs Python 3.10+ and no third-party packages. Pillow is optional and used only for pixel-level image checks.
+The core CLI needs Python 3.10+ and uses only the standard library. Pillow is optional for reading image dimensions and alpha pixels. The Remotion showcase needs Node.js 20+ and FFmpeg; neither is required for everyday Skill use.
 
 Then ask:
 
-> Use `$art-director`. Start with the references this project has already confirmed and the latest review notes. Record style, character or prop identity, this round’s task, and technical requirements separately, then build a project pack the team can keep using.
+> Use `$art-director`. Start with the references and latest review notes the project has already confirmed. Keep style, character or prop identity, this round's task, and technical specifications separate. Show me the smallest representative batch that will expose mistakes, then build focused packs for character, UI, item, and skill production after it is aligned.
 
-[Open the full call flow](docs/call-flow.html) · [Read the skill entrypoint](SKILL.md) · [Explore the Moss Harbor sample](examples/moss-harbor-draft)
+[Open the call flow](https://newenergyeric.github.io/art-director-skill/) · [Read the Skill entrypoint](SKILL.md) · [Explore the fictional sample pack](examples/moss-harbor-draft)
 
----
+## Run a complete example in five minutes
 
-## More assets create more ways to drift
-
-Reference folders grow, but the team may no longer know which image sets the style and which one defines a character. A director corrects the same issue for three rounds, then a new teammate or agent starts again from a vague prompt. Casual and match-3 teams may be producing characters, tiles, props, UI, effects, and outsourced batches at the same time. Drift in one lane can multiply into a full batch of rework.
-
-Art Director keeps four kinds of decisions separate:
-
-| Layer | What it owns | How it enters production |
-|---|---|---|
-| **Project style** | Global intent, colour, material, and cross-category rules | Inherited by every task |
-| **Entity identity** | Features a character, prop, or environment must retain | Bound only to that entity |
-| **Task variation** | Pose, expression, camera, and use | Scoped to the current brief |
-| **Technical facts** | Size, alpha, format, and platform conditions | Checked from real files |
-
-One style can contain many characters. One character can take many poses. Once the four layers are separate, the team can see what this round may change, what has already been confirmed, and what still needs the director’s judgement.
-
-## How it works with the team
-
-1. **Look at the work already there**: bring together original files, approved samples, current guidance, and recent review notes. Mark what is reliable and what is missing.
-2. **Say what needs to change**: turn “it feels wrong” into a specific object, area, reason, and allowed adjustment.
-3. **Leave a project pack behind**: keep current decisions in `style-pack.json`, then generate a readable `STYLE.md` and a callable `SKILL.md`.
-4. **Brief each production lane**: characters, environments, tiles, props, UI, and effects receive the rules they need without inheriting another asset’s identity.
-5. **Review a small batch first**: confirm the direction with a few representative assets before scaling production. Keep technical checks and art judgement separate.
-6. **Carry the work forward**: when the direction changes, preserve the old version, describe the change, and hand the confirmed baseline to the team.
-
-## Run a real command
-
-The repository includes a fictional Moss Harbor draft. It intentionally contains missing references, proposed rules, and unverified tools so the workflow can show how it behaves when evidence is incomplete.
+The repository includes a fictional “Moss Harbor” draft. It intentionally leaves references missing, rules proposed, and tools unverified so the workflow can show how it behaves when evidence is incomplete.
 
 ```sh
 python scripts/style_pack.py validate examples/moss-harbor-draft
@@ -67,74 +96,91 @@ python scripts/style_pack.py validate examples/moss-harbor-draft
 python scripts/style_pack.py brief examples/moss-harbor-draft \
   --category character \
   --entity lin \
-  --task "Lin repairs a lantern on the dock"
+  --task "Lin crouches on the pier to repair a lamp"
 ```
 
-Start a new project from the template:
+Start your own project pack:
 
 ```sh
-copy templates\style-pack.template.json my-project\style-pack.json
+cp templates/style-pack.template.json my-project/style-pack.json
 python scripts/style_pack.py render my-project
 python scripts/style_pack.py build my-project --out dist/my-project-0.1.0
 python scripts/style_pack.py verify dist/my-project-0.1.0
 ```
 
-On macOS or Linux, replace `copy` with `cp`. Add `--release` to `validate` and `build` when publishing a confirmed baseline. Release checks stop and name the gap when evidence or referenced files are missing.
+In Windows PowerShell, replace `cp` with `Copy-Item`. Add `--release` to `validate` and `build` when publishing a confirmed baseline. The release check stops and names the missing evidence when confirmation, references, or files are incomplete.
 
-## The deliverable is more than a prompt
+## What is inside a project pack
 
 ```text
 project-art-style/
-├── SKILL.md          # entrypoint for a new session
-├── STYLE.md          # human-readable direction
 ├── style-pack.json   # single source of truth
-├── manifest.json     # file inventory and content hashes
-├── references/       # approved, shareable source material
-├── scripts/          # validation and brief tooling
+├── STYLE.md          # human-readable project direction
+├── SKILL.md          # entrypoint for a new session or agent
+├── manifest.json     # file inventory and content fingerprints
+├── references/       # references and evidence approved for sharing
+├── scripts/          # in-pack verification and briefing tools
 └── agents/           # agent UI metadata
 ```
 
-The pack can be copied, archived, and verified. A teammate does not need the director’s original chat history to understand the version, scope, confirmed decisions, and questions that still need judgement.
+A pack can be copied, archived, and verified. A teammate does not need the director's original chat history to see the current version, scope, confirmed decisions, open questions, and task.
 
 ## Two local tools
 
-### `style_pack.py` · pack lifecycle
+### `style_pack.py` · project-pack lifecycle
 
-`validate`, `render`, `build`, `brief`, `verify`, `archive`, and `diff` cover the path from a working copy to an immutable release snapshot. Core commands use only the Python standard library and refuse to overwrite existing builds or archives by default.
+`validate`, `render`, `brief`, `build`, `verify`, `archive`, and `diff` cover the path from working copy to a fixed release snapshot. The CLI refuses to overwrite builds and archives, and checks path traversal, symlinks, case collisions, unexpected files, and content fingerprints.
 
-### `pilot.py` · source intake and pilot evidence
+### `pilot.py` · real-material and pilot evidence
 
-`intake` inventories real source material, `check-image` reads dimensions and alpha information from actual pixels, and `summarize` keeps agent simulation separate from human-team A/B records. It does not generate images or pass technical validity off as art approval.
+`intake` inventories source material, `check-image` reads dimensions and alpha from actual files, and `summarize` keeps agent simulations separate from human-team records. It does not generate images or treat technical success as art approval.
 
-## What is verified
+## What has been verified
 
-- Automated tests cover schema rules, cross-references, path boundaries, case collisions, overwrite refusal, relocatable builds, and content hashes.
-- Independent scenarios cover tool-free fallback, review from a standalone project pack, and a discussion draft built from ambiguous intent.
-- Core scripts run on Python 3.10+; pixel checks activate when Pillow is installed.
-- See the [validation report](docs/validation-report.md) and [round-one pilot readiness](docs/round-01-report.md) for the full record.
+- A deterministic Python 3.10 / 3.12 test matrix on Windows and Linux.
+- Data structure, cross-references, path boundaries, symlinks, case collisions, overwrite refusal, relocation, and content fingerprints.
+- Behavioral cases for no-tool fallback, reviewing from a project pack alone, and turning vague intent into a discussion draft.
+- All ten bilingual motion compositions and the social preview compile; the master film and four visual systems were reviewed at 14 representative frames.
+- A nine-dimension Darwin audit and paired before/after review across three representative tasks; see the [audit report](docs/darwin-audit-v0.2.md).
 
-A valid structure proves that files and records satisfy the contract. Real style consistency, engine readiness, and team efficiency still require approved project samples and use by the team.
+Full evidence is in the [validation report](docs/validation-report.md), [round-one pilot preparation](docs/round-01-report.md), and [expert review](docs/expert-review-v0.2.md). Passing structural checks proves the pack contract, not real-project style consistency, engine readiness, or team efficiency.
+
+## Security and data flow
+
+The project-pack tools run locally. They make no remote API request, read no key, and send no telemetry. The repository declares its network surface, subprocesses, write operations, and deletion boundaries, and runs CodeQL and Dependabot.
+
+[Read the full security statement](SECURITY.md) · [Report a vulnerability privately](https://github.com/NewenergyEric/art-director-skill/security/advisories/new)
+
+## Current boundaries
+
+- No bundled image model, LoRA, engine plug-in, or paid generation service.
+- No approval inferred from filenames, prompts, or a typed approver name.
+- No automatic taste judgement; the system makes decisions evidenced, scoped, and reusable.
+- No concept image declared engine-ready on appearance alone.
+- No aggregate score allowed to hide an identity error, technical failure, or unchecked item.
 
 ## Repository structure
 
 ```text
-├── SKILL.md              # mother-skill entrypoint
-├── agents/               # UI metadata
-├── references/           # task-specific methods
-├── templates/            # pack, brief, and review templates
-├── scripts/              # pack and pilot CLI
+├── SKILL.md              # mother Skill entrypoint
+├── agents/               # agent UI metadata
+├── references/           # methods loaded by task
+├── templates/            # pack, task, and review records
+├── scripts/              # pack, pilot, and media tools
 ├── examples/             # fictional sample project
 ├── tests/                # deterministic tests
-├── evals/                # behavioural checks and pilot records
-├── docs/                 # contracts, research, and validation notes
-└── assets/readme/        # README visuals and reproducible renderer
+├── evals/                # behavioral and audit tasks
+├── motion/               # Remotion source and original visual assets
+├── docs/                 # protocols, research, and validation reports
+└── assets/readme/        # reduced-motion stills and social preview
 ```
 
-## Current boundaries
+## Research basis
 
-- It does not include an image model, LoRA, or paid generation service.
-- It does not infer authorization from a prompt, filename, or typed approver field.
-- It does not hide identity errors, technical failure, or unchecked work inside one score.
-- It does not declare concept art engine-ready from appearance alone.
+The method follows patterns found in real game-content pipelines: per-asset presets, stable metadata, modular UI/VFX, batch validation, version control, and first-piece gates. The [game-art production research](docs/game-production-research.md) links the official sources.
 
-Built by Eric with agents. The repository keeps a method the team can use again, rather than the residue of one conversation.
+## License
+
+[MIT](LICENSE) — use, modify, distribute, and include it in commercial work while retaining the copyright and license notice.
+
+Made by Eric with Agents. The repository holds a method the team can keep using—and the project judgement it should not have to rediscover.

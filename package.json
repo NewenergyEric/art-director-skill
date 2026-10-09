@@ -1,14 +1,15 @@
 {
   "name": "art-director-skill-showcase",
+  "version": "0.2.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "motion:studio": "remotion studio motion/src/index.ts --public-dir=motion/public",
-    "motion:still:zh": "remotion still motion/src/index.ts ArtDirectorZH assets/readme/art-director-still-zh.png --public-dir=motion/public --frame=410 --overwrite",
-    "motion:still:en": "remotion still motion/src/index.ts ArtDirectorEN assets/readme/art-director-still-en.png --public-dir=motion/public --frame=410 --overwrite",
-    "motion:render:zh": "remotion render motion/src/index.ts ArtDirectorZH motion/out/art-director-zh.mp4 --public-dir=motion/public --codec=h264 --crf=18 --overwrite",
-    "motion:render:en": "remotion render motion/src/index.ts ArtDirectorEN motion/out/art-director-en.mp4 --public-dir=motion/public --codec=h264 --crf=18 --overwrite",
-    "motion:render": "npm run motion:render:zh && npm run motion:render:en"
+    "motion:check": "remotion compositions motion/src/index.ts --public-dir=motion/public",
+    "motion:render:zh": "python scripts/render_motion_assets.py --language zh",
+    "motion:render:en": "python scripts/render_motion_assets.py --language en",
+    "motion:render": "python scripts/render_motion_assets.py --language both"
   },
   "engines": {
     "node": ">=20"

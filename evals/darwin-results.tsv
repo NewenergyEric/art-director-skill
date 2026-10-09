@@ -1,0 +1,5 @@
+prompt_id	baseline_score	revised_score	baseline_result	revised_result	main_change
+volume-match3	68	96	partial	pass	added explicit first-piece checkpoint, batch routing, and failure recovery
+evidence-review	82	96	pass	pass	made unchecked states and four review layers explicit
+baseline-change	69	94	partial	pass	added local-vs-shared branching, version diff, and release checkpoint
+campaign-family	58	92	partial	pass	added generic visual-family routing, extreme-size first piece, and channel rollout checkpoint

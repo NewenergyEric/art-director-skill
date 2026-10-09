@@ -29,4 +29,17 @@ jobs:
       - name: Validate the fictional example
         run: python scripts/style_pack.py validate examples/moss-harbor-draft
       - name: Package the mother skill
-        run: python scripts/package_release.py --out "${{ runner.temp }}/art-director-v0.1.0.zip"
+        run: python scripts/package_release.py --out "${{ runner.temp }}/art-director-v0.2.0.zip"
+
+  motion:
+    name: Remotion compositions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Compile and list compositions
+        run: npm run motion:check -- --browser-executable=/usr/bin/google-chrome --chrome-mode=chrome-for-testing
