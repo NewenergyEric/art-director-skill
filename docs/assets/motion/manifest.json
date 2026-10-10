@@ -1,45 +1,52 @@
 {
-  "schema_version": "2.0",
+  "schema_version": "3.0",
   "master_fps": 30,
   "readme_gif_fps": 20,
-  "readme_duration_seconds": 6,
-  "master_duration_seconds": 18,
+  "readme_duration_seconds": 24,
+  "master_duration_seconds": 24,
   "readme_preview": "depth-preview",
   "font": "Noto Sans SC, OFL variable subset",
   "visual_system": "One team, one visual memory.",
+  "story": [
+    "collect",
+    "define-and-calibrate",
+    "share-pack",
+    "create",
+    "review-and-revise"
+  ],
   "depth_showcase": {
-    "duration_seconds": 18,
+    "duration_seconds": 24,
     "fps": 30,
-    "preview_seconds": 6,
+    "preview_seconds": 24,
     "preview_fps": 20,
     "preview_width": 800,
-    "gif_optimizer": "gifsicle -O3 --lossy=120; 64 colors, no dithering"
+    "gif_optimizer": "gifsicle -O3 --lossy=20; 96 colors, no dithering"
   },
   "assets": [
     {
       "path": "assets/readme/depth-preview-en.gif",
-      "bytes": 3688633,
-      "sha256": "9520529e1851859e8ff0b53e2c71038ea020c1a255b509af603718038415bc30"
+      "bytes": 5029749,
+      "sha256": "334bb345254f3acac9a24ed1e1f845d0c650ed8bb3ef7558c65162ce0bef7b6e"
     },
     {
       "path": "assets/readme/depth-preview-en.jpg",
-      "bytes": 75366,
-      "sha256": "e62ee7060a687f5235c938658d7c1ff6bbffcfe28fc151f184d3317aece9d5ba"
+      "bytes": 68217,
+      "sha256": "95d7acf56d558bd529296b0ccac6e7d484d9be96a397327032272fddd0596bec"
     },
     {
       "path": "assets/readme/depth-preview-zh.gif",
-      "bytes": 3655049,
-      "sha256": "216771324b4833f9c7cd1ee1e814aab3cc6a6920bcdf4d895c39049d72318fe0"
+      "bytes": 4827485,
+      "sha256": "bb4d76ce17dd1edd628f12363adf522c94075cd3c4dcae8b23d988483e94a843"
     },
     {
       "path": "assets/readme/depth-preview-zh.jpg",
-      "bytes": 74796,
-      "sha256": "7bbd11a2506a74d6ba05150c84bdc962210e13999bc54c2a2174fa9ef6da1ba9"
+      "bytes": 70617,
+      "sha256": "c8034b242e593e3ce62745179114e9c9affb3f47797c46e55b6e575d66dfd02f"
     },
     {
       "path": "assets/readme/social-preview.png",
-      "bytes": 856121,
-      "sha256": "baecd23c171e14411277c4f8d090217361b8afe28232d5125322fb53f5745b76"
+      "bytes": 702199,
+      "sha256": "4ca2ae52f44b7fcc28ff74a67b88b045034ee431c093ef36ccf5a78aae02d86b"
     },
     {
       "path": "docs/assets/motion/depth-comic.webp",
@@ -53,23 +60,23 @@
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.jpg",
-      "bytes": 75366,
-      "sha256": "e62ee7060a687f5235c938658d7c1ff6bbffcfe28fc151f184d3317aece9d5ba"
+      "bytes": 68217,
+      "sha256": "95d7acf56d558bd529296b0ccac6e7d484d9be96a397327032272fddd0596bec"
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.mp4",
-      "bytes": 2440930,
-      "sha256": "65a80f861487d1170ad9fea3ab47fd5b01ccff4e166211e096556b0ec0117f64"
+      "bytes": 1995788,
+      "sha256": "871f0f62a149c7d8c6540775ba6b7548e5055ba5523838f04f1f36f79435ce2a"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.jpg",
-      "bytes": 74796,
-      "sha256": "7bbd11a2506a74d6ba05150c84bdc962210e13999bc54c2a2174fa9ef6da1ba9"
+      "bytes": 70617,
+      "sha256": "c8034b242e593e3ce62745179114e9c9affb3f47797c46e55b6e575d66dfd02f"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.mp4",
-      "bytes": 2422855,
-      "sha256": "f4959bc8edd1dfd314ca641d30022c4eca3de804b7d05b60d3942e422aa98784"
+      "bytes": 1902850,
+      "sha256": "366b7780ed9da56a95dc1147250ad923df2e3bb2569be8297be2c5e0ff27b60e"
     },
     {
       "path": "docs/assets/motion/depth-traditional.webp",

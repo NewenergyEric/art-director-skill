@@ -61,8 +61,7 @@ def still(ffmpeg: str, source: Path, output: Path, *, at: float) -> None:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--language', choices=('both', 'zh', 'en'), default='both')
-    parser.add_argument('--preview-only', action='store_true')
-    parser.add_argument('--skip-render', action='store_true', help='Re-encode existing lossless preview intermediates')
+    parser.add_argument('--skip-render', action='store_true', help='Re-encode existing lossless 24-second masters')
     parser.add_argument('--social-only', action='store_true', help='Render only the social preview and refresh the manifest')
     parser.add_argument('--gifsicle', type=Path, help='Path to the gifsicle optimizer')
     args = parser.parse_args()
@@ -72,7 +71,7 @@ def main():
         optimizer = next((str(p) for p in (vendor / 'gifsicle.exe', vendor / 'gifsicle') if p.is_file()), None)
     if not optimizer:
         parser.error('Install gifsicle and supply --gifsicle; see motion/README.md')
-    output = ROOT / 'motion/out/depth-20261010'
+    output = ROOT / 'motion/out/workflow-20261010'
     output.mkdir(parents=True, exist_ok=True)
     web = ROOT / 'docs/assets/motion'
     ffmpeg = executable('ffmpeg')
@@ -81,40 +80,36 @@ def main():
     languages = ('zh', 'en') if args.language == 'both' else (args.language,)
     for lang in (() if args.social_only else languages):
         props = output / f'props-{lang}.json'
-        props.write_text(json.dumps({'language': lang, 'localFonts': (PUBLIC_DIR / 'render-fonts/yahei-regular.ttf').is_file()}), encoding='utf-8')
+        props.write_text(json.dumps({'language': lang}), encoding='utf-8')
         video = web / f'depth-showcase-{lang}.mp4'
-        preview = output / f'depth-preview-{lang}.mp4'
-        for composition, target in [('DepthShowcase', video), ('DepthPreview', preview)]:
-            if args.skip_render:
-                continue
-            if args.preview_only and composition == 'DepthShowcase':
-                continue
-            is_preview = composition == 'DepthPreview'
-            extension = 'png' if is_preview else 'jpeg'
+        preview = output / f'workflow-master-{lang}.mp4'
+        if not args.skip_render:
+            extension = 'png'
             with tempfile.TemporaryDirectory(prefix='depth-frames-', dir=output) as frames:
                 command = [npx, 'remotion', 'render', str(ROOT / 'motion/src/index.ts'),
-                           composition + lang.upper(), frames,
+                           'DepthShowcase' + lang.upper(), frames,
                            f'--public-dir={PUBLIC_DIR}', '--sequence', f'--image-format={extension}',
                            f'--image-sequence-pattern=frame-[frame].{extension}',
                            '--concurrency=4', f'--props={props}']
-                if not is_preview:
-                    command += ['--jpeg-quality=95']
                 if browser:
                     command += [f'--browser-executable={browser}', '--chrome-mode=chrome-for-testing']
                 run(command)
                 # Lossless intermediate avoids H.264 noise changing otherwise static GIF pixels.
-                encoding = ['-c:v', 'libx264rgb', '-crf', '0', '-preset', 'fast'] if is_preview else ['-c:v', 'libx264', '-crf', '26', '-preset', 'slow', '-pix_fmt', 'yuv420p']
+                encoding = ['-c:v', 'libx264rgb', '-crf', '0', '-preset', 'fast']
                 run([ffmpeg, '-hide_banner', '-loglevel', 'error', '-y', '-framerate', '30',
                      '-i', str(Path(frames) / f'frame-%03d.{extension}'), *encoding,
-                     '-movflags', '+faststart', str(target)])
-        # A complete six-second periodic orbit, with one stable caption.
+                     '-movflags', '+faststart', str(preview)])
+        run([ffmpeg, '-hide_banner', '-loglevel', 'error', '-y', '-i', str(preview),
+             '-c:v', 'libx264', '-crf', '24', '-preset', 'slow', '-pix_fmt', 'yuv420p',
+             '-movflags', '+faststart', str(video)])
+        # Both formats show the same complete journey, including the review.
         raw_gif = output / f'raw-preview-{lang}.gif'
-        gif(ffmpeg, preview, raw_gif, 20, width=800, max_colors=64, dither='none')
+        gif(ffmpeg, preview, raw_gif, 20, width=800, max_colors=96, dither='none')
         published_gif = ROOT / f'assets/readme/depth-preview-{lang}.gif'
-        run([optimizer, '-O3', '--lossy=120', str(raw_gif), '-o', str(published_gif)])
-        if published_gif.stat().st_size > 4 * 1024 * 1024:
-            raise RuntimeError(f'{published_gif.name} exceeds the 4 MiB preview budget')
-        still(ffmpeg, video, web / f'depth-showcase-{lang}.jpg', at=2.5)
+        run([optimizer, '-O3', '--lossy=20', str(raw_gif), '-o', str(published_gif)])
+        if published_gif.stat().st_size > 6 * 1024 * 1024:
+            raise RuntimeError(f'{published_gif.name} exceeds the 6 MiB full-story budget')
+        still(ffmpeg, video, web / f'depth-showcase-{lang}.jpg', at=22.6)
         shutil.copy2(web / f'depth-showcase-{lang}.jpg', ROOT / f'assets/readme/depth-preview-{lang}.jpg')
     if not args.social_only:
         for source, name in [('studio/asset-system-board.png', 'game'), ('styles/comic-board.png', 'comic'), ('styles/traditional-board.png', 'traditional')]:
@@ -128,21 +123,22 @@ def main():
     run(social_command)
     manifest_path = web / 'manifest.json'
     manifest = {
-        'schema_version': '2.0',
+        'schema_version': '3.0',
         'master_fps': 30,
         'readme_gif_fps': 20,
-        'readme_duration_seconds': 6,
-        'master_duration_seconds': 18,
+        'readme_duration_seconds': 24,
+        'master_duration_seconds': 24,
         'readme_preview': 'depth-preview',
         'font': 'Noto Sans SC, OFL variable subset',
         'visual_system': 'One team, one visual memory.',
+        'story': ['collect', 'define-and-calibrate', 'share-pack', 'create', 'review-and-revise'],
         'depth_showcase': {
-            'duration_seconds': 18,
+            'duration_seconds': 24,
             'fps': 30,
-            'preview_seconds': 6,
+            'preview_seconds': 24,
             'preview_fps': 20,
             'preview_width': 800,
-            'gif_optimizer': 'gifsicle -O3 --lossy=120; 64 colors, no dithering',
+            'gif_optimizer': 'gifsicle -O3 --lossy=20; 96 colors, no dithering',
         },
     }
     files = [

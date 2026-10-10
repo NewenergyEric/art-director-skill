@@ -28,6 +28,8 @@ def main():
     font.flavor = 'woff2'
     destination = ROOT / 'docs/assets/fonts/noto-sans-sc-subset.woff2'
     font.save(destination)
+    render_font = ROOT / 'motion/public/fonts/field-sans.woff2'
+    render_font.write_bytes(destination.read_bytes())
     print(f'{destination.relative_to(ROOT)}: {destination.stat().st_size} bytes')
 
 if __name__ == '__main__':
