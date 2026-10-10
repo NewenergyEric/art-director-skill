@@ -8,6 +8,13 @@
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3272b8.svg">
 </p>
 
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/art-director-still-zh.png">
+  <img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/art-director-hero-zh.gif" width="100%" alt="美术总监与团队在同一个项目系统里完成素材分组、模板切换、批量生产与评审的 30 秒动画。">
+</picture>
+
+<p align="center"><sub>▲ 30 秒双语 Remotion 视频介绍 · 连续镜头、七类生产模板、四条团队产线 · <a href="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/art-director-hero-zh.mp4">观看或下载带声音的 MP4</a></sub></p>
+
 # Art Director · 主美与团队的视觉生产系统
 
 > ## 先由主美建立专业规则，再让整支团队沿同一套规则工作。
@@ -51,6 +58,10 @@ Art Director 是一套可安装的 Agent Skill。它带主美或设计总监从�
 
 Skill 会先整理具体内容，再集中补影响下一步的关键问题。它区分已经观察到的事实、主美确认的决定、Agent 建议和真正待定的事项，不用一套空问卷代替专业建项。
 
+<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/style-directions-zh.gif" width="100%" alt="伪 3D 物品家族、美漫任务简报、国风卡牌家族和绘制收藏卡牌四种视觉系统连续切换。"></p>
+
+<p align="center"><sub>▲ 项目可以采用完全不同的视觉语言；主美建立的判断会分别落到任务、资产家族、样板和验收中。</sub></p>
+
 主美最终得到五份同源手册：
 
 | 手册 | 团队用它做什么 |
@@ -60,6 +71,10 @@ Skill 会先整理具体内容，再集中补影响下一步的关键问题。�
 | 设计规范 | 读取全局语言、类别、家族、实体身份、固定项与变量 |
 | 交付与验收 | 明确首件、源文件、导出、组合和渠道检查 |
 | 参考与反例 | 知道每份资料参考什么、不继承什么、批准到什么范围 |
+
+<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/template-switch-zh.gif" width="100%" alt="角色、道具、UI、技能、消除、解谜与桌游七种生产模板连续切换。"></p>
+
+<p align="center"><sub>▲ 同一项目基线按类别和家族编译成不同制作模板，不把所有成员塞进一条通用提示词。</sub></p>
 
 ## 团队怎样调用
 
@@ -73,6 +88,18 @@ Skill 会先整理具体内容，再集中补影响下一步的关键问题。�
 
 Agent 会把任务绑定到固定版本和对应家族，生成制作说明、参考清单、交接要求及逐项检查。家族混淆、错版、缺件和未检查项会保持可见；单件通过后仍需检查最终组合。
 
+<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/team-pipeline-zh.gif" width="100%" alt="角色、UI、道具、技能四条产线从任务、首件、评审走向批量。"></p>
+
+<p align="center"><sub>▲ 先验证代表首件，再让不同产线按同一版本进入批量制作与交付。</sub></p>
+
+## 评审怎样回到规则
+
+评审把问题落到四层：项目视觉语言、资产或组件身份、本次任务范围、技术与交付规格。单件问题留在单件，家族共同问题回到代表样板，只有跨家族的共同变化才由主美评估并形成下一版基线。
+
+<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/review-lens-zh.gif" width="100%" alt="评审镜头依次检查画风、身份、本次任务和技术规格。"></p>
+
+<p align="center"><sub>▲ 把“感觉不对”拆成团队能修改、主美能判断、版本能记录的具体问题。</sub></p>
+
 ## 安装
 
 ```sh
@@ -85,6 +112,7 @@ npx skills add https://github.com/NewenergyEric/art-director-skill
 
 | 入口 | 证明什么 |
 |---|---|
+| [30 秒视频介绍](https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/art-director-hero-zh.mp4) | 主美与团队在同一系统里完成模板切换、并行生产和评审回流 |
 | [主美工作台](https://newenergyeric.github.io/art-director-skill/) | 从资料、定位、家族、样板到项目包、成员制作和迭代的完整路径 |
 | [港湾工作室](examples/harbor-studio-draft/guides/00-index.md) | 游戏项目的 8 个家族、样板计划、任务与团队接包 |
 | [周末轻饮](examples/campaign-studio-draft/guides/00-index.md) | 商品、图形、文字、UI 与多渠道组合的同源规范 |
