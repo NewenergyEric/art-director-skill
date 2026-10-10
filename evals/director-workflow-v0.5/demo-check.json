@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
-  "checked_at": "2026-10-10T04:57:12.529Z",
+  "checked_at": "2026-10-10T07:47:08.229Z",
   "command": "node evals/director-workflow-v0.5/demo-check.cjs",
   "script": {
     "path": "evals/director-workflow-v0.5/demo-check.cjs",
-    "sha256": "edfffc8d4808b14b7b3a1b6e3b1700edf62cd955a72146ab45aa04224830d933"
+    "sha256": "78cebc15686844daac056c084ae0b5df63ab5c13346b57ed83c486fd11ee4e5e"
   },
   "checked_files": [
     {
       "path": "docs/workbench.html",
-      "sha256": "8eebc900bc60fbea82eea96b8309cfd76f77f3806cb0502f6231cf24c7171ef2",
-      "bytes": 81894
+      "sha256": "08b7e249ea7e208d551766117ff984a02cfd9754f8a6b5231d830f83c5b41627",
+      "bytes": 83746
     },
     {
       "path": "docs/call-flow.html",
@@ -32,7 +32,7 @@
     "passed": 89,
     "failed": 0,
     "total": 89,
-    "paths": 100,
+    "paths": 101,
     "missing": 0
   },
   "checks": [
@@ -446,6 +446,11 @@
     },
     {
       "path": "docs/director-workflow-v0.5.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/landing.html",
       "allowed": true,
       "exists": true
     },

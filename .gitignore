@@ -6,6 +6,7 @@ tests/.tmp-style-pack-*/
 dist/
 node_modules/
 motion/out/
+motion/public/render-fonts/
 .edge-shot/
 *-preview.png
 !assets/readme/social-preview.png

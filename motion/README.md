@@ -1,6 +1,6 @@
 # Motion showcase
 
-The README film is a 30-second bilingual Remotion composition. It uses one continuous production board as the hero element rather than a stack of independent slides.
+The presentation has a six-second README preview and a 30-second bilingual film. The full film retains the continuous production board, seven templates and four team lanes. GitHub embeds only the short preview; the site plays the full film and focused clips as 30 fps H.264 videos.
 
 ## Preview
 
@@ -11,6 +11,7 @@ npm run motion:studio
 
 Available compositions:
 
+- `QuickPreviewZH` / `QuickPreviewEN` — six-second overview with long reading holds
 - `ArtDirectorZH` / `ArtDirectorEN` — 30-second master films
 - `SocialPreview` — 1280 × 640 repository social preview
 - `StyleDirectionsZH` / `StyleDirectionsEN` — pseudo-3D items, comic brief, traditional cards, and painterly card family
@@ -24,6 +25,8 @@ Available compositions:
 npm run motion:render
 ```
 
-`scripts/render_motion_assets.py` renders Remotion MP4s, adds a locally generated original sound bed, derives bandwidth-conscious palette GIFs and four focused proof clips, and updates the reduced-motion stills. It requires Python 3.10+, FFmpeg, Node.js 20+, and npm.
+`scripts/render_motion_assets.py` renders Remotion MP4s, adds an original sound bed, derives a 640 px / 20 fps preview GIF and four focused clips, and updates posters, reduced-motion stills and the checksum manifest. It requires Python 3.10+, FFmpeg, Node.js 20+, and npm. The web film is 960 × 540 at 30 fps; the short web preview is 1280 × 720 at 30 fps. Run `python evals/presentation/check.py --probe` to verify media sizes, codecs, frame rates and local links.
+
+Typography uses Microsoft YaHei / SimHei. On Windows, optional render-only YaHei subsets are loaded explicitly from ignored `motion/public/render-fonts/yahei-regular.ttf` and `yahei-bold.ttf`. Generate them from locally licensed system fonts; never commit these font files. Without those subsets, rendering uses the installed sans-serif stack. Web pages use a separate OFL-licensed Noto Sans SC fallback in `docs/assets/fonts/`.
 
 Set `REMOTION_BROWSER_EXECUTABLE` when Chrome or Edge is installed outside its default location. No network call is made by the film or its render script after dependencies and Remotion's browser runtime are installed.

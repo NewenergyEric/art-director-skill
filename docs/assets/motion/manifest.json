@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "master_fps": 30,
+  "readme_gif_fps": 20,
+  "readme_duration_seconds": 6,
+  "font": "Microsoft YaHei / SimHei (system; font files are not redistributed)",
+  "assets": [
+    {
+      "path": "docs/assets/motion/art-director-intro-en.mp4",
+      "bytes": 3750712,
+      "sha256": "345ab4e8d25f42ee0a2cc0d8b293d009f8cd09188b7000b680b0a5072acb364a"
+    },
+    {
+      "path": "docs/assets/motion/art-director-intro-zh.mp4",
+      "bytes": 3771003,
+      "sha256": "2d95b5348302649b57731fc4a0fbffcfd6961f0c730fc7722fbec35a543d69ec"
+    },
+    {
+      "path": "docs/assets/motion/game-board.jpg",
+      "bytes": 143946,
+      "sha256": "056b054d964056bf5b66a04a6291720a18251f90952ad182075473735d391e35"
+    },
+    {
+      "path": "docs/assets/motion/intro-en.jpg",
+      "bytes": 45077,
+      "sha256": "1c105df58c260567d6a425936154b74feec10dc7549f80b9a8c357a26ad35550"
+    },
+    {
+      "path": "docs/assets/motion/intro-en.vtt",
+      "bytes": 890,
+      "sha256": "2ad692335f9ce822623852d533608fd11934b4caec91558be553bcc4da12b08f"
+    },
+    {
+      "path": "docs/assets/motion/intro-zh.jpg",
+      "bytes": 45419,
+      "sha256": "236b1f393868993208bf57e6da309398d69660e06ddff60bf76a89f56559d923"
+    },
+    {
+      "path": "docs/assets/motion/intro-zh.vtt",
+      "bytes": 854,
+      "sha256": "e76d301667dbbbd59ff656fac2a81266d11ed68b94b96c63c47920e05dba1408"
+    },
+    {
+      "path": "docs/assets/motion/quick-preview-en.jpg",
+      "bytes": 76383,
+      "sha256": "a33f834378bb6b1be2f72a04dfce65875c6fff0b0fd0b9a044e4e574ba388b0c"
+    },
+    {
+      "path": "docs/assets/motion/quick-preview-en.mp4",
+      "bytes": 125477,
+      "sha256": "85f47ca05f17890484b11002a77eaf7c13b94dcd9601a2476f45866ce83e49fb"
+    },
+    {
+      "path": "docs/assets/motion/quick-preview-zh.jpg",
+      "bytes": 78602,
+      "sha256": "204a190b4714c73917512363927b645144b93daa4e5db7995b9b21ae6358dc5b"
+    },
+    {
+      "path": "docs/assets/motion/quick-preview-zh.mp4",
+      "bytes": 124156,
+      "sha256": "006178a066b35b7462bf280dfb71cc0c7308b34b1c6bacf2c815e5d309e21882"
+    },
+    {
+      "path": "docs/assets/motion/review-lens-en.jpg",
+      "bytes": 48476,
+      "sha256": "2478f1e8c714330c0e5260de5c411c908bfeff5789aa1ef09e7ce7469a8f6e8f"
+    },
+    {
+      "path": "docs/assets/motion/review-lens-en.mp4",
+      "bytes": 308353,
+      "sha256": "2fe8a4773c33bd30445ce00a9eef3a2bde47cc9f88fb5a01942b90b27e5aba86"
+    },
+    {
+      "path": "docs/assets/motion/review-lens-zh.jpg",
+      "bytes": 48331,
+      "sha256": "8f825cfd9960f1a706a7d9ea81c482946fe08c524d611d4f10d9588de0d09876"
+    },
+    {
+      "path": "docs/assets/motion/review-lens-zh.mp4",
+      "bytes": 308682,
+      "sha256": "5e8ee4bd4b1d3543434cee333429c268007c0e4630227f7ba753e93ff1a4254d"
+    },
+    {
+      "path": "docs/assets/motion/style-directions-en.jpg",
+      "bytes": 59674,
+      "sha256": "23df86d96036f5cf166da465a5cc4feeae97a23496b189f8e1d5ae0f0dfde637"
+    },
+    {
+      "path": "docs/assets/motion/style-directions-en.mp4",
+      "bytes": 770389,
+      "sha256": "2ac7bd38b392b76fd61c663b1aa1aa5a3bbf6eb5cf42f9678e5047dc83c33ad8"
+    },
+    {
+      "path": "docs/assets/motion/style-directions-zh.jpg",
+      "bytes": 56697,
+      "sha256": "7d9da79484331b716686591e95561ced8a145fd4ebbb83b8fbe9075f390c50e3"
+    },
+    {
+      "path": "docs/assets/motion/style-directions-zh.mp4",
+      "bytes": 724078,
+      "sha256": "d36866bbea38bbc26a680c878c875353a67a419656258a4ed2f05dfa470e9766"
+    },
+    {
+      "path": "docs/assets/motion/team-pipeline-en.jpg",
+      "bytes": 38023,
+      "sha256": "78646d9dd730d2c56e85e501372fbe7f321554b677ce6d953a8510826388add5"
+    },
+    {
+      "path": "docs/assets/motion/team-pipeline-en.mp4",
+      "bytes": 315231,
+      "sha256": "ba40c59f691aa8224fba3939c9120f31d26e3816c76694492ea2162e54e0a5e9"
+    },
+    {
+      "path": "docs/assets/motion/team-pipeline-zh.jpg",
+      "bytes": 37589,
+      "sha256": "7d3297692c5472a2d1ec93d30d53199ce16291f92d8e78573e11fe0636f0e21b"
+    },
+    {
+      "path": "docs/assets/motion/team-pipeline-zh.mp4",
+      "bytes": 310624,
+      "sha256": "f56694ea5df963792f6578f96c33002c969363b6cc9237886dae2ff4ce67cbd2"
+    },
+    {
+      "path": "docs/assets/motion/template-switch-en.jpg",
+      "bytes": 55672,
+      "sha256": "cf03af9eda8da49c7431ce8a50aea5cf0e864a0c892cadf690edf3cc997c76d7"
+    },
+    {
+      "path": "docs/assets/motion/template-switch-en.mp4",
+      "bytes": 597109,
+      "sha256": "a85b5bc5ab238cbd61a73c3a1a601cf4b3954a9dafdcb2c5e9fa56498d56919a"
+    },
+    {
+      "path": "docs/assets/motion/template-switch-zh.jpg",
+      "bytes": 54822,
+      "sha256": "a526436f02da26a3a002a94a0fa37059a35ee8c0955674ef5d61ca8e703dc321"
+    },
+    {
+      "path": "docs/assets/motion/template-switch-zh.mp4",
+      "bytes": 594870,
+      "sha256": "57b500686622cd0fca16f372204b6ea82c27030a0b2e1a3519568d42f25fa3ba"
+    },
+    {
+      "path": "assets/readme/quick-preview-en.gif",
+      "bytes": 221984,
+      "sha256": "450f0f8cf36dc0b7c1bf9780c5cbb36ffc914b8fcb281710514a39b2c1178204"
+    },
+    {
+      "path": "assets/readme/quick-preview-en.jpg",
+      "bytes": 76383,
+      "sha256": "a33f834378bb6b1be2f72a04dfce65875c6fff0b0fd0b9a044e4e574ba388b0c"
+    },
+    {
+      "path": "assets/readme/quick-preview-zh.gif",
+      "bytes": 239009,
+      "sha256": "cfcd884ba8fd837733ed41c490b0833db14aca806a4181b58cf659942364692e"
+    },
+    {
+      "path": "assets/readme/quick-preview-zh.jpg",
+      "bytes": 78602,
+      "sha256": "204a190b4714c73917512363927b645144b93daa4e5db7995b9b21ae6358dc5b"
+    }
+  ]
+}

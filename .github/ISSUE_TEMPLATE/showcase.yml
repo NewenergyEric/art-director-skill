@@ -1,0 +1,32 @@
+name: Share a production showcase / 分享制作案例
+description: Share an inspectable project handoff or production result with permission.
+title: "[Showcase] "
+body:
+  - type: markdown
+    attributes:
+      value: "Please share only material you have permission to publish. Public demos and real production evidence should be labelled separately. / 请仅分享获准公开的材料，并说明是演示还是实际生产。"
+  - type: input
+    id: context
+    attributes:
+      label: Project context / 项目类型
+      placeholder: Game asset family, UI system, campaign, or another visual project
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What happened and what can be checked? / 过程与可核验依据
+      description: Describe the spec, exemplar, project package, member task, review and result. Link public evidence if available.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limitations and unverified claims / 局限与未验证事项
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Permission / 公开授权
+      options:
+        - label: I have permission to publish the submitted material. / 我有权公开所提交的材料。
+          required: true

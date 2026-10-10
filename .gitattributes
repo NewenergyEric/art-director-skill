@@ -12,3 +12,7 @@
 *.jpg binary
 *.jpeg binary
 *.webp binary
+*.mp4 binary
+*.woff2 binary
+# Captions are published as byte-verified media; keep the same bytes on every OS.
+*.vtt text eol=lf

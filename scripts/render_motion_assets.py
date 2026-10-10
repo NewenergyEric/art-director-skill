@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 import os
 from pathlib import Path
 import shutil
@@ -61,9 +63,16 @@ def detect_browser(explicit: str | None) -> str | None:
     return None
 
 
-def render_silent(language: str, output: Path, browser: str | None, ffmpeg: str) -> None:
+def render_silent(language: str, output: Path, browser: str | None, ffmpeg: str,
+                  *, quick: bool = False) -> None:
     npx = executable("npx.cmd" if os.name == "nt" else "npx")
     composition = "ArtDirectorZH" if language == "zh" else "ArtDirectorEN"
+    if quick:
+        composition = "QuickPreviewZH" if language == "zh" else "QuickPreviewEN"
+    props = output.parent / f"render-props-{language}.json"
+    props.write_text(json.dumps({"language": language,
+                                "localFonts": (PUBLIC_DIR / "render-fonts/yahei-regular.ttf").is_file()}),
+                     encoding="utf-8")
     expected_prefix = f"render-frames-{language}-"
     frames_dir = Path(tempfile.mkdtemp(prefix=expected_prefix, dir=output.parent))
     if not frames_dir.name.startswith(expected_prefix) or ROOT not in frames_dir.resolve().parents:
@@ -78,16 +87,17 @@ def render_silent(language: str, output: Path, browser: str | None, ffmpeg: str)
         f"--public-dir={PUBLIC_DIR}",
         "--sequence",
         "--image-format=jpeg",
-        "--jpeg-quality=95",
+        "--jpeg-quality=90",
         "--image-sequence-pattern=frame-[frame].jpeg",
         "--concurrency=4",
         "--overwrite",
+        f"--props={props}",
     ]
     if browser:
         command.extend([f"--browser-executable={browser}", "--chrome-mode=chrome-for-testing"])
     try:
         run(command)
-        digits = len(str(MASTER_FRAMES - 1))
+        digits = len(str((180 if quick else MASTER_FRAMES) - 1))
         run([
             ffmpeg,
             "-hide_banner",
@@ -103,9 +113,9 @@ def render_silent(language: str, output: Path, browser: str | None, ffmpeg: str)
             "-c:v",
             "libx264",
             "-preset",
-            "medium",
+            "slow",
             "-crf",
-            "22",
+            "26",
             "-pix_fmt",
             "yuv420p",
             "-movflags",
@@ -179,11 +189,19 @@ def mux(ffmpeg: str, video: Path, score: Path, output: Path) -> None:
         "-map",
         "1:a:0",
         "-c:v",
-        "copy",
+        "libx264",
+        "-vf",
+        "scale=960:-2:flags=lanczos",
+        "-crf",
+        "26",
+        "-preset",
+        "slow",
+        "-pix_fmt",
+        "yuv420p",
         "-c:a",
         "aac",
         "-b:a",
-        "160k",
+        "96k",
         "-shortest",
         "-movflags",
         "+faststart",
@@ -213,7 +231,7 @@ def gif(ffmpeg: str, source: Path, output: Path, fps: int, start: float | None =
     run(command)
 
 
-def still(ffmpeg: str, source: Path, output: Path) -> None:
+def still(ffmpeg: str, source: Path, output: Path, at: float = 29.25) -> None:
     run([
         ffmpeg,
         "-hide_banner",
@@ -221,7 +239,7 @@ def still(ffmpeg: str, source: Path, output: Path) -> None:
         "error",
         "-y",
         "-ss",
-        "29.25",
+        str(at),
         "-i",
         str(source),
         "-frames:v",
@@ -233,11 +251,13 @@ def still(ffmpeg: str, source: Path, output: Path) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--language", choices=("zh", "en", "both"), default="both")
-    parser.add_argument("--out", type=Path, default=ROOT / "motion" / "out" / "v0.2.0")
+    parser.add_argument("--out", type=Path, default=ROOT / "motion" / "out" / "presentation-20261010")
     parser.add_argument("--browser", help="Chrome/Edge executable; also reads REMOTION_BROWSER_EXECUTABLE")
     parser.add_argument("--skip-render", action="store_true", help="Reuse existing *-silent.mp4 files")
-    parser.add_argument("--gif-fps", type=int, default=10)
+    parser.add_argument("--gif-fps", type=int, default=20)
     args = parser.parse_args()
+    if not 16 <= args.gif_fps <= 30:
+        parser.error("--gif-fps must be 16–30; low frame rates undermine motion readability")
 
     ffmpeg = executable("ffmpeg")
     browser = detect_browser(args.browser)
@@ -253,29 +273,59 @@ def main() -> int:
 
     for language in languages:
         silent = output_dir / f"art-director-hero-{language}-silent.mp4"
-        final = output_dir / f"art-director-hero-{language}.mp4"
+        final = output_dir / f"art-director-intro-{language}.mp4"
         if not args.skip_render:
             render_silent(language, silent, browser, ffmpeg)
         if not silent.is_file():
             raise SystemExit(f"Missing silent render: {silent}")
         mux(ffmpeg, silent, score, final)
-        gif(
-            ffmpeg,
-            final,
-            output_dir / f"art-director-hero-{language}.gif",
-            min(args.gif_fps, 8),
-            width=760,
-        )
+        quick = output_dir / f"quick-preview-{language}.mp4"
+        if not args.skip_render:
+            render_silent(language, quick, browser, ffmpeg, quick=True)
+        if not quick.is_file():
+            raise SystemExit(f"Missing quick preview render: {quick}")
+        readme = ROOT / "assets" / "readme"
+        web = ROOT / "docs" / "assets" / "motion"
+        web.mkdir(parents=True, exist_ok=True)
+        gif(ffmpeg, quick, readme / f"quick-preview-{language}.gif", args.gif_fps,
+            width=640, max_colors=96)
+        shutil.copy2(quick, web / f"quick-preview-{language}.mp4")
+        still(ffmpeg, quick, readme / f"quick-preview-{language}.jpg", at=1.5)
+        shutil.copy2(readme / f"quick-preview-{language}.jpg", web / f"quick-preview-{language}.jpg")
+        shutil.copy2(final, web / final.name)
         for name, (clip_start, clip_duration) in CLIPS.items():
             gif(
                 ffmpeg,
                 final,
                 output_dir / f"{name}-{language}.gif",
-                args.gif_fps,
+                16,
                 start=clip_start,
                 duration=clip_duration,
+                width=560,
+                max_colors=64,
             )
+            # Browser playback uses hardware-decoded 30fps H.264, not GIFs.
+            run([ffmpeg, "-hide_banner", "-loglevel", "error", "-y",
+                 "-ss", str(clip_start), "-i", str(final), "-t", str(clip_duration),
+                 "-an", "-c:v", "libx264", "-crf", "28", "-preset", "slow",
+                 "-pix_fmt", "yuv420p", "-movflags", "+faststart",
+                 str(web / f"{name}-{language}.mp4")])
+            still(ffmpeg, final, web / f"{name}-{language}.jpg", at=clip_start + .6)
+        still(ffmpeg, final, web / f"intro-{language}.jpg", at=3)
         still(ffmpeg, final, ROOT / "assets" / "readme" / f"art-director-still-{language}.png")
+
+    assets = [file for file in [*sorted((ROOT / "docs/assets/motion").glob('*')),
+                               *sorted((ROOT / "assets/readme").glob('quick-preview-*'))]
+              if file.suffix in ('.mp4', '.gif', '.jpg', '.vtt')]
+    manifest = {"schema_version": "1.0", "master_fps": FPS,
+                "readme_gif_fps": args.gif_fps, "readme_duration_seconds": 6,
+                "font": "Microsoft YaHei / SimHei (system; font files are not redistributed)",
+                "assets": [{"path": file.relative_to(ROOT).as_posix(),
+                            "bytes": file.stat().st_size,
+                            "sha256": hashlib.sha256(file.read_bytes()).hexdigest()}
+                           for file in assets if file.is_file()]}
+    (ROOT / "docs/assets/motion/manifest.json").write_text(
+        json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
     print(f"Release media ready in {output_dir}")
     return 0

@@ -1,0 +1,524 @@
+{
+  "method": "Media budgets, checksums, MP4 atoms, static local links; optional ffprobe. Browser behaviour is checked separately.",
+  "passed": 129,
+  "total": 129,
+  "failed": [],
+  "checks": [
+    {
+      "name": "docs/assets/motion/art-director-intro-en.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/art-director-intro-zh.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/game-board.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/intro-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/intro-en.vtt: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/intro-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/intro-zh.vtt: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/quick-preview-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/quick-preview-en.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/quick-preview-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/quick-preview-zh.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/review-lens-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/review-lens-en.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/review-lens-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/review-lens-zh.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/style-directions-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/style-directions-en.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/style-directions-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/style-directions-zh.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/team-pipeline-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/team-pipeline-en.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/team-pipeline-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/team-pipeline-zh.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/template-switch-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/template-switch-en.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/template-switch-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/template-switch-zh.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/quick-preview-en.gif: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/quick-preview-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/quick-preview-zh.gif: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/quick-preview-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "README.md: one repository-hosted preview GIF only",
+      "pass": true
+    },
+    {
+      "name": "README.md: full film and all four clips remain discoverable",
+      "pass": true
+    },
+    {
+      "name": "README.md: GIF under 2 MiB",
+      "pass": true
+    },
+    {
+      "name": "README.md: valid GIF header",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: one repository-hosted preview GIF only",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: full film and all four clips remain discoverable",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: GIF under 2 MiB",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: valid GIF header",
+      "pass": true
+    },
+    {
+      "name": "art-director-intro-en.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "art-director-intro-en.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "art-director-intro-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "art-director-intro-en.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "art-director-intro-zh.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "art-director-intro-zh.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "art-director-intro-zh.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "art-director-intro-zh.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "quick-preview-en.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "quick-preview-en.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "quick-preview-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "quick-preview-en.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "quick-preview-zh.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "quick-preview-zh.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "quick-preview-zh.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "quick-preview-zh.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "review-lens-en.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "review-lens-en.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "review-lens-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "review-lens-zh.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "review-lens-zh.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "review-lens-zh.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "style-directions-en.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "style-directions-en.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "style-directions-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "style-directions-zh.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "style-directions-zh.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "style-directions-zh.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "team-pipeline-en.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "team-pipeline-en.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "team-pipeline-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "team-pipeline-zh.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "team-pipeline-zh.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "team-pipeline-zh.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "template-switch-en.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "template-switch-en.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "template-switch-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "template-switch-zh.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "template-switch-zh.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "template-switch-zh.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "zh: GIF is 20 fps and 6 seconds",
+      "pass": true
+    },
+    {
+      "name": "en: GIF is 20 fps and 6 seconds",
+      "pass": true
+    },
+    {
+      "name": "landing.html: self-hosted sans-serif fallback",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link landing.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/quick-preview-zh.jpg",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/quick-preview-zh.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link member-workbench.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/game-board.jpg",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link ../examples/harbor-studio-draft/guides/00-index.md",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/campaign-layout.svg",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link ../examples/campaign-studio-draft/guides/00-index.md",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link ../evals/director-workflow-v0.5/acceptance.md",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/intro-zh.jpg",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/art-director-intro-zh.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/intro-zh.vtt",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/art-director-intro-zh.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/art-director-intro-en.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/style-directions-zh.jpg",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/style-directions-zh.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/template-switch-zh.jpg",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/template-switch-zh.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/team-pipeline-zh.jpg",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/team-pipeline-zh.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/review-lens-zh.jpg",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/review-lens-zh.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link DESIGN.md",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: self-hosted sans-serif fallback",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link landing.html",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link call-flow.html",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link member-workbench.html",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link team-production.html",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link director-workflow-v0.5.md",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link landing.html#film",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link ../evals/director-workflow-v0.5/execution-summary.json",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link ../examples/moss-harbor-draft/STYLE.md",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link team-production.html",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link member-workbench.html",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link assets/public-gallery/manifest.json",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link ../evals/director-workflow-v0.5/execution-summary.json",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link director-workflow-v0.5.md",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link director-workflow-v0.5.md",
+      "pass": true
+    },
+    {
+      "name": "full films and clips do not preload or autoplay",
+      "pass": true
+    },
+    {
+      "name": "preview has reduced-motion, data-saving and visibility controls",
+      "pass": true
+    },
+    {
+      "name": "public fonts are OFL; render-only proprietary fonts stay ignored",
+      "pass": true
+    }
+  ]
+}

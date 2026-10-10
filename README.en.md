@@ -8,26 +8,32 @@
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3272b8.svg">
 </p>
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/art-director-still-en.png">
-  <img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/art-director-hero-en.gif" width="100%" alt="A 30-second film of an art director and team moving through asset families, production templates, batch lanes, and review inside one project system.">
-</picture>
+# Art Director
 
-<p align="center"><sub>▲ 30-second bilingual Remotion introduction · one continuous canvas, seven production templates, four team lanes · <a href="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/art-director-hero-en.mp4">watch or download the scored MP4</a></sub></p>
+## One team. One visual memory.
 
-# Art Director · a visual production system for directors and teams
+**Why does this one look right?** Turn the art director's judgement into a spec the whole team—and its agents—can use.
 
-> ## Let the art director establish the system, then let the whole team work from it.
+Start with existing work, references, and feedback. Build the visual language, component families, exemplars, and acceptance criteria, then share them as a project Skill so the next teammate starts from the same version.
 
-Art Director is an installable Agent Skill. It guides an art or design director from existing work, references, notes, and project goals to a professional project position, visual language, category and component families, representative exemplars, first-piece gates, delivery requirements, and version policy. It then packages those decisions so teammates, vendors, and other agents can apply them directly.
+<a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo"><picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/quick-preview-en.jpg">
+  <img src="assets/readme/quick-preview-en.gif" width="100%" alt="A six-second introduction to building the spec, calibrating exemplars, and sharing the project skill with the team.">
+</picture></a>
 
-Outfit changes, pose changes, and single-image tasks remain useful member examples. The default product flow is broader: **director setup → exemplar calibration → project package → team production → batch review → specification update.**
+<p align="center"><sub>The core flow in 6 seconds · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo">try the rule comparison</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">watch the full 30 fps film and four focused clips</a></sub></p>
 
-<p align="center">
-  <a href="https://newenergyeric.github.io/art-director-skill/"><strong>Open the director workbench</strong></a>
-  · <a href="SKILL.md">Read the Skill</a>
-  · <a href="https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1">Download v0.5.1</a>
-</p>
+**Agent Skills** · Codex · Claude Code · Cursor · install in other tools according to their Skill support
+
+```sh
+npx skills add https://github.com/NewenergyEric/art-director-skill
+```
+
+[Open the director workbench](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) · [Read the Skill](SKILL.md) · [Download the toolkit](https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1)
+
+**You own the judgement** · **Specs and tools travel together** · **Core tools run locally without automatically uploading project material**
+
+---
 
 ## Two roles, one production chain
 
@@ -58,10 +64,6 @@ After installation, give the agent the material you already have and say:
 
 The Skill produces useful content before asking the remaining decision questions. It keeps observed facts, confirmed director decisions, agent proposals, and genuinely open issues separate instead of handing the director an empty questionnaire.
 
-<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/style-directions-en.gif" width="100%" alt="A continuous switch across a pseudo-3D item family, an American-comic task brief, a traditional card family, and a painterly collectible-card system."></p>
-
-<p align="center"><sub>▲ Projects can use completely different visual languages; the director's decisions still flow into tasks, asset families, exemplars, and review.</sub></p>
-
 The resulting package derives five human-readable guides from one source:
 
 | Guide | What the team gets from it |
@@ -71,10 +73,6 @@ The resulting package derives five human-readable guides from one source:
 | Design system | Shared language, categories, families, identities, fixed parts, and variables |
 | Delivery and review | First pieces, editable sources, exports, compositions, and channel checks |
 | Reference guide | What each source is for, what it must not contribute, and what is approved |
-
-<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/template-switch-en.gif" width="100%" alt="A continuous switch across character, item, UI, skill, match, puzzle and tabletop production templates."></p>
-
-<p align="center"><sub>▲ One project baseline compiles into category- and family-specific production templates instead of one generic prompt for everyone.</sub></p>
 
 ## How the team calls it
 
@@ -88,23 +86,11 @@ Or:
 
 The agent binds the task to a fixed project version and family, then prepares its production brief, references, handoff requirements, and explicit checks. Wrong versions, family mismatches, missing files, and unchecked claims stay visible. A passing single asset still needs a final composition review.
 
-<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/team-pipeline-en.gif" width="100%" alt="Four production lanes moving from brief through first piece and review into batch production."></p>
-
-<p align="center"><sub>▲ Prove a representative first piece, then let each production lane scale from the same version.</sub></p>
-
 ## How review feeds the system
 
 Review locates a problem at one of four layers: project visual language, asset or component identity, the current task, or technical delivery. A one-off issue stays local, a family-wide issue returns to its representative exemplar, and only shared changes across families become a director-reviewed proposal for the next baseline.
 
-<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/review-lens-en.gif" width="100%" alt="A review lens moving through style, identity, current task and technical specification."></p>
-
-<p align="center"><sub>▲ Turn “it feels wrong” into a specific correction the team can make, the director can judge, and version history can record.</sub></p>
-
-## Install
-
-```sh
-npx skills add https://github.com/NewenergyEric/art-director-skill
-```
+## Runtime requirements and offline installation
 
 The mother Skill ZIP is also available from the [v0.5.1 release](https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1). Core tools require Python 3.10+ and use only the standard library. Pillow is optional for image dimensions and transparency checks. Remotion is only used for repository media.
 
@@ -112,8 +98,8 @@ The mother Skill ZIP is also available from the [v0.5.1 release](https://github.
 
 | Entry | What it demonstrates |
 |---|---|
-| [30-second video introduction](https://github.com/NewenergyEric/art-director-skill/releases/download/v0.5.1/art-director-hero-en.mp4) | The director and team moving through template switching, parallel production, and review feedback in one system |
-| [Director workbench](https://newenergyeric.github.io/art-director-skill/) | The full path from source material and positioning through families, exemplars, team use, and iteration |
+| [30-second video introduction](https://newenergyeric.github.io/art-director-skill/docs/assets/motion/art-director-intro-en.mp4) | The director and team moving through template switching, parallel production, and review feedback in one system |
+| [Director workbench](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) | The full path from source material and positioning through families, exemplars, team use, and iteration |
 | [Harbor Studio](examples/harbor-studio-draft/guides/00-index.md) | Eight game-production families, exemplar planning, tasks, and member handoff |
 | [Weekend Drinks](examples/campaign-studio-draft/guides/00-index.md) | One specification across product, graphics, typography, UI, and channel compositions |
 | [Member task example](https://newenergyeric.github.io/art-director-skill/docs/member-workbench.html) | Scoped single-asset work, exploration, frozen versions, and composition calls |
@@ -121,6 +107,8 @@ The mother Skill ZIP is also available from the [v0.5.1 release](https://github.
 | [Call flow](https://newenergyeric.github.io/art-director-skill/docs/call-flow.html) | The files, tools, and decision boundary behind every stage |
 
 All examples are original candidate fixtures. A direction board is not presented as an approved exemplar, and its pixel dimensions do not become a production specification.
+
+Used it in a real project? [Share your spec, handoff process, and validation](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml) so the next director can assess whether it fits their team.
 
 ## Package and tools
 
