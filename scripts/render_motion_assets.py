@@ -216,7 +216,8 @@ def mux(ffmpeg: str, video: Path, score: Path, output: Path) -> None:
 
 
 def gif(ffmpeg: str, source: Path, output: Path, fps: int, start: float | None = None,
-        duration: float | None = None, width: int = 800, max_colors: int = 64) -> None:
+        duration: float | None = None, width: int = 800, max_colors: int = 64,
+        dither: str = 'bayer') -> None:
     command = [ffmpeg, "-hide_banner", "-loglevel", "error", "-y"]
     if start is not None:
         command.extend(["-ss", f"{start:.3f}"])
@@ -227,8 +228,8 @@ def gif(ffmpeg: str, source: Path, output: Path, fps: int, start: float | None =
         "-filter_complex",
         (
             f"fps={fps},scale={width}:-2:flags=lanczos,split[s0][s1];"
-            f"[s0]palettegen=max_colors={max_colors}:stats_mode=diff[p];"
-            "[s1][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle"
+            f"[s0]palettegen=max_colors={max_colors}:stats_mode={'full' if dither == 'none' else 'diff'}[p];"
+            f"[s1][p]paletteuse=dither={dither}{':bayer_scale=4' if dither == 'bayer' else ''}:diff_mode=rectangle"
         ),
         "-loop",
         "0",
@@ -338,6 +339,9 @@ def main() -> int:
         previous = json.loads(manifest_path.read_text(encoding="utf-8"))
         if "depth_showcase" in previous:
             manifest["depth_showcase"] = previous["depth_showcase"]
+            manifest["readme_duration_seconds"] = previous["depth_showcase"]["preview_seconds"]
+            manifest["readme_preview"] = "depth-preview"
+            manifest["readable_preview_duration_seconds"] = PREVIEW_FRAMES / FPS
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     print(f"Release media ready in {output_dir}")

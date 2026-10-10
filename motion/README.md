@@ -34,3 +34,9 @@ The spatial compositions load the bundled OFL variable Noto Sans SC font (`motio
 The retained walkthrough uses Microsoft YaHei / SimHei. On Windows, optional render-only YaHei subsets are loaded explicitly from ignored `motion/public/render-fonts/yahei-regular.ttf` and `yahei-bold.ttf`. Generate them from locally licensed system fonts; never commit these font files. Without those subsets, rendering uses the installed sans-serif stack. Web pages use a separate OFL-licensed Noto Sans SC fallback in `docs/assets/fonts/`.
 
 Set `REMOTION_BROWSER_EXECUTABLE` when Chrome or Edge is installed outside its default location. No network call is made by the film or its render script after dependencies and Remotion's browser runtime are installed.
+
+## Spatial GIF optimization
+
+Install the optional rendering tool with `npm install --prefix motion/out/gif-tools --no-audit --no-fund gifsicle@7.0.1`, or supply an existing binary with `--gifsicle PATH`. No optimizer binary or its code is shipped with the Skill. [Gifsicle](https://github.com/kohler/gifsicle) is used only to produce the GIF output.
+
+The six-second preview renders PNG frames to a lossless intermediate, then uses a global 64-colour palette, no dithering, 800 px width, 20 fps, and `gifsicle -O3 --lossy=120`. The orbit has smaller camera movement than the full film; its hook remains fixed. The output must stay under 4 MiB. Re-encode existing intermediates with `python scripts/render_depth_showcase.py --skip-render`; rerender only the previews with `--preview-only`. The web film retains its clean 1280 × 720 / 30 fps H.264 output.

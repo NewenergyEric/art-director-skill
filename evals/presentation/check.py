@@ -39,6 +39,9 @@ def main():
         checks.append({'name': name, 'pass': bool(ok)})
     manifest = json.loads((ROOT / 'docs/assets/motion/manifest.json').read_text(encoding='utf-8'))
     timeline = json.loads((ROOT / 'motion/src/timeline.json').read_text(encoding='utf-8'))
+    check('manifest distinguishes the spatial README loop from the readable preview',
+          manifest['readme_duration_seconds'] == 6 and manifest['readme_preview'] == 'depth-preview'
+          and manifest['readable_preview_duration_seconds'] == 12)
     durations = {c['file']: c['duration'] / timeline['fps'] for c in timeline['clips']}
     check('shared timeline has ordered beats and readable holds',
           all(a[0] < b[0] and a[1] < b[1] for a, b in zip(timeline['beats'], timeline['beats'][1:]))
@@ -75,9 +78,9 @@ def main():
         check(name + ': valid GIF header', path.read_bytes()[:6] in (b'GIF89a', b'GIF87a'))
         depth = ROOT / f'assets/readme/depth-preview-{lang}.gif'
         check(name + ': spatial preview under 4 MiB', depth.stat().st_size <= 4 * MIB)
-        check(name + ': spatial preview is a valid 960 px GIF',
+        check(name + ': spatial preview is a valid 800 px GIF',
               depth.read_bytes()[:6] in (b'GIF89a', b'GIF87a')
-              and struct.unpack_from('<H', depth.read_bytes(), 6)[0] == 960)
+              and struct.unpack_from('<H', depth.read_bytes(), 6)[0] == 800)
     for path in (ROOT / 'docs/assets/motion').glob('*.mp4'):
         limit = (10 if 'intro' in path.name else 1 if 'quick-preview' in path.name else 5) * MIB
         check(path.name + ': media byte budget', path.stat().st_size <= limit)

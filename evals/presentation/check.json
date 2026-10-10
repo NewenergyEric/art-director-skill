@@ -1,9 +1,13 @@
 {
   "method": "Media budgets, checksums, MP4 atoms, static local links; optional ffprobe. Browser behaviour is checked separately.",
-  "passed": 152,
-  "total": 152,
+  "passed": 203,
+  "total": 203,
   "failed": [],
   "checks": [
+    {
+      "name": "manifest distinguishes the spatial README loop from the readable preview",
+      "pass": true
+    },
     {
       "name": "shared timeline has ordered beats and readable holds",
       "pass": true
@@ -17,11 +21,71 @@
       "pass": true
     },
     {
+      "name": "assets/readme/depth-preview-en.gif: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/depth-preview-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/depth-preview-zh.gif: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/depth-preview-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/quick-preview-en.gif: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/quick-preview-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/quick-preview-zh.gif: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/quick-preview-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
       "name": "docs/assets/motion/art-director-intro-en.mp4: matches recorded bytes and digest",
       "pass": true
     },
     {
       "name": "docs/assets/motion/art-director-intro-zh.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-comic.webp: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-game.webp: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-showcase-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-showcase-en.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-showcase-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-showcase-zh.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-traditional.webp: matches recorded bytes and digest",
       "pass": true
     },
     {
@@ -125,22 +189,6 @@
       "pass": true
     },
     {
-      "name": "assets/readme/quick-preview-en.gif: matches recorded bytes and digest",
-      "pass": true
-    },
-    {
-      "name": "assets/readme/quick-preview-en.jpg: matches recorded bytes and digest",
-      "pass": true
-    },
-    {
-      "name": "assets/readme/quick-preview-zh.gif: matches recorded bytes and digest",
-      "pass": true
-    },
-    {
-      "name": "assets/readme/quick-preview-zh.jpg: matches recorded bytes and digest",
-      "pass": true
-    },
-    {
       "name": "README.md: one repository-hosted preview GIF only",
       "pass": true
     },
@@ -157,6 +205,14 @@
       "pass": true
     },
     {
+      "name": "README.md: spatial preview under 4 MiB",
+      "pass": true
+    },
+    {
+      "name": "README.md: spatial preview is a valid 800 px GIF",
+      "pass": true
+    },
+    {
       "name": "README.en.md: one repository-hosted preview GIF only",
       "pass": true
     },
@@ -170,6 +226,14 @@
     },
     {
       "name": "README.en.md: valid GIF header",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: spatial preview under 4 MiB",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: spatial preview is a valid 800 px GIF",
       "pass": true
     },
     {
@@ -210,6 +274,46 @@
     },
     {
       "name": "art-director-intro-zh.mp4: intended readable resolution",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: intended readable resolution",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: media byte budget",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: intended readable resolution",
       "pass": true
     },
     {
@@ -417,7 +521,15 @@
       "pass": true
     },
     {
+      "name": "zh: spatial GIF is a complete six-second orbit at 20 fps",
+      "pass": true
+    },
+    {
       "name": "en: GIF is 20 fps, 1100 px wide and 12 seconds",
+      "pass": true
+    },
+    {
+      "name": "en: spatial GIF is a complete six-second orbit at 20 fps",
       "pass": true
     },
     {
@@ -601,11 +713,103 @@
       "pass": true
     },
     {
+      "name": "showcase.html: self-hosted sans-serif fallback",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link showcase.html",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link landing.html#film",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link assets/motion/depth-traditional.webp?v=spatial-fde-20261010-final",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link assets/motion/depth-comic.webp?v=spatial-fde-20261010-final",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link assets/motion/depth-game.webp?v=spatial-fde-20261010-final",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link assets/motion/depth-showcase-zh.jpg?v=spatial-fde-20261010-final",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link assets/motion/depth-showcase-zh.mp4?v=spatial-fde-20261010-final",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link assets/motion/depth-showcase-en.mp4?v=spatial-fde-20261010-final",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link assets/motion/depth-showcase-zh.mp4?v=spatial-fde-20261010-final",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link landing.html#film",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link assets/motion/depth-game.webp?v=spatial-fde-20261010-final",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link assets/campaign-layout.svg",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link landing.html",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link assets/fonts/OFL.txt",
+      "pass": true
+    },
+    {
       "name": "full films and clips do not preload or autoplay",
       "pass": true
     },
     {
       "name": "preview has reduced-motion, data-saving and visibility controls",
+      "pass": true
+    },
+    {
+      "name": "spatial showcase leaves its film unloaded until playback",
+      "pass": true
+    },
+    {
+      "name": "live stage supports pause, reduced motion, Save-Data and visibility",
+      "pass": true
+    },
+    {
+      "name": "web and spatial render share the same licensed font bytes",
       "pass": true
     },
     {

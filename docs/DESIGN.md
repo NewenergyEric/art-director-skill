@@ -46,7 +46,7 @@ The central hook is “把判断，交给团队” / “Your vision. Their direc
 
 ## Motion and loading
 
-- GitHub: one six-second spatial GIF at 960 px / 20 fps, using a complete periodic orbit and a stable hook. Budget: 4 MiB per language. A static poster is supplied for reduced motion. The retained readable preview is 12 seconds, 1100 px / 20 fps, under 2 MiB; it is available in the clear walkthrough.
+- GitHub: one six-second spatial GIF at 800 px / 20 fps, using a complete periodic orbit and a stable hook. Budget: 4 MiB per language. A static poster is supplied for reduced motion. The retained readable preview is 12 seconds, 1100 px / 20 fps, under 2 MiB; it is available in the clear walkthrough.
 - Web: H.264 MP4 at 30 fps with `faststart`; same-origin files, not Release redirect URLs. Full film budget: 10 MiB per language. Preview budget: 1 MiB.
 - Full film and focused videos use `preload="none"`, posters, controls and inline playback. Only one video plays at a time.
 - Autoplay only the muted short preview while visible. Pause out of view or when the page is hidden. Respect reduced motion and Save-Data. A manual play/pause action remains available.

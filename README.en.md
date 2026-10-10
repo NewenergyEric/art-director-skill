@@ -17,8 +17,8 @@
 Start with existing work, references, and feedback. Build the visual language, component families, exemplars, and acceptance criteria, then share them as a project Skill so the next teammate starts from the same version.
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=spatial-fde-20261010">
-  <img src="assets/readme/depth-preview-en.gif?v=spatial-fde-20261010" width="100%" alt="A continuous spatial study of art boards and the shared project system, from art direction to team handoff.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=spatial-fde-20261010-final">
+  <img src="assets/readme/depth-preview-en.gif?v=spatial-fde-20261010-final" width="100%" alt="A continuous spatial study of art boards and the shared project system, from art direction to team handoff.">
 </picture></a>
 
 <p align="center"><sub>A six-second seamless spatial preview · <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html">open the spatial presentation</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">retained 70-second walkthrough and four focused clips</a></sub></p>

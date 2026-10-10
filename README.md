@@ -17,8 +17,8 @@
 从已有作品、参考与批注开始，带主美建立视觉语言、组件家族、代表样板和验收要求；再把这些判断打包成项目 Skill，交给团队从同一版本继续。
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=spatial-fde-20261010">
-  <img src="assets/readme/depth-preview-zh.gif?v=spatial-fde-20261010" width="100%" alt="不同深度的作品画板连续浮动，从主美的视觉判断到团队共享的项目规范。">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=spatial-fde-20261010-final">
+  <img src="assets/readme/depth-preview-zh.gif?v=spatial-fde-20261010-final" width="100%" alt="不同深度的作品画板连续浮动，从主美的视觉判断到团队共享的项目规范。">
 </picture></a>
 
 <p align="center"><sub>6 秒连续空间预览 · <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html">进入空间版介绍</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">保留的 70 秒清晰讲解与四组分镜</a></sub></p>

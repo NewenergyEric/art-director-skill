@@ -2,14 +2,14 @@
   "schema_version": "1.0",
   "master_fps": 30,
   "readme_gif_fps": 20,
-  "readme_duration_seconds": 12.0,
+  "readme_duration_seconds": 6,
   "master_duration_seconds": 70.0,
   "font": "Microsoft YaHei / SimHei (system; font files are not redistributed)",
   "assets": [
     {
       "path": "assets/readme/depth-preview-en.gif",
-      "bytes": 7793104,
-      "sha256": "c6d420708ff99dab0d71c0665b105d1b86e0fd86acd1b24d908dbe78327350ee"
+      "bytes": 3689617,
+      "sha256": "5e0f1b641072eb84eb1fa7a8d80bf92b3c8c0cf51121883b4efc2cc8a9b99986"
     },
     {
       "path": "assets/readme/depth-preview-en.jpg",
@@ -18,8 +18,8 @@
     },
     {
       "path": "assets/readme/depth-preview-zh.gif",
-      "bytes": 7837596,
-      "sha256": "bceeec37893182470994ca79217175915a9e8d12f662d2343dd96422fa3b8b79"
+      "bytes": 3890343,
+      "sha256": "d473d8cb1aeabdc0da79be3fa78b4d4a18762b45eb8a28028330a2a9080a6de8"
     },
     {
       "path": "assets/readme/depth-preview-zh.jpg",
@@ -222,6 +222,10 @@
     "fps": 30,
     "preview_seconds": 6,
     "preview_fps": 20,
-    "preview_width": 960
-  }
+    "preview_width": 800,
+    "font": "Noto Sans SC, OFL variable subset",
+    "gif_optimizer": "gifsicle -O3 --lossy=120; 64 colors, no dithering"
+  },
+  "readme_preview": "depth-preview",
+  "readable_preview_duration_seconds": 12
 }
