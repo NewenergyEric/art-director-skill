@@ -7,6 +7,46 @@
   "font": "Microsoft YaHei / SimHei (system; font files are not redistributed)",
   "assets": [
     {
+      "path": "assets/readme/depth-preview-en.gif",
+      "bytes": 7793104,
+      "sha256": "c6d420708ff99dab0d71c0665b105d1b86e0fd86acd1b24d908dbe78327350ee"
+    },
+    {
+      "path": "assets/readme/depth-preview-en.jpg",
+      "bytes": 78274,
+      "sha256": "276eba79ced82bb1b621781aa27604ddf3e7934c67bb316c4adac05a734cb5f4"
+    },
+    {
+      "path": "assets/readme/depth-preview-zh.gif",
+      "bytes": 7837596,
+      "sha256": "bceeec37893182470994ca79217175915a9e8d12f662d2343dd96422fa3b8b79"
+    },
+    {
+      "path": "assets/readme/depth-preview-zh.jpg",
+      "bytes": 76308,
+      "sha256": "2cf55aa18dcd9c166d0ad5224df2483ffef491005d92d1a0bb8ace056f0a9310"
+    },
+    {
+      "path": "assets/readme/quick-preview-en.gif",
+      "bytes": 1193282,
+      "sha256": "e7a3cba07ef1296ec9208d18784704aeb9391f202f36e2018802e812257994d5"
+    },
+    {
+      "path": "assets/readme/quick-preview-en.jpg",
+      "bytes": 72878,
+      "sha256": "4c01da8347eb1f5ec1de21cd3b00300d9f5041871709981ad02db42f01cdc549"
+    },
+    {
+      "path": "assets/readme/quick-preview-zh.gif",
+      "bytes": 1110997,
+      "sha256": "6f07f5604bcd28335ec5669926d2c6e599f9b69a1760488ad9d479a252854ad6"
+    },
+    {
+      "path": "assets/readme/quick-preview-zh.jpg",
+      "bytes": 75917,
+      "sha256": "66daf3b5353d3977e44a05652be4a8c054022b32710c634ca9e67ed76762084f"
+    },
+    {
       "path": "docs/assets/motion/art-director-intro-en.mp4",
       "bytes": 9874317,
       "sha256": "d0cdcfef4d3411a89e330263644842356c200f7de580552eb47e58b7ccbe9149"
@@ -15,6 +55,41 @@
       "path": "docs/assets/motion/art-director-intro-zh.mp4",
       "bytes": 9768954,
       "sha256": "eb1bb4c24073ece4b1d566228a7bd5bbe961abeec2a279a83f6f4ffd1075bb80"
+    },
+    {
+      "path": "docs/assets/motion/depth-comic.webp",
+      "bytes": 98204,
+      "sha256": "859d7a3606787f50e0c12b23afbe8b8f151661a436b76fc5bcbe1a06de2db158"
+    },
+    {
+      "path": "docs/assets/motion/depth-game.webp",
+      "bytes": 62804,
+      "sha256": "c5ee333404e242ed63c5f71d53c835de3bfa5df3992d0ac30e15a1cb7044e81b"
+    },
+    {
+      "path": "docs/assets/motion/depth-showcase-en.jpg",
+      "bytes": 78274,
+      "sha256": "276eba79ced82bb1b621781aa27604ddf3e7934c67bb316c4adac05a734cb5f4"
+    },
+    {
+      "path": "docs/assets/motion/depth-showcase-en.mp4",
+      "bytes": 2420479,
+      "sha256": "a4d1e40a6e01d89fd261622217e357ac13f2a4b95e2e027015e44fe238413fdf"
+    },
+    {
+      "path": "docs/assets/motion/depth-showcase-zh.jpg",
+      "bytes": 76308,
+      "sha256": "2cf55aa18dcd9c166d0ad5224df2483ffef491005d92d1a0bb8ace056f0a9310"
+    },
+    {
+      "path": "docs/assets/motion/depth-showcase-zh.mp4",
+      "bytes": 2418922,
+      "sha256": "bcc5a7e4785b0f5668c08840d3570ebd3a16cd7f97a158ab033b3fae45d7bba8"
+    },
+    {
+      "path": "docs/assets/motion/depth-traditional.webp",
+      "bytes": 83332,
+      "sha256": "ddb1122cf6360451eebcb5187719e2e58436bc5bc2feae67b14c11b01d6cf194"
     },
     {
       "path": "docs/assets/motion/game-board.jpg",
@@ -140,26 +215,13 @@
       "path": "docs/assets/motion/template-switch-zh.mp4",
       "bytes": 2080831,
       "sha256": "d6c37d5250eedeaf0f5a7c662af17103f7e571e71995bc7375658d26f3588071"
-    },
-    {
-      "path": "assets/readme/quick-preview-en.gif",
-      "bytes": 1193282,
-      "sha256": "e7a3cba07ef1296ec9208d18784704aeb9391f202f36e2018802e812257994d5"
-    },
-    {
-      "path": "assets/readme/quick-preview-en.jpg",
-      "bytes": 72878,
-      "sha256": "4c01da8347eb1f5ec1de21cd3b00300d9f5041871709981ad02db42f01cdc549"
-    },
-    {
-      "path": "assets/readme/quick-preview-zh.gif",
-      "bytes": 1110997,
-      "sha256": "6f07f5604bcd28335ec5669926d2c6e599f9b69a1760488ad9d479a252854ad6"
-    },
-    {
-      "path": "assets/readme/quick-preview-zh.jpg",
-      "bytes": 75917,
-      "sha256": "66daf3b5353d3977e44a05652be4a8c054022b32710c634ca9e67ed76762084f"
     }
-  ]
+  ],
+  "depth_showcase": {
+    "duration_seconds": 18,
+    "fps": 30,
+    "preview_seconds": 6,
+    "preview_fps": 20,
+    "preview_width": 960
+  }
 }

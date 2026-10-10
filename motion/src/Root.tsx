@@ -3,6 +3,7 @@ import {Composition} from 'remotion';
 import {ArtDirectorFilm, ArtDirectorSocialPreview, type ArtDirectorFilmProps} from './ArtDirectorFilm';
 import {QuickPreview} from './QuickPreview';
 import timeline from './timeline.json';
+import {DepthShowcase, DEPTH_FRAMES} from './DepthShowcase';
 
 const shared = {
   component: ArtDirectorFilm,
@@ -16,6 +17,26 @@ const clips = timeline.clips;
 
 export const RemotionRoot: React.FC = () => (
   <>
+    {(['zh', 'en'] as const).map(language => <Composition
+      key={`depth-preview-${language}`}
+      id={language === 'zh' ? 'DepthPreviewZH' : 'DepthPreviewEN'}
+      component={DepthShowcase}
+      durationInFrames={180}
+      fps={30}
+      width={1280}
+      height={720}
+      defaultProps={{language, preview: true}}
+    />)}
+    {(['zh', 'en'] as const).map(language => <Composition
+      key={`depth-${language}`}
+      id={language === 'zh' ? 'DepthShowcaseZH' : 'DepthShowcaseEN'}
+      component={DepthShowcase}
+      durationInFrames={DEPTH_FRAMES}
+      fps={30}
+      width={1280}
+      height={720}
+      defaultProps={{language}}
+    />)}
     {(['zh', 'en'] as const).map(language => <Composition
       key={language}
       id={language === 'zh' ? 'QuickPreviewZH' : 'QuickPreviewEN'}

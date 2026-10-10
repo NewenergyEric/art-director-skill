@@ -67,12 +67,17 @@ def main():
         sources = re.findall(r'<img\b[^>]*src="([^"]+)"', text)
         gifs = [urlsplit(src).path for src in sources if urlsplit(src).path.endswith('.gif')]
         check(name + ': one repository-hosted preview GIF only',
-              gifs == [f'assets/readme/quick-preview-{lang}.gif'])
+              gifs == [f'assets/readme/depth-preview-{lang}.gif'])
         check(name + ': full film and all four clips remain discoverable',
               'landing.html#film' in text)
         path = ROOT / f'assets/readme/quick-preview-{lang}.gif'
         check(name + ': GIF under 2 MiB', path.stat().st_size <= 2 * MIB)
         check(name + ': valid GIF header', path.read_bytes()[:6] in (b'GIF89a', b'GIF87a'))
+        depth = ROOT / f'assets/readme/depth-preview-{lang}.gif'
+        check(name + ': spatial preview under 4 MiB', depth.stat().st_size <= 4 * MIB)
+        check(name + ': spatial preview is a valid 960 px GIF',
+              depth.read_bytes()[:6] in (b'GIF89a', b'GIF87a')
+              and struct.unpack_from('<H', depth.read_bytes(), 6)[0] == 960)
     for path in (ROOT / 'docs/assets/motion').glob('*.mp4'):
         limit = (10 if 'intro' in path.name else 1 if 'quick-preview' in path.name else 5) * MIB
         check(path.name + ': media byte budget', path.stat().st_size <= limit)
@@ -88,10 +93,10 @@ def main():
             check(path.name + ': H.264 at 30 fps',
                   stream['codec_name'] == 'h264' and stream['avg_frame_rate'] == '30/1')
             duration = float(probe['format']['duration'])
-            expected = timeline['masterFrames'] / timeline['fps'] if 'intro' in path.name else timeline['previewFrames'] / timeline['fps'] if 'quick-preview' in path.name else durations.get(path.stem.rsplit('-', 1)[0])
+            expected = 18 if 'depth-showcase' in path.name else timeline['masterFrames'] / timeline['fps'] if 'intro' in path.name else timeline['previewFrames'] / timeline['fps'] if 'quick-preview' in path.name else durations.get(path.stem.rsplit('-', 1)[0])
             if expected:
                 check(path.name + ': intended duration', abs(duration - expected) < .1)
-            resolution = (1280, 720) if 'quick-preview' in path.name else (1100, 618)
+            resolution = (1280, 720) if any(key in path.name for key in ('quick-preview', 'depth-showcase')) else (1100, 618)
             check(path.name + ': intended readable resolution',
                   (stream['width'], stream['height']) == resolution)
     for lang in ('zh', 'en'):
@@ -104,7 +109,14 @@ def main():
                   probe['streams'][0]['avg_frame_rate'] == '20/1'
                   and abs(float(probe['format']['duration']) - 12) < .1
                   and struct.unpack_from('<H', (ROOT / f'assets/readme/quick-preview-{lang}.gif').read_bytes(), 6)[0] == 1100)
-    for name in ('landing.html', 'workbench.html'):
+            probe = json.loads(subprocess.check_output([
+                'ffprobe', '-v', 'error', '-select_streams', 'v:0',
+                '-show_entries', 'stream=avg_frame_rate:format=duration', '-of', 'json',
+                str(ROOT / f'assets/readme/depth-preview-{lang}.gif')], text=True))
+            check(lang + ': spatial GIF is a complete six-second orbit at 20 fps',
+                  probe['streams'][0]['avg_frame_rate'] == '20/1'
+                  and abs(float(probe['format']['duration']) - 6) < .1)
+    for name in ('landing.html', 'workbench.html', 'showcase.html'):
         path = ROOT / 'docs' / name
         text = path.read_text(encoding='utf-8')
         check(name + ': self-hosted sans-serif fallback', 'assets/fonts/noto-sans-sc-subset.woff2' in text)
@@ -120,6 +132,14 @@ def main():
               for v in re.findall(r'<video\b[^>]*>', text)))
     check('preview has reduced-motion, data-saving and visibility controls',
           all(token in text for token in ('prefers-reduced-motion', 'saveData', 'IntersectionObserver', 'visibilitychange')))
+    showcase = (ROOT / 'docs/showcase.html').read_text(encoding='utf-8')
+    check('spatial showcase leaves its film unloaded until playback',
+          all('preload="none"' in v and 'autoplay' not in v for v in re.findall(r'<video\b[^>]*>', showcase)))
+    check('live stage supports pause, reduced motion, Save-Data and visibility',
+          all(token in showcase for token in ('prefers-reduced-motion', 'saveData', 'IntersectionObserver', 'visibilitychange', 'animation-play-state:paused', 'aria-pressed')))
+    check('web and spatial render share the same licensed font bytes',
+          (ROOT / 'motion/public/fonts/OFL.txt').is_file()
+          and (ROOT / 'motion/public/fonts/field-sans.woff2').read_bytes() == (ROOT / 'docs/assets/fonts/noto-sans-sc-subset.woff2').read_bytes())
     check('public fonts are OFL; render-only proprietary fonts stay ignored',
           (ROOT / 'docs/assets/fonts/OFL.txt').is_file()
           and 'motion/public/render-fonts/' in (ROOT / '.gitignore').read_text(encoding='utf-8'))

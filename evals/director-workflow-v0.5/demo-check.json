@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "checked_at": "2026-10-10T08:35:10.825Z",
+  "checked_at": "2026-10-10T09:05:14.219Z",
   "command": "node evals/director-workflow-v0.5/demo-check.cjs",
   "script": {
     "path": "evals/director-workflow-v0.5/demo-check.cjs",
@@ -9,8 +9,8 @@
   "checked_files": [
     {
       "path": "docs/workbench.html",
-      "sha256": "581108bfd796bbb32b926d5ce8ddaf81152b9ab632fff19d0ac33cb2497cab44",
-      "bytes": 83746
+      "sha256": "56ed8ce43344dccb01411fa2da16aa727df39f488ef83dbdb49038c3e21d2c8f",
+      "bytes": 83715
     },
     {
       "path": "docs/call-flow.html",

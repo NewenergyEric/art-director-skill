@@ -16,20 +16,20 @@
 
 从已有作品、参考与批注开始，带主美建立视觉语言、组件家族、代表样板和验收要求；再把这些判断打包成项目 Skill，交给团队从同一版本继续。
 
-<a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/quick-preview-zh.jpg?v=readability-20261010-final">
-  <img src="assets/readme/quick-preview-zh.gif?v=readability-20261010-final" width="100%" alt="十二秒了解主美建立规范、样板校准方向、项目包交给团队的完整路径。">
+<a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html"><picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=spatial-fde-20261010">
+  <img src="assets/readme/depth-preview-zh.gif?v=spatial-fde-20261010" width="100%" alt="不同深度的作品画板连续浮动，从主美的视觉判断到团队共享的项目规范。">
 </picture></a>
 
-<p align="center"><sub>12 秒看懂核心流程 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo">试试规则对照</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">观看 30 fps 完整介绍与四组分镜</a></sub></p>
+<p align="center"><sub>6 秒连续空间预览 · <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html">进入空间版介绍</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">保留的 70 秒清晰讲解与四组分镜</a></sub></p>
 
-**Agent Skills** · Codex · Claude Code · Cursor · 其他工具按其 Skill 支持方式安装
+**Agent Skills 兼容** · Codex · Claude Code · Cursor · Gemini CLI · Windsurf · GitHub Copilot CLI · VS Code · Grok
 
 ```sh
 npx skills add https://github.com/NewenergyEric/art-director-skill
 ```
 
-[进入主美工作台](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) · [读取 Skill](SKILL.md) · [下载项目工具包](https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1)
+[进入主美工作台](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) · [人类使用说明](docs/HUMAN-GUIDE.md) · [Agent 使用说明](docs/AGENT-GUIDE.md) · [读取 Skill](SKILL.md) · [下载项目工具包](https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1)
 
 **判断由你做主** · **规范和工具可打包分发** · **核心工具本地运行，不自动上传项目材料**
 
@@ -144,6 +144,8 @@ python scripts/team_batch.py check BATCH_JSON --pack NEW_PACK --out NEW_REPORT_J
 - 独立 Agent 从一张原创方向图建立了定位、8 个家族、22 条候选规则、5 项样板计划和可交接项目包。
 
 [查看 v0.5 验收记录](evals/director-workflow-v0.5/acceptance.md) · [查看实现说明](docs/director-workflow-v0.5.md) · [查看当前 CI](https://github.com/NewenergyEric/art-director-skill/actions)
+
+[本轮可用性复核](evals/2026-10-review.md) · [GitHub 同类参考](docs/github-reference-scan.md)
 
 结构和工具检查证明工作流契约成立，不代替真实艺术质量、PS/Figma 编辑、引擎或渠道集成、负责人批准及真人团队效率实验。
 

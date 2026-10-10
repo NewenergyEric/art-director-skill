@@ -17,6 +17,7 @@ def main():
     parser.add_argument('source', type=Path)
     args = parser.parse_args()
     text = ''.join(path.read_text(encoding='utf-8') for path in (ROOT / 'docs').glob('*.html'))
+    text += ''.join(path.read_text(encoding='utf-8') for path in (ROOT / 'motion/src').glob('*.tsx'))
     text += ''.join(chr(code) for code in range(32, 127))
     font = TTFont(args.source)
     options = subset.Options()

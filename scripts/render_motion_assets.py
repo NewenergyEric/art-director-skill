@@ -323,8 +323,9 @@ def main() -> int:
         still(ffmpeg, final, ROOT / "assets" / "readme" / f"art-director-still-{language}.png")
 
     assets = [file for file in [*sorted((ROOT / "docs/assets/motion").glob('*')),
-                               *sorted((ROOT / "assets/readme").glob('quick-preview-*'))]
-              if file.suffix in ('.mp4', '.gif', '.jpg', '.vtt')]
+                               *sorted((ROOT / "assets/readme").glob('quick-preview-*')),
+                               *sorted((ROOT / "assets/readme").glob('depth-preview-*'))]
+              if file.suffix in ('.mp4', '.gif', '.jpg', '.webp', '.vtt')]
     manifest = {"schema_version": "1.0", "master_fps": FPS,
                 "readme_gif_fps": args.gif_fps, "readme_duration_seconds": PREVIEW_FRAMES / FPS, "master_duration_seconds": MASTER_SECONDS,
                 "font": "Microsoft YaHei / SimHei (system; font files are not redistributed)",
@@ -332,8 +333,12 @@ def main() -> int:
                             "bytes": file.stat().st_size,
                             "sha256": hashlib.sha256(file.read_bytes()).hexdigest()}
                            for file in assets if file.is_file()]}
-    (ROOT / "docs/assets/motion/manifest.json").write_text(
-        json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    manifest_path = ROOT / "docs/assets/motion/manifest.json"
+    if manifest_path.is_file():
+        previous = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if "depth_showcase" in previous:
+            manifest["depth_showcase"] = previous["depth_showcase"]
+    manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8", newline="\n")
 
     print(f"Release media ready in {output_dir}")
     return 0

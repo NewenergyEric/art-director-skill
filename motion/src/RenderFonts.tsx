@@ -17,3 +17,16 @@ export const RenderFonts: React.FC<{enabled?: boolean}> = ({enabled = false}) =>
   }, [handle]);
   return null;
 };
+
+export const fieldFont = '"AD Field", "Noto Sans SC", sans-serif';
+export const FieldFonts: React.FC = () => {
+  const [handle] = useState(() => delayRender('Load the OFL variable presentation font'));
+  useEffect(() => {
+    const face = new FontFace('AD Field', `url("${staticFile('fonts/field-sans.woff2')}")`, {weight: '100 900'});
+    face.load().then(font => {
+      document.fonts.add(font);
+      continueRender(handle);
+    }).catch(error => cancelRender(new Error(`Unable to load the presentation font: ${error}`)));
+  }, [handle]);
+  return null;
+};
