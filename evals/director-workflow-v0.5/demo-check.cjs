@@ -143,7 +143,7 @@ const manifest=JSON.parse(fs.readFileSync('docs/assets/public-gallery/manifest.j
 check('six gallery files preserve verified original bytes and dimensions',manifest.items.length===6&&manifest.items.every(item=>{const data=fs.readFileSync(item.path);allPaths.add(item.path);return digest(data)===item.sha256&&data.readUInt32BE(16)===item.width&&data.readUInt32BE(20)===item.height;}));
 check('all rendered content remains free of restricted tokens',collectedMarkup.every(text=>!sensitive(text)));
 const allowed=['references/','scripts/','templates/','docs/assets/public-gallery/','examples/harbor-studio-draft/','examples/harbor-studio-workspace/','examples/campaign-studio-draft/','examples/campaign-studio-workspace/','examples/pop-borough-draft/','examples/moss-harbor-draft/','examples/mira-public-draft/','examples/mira-public-workspace/','examples/campaign-kit-draft/','examples/campaign-public-workspace/','evals/public-demo/','evals/team-production/','evals/director-workflow-v0.5/'];
-const allowedExact=new Set([...fileNames,'SKILL.md','docs/director-workflow-v0.5.md','docs/requirements-coverage.md','docs/team-production-storyboard.md']);
+const allowedExact=new Set([...fileNames,'SKILL.md','docs/landing.html','docs/director-workflow-v0.5.md','docs/requirements-coverage.md','docs/team-production-storyboard.md']);
 const pathChecks=[...allPaths].sort().map(file=>({path:file,allowed:!file.includes('..')&&!path.isAbsolute(file)&&(allowedExact.has(file)||allowed.some(prefix=>file.startsWith(prefix))),exists:fs.existsSync(path.resolve(root,file))}));
 check('all linked artifacts stay inside public source roots',pathChecks.every(x=>x.allowed));
 check('all linked artifacts actually exist',pathChecks.every(x=>x.exists));

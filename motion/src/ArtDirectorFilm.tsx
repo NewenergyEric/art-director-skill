@@ -1,4 +1,5 @@
 import React from 'react';
+import {RenderFonts, uiFont} from './RenderFonts';
 import {
   AbsoluteFill,
   Img,
@@ -10,6 +11,7 @@ import {
 export type ArtDirectorFilmProps = {
   language: 'zh' | 'en';
   startFrame?: number;
+  localFonts?: boolean;
 };
 
 type Language = ArtDirectorFilmProps['language'];
@@ -26,16 +28,16 @@ const C = {
   darkLine: 'rgba(21,23,21,.18)',
 };
 
-const sans = 'Arial, Microsoft YaHei, Noto Sans CJK SC, sans-serif';
-const display = 'Arial Black, Arial, Microsoft YaHei, sans-serif';
-const serif = 'Georgia, Noto Serif CJK SC, Songti SC, serif';
+const sans = uiFont;
+const display = sans;
+const heading = sans;
 
 const copy = {
   zh: {
-    opening: ['一套方向，', '要带得动整支团队。'],
-    openingNote: '给美术总监、设计负责人和每一位共同交付的人',
-    boardTitle: '不只是一张好看的图。',
-    boardBody: '角色、界面、道具和技能，各有任务，也共用同一套判断。',
+    opening: ['一个团队，', '一份视觉记忆。'],
+    openingNote: '为什么这张图看起来就是对的？把主美的判断，变成团队能执行的规范。',
+    boardTitle: '让「对的感觉」有据可循。',
+    boardBody: '把参考、组件要求和样板整理成规范，按同一版本交给团队。',
     templates: ['角色', '道具', '界面', '技能 / 动效', '消除 / 关卡', '解谜 / 线索', '桌游 / 组件'],
     templateMeta: [
       ['轮廓与身份', '表情 · 动作 · 比例'],
@@ -67,15 +69,15 @@ const copy = {
     reviewTitle: '“感觉不对”，要落到可以修改的地方。',
     reviewWords: ['画风', '身份', '本次任务', '技术规格'],
     reviewNotes: ['像不像这个项目', '还是不是这个角色', '这一轮改什么', '能不能进生产'],
-    close: ['总监改过的地方，', '下一轮不用再猜。'],
-    closeNote: '把 know-how 留在项目里，让团队从已经确认的地方继续。',
+    close: ['判断留在项目里，', '团队接着往前做。'],
+    closeNote: '建立规范。校准样板。打包分发。让下一位成员从你确认的地方开始。',
     footer: 'ART DIRECTOR · TEAM MEMORY FOR VISUAL PRODUCTION',
   },
   en: {
-    opening: ['One direction', 'has to move an entire team.'],
-    openingNote: 'For art directors, design leads, and everyone who ships the work',
-    boardTitle: 'More than one good-looking image.',
-    boardBody: 'Characters, UI, items, and skills each get a focused brief—and the same project judgement.',
+    opening: ['One team.', 'One visual memory.'],
+    openingNote: 'Why does this one look right? Turn that judgement into a spec your whole team can use.',
+    boardTitle: 'Make good judgement repeatable.',
+    boardBody: 'Turn references, component requirements, and exemplars into one version the team can work from.',
     templates: ['CHARACTER', 'ITEMS', 'UI SYSTEM', 'SKILL / VFX', 'MATCH / LEVEL', 'PUZZLE / CLUES', 'BOARD / PIECES'],
     templateMeta: [
       ['Silhouette & identity', 'Expression · action · scale'],
@@ -107,8 +109,8 @@ const copy = {
     reviewTitle: '“It feels wrong” has to become something the team can fix.',
     reviewWords: ['STYLE', 'IDENTITY', 'TASK', 'SPEC'],
     reviewNotes: ['Does it belong here?', 'Is it still recognisable?', 'What changes this round?', 'Can it enter production?'],
-    close: ['What the director corrected once', 'should stay corrected.'],
-    closeNote: 'Keep the know-how inside the project, so the team starts from what is already confirmed.',
+    close: ['Keep the judgement.', 'Carry the work forward.'],
+    closeNote: 'Build the spec. Calibrate exemplars. Share the package. Let the next teammate start from what you confirmed.',
     footer: 'ART DIRECTOR · TEAM MEMORY FOR VISUAL PRODUCTION',
   },
 } as const;
@@ -123,47 +125,7 @@ const easeInOut = (value: number) => {
 const windowOpacity = (frame: number, from: number, to: number, feather = 24) =>
   p(frame, from, from + feather) * (1 - p(frame, to - feather, to));
 
-const Grain: React.FC<{opacity?: number}> = ({opacity = 0.085}) => (
-  <AbsoluteFill
-    style={{
-      pointerEvents: 'none',
-      opacity,
-      mixBlendMode: 'soft-light',
-      backgroundImage:
-        'repeating-radial-gradient(circle at 19% 23%, rgba(255,255,255,.8) 0 .55px, transparent .7px 3.2px)',
-      backgroundSize: '9px 9px',
-    }}
-  />
-);
-
-const Rail: React.FC<{frame: number; language: Language}> = ({frame, language}) => (
-  <>
-    <div
-      style={{
-        position: 'absolute',
-        left: 36,
-        right: 36,
-        top: 25,
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        fontFamily: sans,
-        fontSize: 10,
-        fontWeight: 800,
-        letterSpacing: 2.2,
-        color: C.paper,
-        zIndex: 30,
-      }}
-    >
-      <div>ART DIRECTOR<span style={{color: C.orange}}> ●</span></div>
-      <div style={{opacity: 0.52}}>{language === 'zh' ? '团队判断 / 项目记忆' : 'TEAM JUDGEMENT / PROJECT MEMORY'}</div>
-      <div>{String(Math.min(30, Math.floor(frame / 30))).padStart(2, '0')} / 30</div>
-    </div>
-    <div style={{position: 'absolute', left: 36, right: 36, top: 51, height: 1, background: C.line, zIndex: 30}}>
-      <div style={{height: 2, width: `${clamp(frame / 899) * 100}%`, background: C.orange}} />
-    </div>
-  </>
-);
+const Grain: React.FC<{opacity?: number}> = () => null;
 
 const Opening: React.FC<{frame: number; language: Language}> = ({frame, language}) => {
   const c = copy[language];
@@ -201,22 +163,22 @@ const Opening: React.FC<{frame: number; language: Language}> = ({frame, language
         <div style={{position: 'absolute', right: -18, bottom: -40, fontFamily: display, fontSize: 154, lineHeight: 0.8, letterSpacing: -10, color: 'rgba(255,253,247,.15)'}}>TEAM</div>
       </div>
 
-      <div style={{position: 'absolute', left: 54, top: 112, width: 620, opacity: wordsIn}}>
-        <div style={{fontFamily: serif, fontSize: language === 'zh' ? 66 : 63, lineHeight: 0.98, color: C.paper, letterSpacing: -3.5}}>
+      <div style={{position: 'absolute', left: 54, top: 142, width: 472, opacity: wordsIn}}>
+        <div style={{fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 60 : 50, lineHeight: 1.2, color: C.paper, letterSpacing: -1.2}}>
           {c.opening.map((line, index) => (
             <div
               key={line}
               style={{
                 transform: `translateY(${interpolate(easeOut(p(frame, 38 + index * 13, 90 + index * 13)), [0, 1], [45, 0])}px)`,
                 opacity: easeOut(p(frame, 38 + index * 13, 90 + index * 13)),
-                fontStyle: index === 0 && language === 'en' ? 'italic' : 'normal',
+                fontStyle: 'normal',
               }}
             >
               {line}
             </div>
           ))}
         </div>
-        <div style={{width: interpolate(easeOut(p(frame, 92, 138)), [0, 1], [0, 176]), height: 9, background: C.orange, marginTop: 34}} />
+        <div style={{width: interpolate(easeOut(p(frame, 92, 138)), [0, 1], [0, 176]), height: 3, background: C.orange, marginTop: 28}} />
         <div style={{marginTop: 24, width: 420, fontFamily: sans, fontSize: language === 'zh' ? 16 : 14, lineHeight: 1.55, color: 'rgba(242,238,227,.66)'}}>{c.openingNote}</div>
       </div>
 
@@ -370,7 +332,7 @@ const StyleDirections: React.FC<{frame: number; language: Language}> = ({frame, 
 
       <div style={{position: 'absolute', left: 48, top: 88, width: 435, zIndex: 8}}>
         <div style={{fontFamily: sans, fontSize: 10, fontWeight: 800, letterSpacing: 2.2, color: C.orange}}>{c.styleEyebrow}</div>
-        <div style={{marginTop: 20, fontFamily: serif, fontSize: language === 'zh' ? 46 : 42, lineHeight: 0.98, letterSpacing: -2.2, color: C.paper, opacity: detailIn, transform: `translateY(${interpolate(detailIn, [0, 1], [20, 0])}px)`}}>{c.styleTitle[active]}</div>
+        <div style={{marginTop: 20, fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 46 : 42, lineHeight: 0.98, letterSpacing: -2.2, color: C.paper, opacity: detailIn, transform: `translateY(${interpolate(detailIn, [0, 1], [20, 0])}px)`}}>{c.styleTitle[active]}</div>
         <div style={{marginTop: 19, width: 286, fontFamily: sans, fontSize: language === 'zh' ? 14 : 13, lineHeight: 1.56, color: 'rgba(242,238,227,.66)', opacity: detailIn}}>{c.styleMeta[active]}</div>
         <div style={{marginTop: 27, display: 'inline-flex', alignItems: 'center', gap: 9, padding: '9px 11px', background: active === 2 ? '#d9caa9' : C.orange, color: C.black, fontFamily: sans, fontSize: 9, fontWeight: 800, letterSpacing: 1.2}}><span>●</span>{c.styleStatus[active]}</div>
       </div>
@@ -509,7 +471,7 @@ const TeamPipeline: React.FC<{frame: number; language: Language}> = ({frame, lan
       </div>
 
       <div style={{position: 'absolute', left: 420, top: 92, right: 46}}>
-        <div style={{fontFamily: serif, fontSize: language === 'zh' ? 39 : 36, lineHeight: 1.03, letterSpacing: -1.8, color: C.ink, maxWidth: 780}}>{c.laneTitle}</div>
+        <div style={{fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 39 : 36, lineHeight: 1.03, letterSpacing: -1.8, color: C.ink, maxWidth: 780}}>{c.laneTitle}</div>
         <div style={{marginTop: 13, fontFamily: sans, fontSize: 13, color: 'rgba(21,23,21,.56)'}}>{c.laneNote}</div>
 
         <div style={{marginTop: 34, display: 'grid', gridTemplateColumns: '150px repeat(4, 1fr)', alignItems: 'end'}}>
@@ -563,7 +525,7 @@ const ReviewLens: React.FC<{frame: number; language: Language}> = ({frame, langu
       </div>
 
       <div style={{position: 'absolute', left: 74, top: 103, width: language === 'zh' ? 560 : 680, padding: '20px 22px', background: 'rgba(8,9,8,.86)', backdropFilter: 'blur(10px)'}}>
-        <div style={{fontFamily: serif, fontSize: language === 'zh' ? 31 : 27, lineHeight: 1.1, color: C.paper, letterSpacing: -1.1}}>{c.reviewTitle}</div>
+        <div style={{fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 31 : 27, lineHeight: 1.1, color: C.paper, letterSpacing: -1.1}}>{c.reviewTitle}</div>
       </div>
 
       <div style={{position: 'absolute', left: 74, right: 74, bottom: 72, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', borderTop: '1px solid rgba(242,238,227,.38)'}}>
@@ -596,8 +558,8 @@ const Closing: React.FC<{frame: number; language: Language}> = ({frame, language
       </div>
 
       <div style={{position: 'absolute', left: 568, top: 120, right: 55, opacity: enter, transform: `translateY(${interpolate(enter, [0, 1], [36, 0])}px)`}}>
-        <div style={{fontFamily: serif, fontSize: language === 'zh' ? 49 : 42, lineHeight: 1.05, letterSpacing: -2.2, color: C.paper}}>{c.close.map((line) => <div key={line}>{line}</div>)}</div>
-        <div style={{marginTop: 27, width: interpolate(enter, [0, 1], [0, 154]), height: 8, background: C.orange}} />
+        <div style={{fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 44 : 38, lineHeight: 1.23, letterSpacing: -1, color: C.paper}}>{c.close.map((line) => <div key={line}>{line}</div>)}</div>
+        <div style={{marginTop: 27, width: interpolate(enter, [0, 1], [0, 154]), height: 3, background: C.orange}} />
         <div style={{marginTop: 24, maxWidth: 610, fontFamily: sans, fontSize: language === 'zh' ? 15 : 14, lineHeight: 1.6, color: 'rgba(242,238,227,.62)'}}>{c.closeNote}</div>
       </div>
 
@@ -620,10 +582,11 @@ const Closing: React.FC<{frame: number; language: Language}> = ({frame, language
   );
 };
 
-export const ArtDirectorFilm: React.FC<ArtDirectorFilmProps> = ({language, startFrame = 0}) => {
+export const ArtDirectorFilm: React.FC<ArtDirectorFilmProps> = ({language, startFrame = 0, localFonts = false}) => {
   const frame = useCurrentFrame() + startFrame;
   return (
     <AbsoluteFill style={{background: C.black}}>
+      <RenderFonts enabled={localFonts} />
       {frame < 228 && <Opening frame={frame} language={language} />}
       {frame >= 145 && frame < 340 && <BoardReveal frame={frame} language={language} />}
       {frame >= 282 && frame < 502 && <StyleDirections frame={frame} language={language} />}
@@ -642,12 +605,12 @@ export const ArtDirectorSocialPreview: React.FC = () => (
     <div style={{position: 'absolute', left: 42, right: 42, top: 28, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: sans, fontSize: 10, fontWeight: 800, letterSpacing: 2.2}}>
       <span>ART DIRECTOR <span style={{color: C.orange}}>●</span></span>
       <span style={{color: 'rgba(242,238,227,.48)'}}>TEAM JUDGEMENT / PROJECT MEMORY</span>
-      <span>V 0.2</span>
+      <span>ART DIRECTION / SHARED MEMORY</span>
     </div>
     <div style={{position: 'absolute', left: 42, right: 42, top: 54, height: 1, background: C.line}} />
 
     <div style={{position: 'absolute', left: 48, top: 102, width: 590}}>
-      <div style={{fontFamily: serif, fontSize: 65, lineHeight: .95, letterSpacing: -3.4}}>One direction<br/>has to move<br/>an entire team.</div>
+      <div style={{fontFamily: heading, fontWeight: 600, fontSize: 65, lineHeight: .95, letterSpacing: -3.4}}>One team.<br/>One visual<br/>memory.</div>
       <div style={{marginTop: 28, width: 175, height: 9, background: C.orange}} />
       <div style={{marginTop: 23, width: 480, fontFamily: sans, fontSize: 15, lineHeight: 1.55, color: 'rgba(242,238,227,.67)'}}>Turn an art director’s judgement into focused briefs, asset families, first-piece gates, and a version the whole team can keep using.</div>
     </div>

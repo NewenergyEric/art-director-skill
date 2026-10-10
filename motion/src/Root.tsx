@@ -1,6 +1,7 @@
 import React from 'react';
 import {Composition} from 'remotion';
 import {ArtDirectorFilm, ArtDirectorSocialPreview, type ArtDirectorFilmProps} from './ArtDirectorFilm';
+import {QuickPreview} from './QuickPreview';
 
 const shared = {
   component: ArtDirectorFilm,
@@ -19,6 +20,16 @@ const clips = [
 
 export const RemotionRoot: React.FC = () => (
   <>
+    {(['zh', 'en'] as const).map(language => <Composition
+      key={language}
+      id={language === 'zh' ? 'QuickPreviewZH' : 'QuickPreviewEN'}
+      component={QuickPreview}
+      durationInFrames={180}
+      fps={30}
+      width={1280}
+      height={720}
+      defaultProps={{language}}
+    />)}
     <Composition<ArtDirectorFilmProps>
       id="ArtDirectorZH"
       {...shared}
