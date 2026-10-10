@@ -1,7 +1,7 @@
 {
   "method": "Shared claim, public links, canonical media budgets and checksums; optional ffprobe.",
-  "passed": 131,
-  "total": 131,
+  "passed": 132,
+  "total": 132,
   "failed": [],
   "checks": [
     {
@@ -486,6 +486,10 @@
     },
     {
       "name": "motion source uses the exact shared claims",
+      "pass": true
+    },
+    {
+      "name": "CI renders only current visual-memory compositions",
       "pass": true
     },
     {

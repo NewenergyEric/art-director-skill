@@ -158,6 +158,10 @@ def main():
     check('motion source uses the exact shared claims',
           "'一个团队，'" in motion_source and '视觉记忆。' in motion_source
           and "'One team,'" in motion_source and 'visual memory.' in motion_source)
+    workflow = (ROOT / '.github/workflows/ci.yml').read_text(encoding='utf-8')
+    check('CI renders only current visual-memory compositions',
+          'DepthShowcaseZH' in workflow and 'DepthPreviewEN' in workflow
+          and all(legacy not in workflow for legacy in ('ArtDirectorZH', 'ArtDirectorEN', 'QuickPreview')))
 
     for lang in ('zh', 'en'):
         video = ROOT / f'docs/assets/motion/depth-showcase-{lang}.mp4'
