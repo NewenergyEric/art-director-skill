@@ -8,7 +8,7 @@ export const RemotionRoot: React.FC = () => (
       key={`depth-preview-${language}`}
       id={language === 'zh' ? 'DepthPreviewZH' : 'DepthPreviewEN'}
       component={DepthShowcase}
-      durationInFrames={180}
+      durationInFrames={DEPTH_FRAMES}
       fps={30}
       width={1280}
       height={720}

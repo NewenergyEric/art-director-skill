@@ -1,11 +1,11 @@
 {
   "method": "Shared claim, public links, canonical media budgets and checksums; optional ffprobe.",
-  "passed": 134,
-  "total": 134,
+  "passed": 80,
+  "total": 80,
   "failed": [],
   "checks": [
     {
-      "name": "manifest describes the canonical spatial system",
+      "name": "manifest describes the complete 24-second workflow",
       "pass": true
     },
     {
@@ -61,7 +61,7 @@
       "pass": true
     },
     {
-      "name": "README.md: product, director and engineering entrances are visible",
+      "name": "README.md: one introduction instead of competing web interfaces",
       "pass": true
     },
     {
@@ -73,7 +73,7 @@
       "pass": true
     },
     {
-      "name": "zh: canonical GIF is valid, 800 px wide, and under 4 MiB",
+      "name": "zh: canonical GIF is valid, 800 px wide, and under 6 MiB",
       "pass": true
     },
     {
@@ -85,7 +85,7 @@
       "pass": true
     },
     {
-      "name": "README.en.md: product, director and engineering entrances are visible",
+      "name": "README.en.md: one introduction instead of competing web interfaces",
       "pass": true
     },
     {
@@ -97,7 +97,7 @@
       "pass": true
     },
     {
-      "name": "en: canonical GIF is valid, 800 px wide, and under 4 MiB",
+      "name": "en: canonical GIF is valid, 800 px wide, and under 6 MiB",
       "pass": true
     },
     {
@@ -109,351 +109,99 @@
       "pass": true
     },
     {
-      "name": "showcase.html: opts into the shared visual-memory system",
+      "name": "showcase.html: redirects to the unified introduction",
       "pass": true
     },
     {
-      "name": "showcase.html: carries the visual-memory language",
+      "name": "showcase.html: redirect anchor exists",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/visual-memory.css?v=visual-memory-20261010b",
+      "name": "showcase.html: local link landing.html#film",
       "pass": true
     },
     {
-      "name": "showcase.html: local link showcase.html",
+      "name": "landing.html: loads the shared visual-memory stylesheet",
       "pass": true
     },
     {
-      "name": "showcase.html: local link landing.html",
+      "name": "landing.html: local link assets/visual-memory.css?v=agent-first-20261010",
       "pass": true
     },
     {
-      "name": "showcase.html: local link workbench.html",
+      "name": "landing.html: local link assets/motion/depth-game.webp",
       "pass": true
     },
     {
-      "name": "showcase.html: local link workbench.html",
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.jpg?v=agent-first-20261010",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-traditional.webp?v=visual-memory-20261010b",
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=agent-first-20261010",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-comic.webp?v=visual-memory-20261010b",
+      "name": "landing.html: local link assets/motion/workflow-zh.vtt",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-game.webp?v=visual-memory-20261010b",
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-showcase-zh.jpg?v=visual-memory-20261010b",
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=agent-first-20261010",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261010b",
+      "name": "landing.html: local link assets/motion/depth-showcase-en.mp4?v=agent-first-20261010",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-showcase-en.mp4?v=visual-memory-20261010b",
+      "name": "workbench.html: redirects to the unified introduction",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261010b",
+      "name": "workbench.html: redirect anchor exists",
       "pass": true
     },
     {
-      "name": "showcase.html: local link landing.html",
+      "name": "workbench.html: local link landing.html#director",
       "pass": true
     },
     {
-      "name": "showcase.html: local link workbench.html",
+      "name": "member-workbench.html: redirects to the unified introduction",
       "pass": true
     },
     {
-      "name": "showcase.html: local link workbench.html",
+      "name": "member-workbench.html: redirect anchor exists",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-game.webp?v=visual-memory-20261010b",
+      "name": "member-workbench.html: local link landing.html#member",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/campaign-layout.svg",
+      "name": "call-flow.html: redirects to the unified introduction",
       "pass": true
     },
     {
-      "name": "showcase.html: local link workbench.html",
+      "name": "call-flow.html: redirect anchor exists",
       "pass": true
     },
     {
-      "name": "showcase.html: local link landing.html",
+      "name": "call-flow.html: local link landing.html#details",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/fonts/OFL.txt",
+      "name": "team-production.html: redirects to the unified introduction",
       "pass": true
     },
     {
-      "name": "landing.html: opts into the shared visual-memory system",
+      "name": "team-production.html: redirect anchor exists",
       "pass": true
     },
     {
-      "name": "landing.html: carries the visual-memory language",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/visual-memory.css?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link showcase.html",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link call-flow.html",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/depth-game.webp?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/depth-traditional.webp?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/depth-comic.webp?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/depth-showcase-zh.jpg?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/depth-showcase-en.mp4?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link member-workbench.html",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link call-flow.html",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link showcase.html",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: opts into the shared visual-memory system",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: carries the visual-memory language",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link assets/visual-memory.css?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link showcase.html",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link call-flow.html",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link member-workbench.html",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link team-production.html",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link director-workflow-v0.5.md",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link showcase.html#film",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link ../evals/director-workflow-v0.5/execution-summary.json",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link ../examples/moss-harbor-draft/STYLE.md",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link team-production.html",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link member-workbench.html",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link assets/public-gallery/manifest.json",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link ../evals/director-workflow-v0.5/execution-summary.json",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link director-workflow-v0.5.md",
-      "pass": true
-    },
-    {
-      "name": "workbench.html: local link director-workflow-v0.5.md",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: opts into the shared visual-memory system",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: carries the visual-memory language",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: local link assets/visual-memory.css?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: local link member-workbench.html",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: local link team-production.html",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: local link call-flow.html",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: local link requirements-coverage.md",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: local link requirements-coverage.md",
-      "pass": true
-    },
-    {
-      "name": "member-workbench.html: local link requirements-coverage.md",
-      "pass": true
-    },
-    {
-      "name": "call-flow.html: opts into the shared visual-memory system",
-      "pass": true
-    },
-    {
-      "name": "call-flow.html: carries the visual-memory language",
-      "pass": true
-    },
-    {
-      "name": "call-flow.html: local link assets/visual-memory.css?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "call-flow.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "call-flow.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "call-flow.html: local link team-production.html",
-      "pass": true
-    },
-    {
-      "name": "call-flow.html: local link workbench.html#public-gallery-section",
-      "pass": true
-    },
-    {
-      "name": "team-production.html: opts into the shared visual-memory system",
-      "pass": true
-    },
-    {
-      "name": "team-production.html: carries the visual-memory language",
-      "pass": true
-    },
-    {
-      "name": "team-production.html: local link assets/visual-memory.css?v=visual-memory-20261010b",
-      "pass": true
-    },
-    {
-      "name": "team-production.html: local link call-flow.html",
-      "pass": true
-    },
-    {
-      "name": "team-production.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "team-production.html: local link ../examples/moss-harbor-draft/STYLE.md",
-      "pass": true
-    },
-    {
-      "name": "team-production.html: local link ../examples/moss-harbor-draft/STYLE.md",
-      "pass": true
-    },
-    {
-      "name": "team-production.html: local link call-flow.html",
-      "pass": true
-    },
-    {
-      "name": "team-production.html: local link workbench.html",
+      "name": "team-production.html: local link landing.html#workflow",
       "pass": true
     },
     {
@@ -469,27 +217,63 @@
       "pass": true
     },
     {
-      "name": "shared stylesheet defines the canonical palette and distinct layouts",
+      "name": "shared stylesheet preserves the public palette and readable alternatives",
       "pass": true
     },
     {
-      "name": "public presentation reference fixes the shared claim and anti-template rule",
+      "name": "introduction IDs are unique",
       "pass": true
     },
     {
-      "name": "live stage supports pause, reduced motion, Save-Data and visibility",
+      "name": "introduction anchor: start",
       "pass": true
     },
     {
-      "name": "product page contains rotated artwork without horizontal page overflow",
+      "name": "introduction anchor: top",
       "pass": true
     },
     {
-      "name": "product page has reduced-motion behaviour and one canonical film",
+      "name": "introduction anchor: film",
       "pass": true
     },
     {
-      "name": "motion source uses the exact shared claims",
+      "name": "introduction anchor: start",
+      "pass": true
+    },
+    {
+      "name": "introduction anchor: start",
+      "pass": true
+    },
+    {
+      "name": "introduction anchor: film",
+      "pass": true
+    },
+    {
+      "name": "copy button has a source: install-command",
+      "pass": true
+    },
+    {
+      "name": "copy button has a source: director-prompt",
+      "pass": true
+    },
+    {
+      "name": "copy button has a source: member-prompt",
+      "pass": true
+    },
+    {
+      "name": "one optional film, native controls, captions and a text alternative",
+      "pass": true
+    },
+    {
+      "name": "five navigable chapters cover the workflow in sequence",
+      "pass": true
+    },
+    {
+      "name": "captions cover the complete 24-second story",
+      "pass": true
+    },
+    {
+      "name": "public source keeps the requested Chinese and English claims",
       "pass": true
     },
     {
@@ -509,11 +293,11 @@
       "pass": true
     },
     {
-      "name": "depth-showcase-zh.mp4: H.264, 1280x720, 30 fps, 18 seconds",
+      "name": "depth-showcase-zh.mp4: H.264, 1280x720, 30 fps, 24 seconds",
       "pass": true
     },
     {
-      "name": "zh: README GIF is 800 px, 20 fps, six seconds",
+      "name": "zh: README GIF is 800 px and includes the full 24 seconds",
       "pass": true
     },
     {
@@ -525,11 +309,11 @@
       "pass": true
     },
     {
-      "name": "depth-showcase-en.mp4: H.264, 1280x720, 30 fps, 18 seconds",
+      "name": "depth-showcase-en.mp4: H.264, 1280x720, 30 fps, 24 seconds",
       "pass": true
     },
     {
-      "name": "en: README GIF is 800 px, 20 fps, six seconds",
+      "name": "en: README GIF is 800 px and includes the full 24 seconds",
       "pass": true
     },
     {

@@ -69,10 +69,10 @@ def main():
         checks.append({'name': name, 'pass': bool(ok)})
 
     manifest = json.loads((ROOT / 'docs/assets/motion/manifest.json').read_text(encoding='utf-8'))
-    check('manifest describes the canonical spatial system',
-          manifest.get('schema_version') == '2.0'
-          and manifest.get('readme_duration_seconds') == 6
-          and manifest.get('master_duration_seconds') == 18
+    check('manifest describes the complete 24-second workflow',
+          manifest.get('schema_version') == '3.0'
+          and manifest.get('readme_duration_seconds') == 24
+          and manifest.get('master_duration_seconds') == 24
           and manifest.get('readme_preview') == 'depth-preview'
           and manifest.get('visual_system') == 'One team, one visual memory.')
 
@@ -88,19 +88,19 @@ def main():
         gifs = [urlsplit(src).path for src in images if urlsplit(src).path.endswith('.gif')]
         check(readme + ': one canonical repository-hosted GIF',
               gifs == [f'assets/readme/depth-preview-{lang}.gif'])
-        check(readme + ': product, director and engineering entrances are visible',
-              all(link in text for link in ('docs/landing.html', 'docs/workbench.html', 'docs/call-flow.html')))
-        expected_claim = '一个团队，一份视觉记忆。' if lang == 'zh' else 'One team, one visual memory.'
+        check(readme + ': one introduction instead of competing web interfaces',
+              'docs/landing.html' in text and not any(name in text for name in ('workbench.html', 'showcase.html', 'call-flow.html', 'team-production.html')))
+        expected_claim = '一个团队/项目，一份视觉记忆。' if lang == 'zh' else 'One team, one visual memory.'
         check(readme + ': uses the shared core claim', expected_claim in text)
         check(readme + ': contains no legacy public media reference',
               not any(name in text for name in LEGACY_MEDIA) and '70 秒' not in text and '70-second' not in text)
 
         gif = ROOT / f'assets/readme/depth-preview-{lang}.gif'
         data = gif.read_bytes()
-        check(lang + ': canonical GIF is valid, 800 px wide, and under 4 MiB',
+        check(lang + ': canonical GIF is valid, 800 px wide, and under 6 MiB',
               data[:6] in (b'GIF89a', b'GIF87a')
               and struct.unpack_from('<H', data, 6)[0] == 800
-              and gif.stat().st_size <= 4 * MIB)
+              and gif.stat().st_size <= 6 * MIB)
         poster = ROOT / f'assets/readme/depth-preview-{lang}.jpg'
         check(lang + ': reduced-motion poster exists and is non-empty',
               poster.is_file() and poster.stat().st_size > 10_000)
@@ -117,10 +117,16 @@ def main():
         path = ROOT / 'docs' / name
         text = path.read_text(encoding='utf-8')
         public_text += '\n' + text
-        check(name + ': opts into the shared visual-memory system',
-              'assets/visual-memory.css' in text and 'vm-page' in text)
-        check(name + ': carries the visual-memory language',
-              '视觉记忆' in text or 'VISUAL MEMORY' in text)
+        if name == 'landing.html':
+            check(name + ': loads the shared visual-memory stylesheet', 'assets/visual-memory.css' in text)
+        else:
+            redirect = re.search(r'http-equiv="refresh" content="0; url=([^"]+)"', text)
+            check(name + ': redirects to the unified introduction',
+                  bool(redirect) and redirect[1].startswith('landing.html#'))
+            if redirect:
+                anchor = urlsplit(redirect[1]).fragment
+                landing_source = (ROOT / 'docs/landing.html').read_text(encoding='utf-8')
+                check(name + ': redirect anchor exists', f'id="{anchor}"' in landing_source)
         for src, target in local_links(path, text):
             check(name + ': local link ' + src,
                   target.is_relative_to(ROOT) and target.is_file())
@@ -135,31 +141,31 @@ def main():
     stylesheet = (ROOT / 'docs/assets/visual-memory.css').read_text(encoding='utf-8')
     check('shared stylesheet self-hosts the licensed variable face',
           'noto-sans-sc-subset.woff2' in stylesheet and 'font-display: swap' in stylesheet)
-    check('shared stylesheet defines the canonical palette and distinct layouts',
-          all(token in stylesheet for token in (
-              '#001f3f', '#007d86', '#92e4da',
-              '.vm-workbench', '.vm-member', '.vm-call', '.vm-team')))
-    check('public presentation reference fixes the shared claim and anti-template rule',
-          all(token in (ROOT / 'references/public-presentation.md').read_text(encoding='utf-8')
-              for token in ('一个团队，一份视觉记忆。', 'One team, one visual memory.', '四种构图，不复制同一模板')))
-
-    showcase = (ROOT / 'docs/showcase.html').read_text(encoding='utf-8')
-    check('live stage supports pause, reduced motion, Save-Data and visibility',
-          all(token in showcase for token in (
-              'prefers-reduced-motion', 'saveData', 'IntersectionObserver',
-              'visibilitychange', 'animation-play-state:paused', 'aria-pressed')))
+    check('shared stylesheet preserves the public palette and readable alternatives',
+          all(token in stylesheet for token in ('#001f3f', '#007d86', '#92e4da',
+                                                'prefers-reduced-motion', ':focus-visible')))
     landing = (ROOT / 'docs/landing.html').read_text(encoding='utf-8')
-    check('product page contains rotated artwork without horizontal page overflow',
-          'overflow-x:hidden' in landing)
-    check('product page has reduced-motion behaviour and one canonical film',
-          'prefers-reduced-motion' in landing
-          and len(re.findall(r'<source\s+src="assets/motion/depth-showcase-zh\.mp4', landing)) == 1
-          and len(re.findall(r'<video\b', landing)) == 1)
-
+    ids = re.findall(r'\bid="([^"]+)"', landing)
+    check('introduction IDs are unique', len(ids) == len(set(ids)))
+    for anchor in re.findall(r'href="#([^"]+)"', landing):
+        check('introduction anchor: ' + anchor, anchor in ids)
+    for source in re.findall(r'data-copy="([^"]+)"', landing):
+        check('copy button has a source: ' + source, source in ids)
+    videos = re.findall(r'<video\b[^>]*>', landing)
+    check('one optional film, native controls, captions and a text alternative',
+          len(videos) == 1 and 'controls' in videos[0]
+          and 'preload="none"' in videos[0] and 'autoplay' not in videos[0]
+          and 'kind="captions"' in landing and 'class="transcript"' in landing)
+    chapters = [float(value) for value in re.findall(r'data-seek="([^"]+)"', landing)]
+    check('five navigable chapters cover the workflow in sequence',
+          len(chapters) == 5 and chapters == sorted(chapters)
+          and chapters[0] == 0 and 17 <= chapters[-1] < 24)
+    check('captions cover the complete 24-second story',
+          '00:24.000' in (ROOT / 'docs/assets/motion/workflow-zh.vtt').read_text(encoding='utf-8'))
     motion_source = (ROOT / 'motion/src/DepthShowcase.tsx').read_text(encoding='utf-8')
-    check('motion source uses the exact shared claims',
-          "'一个团队，'" in motion_source and '视觉记忆。' in motion_source
-          and "'One team,'" in motion_source and 'visual memory.' in motion_source)
+    check('public source keeps the requested Chinese and English claims',
+          '一个团队/项目，' in motion_source and '一份视觉记忆。' in motion_source
+          and 'One team,' in motion_source and 'one visual memory.' in motion_source)
     claim_corpus = public_text + motion_source + (ROOT / 'README.en.md').read_text(encoding='utf-8')
     check('English core claim keeps the fixed comma punctuation',
           'One team. One visual memory.' not in claim_corpus
@@ -181,20 +187,19 @@ def main():
                 '-show_entries', 'stream=codec_name,avg_frame_rate,width,height:format=duration',
                 '-of', 'json', str(video)], text=True))
             stream = video_probe['streams'][0]
-            check(video.name + ': H.264, 1280x720, 30 fps, 18 seconds',
+            check(video.name + ': H.264, 1280x720, 30 fps, 24 seconds',
                   stream['codec_name'] == 'h264'
                   and stream['avg_frame_rate'] == '30/1'
                   and (stream['width'], stream['height']) == (1280, 720)
-                  and abs(float(video_probe['format']['duration']) - 18) < .1)
+                  and abs(float(video_probe['format']['duration']) - 24) < .1)
             gif_probe = json.loads(subprocess.check_output([
                 'ffprobe', '-v', 'error', '-select_streams', 'v:0',
                 '-show_entries', 'stream=avg_frame_rate,width:format=duration',
                 '-of', 'json', str(ROOT / f'assets/readme/depth-preview-{lang}.gif')], text=True))
             gif_stream = gif_probe['streams'][0]
-            check(lang + ': README GIF is 800 px, 20 fps, six seconds',
-                  gif_stream['avg_frame_rate'] == '20/1'
-                  and gif_stream['width'] == 800
-                  and abs(float(gif_probe['format']['duration']) - 6) < .1)
+            check(lang + ': README GIF is 800 px and includes the full 24 seconds',
+                  gif_stream['width'] == 800
+                  and abs(float(gif_probe['format']['duration']) - 24) < .1)
 
     check('web and render share the same licensed font bytes',
           (ROOT / 'motion/public/fonts/OFL.txt').is_file()

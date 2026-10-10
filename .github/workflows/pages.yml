@@ -1,4 +1,4 @@
-name: Publish workbench
+name: Publish introduction
 
 on:
   push:
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - name: Stage the interactive documentation
+      - name: Stage the introduction and documentation
         shell: bash
         run: |
           mkdir -p _site/examples _site/evals
