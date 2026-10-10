@@ -98,14 +98,24 @@ def inspect_image_bytes(content):
                     alpha = image.convert("RGBA").getchannel("A")
                     extrema = alpha.getextrema()
                     transparent = extrema[0] < 255
+                    visible = extrema[1] > 0
+                    bbox = alpha.getbbox()
+                    alpha_extrema = list(extrema)
+                    nonzero_alpha_bbox = list(bbox) if bbox is not None else None
                 else:
                     transparent = False
+                    visible = True
+                    alpha_extrema = None
+                    nonzero_alpha_bbox = None
                 metadata = {
                     "width": image.width, "height": image.height,
                     "format": image.format, "mode": image.mode,
                     "has_alpha_channel": has_alpha,
                     "has_transparency_metadata": has_metadata,
                     "has_transparent_pixels": transparent,
+                    "alpha_extrema": alpha_extrema,
+                    "has_visible_pixels": visible,
+                    "nonzero_alpha_bbox": nonzero_alpha_bbox,
                     "frames": getattr(image, "n_frames", 1),
                     "inspected_frame": 0,
                     "orientation_applied": False,
@@ -143,6 +153,7 @@ def check_image(path, expected_width, expected_height, require_transparency=Fals
     }
     if require_transparency:
         checks["transparency"] = {"expected": True, "actual": actual["has_transparent_pixels"] if actual else None, "result": "unknown"}
+        checks["foreground_nonempty"] = {"expected": True, "actual": actual["has_visible_pixels"] if actual else None, "result": "unknown"}
     if actual:
         for check in checks.values():
             check["result"] = "pass" if check["expected"] == check["actual"] else "fail"
@@ -151,7 +162,7 @@ def check_image(path, expected_width, expected_height, require_transparency=Fals
         "ok": all(check["result"] == "pass" for check in checks.values()),
         "source_path": str(path), "sha256": digest, **decoded, "checks": checks,
         "identity_assessment": "not_performed",
-        "scope_of_check": "Decoded stored raster dimensions and first-frame pixel transparency only. No identity, style, anatomical, readability or artistic judgment; EXIF orientation is not applied.",
+        "scope_of_check": "Decoded stored raster dimensions, first-frame pixel transparency and nonzero-alpha foreground only. Alpha extrema and bounding box are null when no alpha channel/transparency metadata exists; bounding box uses left/top inclusive and right/bottom exclusive pixel coordinates. Fully transparent hidden RGB is not visible foreground; alpha need not reach 255. No identity, style, anatomical, readability or artistic judgment; EXIF orientation is not applied.",
     }
 
 

@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "task_id": "campaign-layout-first",
+  "project_id": "campaign-studio",
+  "created_at": "2026-10-09T17:43:00+00:00",
+  "request": "按主美活动规范准备横幅、竖版和社媒的组合首件，商品与文字不重新发明；缺的真实资料先列清。",
+  "category": "layout",
+  "subject": null,
+  "entity_id": null,
+  "family_id": "channel-layouts",
+  "owner": {
+    "id": "layout-designer",
+    "kind": "internal"
+  },
+  "mode": "exploration",
+  "baseline": {
+    "version": "0.5.0",
+    "fingerprint": "7e3c4e7d75077ba0183e813653d6c5363533a3898387784488167b6e7f8842dd",
+    "path": "releases/0.5.0",
+    "release": false
+  },
+  "status": "prepared_for_exploration",
+  "ready": false,
+  "production_approved": false,
+  "blockers": [],
+  "controls": {
+    "slots": {
+      "composition": {
+        "default": "商品一侧、活动信息另一侧，留出安全区",
+        "guidance": "可探索构图关系但不可改商品包装或虚构促销事实。"
+      }
+    },
+    "exploration": {
+      "allowed_slots": [
+        "composition"
+      ],
+      "max_candidates": 3
+    }
+  },
+  "changes": {
+    "composition": "商品和活动信息分层，按三种渠道重排"
+  },
+  "resolved_values": {
+    "composition": "商品和活动信息分层，按三种渠道重排"
+  },
+  "exploration": {
+    "slots": [
+      "composition"
+    ],
+    "candidates": 2
+  },
+  "components": [
+    {
+      "category": "product",
+      "subject": "主商品",
+      "entity_id": "hero-bottle",
+      "family_id": "product-master"
+    },
+    {
+      "category": "graphic",
+      "subject": null,
+      "entity_id": null,
+      "family_id": "campaign-decor"
+    },
+    {
+      "category": "typography",
+      "subject": null,
+      "entity_id": null,
+      "family_id": "campaign-type"
+    },
+    {
+      "category": "ui",
+      "subject": null,
+      "entity_id": null,
+      "family_id": "action-controls"
+    }
+  ],
+  "references": [
+    {
+      "id": "CAMPAIGN-BRIEF",
+      "path": "references/campaign-brief.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "真实存在的文本演示方向，未提供商品/品牌图像或正式活动数据。",
+      "status": "candidate",
+      "provenance": {
+        "type": "authored_demo",
+        "source": "本会话扩展至电商与宣传海报的需求",
+        "approval": "none"
+      },
+      "usage": "candidate_exploration_only",
+      "workspace_path": "releases/0.5.0/references/campaign-brief.md",
+      "absolute_path": "<PROJECT_ROOT>\\examples\\campaign-studio-workspace\\releases\\0.5.0\\references\\campaign-brief.md",
+      "sha256": "289c49ce7c2dc088ed68be651e7a8759e2d2529d1ed65b60ffe01b82a8b71563"
+    }
+  ],
+  "open_questions": [
+    "缺真实商品母版、品牌标识和批准风格样板",
+    "缺正式活动文字、价格、日期与细则",
+    "缺已选字体及实际渠道尺寸",
+    "尚未生成图像或进行PS/Figma排版、投放验收"
+  ],
+  "work_path": "work/campaign-layout-first",
+  "limitations": [
+    "Agent parses the request; CLI cannot assess semantic conflicts or visual identity.",
+    "Initial unknown checks are not approval or generated assets.",
+    "All tasks retain applicable must/fixed constraints, including during exploration."
+  ]
+}

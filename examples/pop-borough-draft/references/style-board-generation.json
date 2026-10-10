@@ -1,0 +1,47 @@
+{
+  "record_type": "generated-candidate-reference",
+  "project_id": "pop-borough",
+  "status": "candidate",
+  "purpose": "跨类别风格讨论；不是50件量产交付或批准样板",
+  "output_local": "references/style-board.png",
+  "model_version": null,
+  "seed": null,
+  "actual_generation_calls": 2,
+  "calls": [
+    {
+      "attempt": 1,
+      "tool": "image_gen.imagegen",
+      "request": {
+        "prompt": "Create a polished ORIGINAL game art direction and asset-family reference board for a fictional casual match-3 mobile game called Pop Borough. This is a candidate design illustration for a team-production demo, NOT an advertisement or a photoreal render. Use a coherent LIGHTWEIGHT AMERICAN SUNDAY COMIC style across EVERY asset: confident rounded dark blue-gray outlines, playful readable shapes, flat clean base colors with ONLY one simple shadow tone, very restrained tiny highlights, no glossy 3D, no painterly textures, no anime, no heavy superhero drama. Warm paper ivory #FFF4DB, ink #25303E, coral #F47C6A, mint #80CDA8, yellow #FFD66B, blue #7BAFE8. Spacious warm ivory background.\n\nLandscape sheet, target 1536x1024, meticulously aligned modular panels with generous gaps, clean editorial art-board presentation. No title, no brand lettering, no annotations, no watermarks, no readable or fake UI text. All designs original.\nLayout:\n- Upper-left panel: the friendly neighborhood courier Mira, full body and small happy face beside her. Adult woman, short navy blue bob with a distinct side swoop, coral cropped utility jacket, cream scarf, mint cross-body satchel, simple dark trousers and cream sneakers. Appealing everyday comic proportions, not sexualized.\n- Upper-center broad panel: welcoming rounded corner shop and sunny neighborhood street, soft quiet background, readable doorway, warm brick/coral and mint awning, no shop lettering. Keep scene subordinate in contrast to foreground game pieces.\n- Upper-right panel: simple rounded phone-screen gameplay mockup, an uncluttered 5x5 match-3 grid with the same five tokens below, a few empty rounded HUD containers and small star icon, NO text.\n- Middle strip across board: FIVE large individual tile designs evenly spaced: coral red apple, mint green leaf, yellow five-point star, blue water droplet, pink five-petal flower. Strongly distinct silhouettes as well as colors, all same outline weight, same illustration scale, consistent shadow direction. These are clear matching pieces, not stickers with white borders.\n- Lower-left panel: THREE large usable boosters: a small wooden mallet with coral grip, cheerful yellow paper pinwheel with mint stick, and a mint parcel tied with cream string. Exactly the same comic language as the character and tiles.\n- Lower-center panel: UI component family: simple rounded coral button with a small cream triangle play icon, ivory bordered badge with a yellow star, mint rounded progress bar, empty rounded dialog frame. Only vector-like icons, no letters/numbers.\n- Lower-right panel: THREE small animation key poses read left to right, showing the yellow star token anticipating with slight squash, a restrained coral/yellow comic burst with small lines, then settling into a couple of small sparkles. Keep ample negative space so the sequence is understandable.\n\nThis single board should show that characters, scenes, matching pieces, boosters, interface and motion belong to one production family. It is a high-quality visual reference sheet, not an engine-ready sprite atlas; do not draw crop marks or mock software UI.",
+        "transparent_background": false
+      },
+      "output_original": "<generation-output>/attempt-1.png",
+      "preserved_output": "evals/team-production/reference-iterations/attempt-1.png",
+      "sha256": "4be49c17d5b0055b36f149235e086cc4f508d9c44d8f27cb7560bc9b5c27609e",
+      "observation": "动效星星增加五官，静态棋子没有；退回该身份变更。"
+    },
+    {
+      "attempt": 2,
+      "tool": "image_gen.imagegen",
+      "request": {
+        "prompt": "Edit this candidate game art direction sheet with ONE narrowly scoped identity correction. In the BOTTOM RIGHT animation sequence, remove ALL eyes, mouths and expressive faces from the yellow star in EACH of the three key poses. The animated star must remain the exact face-free five-point yellow star identity shown in the large middle tile row. Keep its squash/stretch shape and the anticipation/burst/settle motion strokes and small sparkles. Do not add a face to the large middle star or to the grid. Preserve the existing courier, storefront scene, phone UI, all five tile silhouettes, boosters, UI components, palette, line weight, all layout panels and dimensions. Do not introduce any text, logos or new elements. This is a candidate illustration, not an engine sprite atlas.",
+        "referenced_image_paths": [
+          "<PROJECT_ROOT>/examples/pop-borough-draft/references/style-board.png"
+        ],
+        "transparent_background": false
+      },
+      "input_sha256_at_call": "4be49c17d5b0055b36f149235e086cc4f508d9c44d8f27cb7560bc9b5c27609e",
+      "preserved_input": "evals/team-production/reference-iterations/attempt-1.png",
+      "output_original": "<generation-output>/attempt-2.png",
+      "preserved_output": "evals/team-production/reference-iterations/attempt-2.png",
+      "output_sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+      "observation": "主agent实际查看第二次工具返回的图，动效三关键姿态均移除五官；候选风格板继续等待项目校准，没有整体艺术批准。"
+    }
+  ],
+  "limits": [
+    "原始输入参数路径在后续未封存工作副本中更新；调用时输入字节已按hash保留，不伪称该路径今天仍是首轮图。",
+    "此参考板不是逐件透明精灵、可编辑UI源文件或可播放引擎动效。",
+    "图片输出中的近似色彩不等于精确token被执行；仍需实际导出与目标尺度检查。",
+    "本地绝对路径仅是开发执行证据；交付包生产调用只使用包内reference路径。"
+  ]
+}

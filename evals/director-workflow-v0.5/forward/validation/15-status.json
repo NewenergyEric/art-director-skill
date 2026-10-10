@@ -1,0 +1,115 @@
+{
+  "step": "15-status",
+  "command": [
+    "python",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\tools\\project_runtime.py",
+    "status",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "met_expectation": true,
+  "result": {
+    "ok": true,
+    "command": "status",
+    "workspace": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial",
+    "project_id": "neighbourhood-life-draft",
+    "current": {
+      "version": "0.1.0",
+      "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+      "path": "releases/0.1.0",
+      "release": false
+    },
+    "pack_path": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\releases\\0.1.0",
+    "canonical_path": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\releases\\0.1.0\\style-pack.json",
+    "candidate_workspace": true,
+    "tasks": [
+      {
+        "task_id": "button-disabled",
+        "status": "prepared_for_exploration",
+        "baseline": {
+          "version": "0.1.0",
+          "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+          "path": "releases/0.1.0",
+          "release": false
+        },
+        "current_has_update": false
+      },
+      {
+        "task_id": "card-locked",
+        "status": "prepared_for_exploration",
+        "baseline": {
+          "version": "0.1.0",
+          "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+          "path": "releases/0.1.0",
+          "release": false
+        },
+        "current_has_update": false
+      },
+      {
+        "task_id": "corner-combination",
+        "status": "prepared_for_exploration",
+        "baseline": {
+          "version": "0.1.0",
+          "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+          "path": "releases/0.1.0",
+          "release": false
+        },
+        "current_has_update": false
+      },
+      {
+        "task_id": "garden-l2-selected",
+        "status": "prepared_for_exploration",
+        "baseline": {
+          "version": "0.1.0",
+          "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+          "path": "releases/0.1.0",
+          "release": false
+        },
+        "current_has_update": false
+      },
+      {
+        "task_id": "promo-combination",
+        "status": "prepared_for_exploration",
+        "baseline": {
+          "version": "0.1.0",
+          "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+          "path": "releases/0.1.0",
+          "release": false
+        },
+        "current_has_update": false
+      },
+      {
+        "task_id": "resident-hello",
+        "status": "prepared_for_exploration",
+        "baseline": {
+          "version": "0.1.0",
+          "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+          "path": "releases/0.1.0",
+          "release": false
+        },
+        "current_has_update": false
+      }
+    ],
+    "categories": [
+      "character",
+      "environment",
+      "prop",
+      "ui",
+      "layout"
+    ],
+    "subjects": [
+      {
+        "id": "resident-a",
+        "category": "character",
+        "aliases": [
+          "候选居民A",
+          "方向图短发居民"
+        ]
+      }
+    ],
+    "production_approved": false,
+    "notice": "已重新读取磁盘指针并核验当前包；未自动联网同步其他成员副本，未生成或验收任何资产。"
+  },
+  "stderr": ""
+}

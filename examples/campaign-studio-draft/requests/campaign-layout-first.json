@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "task_id": "campaign-layout-first",
+  "request": "按主美活动规范准备横幅、竖版和社媒的组合首件，商品与文字不重新发明；缺的真实资料先列清。",
+  "category": "layout",
+  "family": "channel-layouts",
+  "subject": null,
+  "mode": "exploration",
+  "changes": {
+    "composition": "商品和活动信息分层，按三种渠道重排"
+  },
+  "exploration": {
+    "slots": [
+      "composition"
+    ],
+    "candidates": 2
+  },
+  "owner": {
+    "id": "layout-designer",
+    "kind": "internal"
+  },
+  "components": [
+    {
+      "category": "product",
+      "family": "product-master",
+      "subject": "主商品"
+    },
+    {
+      "category": "graphic",
+      "family": "campaign-decor",
+      "subject": null
+    },
+    {
+      "category": "typography",
+      "family": "campaign-type",
+      "subject": null
+    },
+    {
+      "category": "ui",
+      "family": "action-controls",
+      "subject": null
+    }
+  ]
+}

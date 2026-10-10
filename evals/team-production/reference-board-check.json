@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "command": "check-image",
+  "ok": true,
+  "source_path": "<PROJECT_ROOT>\\examples\\pop-borough-draft\\references\\style-board.png",
+  "sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+  "status": "checked",
+  "image": {
+    "width": 1536,
+    "height": 1024,
+    "format": "PNG",
+    "mode": "RGB",
+    "has_alpha_channel": false,
+    "has_transparency_metadata": false,
+    "has_transparent_pixels": false,
+    "alpha_extrema": null,
+    "has_visible_pixels": true,
+    "nonzero_alpha_bbox": null,
+    "frames": 1,
+    "inspected_frame": 0,
+    "orientation_applied": false
+  },
+  "error": null,
+  "checks": {
+    "width": {
+      "expected": 1536,
+      "actual": 1536,
+      "result": "pass"
+    },
+    "height": {
+      "expected": 1024,
+      "actual": 1024,
+      "result": "pass"
+    }
+  },
+  "identity_assessment": "not_performed",
+  "scope_of_check": "Decoded stored raster dimensions, first-frame pixel transparency and nonzero-alpha foreground only. Alpha extrema and bounding box are null when no alpha channel/transparency metadata exists; bounding box uses left/top inclusive and right/bottom exclusive pixel coordinates. Fully transparent hidden RGB is not visible foreground; alpha need not reach 255. No identity, style, anatomical, readability or artistic judgment; EXIF orientation is not applied."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "project": {"id": "new-visual-project", "name": "团队视觉规范（草案）", "domain": "team-visual-design", "owner": "待指定"},
+  "version": "0.1.0",
+  "status": "draft",
+  "scope": {"medium": "待从已有资料确认", "view": "待按用途确认", "target_platform": "待确认", "asset_types": ["graphic", "typography", "layout"]},
+  "intent": {"summary": "从既有规范、参考和团队反馈整理共同判断，按项目需要增减类别。", "pillars": [], "avoid": []},
+  "tokens": {"colors": {}, "fonts": {}},
+  "rules": [],
+  "references": [],
+  "profiles": {
+    "graphic": {"brief": "确认图形语言、保留项与允许探索的维度。", "fixed": [], "variable": [], "technical": {}},
+    "typography": {"brief": "确认真实文案、文字层级与可用字体。", "fixed": [], "variable": [], "technical": {}},
+    "layout": {"brief": "确认元素组合、信息顺序与实际交付环境。", "fixed": [], "variable": [], "technical": {}}
+  },
+  "entities": [],
+  "recipes": [],
+  "decisions": [],
+  "open_questions": ["待整理已有资料、确认身份底线、可变范围和当前交付阶段"],
+  "approval": null
+}

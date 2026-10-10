@@ -1,0 +1,697 @@
+{
+  "ok": true,
+  "command": "brief",
+  "pack": {
+    "id": "pop-borough",
+    "name": "泡泡街区 Pop Borough（虚构团队量产演示草案）",
+    "version": "0.1.0",
+    "status": "draft",
+    "release": false,
+    "fingerprint": "414e047bd52f77735bddb4ae60d92113fc475aa0241442e1b89ad62bb54cc65f"
+  },
+  "task": "为黄星制作预备、消除、收束三个阶段；同时读取源棋子实体任务书，继承无五官身份，检查棋盘遮挡",
+  "category": "motion",
+  "scope": {
+    "medium": "2d",
+    "view": "正视棋盘与轻微偏侧的日光街区；具体透视为待确认提案",
+    "target_platform": "移动端消除游戏的演示假设；设备、引擎与性能预算尚未验证",
+    "asset_types": [
+      "character",
+      "environment",
+      "tile",
+      "prop",
+      "ui",
+      "motion"
+    ]
+  },
+  "intent": {
+    "summary": "用轻量美式报刊与周日漫画的清晰轮廓、扁平色块和日光街区，探索消除游戏跨团队持续生产。Mira 是原创街区送货员。所有视觉规则、色值、尺寸与时长均为候选提案，不代表总监审批或性能验证。",
+    "pillars": [
+      "先读懂棋盘，再欣赏细节",
+      "不同成员以同一套可说明的判断工作",
+      "角色、棋子与道具变化时保留身份和用途",
+      "版本、来源与未完成检查跟随每个交付项"
+    ],
+    "avoid": [
+      "通过复杂纹理、体积光或密集碎片掩盖轮廓",
+      "各制作线自行切换到写实、厚涂或立体塑料质感",
+      "只靠颜色区分棋子",
+      "把样板板中的角色小图直接当成已确认身份图",
+      "把模型字形当作真实UI文字",
+      "把计划数量、模拟收件或脚本通过写成真实量产完成"
+    ]
+  },
+  "tokens": {
+    "colors": {
+      "coral": "#F47C6A",
+      "mint": "#80CDA8",
+      "yellow": "#FFD66B",
+      "blue": "#7BAFE8",
+      "ink": "#25303E",
+      "paper": "#FFF4DB",
+      "flower_pink_proposed": "#ED9CB5"
+    },
+    "fonts": {
+      "body": {
+        "family": "待确认支持中文与拉丁字母的圆润无衬线实际字体",
+        "fallback": "由项目确认字形覆盖、授权与备用字体"
+      },
+      "numbers": {
+        "family": "待确认清楚区分0/O与1/I的数字字体",
+        "fallback": "随实际UI排版测试确认"
+      }
+    }
+  },
+  "profile": {
+    "brief": "制作六套三阶段弹性反馈；逐套回放检查棋盘遮挡和身份连续性。",
+    "fixed": [
+      "anticipation/burst/settle三个阶段",
+      "小爆点",
+      "结果可辨",
+      "静态实体身份不变"
+    ],
+    "variable": [
+      "各阶段时长",
+      "允许的短暂变形",
+      "反馈强度"
+    ],
+    "technical": {
+      "status": "proposed_not_validated",
+      "deliverable": "candidate_motion_package_with_timeline",
+      "proposed_duration_ms_range": [
+        160,
+        280
+      ],
+      "proposed_preview_fps": 30,
+      "proposed_single_pop_peak_cell_ratio": 1.25,
+      "stages": [
+        "anticipation",
+        "burst",
+        "settle"
+      ],
+      "format": "待引擎、骨骼或序列帧方案确认",
+      "performance_validation": "not_performed"
+    }
+  },
+  "rules": [
+    {
+      "id": "STYLE-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "候选风格采用轻量美式报刊与周日漫画气氛：宽松清晰轮廓、扁平色块、友善日光和可辨识的简化形体。",
+      "rationale": "让多条生产线共享可观察的风格判断。",
+      "allowed_variation": [
+        "主体可有少量幽默夸张，但不改变用途和整体可读性"
+      ],
+      "evidence": [
+        "PB-STYLE-BOARD",
+        "PB-ART-DIRECTION"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "PALETTE-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "以暖奶油paper为底、深蓝灰ink为描边，主体使用coral、mint、yellow、blue；粉花可使用flower_pink_proposed候选色。新增颜色应说明用途与取舍。",
+      "rationale": "限制色彩分歧，同时允许五种棋子双重识别。",
+      "allowed_variation": [
+        "同色的阴影明度可变化，需记录实际色值",
+        "背景可降低饱和度以衬托棋盘"
+      ],
+      "evidence": [
+        "PB-ART-DIRECTION"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "LINE-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "深蓝灰轮廓保持连续、宽松和清楚，内部细节少于外形信息；线宽随显示尺度统一调整，不能逐张随意改变。",
+      "rationale": "同批资产在缩小后仍像同一套作品。",
+      "allowed_variation": [
+        "背景内部线可比交互主体更轻",
+        "外轮廓可有轻微手绘起伏"
+      ],
+      "evidence": [
+        "PB-STYLE-BOARD",
+        "PB-ART-DIRECTION"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "SHADE-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "采用基色加一级块状阴影的两级明暗，不依靠连续渐变或真实反射塑造体积。",
+      "rationale": "降低风格漂移与小尺寸视觉噪声。",
+      "allowed_variation": [
+        "极小高光可作为功能或材质提示，但不能增加复杂明暗层次"
+      ],
+      "evidence": [
+        "PB-ART-DIRECTION"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "READ-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "在任务实际显示尺度、背景和相邻资产中检查轮廓与层级；仅看放大单图不能记录为可读性通过。",
+      "rationale": "资产最终服务连续游戏画面。",
+      "allowed_variation": [
+        "不同类别可使用各自的合成场景，需保留观察证据"
+      ],
+      "evidence": [
+        "PB-ART-DIRECTION"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "REF-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "候选样板板只表达共同风格范围，不是任何角色、棋子或道具的已确认身份图；复用具名实体时应另建真实identity参考并检查。",
+      "rationale": "风格相似不能证明同一对象的身份已锁定。",
+      "allowed_variation": [
+        "身份参考缺失时可制作文字约束下的候选，但必须保留未验证标记"
+      ],
+      "evidence": [
+        "PB-ART-DIRECTION"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "MOTION-01",
+      "scope": [
+        "motion"
+      ],
+      "strength": "must",
+      "statement": "每套动效明确anticipation预备、burst爆点、settle收束三个阶段，以弹性小爆点和短暂反馈服务操作结果。",
+      "rationale": "统一动作语法便于批量制作和比较。",
+      "allowed_variation": [
+        "三阶段的时长可按操作语义调整，并逐套记录",
+        "无效交换以回弹收束，不冒充成功消除"
+      ],
+      "evidence": [
+        "PB-ART-DIRECTION"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "MOTION-02",
+      "scope": [
+        "motion"
+      ],
+      "strength": "must",
+      "statement": "动效避免遮挡棋盘；单棋消除的候选峰值包围盒不超过棋格1.25倍，并以叠加回放检查邻格与结果可见性；该数值不代表实测性能或通过验收。",
+      "rationale": "持续消除时玩家仍需读懂相邻棋子和下一步。",
+      "allowed_variation": [
+        "直线消除可沿目标行列延伸，但不能以满屏粒子替代清楚的结果反馈",
+        "修改覆盖范围需新版本和受影响动效复查"
+      ],
+      "evidence": [
+        "PB-ART-DIRECTION"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "DELIVERY-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "每个交付项携带asset_id、task_id、项目id、规范版本与实际指纹，并记录实际工具、参考来源、可用设置、文件位置和未完成检查。",
+      "rationale": "批次可追溯，成员接续工作时能判断所用依据。",
+      "allowed_variation": [
+        "工具不返回模型版本或seed时明确记录unknown或null，不猜测"
+      ],
+      "evidence": [
+        "PB-ART-DIRECTION"
+      ],
+      "verification": "technical",
+      "status": "proposed"
+    },
+    {
+      "id": "REVIEW-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "分别记录版本门、艺术门与工程门的检查；无证据、未查看或未测试均不能记为通过。模拟数据和draft包不得转述为总监批准或真实量产交付。",
+      "rationale": "让可复查的机器检查与需要实际观察的判断保持清楚。",
+      "allowed_variation": [
+        "不适用项可标not_applicable并写理由；不影响其他适用项"
+      ],
+      "evidence": [
+        "PB-ART-DIRECTION"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    }
+  ],
+  "references": [
+    {
+      "id": "PB-STYLE-BOARD",
+      "path": "references/style-board.png",
+      "role": "style",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "实际生成的候选综合样板板。只作为轻量漫画风格提案，不是实体identity参考、已批准母版或性能证明。",
+      "status": "candidate",
+      "provenance": {
+        "type": "generated_candidate",
+        "source": "本次虚构案例的真实图像生成调用",
+        "generation_record_path": "references/style-board-generation.json",
+        "rights_note": "原创方向提案；未完成独立权利审查，未获得真实项目总监审批"
+      },
+      "usage": "candidate_exploration_only"
+    },
+    {
+      "id": "PB-ART-DIRECTION",
+      "path": "references/team-art-direction.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "实际存在的文本方向参考，记录七线协作语境、候选规则、参考用途与检查界限。它不替代视觉观察和身份设定图。",
+      "status": "candidate",
+      "provenance": {
+        "type": "authored_text",
+        "source": "本次受托编写的虚构团队生产案例",
+        "rights_note": "新增原创文本方向提案；非总监批准"
+      },
+      "usage": "candidate_exploration_only"
+    }
+  ],
+  "reference_base": "Paths are relative to the pack root; locate this pack by id/version/fingerprint, not by the current working directory.",
+  "reference_roles": {
+    "style": "Visual language only",
+    "identity": "Same entity's identity and fixed features",
+    "composition": "Layout only",
+    "material": "Material treatment",
+    "context": "Actual game/use context and scale",
+    "counterexample": "Negative evidence; never a positive generation reference",
+    "font": "Typography guidance and font source"
+  },
+  "entity": null,
+  "recipes": [
+    {
+      "id": "candidate-reference-production",
+      "tool": "目标环境中已授权的参考图生成或编辑工具",
+      "model": "unknown",
+      "capabilities": [
+        "reference-image",
+        "edit"
+      ],
+      "instructions": "先查看候选样板与方向文本，读取当前类别和全局规则。具名实体缺少identity图时明确交付候选，不宣称身份锁定。用任务书仅增加本次允许的变化，保存真实工具回执和未经伪造的设置；工具缺失时交付制作任务书。",
+      "reference_ids": [
+        "PB-STYLE-BOARD",
+        "PB-ART-DIRECTION"
+      ],
+      "limitations": [
+        "样板生成调用不等于50项量产配方经过验证",
+        "当前没有已批准的identity参考",
+        "尚未验证目标引擎、字体和性能预算",
+        "工具返回能力决定能记录的模型、seed和设置，缺失项不可推定"
+      ],
+      "status": "untested"
+    }
+  ],
+  "decisions": [],
+  "unresolved": [
+    {
+      "code": "release_requirement",
+      "path": "$.status",
+      "message": "A release requires status='approved'."
+    },
+    {
+      "code": "candidate_reference",
+      "path": "$.references[0]",
+      "message": "Candidate reference: do not present it as approved production guidance."
+    },
+    {
+      "code": "candidate_reference",
+      "path": "$.references[1]",
+      "message": "Candidate reference: do not present it as approved production guidance."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'character'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'character'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'environment'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'environment'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'tile'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'tile'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'prop'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'prop'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'ui'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'ui'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'motion'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'motion'."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[0].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[1].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[2].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[3].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[4].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[5].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[6].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[7].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[8].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[9].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[10].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[11].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[12].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[13].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[14].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[15].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[16].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[17].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[18].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[19].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[20].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[0].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[1].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[2].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[3].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[4].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[5].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[6].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[7].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[8].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "untested_recipe",
+      "path": "$.recipes[0]",
+      "message": "Recipe has no verified outcome; label outputs as unverified until evaluated."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.decisions[0].status",
+      "message": "Resolve proposed decisions before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.decisions[1].status",
+      "message": "Resolve proposed decisions before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.decisions[2].status",
+      "message": "Resolve proposed decisions before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.open_questions",
+      "message": "Resolve every open question before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.approval",
+      "message": "A release requires a named approval record and an existing evidence file."
+    },
+    {
+      "code": "unreleased_pack",
+      "path": "$",
+      "message": "This pack has not been built with --release. Treat all delivery as draft exploration."
+    }
+  ],
+  "review": [
+    {
+      "rule_id": "STYLE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "PALETTE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "LINE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "SHADE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "READ-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "REF-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "MOTION-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "MOTION-02",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "DELIVERY-01",
+      "strength": "must",
+      "verification": "technical",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "REVIEW-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    }
+  ],
+  "workflow": [
+    "Read applicable confirmed rules and approved references; mark candidate/proposed inputs explicitly.",
+    "Inspect image contents before claiming visual understanding; unavailable observations remain unknown.",
+    "Bind identity for a reused entity; keep role-specific references separate and exclude counterexamples from positive references.",
+    "Use only available production tools; if unavailable, hand off this brief without claiming asset generation.",
+    "Record tool/model/settings/seed when available and preserve originals outside the immutable pack.",
+    "Review style, identity, context, readability and technical constraints using pass/fail/unknown with evidence.",
+    "Return version/fingerprint, task, source references, assets, review and unresolved items; structural validation is not artistic approval."
+  ]
+}

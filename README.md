@@ -3,74 +3,75 @@
 <p align="center">
   <a href="https://github.com/NewenergyEric/art-director-skill/actions/workflows/ci.yml"><img alt="Validate skill" src="https://github.com/NewenergyEric/art-director-skill/actions/workflows/ci.yml/badge.svg"></a>
   <a href="https://github.com/NewenergyEric/art-director-skill/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/NewenergyEric/art-director-skill/actions/workflows/codeql.yml/badge.svg"></a>
+  <a href="https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1"><img alt="Release v0.5.1" src="https://img.shields.io/badge/release-v0.5.1-225d4b.svg"></a>
   <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-151715.svg"></a>
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3272b8.svg">
 </p>
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/art-director-still-zh.png">
-  <img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/art-director-hero-zh.gif" width="100%" alt="美术总监与团队在同一个项目系统里完成素材分组、模板切换、批量生产与评审的 30 秒动画。">
-</picture>
+# Art Director · 主美与团队的视觉生产系统
 
-<p align="center"><sub>▲ 30 秒双语 Remotion 成片 · 连续镜头、七类生产模板、四条团队产线 · <a href="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/art-director-hero-zh.mp4">下载带声音的 MP4</a></sub></p>
+> ## 先由主美建立专业规则，再让整支团队沿同一套规则工作。
 
-# Art Director
+Art Director 是一套可安装的 Agent Skill。它带主美或设计总监从已有作品、参考、批注和项目目标出发，逐步建立项目定位、整体视觉语言、类别与组件家族、代表样板、首件门槛、交付要求和版本策略；随后把这些判断封装为可分发的项目包，让团队成员、外包和其他 Agent 直接调用。
 
-> ## 一套方向，要带得动整支团队。
+换装、姿势或单件出图保留为成员任务示例。产品默认入口是完整链路：**主美建体系 → 样板校准 → 项目包分发 → 团队制作 → 批次验收 → 规范升级。**
 
-多人协作的视觉项目，总会同时推进很多东西。游戏里是角色、场景、棋子、道具、UI、技能和动效；电商与品牌项目里，是主视觉、商品元素、价格组件、活动海报和不同渠道的尺寸版本。真正难的往往不是再出一张图，而是让每个人都知道：**哪些不能丢，哪里可以变，这一轮到底要改什么。**
+<p align="center">
+  <a href="https://newenergyeric.github.io/art-director-skill/"><strong>打开主美工作台</strong></a>
+  · <a href="SKILL.md">读取 Skill</a>
+  · <a href="https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1">下载 v0.5.1</a>
+</p>
 
-Art Director 把这些判断留在项目里。总监继续决定什么是好看、什么适合这个项目；团队拿到适合自己产线的任务；Agent 从已经确认的版本继续，不必每次回到一句模糊提示词。
+## 两类用户，一条共同生产链
 
-它是一套可安装的 Agent Skill，也是一组能真正运行的本地工具：从参考与反馈中建立项目规则，先验证小批，再展开生产，最后交付可迁移、可核验、可继续更新的项目 Skill。
+| 主美 / 设计总监 | 团队成员 / 外包 |
+|---|---|
+| 把零散资料整理成可评审的定位与规范初稿 | 接收项目包，不依赖主美原来的聊天记录 |
+| 明确整体语言、类别、组件家族、固定项和变量 | 用自然语言提出角色、场景、UI、商品或组合任务 |
+| 选择能解决分歧的代表样板和首件 | Agent 自动绑定当前版本、类别、家族、身份和参考 |
+| 定义交付、组合、渠道与验收要求 | 交付单件、源文件、组合结果和检查证据 |
+| 根据效果、成本和周期决定是否升级规范 | 新任务读取新版，既有任务继续冻结版本 |
 
-`Codex` · `Claude Code` · `Cursor` · 其他支持 Agent Skills 的工具
+```text
+已有资料与专业判断
+  → 项目定位 / 整体视觉语言
+  → 类别、组件与资产家族
+  → 代表样板 / 首件 / 实际组合校准
+  → 规则、参考、手册和工具打包
+  → 成员按项目版本制作与交付
+  → 批次检查、定向返工、采用更好方案
+  → 主美发布下一版基线
+```
 
-## 它解决的不是一张图，而是整条生产线
+## 主美怎样开始
 
-| 团队现场 | Art Director 留下什么 | 下一轮怎么用 |
-|---|---|---|
-| 总监说“感觉不对” | 分开记录画风、身份、本次任务和技术规格 | 修改落到具体层级，不牵连无关规则 |
-| 角色、UI、道具、技能同时推进 | 为每类素材编译独立任务书，共用同一项目版本 | 各产线各做各的事，但不会各长各的样子 |
-| 消除类或 LiveOps 要大量状态与变体 | 素材家族、状态矩阵、首件门槛和抽查记录 | 先看代表小批，确认后再放大产量 |
-| 新成员、外包或 Agent 接手 | 带证据的 `STYLE.md`、`SKILL.md`、任务卡和版本差异 | 从确认过的判断继续，不靠转述猜方向 |
-| 规范发生变化 | 保留旧版本、变更原因、影响范围与确认记录 | 知道什么变了，也知道什么没有变 |
+安装后，把已有材料交给 Agent，直接说：
 
----
+> 使用 `$art-director`。我还没有整理好完整规范。先根据现有作品、参考和批注写出能评审的初稿，再带我明确项目定位、整体风格、各类组件和家族的要求、允许变化、代表样板与验收方法，最后生成可以交给团队执行的项目包。
 
-## 同一套方法，不限定一种画风
+Skill 会先整理具体内容，再集中补影响下一步的关键问题。它区分已经观察到的事实、主美确认的决定、Agent 建议和真正待定的事项，不用一套空问卷代替专业建项。
 
-伪 3D、美漫、传统绘画、收藏卡牌风，对造型、材质、线条、留白和信息密度的要求完全不同。Art Director 不拿一组通用形容词硬套所有画面，而是把同一份项目判断拆给不同职能：物品设计师拿到资产家族，角色与场景拿到身份边界，UI 拿到组件和状态，执行者拿到本轮任务与交付规格。
+主美最终得到五份同源手册：
 
-<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/style-directions-zh.gif" width="100%" alt="伪 3D 物品家族、美漫任务简报、国风卡牌家族和绘制收藏卡牌四种视觉系统连续切换。"></p>
+| 手册 | 团队用它做什么 |
+|---|---|
+| 资料索引 | 找到当前版本、规则、参考、样板和待定事项 |
+| 项目定位 | 理解受众、使用场景、视觉目标与制作范围 |
+| 设计规范 | 读取全局语言、类别、家族、实体身份、固定项与变量 |
+| 交付与验收 | 明确首件、源文件、导出、组合和渠道检查 |
+| 参考与反例 | 知道每份资料参考什么、不继承什么、批准到什么范围 |
 
-画风可以变，团队使用的链路保持清楚：**项目基线 → 分工任务书 → 资产家族或模板 → 首件评审 → 批量与版本。** 游戏是仓库里最完整的案例；同样的结构也能用于多人协作的 UI 系统、电商促销、活动海报、社媒模板与多尺寸渠道适配。
+## 团队怎样调用
 
-## 七类素材，一套项目判断
+项目包带有自己的 `SKILL.md`、结构化规范、可读手册、引用资料、运行工具和内容指纹。成员可以把整个包交给自己的 Agent，然后直接描述本次任务：
 
-角色、道具、UI、技能/VFX，以及消除、解谜、桌游系统需要不同的任务结构。Art Director 不把它们塞进同一条长提示词，而是从项目基线编译出各自能执行的制作模板。
+> 按这个项目的 HUD 家族制作按钮三态首件，沿用主美规则与参考，准备实际尺寸和组合检查。
 
-<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/template-switch-zh.gif" width="100%" alt="角色、道具、UI、技能、消除、解谜与桌游七种生产模板连续切换。"></p>
+或者：
 
-每条规则都说明适用对象、硬要求或建议、允许变化、证据与检查办法。角色身份不会误写成全局画风；一次动作要求也不会悄悄变成所有人的共享规范。
+> 用这次活动的商品、图形、文字和 UI 组件，做横幅与竖版海报。保持商品与信息身份，按渠道重排，交付可编辑源和组合验证。
 
-## 先看小批，再让团队放大产量
-
-大批量生产最怕把错误理解复制几十次。新的资产家族先做首件，方向成立后，角色/场景、UI/HUD、道具/物品、技能/VFX 再沿同一版本进入各自产线。
-
-<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/team-pipeline-zh.gif" width="100%" alt="角色、UI、道具、技能四条产线从任务、首件、评审走向批量。"></p>
-
-每个批次会留下范围、素材家族、状态、规格、首件、抽查结果和返工原因。单件失误回到单件，家族共同问题回到样板，只有跨家族的共同变化才升级项目基线。
-
-## 把“感觉不对”变成团队能改的地方
-
-评审先问四件事：它像不像这个项目？还是不是这个角色或道具？这一轮到底要改什么？文件能不能进入生产？
-
-<p align="center"><img src="https://github.com/NewenergyEric/art-director-skill/releases/download/v0.2.0/review-lens-zh.gif" width="100%" alt="评审镜头依次检查画风、身份、本次任务和技术规格。"></p>
-
-艺术判断、技术检查和未检查项分别记录。尺寸通过不等于画面通过，概念图好看也不等于已经满足引擎规格。
-
----
+Agent 会把任务绑定到固定版本和对应家族，生成制作说明、参考清单、交接要求及逐项检查。家族混淆、错版、缺件和未检查项会保持可见；单件通过后仍需检查最终组合。
 
 ## 安装
 
@@ -78,109 +79,77 @@ Art Director 把这些判断留在项目里。总监继续决定什么是好看�
 npx skills add https://github.com/NewenergyEric/art-director-skill
 ```
 
-核心 CLI 需要 Python 3.10+，只使用标准库。读取图片尺寸和透明像素时可选安装 Pillow。Remotion 展示片需要 Node.js 20+ 与 FFmpeg，不影响 Skill 的日常使用。
+也可以从 [v0.5.1 Release](https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1) 下载母 Skill ZIP。核心工具需要 Python 3.10+ 且只使用标准库；图片尺寸与透明像素检查另可安装 Pillow。Remotion 只用于仓库展示片，不影响 Skill 日常使用。
 
-安装后可以直接这样说：
+## 可运行的公开案例
 
-> 使用 `$art-director`。先看项目已经确认的参考和最近评审，把画风、角色或道具身份、本轮任务、技术规格分开记录。先给我一小批最能暴露问题的样板，确认后再为角色、UI、道具和技能产线生成任务包。
+| 入口 | 证明什么 |
+|---|---|
+| [主美工作台](https://newenergyeric.github.io/art-director-skill/) | 从资料、定位、家族、样板到项目包、成员制作和迭代的完整路径 |
+| [港湾工作室](examples/harbor-studio-draft/guides/00-index.md) | 游戏项目的 8 个家族、样板计划、任务与团队接包 |
+| [周末轻饮](examples/campaign-studio-draft/guides/00-index.md) | 商品、图形、文字、UI 与多渠道组合的同源规范 |
+| [成员任务示例](https://newenergyeric.github.io/art-director-skill/docs/member-workbench.html) | 单件任务、探索范围、版本冻结和组合调用 |
+| [团队生产动画](https://newenergyeric.github.io/art-director-skill/docs/team-production.html) | 角色、场景、棋子、道具、UI、动效和外包并行 |
+| [实际调用路径](https://newenergyeric.github.io/art-director-skill/docs/call-flow.html) | 每一步对应的文件、工具与判断边界 |
 
-[打开调用路径](https://newenergyeric.github.io/art-director-skill/) · [读取 Skill 入口](SKILL.md) · [查看虚构演示包](examples/moss-harbor-draft)
+这些案例都是原创候选草案。方向图不会被冒充为已批准样板，参考图的像素尺寸也不会自动变成正式交付规格。
 
-## 五分钟跑通一次
-
-仓库附带一个虚构的“苔港”草案。它故意保留缺失参考、待确认规则和未验证工具，用来展示系统在证据不足时怎样工作。
-
-```sh
-python scripts/style_pack.py validate examples/moss-harbor-draft
-
-python scripts/style_pack.py brief examples/moss-harbor-draft \
-  --category character \
-  --entity lin \
-  --task "林蹲在码头修理灯具"
-```
-
-建立自己的项目包：
-
-```sh
-cp templates/style-pack.template.json my-project/style-pack.json
-python scripts/style_pack.py render my-project
-python scripts/style_pack.py build my-project --out dist/my-project-0.1.0
-python scripts/style_pack.py verify dist/my-project-0.1.0
-```
-
-Windows PowerShell 把 `cp` 换成 `Copy-Item`。发布已确认基线时，为 `validate` 和 `build` 加上 `--release`；缺少真实确认、证据或引用文件时，发布检查会停下来并指出具体缺口。
-
-## 一份项目包里有什么
+## 项目包与工具
 
 ```text
-project-art-style/
-├── style-pack.json   # 唯一事实源
-├── STYLE.md          # 团队可读的项目规范
-├── SKILL.md          # 新会话与 Agent 的入口
-├── manifest.json     # 文件清单与内容指纹
-├── references/       # 获准共享的参考与判断依据
-├── scripts/          # 包内验证与任务书工具
-└── agents/           # Agent UI 元数据
+project-art-direction/
+├── SKILL.md               # 团队 Agent 入口
+├── style-pack.json        # 唯一事实源
+├── STYLE.md               # 团队可读规范
+├── guides/                # 定位、设计系统、交付、参考说明
+├── references/            # 获准共享的项目资料
+├── scripts/               # 构建、任务、版本与批次工具
+├── agents/                # Agent UI 元数据
+└── manifest.json          # 文件清单和内容指纹
 ```
 
-项目包可以复制、归档和核验。成员不需要得到总监原来的聊天记录，也能看到当前版本、适用范围、已确认事项、待判断问题和本次任务。
+核心命令由 Agent 调用，设计师无需手写 JSON 或记住 CLI：
 
-## 两个本地工具
+```sh
+python scripts/style_pack.py validate examples/harbor-studio-draft
+python scripts/style_pack.py render examples/harbor-studio-draft
+python scripts/style_pack.py build examples/harbor-studio-draft --out NEW_PACK
+python scripts/project_runtime.py init --pack NEW_PACK --out MEMBER_WORKSPACE --allow-draft
+python scripts/team_batch.py check BATCH_JSON --pack NEW_PACK --out NEW_REPORT_JSON
+```
 
-### `style_pack.py` · 项目包生命周期
+构建、归档和任务快照默认拒绝原地覆盖。正式发布检查要求真实批准依据、必要样板与关键规格；候选包可以用于探索和试接，但不会因此获得生产批准。
 
-`validate`、`render`、`brief`、`build`、`verify`、`archive` 和 `diff` 覆盖从工作副本到固定发布快照的完整路径。默认拒绝覆盖已有构建和归档，并检查路径逃逸、软链接、大小写碰撞、内容指纹与意外文件。
+## 验证状态
 
-### `pilot.py` · 真实材料与试点证据
+- 108 项确定性测试覆盖规范源、交叉引用、家族/组件绑定、版本冻结、搬迁、批次交付、路径边界、内容指纹和拒绝覆写。
+- Python 3.10 / 3.12 × Windows / Linux 的 GitHub Actions 矩阵持续运行；Remotion 与 CodeQL 独立检查。
+- 两套完整案例生成 10 份手册，并从独立解压包建立 6 个成员任务；30 条流程断言通过。
+- 独立 Agent 从一张原创方向图建立了定位、8 个家族、22 条候选规则、5 项样板计划和可交接项目包。
 
-`intake` 盘点交付材料，`check-image` 读取实际图片的尺寸和透明信息，`summarize` 分开汇总 Agent 模拟与真人团队记录。它不会生成图片，也不会把技术通过冒充艺术通过。
+[查看 v0.5 验收记录](evals/director-workflow-v0.5/acceptance.md) · [查看实现说明](docs/director-workflow-v0.5.md) · [查看当前 CI](https://github.com/NewenergyEric/art-director-skill/actions)
 
-## 已经验证了什么
+结构和工具检查证明工作流契约成立，不代替真实艺术质量、PS/Figma 编辑、引擎或渠道集成、负责人批准及真人团队效率实验。
 
-- Python 3.10 / 3.12、Windows / Linux 的确定性测试矩阵。
-- 数据结构、交叉引用、路径边界、软链接、大小写碰撞、拒绝覆写、构建搬迁和内容指纹。
-- 无图像工具时的回退、只拿项目包评审、从模糊意图建立讨论草案等行为情境。
-- Remotion 的十个中英文动态 Composition 与一张社交预览均可编译，母片与四套风格输出按 14 个关键帧做视觉审查。
-- Darwin 九维审计、三组代表任务与优化前后配对复核，见 [审计报告](docs/darwin-audit-v0.2.md)。
+## 安全与边界
 
-完整证据见 [验证报告](docs/validation-report.md)、[首轮试点准备](docs/round-01-report.md) 与 [专家复核](docs/expert-review-v0.2.md)。结构检查通过只说明文件和记录满足契约；真实画风一致性、引擎可用性和团队效率仍要在实际项目中验证。
+项目包工具在本地运行，不读取密钥、不发送遥测，也不自动上传项目材料。它不会把填写的审批人字段当成真实授权，不会自动判断审美好坏，也不会把概念图仅凭观感宣布为生产资产。
 
-## 安全与数据流
-
-项目包工具在本地运行，不调用远程 API、不读取密钥、不发送遥测。仓库逐项公开了网络边界、子进程、文件写入和删除范围，并启用 CodeQL、Dependabot 与私密漏洞报告。
-
-[阅读完整 Security 声明](SECURITY.md) · [私密报告漏洞](https://github.com/NewenergyEric/art-director-skill/security/advisories/new)
-
-## 当前边界
-
-- 不自带图像模型、LoRA、引擎插件或付费生成服务。
-- 不从文件名、提示词或填写的审批人字段推断真实授权。
-- 不自动判断审美好坏；它让判断有证据、有范围、能进入下一轮工作。
-- 不把概念图仅凭观感声明为可直接进入引擎的资产。
-- 不用一个总分掩盖身份错误、技术失败或未检查项。
+[阅读 Security 声明](SECURITY.md) · [私密报告漏洞](https://github.com/NewenergyEric/art-director-skill/security/advisories/new) · [MIT License](LICENSE)
 
 ## 仓库结构
 
 ```text
 ├── SKILL.md              # 母 Skill 入口
-├── agents/               # Agent UI 元数据
-├── references/           # 按任务读取的方法
-├── templates/            # 风格包、任务卡与评审记录
-├── scripts/              # 项目包、试点与媒体渲染工具
-├── examples/             # 虚构演示项目
-├── tests/                # 确定性测试
-├── evals/                # 行为验证与审计任务
-├── motion/               # Remotion 源码与原创视觉素材
-├── docs/                 # 协议、研究与验证报告
-└── assets/readme/        # 静态回退图与社交预览
+├── references/           # 主美、成员、评审和团队方法
+├── templates/            # 方向、任务、批次、交付与变更模板
+├── scripts/              # 项目包、运行时、批次和试点工具
+├── examples/             # 原创项目草案与成员工作区
+├── tests/                # 确定性行为测试
+├── evals/                # 公开验证证据
+├── docs/                 # 互动工作台、调用图与实现说明
+├── motion/               # Remotion 展示片源码
+└── assets/readme/        # README 媒体
 ```
 
-## 研究依据
-
-这套方法吸收了真实游戏资产管线里反复出现的结构：资产类型与导入预设、稳定元数据、模块化 UI/VFX、批量校验、版本控制和首件门槛。研究摘要与官方来源见 [游戏美术生产研究](docs/game-production-research.md)。
-
-## License
-
-[MIT](LICENSE) — 可以使用、修改、分发和用于商业项目，但需保留版权与许可声明。
-
-由 Eric 与 Agents 一起制作。这里保存的是能继续使用的方法，也是总监与团队共同形成的项目记忆。
+由 Eric 与 Agents 一起制作。

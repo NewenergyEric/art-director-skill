@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "task_id": "game-character-first",
+  "request": "按送货员家族做侧身招手首件，保留脸和发型，沿用默认衣装。",
+  "category": "character",
+  "family": "courier-character",
+  "subject": "米拉",
+  "mode": "exploration",
+  "changes": {
+    "pose": "侧身招手"
+  },
+  "exploration": {
+    "slots": [
+      "pose"
+    ],
+    "candidates": 2
+  },
+  "owner": {
+    "id": "character-designer",
+    "kind": "internal"
+  },
+  "components": []
+}

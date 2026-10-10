@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "mira-pose-001",
+  "files": {
+    "brief.json": "9260c02ced78efe98d16b8e2de5b431009a5e26f81cda5a840d55447da1a4b75",
+    "generation-brief.md": "47d4809bb93d8d4d2a198ff2fdc8cf5de03370e18fb374392ca631fa64bd86cb",
+    "handoff.md": "41770bbbb2f8cfa0516e7922c25ee6f815108ac926bce1677dec52e0282597e6",
+    "request.json": "fd093574b6b41f55b0389ea83283ff3ca2118a6208f22f41ced0433534552538",
+    "review.json": "c8aa3817490d9cd335d01dec21a7170d71497251ba29f34f1ddfaae5a515a2c1",
+    "task.json": "bc044c8b93cb0c7dc3e073a834dddf987745a42218f951c8a9c9dada3a845279"
+  },
+  "notice": "Frozen input hashes are unsigned; real outputs and review evidence belong under work/, not in this snapshot."
+}

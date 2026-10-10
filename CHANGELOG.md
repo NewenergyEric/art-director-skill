@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.1 — 2026-10-10
+
+- Reframed the product around the director-led workflow: project positioning, shared visual language, category and component families, representative exemplars, first-piece gates, delivery rules, and a package the team can call directly.
+- Added five derived project guides, portable member workspaces, frozen task baselines, family-aware production briefs, multi-component composition tasks, batch evidence checks, and explicit specification upgrades.
+- Added complete game and campaign examples covering characters, environments, tiles, props, HUD, motion, products, graphics, typography, layouts, and multi-channel delivery.
+- Replaced the default web demo with the director workbench while retaining single-task and team-production demonstrations as supporting examples.
+- Expanded the deterministic suite to 108 tests and added independently executed director-to-member workflow evidence.
+- Updated GitHub Pages to publish the linked examples and source evidence with the workbench, refreshed CI dependencies, and removed obsolete public artifacts containing local paths or early private-trial wording.
+
 ## 0.2.0 — 2026-10-10
 
 - Rebuilt the Skill entrypoint against the Darwin nine-dimension rubric, adding explicit first-piece and baseline-release checkpoints, recovery branches, and an anti-pattern blacklist.

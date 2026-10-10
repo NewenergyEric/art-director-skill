@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "project_id": "campaign-studio",
+  "current": {
+    "version": "0.5.0",
+    "fingerprint": "7e3c4e7d75077ba0183e813653d6c5363533a3898387784488167b6e7f8842dd",
+    "path": "releases/0.5.0",
+    "release": false
+  },
+  "created_at": "2026-10-09T17:42:59+00:00",
+  "updated_at": "2026-10-09T17:42:59+00:00",
+  "history": [
+    {
+      "baseline": {
+        "version": "0.5.0",
+        "fingerprint": "7e3c4e7d75077ba0183e813653d6c5363533a3898387784488167b6e7f8842dd",
+        "path": "releases/0.5.0",
+        "release": false
+      },
+      "adopted_at": "2026-10-09T17:42:59+00:00"
+    }
+  ]
+}

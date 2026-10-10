@@ -52,13 +52,43 @@ class PilotTests(unittest.TestCase):
         result = pilot.check_image(self.image("rgb.png", "RGB", (1, 2, 3)), 8, 6, True)
         self.assertFalse(result["image"]["has_alpha_channel"])
         self.assertFalse(result["image"]["has_transparent_pixels"])
+        self.assertTrue(result["image"]["has_visible_pixels"])
+        self.assertIsNone(result["image"]["alpha_extrema"])
+        self.assertIsNone(result["image"]["nonzero_alpha_bbox"])
         self.assertFalse(result["ok"])
 
     def test_true_transparency_passes(self):
-        result = pilot.check_image(self.image("clear.png", color=(20, 40, 60, 0)), 8, 6, True)
+        path = self.image("clear.png", color=(20, 40, 60, 0))
+        with Image.open(path) as image:
+            image.putpixel((2, 3), (20, 40, 60, 255))
+            image.save(path)
+        result = pilot.check_image(path, 8, 6, True)
         self.assertTrue(result["ok"])
         self.assertTrue(result["image"]["has_transparent_pixels"])
+        self.assertEqual(result["image"]["alpha_extrema"], [0, 255])
+        self.assertEqual(result["image"]["nonzero_alpha_bbox"], [2, 3, 3, 4])
         self.assertEqual(result["identity_assessment"], "not_performed")
+
+    def test_hidden_rgb_with_all_zero_alpha_is_empty(self):
+        result = pilot.check_image(self.image("hidden-rgb.png", color=(210, 120, 60, 0)), 8, 6, True)
+        self.assertFalse(result["ok"])
+        self.assertEqual(result["image"]["alpha_extrema"], [0, 0])
+        self.assertFalse(result["image"]["has_visible_pixels"])
+        self.assertIsNone(result["image"]["nonzero_alpha_bbox"])
+        self.assertEqual(result["checks"]["transparency"]["result"], "pass")
+        self.assertEqual(result["checks"]["foreground_nonempty"]["result"], "fail")
+
+    def test_foreground_alpha_254_does_not_require_255(self):
+        path = self.image("alpha-254.png", color=(20, 40, 60, 0))
+        with Image.open(path) as image:
+            image.putpixel((1, 2), (210, 120, 60, 254))
+            image.save(path)
+        result = pilot.check_image(path, 8, 6, True)
+        self.assertTrue(result["ok"])
+        self.assertEqual(result["image"]["alpha_extrema"], [0, 254])
+        self.assertTrue(result["image"]["has_visible_pixels"])
+        self.assertEqual(result["image"]["nonzero_alpha_bbox"], [1, 2, 2, 3])
+        self.assertEqual(result["checks"]["foreground_nonempty"]["result"], "pass")
 
     def test_wrong_dimensions_fail(self):
         result = pilot.check_image(self.image("wrong-size.png"), 9, 7)
@@ -89,11 +119,14 @@ class PilotTests(unittest.TestCase):
     def test_palette_transparency_distinct_from_channel(self):
         path = self.image("palette.png", "P", 0)
         with Image.open(path) as image:
+            image.putpixel((4, 2), 1)
             image.save(path, transparency=0)
         result = pilot.check_image(path, 8, 6, True)
         self.assertTrue(result["ok"])
         self.assertFalse(result["image"]["has_alpha_channel"])
         self.assertTrue(result["image"]["has_transparency_metadata"])
+        self.assertEqual(result["image"]["alpha_extrema"], [0, 255])
+        self.assertEqual(result["image"]["nonzero_alpha_bbox"], [4, 2, 5, 3])
 
     def test_zero_samples_are_null(self):
         report = pilot.summarize(self.data())

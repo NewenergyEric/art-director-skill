@@ -1,0 +1,161 @@
+{
+  "inspected_at_utc": "2026-10-09T10:29:05.223192+00:00",
+  "batch_file": "<PROJECT_ROOT>\\evals\\team-production\\current-version-batch.json",
+  "pack_root": "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft",
+  "project": {
+    "id": "pop-borough",
+    "name": "泡泡街区 Pop Borough（虚构团队量产演示草案）",
+    "domain": "game-art",
+    "owner": "虚构演示项目；负责人角色仅用于分工示例，尚无真实总监批准"
+  },
+  "version": "0.1.0",
+  "status": "draft",
+  "approval": null,
+  "batch_mode": "demonstration",
+  "rule_status_counts": {
+    "proposed": 21
+  },
+  "references": [
+    {
+      "id": "PB-STYLE-BOARD",
+      "path": "references/style-board.png",
+      "role": "style",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "实际生成的候选综合样板板。只作为轻量漫画风格提案，不是实体identity参考、已批准母版或性能证明。",
+      "status": "candidate",
+      "provenance": {
+        "type": "generated_candidate",
+        "source": "本次虚构案例的真实图像生成调用",
+        "generation_record_path": "references/style-board-generation.json",
+        "rights_note": "原创方向提案；未完成独立权利审查，未获得真实项目总监审批"
+      }
+    },
+    {
+      "id": "PB-ART-DIRECTION",
+      "path": "references/team-art-direction.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "实际存在的文本方向参考，记录七线协作语境、候选规则、参考用途与检查界限。它不替代视觉观察和身份设定图。",
+      "status": "candidate",
+      "provenance": {
+        "type": "authored_text",
+        "source": "本次受托编写的虚构团队生产案例",
+        "rights_note": "新增原创文本方向提案；非总监批准"
+      }
+    }
+  ],
+  "open_questions": [
+    "需要真实美术总监确认方向、规则和参考用途",
+    "需要Mira、五种棋子与三种道具的正式身份参考和母版",
+    "需要确认设备、显示尺度、棋盘布局、分辨率和透明边缘要求",
+    "需要实际字体选择、字符覆盖测试与资源授权记录",
+    "需要选择生产工具并验证候选配方在批量变化下的表现",
+    "需要明确动效导出方案、时长预算、遮挡标准和引擎性能测试",
+    "需要真实团队确认责任人、交付时点与检查证据责任"
+  ],
+  "profile_technical": {
+    "character": {
+      "status": "proposed_not_validated",
+      "deliverable": "candidate_sprite_and_editable_source",
+      "canvas_px": [
+        512,
+        512
+      ],
+      "background": "transparent",
+      "anchor": "统一脚底锚点，位置待实测确认",
+      "identity_reference": "missing; style board is not an identity reference",
+      "target_display_px": null
+    },
+    "environment": {
+      "status": "proposed_not_validated",
+      "deliverable": "candidate_layered_background",
+      "canvas_px": [
+        1600,
+        900
+      ],
+      "layers": [
+        "sky",
+        "far_buildings",
+        "street",
+        "foreground"
+      ],
+      "board_safe_area": "待实际布局与设备确认",
+      "engine_integration": "not_tested"
+    },
+    "tile": {
+      "status": "proposed_not_validated",
+      "deliverable": "candidate_rgba_tile_states",
+      "canvas_px": [
+        256,
+        256
+      ],
+      "proposed_display_px": [
+        64,
+        64
+      ],
+      "proposed_selected_ring_px_at_display": 2,
+      "anchor": "center",
+      "background": "transparent",
+      "checks": [
+        "目标尺寸合成",
+        "相邻棋子并排",
+        "灰度观察",
+        "透明边缘"
+      ]
+    },
+    "prop": {
+      "status": "proposed_not_validated",
+      "deliverable": "candidate_master_and_variants",
+      "canvas_px": [
+        256,
+        256
+      ],
+      "background": "transparent",
+      "anchor": "center; master and variants must match",
+      "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+      "source_master_status": "planned_not_delivered"
+    },
+    "ui": {
+      "status": "proposed_not_validated",
+      "deliverable": "candidate_component_and_text_layout",
+      "target_language": [
+        "zh-CN",
+        "en"
+      ],
+      "font_file": null,
+      "dimensions": "按实际布局另行确认",
+      "nine_slice": "按组件逐项确认，不预设已适配",
+      "engine_integration": "not_tested"
+    },
+    "motion": {
+      "status": "proposed_not_validated",
+      "deliverable": "candidate_motion_package_with_timeline",
+      "proposed_duration_ms_range": [
+        160,
+        280
+      ],
+      "proposed_preview_fps": 30,
+      "proposed_single_pop_peak_cell_ratio": 1.25,
+      "stages": [
+        "anticipation",
+        "burst",
+        "settle"
+      ],
+      "format": "待引擎、骨骼或序列帧方案确认",
+      "performance_validation": "not_performed"
+    }
+  },
+  "actual_delivery_files": [
+    {
+      "path": "<PROJECT_ROOT>\\evals\\team-production\\fixture\\protocol-probe.txt",
+      "bytes": 147,
+      "sha256": "54a39ffa52ebdaa7f9b7605d600767a3db5b2d7d7df3030579ed89a6dbbaf1f2",
+      "suffix": ".txt",
+      "text_contents": "Protocol demonstration only. This text file is not an outsourced art asset. No visual, technical-export or integration review has been performed.\n"
+    }
+  ]
+}

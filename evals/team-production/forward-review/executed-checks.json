@@ -1,0 +1,46 @@
+[
+  {
+    "argv": [
+      "python",
+      "-B",
+      "<PROJECT_ROOT>\\scripts\\style_pack.py",
+      "verify",
+      "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft"
+    ],
+    "started_at_utc": "2026-10-09T10:29:03.505985+00:00",
+    "exit_code": 0,
+    "stdout_file": "pack-verify.json",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python",
+      "-B",
+      "<PROJECT_ROOT>\\scripts\\style_pack.py",
+      "validate",
+      "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft",
+      "--release"
+    ],
+    "started_at_utc": "2026-10-09T10:29:04.057568+00:00",
+    "exit_code": 1,
+    "stdout_file": "release-validation.json",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python",
+      "-B",
+      "<PROJECT_ROOT>\\scripts\\team_batch.py",
+      "check",
+      "<PROJECT_ROOT>\\evals\\team-production\\current-version-batch.json",
+      "--pack",
+      "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft",
+      "--out",
+      "<PROJECT_ROOT>\\evals\\team-production\\forward-review\\batch-check.json"
+    ],
+    "started_at_utc": "2026-10-09T10:29:04.645044+00:00",
+    "exit_code": 1,
+    "stdout_file": "batch-check.stdout.json",
+    "stderr": ""
+  }
+]

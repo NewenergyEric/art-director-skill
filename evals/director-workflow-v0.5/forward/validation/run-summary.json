@@ -1,0 +1,118 @@
+{
+  "ok": true,
+  "steps": [
+    {
+      "step": "01-validate",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "02-render",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "03-build",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "04-verify",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "05-archive",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "06-verify-unpacked",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "07-init-unpacked",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "08-start-button-disabled",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "09-start-garden-l2-selected",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "10-start-resident-hello",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "11-start-corner-combination",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "12-start-card-locked",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "13-start-promo-combination",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "14-resume-button",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "15-status",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "16-scoped-brief",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "17-image-intake",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "met_expectation": true
+    },
+    {
+      "step": "19-release-gate-confirmed",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "met_expectation": true
+    }
+  ],
+  "initial_runner_correction": "18-release-gate.json 保留原误设 expected=2 的记录；19 复核预期为 1。正式发布检查始终拒绝该未批准草案。",
+  "semantic_audit": "20-semantic-audit.json",
+  "draft_warnings": 102,
+  "release_blockers": 99,
+  "scope": "结构、文件与草案任务；不代表视觉、工程和授权通过。"
+}

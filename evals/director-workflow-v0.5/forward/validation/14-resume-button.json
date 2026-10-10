@@ -1,0 +1,59 @@
+{
+  "step": "14-resume-button",
+  "command": [
+    "python",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\tools\\project_runtime.py",
+    "resume",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial",
+    "--task",
+    "button-disabled"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "met_expectation": true,
+  "result": {
+    "ok": true,
+    "command": "resume",
+    "task_id": "button-disabled",
+    "task_dir": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\tasks\\button-disabled",
+    "work_dir": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\work\\button-disabled",
+    "status": "prepared_for_exploration",
+    "baseline": {
+      "version": "0.1.0",
+      "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+      "path": "releases/0.1.0",
+      "release": false
+    },
+    "current": {
+      "version": "0.1.0",
+      "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+      "path": "releases/0.1.0",
+      "release": false
+    },
+    "current_has_update": false,
+    "migrated": false,
+    "ready": false,
+    "production_approved": false,
+    "blockers": [],
+    "references": [
+      {
+        "id": "board-style",
+        "role": "style",
+        "usage": "candidate_exploration_only",
+        "workspace_path": "releases/0.1.0/references/style-board.png",
+        "absolute_path": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\releases\\0.1.0\\references\\style-board.png",
+        "sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453"
+      },
+      {
+        "id": "brief-evidence",
+        "role": "context",
+        "usage": "candidate_exploration_only",
+        "workspace_path": "releases/0.1.0/references/brief-and-observations.md",
+        "absolute_path": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\releases\\0.1.0\\references\\brief-and-observations.md",
+        "sha256": "d9f05e396c4fb830f29e365fd9fc2e5a724a3c5645809efcd03f200262cb5c75"
+      }
+    ],
+    "notice": "继续使用已冻结的任务与参考。"
+  },
+  "stderr": ""
+}

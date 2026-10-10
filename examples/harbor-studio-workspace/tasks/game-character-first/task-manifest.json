@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "game-character-first",
+  "files": {
+    "brief.json": "712e3a76bca1473515bba874cdedbd4090519d5f67049a85ca9e256f9a85cc3a",
+    "generation-brief.md": "07d868c19814b9a0ed58a657506365d0b0f6372139b3f4ef3d8bbab3a1d24770",
+    "handoff.md": "e2ef4598be8cc88ee0ec0136487c7c4dd81dac9dbffca0b7b775ab9aa873fac8",
+    "request.json": "02e2af6dbf22b2dc9e41413b6c3e9f7cdc175af58eaefa0b22337744629b3458",
+    "review.json": "98fa09c9d3714f126d650f36b02230824d3c35af900733831d4b24f02b2499eb",
+    "task.json": "6fe979a9af61f077748c9f641c26b9063275eb6318cbd7fe64e39fa237c91134"
+  },
+  "notice": "Frozen input hashes are unsigned; real outputs and review evidence belong under work/, not in this snapshot."
+}

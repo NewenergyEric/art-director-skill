@@ -1,0 +1,27 @@
+{
+  "label": "mira-verify",
+  "command": [
+    "python",
+    "art-director/scripts/style_pack.py",
+    "verify",
+    "dist/mira-public-0.2.0-draft"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "command": "verify",
+    "pack": {
+      "id": "mira-public-demo",
+      "version": "0.2.0",
+      "status": "draft",
+      "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624"
+    },
+    "release": false,
+    "errors": [],
+    "warnings": [],
+    "scope_of_check": "Unsigned content integrity only; neither origin/approver authentication nor artistic acceptance."
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:29.302286+00:00"
+}

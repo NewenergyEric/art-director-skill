@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "PB-BATCH-001",
+  "mode": "demonstration",
+  "baseline": {
+    "project_id": "pop-borough",
+    "version": "0.1.0",
+    "fingerprint": "414e047bd52f77735bddb4ae60d92113fc475aa0241442e1b89ad62bb54cc65f"
+  },
+  "assignments": [
+    {
+      "task_id": "PB-T01",
+      "category": "character",
+      "owner": {
+        "id": "character-lead",
+        "kind": "internal"
+      },
+      "asset_ids": [
+        "char-mira-idle",
+        "char-mira-happy",
+        "char-mira-surprised",
+        "char-mira-carry",
+        "char-mira-wave",
+        "char-mira-point",
+        "char-mira-win",
+        "char-mira-try-again"
+      ],
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ]
+    },
+    {
+      "task_id": "PB-T02",
+      "category": "environment",
+      "owner": {
+        "id": "environment-lead",
+        "kind": "internal"
+      },
+      "asset_ids": [
+        "env-main-street",
+        "env-bakery",
+        "env-fruit-store",
+        "env-florist",
+        "env-park-corner",
+        "env-parcel-stop"
+      ],
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ]
+    },
+    {
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "asset_ids": [
+        "tile-apple-default",
+        "tile-apple-selected",
+        "tile-leaf-default",
+        "tile-leaf-selected",
+        "tile-star-default",
+        "tile-star-selected",
+        "tile-drop-default",
+        "tile-drop-selected",
+        "tile-flower-default",
+        "tile-flower-selected"
+      ],
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ]
+    },
+    {
+      "task_id": "PB-T04",
+      "category": "prop",
+      "owner": {
+        "id": "prop-artist",
+        "kind": "internal"
+      },
+      "asset_ids": [
+        "prop-pinwheel-idle",
+        "prop-pinwheel-active",
+        "prop-mallet-idle",
+        "prop-mallet-active",
+        "prop-parcel-closed",
+        "prop-parcel-open"
+      ],
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ]
+    },
+    {
+      "task_id": "PB-T05",
+      "category": "ui",
+      "owner": {
+        "id": "ui-designer",
+        "kind": "internal"
+      },
+      "asset_ids": [
+        "ui-button-play",
+        "ui-button-pause",
+        "ui-button-retry",
+        "ui-button-next",
+        "ui-moves-counter",
+        "ui-goal-panel",
+        "ui-dialog-win",
+        "ui-dialog-retry"
+      ],
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ]
+    },
+    {
+      "task_id": "PB-T06",
+      "category": "motion",
+      "owner": {
+        "id": "motion-designer",
+        "kind": "internal"
+      },
+      "asset_ids": [
+        "motion-swap-valid",
+        "motion-swap-invalid",
+        "motion-tile-pop",
+        "motion-line-clear",
+        "motion-combo-pulse",
+        "motion-reward-collect"
+      ],
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ]
+    },
+    {
+      "task_id": "PB-T07",
+      "category": "prop",
+      "owner": {
+        "id": "outsource-studio",
+        "kind": "external"
+      },
+      "asset_ids": [
+        "prop-pinwheel-alt-coral",
+        "prop-pinwheel-alt-mint",
+        "prop-mallet-alt-blue",
+        "prop-mallet-alt-yellow",
+        "prop-parcel-alt-coral",
+        "prop-parcel-alt-mint"
+      ],
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ]
+    }
+  ],
+  "deliveries": []
+}

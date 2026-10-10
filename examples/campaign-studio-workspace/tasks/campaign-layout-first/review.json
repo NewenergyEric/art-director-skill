@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.0",
+  "task_id": "campaign-layout-first",
+  "baseline": {
+    "version": "0.5.0",
+    "fingerprint": "7e3c4e7d75077ba0183e813653d6c5363533a3898387784488167b6e7f8842dd",
+    "path": "releases/0.5.0",
+    "release": false
+  },
+  "production_approved": false,
+  "checks": [
+    {
+      "criterion": "instruction_conflicts",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "identity",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "style",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "task",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "technical",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "integration",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "director_acceptance",
+      "result": "unknown",
+      "evidence": null
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "CAMPAIGN-STYLE",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "COPY-TRUTH",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "COMPOSITION-CONTEXT",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "PRODUCT-IDENTITY",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "DECORATION-SPACE",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "TYPE-HIERARCHY",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    }
+  ],
+  "direction_checks": [
+    {
+      "criterion": "family/channel-layouts/fixed/1",
+      "statement": "商品身份",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/channel-layouts/fixed/2",
+      "statement": "信息优先级",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/channel-layouts/fixed/3",
+      "statement": "组成元素同版",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/channel-layouts/technical",
+      "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/COMPOSITION-CONTEXT",
+      "statement": "组合任务同时读取商品、装饰、字体规则；在目标画布检查商品占比、信息顺序、遮挡、安全区及渠道裁切，并与系列其他尺寸并排比较。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/channel-first/acceptance/1",
+      "statement": "商品与活动身份保持",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/channel-first/acceptance/2",
+      "statement": "各渠道真实裁切与安全区",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/channel-first/acceptance/3",
+      "statement": "实际尺寸看文字和信息顺序",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-channels/requirement/1",
+      "statement": "每个渠道有实际尺寸导出和合成预览",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-channels/requirement/2",
+      "statement": "内容源相同，按渠道重新组织层级",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-channels/requirement/3",
+      "statement": "最终检查事实、裁切、可读性和组成版本",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-channels/technical",
+      "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/product-master/fixed/1",
+      "statement": "真实包装、瓶型与标识",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/product-master/technical",
+      "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/PRODUCT-IDENTITY",
+      "statement": "商品瓶型、包装、标识、容量和真实标签沿用品牌母版；母版尚缺，不能凭文字合成的包装作为真实商品交付。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/product-first/acceptance/1",
+      "statement": "比对真实商品母版",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/product-first/acceptance/2",
+      "statement": "包装文字不被改写",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/product-first/acceptance/3",
+      "statement": "边缘和遮挡可用",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-assets/requirement/1",
+      "statement": "商品、图形和可编辑文字分别交接",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-assets/requirement/2",
+      "statement": "未提供价格、折扣或日期时保持待补",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-assets/requirement/3",
+      "statement": "保留版本、素材来源和修改记录",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-assets/technical",
+      "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-decor/fixed/1",
+      "statement": "活动色域",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-decor/fixed/2",
+      "statement": "无虚构文案和成分暗示",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-decor/technical",
+      "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/DECORATION-SPACE",
+      "statement": "装饰元素保留独立透明文件，不烘焙价格和品牌字；合成后不覆盖标签、主要文案及点击区域。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/component-first/acceptance/1",
+      "statement": "真实字体和文案",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/component-first/acceptance/2",
+      "statement": "主次与状态可辨",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/component-first/acceptance/3",
+      "statement": "组合时不遮住行动区域",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-type/fixed/1",
+      "statement": "标题、利益、行动、细则层级",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-type/fixed/2",
+      "statement": "真实文字和字体",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-type/technical",
+      "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/TYPE-HIERARCHY",
+      "statement": "按活动标题、核心利益、行动信息和细则定义层级；字体文件、字重与最小显示字号都待实际选定和检验。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/action-controls/fixed/1",
+      "statement": "主次关系",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/action-controls/fixed/2",
+      "statement": "行动文案可读",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/action-controls/technical",
+      "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    }
+  ],
+  "stages": [
+    {
+      "id": "concept",
+      "label": "创意候选与主美选择",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "single_asset",
+      "label": "按冻结参考单独生成资产",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "photoshop",
+      "label": "PS 调整尺寸、透明边缘与可编辑源文件",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "integration",
+      "label": "实际投放版面、界面或游戏场景中的集成检查",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "delivery",
+      "label": "最终导出、来源与交付复核",
+      "result": "unknown",
+      "evidence": null
+    }
+  ]
+}

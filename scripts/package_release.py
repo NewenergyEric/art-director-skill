@@ -25,6 +25,8 @@ def main() -> int:
         source / "SKILL.md",
         source / "LICENSE",
         source / "scripts" / "style_pack.py",
+        source / "scripts" / "project_runtime.py",
+        source / "scripts" / "team_batch.py",
         source / "scripts" / "pilot.py",
     ]
     for folder in ("agents", "references", "templates"):

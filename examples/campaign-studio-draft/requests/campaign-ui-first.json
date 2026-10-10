@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "task_id": "campaign-ui-first",
+  "request": "沿用活动视觉规范准备主次按钮和不可用状态。",
+  "category": "ui",
+  "family": "action-controls",
+  "subject": null,
+  "mode": "exploration",
+  "changes": {
+    "state": "默认、按下、不可用"
+  },
+  "exploration": {
+    "slots": [
+      "state"
+    ],
+    "candidates": 2
+  },
+  "owner": {
+    "id": "ui-designer",
+    "kind": "internal"
+  },
+  "components": []
+}

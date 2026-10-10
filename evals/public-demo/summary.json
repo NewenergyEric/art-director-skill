@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0",
+  "case": "original-public-workflow",
+  "status": "passed",
+  "executed_at": "2026-10-09T15:51:42.509592+00:00",
+  "counts": {
+    "cli_calls": 24,
+    "assertions": 17,
+    "passed_assertions": 17,
+    "new_generated_images": 0,
+    "psd_files": 0,
+    "production_approvals": 0
+  },
+  "source": "examples/mira-public-draft",
+  "built": "dist/mira-public-0.2.0-draft",
+  "workspace": "examples/mira-public-workspace",
+  "campaign_workspace": "examples/campaign-public-workspace",
+  "version_workspace": "evals/public-demo/version-workspace",
+  "baseline": {
+    "version": "0.2.0",
+    "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+    "path": "releases/0.2.0",
+    "release": false
+  },
+  "updated_baseline": {
+    "version": "0.2.1",
+    "fingerprint": "ebf5faab25f968332e850fc3b4003a4666f2acf426e81b8cd1d8f9226ca2bb95",
+    "path": "releases/0.2.1",
+    "release": false
+  },
+  "original_reference_sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+  "runtime_sha256": "7577a3a7254d8e64336f3484b5fde181fdbc8df307dc611ebcb8cc571f1f28ff",
+  "style_pack_cli_sha256": "fde700e0081ab7e5a82a4e007d7fdfc410e65b9e7ffd5da674f7c64b525bcfa8",
+  "calls": [
+    {
+      "label": "mira-validate",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/01-mira-validate.json"
+    },
+    {
+      "label": "mira-render",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/02-mira-render.json"
+    },
+    {
+      "label": "mira-build",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/03-mira-build.json"
+    },
+    {
+      "label": "mira-verify",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/04-mira-verify.json"
+    },
+    {
+      "label": "mira-init",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/05-mira-init.json"
+    },
+    {
+      "label": "mira-raincoat",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/06-mira-raincoat.json"
+    },
+    {
+      "label": "mira-pose",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/07-mira-pose.json"
+    },
+    {
+      "label": "mira-production-blocked",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "path": "evals/public-demo/calls/08-mira-production-blocked.json"
+    },
+    {
+      "label": "mira-status",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/09-mira-status.json"
+    },
+    {
+      "label": "campaign-source-validate",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/10-campaign-source-validate.json"
+    },
+    {
+      "label": "campaign-pack-verify",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/11-campaign-pack-verify.json"
+    },
+    {
+      "label": "campaign-init",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/12-campaign-init.json"
+    },
+    {
+      "label": "campaign-composition",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/13-campaign-composition.json"
+    },
+    {
+      "label": "version-init",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/14-version-init.json"
+    },
+    {
+      "label": "version-before-update",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/15-version-before-update.json"
+    },
+    {
+      "label": "version-draft-edit-only",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/16-version-draft-edit-only.json"
+    },
+    {
+      "label": "version-reject-unpublished-budget",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "path": "evals/public-demo/calls/17-version-reject-unpublished-budget.json"
+    },
+    {
+      "label": "version-render-updated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/18-version-render-updated.json"
+    },
+    {
+      "label": "version-build-updated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/19-version-build-updated.json"
+    },
+    {
+      "label": "version-verify-updated",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/20-version-verify-updated.json"
+    },
+    {
+      "label": "version-publish-candidate",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/21-version-publish-candidate.json"
+    },
+    {
+      "label": "version-after-update",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/22-version-after-update.json"
+    },
+    {
+      "label": "version-resume-old-task",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/23-version-resume-old-task.json"
+    },
+    {
+      "label": "version-status",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "path": "evals/public-demo/calls/24-version-status.json"
+    }
+  ],
+  "assertions": [
+    {
+      "name": "one_phrase_binds_candidate_identity",
+      "passed": true,
+      "detail": "The Agent-prepared request binds a declared alias. The CLI does not parse arbitrary natural language."
+    },
+    {
+      "name": "identity_rules_survive_costume_change",
+      "passed": true,
+      "detail": "This proves instruction binding only, not visual identity or style quality."
+    },
+    {
+      "name": "new_outfit_and_pose_are_separate_slots",
+      "passed": true,
+      "detail": "The pose-only request inherits the default outfit; the raincoat request changes the outfit."
+    },
+    {
+      "name": "three_candidate_budget_bound",
+      "passed": true,
+      "detail": "Candidate count is a director-set task budget, not a ceiling on artistic quality."
+    },
+    {
+      "name": "original_board_copied_without_editing",
+      "passed": true,
+      "detail": "The composite board and candidate identity reference are byte-identical; no crop or image edit was performed."
+    },
+    {
+      "name": "draft_cannot_be_formal_production",
+      "passed": true,
+      "detail": "The unapproved fixture cannot be presented as a production baseline."
+    },
+    {
+      "name": "review_starts_unknown",
+      "passed": true,
+      "detail": "No generated asset or human approval was fabricated."
+    },
+    {
+      "name": "composition_binds_product_graphic_typography",
+      "passed": true,
+      "detail": "One layout task binds its constituent asset categories and the declared product subject."
+    },
+    {
+      "name": "composition_uses_one_baseline",
+      "passed": true,
+      "detail": "All component briefs were compiled against the same package id, version and fingerprint."
+    },
+    {
+      "name": "composition_retains_identity_and_copy_rules",
+      "passed": true,
+      "detail": "Product images, final copy, typography and channel verification remain absent; this is not a finished banner."
+    },
+    {
+      "name": "editing_draft_does_not_silently_publish",
+      "passed": true,
+      "detail": "New tasks read current, not an arbitrary editable draft; current still points to version 0.2.0."
+    },
+    {
+      "name": "unpublished_budget_still_enforced",
+      "passed": true,
+      "detail": "Requesting four candidates fails until the new budget is explicitly adopted."
+    },
+    {
+      "name": "explicit_adoption_changes_current",
+      "passed": true,
+      "detail": "The demo explicitly adopts a candidate. It does not record director approval or a production release."
+    },
+    {
+      "name": "new_task_reads_latest_adopted_version",
+      "passed": true,
+      "detail": "The newly started task uses the current 0.2.1 candidate and its updated budget."
+    },
+    {
+      "name": "old_task_bytes_unchanged",
+      "passed": true,
+      "detail": "All frozen input files are byte-identical before and after adopting the new candidate."
+    },
+    {
+      "name": "resume_reports_update_without_migration",
+      "passed": true,
+      "detail": "Resume verifies old inputs, reports the new current version and does not silently migrate the task."
+    },
+    {
+      "name": "no_assets_or_approvals_invented",
+      "passed": true,
+      "detail": "This run called only local Python CLIs. It made no image-model call, PSD, real delivery or approval."
+    }
+  ],
+  "limitations": [
+    "Original illustrative character and text-only campaign fixtures; no actual client asset was used.",
+    "A structured request is prepared by an Agent. The CLI is not a natural-language parser.",
+    "The image is an existing original candidate board, not a newly generated or approved production asset.",
+    "These assertions verify routing, inheritance, versioning and truthful states, not face preservation or image quality.",
+    "No image generation, Photoshop editing, real team first-pass acceptance or rework-rate experiment was performed."
+  ]
+}

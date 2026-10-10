@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "task_id": "mira-production-001",
+  "request": "把女主换成雨衣并摆挥手姿势，作为正式资产交付。",
+  "category": "character",
+  "subject": "女主",
+  "mode": "production",
+  "changes": {
+    "outfit": "轻便黄色雨衣",
+    "pose": "抬手挥手"
+  },
+  "exploration": null,
+  "owner": {
+    "id": "public-demo-character-artist",
+    "kind": "internal"
+  }
+}

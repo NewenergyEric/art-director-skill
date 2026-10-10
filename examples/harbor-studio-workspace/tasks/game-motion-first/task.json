@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "task_id": "game-motion-first",
+  "project_id": "harbor-studio",
+  "created_at": "2026-10-09T17:42:50+00:00",
+  "request": "给外包准备单棋消除反馈首件，沿用静态棋子身份。",
+  "category": "motion",
+  "subject": null,
+  "entity_id": null,
+  "family_id": "feedback-effects",
+  "owner": {
+    "id": "external-motion",
+    "kind": "external"
+  },
+  "mode": "exploration",
+  "baseline": {
+    "version": "0.5.0",
+    "fingerprint": "6c0e0e9ae893db942198b590fdee9911e92133d7c50c5d92cb7237a9cb2f2d75",
+    "path": "releases/0.5.0",
+    "release": false
+  },
+  "status": "prepared_for_exploration",
+  "ready": false,
+  "production_approved": false,
+  "blockers": [],
+  "controls": {
+    "slots": {
+      "action": {
+        "default": "单棋消除",
+        "guidance": "逐帧和实际速度检查，静态板不能证明时序可用"
+      }
+    },
+    "exploration": {
+      "allowed_slots": [
+        "action"
+      ],
+      "max_candidates": 3
+    }
+  },
+  "changes": {
+    "action": "单棋消除的预备、命中、收束"
+  },
+  "resolved_values": {
+    "action": "单棋消除的预备、命中、收束"
+  },
+  "exploration": {
+    "slots": [
+      "action"
+    ],
+    "candidates": 2
+  },
+  "components": [],
+  "references": [
+    {
+      "id": "PB-STYLE-BOARD",
+      "path": "references/style-board.png",
+      "role": "style",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "原有原创 Pop Borough 综合板，供讨论整体风格；不是已批准首件，也不是可直接使用的独立图集。",
+      "status": "candidate",
+      "provenance": {
+        "type": "existing_generated_original",
+        "source": "原创 Pop Borough 候选参考；逐字节复用，未编辑"
+      },
+      "usage": "candidate_exploration_only",
+      "workspace_path": "releases/0.5.0/references/style-board.png",
+      "absolute_path": "<PROJECT_ROOT>\\examples\\harbor-studio-workspace\\releases\\0.5.0\\references\\style-board.png",
+      "sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453"
+    },
+    {
+      "id": "PB-ART-DIRECTION",
+      "path": "references/director-source-notes.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "Agent 整理的原创项目讨论稿，记录使用情境与关键待定项。",
+      "status": "candidate",
+      "provenance": {
+        "type": "authored_demo",
+        "source": "本次原创工作流示范"
+      },
+      "usage": "candidate_exploration_only",
+      "workspace_path": "releases/0.5.0/references/director-source-notes.md",
+      "absolute_path": "<PROJECT_ROOT>\\examples\\harbor-studio-workspace\\releases\\0.5.0\\references\\director-source-notes.md",
+      "sha256": "99cc06bf6508f596aa19bb52730f0f55c964cc494c07ba28b78ed864d7811c35"
+    }
+  ],
+  "open_questions": [
+    "确认目标玩家与设备环境",
+    "建立各家族代表样板与真实批准记录",
+    "确认字体、尺寸、锚点和动效格式",
+    "指定首件与组合评审责任人、批次节奏和预算"
+  ],
+  "work_path": "work/game-motion-first",
+  "limitations": [
+    "Agent parses the request; CLI cannot assess semantic conflicts or visual identity.",
+    "Initial unknown checks are not approval or generated assets.",
+    "All tasks retain applicable must/fixed constraints, including during exploration."
+  ]
+}

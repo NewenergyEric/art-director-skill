@@ -1,0 +1,67 @@
+{
+  "label": "version-resume-old-task",
+  "command": [
+    "python",
+    "evals/public-demo/version-workspace/tools/project_runtime.py",
+    "resume",
+    "evals/public-demo/version-workspace",
+    "--task",
+    "before-update"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "command": "resume",
+    "task_id": "before-update",
+    "task_dir": "<PROJECT_ROOT>\\evals\\public-demo\\version-workspace\\tasks\\before-update",
+    "work_dir": "<PROJECT_ROOT>\\evals\\public-demo\\version-workspace\\work\\before-update",
+    "status": "prepared_for_exploration",
+    "baseline": {
+      "version": "0.2.0",
+      "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+      "path": "releases/0.2.0",
+      "release": false
+    },
+    "current": {
+      "version": "0.2.1",
+      "fingerprint": "ebf5faab25f968332e850fc3b4003a4666f2acf426e81b8cd1d8f9226ca2bb95",
+      "path": "releases/0.2.1",
+      "release": false
+    },
+    "current_has_update": true,
+    "migrated": false,
+    "ready": false,
+    "production_approved": false,
+    "blockers": [],
+    "references": [
+      {
+        "id": "MIRA-STYLE",
+        "role": "style",
+        "usage": "candidate_exploration_only",
+        "workspace_path": "releases/0.2.0/references/style-board.png",
+        "absolute_path": "<PROJECT_ROOT>\\evals\\public-demo\\version-workspace\\releases\\0.2.0\\references\\style-board.png",
+        "sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453"
+      },
+      {
+        "id": "MIRA-IDENTITY",
+        "role": "identity",
+        "usage": "candidate_exploration_only",
+        "workspace_path": "releases/0.2.0/references/identity-candidate-board.png",
+        "absolute_path": "<PROJECT_ROOT>\\evals\\public-demo\\version-workspace\\releases\\0.2.0\\references\\identity-candidate-board.png",
+        "sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453"
+      },
+      {
+        "id": "MIRA-DIRECTION",
+        "role": "context",
+        "usage": "candidate_exploration_only",
+        "workspace_path": "releases/0.2.0/references/art-direction.md",
+        "absolute_path": "<PROJECT_ROOT>\\evals\\public-demo\\version-workspace\\releases\\0.2.0\\references\\art-direction.md",
+        "sha256": "a3f67515cf4d985770bb0946c2e715e2a204d25cef2194785ade4a31487a1716"
+      }
+    ],
+    "notice": "当前规范已更新；本任务继续冻结旧版。如需迁移，显式建立新任务并复核兼容。"
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:41.888681+00:00"
+}

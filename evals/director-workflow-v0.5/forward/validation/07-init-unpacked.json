@@ -1,0 +1,30 @@
+{
+  "step": "07-init-unpacked",
+  "command": [
+    "python",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\unpacked-trial\\scripts\\project_runtime.py",
+    "init",
+    "--pack",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\unpacked-trial",
+    "--out",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial",
+    "--allow-draft"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "met_expectation": true,
+  "result": {
+    "ok": true,
+    "command": "init",
+    "workspace": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial",
+    "current": {
+      "version": "0.1.0",
+      "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+      "path": "releases/0.1.0",
+      "release": false
+    },
+    "candidate_workspace": true,
+    "production_approved": false
+  },
+  "stderr": ""
+}

@@ -1,0 +1,3092 @@
+{
+  "ok": true,
+  "command": "brief",
+  "pack": {
+    "id": "campaign-studio",
+    "name": "周末轻饮 · 活动组件与多渠道设计",
+    "version": "0.5.0",
+    "status": "draft",
+    "release": false,
+    "fingerprint": "7e3c4e7d75077ba0183e813653d6c5363533a3898387784488167b6e7f8842dd"
+  },
+  "task": "按主美活动规范准备横幅、竖版和社媒的组合首件，商品与文字不重新发明；缺的真实资料先列清。",
+  "category": "layout",
+  "scope": {
+    "medium": "电商横幅、宣传海报与组件的团队组合设计",
+    "view": "由投放渠道画布与裁切决定",
+    "target_platform": "待提供真实投放规格",
+    "asset_types": [
+      "product",
+      "graphic",
+      "typography",
+      "layout",
+      "ui"
+    ]
+  },
+  "intent": {
+    "summary": "示范商品、活动装饰、真实文字与组合版式由不同成员制作，却沿用同一活动规范与版本。当前仅有文本方向和任务编译，没有品牌母版或已完成海报。",
+    "pillars": [
+      "先认出商品，再读懂活动",
+      "多个渠道保持同一活动身份",
+      "装饰与版式留创意空间"
+    ],
+    "avoid": [
+      "模型改写商品包装或品牌标识",
+      "凭空补价格、折扣、日期、功能卖点",
+      "单元素合格却在组合画面中遮挡主要信息"
+    ]
+  },
+  "tokens": {
+    "colors": {
+      "candidate_cream": "#FFF4DB",
+      "candidate_citrus": "#F5A838",
+      "candidate_ink": "#24352C"
+    },
+    "fonts": {}
+  },
+  "profile": {
+    "brief": "把同一活动版本的商品、装饰、字体组合成渠道画面。",
+    "fixed": [
+      "商品身份与品牌标识不重设计",
+      "价格文案来源可核对",
+      "组成元素版本一致"
+    ],
+    "variable": [
+      "安全区内的构图与留白"
+    ],
+    "technical": {
+      "final_canvas_px": null,
+      "channel": "待确认",
+      "editable_source": "PSD/Figma等可编辑合成文件",
+      "required_checks": [
+        "逐字核对文案",
+        "字体与商品来源",
+        "遮挡与信息顺序",
+        "实际渠道裁切",
+        "组合版本与可编辑源"
+      ]
+    },
+    "task_controls": {
+      "slots": {
+        "composition": {
+          "default": "商品一侧、活动信息另一侧，留出安全区",
+          "guidance": "可探索构图关系但不可改商品包装或虚构促销事实。"
+        }
+      },
+      "exploration": {
+        "allowed_slots": [
+          "composition"
+        ],
+        "max_candidates": 3
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": "CAMPAIGN-STYLE",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "候选活动方向采用奶油底色、柑橘色点缀与深色文字，信息清楚；具体颜色和样板尚待品牌负责人确认。",
+      "rationale": "给所有成员同一活动方向，但不冒充已批准品牌标准。",
+      "allowed_variation": [],
+      "evidence": [
+        "CAMPAIGN-BRIEF"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "COPY-TRUTH",
+      "scope": [
+        "typography",
+        "layout"
+      ],
+      "strength": "must",
+      "statement": "本案例只提供占位活动标题‘周末轻饮’，不是投放文案。价格、优惠、时间和细则未给出时保持待补，不自行填写。真实文案用可编辑文字层排版逐字核对。",
+      "rationale": "实际文字与事实必须来自活动负责人，生图里的近似字形不能作为排版。",
+      "allowed_variation": [],
+      "evidence": [
+        "CAMPAIGN-BRIEF"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "COMPOSITION-CONTEXT",
+      "scope": [
+        "layout"
+      ],
+      "strength": "must",
+      "statement": "组合任务同时读取商品、装饰、字体规则；在目标画布检查商品占比、信息顺序、遮挡、安全区及渠道裁切，并与系列其他尺寸并排比较。",
+      "rationale": "单个元素正确不能证明最终海报或促销页面一致。",
+      "allowed_variation": [],
+      "evidence": [
+        "CAMPAIGN-BRIEF"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "PRODUCT-IDENTITY",
+      "scope": [
+        "product"
+      ],
+      "strength": "must",
+      "statement": "商品瓶型、包装、标识、容量和真实标签沿用品牌母版；母版尚缺，不能凭文字合成的包装作为真实商品交付。",
+      "rationale": "商品身份是底线，背景换风格不代表可以改商品。",
+      "allowed_variation": [],
+      "evidence": [
+        "CAMPAIGN-BRIEF"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "DECORATION-SPACE",
+      "scope": [
+        "graphic"
+      ],
+      "strength": "must",
+      "statement": "装饰元素保留独立透明文件，不烘焙价格和品牌字；合成后不覆盖标签、主要文案及点击区域。",
+      "rationale": "跨成员复用和组合需要独立元素及实际合成检查。",
+      "allowed_variation": [],
+      "evidence": [
+        "CAMPAIGN-BRIEF"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "TYPE-HIERARCHY",
+      "scope": [
+        "typography"
+      ],
+      "strength": "must",
+      "statement": "按活动标题、核心利益、行动信息和细则定义层级；字体文件、字重与最小显示字号都待实际选定和检验。",
+      "rationale": "不同成员制作的字块在最终画面中仍需连续清楚。",
+      "allowed_variation": [],
+      "evidence": [
+        "CAMPAIGN-BRIEF"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    }
+  ],
+  "references": [
+    {
+      "id": "CAMPAIGN-BRIEF",
+      "path": "references/campaign-brief.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "真实存在的文本演示方向，未提供商品/品牌图像或正式活动数据。",
+      "status": "candidate",
+      "provenance": {
+        "type": "authored_demo",
+        "source": "本会话扩展至电商与宣传海报的需求",
+        "approval": "none"
+      },
+      "usage": "candidate_exploration_only"
+    }
+  ],
+  "reference_base": "Paths are relative to the pack root; locate this pack by id/version/fingerprint, not by the current working directory.",
+  "reference_roles": {
+    "style": "Visual language only",
+    "identity": "Same entity's identity and fixed features",
+    "composition": "Layout only",
+    "material": "Material treatment",
+    "context": "Actual game/use context and scale",
+    "counterexample": "Negative evidence; never a positive generation reference",
+    "font": "Typography guidance and font source"
+  },
+  "entity": null,
+  "family": {
+    "id": "channel-layouts",
+    "name": "横幅、海报和社媒模板",
+    "category": "layout",
+    "purpose": "让不同岗位的产物能在同一活动下复用和组合。",
+    "rule_ids": [
+      "COMPOSITION-CONTEXT"
+    ],
+    "reference_ids": [],
+    "fixed": [
+      "商品身份",
+      "信息优先级",
+      "组成元素同版"
+    ],
+    "variable": [
+      "构图",
+      "渠道重排",
+      "安全区提案"
+    ],
+    "technical": {
+      "final_sizes": null
+    },
+    "status": "proposed"
+  },
+  "exemplars": [
+    {
+      "id": "channel-first",
+      "name": "三类渠道组合校准",
+      "family_ids": [
+        "channel-layouts"
+      ],
+      "purpose": "以同一内容验证横幅、海报和社媒重排。",
+      "reference_ids": [],
+      "acceptance": [
+        "商品与活动身份保持",
+        "各渠道真实裁切与安全区",
+        "实际尺寸看文字和信息顺序"
+      ],
+      "required": true,
+      "status": "planned",
+      "approval": null
+    }
+  ],
+  "delivery": [
+    {
+      "id": "campaign-channels",
+      "name": "多尺寸多渠道交付",
+      "categories": [
+        "layout",
+        "typography",
+        "ui"
+      ],
+      "channels": [
+        "电商横幅",
+        "竖版宣传海报",
+        "社媒模板"
+      ],
+      "requirements": [
+        "每个渠道有实际尺寸导出和合成预览",
+        "内容源相同，按渠道重新组织层级",
+        "最终检查事实、裁切、可读性和组成版本"
+      ],
+      "technical": {
+        "final_dimensions": null,
+        "color_export_profile": null
+      },
+      "status": "proposed",
+      "source": "本原创案例的交付讨论稿；最终尺寸和输出配置待实际目标环境确定。"
+    }
+  ],
+  "direction_checks": [
+    {
+      "criterion": "family/channel-layouts/fixed/1",
+      "statement": "商品身份",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/channel-layouts/fixed/2",
+      "statement": "信息优先级",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/channel-layouts/fixed/3",
+      "statement": "组成元素同版",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/channel-layouts/technical",
+      "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/COMPOSITION-CONTEXT",
+      "statement": "组合任务同时读取商品、装饰、字体规则；在目标画布检查商品占比、信息顺序、遮挡、安全区及渠道裁切，并与系列其他尺寸并排比较。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/channel-first/acceptance/1",
+      "statement": "商品与活动身份保持",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/channel-first/acceptance/2",
+      "statement": "各渠道真实裁切与安全区",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/channel-first/acceptance/3",
+      "statement": "实际尺寸看文字和信息顺序",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-channels/requirement/1",
+      "statement": "每个渠道有实际尺寸导出和合成预览",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-channels/requirement/2",
+      "statement": "内容源相同，按渠道重新组织层级",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-channels/requirement/3",
+      "statement": "最终检查事实、裁切、可读性和组成版本",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-channels/technical",
+      "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/product-master/fixed/1",
+      "statement": "真实包装、瓶型与标识",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/product-master/technical",
+      "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/PRODUCT-IDENTITY",
+      "statement": "商品瓶型、包装、标识、容量和真实标签沿用品牌母版；母版尚缺，不能凭文字合成的包装作为真实商品交付。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/product-first/acceptance/1",
+      "statement": "比对真实商品母版",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/product-first/acceptance/2",
+      "statement": "包装文字不被改写",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/product-first/acceptance/3",
+      "statement": "边缘和遮挡可用",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-assets/requirement/1",
+      "statement": "商品、图形和可编辑文字分别交接",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-assets/requirement/2",
+      "statement": "未提供价格、折扣或日期时保持待补",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-assets/requirement/3",
+      "statement": "保留版本、素材来源和修改记录",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/campaign-assets/technical",
+      "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-decor/fixed/1",
+      "statement": "活动色域",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-decor/fixed/2",
+      "statement": "无虚构文案和成分暗示",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-decor/technical",
+      "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/DECORATION-SPACE",
+      "statement": "装饰元素保留独立透明文件，不烘焙价格和品牌字；合成后不覆盖标签、主要文案及点击区域。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/component-first/acceptance/1",
+      "statement": "真实字体和文案",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/component-first/acceptance/2",
+      "statement": "主次与状态可辨",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/component-first/acceptance/3",
+      "statement": "组合时不遮住行动区域",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-type/fixed/1",
+      "statement": "标题、利益、行动、细则层级",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-type/fixed/2",
+      "statement": "真实文字和字体",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/campaign-type/technical",
+      "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/TYPE-HIERARCHY",
+      "statement": "按活动标题、核心利益、行动信息和细则定义层级；字体文件、字重与最小显示字号都待实际选定和检验。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/action-controls/fixed/1",
+      "statement": "主次关系",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/action-controls/fixed/2",
+      "statement": "行动文案可读",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/action-controls/technical",
+      "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    }
+  ],
+  "recipes": [],
+  "decisions": [],
+  "unresolved": [
+    {
+      "code": "release_requirement",
+      "path": "$.status",
+      "message": "A release requires status='approved'."
+    },
+    {
+      "code": "candidate_reference",
+      "path": "$.references[0]",
+      "message": "Candidate reference: do not present it as approved production guidance."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'product'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'product'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'graphic'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'graphic'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'typography'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'typography'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'layout'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'layout'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'ui'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'ui'."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[0].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[1].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[2].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[3].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[4].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[5].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[0].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.open_questions",
+      "message": "Resolve every open question before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.approval",
+      "message": "A release requires a named approval record and an existing evidence file."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[0].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[1].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[2].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[3].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[0].technical.final_sizes",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[0].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[1].technical.final_sizes",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[1].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[2].technical.final_sizes",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[2].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[3].technical.final_sizes",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[3].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[4].technical.final_sizes",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[4].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "required_exemplar",
+      "path": "$.direction.exemplars[0].status",
+      "message": "This required sample has not been approved."
+    },
+    {
+      "code": "required_exemplar",
+      "path": "$.direction.exemplars[1].status",
+      "message": "This required sample has not been approved."
+    },
+    {
+      "code": "required_exemplar",
+      "path": "$.direction.exemplars[2].status",
+      "message": "This required sample has not been approved."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[0].technical.final_dimensions",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[0].technical.color_export_profile",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.delivery[0].status",
+      "message": "Confirm delivery channels and requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[1].technical.final_dimensions",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[1].technical.color_export_profile",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.delivery[1].status",
+      "message": "Confirm delivery channels and requirements before release."
+    },
+    {
+      "code": "unreleased_pack",
+      "path": "$",
+      "message": "This pack has not been built with --release. Treat all delivery as draft exploration."
+    }
+  ],
+  "review": [
+    {
+      "rule_id": "CAMPAIGN-STYLE",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "COPY-TRUTH",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "COMPOSITION-CONTEXT",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "PRODUCT-IDENTITY",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "DECORATION-SPACE",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "TYPE-HIERARCHY",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    }
+  ],
+  "workflow": [
+    "Read applicable confirmed rules and approved references; mark candidate/proposed inputs explicitly.",
+    "Inspect image contents before claiming visual understanding; unavailable observations remain unknown.",
+    "Bind identity for a reused entity; keep role-specific references separate and exclude counterexamples from positive references.",
+    "Use only available production tools; if unavailable, hand off this brief without claiming asset generation.",
+    "Record tool/model/settings/seed when available and preserve originals outside the immutable pack.",
+    "Review style, identity, context, readability and technical constraints using pass/fail/unknown with evidence.",
+    "Return version/fingerprint, task, source references, assets, review and unresolved items; structural validation is not artistic approval."
+  ],
+  "component_briefs": [
+    {
+      "ok": true,
+      "command": "brief",
+      "pack": {
+        "id": "campaign-studio",
+        "name": "周末轻饮 · 活动组件与多渠道设计",
+        "version": "0.5.0",
+        "status": "draft",
+        "release": false,
+        "fingerprint": "7e3c4e7d75077ba0183e813653d6c5363533a3898387784488167b6e7f8842dd"
+      },
+      "task": "按主美活动规范准备横幅、竖版和社媒的组合首件，商品与文字不重新发明；缺的真实资料先列清。",
+      "category": "product",
+      "scope": {
+        "medium": "电商横幅、宣传海报与组件的团队组合设计",
+        "view": "由投放渠道画布与裁切决定",
+        "target_platform": "待提供真实投放规格",
+        "asset_types": [
+          "product",
+          "graphic",
+          "typography",
+          "layout",
+          "ui"
+        ]
+      },
+      "intent": {
+        "summary": "示范商品、活动装饰、真实文字与组合版式由不同成员制作，却沿用同一活动规范与版本。当前仅有文本方向和任务编译，没有品牌母版或已完成海报。",
+        "pillars": [
+          "先认出商品，再读懂活动",
+          "多个渠道保持同一活动身份",
+          "装饰与版式留创意空间"
+        ],
+        "avoid": [
+          "模型改写商品包装或品牌标识",
+          "凭空补价格、折扣、日期、功能卖点",
+          "单元素合格却在组合画面中遮挡主要信息"
+        ]
+      },
+      "tokens": {
+        "colors": {
+          "candidate_cream": "#FFF4DB",
+          "candidate_citrus": "#F5A838",
+          "candidate_ink": "#24352C"
+        },
+        "fonts": {}
+      },
+      "profile": {
+        "brief": "保持真实商品身份，输出可复用商品主体。",
+        "fixed": [
+          "商品包装与标识来自同一批准母版"
+        ],
+        "variable": [
+          "任务允许的摆放角度和位置"
+        ],
+        "technical": {
+          "source_master": null,
+          "editable_source": "智能对象或可编辑合成源，按真实文件检查",
+          "background": "transparent",
+          "final_canvas_px": null
+        },
+        "task_controls": {
+          "slots": {
+            "angle": {
+              "default": "母版角度",
+              "guidance": "缺少其他视角时不得自行补成正式商品。"
+            }
+          },
+          "exploration": {
+            "allowed_slots": [
+              "angle"
+            ],
+            "max_candidates": 3
+          }
+        }
+      },
+      "rules": [
+        {
+          "id": "CAMPAIGN-STYLE",
+          "scope": [
+            "global"
+          ],
+          "strength": "must",
+          "statement": "候选活动方向采用奶油底色、柑橘色点缀与深色文字，信息清楚；具体颜色和样板尚待品牌负责人确认。",
+          "rationale": "给所有成员同一活动方向，但不冒充已批准品牌标准。",
+          "allowed_variation": [],
+          "evidence": [
+            "CAMPAIGN-BRIEF"
+          ],
+          "verification": "human",
+          "status": "proposed"
+        },
+        {
+          "id": "PRODUCT-IDENTITY",
+          "scope": [
+            "product"
+          ],
+          "strength": "must",
+          "statement": "商品瓶型、包装、标识、容量和真实标签沿用品牌母版；母版尚缺，不能凭文字合成的包装作为真实商品交付。",
+          "rationale": "商品身份是底线，背景换风格不代表可以改商品。",
+          "allowed_variation": [],
+          "evidence": [
+            "CAMPAIGN-BRIEF"
+          ],
+          "verification": "human",
+          "status": "proposed"
+        }
+      ],
+      "references": [
+        {
+          "id": "CAMPAIGN-BRIEF",
+          "path": "references/campaign-brief.md",
+          "role": "context",
+          "applies_to": [
+            "global"
+          ],
+          "notes": "真实存在的文本演示方向，未提供商品/品牌图像或正式活动数据。",
+          "status": "candidate",
+          "provenance": {
+            "type": "authored_demo",
+            "source": "本会话扩展至电商与宣传海报的需求",
+            "approval": "none"
+          },
+          "usage": "candidate_exploration_only"
+        }
+      ],
+      "reference_base": "Paths are relative to the pack root; locate this pack by id/version/fingerprint, not by the current working directory.",
+      "reference_roles": {
+        "style": "Visual language only",
+        "identity": "Same entity's identity and fixed features",
+        "composition": "Layout only",
+        "material": "Material treatment",
+        "context": "Actual game/use context and scale",
+        "counterexample": "Negative evidence; never a positive generation reference",
+        "font": "Typography guidance and font source"
+      },
+      "entity": {
+        "id": "hero-bottle",
+        "kind": "product",
+        "identity_rules": [
+          "PRODUCT-IDENTITY"
+        ],
+        "reference_ids": [],
+        "fixed_features": [
+          "真实瓶型、包装、标识、容量待母版提供"
+        ],
+        "variations": [
+          "仅任务允许的角度和摆放"
+        ],
+        "aliases": [
+          "主商品",
+          "商品瓶"
+        ]
+      },
+      "family": {
+        "id": "product-master",
+        "name": "商品主体",
+        "category": "product",
+        "purpose": "让不同岗位的产物能在同一活动下复用和组合。",
+        "rule_ids": [
+          "PRODUCT-IDENTITY"
+        ],
+        "reference_ids": [],
+        "fixed": [
+          "真实包装、瓶型与标识"
+        ],
+        "variable": [
+          "授权视角与位置"
+        ],
+        "technical": {
+          "final_sizes": null
+        },
+        "status": "proposed"
+      },
+      "exemplars": [
+        {
+          "id": "product-first",
+          "name": "商品主体首件",
+          "family_ids": [
+            "product-master"
+          ],
+          "purpose": "先保证真实商品身份，再进入活动合成。",
+          "reference_ids": [],
+          "acceptance": [
+            "比对真实商品母版",
+            "包装文字不被改写",
+            "边缘和遮挡可用"
+          ],
+          "required": true,
+          "status": "planned",
+          "approval": null
+        }
+      ],
+      "delivery": [
+        {
+          "id": "campaign-assets",
+          "name": "单件组件交付",
+          "categories": [
+            "product",
+            "graphic",
+            "typography",
+            "ui"
+          ],
+          "channels": [
+            "设计源文件",
+            "活动合成组件"
+          ],
+          "requirements": [
+            "商品、图形和可编辑文字分别交接",
+            "未提供价格、折扣或日期时保持待补",
+            "保留版本、素材来源和修改记录"
+          ],
+          "technical": {
+            "final_dimensions": null,
+            "color_export_profile": null
+          },
+          "status": "proposed",
+          "source": "本原创案例的交付讨论稿；最终尺寸和输出配置待实际目标环境确定。"
+        }
+      ],
+      "direction_checks": [
+        {
+          "criterion": "family/product-master/fixed/1",
+          "statement": "真实包装、瓶型与标识",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "family/product-master/technical",
+          "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "rule/PRODUCT-IDENTITY",
+          "statement": "商品瓶型、包装、标识、容量和真实标签沿用品牌母版；母版尚缺，不能凭文字合成的包装作为真实商品交付。",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/product-first/acceptance/1",
+          "statement": "比对真实商品母版",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/product-first/acceptance/2",
+          "statement": "包装文字不被改写",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/product-first/acceptance/3",
+          "statement": "边缘和遮挡可用",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/1",
+          "statement": "商品、图形和可编辑文字分别交接",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/2",
+          "statement": "未提供价格、折扣或日期时保持待补",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/3",
+          "statement": "保留版本、素材来源和修改记录",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/technical",
+          "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        }
+      ],
+      "recipes": [],
+      "decisions": [],
+      "unresolved": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[0]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'product'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'product'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'graphic'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'graphic'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'typography'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'typography'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'layout'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'layout'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'ui'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'ui'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[0].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[1].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[2].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[3].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[0].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[0].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[1].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[1].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[2].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[2].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[3].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[3].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[4].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[4].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[0].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[1].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[2].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[0].technical.final_dimensions",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[0].technical.color_export_profile",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.delivery[0].status",
+          "message": "Confirm delivery channels and requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[1].technical.final_dimensions",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[1].technical.color_export_profile",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.delivery[1].status",
+          "message": "Confirm delivery channels and requirements before release."
+        },
+        {
+          "code": "unreleased_pack",
+          "path": "$",
+          "message": "This pack has not been built with --release. Treat all delivery as draft exploration."
+        }
+      ],
+      "review": [
+        {
+          "rule_id": "CAMPAIGN-STYLE",
+          "strength": "must",
+          "verification": "human",
+          "result": "unknown",
+          "evidence": "",
+          "correction": ""
+        },
+        {
+          "rule_id": "PRODUCT-IDENTITY",
+          "strength": "must",
+          "verification": "human",
+          "result": "unknown",
+          "evidence": "",
+          "correction": ""
+        }
+      ],
+      "workflow": [
+        "Read applicable confirmed rules and approved references; mark candidate/proposed inputs explicitly.",
+        "Inspect image contents before claiming visual understanding; unavailable observations remain unknown.",
+        "Bind identity for a reused entity; keep role-specific references separate and exclude counterexamples from positive references.",
+        "Use only available production tools; if unavailable, hand off this brief without claiming asset generation.",
+        "Record tool/model/settings/seed when available and preserve originals outside the immutable pack.",
+        "Review style, identity, context, readability and technical constraints using pass/fail/unknown with evidence.",
+        "Return version/fingerprint, task, source references, assets, review and unresolved items; structural validation is not artistic approval."
+      ]
+    },
+    {
+      "ok": true,
+      "command": "brief",
+      "pack": {
+        "id": "campaign-studio",
+        "name": "周末轻饮 · 活动组件与多渠道设计",
+        "version": "0.5.0",
+        "status": "draft",
+        "release": false,
+        "fingerprint": "7e3c4e7d75077ba0183e813653d6c5363533a3898387784488167b6e7f8842dd"
+      },
+      "task": "按主美活动规范准备横幅、竖版和社媒的组合首件，商品与文字不重新发明；缺的真实资料先列清。",
+      "category": "graphic",
+      "scope": {
+        "medium": "电商横幅、宣传海报与组件的团队组合设计",
+        "view": "由投放渠道画布与裁切决定",
+        "target_platform": "待提供真实投放规格",
+        "asset_types": [
+          "product",
+          "graphic",
+          "typography",
+          "layout",
+          "ui"
+        ]
+      },
+      "intent": {
+        "summary": "示范商品、活动装饰、真实文字与组合版式由不同成员制作，却沿用同一活动规范与版本。当前仅有文本方向和任务编译，没有品牌母版或已完成海报。",
+        "pillars": [
+          "先认出商品，再读懂活动",
+          "多个渠道保持同一活动身份",
+          "装饰与版式留创意空间"
+        ],
+        "avoid": [
+          "模型改写商品包装或品牌标识",
+          "凭空补价格、折扣、日期、功能卖点",
+          "单元素合格却在组合画面中遮挡主要信息"
+        ]
+      },
+      "tokens": {
+        "colors": {
+          "candidate_cream": "#FFF4DB",
+          "candidate_citrus": "#F5A838",
+          "candidate_ink": "#24352C"
+        },
+        "fonts": {}
+      },
+      "profile": {
+        "brief": "制作可独立复用的促销装饰。",
+        "fixed": [
+          "候选活动色板",
+          "不包含未经提供的文字与标识"
+        ],
+        "variable": [
+          "装饰轮廓和分布"
+        ],
+        "technical": {
+          "format": "PNG/SVG按实际工具与用途确认",
+          "background": "transparent",
+          "editable_source": "按所用工具保存"
+        },
+        "task_controls": {
+          "slots": {
+            "motif": {
+              "default": "抽象柑橘切片与圆点",
+              "guidance": "仅探索视觉氛围，不暗示未确认的商品成分。"
+            }
+          },
+          "exploration": {
+            "allowed_slots": [
+              "motif"
+            ],
+            "max_candidates": 3
+          }
+        }
+      },
+      "rules": [
+        {
+          "id": "CAMPAIGN-STYLE",
+          "scope": [
+            "global"
+          ],
+          "strength": "must",
+          "statement": "候选活动方向采用奶油底色、柑橘色点缀与深色文字，信息清楚；具体颜色和样板尚待品牌负责人确认。",
+          "rationale": "给所有成员同一活动方向，但不冒充已批准品牌标准。",
+          "allowed_variation": [],
+          "evidence": [
+            "CAMPAIGN-BRIEF"
+          ],
+          "verification": "human",
+          "status": "proposed"
+        },
+        {
+          "id": "DECORATION-SPACE",
+          "scope": [
+            "graphic"
+          ],
+          "strength": "must",
+          "statement": "装饰元素保留独立透明文件，不烘焙价格和品牌字；合成后不覆盖标签、主要文案及点击区域。",
+          "rationale": "跨成员复用和组合需要独立元素及实际合成检查。",
+          "allowed_variation": [],
+          "evidence": [
+            "CAMPAIGN-BRIEF"
+          ],
+          "verification": "human",
+          "status": "proposed"
+        }
+      ],
+      "references": [
+        {
+          "id": "CAMPAIGN-BRIEF",
+          "path": "references/campaign-brief.md",
+          "role": "context",
+          "applies_to": [
+            "global"
+          ],
+          "notes": "真实存在的文本演示方向，未提供商品/品牌图像或正式活动数据。",
+          "status": "candidate",
+          "provenance": {
+            "type": "authored_demo",
+            "source": "本会话扩展至电商与宣传海报的需求",
+            "approval": "none"
+          },
+          "usage": "candidate_exploration_only"
+        }
+      ],
+      "reference_base": "Paths are relative to the pack root; locate this pack by id/version/fingerprint, not by the current working directory.",
+      "reference_roles": {
+        "style": "Visual language only",
+        "identity": "Same entity's identity and fixed features",
+        "composition": "Layout only",
+        "material": "Material treatment",
+        "context": "Actual game/use context and scale",
+        "counterexample": "Negative evidence; never a positive generation reference",
+        "font": "Typography guidance and font source"
+      },
+      "entity": null,
+      "family": {
+        "id": "campaign-decor",
+        "name": "活动装饰家族",
+        "category": "graphic",
+        "purpose": "让不同岗位的产物能在同一活动下复用和组合。",
+        "rule_ids": [
+          "DECORATION-SPACE"
+        ],
+        "reference_ids": [],
+        "fixed": [
+          "活动色域",
+          "无虚构文案和成分暗示"
+        ],
+        "variable": [
+          "轮廓",
+          "装饰密度"
+        ],
+        "technical": {
+          "final_sizes": null
+        },
+        "status": "proposed"
+      },
+      "exemplars": [
+        {
+          "id": "component-first",
+          "name": "图形、文字和 UI 组件首件",
+          "family_ids": [
+            "campaign-decor",
+            "campaign-type",
+            "action-controls"
+          ],
+          "purpose": "校准组件语言、文字与状态。",
+          "reference_ids": [],
+          "acceptance": [
+            "真实字体和文案",
+            "主次与状态可辨",
+            "组合时不遮住行动区域"
+          ],
+          "required": true,
+          "status": "planned",
+          "approval": null
+        }
+      ],
+      "delivery": [
+        {
+          "id": "campaign-assets",
+          "name": "单件组件交付",
+          "categories": [
+            "product",
+            "graphic",
+            "typography",
+            "ui"
+          ],
+          "channels": [
+            "设计源文件",
+            "活动合成组件"
+          ],
+          "requirements": [
+            "商品、图形和可编辑文字分别交接",
+            "未提供价格、折扣或日期时保持待补",
+            "保留版本、素材来源和修改记录"
+          ],
+          "technical": {
+            "final_dimensions": null,
+            "color_export_profile": null
+          },
+          "status": "proposed",
+          "source": "本原创案例的交付讨论稿；最终尺寸和输出配置待实际目标环境确定。"
+        }
+      ],
+      "direction_checks": [
+        {
+          "criterion": "family/campaign-decor/fixed/1",
+          "statement": "活动色域",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "family/campaign-decor/fixed/2",
+          "statement": "无虚构文案和成分暗示",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "family/campaign-decor/technical",
+          "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "rule/DECORATION-SPACE",
+          "statement": "装饰元素保留独立透明文件，不烘焙价格和品牌字；合成后不覆盖标签、主要文案及点击区域。",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/component-first/acceptance/1",
+          "statement": "真实字体和文案",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/component-first/acceptance/2",
+          "statement": "主次与状态可辨",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/component-first/acceptance/3",
+          "statement": "组合时不遮住行动区域",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/1",
+          "statement": "商品、图形和可编辑文字分别交接",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/2",
+          "statement": "未提供价格、折扣或日期时保持待补",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/3",
+          "statement": "保留版本、素材来源和修改记录",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/technical",
+          "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        }
+      ],
+      "recipes": [],
+      "decisions": [],
+      "unresolved": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[0]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'product'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'product'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'graphic'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'graphic'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'typography'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'typography'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'layout'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'layout'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'ui'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'ui'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[0].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[1].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[2].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[3].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[0].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[0].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[1].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[1].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[2].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[2].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[3].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[3].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[4].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[4].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[0].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[1].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[2].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[0].technical.final_dimensions",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[0].technical.color_export_profile",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.delivery[0].status",
+          "message": "Confirm delivery channels and requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[1].technical.final_dimensions",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[1].technical.color_export_profile",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.delivery[1].status",
+          "message": "Confirm delivery channels and requirements before release."
+        },
+        {
+          "code": "unreleased_pack",
+          "path": "$",
+          "message": "This pack has not been built with --release. Treat all delivery as draft exploration."
+        }
+      ],
+      "review": [
+        {
+          "rule_id": "CAMPAIGN-STYLE",
+          "strength": "must",
+          "verification": "human",
+          "result": "unknown",
+          "evidence": "",
+          "correction": ""
+        },
+        {
+          "rule_id": "DECORATION-SPACE",
+          "strength": "must",
+          "verification": "human",
+          "result": "unknown",
+          "evidence": "",
+          "correction": ""
+        }
+      ],
+      "workflow": [
+        "Read applicable confirmed rules and approved references; mark candidate/proposed inputs explicitly.",
+        "Inspect image contents before claiming visual understanding; unavailable observations remain unknown.",
+        "Bind identity for a reused entity; keep role-specific references separate and exclude counterexamples from positive references.",
+        "Use only available production tools; if unavailable, hand off this brief without claiming asset generation.",
+        "Record tool/model/settings/seed when available and preserve originals outside the immutable pack.",
+        "Review style, identity, context, readability and technical constraints using pass/fail/unknown with evidence.",
+        "Return version/fingerprint, task, source references, assets, review and unresolved items; structural validation is not artistic approval."
+      ]
+    },
+    {
+      "ok": true,
+      "command": "brief",
+      "pack": {
+        "id": "campaign-studio",
+        "name": "周末轻饮 · 活动组件与多渠道设计",
+        "version": "0.5.0",
+        "status": "draft",
+        "release": false,
+        "fingerprint": "7e3c4e7d75077ba0183e813653d6c5363533a3898387784488167b6e7f8842dd"
+      },
+      "task": "按主美活动规范准备横幅、竖版和社媒的组合首件，商品与文字不重新发明；缺的真实资料先列清。",
+      "category": "typography",
+      "scope": {
+        "medium": "电商横幅、宣传海报与组件的团队组合设计",
+        "view": "由投放渠道画布与裁切决定",
+        "target_platform": "待提供真实投放规格",
+        "asset_types": [
+          "product",
+          "graphic",
+          "typography",
+          "layout",
+          "ui"
+        ]
+      },
+      "intent": {
+        "summary": "示范商品、活动装饰、真实文字与组合版式由不同成员制作，却沿用同一活动规范与版本。当前仅有文本方向和任务编译，没有品牌母版或已完成海报。",
+        "pillars": [
+          "先认出商品，再读懂活动",
+          "多个渠道保持同一活动身份",
+          "装饰与版式留创意空间"
+        ],
+        "avoid": [
+          "模型改写商品包装或品牌标识",
+          "凭空补价格、折扣、日期、功能卖点",
+          "单元素合格却在组合画面中遮挡主要信息"
+        ]
+      },
+      "tokens": {
+        "colors": {
+          "candidate_cream": "#FFF4DB",
+          "candidate_citrus": "#F5A838",
+          "candidate_ink": "#24352C"
+        },
+        "fonts": {}
+      },
+      "profile": {
+        "brief": "用真实文字与字体单独排版。",
+        "fixed": [
+          "不猜价格/折扣/活动日期",
+          "文字层可编辑"
+        ],
+        "variable": [
+          "合法可用字体方案与层级提案"
+        ],
+        "technical": {
+          "font_file": null,
+          "final_copy": null,
+          "target_display_px": null,
+          "editable_source": "PSD或Figma可编辑文字层"
+        },
+        "task_controls": {
+          "slots": {
+            "hierarchy": {
+              "default": "标题→利益→行动→细则",
+              "guidance": "未提供的文案明确标待补，字体和尺寸待校验。"
+            }
+          },
+          "exploration": {
+            "allowed_slots": [
+              "hierarchy"
+            ],
+            "max_candidates": 3
+          }
+        }
+      },
+      "rules": [
+        {
+          "id": "CAMPAIGN-STYLE",
+          "scope": [
+            "global"
+          ],
+          "strength": "must",
+          "statement": "候选活动方向采用奶油底色、柑橘色点缀与深色文字，信息清楚；具体颜色和样板尚待品牌负责人确认。",
+          "rationale": "给所有成员同一活动方向，但不冒充已批准品牌标准。",
+          "allowed_variation": [],
+          "evidence": [
+            "CAMPAIGN-BRIEF"
+          ],
+          "verification": "human",
+          "status": "proposed"
+        },
+        {
+          "id": "COPY-TRUTH",
+          "scope": [
+            "typography",
+            "layout"
+          ],
+          "strength": "must",
+          "statement": "本案例只提供占位活动标题‘周末轻饮’，不是投放文案。价格、优惠、时间和细则未给出时保持待补，不自行填写。真实文案用可编辑文字层排版逐字核对。",
+          "rationale": "实际文字与事实必须来自活动负责人，生图里的近似字形不能作为排版。",
+          "allowed_variation": [],
+          "evidence": [
+            "CAMPAIGN-BRIEF"
+          ],
+          "verification": "human",
+          "status": "proposed"
+        },
+        {
+          "id": "TYPE-HIERARCHY",
+          "scope": [
+            "typography"
+          ],
+          "strength": "must",
+          "statement": "按活动标题、核心利益、行动信息和细则定义层级；字体文件、字重与最小显示字号都待实际选定和检验。",
+          "rationale": "不同成员制作的字块在最终画面中仍需连续清楚。",
+          "allowed_variation": [],
+          "evidence": [
+            "CAMPAIGN-BRIEF"
+          ],
+          "verification": "human",
+          "status": "proposed"
+        }
+      ],
+      "references": [
+        {
+          "id": "CAMPAIGN-BRIEF",
+          "path": "references/campaign-brief.md",
+          "role": "context",
+          "applies_to": [
+            "global"
+          ],
+          "notes": "真实存在的文本演示方向，未提供商品/品牌图像或正式活动数据。",
+          "status": "candidate",
+          "provenance": {
+            "type": "authored_demo",
+            "source": "本会话扩展至电商与宣传海报的需求",
+            "approval": "none"
+          },
+          "usage": "candidate_exploration_only"
+        }
+      ],
+      "reference_base": "Paths are relative to the pack root; locate this pack by id/version/fingerprint, not by the current working directory.",
+      "reference_roles": {
+        "style": "Visual language only",
+        "identity": "Same entity's identity and fixed features",
+        "composition": "Layout only",
+        "material": "Material treatment",
+        "context": "Actual game/use context and scale",
+        "counterexample": "Negative evidence; never a positive generation reference",
+        "font": "Typography guidance and font source"
+      },
+      "entity": null,
+      "family": {
+        "id": "campaign-type",
+        "name": "活动文字层级",
+        "category": "typography",
+        "purpose": "让不同岗位的产物能在同一活动下复用和组合。",
+        "rule_ids": [
+          "TYPE-HIERARCHY"
+        ],
+        "reference_ids": [],
+        "fixed": [
+          "标题、利益、行动、细则层级",
+          "真实文字和字体"
+        ],
+        "variable": [
+          "字重和换行提案"
+        ],
+        "technical": {
+          "final_sizes": null
+        },
+        "status": "proposed"
+      },
+      "exemplars": [
+        {
+          "id": "component-first",
+          "name": "图形、文字和 UI 组件首件",
+          "family_ids": [
+            "campaign-decor",
+            "campaign-type",
+            "action-controls"
+          ],
+          "purpose": "校准组件语言、文字与状态。",
+          "reference_ids": [],
+          "acceptance": [
+            "真实字体和文案",
+            "主次与状态可辨",
+            "组合时不遮住行动区域"
+          ],
+          "required": true,
+          "status": "planned",
+          "approval": null
+        }
+      ],
+      "delivery": [
+        {
+          "id": "campaign-assets",
+          "name": "单件组件交付",
+          "categories": [
+            "product",
+            "graphic",
+            "typography",
+            "ui"
+          ],
+          "channels": [
+            "设计源文件",
+            "活动合成组件"
+          ],
+          "requirements": [
+            "商品、图形和可编辑文字分别交接",
+            "未提供价格、折扣或日期时保持待补",
+            "保留版本、素材来源和修改记录"
+          ],
+          "technical": {
+            "final_dimensions": null,
+            "color_export_profile": null
+          },
+          "status": "proposed",
+          "source": "本原创案例的交付讨论稿；最终尺寸和输出配置待实际目标环境确定。"
+        },
+        {
+          "id": "campaign-channels",
+          "name": "多尺寸多渠道交付",
+          "categories": [
+            "layout",
+            "typography",
+            "ui"
+          ],
+          "channels": [
+            "电商横幅",
+            "竖版宣传海报",
+            "社媒模板"
+          ],
+          "requirements": [
+            "每个渠道有实际尺寸导出和合成预览",
+            "内容源相同，按渠道重新组织层级",
+            "最终检查事实、裁切、可读性和组成版本"
+          ],
+          "technical": {
+            "final_dimensions": null,
+            "color_export_profile": null
+          },
+          "status": "proposed",
+          "source": "本原创案例的交付讨论稿；最终尺寸和输出配置待实际目标环境确定。"
+        }
+      ],
+      "direction_checks": [
+        {
+          "criterion": "family/campaign-type/fixed/1",
+          "statement": "标题、利益、行动、细则层级",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "family/campaign-type/fixed/2",
+          "statement": "真实文字和字体",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "family/campaign-type/technical",
+          "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "rule/TYPE-HIERARCHY",
+          "statement": "按活动标题、核心利益、行动信息和细则定义层级；字体文件、字重与最小显示字号都待实际选定和检验。",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/component-first/acceptance/1",
+          "statement": "真实字体和文案",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/component-first/acceptance/2",
+          "statement": "主次与状态可辨",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/component-first/acceptance/3",
+          "statement": "组合时不遮住行动区域",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/1",
+          "statement": "商品、图形和可编辑文字分别交接",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/2",
+          "statement": "未提供价格、折扣或日期时保持待补",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/3",
+          "statement": "保留版本、素材来源和修改记录",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/technical",
+          "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-channels/requirement/1",
+          "statement": "每个渠道有实际尺寸导出和合成预览",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-channels/requirement/2",
+          "statement": "内容源相同，按渠道重新组织层级",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-channels/requirement/3",
+          "statement": "最终检查事实、裁切、可读性和组成版本",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-channels/technical",
+          "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        }
+      ],
+      "recipes": [],
+      "decisions": [],
+      "unresolved": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[0]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'product'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'product'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'graphic'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'graphic'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'typography'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'typography'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'layout'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'layout'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'ui'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'ui'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[0].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[1].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[2].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[3].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[0].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[0].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[1].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[1].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[2].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[2].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[3].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[3].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[4].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[4].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[0].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[1].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[2].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[0].technical.final_dimensions",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[0].technical.color_export_profile",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.delivery[0].status",
+          "message": "Confirm delivery channels and requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[1].technical.final_dimensions",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[1].technical.color_export_profile",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.delivery[1].status",
+          "message": "Confirm delivery channels and requirements before release."
+        },
+        {
+          "code": "unreleased_pack",
+          "path": "$",
+          "message": "This pack has not been built with --release. Treat all delivery as draft exploration."
+        }
+      ],
+      "review": [
+        {
+          "rule_id": "CAMPAIGN-STYLE",
+          "strength": "must",
+          "verification": "human",
+          "result": "unknown",
+          "evidence": "",
+          "correction": ""
+        },
+        {
+          "rule_id": "COPY-TRUTH",
+          "strength": "must",
+          "verification": "human",
+          "result": "unknown",
+          "evidence": "",
+          "correction": ""
+        },
+        {
+          "rule_id": "TYPE-HIERARCHY",
+          "strength": "must",
+          "verification": "human",
+          "result": "unknown",
+          "evidence": "",
+          "correction": ""
+        }
+      ],
+      "workflow": [
+        "Read applicable confirmed rules and approved references; mark candidate/proposed inputs explicitly.",
+        "Inspect image contents before claiming visual understanding; unavailable observations remain unknown.",
+        "Bind identity for a reused entity; keep role-specific references separate and exclude counterexamples from positive references.",
+        "Use only available production tools; if unavailable, hand off this brief without claiming asset generation.",
+        "Record tool/model/settings/seed when available and preserve originals outside the immutable pack.",
+        "Review style, identity, context, readability and technical constraints using pass/fail/unknown with evidence.",
+        "Return version/fingerprint, task, source references, assets, review and unresolved items; structural validation is not artistic approval."
+      ]
+    },
+    {
+      "ok": true,
+      "command": "brief",
+      "pack": {
+        "id": "campaign-studio",
+        "name": "周末轻饮 · 活动组件与多渠道设计",
+        "version": "0.5.0",
+        "status": "draft",
+        "release": false,
+        "fingerprint": "7e3c4e7d75077ba0183e813653d6c5363533a3898387784488167b6e7f8842dd"
+      },
+      "task": "按主美活动规范准备横幅、竖版和社媒的组合首件，商品与文字不重新发明；缺的真实资料先列清。",
+      "category": "ui",
+      "scope": {
+        "medium": "电商横幅、宣传海报与组件的团队组合设计",
+        "view": "由投放渠道画布与裁切决定",
+        "target_platform": "待提供真实投放规格",
+        "asset_types": [
+          "product",
+          "graphic",
+          "typography",
+          "layout",
+          "ui"
+        ]
+      },
+      "intent": {
+        "summary": "示范商品、活动装饰、真实文字与组合版式由不同成员制作，却沿用同一活动规范与版本。当前仅有文本方向和任务编译，没有品牌母版或已完成海报。",
+        "pillars": [
+          "先认出商品，再读懂活动",
+          "多个渠道保持同一活动身份",
+          "装饰与版式留创意空间"
+        ],
+        "avoid": [
+          "模型改写商品包装或品牌标识",
+          "凭空补价格、折扣、日期、功能卖点",
+          "单元素合格却在组合画面中遮挡主要信息"
+        ]
+      },
+      "tokens": {
+        "colors": {
+          "candidate_cream": "#FFF4DB",
+          "candidate_citrus": "#F5A838",
+          "candidate_ink": "#24352C"
+        },
+        "fonts": {}
+      },
+      "profile": {
+        "brief": "用真实行动文案制作主次按钮与状态，和海报及落地页共用活动语言。",
+        "fixed": [
+          "行动可读",
+          "主次关系稳定",
+          "状态有区别"
+        ],
+        "variable": [
+          "宽度和布局提案"
+        ],
+        "technical": {
+          "font_file": null,
+          "final_size": null
+        },
+        "task_controls": {
+          "slots": {
+            "state": {
+              "default": "默认态",
+              "guidance": "设计按下和不可用状态，但不捏造交互已经实现"
+            }
+          },
+          "exploration": {
+            "allowed_slots": [
+              "state"
+            ],
+            "max_candidates": 3
+          }
+        }
+      },
+      "rules": [
+        {
+          "id": "CAMPAIGN-STYLE",
+          "scope": [
+            "global"
+          ],
+          "strength": "must",
+          "statement": "候选活动方向采用奶油底色、柑橘色点缀与深色文字，信息清楚；具体颜色和样板尚待品牌负责人确认。",
+          "rationale": "给所有成员同一活动方向，但不冒充已批准品牌标准。",
+          "allowed_variation": [],
+          "evidence": [
+            "CAMPAIGN-BRIEF"
+          ],
+          "verification": "human",
+          "status": "proposed"
+        }
+      ],
+      "references": [
+        {
+          "id": "CAMPAIGN-BRIEF",
+          "path": "references/campaign-brief.md",
+          "role": "context",
+          "applies_to": [
+            "global"
+          ],
+          "notes": "真实存在的文本演示方向，未提供商品/品牌图像或正式活动数据。",
+          "status": "candidate",
+          "provenance": {
+            "type": "authored_demo",
+            "source": "本会话扩展至电商与宣传海报的需求",
+            "approval": "none"
+          },
+          "usage": "candidate_exploration_only"
+        }
+      ],
+      "reference_base": "Paths are relative to the pack root; locate this pack by id/version/fingerprint, not by the current working directory.",
+      "reference_roles": {
+        "style": "Visual language only",
+        "identity": "Same entity's identity and fixed features",
+        "composition": "Layout only",
+        "material": "Material treatment",
+        "context": "Actual game/use context and scale",
+        "counterexample": "Negative evidence; never a positive generation reference",
+        "font": "Typography guidance and font source"
+      },
+      "entity": null,
+      "family": {
+        "id": "action-controls",
+        "name": "活动按钮与 UI 状态",
+        "category": "ui",
+        "purpose": "让不同岗位的产物能在同一活动下复用和组合。",
+        "rule_ids": [],
+        "reference_ids": [],
+        "fixed": [
+          "主次关系",
+          "行动文案可读"
+        ],
+        "variable": [
+          "宽度",
+          "状态表现"
+        ],
+        "technical": {
+          "final_sizes": null
+        },
+        "status": "proposed"
+      },
+      "exemplars": [
+        {
+          "id": "component-first",
+          "name": "图形、文字和 UI 组件首件",
+          "family_ids": [
+            "campaign-decor",
+            "campaign-type",
+            "action-controls"
+          ],
+          "purpose": "校准组件语言、文字与状态。",
+          "reference_ids": [],
+          "acceptance": [
+            "真实字体和文案",
+            "主次与状态可辨",
+            "组合时不遮住行动区域"
+          ],
+          "required": true,
+          "status": "planned",
+          "approval": null
+        }
+      ],
+      "delivery": [
+        {
+          "id": "campaign-assets",
+          "name": "单件组件交付",
+          "categories": [
+            "product",
+            "graphic",
+            "typography",
+            "ui"
+          ],
+          "channels": [
+            "设计源文件",
+            "活动合成组件"
+          ],
+          "requirements": [
+            "商品、图形和可编辑文字分别交接",
+            "未提供价格、折扣或日期时保持待补",
+            "保留版本、素材来源和修改记录"
+          ],
+          "technical": {
+            "final_dimensions": null,
+            "color_export_profile": null
+          },
+          "status": "proposed",
+          "source": "本原创案例的交付讨论稿；最终尺寸和输出配置待实际目标环境确定。"
+        },
+        {
+          "id": "campaign-channels",
+          "name": "多尺寸多渠道交付",
+          "categories": [
+            "layout",
+            "typography",
+            "ui"
+          ],
+          "channels": [
+            "电商横幅",
+            "竖版宣传海报",
+            "社媒模板"
+          ],
+          "requirements": [
+            "每个渠道有实际尺寸导出和合成预览",
+            "内容源相同，按渠道重新组织层级",
+            "最终检查事实、裁切、可读性和组成版本"
+          ],
+          "technical": {
+            "final_dimensions": null,
+            "color_export_profile": null
+          },
+          "status": "proposed",
+          "source": "本原创案例的交付讨论稿；最终尺寸和输出配置待实际目标环境确定。"
+        }
+      ],
+      "direction_checks": [
+        {
+          "criterion": "family/action-controls/fixed/1",
+          "statement": "主次关系",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "family/action-controls/fixed/2",
+          "statement": "行动文案可读",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "family/action-controls/technical",
+          "statement": "按家族技术约束核对：{\"final_sizes\": null}",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/component-first/acceptance/1",
+          "statement": "真实字体和文案",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/component-first/acceptance/2",
+          "statement": "主次与状态可辨",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "exemplar/component-first/acceptance/3",
+          "statement": "组合时不遮住行动区域",
+          "source_status": "planned",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/1",
+          "statement": "商品、图形和可编辑文字分别交接",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/2",
+          "statement": "未提供价格、折扣或日期时保持待补",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/requirement/3",
+          "statement": "保留版本、素材来源和修改记录",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-assets/technical",
+          "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-channels/requirement/1",
+          "statement": "每个渠道有实际尺寸导出和合成预览",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-channels/requirement/2",
+          "statement": "内容源相同，按渠道重新组织层级",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-channels/requirement/3",
+          "statement": "最终检查事实、裁切、可读性和组成版本",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        },
+        {
+          "criterion": "delivery/campaign-channels/technical",
+          "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+          "source_status": "proposed",
+          "result": "unknown",
+          "evidence": null
+        }
+      ],
+      "recipes": [],
+      "decisions": [],
+      "unresolved": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[0]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'product'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'product'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'graphic'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'graphic'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'typography'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'typography'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'layout'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'layout'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'ui'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'ui'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[0].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[1].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[2].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.positioning[3].status",
+          "message": "Resolve positioning proposals/unknowns before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[0].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[0].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[1].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[1].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[2].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[2].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[3].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[3].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.families[4].technical.final_sizes",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.families[4].status",
+          "message": "Confirm family requirements before release."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[0].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[1].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "required_exemplar",
+          "path": "$.direction.exemplars[2].status",
+          "message": "This required sample has not been approved."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[0].technical.final_dimensions",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[0].technical.color_export_profile",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.delivery[0].status",
+          "message": "Confirm delivery channels and requirements before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[1].technical.final_dimensions",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "unknown_technical",
+          "path": "$.direction.delivery[1].technical.color_export_profile",
+          "message": "A declared technical parameter is unknown (null); resolve it before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.direction.delivery[1].status",
+          "message": "Confirm delivery channels and requirements before release."
+        },
+        {
+          "code": "unreleased_pack",
+          "path": "$",
+          "message": "This pack has not been built with --release. Treat all delivery as draft exploration."
+        }
+      ],
+      "review": [
+        {
+          "rule_id": "CAMPAIGN-STYLE",
+          "strength": "must",
+          "verification": "human",
+          "result": "unknown",
+          "evidence": "",
+          "correction": ""
+        }
+      ],
+      "workflow": [
+        "Read applicable confirmed rules and approved references; mark candidate/proposed inputs explicitly.",
+        "Inspect image contents before claiming visual understanding; unavailable observations remain unknown.",
+        "Bind identity for a reused entity; keep role-specific references separate and exclude counterexamples from positive references.",
+        "Use only available production tools; if unavailable, hand off this brief without claiming asset generation.",
+        "Record tool/model/settings/seed when available and preserve originals outside the immutable pack.",
+        "Review style, identity, context, readability and technical constraints using pass/fail/unknown with evidence.",
+        "Return version/fingerprint, task, source references, assets, review and unresolved items; structural validation is not artistic approval."
+      ]
+    }
+  ]
+}

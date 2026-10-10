@@ -1,0 +1,74 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "六条任务冻结同一份草案",
+      "result": "pass",
+      "evidence": "member-trial/tasks/*/task.json",
+      "limits": "只证明编译与绑定成功，ready=false；没有生产输出或美术合格。"
+    },
+    {
+      "name": "主按钮状态与家族绑定",
+      "result": "pass",
+      "evidence": "member-trial/tasks/button-disabled/task.json",
+      "limits": null
+    },
+    {
+      "name": "主按钮排除其他 UI 家族专用规则",
+      "result": "pass",
+      "evidence": "member-trial/tasks/button-disabled/brief.json",
+      "limits": null
+    },
+    {
+      "name": "合成家族等级和状态保留",
+      "result": "pass",
+      "evidence": "member-trial/tasks/garden-l2-selected/task.json",
+      "limits": "级数与合成玩法仍未确认。"
+    },
+    {
+      "name": "中文主体别名绑定候选身份",
+      "result": "pass",
+      "evidence": "member-trial/tasks/resident-hello/task.json 与 brief.json",
+      "limits": "候选角色身份没有变成真实主美批准。"
+    },
+    {
+      "name": "宣传组合继承五类规则和身份",
+      "result": "pass",
+      "evidence": "member-trial/tasks/promo-combination/brief.json",
+      "limits": "主类 layout + 四个组件；布局和像素结果尚未生成。"
+    },
+    {
+      "name": "物件卡同时绑定本体与状态角标",
+      "result": "pass",
+      "evidence": "member-trial/tasks/card-locked/brief.json",
+      "limits": "运行层组件只绑定类别/家族/实体；不同子组件状态需各自开任务并在组合交接中对应，不能假定 parent state 自动同步。"
+    },
+    {
+      "name": "两种参考用途仍为原始相同像素",
+      "result": "pass",
+      "evidence": "SOURCE-MANIFEST.json 与 intake/inventory.json",
+      "limits": "仅复制并区分 style/identity 用途；没有新图或抠图。"
+    },
+    {
+      "name": "没有自造主美批准",
+      "result": "pass",
+      "evidence": "review-pack/style-pack.json",
+      "limits": null
+    },
+    {
+      "name": "发布边界拒绝草案",
+      "result": "pass",
+      "evidence": "validation/19-release-gate-confirmed.json",
+      "limits": "该拒绝是正常的草案发布条件检查，非执行环境故障。"
+    }
+  ],
+  "not_run": [
+    "新资产生成",
+    "PS/Figma 编辑与源文件导出",
+    "真实屏幕/触控/字体/对比度检查",
+    "合成玩法验证",
+    "动画播放",
+    "引擎导入/性能",
+    "真实四人成员试用与主美批准"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "example-batch-001",
+  "mode": "demonstration",
+  "baseline": {
+    "project_id": "example-project",
+    "version": "0.1.0",
+    "fingerprint": null
+  },
+  "assignments": [
+    {
+      "task_id": "TASK-TILE",
+      "category": "tile",
+      "family": null,
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "asset_ids": ["tile-001"],
+      "required_checks": ["style", "readability-at-target-size", "technical-export"]
+    },
+    {
+      "task_id": "TASK-MOTION",
+      "category": "motion",
+      "family": null,
+      "owner": {
+        "id": "motion-vendor",
+        "kind": "external"
+      },
+      "asset_ids": ["motion-001"],
+      "required_checks": ["style", "timing", "engine-integration"]
+    }
+  ],
+  "deliveries": []
+}

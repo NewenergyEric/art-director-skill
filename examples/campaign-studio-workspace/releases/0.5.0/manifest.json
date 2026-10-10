@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "format": "team-v1",
+  "pack": {
+    "id": "campaign-studio",
+    "version": "0.5.0",
+    "status": "draft",
+    "fingerprint": "7e3c4e7d75077ba0183e813653d6c5363533a3898387784488167b6e7f8842dd"
+  },
+  "release": false,
+  "files": {
+    "SKILL.md": "da58c09c1da04db7d929a483e3b28fe877345650f171c7691693bc1e59fa993a",
+    "STYLE.md": "be1849911ab7a53866ce151e3c5de0fbcf45c3480a78e772d39f1f269bb2a51e",
+    "agents/openai.yaml": "ba385e41a28b236059c99ff6590837b2d204fb6a7eeadd12cc60db5d8110d5c0",
+    "guides/00-index.md": "f8ba42c79c915829e2184e136d6f3a5b1c7892284607d65815c527a719ee5515",
+    "guides/01-positioning.md": "b7d108f442018aee6efda55eaee0a15cf438598fef16b5ae98e06efd646ed092",
+    "guides/02-design-system.md": "49f548937aff73b14c6d0dda8a1552dc9bc6b52b5345778ab5a304b1e447cf5d",
+    "guides/03-delivery-review.md": "7da5392d221909a8adce131de61a6acda823f9fbce7504292aa0fc90353f0a51",
+    "guides/04-reference-guide.md": "ce6d1afc6f573a060ceed9dc9767482d1b8538f5feaf1ba3ed8e9472e9378a56",
+    "references/campaign-brief.md": "289c49ce7c2dc088ed68be651e7a8759e2d2529d1ed65b60ffe01b82a8b71563",
+    "scripts/project_runtime.py": "a279ebb932c861f55b30c4c1369bd031ea3c3a5bafde33e020ec2b6c3a05ca2d",
+    "scripts/style_pack.py": "5d4d2fe5eb9c966e72f8b9f94202f2bd1ad4ed2658050add159b80173de49d7e",
+    "scripts/team_batch.py": "f656bf89575567f17266117d227c80333cec2bfa552fb49f87b61439c4a86d52",
+    "style-pack.json": "664ac6588c6e6ef0101e65f91d1e95a79901fff6e421b6720b140fb8c80e09eb"
+  },
+  "integrity_notice": "Content hashes detect changes; this unsigned manifest does not authenticate origin, approval identity or artistic quality."
+}

@@ -1,0 +1,30 @@
+{
+  "label": "campaign-init",
+  "command": [
+    "python",
+    "art-director/scripts/project_runtime.py",
+    "init",
+    "--pack",
+    "dist/campaign-kit-0.1.0-draft",
+    "--out",
+    "examples/campaign-public-workspace",
+    "--allow-draft"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "command": "init",
+    "workspace": "<PROJECT_ROOT>\\examples\\campaign-public-workspace",
+    "current": {
+      "version": "0.1.0",
+      "fingerprint": "f7147528ec51046fe38bce314e2d3cbbca3a95b5dcfcd6addb8300039fcd074d",
+      "path": "releases/0.1.0",
+      "release": false
+    },
+    "candidate_workspace": true,
+    "production_approved": false
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:34.323181+00:00"
+}

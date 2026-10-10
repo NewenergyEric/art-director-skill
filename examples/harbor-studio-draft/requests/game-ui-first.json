@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "task_id": "game-ui-first",
+  "request": "按主美 HUD 规范准备按钮三态首件，先用真实文字检查可读性。",
+  "category": "ui",
+  "family": "hud-controls",
+  "subject": null,
+  "mode": "exploration",
+  "changes": {
+    "state": "默认、按下、不可用三态"
+  },
+  "exploration": {
+    "slots": [
+      "state"
+    ],
+    "candidates": 2
+  },
+  "owner": {
+    "id": "ui-designer",
+    "kind": "internal"
+  },
+  "components": []
+}

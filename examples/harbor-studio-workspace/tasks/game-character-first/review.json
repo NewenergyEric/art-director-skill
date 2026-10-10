@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "task_id": "game-character-first",
+  "baseline": {
+    "version": "0.5.0",
+    "fingerprint": "6c0e0e9ae893db942198b590fdee9911e92133d7c50c5d92cb7237a9cb2f2d75",
+    "path": "releases/0.5.0",
+    "release": false
+  },
+  "production_approved": false,
+  "checks": [
+    {
+      "criterion": "instruction_conflicts",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "identity",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "style",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "task",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "technical",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "integration",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "director_acceptance",
+      "result": "unknown",
+      "evidence": null
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "STYLE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "PALETTE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "LINE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "SHADE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "READ-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "REF-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "CHAR-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "CHAR-02",
+      "strength": "should",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "DELIVERY-01",
+      "strength": "must",
+      "verification": "technical",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "REVIEW-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    }
+  ],
+  "direction_checks": [
+    {
+      "criterion": "family/courier-character/fixed/1",
+      "statement": "脸与短发轮廓",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/courier-character/fixed/2",
+      "statement": "整体比例和年龄感",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/courier-character/technical",
+      "statement": "按家族技术约束核对：{\"approved_turnaround\": null, \"output_size\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/CHAR-01",
+      "statement": "Mira 的候选身份是深蓝短侧分波波头、暖肤与原参考的脸部比例；衣装不是永久身份，指定换装时开放衣装槽位。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/CHAR-02",
+      "statement": "姿态用清楚的大动作表达，面部细节节制；角色与棋盘同屏时不能占据关键操作区域。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/direction-board/acceptance/1",
+      "statement": "说明借鉴部分和不继承的细节",
+      "source_status": "candidate",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/direction-board/acceptance/2",
+      "statement": "所有判断仍为候选",
+      "source_status": "candidate",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/character-first/acceptance/1",
+      "statement": "对照精细脸部和转面",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/character-first/acceptance/2",
+      "statement": "新姿态仍是同一人",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/character-first/acceptance/3",
+      "statement": "实际交付尺度与透明边缘",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/street-first/acceptance/1",
+      "statement": "人物与入口比例合理",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/street-first/acceptance/2",
+      "statement": "棋盘位置可读",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/street-first/acceptance/3",
+      "statement": "图层可独立交接",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-runtime/requirement/1",
+      "statement": "交付可编辑源、单件导出、组合预览与检查记录",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-runtime/requirement/2",
+      "statement": "首件被接收后再按同一版本扩批",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-runtime/requirement/3",
+      "statement": "外包与内制使用同一资产编号和验收标准",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-runtime/technical",
+      "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-campaign/requirement/1",
+      "statement": "渠道按各自画布重排而非拉伸",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-campaign/requirement/2",
+      "statement": "真实文字可编辑，保留必要安全区",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-campaign/requirement/3",
+      "statement": "记录引用单件的版本和负责人",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-campaign/technical",
+      "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    }
+  ],
+  "stages": [
+    {
+      "id": "concept",
+      "label": "创意候选与主美选择",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "single_asset",
+      "label": "按冻结参考单独生成资产",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "photoshop",
+      "label": "PS 调整尺寸、透明边缘与可编辑源文件",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "integration",
+      "label": "实际投放版面、界面或游戏场景中的集成检查",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "delivery",
+      "label": "最终导出、来源与交付复核",
+      "result": "unknown",
+      "evidence": null
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "project_id": "harbor-studio",
+  "current": {
+    "version": "0.5.0",
+    "fingerprint": "6c0e0e9ae893db942198b590fdee9911e92133d7c50c5d92cb7237a9cb2f2d75",
+    "path": "releases/0.5.0",
+    "release": false
+  },
+  "created_at": "2026-10-09T17:38:07+00:00",
+  "updated_at": "2026-10-09T17:38:07+00:00",
+  "history": [
+    {
+      "baseline": {
+        "version": "0.5.0",
+        "fingerprint": "6c0e0e9ae893db942198b590fdee9911e92133d7c50c5d92cb7237a9cb2f2d75",
+        "path": "releases/0.5.0",
+        "release": false
+      },
+      "adopted_at": "2026-10-09T17:38:07+00:00"
+    }
+  ]
+}

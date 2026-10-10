@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "task_id": "mira-pose-001",
+  "request": "女主换成向右指路的姿勢，其余沿用项目默认规范，先给 1 个候选。",
+  "category": "character",
+  "subject": "女主",
+  "mode": "exploration",
+  "changes": {
+    "pose": "向右指路，手部和肢体清楚"
+  },
+  "exploration": {
+    "slots": [
+      "pose"
+    ],
+    "candidates": 1
+  },
+  "owner": {
+    "id": "public-demo-character-artist",
+    "kind": "internal"
+  }
+}

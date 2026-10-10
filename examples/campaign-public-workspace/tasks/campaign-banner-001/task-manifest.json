@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "campaign-banner-001",
+  "files": {
+    "brief.json": "a86b4ae627c32754588d1bb920758eac6a6060b5fe2e326982a2efe1333fe18b",
+    "generation-brief.md": "bce9907bdce4e447a73785942f5e7ec4fe92ec2b4bac7adc6954253d6cdc53ea",
+    "handoff.md": "eb2f1d9759d7af60c927ab27a22725adf9711f139a41dbbd637298d697f2ea05",
+    "request.json": "0e5bdad7e3664a5332960fa614ae219c59bc0076ede4ba2526304db7b94e3165",
+    "review.json": "3cf5a916a8b2b1d2e6ce47a232cde038bc6c0b27ccc8910d614be96e517f2442",
+    "task.json": "4c26d4e22910b3e43e6dc53edada70475d91a1c6539db019642dd5583a1850c5"
+  },
+  "notice": "Frozen input hashes are unsigned; real outputs and review evidence belong under work/, not in this snapshot."
+}

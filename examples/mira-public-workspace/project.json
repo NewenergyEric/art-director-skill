@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "project_id": "mira-public-demo",
+  "current": {
+    "version": "0.2.0",
+    "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+    "path": "releases/0.2.0",
+    "release": false
+  },
+  "created_at": "2026-10-09T15:51:29+00:00",
+  "updated_at": "2026-10-09T15:51:29+00:00",
+  "history": [
+    {
+      "baseline": {
+        "version": "0.2.0",
+        "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+        "path": "releases/0.2.0",
+        "release": false
+      },
+      "adopted_at": "2026-10-09T15:51:29+00:00"
+    }
+  ]
+}

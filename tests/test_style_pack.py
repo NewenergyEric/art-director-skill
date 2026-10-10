@@ -350,6 +350,59 @@ class StylePackContractTests(unittest.TestCase):
             with self.subTest(category=category, entity=entity):
                 self.cli("brief", self.pack, "--category", category, "--task", "Test.", "--entity", entity, ok=False)
 
+    def test_tile_and_motion_select_their_own_profiles_rules_and_references(self):
+        for category in ("tile", "motion"):
+            self.data["scope"]["asset_types"].append(category)
+            self.data["profiles"][category] = {
+                "brief": "TEST ONLY " + category,
+                "fixed": ["Keep the fixture color."], "variable": ["Position."],
+                "technical": {"fixture_category": category},
+            }
+            rule = copy.deepcopy(self.data["rules"][0])
+            rule.update(id="R-" + category.upper(), scope=[category], evidence=["REF-" + category.upper()])
+            self.data["rules"].append(rule)
+            reference = copy.deepcopy(self.data["references"][0])
+            reference.update(id="REF-" + category.upper(), applies_to=[category], path="references/" + category + ".svg")
+            self.data["references"].append(reference)
+            (self.pack / reference["path"]).write_text(self.reference_svg, encoding="utf-8")
+        self.write()
+        before = self.snapshot()
+        for category in ("tile", "motion"):
+            with self.subTest(category=category):
+                brief = self.json_cli("brief", self.pack, "--category", category, "--task", "TEST ONLY scoped request.")
+                self.assertEqual(brief["profile"], self.data["profiles"][category])
+                self.assertEqual({rule["id"] for rule in brief["rules"]}, {"R-GLOBAL", "R-" + category.upper()})
+                self.assertEqual({ref["id"] for ref in brief["references"]}, {"REF-STYLE", "REF-" + category.upper()})
+                self.assertTrue(all(review["result"] == "unknown" for review in brief["review"]))
+        self.assertEqual(before, self.snapshot())
+        built = self.work / "six-categories"
+        self.cli("build", self.pack, "--out", built)
+        self.assertTrue(self.json_cli("verify", built)["ok"])
+
+    def test_legacy_pack_keeps_four_categories_and_rejects_undeclared_new_ones(self):
+        built = self.work / "legacy-four-categories"
+        self.cli("build", self.pack, "--out", built)
+        canonical = json.loads((built / "style-pack.json").read_text(encoding="utf-8"))
+        self.assertEqual(canonical, self.data)
+        self.assertEqual(set(canonical["profiles"]), set(CATEGORIES))
+        for category in ("tile", "motion"):
+            result = self.json_cli("brief", built, "--category", category, "--task", "TEST ONLY.", ok=False)
+            self.assertEqual(result["errors"][0]["code"], "unknown_category")
+
+    def test_new_categories_require_profiles_and_release_context(self):
+        self.approve_test_fixture()
+        for category in ("tile", "motion"):
+            self.data["scope"]["asset_types"].append(category)
+            self.write()
+            invalid = self.json_cli("validate", self.pack, ok=False)
+            self.assertIn("missing_profile", {error["code"] for error in invalid["errors"]})
+            self.data["profiles"][category] = copy.deepcopy(self.data["profiles"]["prop"])
+            self.write()
+            self.assertFalse(self.json_cli("validate", self.pack, "--release", ok=False)["ok"])
+            self.data["references"][1]["applies_to"].append(category)
+            self.write()
+            self.assertTrue(self.json_cli("validate", self.pack, "--release")["ok"])
+
     def test_brief_does_not_mix_identities_of_two_characters(self):
         other_rule = copy.deepcopy(self.data["rules"][-1])
         other_rule["id"] = "R-OTHER-IDENTITY"
@@ -489,6 +542,31 @@ class StylePackContractTests(unittest.TestCase):
         self.assertIn("leaf", serialized)
         self.assertEqual(before, self.snapshot())
         self.assertEqual(other_before, self.snapshot(other))
+
+    def test_non_game_campaign_categories_keep_scoped_rules_and_entity_identity(self):
+        self.data["project"]["domain"] = "ecommerce"
+        self.data["scope"]["asset_types"].extend(["product", "graphic", "typography", "layout"])
+        for category in ("product", "graphic", "typography", "layout"):
+            self.data["profiles"][category] = {"brief": "Test campaign category", "fixed": [], "variable": [], "technical": {}}
+        product_rule = copy.deepcopy(self.data["rules"][0])
+        product_rule.update(id="R-PRODUCT", scope=["product"], statement="Keep the test bottle packaging.")
+        self.data["rules"].append(product_rule)
+        self.data["entities"].append({"id":"bottle", "kind":"product", "identity_rules":["R-PRODUCT"], "reference_ids":[], "fixed_features":["Original packaging"], "variations":["placement"]})
+        self.write()
+        self.assertTrue(self.json_cli("validate", self.pack)["ok"])
+        product = self.json_cli("brief", self.pack, "--category", "product", "--entity", "bottle", "--task", "Test campaign.")
+        self.assertIn("R-PRODUCT", {r["id"] for r in product["rules"]})
+        layout = self.json_cli("brief", self.pack, "--category", "layout", "--task", "Test layout.")
+        self.assertNotIn("R-PRODUCT", {r["id"] for r in layout["rules"]})
+        self.assertTrue(any(r["scope"] == ["global"] for r in layout["rules"]))
+
+    def test_domain_is_a_required_nonempty_business_context(self):
+        for bad in (None, 17, ""):
+            with self.subTest(value=bad):
+                self.data["project"]["domain"] = bad
+                self.write()
+                result = self.json_cli("validate", self.pack, ok=False)
+                self.assertTrue(any(e["path"] == "$.project.domain" for e in result["errors"]))
 
     def test_archive_contains_only_relocatable_pack_and_refuses_overwrite(self):
         built = self.work / "built"

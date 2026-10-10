@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "game-motion-first",
+  "files": {
+    "brief.json": "d607c695a477fd44e842ce13a8567f1ef90a5caea40ce9632cbf6e06414cba4d",
+    "generation-brief.md": "f40fe6e4eadedc2c4f86c2025ec83cd210cede4da1d9ce36696ca4f0dd9f363e",
+    "handoff.md": "23cfe7191e921386798fb7ad051613b1286f3490f4afbe5635075f1bb59ff493",
+    "request.json": "a8f3904404f623e29533a5d105f836661b39d28717ab0dc3a7bad5444438a539",
+    "review.json": "1b1b9e522d8c21a81b6559892818c9f91a1e3370957a909925b52b2f9cad00fb",
+    "task.json": "6b3e84a30e3fa073630889e15ba05d25170312809701434944c6000163398923"
+  },
+  "notice": "Frozen input hashes are unsigned; real outputs and review evidence belong under work/, not in this snapshot."
+}

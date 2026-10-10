@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-09T16:12:53.694683+00:00",
+  "source_thread": "01a096a3-fcbf-78c3-ac3a-8d867d26741d",
+  "source_thread_title": "更新 GitHub 个人简介",
+  "authorization": "User explicitly authorized reusing images already generated in this thread",
+  "scope": "Inspected candidate boards, separated by project; not production deliveries or identity inputs for the Mira case",
+  "items": [
+    {
+      "id": "asset-system",
+      "path": "docs/assets/public-gallery/asset-system-board.png",
+      "title": "同一对象，多个制作岗位",
+      "project": "暖色漫画 · 资产系统示范",
+      "description": "同一角色的多视图、表情与姿态，搭配道具状态、UI、技能动作和棋子。",
+      "rule_focus": "人物身份、姿态变量、道具母版、UI 状态与动作阶段分开记录。",
+      "review_focus": "逐帧看身份，逐状态看结构，最后在组合画面检查大小、遮挡与层级。",
+      "sha256": "00422b3a18e80f19f667715b5e61c9a97e4d4f74a4cc2cf5ecb4aebdc1cfb3e9",
+      "width": 1672,
+      "height": 941,
+      "source_relative_path": "motion/public/studio/asset-system-board.png",
+      "status": "generated_candidate_for_demonstration",
+      "approved_for_production": false,
+      "image_editing": "none; byte-identical copy; any webpage framing is CSS only",
+      "generation_evidence": {
+        "method": "Exact SHA256 match to generated-image files in the user-selected thread",
+        "original_file_names": [
+          "exec-093aafe2-20db-46ba-a733-c4edd1020ac4.png"
+        ]
+      }
+    },
+    {
+      "id": "maple-family",
+      "path": "docs/assets/public-gallery/asset-family.png",
+      "title": "一整批元素，共用判断",
+      "project": "Maple Corner · 轻量休闲示范",
+      "description": "果蔬、包装、面包、花草、障碍物、建筑部件和增益道具的综合候选板。",
+      "rule_focus": "按类别调用轮廓、材质与配色；基础、损坏和升级状态分别绑定母版。",
+      "review_focus": "小尺寸并排辨认、状态差异、边缘与锚点、同批统一性；整板不是可直接导入的图集。",
+      "sha256": "5ecdb76fd5611dd6211e328ff3c29ce98c1825a5aac48a162521fc4433f846e3",
+      "width": 1672,
+      "height": 941,
+      "source_relative_path": "motion/public/maple-corner/asset-family.png",
+      "status": "generated_candidate_for_demonstration",
+      "approved_for_production": false,
+      "image_editing": "none; byte-identical copy; any webpage framing is CSS only",
+      "generation_evidence": {
+        "method": "Exact SHA256 match to generated-image files in the user-selected thread",
+        "original_file_names": [
+          "exec-069e6fea-c454-447c-b30b-2dc3c6008b56.png"
+        ]
+      }
+    },
+    {
+      "id": "soft-volume",
+      "path": "docs/assets/public-gallery/pseudo-3d-board.png",
+      "title": "换一种风格，保留同一流程",
+      "project": "柔和体积感 · 探险示范",
+      "description": "角色与伙伴的多视图、环境、交互组件、道具和连续动作候选。",
+      "rule_focus": "为这个独立项目定义比例、光向、材质、身份与组件状态。",
+      "review_focus": "观察不同姿势的脸和伙伴身份、体积和光向、UI 的可辨识性；不沿用漫画线条规则。",
+      "sha256": "24062f99519a8f5f0bebb7ef87980ecb585e0249f902bc5b8b00b7ff0cedb7f9",
+      "width": 1672,
+      "height": 941,
+      "source_relative_path": "motion/public/styles/pseudo-3d-board.png",
+      "status": "generated_candidate_for_demonstration",
+      "approved_for_production": false,
+      "image_editing": "none; byte-identical copy; any webpage framing is CSS only",
+      "generation_evidence": {
+        "method": "Exact SHA256 match to generated-image files in the user-selected thread",
+        "original_file_names": [
+          "exec-a1458be3-409d-4a61-99a2-332288970493.png"
+        ]
+      }
+    },
+    {
+      "id": "comic-city",
+      "path": "docs/assets/public-gallery/comic-board.png",
+      "title": "角色到界面，风格持续一致",
+      "project": "印刷漫画 · 城市调查示范",
+      "description": "多角色、城市环境、线索道具、对话框、棋子、卡牌和冲击动作。",
+      "rule_focus": "同一项目共用色域、墨线与网点；每个角色独立绑定身份。",
+      "review_focus": "检查角色混淆、画面层级和 UI 四态；模型生成字样仅作参考，正式文字需重新排版。",
+      "sha256": "f7fa92e33d662dce0d86e7eb03d63f1ddfb6ec749b2b02537a308d00b01148cd",
+      "width": 1672,
+      "height": 941,
+      "source_relative_path": "motion/public/styles/comic-board.png",
+      "status": "generated_candidate_for_demonstration",
+      "approved_for_production": false,
+      "image_editing": "none; byte-identical copy; any webpage framing is CSS only",
+      "generation_evidence": {
+        "method": "Exact SHA256 match to generated-image files in the user-selected thread",
+        "original_file_names": [
+          "exec-949b36bc-fc14-4019-a7af-49a8f4d09c77.png"
+        ]
+      }
+    },
+    {
+      "id": "ink-journey",
+      "path": "docs/assets/public-gallery/traditional-board.png",
+      "title": "复杂方向，也能拆成生产判断",
+      "project": "纸本水墨 · 山野行旅示范",
+      "description": "行旅角色、草木动物、器物、地图拼块、UI 与动作阶段的候选方向。",
+      "rule_focus": "记录纸面、笔触、色域、材质与角色比例；按资产类别分别调用。",
+      "review_focus": "缩小后看人物与图标辨认、纹理密度、边框状态和地图拼接；复杂画面仍需真实落地测试。",
+      "sha256": "eebd3de77221b764e8fa3df82a411af3d0df1967991e061db66aa11c0ff9fce1",
+      "width": 1672,
+      "height": 941,
+      "source_relative_path": "motion/public/styles/traditional-board.png",
+      "status": "generated_candidate_for_demonstration",
+      "approved_for_production": false,
+      "image_editing": "none; byte-identical copy; any webpage framing is CSS only",
+      "generation_evidence": {
+        "method": "Exact SHA256 match to generated-image files in the user-selected thread",
+        "original_file_names": [
+          "exec-8d925c36-f317-4eef-b05f-235ee1add9e8.png"
+        ]
+      }
+    },
+    {
+      "id": "painted-fantasy",
+      "path": "docs/assets/public-gallery/painterly-card-board.png",
+      "title": "元素出色，还要检查最终组合",
+      "project": "幻想绘画 · 卡牌与场景示范",
+      "description": "角色、机械伙伴、卡框、器物、UI、地图摆件与效果阶段的跨类别候选。",
+      "rule_focus": "统一材质与光效，分开主角身份、卡框规格、文字安全区和效果语法。",
+      "review_focus": "检查卡面层级、文字安全区、装饰遮挡和连贯动作；不能把单图好看等同于组件可用。",
+      "sha256": "089d92e020b8853dfd58b76f50ba1edcbb0d0cba2f7b0f919328b9cab6c74f52",
+      "width": 1672,
+      "height": 941,
+      "source_relative_path": "motion/public/styles/painterly-card-board.png",
+      "status": "generated_candidate_for_demonstration",
+      "approved_for_production": false,
+      "image_editing": "none; byte-identical copy; any webpage framing is CSS only",
+      "generation_evidence": {
+        "method": "Exact SHA256 match to generated-image files in the user-selected thread",
+        "original_file_names": [
+          "exec-6fc00d3e-a745-49ad-9037-39f9e3b537a5.png"
+        ]
+      }
+    }
+  ]
+}

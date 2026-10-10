@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0",
+  "executed_at": "2026-10-09T17:43:03.278179+00:00",
+  "ok": true,
+  "counts": {
+    "cli_calls": 29,
+    "successful_final_steps": 28,
+    "corrected_initial_attempts": 1,
+    "assertions": 30,
+    "passed": 30,
+    "director_packs": 2,
+    "manuals": 10,
+    "member_tasks": 6,
+    "new_images": 0,
+    "new_editor_files": 0,
+    "production_approvals": 0
+  },
+  "facts": [
+    {
+      "name": "harbor-studio: unfinished required exemplars block production release",
+      "passed": true
+    },
+    {
+      "name": "harbor-studio: five generated manuals",
+      "passed": true
+    },
+    {
+      "name": "harbor-studio: team format",
+      "passed": true
+    },
+    {
+      "name": "game-character-first: correct family compiled",
+      "passed": true
+    },
+    {
+      "name": "game-character-first: family and sample checks carried into task",
+      "passed": true
+    },
+    {
+      "name": "game-character-first: no production approval invented",
+      "passed": true
+    },
+    {
+      "name": "game-layout-first: correct family compiled",
+      "passed": true
+    },
+    {
+      "name": "game-layout-first: family and sample checks carried into task",
+      "passed": true
+    },
+    {
+      "name": "game-layout-first: no production approval invented",
+      "passed": true
+    },
+    {
+      "name": "game-layout-first: component families compiled",
+      "passed": true
+    },
+    {
+      "name": "game-motion-first: correct family compiled",
+      "passed": true
+    },
+    {
+      "name": "game-motion-first: family and sample checks carried into task",
+      "passed": true
+    },
+    {
+      "name": "game-motion-first: no production approval invented",
+      "passed": true
+    },
+    {
+      "name": "game-ui-first: correct family compiled",
+      "passed": true
+    },
+    {
+      "name": "game-ui-first: family and sample checks carried into task",
+      "passed": true
+    },
+    {
+      "name": "game-ui-first: no production approval invented",
+      "passed": true
+    },
+    {
+      "name": "harbor-studio: empty delivery cannot pass",
+      "passed": true
+    },
+    {
+      "name": "harbor-studio: package includes received execution tools",
+      "passed": true
+    },
+    {
+      "name": "campaign-studio: unfinished required exemplars block production release",
+      "passed": true
+    },
+    {
+      "name": "campaign-studio: five generated manuals",
+      "passed": true
+    },
+    {
+      "name": "campaign-studio: team format",
+      "passed": true
+    },
+    {
+      "name": "campaign-layout-first: correct family compiled",
+      "passed": true
+    },
+    {
+      "name": "campaign-layout-first: family and sample checks carried into task",
+      "passed": true
+    },
+    {
+      "name": "campaign-layout-first: no production approval invented",
+      "passed": true
+    },
+    {
+      "name": "campaign-layout-first: component families compiled",
+      "passed": true
+    },
+    {
+      "name": "campaign-ui-first: correct family compiled",
+      "passed": true
+    },
+    {
+      "name": "campaign-ui-first: family and sample checks carried into task",
+      "passed": true
+    },
+    {
+      "name": "campaign-ui-first: no production approval invented",
+      "passed": true
+    },
+    {
+      "name": "campaign-studio: empty delivery cannot pass",
+      "passed": true
+    },
+    {
+      "name": "campaign-studio: package includes received execution tools",
+      "passed": true
+    }
+  ],
+  "calls": [
+    {
+      "label": "harbor-studio-validate",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-validate.json",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "retained_prior_execution": true
+    },
+    {
+      "label": "harbor-studio-render",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-render.json",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "retained_prior_execution": true
+    },
+    {
+      "label": "harbor-studio-build",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-build.json",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "retained_prior_execution": true
+    },
+    {
+      "label": "harbor-studio-verify",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-verify.json",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "retained_prior_execution": true
+    },
+    {
+      "label": "harbor-studio-archive",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-archive.json",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "retained_prior_execution": true
+    },
+    {
+      "label": "harbor-studio-release-blocked",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-release-blocked.json",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "retained_prior_execution": true
+    },
+    {
+      "label": "harbor-studio-received-verify",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-received-verify.json",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "retained_prior_execution": true
+    },
+    {
+      "label": "harbor-studio-received-init",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-received-init.json",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "retained_prior_execution": true
+    },
+    {
+      "label": "game-character-first",
+      "path": "evals/director-workflow-v0.5/calls/game-character-first.json",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "retained_prior_execution": true
+    },
+    {
+      "label": "game-layout-first-retry-1",
+      "path": "evals/director-workflow-v0.5/calls/game-layout-first-retry-1.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "game-motion-first",
+      "path": "evals/director-workflow-v0.5/calls/game-motion-first.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "game-ui-first",
+      "path": "evals/director-workflow-v0.5/calls/game-ui-first.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "harbor-studio-status",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-status.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "harbor-studio-resume",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-resume.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "harbor-studio-batch-check",
+      "path": "evals/director-workflow-v0.5/calls/harbor-studio-batch-check.json",
+      "exit_code": 1,
+      "expected_exit_code": 1
+    },
+    {
+      "label": "campaign-studio-validate",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-validate.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-studio-render",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-render.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-studio-build",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-build.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-studio-verify",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-verify.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-studio-archive",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-archive.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-studio-release-blocked",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-release-blocked.json",
+      "exit_code": 1,
+      "expected_exit_code": 1
+    },
+    {
+      "label": "campaign-studio-received-verify",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-received-verify.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-studio-received-init",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-received-init.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-layout-first",
+      "path": "evals/director-workflow-v0.5/calls/campaign-layout-first.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-ui-first",
+      "path": "evals/director-workflow-v0.5/calls/campaign-ui-first.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-studio-status",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-status.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-studio-resume",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-resume.json",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "label": "campaign-studio-batch-check",
+      "path": "evals/director-workflow-v0.5/calls/campaign-studio-batch-check.json",
+      "exit_code": 1,
+      "expected_exit_code": 1
+    }
+  ],
+  "corrected_attempts": [
+    {
+      "path": "evals/director-workflow-v0.5/calls/game-layout-first.json",
+      "exit_code": 2,
+      "resolution": "Corrected the example request to declare null subject for components without an entity; retained the original failed attempt."
+    }
+  ],
+  "artifacts": {
+    "game": "dist/harbor-studio-0.5.0-draft.zip",
+    "campaign": "dist/campaign-studio-0.5.0-draft.zip"
+  },
+  "scope": "Actual generated manuals, package/ZIP creation, moved package execution, family tasks, release and batch checks. No art approval or efficiency claim.",
+  "core_hashes": {
+    "pilot.py": "7f5a5759855913ea239c56df86175eceef93cf4a51c23b70c08ad7f192ca1a72",
+    "project_runtime.py": "a279ebb932c861f55b30c4c1369bd031ea3c3a5bafde33e020ec2b6c3a05ca2d",
+    "style_pack.py": "5d4d2fe5eb9c966e72f8b9f94202f2bd1ad4ed2658050add159b80173de49d7e",
+    "team_batch.py": "f656bf89575567f17266117d227c80333cec2bfa552fb49f87b61439c4a86d52"
+  }
+}
