@@ -3,17 +3,93 @@
   "master_fps": 30,
   "readme_gif_fps": 20,
   "readme_duration_seconds": 6,
+  "master_duration_seconds": 70.0,
   "font": "Microsoft YaHei / SimHei (system; font files are not redistributed)",
   "assets": [
     {
+      "path": "assets/readme/depth-preview-en.gif",
+      "bytes": 3689617,
+      "sha256": "5e0f1b641072eb84eb1fa7a8d80bf92b3c8c0cf51121883b4efc2cc8a9b99986"
+    },
+    {
+      "path": "assets/readme/depth-preview-en.jpg",
+      "bytes": 78274,
+      "sha256": "276eba79ced82bb1b621781aa27604ddf3e7934c67bb316c4adac05a734cb5f4"
+    },
+    {
+      "path": "assets/readme/depth-preview-zh.gif",
+      "bytes": 3890343,
+      "sha256": "d473d8cb1aeabdc0da79be3fa78b4d4a18762b45eb8a28028330a2a9080a6de8"
+    },
+    {
+      "path": "assets/readme/depth-preview-zh.jpg",
+      "bytes": 76308,
+      "sha256": "2cf55aa18dcd9c166d0ad5224df2483ffef491005d92d1a0bb8ace056f0a9310"
+    },
+    {
+      "path": "assets/readme/quick-preview-en.gif",
+      "bytes": 1193282,
+      "sha256": "e7a3cba07ef1296ec9208d18784704aeb9391f202f36e2018802e812257994d5"
+    },
+    {
+      "path": "assets/readme/quick-preview-en.jpg",
+      "bytes": 72878,
+      "sha256": "4c01da8347eb1f5ec1de21cd3b00300d9f5041871709981ad02db42f01cdc549"
+    },
+    {
+      "path": "assets/readme/quick-preview-zh.gif",
+      "bytes": 1110997,
+      "sha256": "6f07f5604bcd28335ec5669926d2c6e599f9b69a1760488ad9d479a252854ad6"
+    },
+    {
+      "path": "assets/readme/quick-preview-zh.jpg",
+      "bytes": 75917,
+      "sha256": "66daf3b5353d3977e44a05652be4a8c054022b32710c634ca9e67ed76762084f"
+    },
+    {
       "path": "docs/assets/motion/art-director-intro-en.mp4",
-      "bytes": 3750712,
-      "sha256": "345ab4e8d25f42ee0a2cc0d8b293d009f8cd09188b7000b680b0a5072acb364a"
+      "bytes": 9874317,
+      "sha256": "d0cdcfef4d3411a89e330263644842356c200f7de580552eb47e58b7ccbe9149"
     },
     {
       "path": "docs/assets/motion/art-director-intro-zh.mp4",
-      "bytes": 3771003,
-      "sha256": "2d95b5348302649b57731fc4a0fbffcfd6961f0c730fc7722fbec35a543d69ec"
+      "bytes": 9768954,
+      "sha256": "eb1bb4c24073ece4b1d566228a7bd5bbe961abeec2a279a83f6f4ffd1075bb80"
+    },
+    {
+      "path": "docs/assets/motion/depth-comic.webp",
+      "bytes": 98204,
+      "sha256": "859d7a3606787f50e0c12b23afbe8b8f151661a436b76fc5bcbe1a06de2db158"
+    },
+    {
+      "path": "docs/assets/motion/depth-game.webp",
+      "bytes": 62804,
+      "sha256": "c5ee333404e242ed63c5f71d53c835de3bfa5df3992d0ac30e15a1cb7044e81b"
+    },
+    {
+      "path": "docs/assets/motion/depth-showcase-en.jpg",
+      "bytes": 78274,
+      "sha256": "276eba79ced82bb1b621781aa27604ddf3e7934c67bb316c4adac05a734cb5f4"
+    },
+    {
+      "path": "docs/assets/motion/depth-showcase-en.mp4",
+      "bytes": 2420479,
+      "sha256": "a4d1e40a6e01d89fd261622217e357ac13f2a4b95e2e027015e44fe238413fdf"
+    },
+    {
+      "path": "docs/assets/motion/depth-showcase-zh.jpg",
+      "bytes": 76308,
+      "sha256": "2cf55aa18dcd9c166d0ad5224df2483ffef491005d92d1a0bb8ace056f0a9310"
+    },
+    {
+      "path": "docs/assets/motion/depth-showcase-zh.mp4",
+      "bytes": 2418922,
+      "sha256": "bcc5a7e4785b0f5668c08840d3570ebd3a16cd7f97a158ab033b3fae45d7bba8"
+    },
+    {
+      "path": "docs/assets/motion/depth-traditional.webp",
+      "bytes": 83332,
+      "sha256": "ddb1122cf6360451eebcb5187719e2e58436bc5bc2feae67b14c11b01d6cf194"
     },
     {
       "path": "docs/assets/motion/game-board.jpg",
@@ -22,143 +98,134 @@
     },
     {
       "path": "docs/assets/motion/intro-en.jpg",
-      "bytes": 45077,
-      "sha256": "1c105df58c260567d6a425936154b74feec10dc7549f80b9a8c357a26ad35550"
+      "bytes": 54892,
+      "sha256": "520095d8739fa9498cc7c04ae0e9bb23243b5b98c20e9a95339d66b7ed319e77"
     },
     {
       "path": "docs/assets/motion/intro-en.vtt",
       "bytes": 890,
-      "sha256": "2ad692335f9ce822623852d533608fd11934b4caec91558be553bcc4da12b08f"
+      "sha256": "90f9de437fc91bb43bcad935e88d46e2b5f33c2d83f9eebcd5794d33d5e19d6b"
     },
     {
       "path": "docs/assets/motion/intro-zh.jpg",
-      "bytes": 45419,
-      "sha256": "236b1f393868993208bf57e6da309398d69660e06ddff60bf76a89f56559d923"
+      "bytes": 54597,
+      "sha256": "b7a26ce207d5552e2f0f06a78344800a366e1cae110ca2c899fbdbce45d3b8d4"
     },
     {
       "path": "docs/assets/motion/intro-zh.vtt",
       "bytes": 854,
-      "sha256": "e76d301667dbbbd59ff656fac2a81266d11ed68b94b96c63c47920e05dba1408"
+      "sha256": "4851a80b1e0e837e53a1d4c637bfd4b16f054a8114e2ca60c446d12282e77f9e"
     },
     {
       "path": "docs/assets/motion/quick-preview-en.jpg",
-      "bytes": 76383,
-      "sha256": "a33f834378bb6b1be2f72a04dfce65875c6fff0b0fd0b9a044e4e574ba388b0c"
+      "bytes": 72878,
+      "sha256": "4c01da8347eb1f5ec1de21cd3b00300d9f5041871709981ad02db42f01cdc549"
     },
     {
       "path": "docs/assets/motion/quick-preview-en.mp4",
-      "bytes": 125477,
-      "sha256": "85f47ca05f17890484b11002a77eaf7c13b94dcd9601a2476f45866ce83e49fb"
+      "bytes": 237366,
+      "sha256": "199236559ab8144fa586d1578ebb6f0ac82fbd72d148fdc99f9a0d43f159fa62"
     },
     {
       "path": "docs/assets/motion/quick-preview-zh.jpg",
-      "bytes": 78602,
-      "sha256": "204a190b4714c73917512363927b645144b93daa4e5db7995b9b21ae6358dc5b"
+      "bytes": 75917,
+      "sha256": "66daf3b5353d3977e44a05652be4a8c054022b32710c634ca9e67ed76762084f"
     },
     {
       "path": "docs/assets/motion/quick-preview-zh.mp4",
-      "bytes": 124156,
-      "sha256": "006178a066b35b7462bf280dfb71cc0c7308b34b1c6bacf2c815e5d309e21882"
+      "bytes": 231108,
+      "sha256": "9b3165a84dcaf3d57fbbb39db67cdf9affcf2ca5f4fe45f614103ee847bd1536"
     },
     {
       "path": "docs/assets/motion/review-lens-en.jpg",
-      "bytes": 48476,
-      "sha256": "2478f1e8c714330c0e5260de5c411c908bfeff5789aa1ef09e7ce7469a8f6e8f"
+      "bytes": 63419,
+      "sha256": "a12eb48e2fe33dba5f48923011c08be289ea9c4c01226dee3e56deb2a7249789"
     },
     {
       "path": "docs/assets/motion/review-lens-en.mp4",
-      "bytes": 308353,
-      "sha256": "2fe8a4773c33bd30445ce00a9eef3a2bde47cc9f88fb5a01942b90b27e5aba86"
+      "bytes": 1055659,
+      "sha256": "2ce91b52533eee969abef7b6a67c7ca32ed517e2be30ee6e5eeff0baf3caa942"
     },
     {
       "path": "docs/assets/motion/review-lens-zh.jpg",
-      "bytes": 48331,
-      "sha256": "8f825cfd9960f1a706a7d9ea81c482946fe08c524d611d4f10d9588de0d09876"
+      "bytes": 62440,
+      "sha256": "979d19c85bdbd76a5aed133cc64128e8ccc9d8fb49d239e89802d56cab9ce5b5"
     },
     {
       "path": "docs/assets/motion/review-lens-zh.mp4",
-      "bytes": 308682,
-      "sha256": "5e8ee4bd4b1d3543434cee333429c268007c0e4630227f7ba753e93ff1a4254d"
+      "bytes": 1077969,
+      "sha256": "fb6c07cb23750d04de37a855921e699fc3d813eb3c1b905b0c57487f631d7790"
     },
     {
       "path": "docs/assets/motion/style-directions-en.jpg",
-      "bytes": 59674,
-      "sha256": "23df86d96036f5cf166da465a5cc4feeae97a23496b189f8e1d5ae0f0dfde637"
+      "bytes": 64553,
+      "sha256": "f9936529e8774c979f0386708a8947f62f73bb65397bb6c4fdb725d9912c37c2"
     },
     {
       "path": "docs/assets/motion/style-directions-en.mp4",
-      "bytes": 770389,
-      "sha256": "2ac7bd38b392b76fd61c663b1aa1aa5a3bbf6eb5cf42f9678e5047dc83c33ad8"
+      "bytes": 2961144,
+      "sha256": "37a9106a028c9a147c7b93da70d7b9efeca320a0204cdc4f29cd9e836054e105"
     },
     {
       "path": "docs/assets/motion/style-directions-zh.jpg",
-      "bytes": 56697,
-      "sha256": "7d9da79484331b716686591e95561ced8a145fd4ebbb83b8fbe9075f390c50e3"
+      "bytes": 61455,
+      "sha256": "47491a6b4d796fc0fba8703baebb4b4a4ed234f9419d0f4d41920e943047dcc1"
     },
     {
       "path": "docs/assets/motion/style-directions-zh.mp4",
-      "bytes": 724078,
-      "sha256": "d36866bbea38bbc26a680c878c875353a67a419656258a4ed2f05dfa470e9766"
+      "bytes": 2845630,
+      "sha256": "c40d7076d0d8a2a77e190ad682fccd506f4f95afefa6e06b37c86d20c818832c"
     },
     {
       "path": "docs/assets/motion/team-pipeline-en.jpg",
-      "bytes": 38023,
-      "sha256": "78646d9dd730d2c56e85e501372fbe7f321554b677ce6d953a8510826388add5"
+      "bytes": 48752,
+      "sha256": "b5dea0a89265c46a63b8c305a4d7d7a4d56bdf6dae4f858eecf538ba5d8a51ac"
     },
     {
       "path": "docs/assets/motion/team-pipeline-en.mp4",
-      "bytes": 315231,
-      "sha256": "ba40c59f691aa8224fba3939c9120f31d26e3816c76694492ea2162e54e0a5e9"
+      "bytes": 440679,
+      "sha256": "d83877bf45e9f37c9edec4cbbec36fbdc899331dcbcfcbd3a6173936901b5953"
     },
     {
       "path": "docs/assets/motion/team-pipeline-zh.jpg",
-      "bytes": 37589,
-      "sha256": "7d3297692c5472a2d1ec93d30d53199ce16291f92d8e78573e11fe0636f0e21b"
+      "bytes": 47446,
+      "sha256": "6eb0bbb879e7a5e483078eea177bdaf41cce7675c8c5d33e22b2ad23f706db7b"
     },
     {
       "path": "docs/assets/motion/team-pipeline-zh.mp4",
-      "bytes": 310624,
-      "sha256": "f56694ea5df963792f6578f96c33002c969363b6cc9237886dae2ff4ce67cbd2"
+      "bytes": 438731,
+      "sha256": "8b393f1332e5ed1c0f9185b94560e8ab88b37792b38fb9a2d71281cecb30bd99"
     },
     {
       "path": "docs/assets/motion/template-switch-en.jpg",
-      "bytes": 55672,
-      "sha256": "cf03af9eda8da49c7431ce8a50aea5cf0e864a0c892cadf690edf3cc997c76d7"
+      "bytes": 76770,
+      "sha256": "798cf5d007460df7e4f610da6002e4dc8cb66fd6786517e7533052ef1ddf6ae0"
     },
     {
       "path": "docs/assets/motion/template-switch-en.mp4",
-      "bytes": 597109,
-      "sha256": "a85b5bc5ab238cbd61a73c3a1a601cf4b3954a9dafdcb2c5e9fa56498d56919a"
+      "bytes": 2091685,
+      "sha256": "5f931f56a32d274eaac2c67cbb1a32ceeaa1318901fec7864863c27ec48e8e2b"
     },
     {
       "path": "docs/assets/motion/template-switch-zh.jpg",
-      "bytes": 54822,
-      "sha256": "a526436f02da26a3a002a94a0fa37059a35ee8c0955674ef5d61ca8e703dc321"
+      "bytes": 73394,
+      "sha256": "8ceb4030dca181266cc4a2fd24b07703e83a9a16fbc5be2279f58f9d370b1daa"
     },
     {
       "path": "docs/assets/motion/template-switch-zh.mp4",
-      "bytes": 594870,
-      "sha256": "57b500686622cd0fca16f372204b6ea82c27030a0b2e1a3519568d42f25fa3ba"
-    },
-    {
-      "path": "assets/readme/quick-preview-en.gif",
-      "bytes": 221984,
-      "sha256": "450f0f8cf36dc0b7c1bf9780c5cbb36ffc914b8fcb281710514a39b2c1178204"
-    },
-    {
-      "path": "assets/readme/quick-preview-en.jpg",
-      "bytes": 76383,
-      "sha256": "a33f834378bb6b1be2f72a04dfce65875c6fff0b0fd0b9a044e4e574ba388b0c"
-    },
-    {
-      "path": "assets/readme/quick-preview-zh.gif",
-      "bytes": 239009,
-      "sha256": "cfcd884ba8fd837733ed41c490b0833db14aca806a4181b58cf659942364692e"
-    },
-    {
-      "path": "assets/readme/quick-preview-zh.jpg",
-      "bytes": 78602,
-      "sha256": "204a190b4714c73917512363927b645144b93daa4e5db7995b9b21ae6358dc5b"
+      "bytes": 2080831,
+      "sha256": "d6c37d5250eedeaf0f5a7c662af17103f7e571e71995bc7375658d26f3588071"
     }
-  ]
+  ],
+  "depth_showcase": {
+    "duration_seconds": 18,
+    "fps": 30,
+    "preview_seconds": 6,
+    "preview_fps": 20,
+    "preview_width": 800,
+    "font": "Noto Sans SC, OFL variable subset",
+    "gif_optimizer": "gifsicle -O3 --lossy=120; 64 colors, no dithering"
+  },
+  "readme_preview": "depth-preview",
+  "readable_preview_duration_seconds": 12
 }

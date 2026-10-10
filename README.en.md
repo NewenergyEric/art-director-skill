@@ -16,20 +16,20 @@
 
 Start with existing work, references, and feedback. Build the visual language, component families, exemplars, and acceptance criteria, then share them as a project Skill so the next teammate starts from the same version.
 
-<a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/quick-preview-en.jpg">
-  <img src="assets/readme/quick-preview-en.gif" width="100%" alt="A six-second introduction to building the spec, calibrating exemplars, and sharing the project skill with the team.">
+<a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html"><picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=spatial-fde-20261010-final">
+  <img src="assets/readme/depth-preview-en.gif?v=spatial-fde-20261010-final" width="100%" alt="A continuous spatial study of art boards and the shared project system, from art direction to team handoff.">
 </picture></a>
 
-<p align="center"><sub>The core flow in 6 seconds · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo">try the rule comparison</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">watch the full 30 fps film and four focused clips</a></sub></p>
+<p align="center"><sub>A six-second seamless spatial preview · <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html">open the spatial presentation</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">retained 70-second walkthrough and four focused clips</a></sub></p>
 
-**Agent Skills** · Codex · Claude Code · Cursor · install in other tools according to their Skill support
+**Agent Skills compatible** · Codex · Claude Code · Cursor · Gemini CLI · Windsurf · GitHub Copilot CLI · VS Code · Grok
 
 ```sh
 npx skills add https://github.com/NewenergyEric/art-director-skill
 ```
 
-[Open the director workbench](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) · [Read the Skill](SKILL.md) · [Download the toolkit](https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1)
+[Open the director workbench](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) · [Human guide](docs/HUMAN-GUIDE.md) · [Agent guide](docs/AGENT-GUIDE.md) · [Read the Skill](SKILL.md) · [Download the toolkit](https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1)
 
 **You own the judgement** · **Specs and tools travel together** · **Core tools run locally without automatically uploading project material**
 
@@ -98,7 +98,7 @@ The mother Skill ZIP is also available from the [v0.5.1 release](https://github.
 
 | Entry | What it demonstrates |
 |---|---|
-| [30-second video introduction](https://newenergyeric.github.io/art-director-skill/docs/assets/motion/art-director-intro-en.mp4) | The director and team moving through template switching, parallel production, and review feedback in one system |
+| [70-second video introduction](https://newenergyeric.github.io/art-director-skill/docs/assets/motion/art-director-intro-en.mp4) | The director and team moving through template switching, parallel production, and review feedback in one system |
 | [Director workbench](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) | The full path from source material and positioning through families, exemplars, team use, and iteration |
 | [Harbor Studio](examples/harbor-studio-draft/guides/00-index.md) | Eight game-production families, exemplar planning, tasks, and member handoff |
 | [Weekend Drinks](examples/campaign-studio-draft/guides/00-index.md) | One specification across product, graphics, typography, UI, and channel compositions |
@@ -144,6 +144,8 @@ Builds, archives, and task snapshots refuse destructive overwrites. A production
 - An independent agent used one original direction board to create a position, eight families, 22 candidate rules, five exemplar plans, and a handoff package.
 
 [Read the v0.5 acceptance record](evals/director-workflow-v0.5/acceptance.md) · [Read the implementation note](docs/director-workflow-v0.5.md) · [View current CI](https://github.com/NewenergyEric/art-director-skill/actions)
+
+[Read the current usability review](evals/2026-10-review.md) · [GitHub reference scan](docs/github-reference-scan.md)
 
 Structural and tool checks establish the workflow contract. They do not replace real art-quality review, Photoshop or Figma editing, engine or channel integration, accountable approval, or human-team efficiency studies.
 

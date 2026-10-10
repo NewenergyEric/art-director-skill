@@ -9,7 +9,8 @@
     "motion:check": "remotion compositions motion/src/index.ts --public-dir=motion/public",
     "motion:render:zh": "python scripts/render_motion_assets.py --language zh",
     "motion:render:en": "python scripts/render_motion_assets.py --language en",
-    "motion:render": "python scripts/render_motion_assets.py --language both"
+    "motion:render": "python scripts/render_motion_assets.py --language both",
+    "motion:render:depth": "python scripts/render_depth_showcase.py"
   },
   "engines": {
     "node": ">=20"

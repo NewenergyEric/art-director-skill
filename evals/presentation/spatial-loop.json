@@ -1,0 +1,18 @@
+{
+  "zh": {
+    "frames": 120,
+    "duration_ms": 50,
+    "loop": 0,
+    "first_step_mean_delta": 2.1987,
+    "last_step_mean_delta": 2.2221,
+    "seam_mean_delta": 3.2024
+  },
+  "en": {
+    "frames": 120,
+    "duration_ms": 50,
+    "loop": 0,
+    "first_step_mean_delta": 2.1875,
+    "last_step_mean_delta": 2.2337,
+    "seam_mean_delta": 3.2773
+  }
+}
