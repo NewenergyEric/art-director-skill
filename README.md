@@ -12,16 +12,16 @@
 
 ## 一个团队，一份视觉记忆。
 
-**为什么这张图看起来就是对的？** 把美术总监的判断，变成团队与 AI 都能执行、能交接的项目规范。
+**让主美建立项目的视觉记忆，让团队从同一版本完成每一次交付。**
 
-从已有作品、参考与批注开始，带主美建立视觉语言、组件家族、代表样板和验收要求；再把这些判断打包成项目 Skill，交给团队从同一版本继续。
+这里的“视觉记忆”包括视觉语言、组件与资产家族、代表样板、允许变化、交付要求和评审记录。Art Director 从已有作品、参考与批注开始，带主美一步步建立这些内容，再打包成团队可调用的项目 Skill。
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=spatial-fde-20261010-final">
-  <img src="assets/readme/depth-preview-zh.gif?v=spatial-fde-20261010-final" width="100%" alt="不同深度的作品画板连续浮动，从主美的视觉判断到团队共享的项目规范。">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=visual-memory-20261010">
+  <img src="assets/readme/depth-preview-zh.gif?v=visual-memory-20261010" width="100%" alt="一个团队，一份视觉记忆。不同深度的作品画板连接到同一项目版本。">
 </picture></a>
 
-<p align="center"><sub>6 秒连续空间预览 · <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html">进入空间版介绍</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">保留的 70 秒清晰讲解与四组分镜</a></sub></p>
+<p align="center"><sub>同一套视觉语言，贯穿规范、工作台与交付 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html">产品介绍</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/workbench.html">主美工作台</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/call-flow.html">工程调用路径</a></sub></p>
 
 **Agent Skills 兼容** · Codex · Claude Code · Cursor · Gemini CLI · Windsurf · GitHub Copilot CLI · VS Code · Grok
 
@@ -31,7 +31,11 @@ npx skills add https://github.com/NewenergyEric/art-director-skill
 
 [进入主美工作台](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) · [人类使用说明](docs/HUMAN-GUIDE.md) · [Agent 使用说明](docs/AGENT-GUIDE.md) · [读取 Skill](SKILL.md) · [下载项目工具包](https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1)
 
-**判断由你做主** · **规范和工具可打包分发** · **核心工具本地运行，不自动上传项目材料**
+| 主美建立 | 团队调用 | 一致交付 |
+|---|---|---|
+| 把已有判断整理成可评审的项目体系 | 每个任务自动读取适用规则、样板与版本 | 错版、缺件和未检查项保持可见，反馈回到同一项目记忆 |
+
+**判断与发布决定由主美负责** · **规范、参考和工具一起分发** · **核心工具本地运行，不自动上传项目材料**
 
 ---
 
@@ -98,7 +102,8 @@ Agent 会把任务绑定到固定版本和对应家族，生成制作说明、�
 
 | 入口 | 证明什么 |
 |---|---|
-| [70 秒视频介绍](https://newenergyeric.github.io/art-director-skill/docs/assets/motion/art-director-intro-zh.mp4) | 主美与团队在同一系统里完成模板切换、并行生产和评审回流 |
+| [18 秒空间介绍](https://newenergyeric.github.io/art-director-skill/docs/showcase.html#film) | 一份项目视觉记忆怎样连接作品、规则、团队与交付 |
+| [产品方法](https://newenergyeric.github.io/art-director-skill/docs/landing.html) | 主美如何建立、样板如何校准、团队如何从同一版本继续 |
 | [主美工作台](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) | 从资料、定位、家族、样板到项目包、成员制作和迭代的完整路径 |
 | [港湾工作室](examples/harbor-studio-draft/guides/00-index.md) | 游戏项目的 8 个家族、样板计划、任务与团队接包 |
 | [周末轻饮](examples/campaign-studio-draft/guides/00-index.md) | 商品、图形、文字、UI 与多渠道组合的同源规范 |

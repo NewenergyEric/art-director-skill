@@ -1,17 +1,69 @@
-"""Render the spatial presentation while retaining the readable introduction."""
+"""Render the canonical visual-memory presentation for README and Pages."""
 import hashlib
 import json
 import argparse
+import os
 from pathlib import Path
 import shutil
+import subprocess
 import tempfile
 
-from render_motion_assets import ROOT, PUBLIC_DIR, detect_browser, executable, gif, run, still
+ROOT = Path(__file__).resolve().parents[1]
+PUBLIC_DIR = ROOT / 'motion/public'
+
+
+def run(command: list[str]) -> None:
+    print('+', ' '.join(command), flush=True)
+    subprocess.run(command, cwd=ROOT, check=True)
+
+
+def executable(name: str) -> str:
+    found = shutil.which(name)
+    if found is None:
+        raise SystemExit(f'Required executable not found: {name}')
+    return found
+
+
+def detect_browser(explicit: str | None) -> str | None:
+    if explicit:
+        path = Path(explicit).expanduser().resolve()
+        if not path.is_file():
+            raise SystemExit(f'Browser executable does not exist: {path}')
+        return str(path)
+    configured = os.environ.get('REMOTION_BROWSER_EXECUTABLE')
+    if configured:
+        return detect_browser(configured)
+    if os.name != 'nt':
+        return None
+    candidates = [
+        Path(os.environ.get('PROGRAMFILES', '')) / 'Google/Chrome/Application/chrome.exe',
+        Path(os.environ.get('LOCALAPPDATA', '')) / 'Google/Chrome/Application/chrome.exe',
+        Path(os.environ.get('PROGRAMFILES(X86)', '')) / 'Microsoft/Edge/Application/msedge.exe',
+    ]
+    return next((str(path) for path in candidates if path.is_file()), None)
+
+
+def gif(ffmpeg: str, source: Path, output: Path, fps: int, *, width: int,
+        max_colors: int, dither: str) -> None:
+    filter_complex = (
+        f'fps={fps},scale={width}:-2:flags=lanczos,split[s0][s1];'
+        f'[s0]palettegen=max_colors={max_colors}:stats_mode={"full" if dither == "none" else "diff"}[p];'
+        f'[s1][p]paletteuse=dither={dither}:diff_mode=rectangle'
+    )
+    run([ffmpeg, '-hide_banner', '-loglevel', 'error', '-y', '-i', str(source),
+         '-filter_complex', filter_complex, '-loop', '0', str(output)])
+
+
+def still(ffmpeg: str, source: Path, output: Path, *, at: float) -> None:
+    run([ffmpeg, '-hide_banner', '-loglevel', 'error', '-y', '-ss', str(at),
+         '-i', str(source), '-frames:v', '1', str(output)])
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--language', choices=('both', 'zh', 'en'), default='both')
     parser.add_argument('--preview-only', action='store_true')
     parser.add_argument('--skip-render', action='store_true', help='Re-encode existing lossless preview intermediates')
+    parser.add_argument('--social-only', action='store_true', help='Render only the social preview and refresh the manifest')
     parser.add_argument('--gifsicle', type=Path, help='Path to the gifsicle optimizer')
     args = parser.parse_args()
     vendor = ROOT / 'motion/out/gif-tools/node_modules/gifsicle/vendor'
@@ -26,7 +78,8 @@ def main():
     ffmpeg = executable('ffmpeg')
     npx = executable('npx.cmd' if __import__('os').name == 'nt' else 'npx')
     browser = detect_browser(None)
-    for lang in ('zh', 'en'):
+    languages = ('zh', 'en') if args.language == 'both' else (args.language,)
+    for lang in (() if args.social_only else languages):
         props = output / f'props-{lang}.json'
         props.write_text(json.dumps({'language': lang, 'localFonts': (PUBLIC_DIR / 'render-fonts/yahei-regular.ttf').is_file()}), encoding='utf-8')
         video = web / f'depth-showcase-{lang}.mp4'
@@ -63,21 +116,46 @@ def main():
             raise RuntimeError(f'{published_gif.name} exceeds the 4 MiB preview budget')
         still(ffmpeg, video, web / f'depth-showcase-{lang}.jpg', at=2.5)
         shutil.copy2(web / f'depth-showcase-{lang}.jpg', ROOT / f'assets/readme/depth-preview-{lang}.jpg')
-    for source, name in [('studio/asset-system-board.png', 'game'), ('styles/comic-board.png', 'comic'), ('styles/traditional-board.png', 'traditional')]:
-        run([ffmpeg, '-hide_banner', '-loglevel', 'error', '-y', '-i', str(PUBLIC_DIR / source),
-             '-vf', 'scale=680:-2:flags=lanczos', '-c:v', 'libwebp', '-quality', '82', str(web / f'depth-{name}.webp')])
+    if not args.social_only:
+        for source, name in [('studio/asset-system-board.png', 'game'), ('styles/comic-board.png', 'comic'), ('styles/traditional-board.png', 'traditional')]:
+            run([ffmpeg, '-hide_banner', '-loglevel', 'error', '-y', '-i', str(PUBLIC_DIR / source),
+                 '-vf', 'scale=680:-2:flags=lanczos', '-c:v', 'libwebp', '-quality', '82', str(web / f'depth-{name}.webp')])
+    social = ROOT / 'assets/readme/social-preview.png'
+    social_command = [npx, 'remotion', 'still', str(ROOT / 'motion/src/index.ts'), 'SocialPreview', str(social),
+                      f'--public-dir={PUBLIC_DIR}']
+    if browser:
+        social_command += [f'--browser-executable={browser}', '--chrome-mode=chrome-for-testing']
+    run(social_command)
     manifest_path = web / 'manifest.json'
-    manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
-    manifest['depth_showcase'] = {'duration_seconds': 18, 'fps': 30, 'preview_seconds': 6, 'preview_fps': 20, 'preview_width': 800, 'font': 'Noto Sans SC, OFL variable subset', 'gif_optimizer': 'gifsicle -O3 --lossy=120; 64 colors, no dithering'}
-    manifest['readme_duration_seconds'] = 6
-    manifest['readme_preview'] = 'depth-preview'
-    manifest['readable_preview_duration_seconds'] = 12
-    files = [*web.glob('*'), *(ROOT / 'assets/readme').glob('quick-preview-*'), *(ROOT / 'assets/readme').glob('depth-preview-*')]
+    manifest = {
+        'schema_version': '2.0',
+        'master_fps': 30,
+        'readme_gif_fps': 20,
+        'readme_duration_seconds': 6,
+        'master_duration_seconds': 18,
+        'readme_preview': 'depth-preview',
+        'font': 'Noto Sans SC, OFL variable subset',
+        'visual_system': 'One team, one visual memory.',
+        'depth_showcase': {
+            'duration_seconds': 18,
+            'fps': 30,
+            'preview_seconds': 6,
+            'preview_fps': 20,
+            'preview_width': 800,
+            'gif_optimizer': 'gifsicle -O3 --lossy=120; 64 colors, no dithering',
+        },
+    }
+    files = [
+        *(web / f'depth-showcase-{lang}{suffix}' for lang in ('zh', 'en') for suffix in ('.mp4', '.jpg')),
+        *(web / f'depth-{name}.webp' for name in ('game', 'comic', 'traditional')),
+        *(ROOT / f'assets/readme/depth-preview-{lang}{suffix}' for lang in ('zh', 'en') for suffix in ('.gif', '.jpg')),
+        social,
+    ]
     manifest['assets'] = [{'path': p.relative_to(ROOT).as_posix(), 'bytes': p.stat().st_size,
                            'sha256': hashlib.sha256(p.read_bytes()).hexdigest()}
-                          for p in sorted(files) if p.suffix in ('.mp4', '.gif', '.jpg', '.webp', '.vtt')]
+                          for p in sorted(files) if p.is_file()]
     manifest_path.write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8', newline='\n')
-    print('Spatial presentation rendered; readable films retained.')
+    print('Canonical visual-memory presentation rendered.')
 
 if __name__ == '__main__':
     main()

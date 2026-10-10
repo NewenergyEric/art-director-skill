@@ -1,60 +1,45 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "master_fps": 30,
   "readme_gif_fps": 20,
   "readme_duration_seconds": 6,
-  "master_duration_seconds": 70.0,
-  "font": "Microsoft YaHei / SimHei (system; font files are not redistributed)",
+  "master_duration_seconds": 18,
+  "readme_preview": "depth-preview",
+  "font": "Noto Sans SC, OFL variable subset",
+  "visual_system": "One team, one visual memory.",
+  "depth_showcase": {
+    "duration_seconds": 18,
+    "fps": 30,
+    "preview_seconds": 6,
+    "preview_fps": 20,
+    "preview_width": 800,
+    "gif_optimizer": "gifsicle -O3 --lossy=120; 64 colors, no dithering"
+  },
   "assets": [
     {
       "path": "assets/readme/depth-preview-en.gif",
-      "bytes": 3689617,
-      "sha256": "5e0f1b641072eb84eb1fa7a8d80bf92b3c8c0cf51121883b4efc2cc8a9b99986"
+      "bytes": 3688507,
+      "sha256": "9ae7e04bbe83665000a856e1697f60e2ac834b2797d3597d74df93ca7dd1b347"
     },
     {
       "path": "assets/readme/depth-preview-en.jpg",
-      "bytes": 78274,
-      "sha256": "276eba79ced82bb1b621781aa27604ddf3e7934c67bb316c4adac05a734cb5f4"
+      "bytes": 75356,
+      "sha256": "51ca37fef3cd28d745b8aea3a3d88548b414af6897ac57c612d3f8ed2eea5b67"
     },
     {
       "path": "assets/readme/depth-preview-zh.gif",
-      "bytes": 3890343,
-      "sha256": "d473d8cb1aeabdc0da79be3fa78b4d4a18762b45eb8a28028330a2a9080a6de8"
+      "bytes": 3659714,
+      "sha256": "88fd41d6e7819b7ec750e417a55838988cdcd375f66f5406dd37cc913fbeff9a"
     },
     {
       "path": "assets/readme/depth-preview-zh.jpg",
-      "bytes": 76308,
-      "sha256": "2cf55aa18dcd9c166d0ad5224df2483ffef491005d92d1a0bb8ace056f0a9310"
+      "bytes": 74815,
+      "sha256": "030315ed3ceb953156e9d5006e0f1dc6aac96704272b8e8491a9f4ca5b15b20e"
     },
     {
-      "path": "assets/readme/quick-preview-en.gif",
-      "bytes": 1193282,
-      "sha256": "e7a3cba07ef1296ec9208d18784704aeb9391f202f36e2018802e812257994d5"
-    },
-    {
-      "path": "assets/readme/quick-preview-en.jpg",
-      "bytes": 72878,
-      "sha256": "4c01da8347eb1f5ec1de21cd3b00300d9f5041871709981ad02db42f01cdc549"
-    },
-    {
-      "path": "assets/readme/quick-preview-zh.gif",
-      "bytes": 1110997,
-      "sha256": "6f07f5604bcd28335ec5669926d2c6e599f9b69a1760488ad9d479a252854ad6"
-    },
-    {
-      "path": "assets/readme/quick-preview-zh.jpg",
-      "bytes": 75917,
-      "sha256": "66daf3b5353d3977e44a05652be4a8c054022b32710c634ca9e67ed76762084f"
-    },
-    {
-      "path": "docs/assets/motion/art-director-intro-en.mp4",
-      "bytes": 9874317,
-      "sha256": "d0cdcfef4d3411a89e330263644842356c200f7de580552eb47e58b7ccbe9149"
-    },
-    {
-      "path": "docs/assets/motion/art-director-intro-zh.mp4",
-      "bytes": 9768954,
-      "sha256": "eb1bb4c24073ece4b1d566228a7bd5bbe961abeec2a279a83f6f4ffd1075bb80"
+      "path": "assets/readme/social-preview.png",
+      "bytes": 855952,
+      "sha256": "7d1a5e604c71668d796154ea1e943d0ac7c71b68b6337820c242dbf277a13be9"
     },
     {
       "path": "docs/assets/motion/depth-comic.webp",
@@ -68,164 +53,28 @@
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.jpg",
-      "bytes": 78274,
-      "sha256": "276eba79ced82bb1b621781aa27604ddf3e7934c67bb316c4adac05a734cb5f4"
+      "bytes": 75356,
+      "sha256": "51ca37fef3cd28d745b8aea3a3d88548b414af6897ac57c612d3f8ed2eea5b67"
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.mp4",
-      "bytes": 2420479,
-      "sha256": "a4d1e40a6e01d89fd261622217e357ac13f2a4b95e2e027015e44fe238413fdf"
+      "bytes": 2439410,
+      "sha256": "0f3b85302a199d5cf447cee34916ca1aea41d55b16fe0951cf456682d7180ddc"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.jpg",
-      "bytes": 76308,
-      "sha256": "2cf55aa18dcd9c166d0ad5224df2483ffef491005d92d1a0bb8ace056f0a9310"
+      "bytes": 74815,
+      "sha256": "030315ed3ceb953156e9d5006e0f1dc6aac96704272b8e8491a9f4ca5b15b20e"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.mp4",
-      "bytes": 2418922,
-      "sha256": "bcc5a7e4785b0f5668c08840d3570ebd3a16cd7f97a158ab033b3fae45d7bba8"
+      "bytes": 2425294,
+      "sha256": "2ae5fecdf14c1f5ac692332b619c6c0403ebf71f1c86f9c5620f57d1adec5d70"
     },
     {
       "path": "docs/assets/motion/depth-traditional.webp",
       "bytes": 83332,
       "sha256": "ddb1122cf6360451eebcb5187719e2e58436bc5bc2feae67b14c11b01d6cf194"
-    },
-    {
-      "path": "docs/assets/motion/game-board.jpg",
-      "bytes": 143946,
-      "sha256": "056b054d964056bf5b66a04a6291720a18251f90952ad182075473735d391e35"
-    },
-    {
-      "path": "docs/assets/motion/intro-en.jpg",
-      "bytes": 54892,
-      "sha256": "520095d8739fa9498cc7c04ae0e9bb23243b5b98c20e9a95339d66b7ed319e77"
-    },
-    {
-      "path": "docs/assets/motion/intro-en.vtt",
-      "bytes": 890,
-      "sha256": "90f9de437fc91bb43bcad935e88d46e2b5f33c2d83f9eebcd5794d33d5e19d6b"
-    },
-    {
-      "path": "docs/assets/motion/intro-zh.jpg",
-      "bytes": 54597,
-      "sha256": "b7a26ce207d5552e2f0f06a78344800a366e1cae110ca2c899fbdbce45d3b8d4"
-    },
-    {
-      "path": "docs/assets/motion/intro-zh.vtt",
-      "bytes": 854,
-      "sha256": "4851a80b1e0e837e53a1d4c637bfd4b16f054a8114e2ca60c446d12282e77f9e"
-    },
-    {
-      "path": "docs/assets/motion/quick-preview-en.jpg",
-      "bytes": 72878,
-      "sha256": "4c01da8347eb1f5ec1de21cd3b00300d9f5041871709981ad02db42f01cdc549"
-    },
-    {
-      "path": "docs/assets/motion/quick-preview-en.mp4",
-      "bytes": 237366,
-      "sha256": "199236559ab8144fa586d1578ebb6f0ac82fbd72d148fdc99f9a0d43f159fa62"
-    },
-    {
-      "path": "docs/assets/motion/quick-preview-zh.jpg",
-      "bytes": 75917,
-      "sha256": "66daf3b5353d3977e44a05652be4a8c054022b32710c634ca9e67ed76762084f"
-    },
-    {
-      "path": "docs/assets/motion/quick-preview-zh.mp4",
-      "bytes": 231108,
-      "sha256": "9b3165a84dcaf3d57fbbb39db67cdf9affcf2ca5f4fe45f614103ee847bd1536"
-    },
-    {
-      "path": "docs/assets/motion/review-lens-en.jpg",
-      "bytes": 63419,
-      "sha256": "a12eb48e2fe33dba5f48923011c08be289ea9c4c01226dee3e56deb2a7249789"
-    },
-    {
-      "path": "docs/assets/motion/review-lens-en.mp4",
-      "bytes": 1055659,
-      "sha256": "2ce91b52533eee969abef7b6a67c7ca32ed517e2be30ee6e5eeff0baf3caa942"
-    },
-    {
-      "path": "docs/assets/motion/review-lens-zh.jpg",
-      "bytes": 62440,
-      "sha256": "979d19c85bdbd76a5aed133cc64128e8ccc9d8fb49d239e89802d56cab9ce5b5"
-    },
-    {
-      "path": "docs/assets/motion/review-lens-zh.mp4",
-      "bytes": 1077969,
-      "sha256": "fb6c07cb23750d04de37a855921e699fc3d813eb3c1b905b0c57487f631d7790"
-    },
-    {
-      "path": "docs/assets/motion/style-directions-en.jpg",
-      "bytes": 64553,
-      "sha256": "f9936529e8774c979f0386708a8947f62f73bb65397bb6c4fdb725d9912c37c2"
-    },
-    {
-      "path": "docs/assets/motion/style-directions-en.mp4",
-      "bytes": 2961144,
-      "sha256": "37a9106a028c9a147c7b93da70d7b9efeca320a0204cdc4f29cd9e836054e105"
-    },
-    {
-      "path": "docs/assets/motion/style-directions-zh.jpg",
-      "bytes": 61455,
-      "sha256": "47491a6b4d796fc0fba8703baebb4b4a4ed234f9419d0f4d41920e943047dcc1"
-    },
-    {
-      "path": "docs/assets/motion/style-directions-zh.mp4",
-      "bytes": 2845630,
-      "sha256": "c40d7076d0d8a2a77e190ad682fccd506f4f95afefa6e06b37c86d20c818832c"
-    },
-    {
-      "path": "docs/assets/motion/team-pipeline-en.jpg",
-      "bytes": 48752,
-      "sha256": "b5dea0a89265c46a63b8c305a4d7d7a4d56bdf6dae4f858eecf538ba5d8a51ac"
-    },
-    {
-      "path": "docs/assets/motion/team-pipeline-en.mp4",
-      "bytes": 440679,
-      "sha256": "d83877bf45e9f37c9edec4cbbec36fbdc899331dcbcfcbd3a6173936901b5953"
-    },
-    {
-      "path": "docs/assets/motion/team-pipeline-zh.jpg",
-      "bytes": 47446,
-      "sha256": "6eb0bbb879e7a5e483078eea177bdaf41cce7675c8c5d33e22b2ad23f706db7b"
-    },
-    {
-      "path": "docs/assets/motion/team-pipeline-zh.mp4",
-      "bytes": 438731,
-      "sha256": "8b393f1332e5ed1c0f9185b94560e8ab88b37792b38fb9a2d71281cecb30bd99"
-    },
-    {
-      "path": "docs/assets/motion/template-switch-en.jpg",
-      "bytes": 76770,
-      "sha256": "798cf5d007460df7e4f610da6002e4dc8cb66fd6786517e7533052ef1ddf6ae0"
-    },
-    {
-      "path": "docs/assets/motion/template-switch-en.mp4",
-      "bytes": 2091685,
-      "sha256": "5f931f56a32d274eaac2c67cbb1a32ceeaa1318901fec7864863c27ec48e8e2b"
-    },
-    {
-      "path": "docs/assets/motion/template-switch-zh.jpg",
-      "bytes": 73394,
-      "sha256": "8ceb4030dca181266cc4a2fd24b07703e83a9a16fbc5be2279f58f9d370b1daa"
-    },
-    {
-      "path": "docs/assets/motion/template-switch-zh.mp4",
-      "bytes": 2080831,
-      "sha256": "d6c37d5250eedeaf0f5a7c662af17103f7e571e71995bc7375658d26f3588071"
     }
-  ],
-  "depth_showcase": {
-    "duration_seconds": 18,
-    "fps": 30,
-    "preview_seconds": 6,
-    "preview_fps": 20,
-    "preview_width": 800,
-    "font": "Noto Sans SC, OFL variable subset",
-    "gif_optimizer": "gifsicle -O3 --lossy=120; 64 colors, no dithering"
-  },
-  "readme_preview": "depth-preview",
-  "readable_preview_duration_seconds": 12
+  ]
 }

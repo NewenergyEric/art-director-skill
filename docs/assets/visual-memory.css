@@ -1,0 +1,449 @@
+@font-face {
+  font-family: "AD Field";
+  src: url("fonts/noto-sans-sc-subset.woff2?v=visual-memory-20261010") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --vm-navy: #001f3f;
+  --vm-navy-2: #083d58;
+  --vm-teal: #007d86;
+  --vm-mint: #92e4da;
+  --vm-mist: #e5f2f1;
+  --vm-paper: #f5f9fb;
+  --vm-white: #ffffff;
+  --vm-ink: #001f3f;
+  --vm-muted: #526978;
+  --vm-line: #d7e4ea;
+  --vm-shadow: 0 24px 70px rgba(0, 31, 63, .13);
+  --vm-font: "AD Field", "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+body.vm-page {
+  --paper: var(--vm-paper);
+  --surface: var(--vm-white);
+  --sheet: var(--vm-white);
+  --card: var(--vm-white);
+  --ink: var(--vm-ink);
+  --dark: var(--vm-navy);
+  --navy: var(--vm-navy);
+  --green: var(--vm-teal);
+  --accent: var(--vm-teal);
+  --mint: var(--vm-mint);
+  --sage: var(--vm-mist);
+  --muted: var(--vm-muted);
+  --line: var(--vm-line);
+  --body: var(--vm-font);
+  --display: var(--vm-font);
+  --title: var(--vm-font);
+  background: var(--vm-paper);
+  color: var(--vm-ink);
+  font-family: var(--vm-font);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.vm-page h1,
+.vm-page h2,
+.vm-page h3,
+.vm-page strong,
+.vm-page b {
+  font-family: var(--vm-font);
+}
+
+.vm-page h1 {
+  letter-spacing: -.045em;
+}
+
+.vm-page h2 {
+  letter-spacing: -.028em;
+}
+
+.vm-page :focus-visible {
+  outline-color: var(--vm-mint) !important;
+}
+
+.vm-page ::selection {
+  color: var(--vm-navy);
+  background: var(--vm-mint);
+}
+
+.vm-page button,
+.vm-page a {
+  transition: color .18s ease, background-color .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+/* Director console: a dark rail beside a calm editorial workspace. */
+.vm-workbench .rail {
+  color: #eaf8f7;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(146, 228, 218, .2), transparent 24%),
+    linear-gradient(165deg, var(--vm-navy) 0%, #003451 58%, #00626c 150%);
+  border-right: 0;
+}
+
+.vm-workbench .rail a,
+.vm-workbench .rail-heading,
+.vm-workbench .rail-note {
+  color: #bfd7df;
+}
+
+.vm-workbench .rail a.current {
+  color: var(--vm-navy);
+  background: var(--vm-mint);
+}
+
+.vm-workbench .topbar {
+  background: rgba(255, 255, 255, .9);
+  backdrop-filter: blur(18px);
+  border-bottom-color: var(--vm-line);
+}
+
+.vm-workbench .hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  margin: 24px 0 28px;
+  padding: clamp(34px, 5vw, 64px);
+  border-radius: 24px;
+  color: white;
+  background:
+    radial-gradient(circle at 85% 18%, rgba(146, 228, 218, .2), transparent 28%),
+    linear-gradient(116deg, var(--vm-navy) 0 55%, #00636d 145%);
+  box-shadow: var(--vm-shadow);
+}
+
+.vm-workbench .hero::after {
+  content: "VISUAL\A MEMORY";
+  white-space: pre;
+  position: absolute;
+  right: -12px;
+  bottom: -32px;
+  z-index: -1;
+  color: rgba(146, 228, 218, .1);
+  font: 820 clamp(58px, 8vw, 118px)/.82 var(--vm-font);
+  letter-spacing: -.09em;
+  transform: rotate(-4deg) skewX(-5deg);
+}
+
+.vm-workbench .hero h1 {
+  max-width: 760px;
+  font-size: clamp(38px, 5vw, 72px);
+  font-weight: 390;
+}
+
+.vm-workbench .hero h1 em {
+  color: var(--vm-mint);
+  font-weight: 820;
+}
+
+.vm-workbench .hero p,
+.vm-workbench .hero .hint,
+.vm-workbench .hero-note p {
+  color: #c6dbe4;
+}
+
+.vm-workbench .hero-note {
+  border-left-color: rgba(255, 255, 255, .3);
+}
+
+.vm-workbench .hero .primary {
+  color: var(--vm-navy);
+  background: var(--vm-mint);
+  border-color: var(--vm-mint);
+}
+
+.vm-workbench .capability-strip {
+  color: #315667;
+  background: var(--vm-mist);
+  border-color: #bddcdd;
+}
+
+.vm-workbench .capability-strip b,
+.vm-workbench .capability-strip a {
+  color: var(--vm-teal);
+}
+
+.vm-workbench .panel,
+.vm-workbench .steps,
+.vm-workbench .note-card,
+.vm-workbench .reference-figure,
+.vm-workbench .package-cover,
+.vm-workbench .metrics {
+  box-shadow: 0 12px 35px rgba(0, 31, 63, .06);
+}
+
+/* Member view: a light brief pinned over a deep project memory. */
+.vm-member .sidebar {
+  color: #eaf8f7;
+  background:
+    radial-gradient(circle at 10% 92%, rgba(146, 228, 218, .18), transparent 28%),
+    var(--vm-navy);
+}
+
+.vm-member .sidebar a,
+.vm-member .sidebar-note,
+.vm-member .nav-label {
+  color: #bfd7df;
+}
+
+.vm-member .sidebar a.current {
+  color: var(--vm-navy);
+  background: var(--vm-mint);
+}
+
+.vm-member .topbar {
+  background: rgba(255, 255, 255, .9);
+  border-bottom-color: var(--vm-line);
+  backdrop-filter: blur(18px);
+}
+
+.vm-member .hero {
+  position: relative;
+  overflow: hidden;
+  margin: 22px 0 24px;
+  padding: clamp(30px, 4vw, 54px);
+  border-radius: 22px;
+  background: white;
+  box-shadow: var(--vm-shadow);
+}
+
+.vm-member .hero::after {
+  content: "SAME\A VERSION";
+  white-space: pre;
+  position: absolute;
+  right: 3%;
+  top: 10%;
+  color: rgba(0, 125, 134, .1);
+  font: 820 clamp(50px, 7vw, 96px)/.83 var(--vm-font);
+  letter-spacing: -.08em;
+  transform: rotate(5deg) skewX(-5deg);
+  pointer-events: none;
+}
+
+.vm-member .hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  font-size: clamp(37px, 5vw, 67px);
+  font-weight: 740;
+  line-height: 1.08;
+}
+
+.vm-member .hero p,
+.vm-member .hero-aside {
+  position: relative;
+  z-index: 1;
+}
+
+.vm-member .card,
+.vm-member .preview,
+.vm-member .exploration,
+.vm-member .delivery,
+.vm-member .setup-card,
+.vm-member .module-panel {
+  border-color: var(--vm-line);
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 12px 34px rgba(0, 31, 63, .055);
+}
+
+.vm-member .evidence-banner {
+  color: #27566a;
+  background: var(--vm-mist);
+  border-color: #bddcdd;
+}
+
+/* Call flow: technical blueprint, with the same project memory at its centre. */
+.vm-call .masthead {
+  color: white;
+  background: var(--vm-navy);
+  border-bottom: 1px solid rgba(146, 228, 218, .24);
+}
+
+.vm-call .hero {
+  position: relative;
+  overflow: hidden;
+  margin-top: 28px;
+  padding: clamp(34px, 5vw, 62px);
+  border-radius: 22px;
+  color: white;
+  background-color: var(--vm-navy);
+  background-image:
+    linear-gradient(rgba(146, 228, 218, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(146, 228, 218, .07) 1px, transparent 1px),
+    radial-gradient(circle at 76% 22%, rgba(0, 125, 134, .55), transparent 31%);
+  background-size: 34px 34px, 34px 34px, auto;
+  box-shadow: var(--vm-shadow);
+}
+
+.vm-call .hero::after {
+  content: "01 → 02 → 03";
+  position: absolute;
+  right: 4%;
+  bottom: -12px;
+  color: rgba(146, 228, 218, .13);
+  font: 760 clamp(40px, 7vw, 92px)/1 var(--vm-font);
+  letter-spacing: -.065em;
+  transform: rotate(-4deg);
+}
+
+.vm-call .hero h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 380;
+}
+
+.vm-call .hero h1 em {
+  color: var(--vm-mint);
+  font-weight: 820;
+}
+
+.vm-call .hero .intro,
+.vm-call .hero-note p,
+.vm-call .call-chain {
+  color: #c5dce4;
+}
+
+.vm-call .hero-note {
+  position: relative;
+  z-index: 1;
+  border-left-color: rgba(255, 255, 255, .28);
+}
+
+.vm-call .node,
+.vm-call .detail,
+.vm-call .arm {
+  border-color: var(--vm-line);
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 31, 63, .05);
+}
+
+.vm-call .detail-top,
+.vm-call .tab[aria-selected="true"],
+.vm-call .footer {
+  background: var(--vm-navy);
+}
+
+.vm-call .readiness {
+  color: #315667;
+  background: var(--vm-mist);
+  border-color: #bddcdd;
+}
+
+/* Team lanes: a wide production wall rather than another hero poster. */
+.vm-team .top,
+.vm-team .story-top,
+.vm-team .command {
+  color: white;
+  background: var(--vm-navy);
+}
+
+.vm-team .disclosure {
+  color: #194b5b;
+  background: var(--vm-mist);
+  border-color: #bddcdd;
+}
+
+.vm-team .hero {
+  position: relative;
+  overflow: hidden;
+  margin: 26px 0 22px;
+  padding: clamp(30px, 4vw, 54px);
+  border-radius: 22px;
+  background:
+    linear-gradient(112deg, rgba(255, 255, 255, .98) 0 61%, rgba(229, 242, 241, .96) 61%),
+    white;
+  box-shadow: var(--vm-shadow);
+}
+
+.vm-team .hero::before {
+  content: "ONE VERSION";
+  position: absolute;
+  right: 2%;
+  bottom: -10px;
+  color: rgba(0, 125, 134, .1);
+  font: 820 clamp(48px, 7vw, 94px)/1 var(--vm-font);
+  letter-spacing: -.08em;
+  transform: rotate(-4deg) skewX(-5deg);
+}
+
+.vm-team .hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  font-size: clamp(38px, 5vw, 67px);
+  font-weight: 750;
+  line-height: 1.08;
+}
+
+.vm-team .project-stamp,
+.vm-team .board,
+.vm-team .story-panel,
+.vm-team .reference-card,
+.vm-team .file-card,
+.vm-team .plan-list {
+  border-color: var(--vm-line);
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 12px 34px rgba(0, 31, 63, .055);
+}
+
+.vm-team .project-stamp {
+  color: white;
+  background: var(--vm-teal);
+  border: 0;
+  transform: rotate(2deg);
+}
+
+.vm-team .project-stamp span,
+.vm-team .project-stamp small {
+  color: #d7f4f1;
+}
+
+.vm-team .board-top,
+.vm-team .asset-token,
+.vm-team .chapter-button[aria-current="step"] {
+  color: #164f5c;
+  background: var(--vm-mist);
+  border-color: #bddcdd;
+}
+
+.vm-team .game-mock {
+  border-color: var(--vm-navy-2);
+  background: #b9e0dd;
+  box-shadow: 3px 3px 0 #5c9ea1;
+}
+
+@media (max-width: 760px) {
+  .vm-workbench .hero,
+  .vm-member .hero,
+  .vm-call .hero,
+  .vm-team .hero {
+    margin-top: 16px;
+    padding: 28px 22px;
+    border-radius: 16px;
+  }
+
+  .vm-workbench .hero::after,
+  .vm-member .hero::after,
+  .vm-call .hero::after,
+  .vm-team .hero::before {
+    opacity: .65;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vm-page *,
+  .vm-page *::before,
+  .vm-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

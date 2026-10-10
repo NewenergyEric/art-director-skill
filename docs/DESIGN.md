@@ -12,7 +12,9 @@ Reviewed [FDE](https://fde.aielsen.com/zh/), [Refero](https://styles.refero.desi
 
 The new spatial presentation adapts the references' depth, perspective and continuous movement using original code and original candidate artwork. No React Bits implementation is copied or imported. Reference screenshots supplied by the user inform typography placement only: do not reproduce their people, brands or imagery.
 
-The central hook is “把判断，交给团队” / “Your vision. Their direction.” Type is part of the poster: a light first line, a heavy teal second line, a slight skew and rotation, and deliberate overlap with the artwork. Keep the supporting copy upright and readable. A larger headline alone is insufficient: type and image must share the same composition.
+The central hook is “一个团队，一份视觉记忆。” / “One team, one visual memory.” The director keeps responsibility for professional judgement; the Skill turns it into a shared project version that can guide every delivery. Type is part of the poster: a light first line, a heavy teal second line, a slight skew and rotation, and deliberate overlap with the artwork. Keep the supporting copy upright and readable. A larger headline alone is insufficient: type and image must share the same composition.
+
+The detailed cross-surface grammar now lives in [`references/public-presentation.md`](../references/public-presentation.md). The product cover, editorial explanation, director console, member brief, production wall and engineering blueprint share tokens and a visual-memory metaphor while deliberately using different compositions.
 
 ## Tokens
 
@@ -46,14 +48,14 @@ The central hook is “把判断，交给团队” / “Your vision. Their direc
 
 ## Motion and loading
 
-- GitHub: one six-second spatial GIF at 800 px / 20 fps, using a complete periodic orbit and a stable hook. Budget: 4 MiB per language. A static poster is supplied for reduced motion. The retained readable preview is 12 seconds, 1100 px / 20 fps, under 2 MiB; it is available in the clear walkthrough.
+- GitHub: one six-second spatial GIF at 800 px / 20 fps, using a complete periodic orbit and a stable hook. Budget: 4 MiB per language. A static poster is supplied for reduced motion. Legacy 12-second GIFs are not published alongside it.
 - Web: H.264 MP4 at 30 fps with `faststart`; same-origin files, not Release redirect URLs. Full film budget: 10 MiB per language. Preview budget: 1 MiB.
 - Full film and focused videos use `preload="none"`, posters, controls and inline playback. Only one video plays at a time.
 - Autoplay only the muted short preview while visible. Pause out of view or when the page is hidden. Respect reduced motion and Save-Data. A manual play/pause action remains available.
 - Rendered motion is driven by Remotion frames. The new 18-second film uses continuous perspective movement, three depth planes, light, a background production wall, and a foreground project file. The six-second orbit closes exactly; captions stay constant in that preview. No page-cut deck transitions. Budget: 5 MiB for the 1280 × 720 / 30 fps film.
 - The live web stage uses transform animations over three compressed WebP boards, with subtle pointer tilt. Pause controls, reduced motion, Save-Data, visibility and offscreen guards apply. No canvas framework or copied component dependency is required.
-- The full introduction lasts 70 seconds: approximately four seconds per visual language and three seconds per production template. Larger floating panels use 30–42 px titles and 21–25 px explanations on the 1280 × 720 canvas. The short preview has a fullscreen button and native playback controls; focused clips use two desktop columns and one phone column.
-- Keep film, clip, caption and sound-cue timing derived from `motion/src/timeline.json`. Add a version query when replacing published media so cached six-second previews cannot appear beside twelve-second copy.
+- The public introduction is the 18-second spatial film. Retired 70-second media and its four focused clips are removed from the public asset set so every entry point presents one visual memory.
+- Add a version query when replacing published media so cached previews cannot appear beside newer copy.
 - On Windows, local YaHei subsets can be prepared for rendering under ignored `motion/public/render-fonts/`. Never commit or redistribute proprietary font files. Rendered pixels are the published output.
 
 ## Claims and examples
