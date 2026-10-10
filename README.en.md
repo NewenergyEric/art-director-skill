@@ -10,15 +10,15 @@
 
 # Art Director
 
-## One team. One visual memory.
+## One team, one visual memory.
 
 **Let the director build the project's visual memory, then let every teammate deliver from the same version.**
 
 Visual memory includes the visual language, component and asset families, representative exemplars, allowed variation, delivery requirements, and review history. Art Director helps the director build these from existing work, references, and feedback, then packages them as a project Skill the team can call.
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=visual-memory-20261010">
-  <img src="assets/readme/depth-preview-en.gif?v=visual-memory-20261010" width="100%" alt="One team, one visual memory. Art boards at different depths connect to the same project version.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=visual-memory-20261010b">
+  <img src="assets/readme/depth-preview-en.gif?v=visual-memory-20261010b" width="100%" alt="One team, one visual memory. Art boards at different depths connect to the same project version.">
 </picture></a>
 
 <p align="center"><sub>One visual language across the spec, workbench, and delivery · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html">product story</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/workbench.html">director workbench</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/call-flow.html">engineering call path</a></sub></p>

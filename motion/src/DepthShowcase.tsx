@@ -41,7 +41,7 @@ export const DepthShowcase: React.FC<{language: 'zh' | 'en'; localFonts?: boolea
     <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(90deg, #001f3f 0%, rgba(0,31,63,.96) 28%, rgba(0,31,63,.55) 43%, transparent 58%)'}} />
     <div style={{position: 'absolute', left: 55, top: 48, fontSize: 14, fontWeight: 500, letterSpacing: 2.5}}>ART DIRECTOR <span style={{color: '#80d3ce'}}>●</span></div>
     <div style={{position: 'absolute', left: 55, top: 128, width: 800}}>
-      <div style={{fontSize: 12, color: '#bad4df', letterSpacing: 2.5, marginBottom: 33}}>ONE TEAM. ONE VISUAL MEMORY.</div>
+      <div style={{fontSize: 12, color: '#bad4df', letterSpacing: 2.5, marginBottom: 33}}>ONE TEAM, ONE VISUAL MEMORY.</div>
       <div style={{transform: 'rotate(-3deg) skewX(-6deg)', transformOrigin: '0 50%', lineHeight: 1.12, letterSpacing: language === 'zh' ? -6 : -4}}>
         <div style={{fontSize: language === 'zh' ? 88 : 78, fontWeight: 380}}>{language === 'zh' ? '一个团队，' : 'One team,'}</div>
         <div style={{fontSize: language === 'zh' ? 118 : 83, fontWeight: 820, marginTop: 12, whiteSpace: 'nowrap', color: '#92e4da', textShadow: '0 5px 24px rgba(0,31,63,.32)'}}>{language === 'zh' ? <>一份<span style={{WebkitTextStroke: '1px #c0fff4'}}>视觉记忆。</span></> : <>one <span style={{WebkitTextStroke: '1px #c0fff4'}}>visual memory.</span></>}</div>
@@ -62,7 +62,7 @@ export const DepthSocialPreview: React.FC = () => (
     <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 78% 25%, #08606a 0%, transparent 50%), radial-gradient(ellipse at 90% 95%, #183f5b 0%, transparent 42%)'}} />
     <div style={{position: 'absolute', left: 42, right: 42, top: 28, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 11, fontWeight: 650, letterSpacing: 2.2}}>
       <span>ART DIRECTOR <span style={{color: '#92e4da'}}>●</span></span>
-      <span style={{color: '#bad4df'}}>ONE TEAM. ONE VISUAL MEMORY.</span>
+      <span style={{color: '#bad4df'}}>ONE TEAM, ONE VISUAL MEMORY.</span>
     </div>
     <div style={{position: 'absolute', left: 42, right: 42, top: 56, height: 1, background: 'rgba(160,206,213,.34)'}} />
 

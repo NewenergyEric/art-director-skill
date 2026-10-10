@@ -17,8 +17,8 @@
 这里的“视觉记忆”包括视觉语言、组件与资产家族、代表样板、允许变化、交付要求和评审记录。Art Director 从已有作品、参考与批注开始，带主美一步步建立这些内容，再打包成团队可调用的项目 Skill。
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=visual-memory-20261010">
-  <img src="assets/readme/depth-preview-zh.gif?v=visual-memory-20261010" width="100%" alt="一个团队，一份视觉记忆。不同深度的作品画板连接到同一项目版本。">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=visual-memory-20261010b">
+  <img src="assets/readme/depth-preview-zh.gif?v=visual-memory-20261010b" width="100%" alt="一个团队，一份视觉记忆。不同深度的作品画板连接到同一项目版本。">
 </picture></a>
 
 <p align="center"><sub>同一套视觉语言，贯穿规范、工作台与交付 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html">产品介绍</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/workbench.html">主美工作台</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/call-flow.html">工程调用路径</a></sub></p>

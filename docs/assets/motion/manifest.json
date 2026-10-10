@@ -18,28 +18,28 @@
   "assets": [
     {
       "path": "assets/readme/depth-preview-en.gif",
-      "bytes": 3688507,
-      "sha256": "9ae7e04bbe83665000a856e1697f60e2ac834b2797d3597d74df93ca7dd1b347"
+      "bytes": 3688633,
+      "sha256": "9520529e1851859e8ff0b53e2c71038ea020c1a255b509af603718038415bc30"
     },
     {
       "path": "assets/readme/depth-preview-en.jpg",
-      "bytes": 75356,
-      "sha256": "51ca37fef3cd28d745b8aea3a3d88548b414af6897ac57c612d3f8ed2eea5b67"
+      "bytes": 75366,
+      "sha256": "e62ee7060a687f5235c938658d7c1ff6bbffcfe28fc151f184d3317aece9d5ba"
     },
     {
       "path": "assets/readme/depth-preview-zh.gif",
-      "bytes": 3659714,
-      "sha256": "88fd41d6e7819b7ec750e417a55838988cdcd375f66f5406dd37cc913fbeff9a"
+      "bytes": 3655049,
+      "sha256": "216771324b4833f9c7cd1ee1e814aab3cc6a6920bcdf4d895c39049d72318fe0"
     },
     {
       "path": "assets/readme/depth-preview-zh.jpg",
-      "bytes": 74815,
-      "sha256": "030315ed3ceb953156e9d5006e0f1dc6aac96704272b8e8491a9f4ca5b15b20e"
+      "bytes": 74796,
+      "sha256": "7bbd11a2506a74d6ba05150c84bdc962210e13999bc54c2a2174fa9ef6da1ba9"
     },
     {
       "path": "assets/readme/social-preview.png",
-      "bytes": 855952,
-      "sha256": "7d1a5e604c71668d796154ea1e943d0ac7c71b68b6337820c242dbf277a13be9"
+      "bytes": 856121,
+      "sha256": "baecd23c171e14411277c4f8d090217361b8afe28232d5125322fb53f5745b76"
     },
     {
       "path": "docs/assets/motion/depth-comic.webp",
@@ -53,23 +53,23 @@
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.jpg",
-      "bytes": 75356,
-      "sha256": "51ca37fef3cd28d745b8aea3a3d88548b414af6897ac57c612d3f8ed2eea5b67"
+      "bytes": 75366,
+      "sha256": "e62ee7060a687f5235c938658d7c1ff6bbffcfe28fc151f184d3317aece9d5ba"
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.mp4",
-      "bytes": 2439410,
-      "sha256": "0f3b85302a199d5cf447cee34916ca1aea41d55b16fe0951cf456682d7180ddc"
+      "bytes": 2440930,
+      "sha256": "65a80f861487d1170ad9fea3ab47fd5b01ccff4e166211e096556b0ec0117f64"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.jpg",
-      "bytes": 74815,
-      "sha256": "030315ed3ceb953156e9d5006e0f1dc6aac96704272b8e8491a9f4ca5b15b20e"
+      "bytes": 74796,
+      "sha256": "7bbd11a2506a74d6ba05150c84bdc962210e13999bc54c2a2174fa9ef6da1ba9"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.mp4",
-      "bytes": 2425294,
-      "sha256": "2ae5fecdf14c1f5ac692332b619c6c0403ebf71f1c86f9c5620f57d1adec5d70"
+      "bytes": 2422855,
+      "sha256": "f4959bc8edd1dfd314ca641d30022c4eca3de804b7d05b60d3942e422aa98784"
     },
     {
       "path": "docs/assets/motion/depth-traditional.webp",

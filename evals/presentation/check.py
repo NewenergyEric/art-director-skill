@@ -90,7 +90,7 @@ def main():
               gifs == [f'assets/readme/depth-preview-{lang}.gif'])
         check(readme + ': product, director and engineering entrances are visible',
               all(link in text for link in ('docs/landing.html', 'docs/workbench.html', 'docs/call-flow.html')))
-        expected_claim = '一个团队，一份视觉记忆。' if lang == 'zh' else 'One team. One visual memory.'
+        expected_claim = '一个团队，一份视觉记忆。' if lang == 'zh' else 'One team, one visual memory.'
         check(readme + ': uses the shared core claim', expected_claim in text)
         check(readme + ': contains no legacy public media reference',
               not any(name in text for name in LEGACY_MEDIA) and '70 秒' not in text and '70-second' not in text)
@@ -160,6 +160,10 @@ def main():
     check('motion source uses the exact shared claims',
           "'一个团队，'" in motion_source and '视觉记忆。' in motion_source
           and "'One team,'" in motion_source and 'visual memory.' in motion_source)
+    claim_corpus = public_text + motion_source + (ROOT / 'README.en.md').read_text(encoding='utf-8')
+    check('English core claim keeps the fixed comma punctuation',
+          'One team. One visual memory.' not in claim_corpus
+          and 'ONE TEAM. ONE VISUAL MEMORY.' not in claim_corpus)
     workflow = (ROOT / '.github/workflows/ci.yml').read_text(encoding='utf-8')
     check('CI renders only current visual-memory compositions',
           'DepthShowcaseZH' in workflow and 'DepthPreviewEN' in workflow
