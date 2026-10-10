@@ -1,7 +1,7 @@
 {
   "method": "Shared claim, public links, canonical media budgets and checksums; optional ffprobe.",
-  "passed": 132,
-  "total": 132,
+  "passed": 133,
+  "total": 133,
   "failed": [],
   "checks": [
     {
@@ -478,6 +478,10 @@
     },
     {
       "name": "live stage supports pause, reduced motion, Save-Data and visibility",
+      "pass": true
+    },
+    {
+      "name": "product page contains rotated artwork without horizontal page overflow",
       "pass": true
     },
     {

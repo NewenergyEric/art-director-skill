@@ -149,6 +149,8 @@ def main():
               'prefers-reduced-motion', 'saveData', 'IntersectionObserver',
               'visibilitychange', 'animation-play-state:paused', 'aria-pressed')))
     landing = (ROOT / 'docs/landing.html').read_text(encoding='utf-8')
+    check('product page contains rotated artwork without horizontal page overflow',
+          'overflow-x:hidden' in landing)
     check('product page has reduced-motion behaviour and one canonical film',
           'prefers-reduced-motion' in landing
           and len(re.findall(r'<source\s+src="assets/motion/depth-showcase-zh\.mp4', landing)) == 1
