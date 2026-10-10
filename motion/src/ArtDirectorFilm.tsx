@@ -1,5 +1,6 @@
 import React from 'react';
 import {RenderFonts, uiFont} from './RenderFonts';
+import timeline from './timeline.json';
 import {
   AbsoluteFill,
   Img,
@@ -127,6 +128,19 @@ const windowOpacity = (frame: number, from: number, to: number, feather = 24) =>
 
 const Grain: React.FC<{opacity?: number}> = () => null;
 
+// Retiming preserves the original storyboard while giving its dense beats reading time.
+const storyFrame = (frame: number) => interpolate(frame, timeline.beats.map(beat => beat[1]), timeline.beats.map(beat => beat[0]), {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+const Rail: React.FC<{frame: number; language: Language}> = ({frame, language}) => (
+  <>
+    <div style={{position: 'absolute', left: 36, right: 36, top: 25, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: sans, fontSize: 12, fontWeight: 700, letterSpacing: 1.5, color: C.paper, zIndex: 30}}>
+      <div>ART DIRECTOR <span style={{color: C.orange}}>●</span></div>
+      <div style={{opacity: .65}}>{language === 'zh' ? '团队判断 / 项目记忆' : 'TEAM JUDGEMENT / PROJECT MEMORY'}</div>
+      <div>{String(Math.floor(frame / timeline.fps)).padStart(2, '0')} / {timeline.masterFrames / timeline.fps}</div>
+    </div>
+    <div style={{position: 'absolute', left: 36, right: 36, top: 51, height: 1, background: C.line, zIndex: 30}}><div style={{height: 2, width: `${clamp(frame / (timeline.masterFrames - 1)) * 100}%`, background: C.orange}} /></div>
+  </>
+);
+
 const Opening: React.FC<{frame: number; language: Language}> = ({frame, language}) => {
   const c = copy[language];
   const opacity = 1 - p(frame, 188, 226);
@@ -179,7 +193,7 @@ const Opening: React.FC<{frame: number; language: Language}> = ({frame, language
           ))}
         </div>
         <div style={{width: interpolate(easeOut(p(frame, 92, 138)), [0, 1], [0, 176]), height: 3, background: C.orange, marginTop: 28}} />
-        <div style={{marginTop: 24, width: 420, fontFamily: sans, fontSize: language === 'zh' ? 16 : 14, lineHeight: 1.55, color: 'rgba(242,238,227,.66)'}}>{c.openingNote}</div>
+        <div style={{marginTop: 24, width: 420, fontFamily: sans, fontSize: 22, lineHeight: 1.55, color: 'rgba(242,238,227,.66)'}}>{c.openingNote}</div>
       </div>
 
       <div style={{position: 'absolute', left: 54, bottom: 42, fontFamily: display, fontSize: 92, letterSpacing: -6, color: 'rgba(242,238,227,.055)', whiteSpace: 'nowrap'}}>MANY HANDS / ONE DIRECTION</div>
@@ -214,9 +228,9 @@ const BoardReveal: React.FC<{frame: number; language: Language}> = ({frame, lang
         <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(8,9,8,.04), rgba(8,9,8,.2))'}} />
       </div>
 
-      <div style={{position: 'absolute', left: 74, top: 95, width: language === 'zh' ? 530 : 610, padding: '24px 28px 27px', background: 'rgba(8,9,8,.88)', backdropFilter: 'blur(12px)', color: C.paper, opacity: easeOut(p(frame, 230, 280)), transform: `translateY(${interpolate(easeOut(p(frame, 230, 280)), [0, 1], [24, 0])}px)`}}>
-        <div style={{fontFamily: display, fontSize: language === 'zh' ? 36 : 32, lineHeight: 1.05, letterSpacing: -1.8}}>{c.boardTitle}</div>
-        <div style={{marginTop: 13, fontFamily: sans, fontSize: language === 'zh' ? 15 : 14, lineHeight: 1.55, color: 'rgba(242,238,227,.7)'}}>{c.boardBody}</div>
+      <div style={{position: 'absolute', left: 74, top: 95, width: 660, padding: '24px 28px 27px', background: 'rgba(8,9,8,.88)', backdropFilter: 'blur(12px)', color: C.paper, opacity: easeOut(p(frame, 230, 280)), transform: `translateY(${interpolate(easeOut(p(frame, 230, 280)), [0, 1], [24, 0])}px)`}}>
+        <div style={{fontFamily: display, fontSize: language === 'zh' ? 42 : 36, lineHeight: 1.2, letterSpacing: -1.8}}>{c.boardTitle}</div>
+        <div style={{marginTop: 13, fontFamily: sans, fontSize: 24, lineHeight: 1.55, color: 'rgba(242,238,227,.7)'}}>{c.boardBody}</div>
       </div>
 
       <div style={{position: 'absolute', left: 88, bottom: 23, fontFamily: display, fontSize: 103, lineHeight: 0.82, letterSpacing: -7, whiteSpace: 'nowrap', color: 'rgba(242,238,227,.17)', mixBlendMode: 'screen', transform: `translateX(${interpolate(camera, [0, 1], [70, -30])}px)`}}>ONE DIRECTION / MANY ASSETS</div>
@@ -285,8 +299,8 @@ const ArtCard: React.FC<{
       position: 'absolute',
       left,
       top,
-      width: 178,
-      height: 250,
+      width: 208,
+      height: 290,
       padding: 9,
       background: dark ? '#14191d' : '#eee5d2',
       border: `1px solid ${dark ? 'rgba(255,255,255,.3)' : 'rgba(21,23,21,.28)'}`,
@@ -294,10 +308,10 @@ const ArtCard: React.FC<{
       transform: `translateY(${Math.sin(progress * Math.PI * 2 + left) * 7}px) rotate(${rotate}deg)`,
     }}
   >
-    <div style={{height: 196, overflow: 'hidden', background: C.ink}}>
+    <div style={{height: 228, overflow: 'hidden', background: C.ink}}>
       <Img src={staticFile(src)} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition}} />
     </div>
-    <div style={{marginTop: 10, display: 'flex', justifyContent: 'space-between', fontFamily: sans, fontSize: 8, fontWeight: 800, letterSpacing: 1.15, color: dark ? C.paper : C.ink}}>
+    <div style={{marginTop: 10, display: 'flex', justifyContent: 'space-between', fontFamily: sans, fontSize: 13, fontWeight: 800, letterSpacing: 1.15, color: dark ? C.paper : C.ink}}>
       <span>{label}</span><span style={{color: C.orange}}>●</span>
     </div>
   </div>
@@ -331,10 +345,10 @@ const StyleDirections: React.FC<{frame: number; language: Language}> = ({frame, 
       </div>
 
       <div style={{position: 'absolute', left: 48, top: 88, width: 435, zIndex: 8}}>
-        <div style={{fontFamily: sans, fontSize: 10, fontWeight: 800, letterSpacing: 2.2, color: C.orange}}>{c.styleEyebrow}</div>
-        <div style={{marginTop: 20, fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 46 : 42, lineHeight: 0.98, letterSpacing: -2.2, color: C.paper, opacity: detailIn, transform: `translateY(${interpolate(detailIn, [0, 1], [20, 0])}px)`}}>{c.styleTitle[active]}</div>
-        <div style={{marginTop: 19, width: 286, fontFamily: sans, fontSize: language === 'zh' ? 14 : 13, lineHeight: 1.56, color: 'rgba(242,238,227,.66)', opacity: detailIn}}>{c.styleMeta[active]}</div>
-        <div style={{marginTop: 27, display: 'inline-flex', alignItems: 'center', gap: 9, padding: '9px 11px', background: active === 2 ? '#d9caa9' : C.orange, color: C.black, fontFamily: sans, fontSize: 9, fontWeight: 800, letterSpacing: 1.2}}><span>●</span>{c.styleStatus[active]}</div>
+        <div style={{fontFamily: sans, fontSize: 13, fontWeight: 800, letterSpacing: 2.2, color: C.orange}}>{c.styleEyebrow}</div>
+        <div style={{marginTop: 20, fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 46 : 42, lineHeight: 1.2, letterSpacing: -.8, color: C.paper, opacity: detailIn, transform: `translateY(${interpolate(detailIn, [0, 1], [20, 0])}px)`}}>{c.styleTitle[active]}</div>
+        <div style={{marginTop: 19, width: 400, fontFamily: sans, fontSize: 22, lineHeight: 1.56, color: 'rgba(242,238,227,.66)', opacity: detailIn}}>{c.styleMeta[active]}</div>
+        <div style={{marginTop: 27, display: 'inline-flex', alignItems: 'center', gap: 9, padding: '9px 11px', background: active === 2 ? '#d9caa9' : C.orange, color: C.black, fontFamily: sans, fontSize: 15, fontWeight: 800, letterSpacing: 1.2}}><span>●</span>{c.styleStatus[active]}</div>
       </div>
 
       <div style={{position: 'absolute', left: 43, bottom: 100, fontFamily: display, fontSize: 72, lineHeight: 0.82, letterSpacing: -4.5, color: 'rgba(242,238,227,.075)', whiteSpace: 'nowrap', zIndex: 2}}>{c.styleNames[active]}</div>
@@ -347,7 +361,7 @@ const StyleDirections: React.FC<{frame: number; language: Language}> = ({frame, 
               index={index}
               left={[555, 690, 840, 986, 1102][index]}
               top={[160, 333, 142, 345, 184][index]}
-              size={[155, 145, 160, 155, 134][index]}
+              size={[174, 170, 180, 174, 155][index]}
               rotate={[-8, 5, -3, 7, -5][index]}
               progress={floatProgress}
             />
@@ -356,39 +370,39 @@ const StyleDirections: React.FC<{frame: number; language: Language}> = ({frame, 
       )}
 
       {active === 1 && (
-        <div style={{position: 'absolute', right: 57, top: 112, width: 458, padding: '24px 26px 22px', background: 'rgba(242,238,227,.96)', color: C.ink, transform: `translateX(${interpolate(detailIn, [0, 1], [58, 0])}px) rotate(-1.2deg)`, opacity: detailIn, zIndex: 10, boxShadow: '18px 24px 0 rgba(8,9,8,.28)'}}>
+        <div style={{position: 'absolute', right: 57, top: 112, width: 540, padding: '24px 26px 22px', background: 'rgba(242,238,227,.96)', color: C.ink, transform: `translateX(${interpolate(detailIn, [0, 1], [58, 0])}px) rotate(-1.2deg)`, opacity: detailIn, zIndex: 10, boxShadow: '18px 24px 0 rgba(8,9,8,.28)'}}>
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `3px solid ${C.ink}`, paddingBottom: 12}}>
-            <div style={{fontFamily: display, fontSize: 22, letterSpacing: -0.7}}>TASK BRIEF / 014</div>
-            <div style={{fontFamily: sans, fontSize: 8, fontWeight: 800, letterSpacing: 1.4, color: C.orange}}>READY FOR FIRST PIECE</div>
+            <div style={{fontFamily: display, fontSize: 32, letterSpacing: -0.7}}>TASK BRIEF / 014</div>
+            <div style={{fontFamily: sans, fontSize: 13, fontWeight: 800, letterSpacing: 1.4, color: C.orange}}>READY FOR FIRST PIECE</div>
           </div>
           {c.briefLabels.map((label, index) => (
-            <div key={label} style={{display: 'grid', gridTemplateColumns: '108px 1fr', gap: 12, padding: '12px 0', borderBottom: `1px solid ${C.darkLine}`}}>
-              <div style={{fontFamily: sans, fontSize: 9, fontWeight: 800, letterSpacing: 1.4, color: C.orange}}>{label}</div>
-              <div style={{fontFamily: sans, fontSize: language === 'zh' ? 12 : 11, lineHeight: 1.35, fontWeight: 700}}>{c.briefValues[index]}</div>
+            <div key={label} style={{display: 'grid', gridTemplateColumns: '122px 1fr', gap: 12, padding: '12px 0', borderBottom: `1px solid ${C.darkLine}`}}>
+              <div style={{fontFamily: sans, fontSize: 15, fontWeight: 800, letterSpacing: 1.4, color: C.orange}}>{label}</div>
+              <div style={{fontFamily: sans, fontSize: 21, lineHeight: 1.45, fontWeight: 700}}>{c.briefValues[index]}</div>
             </div>
           ))}
-          <div style={{marginTop: 17, display: 'flex', gap: 7}}>{['SOURCE ART', 'RULES', 'OUTPUT'].map((label, index) => <div key={label} style={{padding: '8px 9px', background: index === 2 ? C.orange : C.ink, color: index === 2 ? C.black : C.paper, fontFamily: sans, fontSize: 8, fontWeight: 800, letterSpacing: 1.1}}>{label}</div>)}</div>
+          <div style={{marginTop: 17, display: 'flex', gap: 7}}>{['SOURCE ART', 'RULES', 'OUTPUT'].map((label, index) => <div key={label} style={{padding: '8px 9px', background: index === 2 ? C.orange : C.ink, color: index === 2 ? C.black : C.paper, fontFamily: sans, fontSize: 13, fontWeight: 800, letterSpacing: 1.1}}>{label}</div>)}</div>
         </div>
       )}
 
       {active === 2 && (
         <div style={{position: 'absolute', inset: 0, opacity: detailIn, zIndex: 9}}>
-          <ArtCard src={styleBoards[2]} objectPosition="9% 76%" left={650} top={151} rotate={-6} label="山川 / 01" progress={floatProgress} />
-          <ArtCard src={styleBoards[2]} objectPosition="28% 76%" left={827} top={278} rotate={2.5} label="行旅 / 02" progress={floatProgress} />
-          <ArtCard src={styleBoards[2]} objectPosition="55% 76%" left={1007} top={137} rotate={7} label="草木 / 03" progress={floatProgress} />
+          <ArtCard src={styleBoards[2]} objectPosition="9% 76%" left={620} top={151} rotate={-6} label="山川 / 01" progress={floatProgress} />
+          <ArtCard src={styleBoards[2]} objectPosition="28% 76%" left={829} top={278} rotate={2.5} label="行旅 / 02" progress={floatProgress} />
+          <ArtCard src={styleBoards[2]} objectPosition="55% 76%" left={1038} top={137} rotate={7} label="草木 / 03" progress={floatProgress} />
         </div>
       )}
 
       {active === 3 && (
         <div style={{position: 'absolute', inset: 0, opacity: detailIn, zIndex: 9}}>
-          <ArtCard src={styleBoards[3]} objectPosition="8% 59%" left={631} top={171} rotate={-5} label="WORLD / 01" progress={floatProgress} dark />
-          <ArtCard src={styleBoards[3]} objectPosition="24% 59%" left={816} top={298} rotate={2} label="RELIC / 02" progress={floatProgress} dark />
-          <ArtCard src={styleBoards[3]} objectPosition="40% 59%" left={1003} top={154} rotate={6} label="STATE / 03" progress={floatProgress} dark />
-          <div style={{position: 'absolute', right: 61, top: 520, padding: '11px 14px', background: C.orange, color: C.black, fontFamily: sans, fontSize: 9, fontWeight: 800, letterSpacing: 1.35}}>REVIEWED FAMILY / V02</div>
+          <ArtCard src={styleBoards[3]} objectPosition="8% 59%" left={620} top={171} rotate={-5} label="WORLD / 01" progress={floatProgress} dark />
+          <ArtCard src={styleBoards[3]} objectPosition="24% 59%" left={829} top={298} rotate={2} label="RELIC / 02" progress={floatProgress} dark />
+          <ArtCard src={styleBoards[3]} objectPosition="40% 59%" left={1038} top={154} rotate={6} label="STATE / 03" progress={floatProgress} dark />
+          <div style={{position: 'absolute', right: 61, top: 603, padding: '11px 14px', background: C.orange, color: C.black, fontFamily: sans, fontSize: 15, fontWeight: 800, letterSpacing: 1.35}}>REVIEWED FAMILY / V02</div>
         </div>
       )}
 
-      <div style={{position: 'absolute', left: 48, right: 48, bottom: 55, paddingTop: 13, borderTop: `1px solid ${C.line}`, fontFamily: sans, fontSize: language === 'zh' ? 10 : 9, fontWeight: 800, letterSpacing: 1.5, color: 'rgba(242,238,227,.68)', zIndex: 20}}>{c.systemLine}</div>
+      <div style={{position: 'absolute', left: 48, right: 48, bottom: 55, paddingTop: 13, borderTop: `1px solid ${C.line}`, fontFamily: sans, fontSize: 14, fontWeight: 800, letterSpacing: 1.5, color: 'rgba(242,238,227,.68)', zIndex: 20}}>{c.systemLine}</div>
       <Grain opacity={0.08} />
     </AbsoluteFill>
   );
@@ -418,15 +432,15 @@ const TemplateSwitcher: React.FC<{frame: number; language: Language}> = ({frame,
   return (
     <AbsoluteFill style={{opacity, overflow: 'hidden', background: C.black}}>
       <div style={{position: 'absolute', left: 48, top: 84, width: 250, bottom: 54, borderTop: `1px solid ${C.line}`}}>
-        <div style={{paddingTop: 18, fontFamily: sans, fontSize: 10, fontWeight: 800, letterSpacing: 2.1, color: 'rgba(242,238,227,.5)'}}>PRODUCTION TEMPLATES / 07</div>
+        <div style={{paddingTop: 18, fontFamily: sans, fontSize: 13, fontWeight: 800, letterSpacing: 2.1, color: 'rgba(242,238,227,.5)'}}>PRODUCTION TEMPLATES / 07</div>
         <div style={{marginTop: 26}}>
           {c.templates.map((label, index) => {
             const isActive = index === active;
             return (
               <div key={label} style={{position: 'relative', height: 64, padding: '11px 12px 9px 24px', borderTop: `1px solid ${C.line}`, color: isActive ? C.black : C.paper, background: isActive ? C.orange : 'transparent'}}>
-                <div style={{position: 'absolute', left: 0, top: 13, fontFamily: sans, fontSize: 9, opacity: isActive ? 0.6 : 0.35}}>0{index + 1}</div>
-                <div style={{fontFamily: display, fontSize: language === 'zh' ? 16 : 13, letterSpacing: -0.4}}>{label}</div>
-                <div style={{marginTop: 5, fontFamily: sans, fontSize: 8, opacity: isActive ? 0.65 : 0.4}}>{c.templateMeta[index][0]}</div>
+                <div style={{position: 'absolute', left: 0, top: 13, fontFamily: sans, fontSize: 14, opacity: isActive ? 0.6 : 0.35}}>0{index + 1}</div>
+                <div style={{fontFamily: display, fontSize: language === 'zh' ? 22 : 18, letterSpacing: -0.4}}>{label}</div>
+                <div style={{marginTop: 5, fontFamily: sans, fontSize: 12, opacity: isActive ? 0.65 : 0.4}}>{c.templateMeta[index][0]}</div>
               </div>
             );
           })}
@@ -437,16 +451,16 @@ const TemplateSwitcher: React.FC<{frame: number; language: Language}> = ({frame,
         <Img src={staticFile(previous.src)} style={{position: 'absolute', left: previous.x + drift, top: previous.y, width: 1130, height: 636, objectFit: 'cover', transform: `scale(${previous.scale})`, transformOrigin: '0 0', filter: 'saturate(.88) contrast(1.04)', opacity: 1 - crossfade}} />
         <Img src={staticFile(current.src)} style={{position: 'absolute', left: current.x + drift, top: current.y, width: 1130, height: 636, objectFit: 'cover', transform: `scale(${current.scale})`, transformOrigin: '0 0', filter: 'saturate(.88) contrast(1.04)', opacity: crossfade}} />
         <div style={{position: 'absolute', inset: 0, boxShadow: 'inset 0 0 0 1px rgba(21,23,21,.2)'}} />
-        <div style={{position: 'absolute', left: 20, top: 18, padding: '9px 12px', background: 'rgba(8,9,8,.82)', color: C.paper, fontFamily: sans, fontSize: 9, fontWeight: 800, letterSpacing: 1.5}}>{c.templates[active]} · 0{active + 1}</div>
+        <div style={{position: 'absolute', left: 20, top: 18, padding: '9px 12px', background: 'rgba(8,9,8,.82)', color: C.paper, fontFamily: sans, fontSize: 14, fontWeight: 800, letterSpacing: 1.5}}>{c.templates[active]} · 0{active + 1}</div>
         <div style={{position: 'absolute', right: 18, top: 18, display: 'flex', gap: 6}}>
           {[C.orange, C.blue, C.sage].map((color) => <div key={color} style={{width: 8, height: 8, borderRadius: 9, background: color}} />)}
         </div>
         <div style={{position: 'absolute', left: 20, right: 20, bottom: 18, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end'}}>
-          <div style={{padding: '14px 16px', maxWidth: 430, background: 'rgba(242,238,227,.92)', color: C.ink}}>
-            <div style={{fontFamily: display, fontSize: language === 'zh' ? 22 : 18, letterSpacing: -0.8}}>{c.templateMeta[active][0]}</div>
-            <div style={{marginTop: 7, fontFamily: sans, fontSize: 11, color: 'rgba(21,23,21,.62)'}}>{c.templateMeta[active][1]}</div>
+          <div style={{padding: '14px 16px', maxWidth: 560, background: 'rgba(242,238,227,.92)', color: C.ink}}>
+            <div style={{fontFamily: display, fontSize: language === 'zh' ? 30 : 27, letterSpacing: -0.8}}>{c.templateMeta[active][0]}</div>
+            <div style={{marginTop: 7, fontFamily: sans, fontSize: 21, color: 'rgba(21,23,21,.62)'}}>{c.templateMeta[active][1]}</div>
           </div>
-          <div style={{fontFamily: sans, fontSize: 9, fontWeight: 800, letterSpacing: 1.2, color: C.paper, background: C.ink, padding: '9px 11px'}}>DRAFT → REVIEW</div>
+          <div style={{fontFamily: sans, fontSize: 14, fontWeight: 800, letterSpacing: 1.2, color: C.paper, background: C.ink, padding: '9px 11px'}}>DRAFT → REVIEW</div>
         </div>
       </div>
 
@@ -471,12 +485,12 @@ const TeamPipeline: React.FC<{frame: number; language: Language}> = ({frame, lan
       </div>
 
       <div style={{position: 'absolute', left: 420, top: 92, right: 46}}>
-        <div style={{fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 39 : 36, lineHeight: 1.03, letterSpacing: -1.8, color: C.ink, maxWidth: 780}}>{c.laneTitle}</div>
-        <div style={{marginTop: 13, fontFamily: sans, fontSize: 13, color: 'rgba(21,23,21,.56)'}}>{c.laneNote}</div>
+        <div style={{fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 39 : 36, lineHeight: 1.25, letterSpacing: -1.8, color: C.ink, maxWidth: 780}}>{c.laneTitle}</div>
+        <div style={{marginTop: 13, fontFamily: sans, fontSize: 20, color: 'rgba(21,23,21,.56)'}}>{c.laneNote}</div>
 
         <div style={{marginTop: 34, display: 'grid', gridTemplateColumns: '150px repeat(4, 1fr)', alignItems: 'end'}}>
           <div />
-          {c.stages.map((stage, index) => <div key={stage} style={{paddingBottom: 9, fontFamily: sans, fontSize: 9, fontWeight: 800, letterSpacing: 1.6, color: index === 3 ? C.orange : 'rgba(21,23,21,.45)'}}>{stage}</div>)}
+          {c.stages.map((stage, index) => <div key={stage} style={{paddingBottom: 9, fontFamily: sans, fontSize: 15, fontWeight: 800, letterSpacing: 1.6, color: index === 3 ? C.orange : 'rgba(21,23,21,.45)'}}>{stage}</div>)}
         </div>
 
         {c.lanes.map((lane, laneIndex) => {
@@ -484,7 +498,7 @@ const TeamPipeline: React.FC<{frame: number; language: Language}> = ({frame, lan
           const color = [C.orange, C.blue, C.sage, C.yellow][laneIndex];
           return (
             <div key={lane} style={{height: 88, display: 'grid', gridTemplateColumns: '150px 1fr', alignItems: 'center', borderTop: `1px solid ${C.darkLine}`}}>
-              <div style={{fontFamily: display, fontSize: language === 'zh' ? 14 : 11, color: C.ink}}>{lane}</div>
+              <div style={{fontFamily: display, fontSize: language === 'zh' ? 20 : 17, color: C.ink}}>{lane}</div>
               <div style={{position: 'relative', height: 48}}>
                 <div style={{position: 'absolute', left: 0, right: 0, top: 23, height: 1, background: C.darkLine}} />
                 <div style={{position: 'absolute', left: 0, top: 20, height: 7, width: `${laneProgress * 100}%`, background: color}} />
@@ -524,15 +538,15 @@ const ReviewLens: React.FC<{frame: number; language: Language}> = ({frame, langu
         </div>
       </div>
 
-      <div style={{position: 'absolute', left: 74, top: 103, width: language === 'zh' ? 560 : 680, padding: '20px 22px', background: 'rgba(8,9,8,.86)', backdropFilter: 'blur(10px)'}}>
-        <div style={{fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 31 : 27, lineHeight: 1.1, color: C.paper, letterSpacing: -1.1}}>{c.reviewTitle}</div>
+      <div style={{position: 'absolute', left: 74, top: 103, width: 830, padding: '20px 22px', background: 'rgba(8,9,8,.86)', backdropFilter: 'blur(10px)'}}>
+        <div style={{fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 34 : 30, lineHeight: 1.3, color: C.paper, letterSpacing: -1.1}}>{c.reviewTitle}</div>
       </div>
 
       <div style={{position: 'absolute', left: 74, right: 74, bottom: 72, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', borderTop: '1px solid rgba(242,238,227,.38)'}}>
         {c.reviewWords.map((word, index) => (
-          <div key={word} style={{minHeight: 88, padding: '14px 12px', borderLeft: index === 0 ? 'none' : `1px solid ${C.line}`, color: C.paper, background: index === active ? 'rgba(235,90,46,.88)' : 'rgba(8,9,8,.72)'}}>
-            <div style={{fontFamily: display, fontSize: language === 'zh' ? 20 : 17, letterSpacing: -0.5}}>{word}</div>
-            <div style={{marginTop: 9, fontFamily: sans, fontSize: language === 'zh' ? 11 : 10, lineHeight: 1.35, color: index === active ? C.black : 'rgba(242,238,227,.55)'}}>{c.reviewNotes[index]}</div>
+          <div key={word} style={{minHeight: 110, padding: '14px 12px', borderLeft: index === 0 ? 'none' : `1px solid ${C.line}`, color: C.paper, background: index === active ? 'rgba(235,90,46,.88)' : 'rgba(8,9,8,.72)'}}>
+            <div style={{fontFamily: display, fontSize: 28, letterSpacing: -0.5}}>{word}</div>
+            <div style={{marginTop: 9, fontFamily: sans, fontSize: 18, lineHeight: 1.35, color: index === active ? C.black : 'rgba(242,238,227,.55)'}}>{c.reviewNotes[index]}</div>
           </div>
         ))}
       </div>
@@ -560,17 +574,17 @@ const Closing: React.FC<{frame: number; language: Language}> = ({frame, language
       <div style={{position: 'absolute', left: 568, top: 120, right: 55, opacity: enter, transform: `translateY(${interpolate(enter, [0, 1], [36, 0])}px)`}}>
         <div style={{fontFamily: heading, fontWeight: 600, fontSize: language === 'zh' ? 44 : 38, lineHeight: 1.23, letterSpacing: -1, color: C.paper}}>{c.close.map((line) => <div key={line}>{line}</div>)}</div>
         <div style={{marginTop: 27, width: interpolate(enter, [0, 1], [0, 154]), height: 3, background: C.orange}} />
-        <div style={{marginTop: 24, maxWidth: 610, fontFamily: sans, fontSize: language === 'zh' ? 15 : 14, lineHeight: 1.6, color: 'rgba(242,238,227,.62)'}}>{c.closeNote}</div>
+        <div style={{marginTop: 24, maxWidth: 610, fontFamily: sans, fontSize: 22, lineHeight: 1.6, color: 'rgba(242,238,227,.62)'}}>{c.closeNote}</div>
       </div>
 
       <div style={{position: 'absolute', left: 568, right: 55, top: 408, height: 174}}>
         {['STYLE.md', 'SKILL.md', 'style-pack.json'].map((file, index) => {
-          const cardIn = easeOut(p(local, 36 + index * 10, 72 + index * 10));
+          const cardIn = easeOut(p(local, 10 + index * 7, 28 + index * 7));
           return (
-            <div key={file} style={{position: 'absolute', left: index * 155, top: index * 9, width: 210, height: 126, padding: '18px 17px', background: index === 1 ? C.orange : C.paper, color: C.ink, border: `1px solid ${index === 1 ? C.orange : C.paper}`, transform: `translateX(${interpolate(cardIn, [0, 1], [48, 0])}px) rotate(${[-2.4, 1.5, -1][index]}deg)`, opacity: cardIn, boxShadow: '10px 14px 0 rgba(0,0,0,.22)'}}>
+            <div key={file} style={{position: 'absolute', left: index * 218, top: index * 9, width: 210, height: 152, padding: '18px 17px', background: index === 1 ? C.orange : C.paper, color: C.ink, border: `1px solid ${index === 1 ? C.orange : C.paper}`, transform: `translateX(${interpolate(cardIn, [0, 1], [48, 0])}px) rotate(${[-2.4, 1.5, -1][index]}deg)`, opacity: cardIn, boxShadow: '10px 14px 0 rgba(0,0,0,.22)'}}>
               <div style={{width: 38, height: 5, background: index === 1 ? C.black : C.orange}} />
-              <div style={{marginTop: 36, fontFamily: sans, fontSize: 16, fontWeight: 800}}>{file}</div>
-              <div style={{marginTop: 8, fontFamily: sans, fontSize: 8, letterSpacing: 1.3, opacity: 0.52}}>VERSIONED / PORTABLE / REVIEWABLE</div>
+              <div style={{marginTop: 36, fontFamily: sans, fontSize: 19, fontWeight: 800}}>{file}</div>
+              <div style={{marginTop: 8, fontFamily: sans, fontSize: 10, letterSpacing: 1.3, opacity: 0.52}}>VERSIONED / PORTABLE / REVIEWABLE</div>
             </div>
           );
         })}
@@ -583,7 +597,8 @@ const Closing: React.FC<{frame: number; language: Language}> = ({frame, language
 };
 
 export const ArtDirectorFilm: React.FC<ArtDirectorFilmProps> = ({language, startFrame = 0, localFonts = false}) => {
-  const frame = useCurrentFrame() + startFrame;
+  const elapsed = useCurrentFrame() + startFrame;
+  const frame = storyFrame(elapsed);
   return (
     <AbsoluteFill style={{background: C.black}}>
       <RenderFonts enabled={localFonts} />
@@ -594,7 +609,7 @@ export const ArtDirectorFilm: React.FC<ArtDirectorFilmProps> = ({language, start
       {frame >= 610 && frame < 792 && <TeamPipeline frame={frame} language={language} />}
       {frame >= 738 && frame < 872 && <ReviewLens frame={frame} language={language} />}
       {frame >= 816 && <Closing frame={frame} language={language} />}
-      <Rail frame={frame} language={language} />
+      <Rail frame={elapsed} language={language} />
       <div style={{position: 'absolute', left: 36, bottom: 22, fontFamily: sans, fontSize: 8, fontWeight: 800, letterSpacing: 1.7, color: 'rgba(242,238,227,.34)', zIndex: 40}}>{copy[language].footer}</div>
     </AbsoluteFill>
   );

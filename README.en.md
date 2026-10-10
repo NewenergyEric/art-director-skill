@@ -17,11 +17,11 @@
 Start with existing work, references, and feedback. Build the visual language, component families, exemplars, and acceptance criteria, then share them as a project Skill so the next teammate starts from the same version.
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/quick-preview-en.jpg">
-  <img src="assets/readme/quick-preview-en.gif" width="100%" alt="A six-second introduction to building the spec, calibrating exemplars, and sharing the project skill with the team.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/quick-preview-en.jpg?v=readability-20261010-final">
+  <img src="assets/readme/quick-preview-en.gif?v=readability-20261010-final" width="100%" alt="A twelve-second introduction to building the spec, calibrating exemplars, and sharing the project skill with the team.">
 </picture></a>
 
-<p align="center"><sub>The core flow in 6 seconds · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo">try the rule comparison</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">watch the full 30 fps film and four focused clips</a></sub></p>
+<p align="center"><sub>The core flow in 12 seconds · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo">try the rule comparison</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">watch the full 30 fps film and four focused clips</a></sub></p>
 
 **Agent Skills** · Codex · Claude Code · Cursor · install in other tools according to their Skill support
 
@@ -98,7 +98,7 @@ The mother Skill ZIP is also available from the [v0.5.1 release](https://github.
 
 | Entry | What it demonstrates |
 |---|---|
-| [30-second video introduction](https://newenergyeric.github.io/art-director-skill/docs/assets/motion/art-director-intro-en.mp4) | The director and team moving through template switching, parallel production, and review feedback in one system |
+| [70-second video introduction](https://newenergyeric.github.io/art-director-skill/docs/assets/motion/art-director-intro-en.mp4) | The director and team moving through template switching, parallel production, and review feedback in one system |
 | [Director workbench](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) | The full path from source material and positioning through families, exemplars, team use, and iteration |
 | [Harbor Studio](examples/harbor-studio-draft/guides/00-index.md) | Eight game-production families, exemplar planning, tasks, and member handoff |
 | [Weekend Drinks](examples/campaign-studio-draft/guides/00-index.md) | One specification across product, graphics, typography, UI, and channel compositions |

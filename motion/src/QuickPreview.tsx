@@ -1,6 +1,7 @@
 import React from 'react';
 import {RenderFonts, uiFont} from './RenderFonts';
 import {AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import timeline from './timeline.json';
 
 const font = uiFont;
 const text = {
@@ -12,8 +13,8 @@ export const QuickPreview: React.FC<{language: 'zh' | 'en'; localFonts?: boolean
   const frame = useCurrentFrame();
   const c = text[language];
   // Three calm, readable holds. Only the indicator and entry offset move.
-  const active = Math.min(2, Math.floor(frame / 60));
-  const enter = interpolate(frame % 60, [0, 12], [0, 1], {extrapolateRight: 'clamp'});
+  const active = Math.min(2, Math.floor(frame / timeline.previewStepFrames));
+  const enter = interpolate(frame % timeline.previewStepFrames, [0, 20], [0, 1], {extrapolateRight: 'clamp'});
   return <AbsoluteFill style={{background: '#f6f5f0', color: '#20221f', fontFamily: font, overflow: 'hidden'}}>
     <RenderFonts enabled={localFonts} />
     <div style={{position: 'absolute', left: 64, top: 46, fontSize: 16, letterSpacing: 2, fontWeight: 700}}>ART DIRECTOR <span style={{color: '#cc5632'}}>●</span></div>
@@ -32,11 +33,11 @@ export const QuickPreview: React.FC<{language: 'zh' | 'en'; localFonts?: boolean
       <Img src={staticFile('studio/asset-system-board.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
       <div style={{position: 'absolute', left: 20, top: 20, padding: '8px 13px', borderRadius: 30, background: '#fff', color: '#545a50', fontSize: 12}}>ART DIRECTION / ORIGINAL DEMO</div>
     </div>
-    <div style={{position: 'absolute', left: 674, right: 87, top: 502, padding: '25px 28px', background: '#fff', borderRadius: 14, boxShadow: '0 14px 40px rgba(20,25,18,.09)', transform: `translateY(${(1-enter)*6}px)`}}>
-      <div style={{fontSize: 20, fontWeight: 600}}>{c.labels[active]}</div>
-      <div style={{marginTop: 12, fontSize: 16, lineHeight: 1.5, color: '#65685f'}}>{c.notes[active]}</div>
+    <div style={{position: 'absolute', left: 628, right: 42, top: 466, minHeight: 172, padding: '27px 30px', background: '#fff', borderRadius: 16, boxShadow: '0 14px 40px rgba(20,25,18,.09)', transform: `translateY(${(1-enter)*6}px)`}}>
+      <div style={{fontSize: language === 'zh' ? 34 : 30, fontWeight: 600, lineHeight: 1.3}}>{c.labels[active]}</div>
+      <div style={{marginTop: 16, fontSize: 25, lineHeight: 1.5, color: '#51564c'}}>{c.notes[active]}</div>
     </div>
     <div style={{position: 'absolute', left: 64, bottom: 37, fontSize: 14, color: '#65685f'}}>{c.footer}</div>
-    <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 3, background: '#ddd'}}><div style={{height: '100%', width: `${frame / 179 * 100}%`, background: '#cc5632'}} /></div>
+    <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 3, background: '#ddd'}}><div style={{height: '100%', width: `${frame / (timeline.previewFrames - 1) * 100}%`, background: '#cc5632'}} /></div>
   </AbsoluteFill>;
 };

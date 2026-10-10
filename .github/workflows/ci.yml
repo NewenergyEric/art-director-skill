@@ -48,3 +48,5 @@ jobs:
       - run: npm ci
       - name: Compile and list compositions
         run: npm run motion:check -- --browser-executable=/usr/bin/google-chrome --chrome-mode=chrome-for-testing
+      - name: Render a frame to catch runtime component errors
+        run: npx remotion still motion/src/index.ts ArtDirectorZH "${{ runner.temp }}/motion-proof.png" --frame=530 --public-dir=motion/public --browser-executable=/usr/bin/google-chrome --chrome-mode=chrome-for-testing

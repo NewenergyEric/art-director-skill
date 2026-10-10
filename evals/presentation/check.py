@@ -38,6 +38,25 @@ def main():
     def check(name, ok):
         checks.append({'name': name, 'pass': bool(ok)})
     manifest = json.loads((ROOT / 'docs/assets/motion/manifest.json').read_text(encoding='utf-8'))
+    timeline = json.loads((ROOT / 'motion/src/timeline.json').read_text(encoding='utf-8'))
+    durations = {c['file']: c['duration'] / timeline['fps'] for c in timeline['clips']}
+    check('shared timeline has ordered beats and readable holds',
+          all(a[0] < b[0] and a[1] < b[1] for a, b in zip(timeline['beats'], timeline['beats'][1:]))
+          and timeline['previewStepFrames'] / timeline['fps'] >= 4
+          and durations['style-directions'] / 4 >= 4
+          and durations['template-switch'] / 7 >= 3)
+    for lang in ('zh', 'en'):
+        captions = (ROOT / f'docs/assets/motion/intro-{lang}.vtt').read_text(encoding='utf-8')
+        def seconds(stamp):
+            parts = stamp.split(':')
+            return sum(float(part) * 60 ** index for index, part in enumerate(reversed(parts)))
+        intervals = [(seconds(a), seconds(b)) for a, b in re.findall(
+            r'((?:\d{2}:)?\d{2}:\d{2}\.\d{3}) --> ((?:\d{2}:)?\d{2}:\d{2}\.\d{3})', captions)]
+        check(lang + ': captions cover the retimed film without reversed or overlapping cues',
+              len(intervals) == 7 and intervals[0][0] == 0
+              and all(a < b for a, b in intervals)
+              and all(a[1] <= b[0] for a, b in zip(intervals, intervals[1:]))
+              and intervals[-1][1] == timeline['masterFrames'] / timeline['fps'])
     for item in manifest['assets']:
         path = ROOT / item['path']
         check(item['path'] + ': matches recorded bytes and digest',
@@ -46,7 +65,7 @@ def main():
     for lang, name in [('zh', 'README.md'), ('en', 'README.en.md')]:
         text = (ROOT / name).read_text(encoding='utf-8')
         sources = re.findall(r'<img\b[^>]*src="([^"]+)"', text)
-        gifs = [src for src in sources if src.endswith('.gif')]
+        gifs = [urlsplit(src).path for src in sources if urlsplit(src).path.endswith('.gif')]
         check(name + ': one repository-hosted preview GIF only',
               gifs == [f'assets/readme/quick-preview-{lang}.gif'])
         check(name + ': full film and all four clips remain discoverable',
@@ -55,7 +74,7 @@ def main():
         check(name + ': GIF under 2 MiB', path.stat().st_size <= 2 * MIB)
         check(name + ': valid GIF header', path.read_bytes()[:6] in (b'GIF89a', b'GIF87a'))
     for path in (ROOT / 'docs/assets/motion').glob('*.mp4'):
-        limit = (5 if 'intro' in path.name else 1 if 'quick-preview' in path.name else 2) * MIB
+        limit = (10 if 'intro' in path.name else 1 if 'quick-preview' in path.name else 5) * MIB
         check(path.name + ': media byte budget', path.stat().st_size <= limit)
         boxes = {kind: start for kind, start, _, _ in atoms(path.read_bytes())}
         check(path.name + ': faststart metadata precedes video payload',
@@ -69,18 +88,22 @@ def main():
             check(path.name + ': H.264 at 30 fps',
                   stream['codec_name'] == 'h264' and stream['avg_frame_rate'] == '30/1')
             duration = float(probe['format']['duration'])
-            expected = 30 if 'intro' in path.name else 6 if 'quick-preview' in path.name else None
+            expected = timeline['masterFrames'] / timeline['fps'] if 'intro' in path.name else timeline['previewFrames'] / timeline['fps'] if 'quick-preview' in path.name else durations.get(path.stem.rsplit('-', 1)[0])
             if expected:
                 check(path.name + ': intended duration', abs(duration - expected) < .1)
+            resolution = (1280, 720) if 'quick-preview' in path.name else (1100, 618)
+            check(path.name + ': intended readable resolution',
+                  (stream['width'], stream['height']) == resolution)
     for lang in ('zh', 'en'):
         if args.probe:
             probe = json.loads(subprocess.check_output([
                 'ffprobe', '-v', 'error', '-select_streams', 'v:0',
                 '-show_entries', 'stream=avg_frame_rate:format=duration', '-of', 'json',
                 str(ROOT / f'assets/readme/quick-preview-{lang}.gif')], text=True))
-            check(lang + ': GIF is 20 fps and 6 seconds',
+            check(lang + ': GIF is 20 fps, 1100 px wide and 12 seconds',
                   probe['streams'][0]['avg_frame_rate'] == '20/1'
-                  and abs(float(probe['format']['duration']) - 6) < .1)
+                  and abs(float(probe['format']['duration']) - 12) < .1
+                  and struct.unpack_from('<H', (ROOT / f'assets/readme/quick-preview-{lang}.gif').read_bytes(), 6)[0] == 1100)
     for name in ('landing.html', 'workbench.html'):
         path = ROOT / 'docs' / name
         text = path.read_text(encoding='utf-8')

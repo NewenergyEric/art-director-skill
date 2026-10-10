@@ -1,9 +1,21 @@
 {
   "method": "Media budgets, checksums, MP4 atoms, static local links; optional ffprobe. Browser behaviour is checked separately.",
-  "passed": 129,
-  "total": 129,
+  "passed": 152,
+  "total": 152,
   "failed": [],
   "checks": [
+    {
+      "name": "shared timeline has ordered beats and readable holds",
+      "pass": true
+    },
+    {
+      "name": "zh: captions cover the retimed film without reversed or overlapping cues",
+      "pass": true
+    },
+    {
+      "name": "en: captions cover the retimed film without reversed or overlapping cues",
+      "pass": true
+    },
     {
       "name": "docs/assets/motion/art-director-intro-en.mp4: matches recorded bytes and digest",
       "pass": true
@@ -177,6 +189,10 @@
       "pass": true
     },
     {
+      "name": "art-director-intro-en.mp4: intended readable resolution",
+      "pass": true
+    },
+    {
       "name": "art-director-intro-zh.mp4: media byte budget",
       "pass": true
     },
@@ -190,6 +206,10 @@
     },
     {
       "name": "art-director-intro-zh.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "art-director-intro-zh.mp4: intended readable resolution",
       "pass": true
     },
     {
@@ -209,6 +229,10 @@
       "pass": true
     },
     {
+      "name": "quick-preview-en.mp4: intended readable resolution",
+      "pass": true
+    },
+    {
       "name": "quick-preview-zh.mp4: media byte budget",
       "pass": true
     },
@@ -225,6 +249,10 @@
       "pass": true
     },
     {
+      "name": "quick-preview-zh.mp4: intended readable resolution",
+      "pass": true
+    },
+    {
       "name": "review-lens-en.mp4: media byte budget",
       "pass": true
     },
@@ -234,6 +262,14 @@
     },
     {
       "name": "review-lens-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "review-lens-en.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "review-lens-en.mp4: intended readable resolution",
       "pass": true
     },
     {
@@ -249,6 +285,14 @@
       "pass": true
     },
     {
+      "name": "review-lens-zh.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "review-lens-zh.mp4: intended readable resolution",
+      "pass": true
+    },
+    {
       "name": "style-directions-en.mp4: media byte budget",
       "pass": true
     },
@@ -258,6 +302,14 @@
     },
     {
       "name": "style-directions-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "style-directions-en.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "style-directions-en.mp4: intended readable resolution",
       "pass": true
     },
     {
@@ -273,6 +325,14 @@
       "pass": true
     },
     {
+      "name": "style-directions-zh.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "style-directions-zh.mp4: intended readable resolution",
+      "pass": true
+    },
+    {
       "name": "team-pipeline-en.mp4: media byte budget",
       "pass": true
     },
@@ -282,6 +342,14 @@
     },
     {
       "name": "team-pipeline-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "team-pipeline-en.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "team-pipeline-en.mp4: intended readable resolution",
       "pass": true
     },
     {
@@ -297,6 +365,14 @@
       "pass": true
     },
     {
+      "name": "team-pipeline-zh.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "team-pipeline-zh.mp4: intended readable resolution",
+      "pass": true
+    },
+    {
       "name": "template-switch-en.mp4: media byte budget",
       "pass": true
     },
@@ -306,6 +382,14 @@
     },
     {
       "name": "template-switch-en.mp4: H.264 at 30 fps",
+      "pass": true
+    },
+    {
+      "name": "template-switch-en.mp4: intended duration",
+      "pass": true
+    },
+    {
+      "name": "template-switch-en.mp4: intended readable resolution",
       "pass": true
     },
     {
@@ -321,11 +405,19 @@
       "pass": true
     },
     {
-      "name": "zh: GIF is 20 fps and 6 seconds",
+      "name": "template-switch-zh.mp4: intended duration",
       "pass": true
     },
     {
-      "name": "en: GIF is 20 fps and 6 seconds",
+      "name": "template-switch-zh.mp4: intended readable resolution",
+      "pass": true
+    },
+    {
+      "name": "zh: GIF is 20 fps, 1100 px wide and 12 seconds",
+      "pass": true
+    },
+    {
+      "name": "en: GIF is 20 fps, 1100 px wide and 12 seconds",
       "pass": true
     },
     {
@@ -345,11 +437,11 @@
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/quick-preview-zh.jpg",
+      "name": "landing.html: local link assets/motion/quick-preview-zh.jpg?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/quick-preview-zh.mp4",
+      "name": "landing.html: local link assets/motion/quick-preview-zh.mp4?v=readability-20261010-final",
       "pass": true
     },
     {
@@ -365,7 +457,7 @@
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/game-board.jpg",
+      "name": "landing.html: local link assets/motion/game-board.jpg?v=readability-20261010-final",
       "pass": true
     },
     {
@@ -385,55 +477,55 @@
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/intro-zh.jpg",
+      "name": "landing.html: local link assets/motion/intro-zh.jpg?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/art-director-intro-zh.mp4",
+      "name": "landing.html: local link assets/motion/art-director-intro-zh.mp4?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/intro-zh.vtt",
+      "name": "landing.html: local link assets/motion/intro-zh.vtt?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/art-director-intro-zh.mp4",
+      "name": "landing.html: local link assets/motion/art-director-intro-zh.mp4?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/art-director-intro-en.mp4",
+      "name": "landing.html: local link assets/motion/art-director-intro-en.mp4?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/style-directions-zh.jpg",
+      "name": "landing.html: local link assets/motion/style-directions-zh.jpg?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/style-directions-zh.mp4",
+      "name": "landing.html: local link assets/motion/style-directions-zh.mp4?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/template-switch-zh.jpg",
+      "name": "landing.html: local link assets/motion/template-switch-zh.jpg?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/template-switch-zh.mp4",
+      "name": "landing.html: local link assets/motion/template-switch-zh.mp4?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/team-pipeline-zh.jpg",
+      "name": "landing.html: local link assets/motion/team-pipeline-zh.jpg?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/team-pipeline-zh.mp4",
+      "name": "landing.html: local link assets/motion/team-pipeline-zh.mp4?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/review-lens-zh.jpg",
+      "name": "landing.html: local link assets/motion/review-lens-zh.jpg?v=readability-20261010-final",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/review-lens-zh.mp4",
+      "name": "landing.html: local link assets/motion/review-lens-zh.mp4?v=readability-20261010-final",
       "pass": true
     },
     {

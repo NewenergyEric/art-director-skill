@@ -17,11 +17,11 @@
 从已有作品、参考与批注开始，带主美建立视觉语言、组件家族、代表样板和验收要求；再把这些判断打包成项目 Skill，交给团队从同一版本继续。
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/quick-preview-zh.jpg">
-  <img src="assets/readme/quick-preview-zh.gif" width="100%" alt="六秒了解主美建立规范、样板校准方向、项目包交给团队的完整路径。">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/quick-preview-zh.jpg?v=readability-20261010-final">
+  <img src="assets/readme/quick-preview-zh.gif?v=readability-20261010-final" width="100%" alt="十二秒了解主美建立规范、样板校准方向、项目包交给团队的完整路径。">
 </picture></a>
 
-<p align="center"><sub>6 秒看懂核心流程 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo">试试规则对照</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">观看 30 fps 完整介绍与四组分镜</a></sub></p>
+<p align="center"><sub>12 秒看懂核心流程 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#demo">试试规则对照</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">观看 30 fps 完整介绍与四组分镜</a></sub></p>
 
 **Agent Skills** · Codex · Claude Code · Cursor · 其他工具按其 Skill 支持方式安装
 
@@ -98,7 +98,7 @@ Agent 会把任务绑定到固定版本和对应家族，生成制作说明、�
 
 | 入口 | 证明什么 |
 |---|---|
-| [30 秒视频介绍](https://newenergyeric.github.io/art-director-skill/docs/assets/motion/art-director-intro-zh.mp4) | 主美与团队在同一系统里完成模板切换、并行生产和评审回流 |
+| [70 秒视频介绍](https://newenergyeric.github.io/art-director-skill/docs/assets/motion/art-director-intro-zh.mp4) | 主美与团队在同一系统里完成模板切换、并行生产和评审回流 |
 | [主美工作台](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) | 从资料、定位、家族、样板到项目包、成员制作和迭代的完整路径 |
 | [港湾工作室](examples/harbor-studio-draft/guides/00-index.md) | 游戏项目的 8 个家族、样板计划、任务与团队接包 |
 | [周末轻饮](examples/campaign-studio-draft/guides/00-index.md) | 商品、图形、文字、UI 与多渠道组合的同源规范 |

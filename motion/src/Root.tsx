@@ -2,21 +2,17 @@ import React from 'react';
 import {Composition} from 'remotion';
 import {ArtDirectorFilm, ArtDirectorSocialPreview, type ArtDirectorFilmProps} from './ArtDirectorFilm';
 import {QuickPreview} from './QuickPreview';
+import timeline from './timeline.json';
 
 const shared = {
   component: ArtDirectorFilm,
-  durationInFrames: 900,
+  durationInFrames: timeline.masterFrames,
   fps: 30,
   width: 1280,
   height: 720,
 } as const;
 
-const clips = [
-  {name: 'StyleDirections', from: 308, duration: 180},
-  {name: 'TemplateSwitch', from: 474, duration: 174},
-  {name: 'TeamPipeline', from: 626, duration: 152},
-  {name: 'ReviewLens', from: 752, duration: 110},
-] as const;
+const clips = timeline.clips;
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -24,7 +20,7 @@ export const RemotionRoot: React.FC = () => (
       key={language}
       id={language === 'zh' ? 'QuickPreviewZH' : 'QuickPreviewEN'}
       component={QuickPreview}
-      durationInFrames={180}
+      durationInFrames={timeline.previewFrames}
       fps={30}
       width={1280}
       height={720}

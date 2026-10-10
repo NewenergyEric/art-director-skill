@@ -15,15 +15,13 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 ENTRY = ROOT / "motion" / "src" / "index.ts"
 PUBLIC_DIR = ROOT / "motion" / "public"
-FPS = 30
-MASTER_FRAMES = 900
+TIMELINE = json.loads((ROOT / "motion/src/timeline.json").read_text(encoding="utf-8"))
+FPS = TIMELINE["fps"]
+MASTER_FRAMES = TIMELINE["masterFrames"]
+PREVIEW_FRAMES = TIMELINE["previewFrames"]
+MASTER_SECONDS = MASTER_FRAMES / FPS
 
-CLIPS = {
-    "style-directions": (308 / 30, 180 / 30),
-    "template-switch": (474 / 30, 174 / 30),
-    "team-pipeline": (626 / 30, 152 / 30),
-    "review-lens": (752 / 30, 110 / 30),
-}
+CLIPS = {c["file"]: (c["from"] / FPS, c["duration"] / FPS) for c in TIMELINE["clips"]}
 
 
 def run(command: list[str]) -> None:
@@ -87,7 +85,7 @@ def render_silent(language: str, output: Path, browser: str | None, ffmpeg: str,
         f"--public-dir={PUBLIC_DIR}",
         "--sequence",
         "--image-format=jpeg",
-        "--jpeg-quality=90",
+        "--jpeg-quality=95",
         "--image-sequence-pattern=frame-[frame].jpeg",
         "--concurrency=4",
         "--overwrite",
@@ -97,7 +95,7 @@ def render_silent(language: str, output: Path, browser: str | None, ffmpeg: str,
         command.extend([f"--browser-executable={browser}", "--chrome-mode=chrome-for-testing"])
     try:
         run(command)
-        digits = len(str((180 if quick else MASTER_FRAMES) - 1))
+        digits = len(str((PREVIEW_FRAMES if quick else MASTER_FRAMES) - 1))
         run([
             ffmpeg,
             "-hide_banner",
@@ -128,16 +126,24 @@ def render_silent(language: str, output: Path, browser: str | None, ffmpeg: str,
 
 
 def make_score(ffmpeg: str, output: Path) -> None:
+    def delay(old_ms: int) -> int:
+        old_frame = old_ms * FPS / 1000
+        for (old_start, start), (old_end, end) in zip(TIMELINE["beats"], TIMELINE["beats"][1:]):
+            if old_start <= old_frame <= old_end:
+                return round((start + (old_frame - old_start) * (end - start) / (old_end - old_start)) * 1000 / FPS)
+        raise ValueError("Sound cue falls outside the film")
+
+    cues = [delay(ms) for ms in (3600, 11200, 18200, 26400, 9200, 13200, 17200, 22400, 27800)]
     filter_complex = (
-        "[0:a]volume=0.018,lowpass=f=180,afade=t=in:d=1.5,afade=t=out:st=28:d=2[bed];"
-        "[1:a]volume=0.0035,lowpass=f=900,highpass=f=90,afade=t=in:d=2,afade=t=out:st=28:d=2[air];"
+        "[0:a]volume=0.018,lowpass=f=180,afade=t=in:d=1.5,afade=t=out:st=68:d=2[bed];"
+        "[1:a]volume=0.0035,lowpass=f=900,highpass=f=90,afade=t=in:d=2,afade=t=out:st=68:d=2[air];"
         "[2:a]volume=0.055,afade=t=out:st=0.04:d=0.10,asplit=4[c1][c2][c3][c4];"
-        "[c1]adelay=3600|3600[c1d];[c2]adelay=11200|11200[c2d];"
-        "[c3]adelay=18200|18200[c3d];[c4]adelay=26400|26400[c4d];"
+        f"[c1]adelay={cues[0]}|{cues[0]}[c1d];[c2]adelay={cues[1]}|{cues[1]}[c2d];"
+        f"[c3]adelay={cues[2]}|{cues[2]}[c3d];[c4]adelay={cues[3]}|{cues[3]}[c4d];"
         "[3:a]volume=0.035,afade=t=out:st=0.025:d=0.06,asplit=5[k1][k2][k3][k4][k5];"
-        "[k1]adelay=9200|9200[k1d];[k2]adelay=13200|13200[k2d];"
-        "[k3]adelay=17200|17200[k3d];[k4]adelay=22400|22400[k4d];"
-        "[k5]adelay=27800|27800[k5d];"
+        f"[k1]adelay={cues[4]}|{cues[4]}[k1d];[k2]adelay={cues[5]}|{cues[5]}[k2d];"
+        f"[k3]adelay={cues[6]}|{cues[6]}[k3d];[k4]adelay={cues[7]}|{cues[7]}[k4d];"
+        f"[k5]adelay={cues[8]}|{cues[8]}[k5d];"
         "[bed][air][c1d][c2d][c3d][c4d][k1d][k2d][k3d][k4d][k5d]"
         "amix=inputs=11:duration=longest:normalize=0,alimiter=limit=.72[out]"
     )
@@ -150,11 +156,11 @@ def make_score(ffmpeg: str, output: Path) -> None:
         "-f",
         "lavfi",
         "-i",
-        "sine=frequency=55:sample_rate=48000:duration=30",
+        "sine=frequency=55:sample_rate=48000:duration=70",
         "-f",
         "lavfi",
         "-i",
-        "anoisesrc=color=pink:sample_rate=48000:duration=30",
+        "anoisesrc=color=pink:sample_rate=48000:duration=70",
         "-f",
         "lavfi",
         "-i",
@@ -191,7 +197,7 @@ def mux(ffmpeg: str, video: Path, score: Path, output: Path) -> None:
         "-c:v",
         "libx264",
         "-vf",
-        "scale=960:-2:flags=lanczos",
+        "scale=1100:-2:flags=lanczos",
         "-crf",
         "26",
         "-preset",
@@ -231,7 +237,7 @@ def gif(ffmpeg: str, source: Path, output: Path, fps: int, start: float | None =
     run(command)
 
 
-def still(ffmpeg: str, source: Path, output: Path, at: float = 29.25) -> None:
+def still(ffmpeg: str, source: Path, output: Path, at: float = 69.25) -> None:
     run([
         ffmpeg,
         "-hide_banner",
@@ -251,9 +257,10 @@ def still(ffmpeg: str, source: Path, output: Path, at: float = 29.25) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--language", choices=("zh", "en", "both"), default="both")
-    parser.add_argument("--out", type=Path, default=ROOT / "motion" / "out" / "presentation-20261010")
+    parser.add_argument("--out", type=Path, default=ROOT / "motion" / "out" / "readability-20261010")
     parser.add_argument("--browser", help="Chrome/Edge executable; also reads REMOTION_BROWSER_EXECUTABLE")
     parser.add_argument("--skip-render", action="store_true", help="Reuse existing *-silent.mp4 files")
+    parser.add_argument("--skip-clip-gifs", action="store_true")
     parser.add_argument("--gif-fps", type=int, default=20)
     args = parser.parse_args()
     if not 16 <= args.gif_fps <= 30:
@@ -288,26 +295,27 @@ def main() -> int:
         web = ROOT / "docs" / "assets" / "motion"
         web.mkdir(parents=True, exist_ok=True)
         gif(ffmpeg, quick, readme / f"quick-preview-{language}.gif", args.gif_fps,
-            width=640, max_colors=96)
+            width=TIMELINE["readmeWidth"], max_colors=128)
         shutil.copy2(quick, web / f"quick-preview-{language}.mp4")
         still(ffmpeg, quick, readme / f"quick-preview-{language}.jpg", at=1.5)
         shutil.copy2(readme / f"quick-preview-{language}.jpg", web / f"quick-preview-{language}.jpg")
         shutil.copy2(final, web / final.name)
         for name, (clip_start, clip_duration) in CLIPS.items():
-            gif(
-                ffmpeg,
-                final,
-                output_dir / f"{name}-{language}.gif",
-                16,
-                start=clip_start,
-                duration=clip_duration,
-                width=560,
-                max_colors=64,
-            )
+            if not args.skip_clip_gifs:
+                gif(
+                    ffmpeg,
+                    final,
+                    output_dir / f"{name}-{language}.gif",
+                    16,
+                    start=clip_start,
+                    duration=clip_duration,
+                    width=560,
+                    max_colors=64,
+                )
             # Browser playback uses hardware-decoded 30fps H.264, not GIFs.
             run([ffmpeg, "-hide_banner", "-loglevel", "error", "-y",
                  "-ss", str(clip_start), "-i", str(final), "-t", str(clip_duration),
-                 "-an", "-c:v", "libx264", "-crf", "28", "-preset", "slow",
+                 "-an", "-c:v", "libx264", "-crf", "26", "-preset", "slow",
                  "-pix_fmt", "yuv420p", "-movflags", "+faststart",
                  str(web / f"{name}-{language}.mp4")])
             still(ffmpeg, final, web / f"{name}-{language}.jpg", at=clip_start + .6)
@@ -318,7 +326,7 @@ def main() -> int:
                                *sorted((ROOT / "assets/readme").glob('quick-preview-*'))]
               if file.suffix in ('.mp4', '.gif', '.jpg', '.vtt')]
     manifest = {"schema_version": "1.0", "master_fps": FPS,
-                "readme_gif_fps": args.gif_fps, "readme_duration_seconds": 6,
+                "readme_gif_fps": args.gif_fps, "readme_duration_seconds": PREVIEW_FRAMES / FPS, "master_duration_seconds": MASTER_SECONDS,
                 "font": "Microsoft YaHei / SimHei (system; font files are not redistributed)",
                 "assets": [{"path": file.relative_to(ROOT).as_posix(),
                             "bytes": file.stat().st_size,

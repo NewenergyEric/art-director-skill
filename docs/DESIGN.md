@@ -42,11 +42,13 @@ Reviewed [Refero's Figma style reference](https://styles.refero.design/style/5fd
 
 ## Motion and loading
 
-- GitHub: one 6-second, 20 fps preview GIF, stored with a relative repository URL. Budget: 2 MiB per language. Full introductions and focused clips link to the site.
-- Web: H.264 MP4 at 30 fps with `faststart`; same-origin files, not Release redirect URLs. Full film budget: 5 MiB per language. Preview budget: 1 MiB.
+- GitHub: one 12-second, 1100 px wide, 20 fps preview GIF, stored with a relative repository URL. Budget: 2 MiB per language. Each overview step holds for four seconds. Full introductions and focused clips link to the site.
+- Web: H.264 MP4 at 30 fps with `faststart`; same-origin files, not Release redirect URLs. Full film budget: 10 MiB per language. Preview budget: 1 MiB.
 - Full film and focused videos use `preload="none"`, posters, controls and inline playback. Only one video plays at a time.
 - Autoplay only the muted short preview while visible. Pause out of view or when the page is hidden. Respect reduced motion and Save-Data. A manual play/pause action remains available.
 - Motion is driven by Remotion frames. Use long reading holds and restrained easing. Avoid animated noise; it consumes bytes without explaining the workflow.
+- The full introduction lasts 70 seconds: approximately four seconds per visual language and three seconds per production template. Larger floating panels use 30–42 px titles and 21–25 px explanations on the 1280 × 720 canvas. The short preview has a fullscreen button and native playback controls; focused clips use two desktop columns and one phone column.
+- Keep film, clip, caption and sound-cue timing derived from `motion/src/timeline.json`. Add a version query when replacing published media so cached six-second previews cannot appear beside twelve-second copy.
 - On Windows, local YaHei subsets can be prepared for rendering under ignored `motion/public/render-fonts/`. Never commit or redistribute proprietary font files. Rendered pixels are the published output.
 
 ## Claims and examples
