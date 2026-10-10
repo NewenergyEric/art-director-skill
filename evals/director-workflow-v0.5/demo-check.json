@@ -1,21 +1,21 @@
 {
   "schema_version": "1.0",
-  "checked_at": "2026-10-10T00:44:14.837Z",
+  "checked_at": "2026-10-10T00:49:12.940Z",
   "command": "node evals/director-workflow-v0.5/demo-check.cjs",
   "script": {
     "path": "evals/director-workflow-v0.5/demo-check.cjs",
-    "sha256": "4fb01db6ccca39df3fc374e1d287176633fe8c46d48102e3d57c2f43a1ad611f"
+    "sha256": "edfffc8d4808b14b7b3a1b6e3b1700edf62cd955a72146ab45aa04224830d933"
   },
   "checked_files": [
     {
       "path": "docs/workbench.html",
-      "sha256": "2e86e27476da9d494e6851b9a9d475bcb0662f712267cc895de4f9a45ffa96df",
-      "bytes": 81569
+      "sha256": "28604756af58f03d75c62db671ce987977c4272e3cd08b649bcd0c4d5d475f36",
+      "bytes": 81578
     },
     {
       "path": "docs/call-flow.html",
-      "sha256": "0c9f2b3b26cd106a1f4bd1bd5b109412e2a82ebc98febc0bf0aa9ea4cfd81b85",
-      "bytes": 71260
+      "sha256": "dd1d17df591ad87986763e8e58f096dff096645d1b8158b94c543763db651cf7",
+      "bytes": 71275
     },
     {
       "path": "docs/member-workbench.html",
@@ -137,7 +137,7 @@
       "pass": true
     },
     {
-      "name": "director draft text is escaped",
+      "name": "director draft text stays literal",
       "pass": true
     },
     {

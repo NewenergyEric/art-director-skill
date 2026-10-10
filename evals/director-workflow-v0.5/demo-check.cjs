@@ -6,7 +6,7 @@ const root=path.resolve(__dirname,'../..');process.chdir(root);
 const digest=x=>crypto.createHash('sha256').update(x).digest('hex');
 const fileNames=['docs/workbench.html','docs/call-flow.html','docs/member-workbench.html','docs/team-production.html'];
 const sources=Object.fromEntries(fileNames.map(file=>[file,fs.readFileSync(file,'utf8')]));
-const scriptFor=file=>sources[file].match(/<script>([\s\S]*?)<\/script>/)[1];
+const scriptFor=file=>{const source=sources[file],open='<script>',close='</script>',start=source.indexOf(open),end=source.indexOf(close,start+open.length);if(start<0||end<0)throw Error('Inline script block missing: '+file);return source.slice(start+open.length,end);};
 const checks=[],allPaths=new Set(),collectedMarkup=[];
 function check(name,pass){checks.push({name,pass:Boolean(pass)});if(!pass)process.exitCode=1;}
 const policyText=process.env.PUBLIC_DEMO_RESTRICTED_PATTERNS||'[]',restricted=JSON.parse(policyText);
@@ -60,7 +60,7 @@ get('director-intent').value='';check('empty director decision is not fabricated
 get('director-intent').value='先验证 UI 与棋盘放在一起的阅读层级。';
 check('director can form a specific local decision draft',wb.context.draftDecision()&&value("state.intentDraft.includes('阅读层级')"));
 get('director-intent').value='<img src=x onerror=alert(1)>';wb.context.draftDecision();
-check('director draft text is escaped',get('draft-status').innerHTML.includes('&lt;img')&&!get('draft-status').innerHTML.includes('<img src=x'));
+check('director draft text stays literal',get('draft-status').textContent.includes('<img src=x onerror=alert(1)>')&&get('draft-status').className.includes('ok'));
 wb.context.goStage(2);check('sample roles are not treated as a universal fixed count',get('stage-content').innerHTML.includes('数量不是跨项目标准'));
 value('state.checks=[0,1,2,3,4];state.reviewSeen=true');wb.context.render();
 check('all selected review topics still do not grant approval',get('stage-content').innerHTML.includes('结果仍是待评审')&&get('stage-content').innerHTML.includes('勾选不改变任何批准状态'));
