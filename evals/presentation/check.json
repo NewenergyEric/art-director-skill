@@ -1,23 +1,11 @@
 {
-  "method": "Media budgets, checksums, MP4 atoms, static local links; optional ffprobe. Browser behaviour is checked separately.",
-  "passed": 203,
-  "total": 203,
+  "method": "Shared claim, public links, canonical media budgets and checksums; optional ffprobe.",
+  "passed": 132,
+  "total": 132,
   "failed": [],
   "checks": [
     {
-      "name": "manifest distinguishes the spatial README loop from the readable preview",
-      "pass": true
-    },
-    {
-      "name": "shared timeline has ordered beats and readable holds",
-      "pass": true
-    },
-    {
-      "name": "zh: captions cover the retimed film without reversed or overlapping cues",
-      "pass": true
-    },
-    {
-      "name": "en: captions cover the retimed film without reversed or overlapping cues",
+      "name": "manifest describes the canonical spatial system",
       "pass": true
     },
     {
@@ -37,27 +25,7 @@
       "pass": true
     },
     {
-      "name": "assets/readme/quick-preview-en.gif: matches recorded bytes and digest",
-      "pass": true
-    },
-    {
-      "name": "assets/readme/quick-preview-en.jpg: matches recorded bytes and digest",
-      "pass": true
-    },
-    {
-      "name": "assets/readme/quick-preview-zh.gif: matches recorded bytes and digest",
-      "pass": true
-    },
-    {
-      "name": "assets/readme/quick-preview-zh.jpg: matches recorded bytes and digest",
-      "pass": true
-    },
-    {
-      "name": "docs/assets/motion/art-director-intro-en.mp4: matches recorded bytes and digest",
-      "pass": true
-    },
-    {
-      "name": "docs/assets/motion/art-director-intro-zh.mp4: matches recorded bytes and digest",
+      "name": "assets/readme/social-preview.png: matches recorded bytes and digest",
       "pass": true
     },
     {
@@ -89,455 +57,159 @@
       "pass": true
     },
     {
-      "name": "docs/assets/motion/game-board.jpg: matches recorded bytes and digest",
+      "name": "README.md: one canonical repository-hosted GIF",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/intro-en.jpg: matches recorded bytes and digest",
+      "name": "README.md: product, director and engineering entrances are visible",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/intro-en.vtt: matches recorded bytes and digest",
+      "name": "README.md: uses the shared core claim",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/intro-zh.jpg: matches recorded bytes and digest",
+      "name": "README.md: contains no legacy public media reference",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/intro-zh.vtt: matches recorded bytes and digest",
+      "name": "zh: canonical GIF is valid, 800 px wide, and under 4 MiB",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/quick-preview-en.jpg: matches recorded bytes and digest",
+      "name": "zh: reduced-motion poster exists and is non-empty",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/quick-preview-en.mp4: matches recorded bytes and digest",
+      "name": "README.en.md: one canonical repository-hosted GIF",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/quick-preview-zh.jpg: matches recorded bytes and digest",
+      "name": "README.en.md: product, director and engineering entrances are visible",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/quick-preview-zh.mp4: matches recorded bytes and digest",
+      "name": "README.en.md: uses the shared core claim",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/review-lens-en.jpg: matches recorded bytes and digest",
+      "name": "README.en.md: contains no legacy public media reference",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/review-lens-en.mp4: matches recorded bytes and digest",
+      "name": "en: canonical GIF is valid, 800 px wide, and under 4 MiB",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/review-lens-zh.jpg: matches recorded bytes and digest",
+      "name": "en: reduced-motion poster exists and is non-empty",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/review-lens-zh.mp4: matches recorded bytes and digest",
+      "name": "legacy README GIFs have been removed",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/style-directions-en.jpg: matches recorded bytes and digest",
+      "name": "showcase.html: opts into the shared visual-memory system",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/style-directions-en.mp4: matches recorded bytes and digest",
+      "name": "showcase.html: carries the visual-memory language",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/style-directions-zh.jpg: matches recorded bytes and digest",
+      "name": "showcase.html: local link assets/visual-memory.css?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/style-directions-zh.mp4: matches recorded bytes and digest",
+      "name": "showcase.html: local link showcase.html",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/team-pipeline-en.jpg: matches recorded bytes and digest",
+      "name": "showcase.html: local link landing.html",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/team-pipeline-en.mp4: matches recorded bytes and digest",
+      "name": "showcase.html: local link workbench.html",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/team-pipeline-zh.jpg: matches recorded bytes and digest",
+      "name": "showcase.html: local link workbench.html",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/team-pipeline-zh.mp4: matches recorded bytes and digest",
+      "name": "showcase.html: local link assets/motion/depth-traditional.webp?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/template-switch-en.jpg: matches recorded bytes and digest",
+      "name": "showcase.html: local link assets/motion/depth-comic.webp?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/template-switch-en.mp4: matches recorded bytes and digest",
+      "name": "showcase.html: local link assets/motion/depth-game.webp?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/template-switch-zh.jpg: matches recorded bytes and digest",
+      "name": "showcase.html: local link assets/motion/depth-showcase-zh.jpg?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "docs/assets/motion/template-switch-zh.mp4: matches recorded bytes and digest",
+      "name": "showcase.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "README.md: one repository-hosted preview GIF only",
+      "name": "showcase.html: local link assets/motion/depth-showcase-en.mp4?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "README.md: full film and all four clips remain discoverable",
+      "name": "showcase.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "README.md: GIF under 2 MiB",
+      "name": "showcase.html: local link landing.html",
       "pass": true
     },
     {
-      "name": "README.md: valid GIF header",
+      "name": "showcase.html: local link workbench.html",
       "pass": true
     },
     {
-      "name": "README.md: spatial preview under 4 MiB",
+      "name": "showcase.html: local link workbench.html",
       "pass": true
     },
     {
-      "name": "README.md: spatial preview is a valid 800 px GIF",
+      "name": "showcase.html: local link assets/motion/depth-game.webp?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "README.en.md: one repository-hosted preview GIF only",
+      "name": "showcase.html: local link assets/campaign-layout.svg",
       "pass": true
     },
     {
-      "name": "README.en.md: full film and all four clips remain discoverable",
+      "name": "showcase.html: local link workbench.html",
       "pass": true
     },
     {
-      "name": "README.en.md: GIF under 2 MiB",
+      "name": "showcase.html: local link landing.html",
       "pass": true
     },
     {
-      "name": "README.en.md: valid GIF header",
+      "name": "showcase.html: local link assets/fonts/OFL.txt",
       "pass": true
     },
     {
-      "name": "README.en.md: spatial preview under 4 MiB",
+      "name": "landing.html: opts into the shared visual-memory system",
       "pass": true
     },
     {
-      "name": "README.en.md: spatial preview is a valid 800 px GIF",
+      "name": "landing.html: carries the visual-memory language",
       "pass": true
     },
     {
-      "name": "art-director-intro-en.mp4: media byte budget",
+      "name": "landing.html: local link assets/visual-memory.css?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "art-director-intro-en.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "art-director-intro-en.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "art-director-intro-en.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "art-director-intro-en.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "art-director-intro-zh.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "art-director-intro-zh.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "art-director-intro-zh.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "art-director-intro-zh.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "art-director-intro-zh.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "depth-showcase-en.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "depth-showcase-en.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "depth-showcase-en.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "depth-showcase-en.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "depth-showcase-en.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "depth-showcase-zh.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "depth-showcase-zh.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "depth-showcase-zh.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "depth-showcase-zh.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "depth-showcase-zh.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "quick-preview-en.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "quick-preview-en.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "quick-preview-en.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "quick-preview-en.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "quick-preview-en.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "quick-preview-zh.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "quick-preview-zh.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "quick-preview-zh.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "quick-preview-zh.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "quick-preview-zh.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "review-lens-en.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "review-lens-en.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "review-lens-en.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "review-lens-en.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "review-lens-en.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "review-lens-zh.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "review-lens-zh.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "review-lens-zh.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "review-lens-zh.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "review-lens-zh.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "style-directions-en.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "style-directions-en.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "style-directions-en.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "style-directions-en.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "style-directions-en.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "style-directions-zh.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "style-directions-zh.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "style-directions-zh.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "style-directions-zh.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "style-directions-zh.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "team-pipeline-en.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "team-pipeline-en.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "team-pipeline-en.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "team-pipeline-en.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "team-pipeline-en.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "team-pipeline-zh.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "team-pipeline-zh.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "team-pipeline-zh.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "team-pipeline-zh.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "team-pipeline-zh.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "template-switch-en.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "template-switch-en.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "template-switch-en.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "template-switch-en.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "template-switch-en.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "template-switch-zh.mp4: media byte budget",
-      "pass": true
-    },
-    {
-      "name": "template-switch-zh.mp4: faststart metadata precedes video payload",
-      "pass": true
-    },
-    {
-      "name": "template-switch-zh.mp4: H.264 at 30 fps",
-      "pass": true
-    },
-    {
-      "name": "template-switch-zh.mp4: intended duration",
-      "pass": true
-    },
-    {
-      "name": "template-switch-zh.mp4: intended readable resolution",
-      "pass": true
-    },
-    {
-      "name": "zh: GIF is 20 fps, 1100 px wide and 12 seconds",
-      "pass": true
-    },
-    {
-      "name": "zh: spatial GIF is a complete six-second orbit at 20 fps",
-      "pass": true
-    },
-    {
-      "name": "en: GIF is 20 fps, 1100 px wide and 12 seconds",
-      "pass": true
-    },
-    {
-      "name": "en: spatial GIF is a complete six-second orbit at 20 fps",
-      "pass": true
-    },
-    {
-      "name": "landing.html: self-hosted sans-serif fallback",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link landing.html",
+      "name": "landing.html: local link showcase.html",
       "pass": true
     },
     {
@@ -545,19 +217,43 @@
       "pass": true
     },
     {
-      "name": "landing.html: local link workbench.html",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/quick-preview-zh.jpg?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/quick-preview-zh.mp4?v=readability-20261010-final",
+      "name": "landing.html: local link call-flow.html",
       "pass": true
     },
     {
       "name": "landing.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-game.webp?v=visual-memory-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-traditional.webp?v=visual-memory-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-comic.webp?v=visual-memory-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.jpg?v=visual-memory-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-showcase-en.mp4?v=visual-memory-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261010",
       "pass": true
     },
     {
@@ -569,75 +265,11 @@
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/game-board.jpg?v=readability-20261010-final",
+      "name": "landing.html: local link call-flow.html",
       "pass": true
     },
     {
-      "name": "landing.html: local link ../examples/harbor-studio-draft/guides/00-index.md",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/campaign-layout.svg",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link ../examples/campaign-studio-draft/guides/00-index.md",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link ../evals/director-workflow-v0.5/acceptance.md",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/intro-zh.jpg?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/art-director-intro-zh.mp4?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/intro-zh.vtt?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/art-director-intro-zh.mp4?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/art-director-intro-en.mp4?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/style-directions-zh.jpg?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/style-directions-zh.mp4?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/template-switch-zh.jpg?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/template-switch-zh.mp4?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/team-pipeline-zh.jpg?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/team-pipeline-zh.mp4?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/review-lens-zh.jpg?v=readability-20261010-final",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/review-lens-zh.mp4?v=readability-20261010-final",
+      "name": "landing.html: local link showcase.html",
       "pass": true
     },
     {
@@ -645,15 +277,19 @@
       "pass": true
     },
     {
-      "name": "landing.html: local link DESIGN.md",
+      "name": "workbench.html: opts into the shared visual-memory system",
       "pass": true
     },
     {
-      "name": "workbench.html: self-hosted sans-serif fallback",
+      "name": "workbench.html: carries the visual-memory language",
       "pass": true
     },
     {
-      "name": "workbench.html: local link landing.html",
+      "name": "workbench.html: local link assets/visual-memory.css?v=visual-memory-20261010",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link showcase.html",
       "pass": true
     },
     {
@@ -677,7 +313,7 @@
       "pass": true
     },
     {
-      "name": "workbench.html: local link landing.html#film",
+      "name": "workbench.html: local link showcase.html#film",
       "pass": true
     },
     {
@@ -713,95 +349,131 @@
       "pass": true
     },
     {
-      "name": "showcase.html: self-hosted sans-serif fallback",
+      "name": "member-workbench.html: opts into the shared visual-memory system",
       "pass": true
     },
     {
-      "name": "showcase.html: local link showcase.html",
+      "name": "member-workbench.html: carries the visual-memory language",
       "pass": true
     },
     {
-      "name": "showcase.html: local link landing.html#film",
+      "name": "member-workbench.html: local link assets/visual-memory.css?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "showcase.html: local link workbench.html",
+      "name": "member-workbench.html: local link workbench.html",
       "pass": true
     },
     {
-      "name": "showcase.html: local link workbench.html",
+      "name": "member-workbench.html: local link member-workbench.html",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-traditional.webp?v=spatial-fde-20261010-final",
+      "name": "member-workbench.html: local link team-production.html",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-comic.webp?v=spatial-fde-20261010-final",
+      "name": "member-workbench.html: local link call-flow.html",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-game.webp?v=spatial-fde-20261010-final",
+      "name": "member-workbench.html: local link requirements-coverage.md",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-showcase-zh.jpg?v=spatial-fde-20261010-final",
+      "name": "member-workbench.html: local link workbench.html",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-showcase-zh.mp4?v=spatial-fde-20261010-final",
+      "name": "member-workbench.html: local link requirements-coverage.md",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-showcase-en.mp4?v=spatial-fde-20261010-final",
+      "name": "member-workbench.html: local link requirements-coverage.md",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-showcase-zh.mp4?v=spatial-fde-20261010-final",
+      "name": "call-flow.html: opts into the shared visual-memory system",
       "pass": true
     },
     {
-      "name": "showcase.html: local link landing.html#film",
+      "name": "call-flow.html: carries the visual-memory language",
       "pass": true
     },
     {
-      "name": "showcase.html: local link workbench.html",
+      "name": "call-flow.html: local link assets/visual-memory.css?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "showcase.html: local link workbench.html",
+      "name": "call-flow.html: local link workbench.html",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/motion/depth-game.webp?v=spatial-fde-20261010-final",
+      "name": "call-flow.html: local link workbench.html",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/campaign-layout.svg",
+      "name": "call-flow.html: local link team-production.html",
       "pass": true
     },
     {
-      "name": "showcase.html: local link workbench.html",
+      "name": "call-flow.html: local link workbench.html#public-gallery-section",
       "pass": true
     },
     {
-      "name": "showcase.html: local link landing.html",
+      "name": "team-production.html: opts into the shared visual-memory system",
       "pass": true
     },
     {
-      "name": "showcase.html: local link assets/fonts/OFL.txt",
+      "name": "team-production.html: carries the visual-memory language",
       "pass": true
     },
     {
-      "name": "full films and clips do not preload or autoplay",
+      "name": "team-production.html: local link assets/visual-memory.css?v=visual-memory-20261010",
       "pass": true
     },
     {
-      "name": "preview has reduced-motion, data-saving and visibility controls",
+      "name": "team-production.html: local link call-flow.html",
       "pass": true
     },
     {
-      "name": "spatial showcase leaves its film unloaded until playback",
+      "name": "team-production.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "team-production.html: local link ../examples/moss-harbor-draft/STYLE.md",
+      "pass": true
+    },
+    {
+      "name": "team-production.html: local link ../examples/moss-harbor-draft/STYLE.md",
+      "pass": true
+    },
+    {
+      "name": "team-production.html: local link call-flow.html",
+      "pass": true
+    },
+    {
+      "name": "team-production.html: local link workbench.html",
+      "pass": true
+    },
+    {
+      "name": "public pages do not link legacy films or clips",
+      "pass": true
+    },
+    {
+      "name": "public videos are manual and lazy",
+      "pass": true
+    },
+    {
+      "name": "shared stylesheet self-hosts the licensed variable face",
+      "pass": true
+    },
+    {
+      "name": "shared stylesheet defines the canonical palette and distinct layouts",
+      "pass": true
+    },
+    {
+      "name": "public presentation reference fixes the shared claim and anti-template rule",
       "pass": true
     },
     {
@@ -809,11 +481,55 @@
       "pass": true
     },
     {
-      "name": "web and spatial render share the same licensed font bytes",
+      "name": "product page has reduced-motion behaviour and one canonical film",
       "pass": true
     },
     {
-      "name": "public fonts are OFL; render-only proprietary fonts stay ignored",
+      "name": "motion source uses the exact shared claims",
+      "pass": true
+    },
+    {
+      "name": "CI renders only current visual-memory compositions",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: under 5 MiB",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: H.264, 1280x720, 30 fps, 18 seconds",
+      "pass": true
+    },
+    {
+      "name": "zh: README GIF is 800 px, 20 fps, six seconds",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: under 5 MiB",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: H.264, 1280x720, 30 fps, 18 seconds",
+      "pass": true
+    },
+    {
+      "name": "en: README GIF is 800 px, 20 fps, six seconds",
+      "pass": true
+    },
+    {
+      "name": "web and render share the same licensed font bytes",
+      "pass": true
+    },
+    {
+      "name": "public fonts are OFL and render-only proprietary fonts stay ignored",
       "pass": true
     }
   ]

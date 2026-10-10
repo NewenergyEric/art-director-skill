@@ -12,16 +12,16 @@
 
 ## One team. One visual memory.
 
-**Why does this one look right?** Turn the art director's judgement into a spec the whole team—and its agents—can use.
+**Let the director build the project's visual memory, then let every teammate deliver from the same version.**
 
-Start with existing work, references, and feedback. Build the visual language, component families, exemplars, and acceptance criteria, then share them as a project Skill so the next teammate starts from the same version.
+Visual memory includes the visual language, component and asset families, representative exemplars, allowed variation, delivery requirements, and review history. Art Director helps the director build these from existing work, references, and feedback, then packages them as a project Skill the team can call.
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=spatial-fde-20261010-final">
-  <img src="assets/readme/depth-preview-en.gif?v=spatial-fde-20261010-final" width="100%" alt="A continuous spatial study of art boards and the shared project system, from art direction to team handoff.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=visual-memory-20261010">
+  <img src="assets/readme/depth-preview-en.gif?v=visual-memory-20261010" width="100%" alt="One team, one visual memory. Art boards at different depths connect to the same project version.">
 </picture></a>
 
-<p align="center"><sub>A six-second seamless spatial preview · <a href="https://newenergyeric.github.io/art-director-skill/docs/showcase.html">open the spatial presentation</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">retained 70-second walkthrough and four focused clips</a></sub></p>
+<p align="center"><sub>One visual language across the spec, workbench, and delivery · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html">product story</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/workbench.html">director workbench</a> · <a href="https://newenergyeric.github.io/art-director-skill/docs/call-flow.html">engineering call path</a></sub></p>
 
 **Agent Skills compatible** · Codex · Claude Code · Cursor · Gemini CLI · Windsurf · GitHub Copilot CLI · VS Code · Grok
 
@@ -31,7 +31,11 @@ npx skills add https://github.com/NewenergyEric/art-director-skill
 
 [Open the director workbench](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) · [Human guide](docs/HUMAN-GUIDE.md) · [Agent guide](docs/AGENT-GUIDE.md) · [Read the Skill](SKILL.md) · [Download the toolkit](https://github.com/NewenergyEric/art-director-skill/releases/tag/v0.5.1)
 
-**You own the judgement** · **Specs and tools travel together** · **Core tools run locally without automatically uploading project material**
+| Director builds | Team calls | Delivery stays consistent |
+|---|---|---|
+| Turn existing judgement into a reviewable project system | Every task receives the applicable rules, exemplars, and version | Wrong versions, missing files, and unchecked claims remain visible while feedback returns to the same project memory |
+
+**The director owns judgement and release decisions** · **Specs, references, and tools travel together** · **Core tools run locally without automatically uploading project material**
 
 ---
 
@@ -98,7 +102,8 @@ The mother Skill ZIP is also available from the [v0.5.1 release](https://github.
 
 | Entry | What it demonstrates |
 |---|---|
-| [70-second video introduction](https://newenergyeric.github.io/art-director-skill/docs/assets/motion/art-director-intro-en.mp4) | The director and team moving through template switching, parallel production, and review feedback in one system |
+| [18-second spatial introduction](https://newenergyeric.github.io/art-director-skill/docs/showcase.html#film) | How one visual memory connects work, rules, teammates, and delivery |
+| [Product method](https://newenergyeric.github.io/art-director-skill/docs/landing.html) | How the director builds, exemplars calibrate, and the team continues from one version |
 | [Director workbench](https://newenergyeric.github.io/art-director-skill/docs/workbench.html) | The full path from source material and positioning through families, exemplars, team use, and iteration |
 | [Harbor Studio](examples/harbor-studio-draft/guides/00-index.md) | Eight game-production families, exemplar planning, tasks, and member handoff |
 | [Weekend Drinks](examples/campaign-studio-draft/guides/00-index.md) | One specification across product, graphics, typography, UI, and channel compositions |

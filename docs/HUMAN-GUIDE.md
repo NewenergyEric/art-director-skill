@@ -34,4 +34,4 @@
 - 草案、候选和批准版本分开；更新规范会产生新版本，旧任务继续使用冻结快照。
 - 真实艺术质量、引擎/渠道集成和团队效率仍需要真人批次验证。
 
-更多调用路径见 [主美工作台](workbench.html)、[70 秒视频介绍](assets/motion/art-director-intro-zh.mp4) 和 [Agent 使用说明](AGENT-GUIDE.md)。
+更多调用路径见 [主美工作台](workbench.html)、[18 秒空间介绍](showcase.html#film)、[工程调用路径](call-flow.html) 和 [Agent 使用说明](AGENT-GUIDE.md)。

@@ -13,7 +13,7 @@ Decision the page should enable: understand within one scroll that Art Director 
 | Specific problem | Pass | Opens with concurrent game assets, UI systems, campaign elements, posters, and channel variants rather than a generic “AI design” claim. |
 | Audience recognition | Pass | Names directors, leads, teams, vendors, and agents; examples connect game production with other multi-person visual systems. |
 | Benefit before mechanism | Pass | Leads with shared direction and reduced re-guessing before introducing JSON, manifests, or CLI commands. |
-| Proof near each claim | Pass | Style-direction, template, team-pipeline, and review claims each have a corresponding Remotion clip and executable repository artifact. |
+| Proof near each claim | Pass | The canonical spatial film establishes the product promise; the workbench, member task, production wall, and call-flow pages expose the corresponding executable repository artifacts. |
 | Credibility | Pass | No invented speed, consistency, cost, or adoption figures. Limits and what remains unproven are explicit. |
 | First action | Pass | One install command, one natural-language invocation, then a five-minute fictional example. |
 

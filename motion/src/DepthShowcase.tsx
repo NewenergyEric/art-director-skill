@@ -14,8 +14,8 @@ export const DepthShowcase: React.FC<{language: 'zh' | 'en'; localFonts?: boolea
     {file: 'studio/asset-system-board.png', x: 625, y: 105, w: 350, h: 470, z: 85, rotate: -9, label: 'VISUAL MEMORY / 01', crop: '8% 20%'},
   ];
   const labels = language === 'zh'
-    ? ['从你认可的作品开始。', '让判断成为共同的规范。', '把项目交给下一位成员。']
-    : ['Start with work you believe in.', 'Make your judgement a shared system.', 'Give the next teammate a clear starting point.'];
+    ? ['从主美认可的作品开始。', '把专业判断写进项目记忆。', '让每次交付读取同一版本。']
+    : ['Start with work the director believes in.', 'Build professional judgement into project memory.', 'Give every delivery the same version.'];
   return <AbsoluteFill style={{background: '#001f3f', color: '#ffffff', fontFamily: fieldFont, overflow: 'hidden'}}>
     <FieldFonts />
     <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 72% 33%, #07555e 0%, transparent 48%), radial-gradient(ellipse at 90% 88%, #173f5c 0%, transparent 43%)'}} />
@@ -32,7 +32,7 @@ export const DepthShowcase: React.FC<{language: 'zh' | 'en'; localFonts?: boolea
           <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: 43, color: '#001f3f', fontSize: 12, fontWeight: 500, letterSpacing: 1.2}}><span>{card.label}</span><span style={{color: '#007d86'}}>●</span></div>
         </div>)}
         <div style={{position: 'absolute', left: 816, top: 555, width: 344, padding: '21px 25px', borderRadius: 16, border: '1px solid #90a29b', background: 'linear-gradient(135deg, #006e78, #003b55)', boxShadow: '0 24px 60px rgba(0,0,0,.5)', transform: `translateZ(140px) translateY(${breathe * 9}px) rotateZ(3deg)`, fontSize: 23, fontWeight: 500}}>
-          <div style={{fontSize: 10, letterSpacing: 2, color: '#b2d8d9', marginBottom: 10}}>ONE VERSION · SHARED DIRECTION</div>
+          <div style={{fontSize: 10, letterSpacing: 2, color: '#b2d8d9', marginBottom: 10}}>ONE VERSION · VISUAL MEMORY</div>
           STYLE.md <span style={{color: '#80d3ce'}}>↗</span> SKILL.md
         </div>
         <div style={{position: 'absolute', left: 1025, top: 78, padding: '14px 21px', background: '#d3eeec', color: '#001f3f', borderRadius: 30, fontSize: 16, fontWeight: 500, transform: `translateZ(170px) translateY(${orbit * 7}px) rotateZ(7deg)`}}>SPEC → TEAM</div>
@@ -43,15 +43,57 @@ export const DepthShowcase: React.FC<{language: 'zh' | 'en'; localFonts?: boolea
     <div style={{position: 'absolute', left: 55, top: 128, width: 800}}>
       <div style={{fontSize: 12, color: '#bad4df', letterSpacing: 2.5, marginBottom: 33}}>ONE TEAM. ONE VISUAL MEMORY.</div>
       <div style={{transform: 'rotate(-3deg) skewX(-6deg)', transformOrigin: '0 50%', lineHeight: 1.12, letterSpacing: language === 'zh' ? -6 : -4}}>
-        <div style={{fontSize: language === 'zh' ? 91 : 80, fontWeight: 380}}>{language === 'zh' ? '把判断，' : 'Your vision.'}</div>
-        <div style={{fontSize: language === 'zh' ? 164 : 94, fontWeight: 820, marginTop: 12, whiteSpace: 'nowrap', color: '#92e4da', textShadow: '0 5px 24px rgba(0,31,63,.32)'}}>{language === 'zh' ? <>交给<span style={{WebkitTextStroke: '1px #c0fff4'}}>团队</span></> : 'Their direction.'}</div>
+        <div style={{fontSize: language === 'zh' ? 88 : 78, fontWeight: 380}}>{language === 'zh' ? '一个团队，' : 'One team,'}</div>
+        <div style={{fontSize: language === 'zh' ? 118 : 83, fontWeight: 820, marginTop: 12, whiteSpace: 'nowrap', color: '#92e4da', textShadow: '0 5px 24px rgba(0,31,63,.32)'}}>{language === 'zh' ? <>一份<span style={{WebkitTextStroke: '1px #c0fff4'}}>视觉记忆。</span></> : <>one <span style={{WebkitTextStroke: '1px #c0fff4'}}>visual memory.</span></>}</div>
       </div>
-      <p style={{fontSize: 23, lineHeight: 1.7, color: '#c2d7e3', width: 460, marginTop: 28}}>{language === 'zh' ? '主美建立专业规范，团队与 AI 从同一个项目版本继续创作。' : 'Turn art direction into a shared project system your team can build from.'}</p>
+      <p style={{fontSize: 23, lineHeight: 1.7, color: '#c2d7e3', width: 480, marginTop: 28}}>{language === 'zh' ? '主美建立项目记忆，团队与 AI 从同一版本完成每一次交付。' : 'The director builds the project memory. Every teammate and agent delivers from the same version.'}</p>
     </div>
     <div style={{position: 'absolute', left: 55, bottom: 51, width: 610}}>
-      <div style={{display: 'flex', gap: 29, marginBottom: 18, fontSize: 12, letterSpacing: 1}}>{(language === 'zh' ? ['01 建立规范', '02 校准样板', '03 项目交接'] : ['01 DIRECTION', '02 EXEMPLARS', '03 HANDOFF']).map((label, i) => <span key={label} style={{color: phase === i ? '#80d3ce' : '#8faebc'}}>{label}</span>)}</div>
+      <div style={{display: 'flex', gap: 29, marginBottom: 18, fontSize: 12, letterSpacing: 1}}>{(language === 'zh' ? ['01 建立记忆', '02 校准样板', '03 一致交付'] : ['01 BUILD', '02 CALIBRATE', '03 DELIVER']).map((label, i) => <span key={label} style={{color: phase === i ? '#80d3ce' : '#8faebc'}}>{label}</span>)}</div>
       <div style={{fontSize: language === 'zh' ? 26 : 23, fontWeight: 500}}>{labels[phase]}</div>
     </div>
     <div style={{position: 'absolute', right: 44, bottom: 25, fontSize: 10, color: '#b9ccd9', letterSpacing: 1}}>ORIGINAL CANDIDATE ART · CONTINUOUS SPATIAL STUDY</div>
   </AbsoluteFill>;
 };
+
+export const DepthSocialPreview: React.FC = () => (
+  <AbsoluteFill style={{background: '#001f3f', color: '#ffffff', fontFamily: fieldFont, overflow: 'hidden'}}>
+    <FieldFonts />
+    <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 78% 25%, #08606a 0%, transparent 50%), radial-gradient(ellipse at 90% 95%, #183f5b 0%, transparent 42%)'}} />
+    <div style={{position: 'absolute', left: 42, right: 42, top: 28, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 11, fontWeight: 650, letterSpacing: 2.2}}>
+      <span>ART DIRECTOR <span style={{color: '#92e4da'}}>●</span></span>
+      <span style={{color: '#bad4df'}}>ONE TEAM. ONE VISUAL MEMORY.</span>
+    </div>
+    <div style={{position: 'absolute', left: 42, right: 42, top: 56, height: 1, background: 'rgba(160,206,213,.34)'}} />
+
+    <div style={{position: 'absolute', left: 48, top: 110, width: 760, zIndex: 5}}>
+      <div style={{fontSize: 72, fontWeight: 380, letterSpacing: -4, lineHeight: 1, transform: 'rotate(-3deg) skewX(-5deg)', transformOrigin: '0 50%'}}>一个团队，</div>
+      <div style={{fontSize: 94, fontWeight: 830, letterSpacing: -6, lineHeight: 1.04, marginTop: 15, whiteSpace: 'nowrap', color: '#92e4da', transform: 'rotate(-3deg) skewX(-5deg)', transformOrigin: '0 50%', textShadow: '0 5px 24px rgba(0,31,63,.4)'}}>一份<span style={{WebkitTextStroke: '1px #c0fff4'}}>视觉记忆。</span></div>
+      <div style={{marginTop: 42, width: 560, fontSize: 18, lineHeight: 1.7, color: '#c2d7e3'}}>主美建立项目记忆，团队与 AI 从同一版本完成每一次交付。</div>
+    </div>
+
+    <svg width="1280" height="640" style={{position: 'absolute', inset: 0, opacity: .24}}>
+      <ellipse cx="1000" cy="530" rx="350" ry="70" fill="none" stroke="#a0ced5" strokeWidth="1" transform="rotate(-9 1000 530)" />
+      <ellipse cx="1000" cy="530" rx="410" ry="92" fill="none" stroke="#a0ced5" strokeWidth="1" transform="rotate(-9 1000 530)" />
+    </svg>
+
+    <div style={{position: 'absolute', right: 40, top: 68, width: 590, height: 520, perspective: 1500, transformStyle: 'preserve-3d'}}>
+      <div style={{position: 'absolute', right: 0, top: 12, width: 270, height: 335, padding: 8, borderRadius: 14, background: '#f8fafc', boxShadow: '18px 28px 65px rgba(0,0,0,.5)', transform: 'translateZ(-100px) rotate(11deg)'}}>
+        <Img src={staticFile('styles/traditional-board.png')} style={{width: '100%', height: 'calc(100% - 36px)', objectFit: 'cover', objectPosition: '18% 30%', borderRadius: 8}} />
+        <div style={{height: 36, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 4px', color: '#001f3f', fontSize: 10, letterSpacing: 1}}><span>WORLD / 03</span><span style={{color: '#007d86'}}>●</span></div>
+      </div>
+      <div style={{position: 'absolute', left: 60, top: 28, width: 330, height: 430, padding: 8, borderRadius: 14, background: '#f8fafc', boxShadow: '18px 28px 65px rgba(0,0,0,.58)', transform: 'translateZ(80px) rotate(-8deg)'}}>
+        <Img src={staticFile('studio/asset-system-board.png')} style={{width: '100%', height: 'calc(100% - 36px)', objectFit: 'cover', objectPosition: '8% 20%', borderRadius: 8}} />
+        <div style={{height: 36, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 4px', color: '#001f3f', fontSize: 10, letterSpacing: 1}}><span>VISUAL MEMORY / 01</span><span style={{color: '#007d86'}}>●</span></div>
+      </div>
+      <div style={{position: 'absolute', left: 245, bottom: 0, width: 315, padding: '18px 22px', borderRadius: 15, border: '1px solid #75b9bd', background: 'linear-gradient(135deg, #006e78, #003b55)', boxShadow: '0 24px 60px rgba(0,0,0,.52)', transform: 'translateZ(140px) rotate(3deg)', fontSize: 21, fontWeight: 620}}>
+        <div style={{fontSize: 9, letterSpacing: 1.8, color: '#b2d8d9', marginBottom: 8}}>ONE VERSION · EVERY DELIVERY</div>
+        STYLE.md <span style={{color: '#80d3ce'}}>↗</span> SKILL.md
+      </div>
+    </div>
+
+    <div style={{position: 'absolute', left: 48, bottom: 33, display: 'flex', gap: 24, color: '#a9c1cf', fontSize: 10, letterSpacing: 1}}>
+      <span>01 建立记忆</span><span>02 校准样板</span><span>03 一致交付</span>
+    </div>
+  </AbsoluteFill>
+);

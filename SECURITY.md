@@ -26,7 +26,7 @@ The runtime scripts contain no HTTP client and define no outbound destination.
 | GitHub README media | `github.com` / `githubusercontent.com` | Standard browser request for public release assets | Only when a reader opens the README |
 | User-selected image or AI tools | Defined by that external tool, outside this repository | Determined by the user's tool and request | Only when the user separately chooses such a tool |
 
-`scripts/render_motion_assets.py` detects an installed Chrome or Edge first on Windows. Set `REMOTION_BROWSER_EXECUTABLE` to avoid Remotion downloading its browser runtime.
+`scripts/render_depth_showcase.py` detects an installed Chrome or Edge first on Windows. Set `REMOTION_BROWSER_EXECUTABLE` to avoid Remotion downloading its browser runtime.
 
 ## Credentials and secrets
 
@@ -63,7 +63,7 @@ The renderer passes arguments as a list through Python's `subprocess.run`; it do
 
 ### Motion and release tools
 
-- `render_motion_assets.py` restricts its output directory to this repository, overwrites only its named render artifacts, and creates uniquely named temporary frame directories for each run.
+- `render_depth_showcase.py` writes only its named presentation artifacts and creates uniquely named temporary frame directories inside this repository for each run.
 - `package_release.py` requires a new archive path outside the repository and packages a fixed allowlist of Skill files.
 
 ## Deletion boundaries
