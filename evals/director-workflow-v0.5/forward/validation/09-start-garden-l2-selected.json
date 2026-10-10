@@ -1,0 +1,43 @@
+{
+  "step": "09-start-garden-l2-selected",
+  "command": [
+    "python",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\tools\\project_runtime.py",
+    "start",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial",
+    "--request",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\requests\\garden-l2-selected.json"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "met_expectation": true,
+  "result": {
+    "ok": true,
+    "command": "start",
+    "task_id": "garden-l2-selected",
+    "task_dir": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\tasks\\garden-l2-selected",
+    "work_dir": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\work\\garden-l2-selected",
+    "baseline": {
+      "version": "0.1.0",
+      "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81",
+      "path": "releases/0.1.0",
+      "release": false
+    },
+    "status": "prepared_for_exploration",
+    "ready": false,
+    "production_approved": false,
+    "blockers": [],
+    "attention": [
+      "主美下一步选择 1〔先评 S1〕：建议延续现板轮廓/暖色，但在操作区减场景细节；选择保留原密度或简化一档。影响街区工时与角色/UI 焦点，不需要现在填色值。",
+      "主美下一步选择 2〔先于 S2 实作〕：是否用盆栽芽苗→叶丛→开花作视觉测试家族；若玩法不合适，指定一条真实日常物件链。正式等级数与合成配方由玩法资料提供。",
+      "主美下一步选择 3〔先于 S1 游戏尺度 / S3〕：与产品确定首个使用场景、2D/3D/混合、实际相机、屏幕/方向和可操作区域；本轮没有代选手机或等距。",
+      "主美下一步选择 4〔先于 S3 首件〕：提供真实短/长中文与数字样例，选一套可用字体及来源/许可；建议先看读字和状态，再定装饰字气质。",
+      "主美下一步选择 5〔开始实际制作前〕：确认 A/B/C/D 实际分工、第一轮可用工时/费用、使用工具与是否允许外部生成。当前 max_candidates=1 仅本地任务准备参数，不构成生成预算授权。",
+      "活动负责人下一步输入〔S5 前〕：真实活动表与渠道；可先评结构，但没有这些资料不做正式宣传文案/导出。",
+      "后续启用：对所选规则和样板逐项记录真实决定与范围；源草稿回写重建，发布前 release 检查；不要把本次 draft 或 ZIP 当已批准生产标准。"
+    ],
+    "generation_brief": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\tasks\\garden-l2-selected\\generation-brief.md",
+    "handoff": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\member-trial\\tasks\\garden-l2-selected\\handoff.md"
+  },
+  "stderr": ""
+}

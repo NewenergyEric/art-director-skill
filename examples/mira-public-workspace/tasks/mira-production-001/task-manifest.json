@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "mira-production-001",
+  "files": {
+    "brief.json": "ca4442fa2e9087cb7118ae09f637d4c787e892e89f088dab8efd12c0ac24a4ce",
+    "generation-brief.md": "8bb1ac32264618e7afbb67dc4eeec4ed31992b80ac841ec188d633c7cda7c458",
+    "handoff.md": "4e5c7402ae8534db30c317034725ebd0c6e06b069bc35586fce6a61115c93168",
+    "request.json": "ef3a8c05d901f9688e1c465d385f0e864b51b39942c3c51fe5b408c0cbb13998",
+    "review.json": "8dde789c7b4ec60208a5c1c827fda7bb7803ec7d79e40c231f39acb4d890b086",
+    "task.json": "964e4ecf853905a180a9c3c710652e112b5bfd6f288ca91817bb3b86853105f1"
+  },
+  "notice": "Frozen input hashes are unsigned; real outputs and review evidence belong under work/, not in this snapshot."
+}

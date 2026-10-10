@@ -5,10 +5,10 @@
 | 字段 | 结构 | 用途 |
 |---|---|---|
 | schema_version | 固定字符串 `1.0` | 与项目规范版本分开 |
-| project | id、name、domain、owner | id 为字母开头的小写连字符名称，最多54字符；domain 为 game-art |
+| project | id、name、domain、owner | id 为字母开头的小写连字符名称，最多54字符；domain 为非空业务场景，如 game-art、ecommerce、brand-ui |
 | version | 主.次.修订 | 项目规范版本 |
 | status | draft / approved | 工作草案或有依据的已确认基线 |
-| scope | medium、view、target_platform、asset_types | 资产类型取 character/environment/prop/ui；未知值用明确文字说明 |
+| scope | medium、view、target_platform、asset_types | 资产类型取 character/environment/tile/prop/ui/motion/product/graphic/layout/typography；未知规格用明确文字说明。外包是责任类型，不是资产类别 |
 | intent | summary、pillars[]、avoid[] | 审美意图与取舍 |
 | tokens | colors、fonts | 项目简易色值和字体表；不等于实际已安装字体 |
 | rules | 规则对象数组 | 规则内容和依据 |
@@ -28,6 +28,10 @@
 
 实体包含 `id`、`kind`、`identity_rules[]`、`reference_ids[]`、`fixed_features[]`、`variations[]`。制作任务通过 `--entity` 选择对象；没有参考的草案可以输出候选要求，但不得声称身份已锁定或已验证。
 
+**运行层的可选扩展。** `entities[].aliases` 给 Agent 和任务入口提供中文别名，类别内重名或重复会被运行层拒绝。`profiles.*.task_controls` 与 `entities[].task_controls` 包含 `slots`，每个槽位有非空 `default` / `guidance`；可选 `exploration` 包含 `allowed_slots` 和可调 `max_candidates`。实体同名槽位覆盖类别默认，身份与固定规则仍保留。没有声明 outfit 的旧包不能经运行层偷偷换装。字段在同一 canonical JSON 内，改变它们也会改变指纹；运行扩展由 `project_runtime.py` 检验，普通 `style_pack validate` 仅检验基础协议。
+
+成员请求示例见 [member-request.template.json](../templates/member-request.template.json)，由 Agent 从原话准备。`components` 可选，逐项 `{category,subject}` 绑定其他类别/实体；所有组件从同一冻结基线编译，合并适用规则和参考并保留 `component_briefs`，不证明已获得组件文件或画面合格。项目运行目录的 `project.json` 管理 current，任务目录冻结输入，产出与真实评审存 work。操作与版本语义见 [成员指南](../references/member-workflow.md)。
+
 配方包含 `id`、`tool`、`model`、`capabilities[]`、`instructions`、`reference_ids[]`、`limitations[]`、`status`（untested/verified）。配方不是可执行远程代码，也不意味着可以自动安装、下载模型或产生费用；按真实工具能力与用户授权实施。验证状态描述项目实际试用，不能从别人的介绍推定。
 
 decisions 每项包含 `id`、`decision`、`rationale`、`status`（proposed/accepted/rejected）、`source`。真实决策记录中应保留发生语境。模板和测试夹具中的人为模拟记录不能用于正式基线。
@@ -43,3 +47,5 @@ decisions 每项包含 `id`、`decision`、`rationale`、`status`（proposed/acc
 **工作记录。** review-report 与 delivery-record 是 agent 填写的交换模板，当前 CLI 不把它们当成独立实现的审美自动验收器。检查项建议使用 pass/fail/not_evaluated/not_applicable，加具体证据、观察与下一步。留空或未知项不能推导为通过。成员任务书和产出记录存放在项目工作目录，避免写进封存的规范包。
 
 实际可运行示例见 `examples/moss-harbor-draft/style-pack.json`，字段默认值见母 skill 的模板。该示例故意没有虚构参考图与批准，适合验证新会话交接与缺少证据的行为。
+
+新增 `examples/pop-borough-draft/style-pack.json` 演示消除游戏六类资产的共同标准；其生产计划为七条工作流（包含外包）、50项计划交付，实物交付与模拟演示分开。批次记录不是规范的一部分，独立使用 [team-batch-contract.md](../references/team-batch-contract.md)，每个批次固定一个构建包的版本和 fingerprint。

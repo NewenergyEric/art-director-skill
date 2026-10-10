@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "member-task-001",
+  "request": "替换为成员原话；该文件由Agent准备，不要求成员手填",
+  "category": "character",
+  "family": null,
+  "subject": "替换为真实实体ID或已声明别名",
+  "mode": "exploration",
+  "changes": {},
+  "exploration": {"slots": [], "candidates": 1},
+  "owner": {"id": "替换为实际负责人", "kind": "internal"},
+  "components": []
+}

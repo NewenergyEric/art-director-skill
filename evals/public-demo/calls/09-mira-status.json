@@ -1,0 +1,78 @@
+{
+  "label": "mira-status",
+  "command": [
+    "python",
+    "examples/mira-public-workspace/tools/project_runtime.py",
+    "status",
+    "examples/mira-public-workspace"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "command": "status",
+    "workspace": "<PROJECT_ROOT>\\examples\\mira-public-workspace",
+    "project_id": "mira-public-demo",
+    "current": {
+      "version": "0.2.0",
+      "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+      "path": "releases/0.2.0",
+      "release": false
+    },
+    "pack_path": "<PROJECT_ROOT>\\examples\\mira-public-workspace\\releases\\0.2.0",
+    "canonical_path": "<PROJECT_ROOT>\\examples\\mira-public-workspace\\releases\\0.2.0\\style-pack.json",
+    "candidate_workspace": true,
+    "tasks": [
+      {
+        "task_id": "mira-pose-001",
+        "status": "prepared_for_exploration",
+        "baseline": {
+          "version": "0.2.0",
+          "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+          "path": "releases/0.2.0",
+          "release": false
+        },
+        "current_has_update": false
+      },
+      {
+        "task_id": "mira-production-001",
+        "status": "blocked",
+        "baseline": {
+          "version": "0.2.0",
+          "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+          "path": "releases/0.2.0",
+          "release": false
+        },
+        "current_has_update": false
+      },
+      {
+        "task_id": "mira-raincoat-001",
+        "status": "prepared_for_exploration",
+        "baseline": {
+          "version": "0.2.0",
+          "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+          "path": "releases/0.2.0",
+          "release": false
+        },
+        "current_has_update": false
+      }
+    ],
+    "categories": [
+      "character"
+    ],
+    "subjects": [
+      {
+        "id": "mira",
+        "category": "character",
+        "aliases": [
+          "女主",
+          "米拉"
+        ]
+      }
+    ],
+    "production_approved": false,
+    "notice": "已重新读取磁盘指针并核验当前包；未自动联网同步其他成员副本，未生成或验收任何资产。"
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:33.113150+00:00"
+}

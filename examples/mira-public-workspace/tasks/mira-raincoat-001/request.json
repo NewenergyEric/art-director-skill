@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "task_id": "mira-raincoat-001",
+  "request": "给米拉换一套雨衣，摆一个挥手的新姿势，给我 3 个候选；保持人物长相和画风。",
+  "category": "character",
+  "subject": "女主",
+  "mode": "exploration",
+  "changes": {
+    "outfit": "轻便黄色雨衣，保留漫画风；配件可调整但不改变脸与头发",
+    "pose": "抬手挥手、重心清楚"
+  },
+  "exploration": {
+    "slots": [
+      "outfit",
+      "pose"
+    ],
+    "candidates": 3
+  },
+  "owner": {
+    "id": "public-demo-character-artist",
+    "kind": "internal"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "step": "17-image-intake",
+  "command": [
+    "python",
+    "<PROJECT_ROOT>\\scripts\\pilot.py",
+    "intake",
+    "--input-dir",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\source-pack\\references",
+    "--out",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\intake"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "met_expectation": true,
+  "result": {
+    "ok": true,
+    "command": "intake",
+    "out": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\intake",
+    "inventory": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\intake\\inventory.json",
+    "counts": {
+      "listed": 3,
+      "read": 3,
+      "unread": 0,
+      "excluded": 0
+    },
+    "scope_of_check": "Local file inventory and bounded text/image decoding only. Originality, screenshot provenance, identity and visual rules remain unconfirmed. Source files are not modified or copied into an approved pack."
+  },
+  "stderr": ""
+}

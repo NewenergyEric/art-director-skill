@@ -22,7 +22,7 @@ This repository packages one Agent Skill at the repository root. It also contain
 - Keep the core CLI compatible with Python 3.10+ and the standard library. Pillow may remain optional for pixel checks.
 - Default to refusing destructive overwrites of builds, archives, and existing project packs.
 - Update tests when a change affects the pack contract, validation rules, command output, or relocatability.
-- Run `python -m unittest discover -s tests -v` and validate `examples/moss-harbor-draft` before release.
+- Run `python -m unittest discover -s tests -v`; validate both `examples/harbor-studio-draft` and `examples/campaign-studio-draft`; then build the mother Skill archive before release.
 
 ## Public repository hygiene
 

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "pack": {
+    "id": "mira-public-demo",
+    "version": "0.2.0",
+    "status": "draft",
+    "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624"
+  },
+  "release": false,
+  "files": {
+    "SKILL.md": "cd9201ef9f6616a48275aca94c2129da87d532bcf2d174eea75ae773ca2b924d",
+    "STYLE.md": "d30d9a9e42e8ed9dfc312e026595a6625fe06b0e058a62b5ac57d4235a5478db",
+    "agents/openai.yaml": "88a11c41576661782f09d9f2fbd46594ec9d90224d9db55724c89d2c7e241464",
+    "references/art-direction.md": "a3f67515cf4d985770bb0946c2e715e2a204d25cef2194785ade4a31487a1716",
+    "references/identity-candidate-board.png": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+    "references/style-board.png": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+    "scripts/style_pack.py": "fde700e0081ab7e5a82a4e007d7fdfc410e65b9e7ffd5da674f7c64b525bcfa8",
+    "style-pack.json": "18f2277c0a515eeafa91f2e64071336a07dee6c6f352312aa0b11a450afe4967"
+  },
+  "integrity_notice": "Content hashes detect changes; this unsigned manifest does not authenticate origin, approval identity or artistic quality."
+}

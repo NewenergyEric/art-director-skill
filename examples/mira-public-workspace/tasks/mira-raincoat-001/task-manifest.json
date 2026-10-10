@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "mira-raincoat-001",
+  "files": {
+    "brief.json": "05db3aca110d7acf85ada4de6c9106860f83677cdf7146599543cd6741684058",
+    "generation-brief.md": "27862cf55c0272e378047ddd0dcd660b98ec599e6d7c7cc83480d18a187f3b76",
+    "handoff.md": "1d73ae11596f47aa6560eafa1e5dc64116d9c9d922eb818c2570aa6db9d75b67",
+    "request.json": "3249ce2e3ed5271425e4bf26c7bec3902d5a68048c6edb8d1a93b5e65304a1b2",
+    "review.json": "a907ca97d038b2458fdb57ab8141c906c9ee4f0fcd94e8bc9d16fb182be765cc",
+    "task.json": "5b0a514f0cdaa0f709e17efa38c2bb9dc4878a1215421305d4dc4728e964a3f4"
+  },
+  "notice": "Frozen input hashes are unsigned; real outputs and review evidence belong under work/, not in this snapshot."
+}

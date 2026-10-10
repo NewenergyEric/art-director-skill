@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "game-layout-first",
+  "files": {
+    "brief.json": "0435fd542a710859b743da543a501fa8ae6d0716f79985744dc480d9dfc8b60d",
+    "generation-brief.md": "83074330e8eb91a3a45979ff399e0941981a9259089a60bf7cbda698140493d2",
+    "handoff.md": "3411bee256404f89523b22dc95661de67c80bde83e7e50e4aad938b0676650e0",
+    "request.json": "8ccaf9f5d1e998d75648fcbb3cd5069195e28dadbd6a82124af7e5eb5183ebae",
+    "review.json": "c49e83fbd69cc57f6c285a8625bf94579a57c30478bfd5a7acbce2bd66455f75",
+    "task.json": "c058b20117e24e3b5acc7f9f5c94a9079373f7160c8ffe7770aeefbd3160a401"
+  },
+  "notice": "Frozen input hashes are unsigned; real outputs and review evidence belong under work/, not in this snapshot."
+}

@@ -1,0 +1,533 @@
+{
+  "step": "18-release-gate",
+  "command": [
+    "python",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\unpacked-trial\\scripts\\style_pack.py",
+    "validate",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\unpacked-trial",
+    "--release"
+  ],
+  "exit_code": 1,
+  "expected_exit_code": 2,
+  "met_expectation": false,
+  "result": {
+    "ok": false,
+    "release": true,
+    "errors": [
+      {
+        "code": "release_requirement",
+        "path": "$.status",
+        "message": "A release requires status='approved'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved style reference covering 'character'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved context reference covering 'character'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved style reference covering 'environment'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved context reference covering 'environment'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved style reference covering 'prop'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved context reference covering 'prop'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved style reference covering 'ui'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved context reference covering 'ui'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved style reference covering 'layout'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved context reference covering 'layout'."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[0].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[1].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[2].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[3].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[4].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[5].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[6].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[7].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[8].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[9].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[10].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[11].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[12].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[13].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[14].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[15].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[16].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[17].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[18].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[19].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[20].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[21].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.entities[0].reference_ids",
+        "message": "Released entities need at least one approved identity reference."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.decisions[0].status",
+        "message": "Resolve proposed decisions before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.decisions[1].status",
+        "message": "Resolve proposed decisions before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.decisions[2].status",
+        "message": "Resolve proposed decisions before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.open_questions",
+        "message": "Resolve every open question before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.approval",
+        "message": "A release requires a named approval record and an existing evidence file."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.positioning[1].status",
+        "message": "Resolve positioning proposals/unknowns before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.positioning[2].status",
+        "message": "Resolve positioning proposals/unknowns before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.positioning[3].status",
+        "message": "Resolve positioning proposals/unknowns before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.positioning[4].status",
+        "message": "Resolve positioning proposals/unknowns before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.positioning[5].status",
+        "message": "Resolve positioning proposals/unknowns before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.positioning[6].status",
+        "message": "Resolve positioning proposals/unknowns before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.positioning[7].status",
+        "message": "Resolve positioning proposals/unknowns before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.positioning[8].status",
+        "message": "Resolve positioning proposals/unknowns before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.families[0].status",
+        "message": "Confirm family requirements before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[1].technical.camera",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[1].technical.module_and_engine_contract",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.families[1].status",
+        "message": "Confirm family requirements before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[2].technical.merge_recipe",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[2].technical.level_count",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[2].technical.display_size",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.families[2].status",
+        "message": "Confirm family requirements before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[3].technical.world_scale",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[3].technical.pivot",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[3].technical.collision",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.families[3].status",
+        "message": "Confirm family requirements before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[4].technical.font",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[4].technical.screen_and_touch_area",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[4].technical.real_strings",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.families[4].status",
+        "message": "Confirm family requirements before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[5].technical.screen_layout",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[5].technical.longest_name",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[5].technical.lock_conditions",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.families[5].status",
+        "message": "Confirm family requirements before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[6].technical.anchor_and_safe_area",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[6].technical.state_conditions",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.families[6].status",
+        "message": "Confirm family requirements before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[7].technical.channels",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[7].technical.dimensions",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[7].technical.safe_area",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[7].technical.activity_sheet",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.families[7].technical.font",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.families[7].status",
+        "message": "Confirm family requirements before release."
+      },
+      {
+        "code": "required_exemplar",
+        "path": "$.direction.exemplars[1].status",
+        "message": "This required sample has not been approved."
+      },
+      {
+        "code": "required_exemplar",
+        "path": "$.direction.exemplars[2].status",
+        "message": "This required sample has not been approved."
+      },
+      {
+        "code": "required_exemplar",
+        "path": "$.direction.exemplars[3].status",
+        "message": "This required sample has not been approved."
+      },
+      {
+        "code": "required_exemplar",
+        "path": "$.direction.exemplars[4].status",
+        "message": "This required sample has not been approved."
+      },
+      {
+        "code": "required_exemplar",
+        "path": "$.direction.exemplars[5].status",
+        "message": "This required sample has not been approved."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.delivery[0].status",
+        "message": "Confirm delivery channels and requirements before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[1].technical.source_tool",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[1].technical.real_outputs",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[1].technical.time_and_cost_budget",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[1].technical.display_size",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.delivery[1].status",
+        "message": "Confirm delivery channels and requirements before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[2].technical.medium",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[2].technical.platform",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[2].technical.screen",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[2].technical.camera",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[2].technical.performance_budget",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[2].technical.export_spec",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.delivery[2].status",
+        "message": "Confirm delivery channels and requirements before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[3].technical.channel_specs",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[3].technical.activity_sheet",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[3].technical.font_and_rights",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "unknown_technical",
+        "path": "$.direction.delivery[3].technical.exports",
+        "message": "A declared technical parameter is unknown (null); resolve it before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.direction.delivery[3].status",
+        "message": "Confirm delivery channels and requirements before release."
+      }
+    ],
+    "warnings": [
+      {
+        "code": "candidate_reference",
+        "path": "$.references[0]",
+        "message": "Candidate reference: do not present it as approved production guidance."
+      },
+      {
+        "code": "candidate_reference",
+        "path": "$.references[1]",
+        "message": "Candidate reference: do not present it as approved production guidance."
+      },
+      {
+        "code": "candidate_reference",
+        "path": "$.references[2]",
+        "message": "Candidate reference: do not present it as approved production guidance."
+      }
+    ],
+    "scope_of_check": "Structure, local file presence, cross-references and recorded release prerequisites only; no visual assessment or approval identity authentication."
+  },
+  "stderr": ""
+}

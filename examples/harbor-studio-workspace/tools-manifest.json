@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "files": {
+    "project_runtime.py": "a279ebb932c861f55b30c4c1369bd031ea3c3a5bafde33e020ec2b6c3a05ca2d",
+    "style_pack.py": "5d4d2fe5eb9c966e72f8b9f94202f2bd1ad4ed2658050add159b80173de49d7e",
+    "team_batch.py": "f656bf89575567f17266117d227c80333cec2bfa552fb49f87b61439c4a86d52"
+  },
+  "notice": "Unsigned hashes detect accidental changes; they do not authenticate the runtime author or approver."
+}

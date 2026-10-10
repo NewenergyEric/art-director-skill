@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "pack": {
+    "id": "weekend-campaign",
+    "version": "0.1.0",
+    "status": "draft",
+    "fingerprint": "f7147528ec51046fe38bce314e2d3cbbca3a95b5dcfcd6addb8300039fcd074d"
+  },
+  "release": false,
+  "files": {
+    "SKILL.md": "0f4377dc734cfb46118f4336bd6b1ee269d71b5b9326e39fd8de3da513fbcf18",
+    "STYLE.md": "110231278447faf2b148fd50aaf1aaba6b0680e6559d50ef77209cd05db5cb65",
+    "agents/openai.yaml": "f932fec8cd1927a428136b6e5f4bea17ff44c13e998ace30cd345987d0b4fe83",
+    "references/campaign-brief.md": "289c49ce7c2dc088ed68be651e7a8759e2d2529d1ed65b60ffe01b82a8b71563",
+    "scripts/style_pack.py": "fde700e0081ab7e5a82a4e007d7fdfc410e65b9e7ffd5da674f7c64b525bcfa8",
+    "style-pack.json": "0aa959453be8ce0ae42fed98433ae38e0a4c955b7723d4d760f7efa90f2448ad"
+  },
+  "integrity_notice": "Content hashes detect changes; this unsigned manifest does not authenticate origin, approval identity or artistic quality."
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "task_id": "game-motion-first",
+  "request": "给外包准备单棋消除反馈首件，沿用静态棋子身份。",
+  "category": "motion",
+  "family": "feedback-effects",
+  "subject": null,
+  "mode": "exploration",
+  "changes": {
+    "action": "单棋消除的预备、命中、收束"
+  },
+  "exploration": {
+    "slots": [
+      "action"
+    ],
+    "candidates": 2
+  },
+  "owner": {
+    "id": "external-motion",
+    "kind": "external"
+  },
+  "components": []
+}

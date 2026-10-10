@@ -1,0 +1,50 @@
+{
+  "positioning": [
+    {
+      "id": "audience-use",
+      "topic": "受众、使用场景与成功判断",
+      "statement": "尚待主美结合已有资料确认；Agent 应先整理现有证据并提出具体可评审的候选内容。",
+      "status": "unknown",
+      "source": "模板占位，不能当作项目已确认定位。"
+    }
+  ],
+  "families": [
+    {
+      "id": "ui-controls",
+      "name": "交互控件家族（示例结构，按项目替换）",
+      "category": "ui",
+      "purpose": "将同类组件的共同判断、状态、允许变化和技术要求集中管理。",
+      "rule_ids": [],
+      "reference_ids": [],
+      "fixed": [],
+      "variable": [],
+      "technical": {},
+      "status": "proposed"
+    }
+  ],
+  "exemplars": [
+    {
+      "id": "first-controls",
+      "name": "控件首件与使用场景样板计划",
+      "family_ids": ["ui-controls"],
+      "purpose": "先验证单件与实际组合，再决定是否能用于扩批；样板数量按职责确定。",
+      "reference_ids": [],
+      "acceptance": ["由主美明确可读性、状态区分、组合关系与实际使用情境的验收判断。"],
+      "required": true,
+      "status": "planned",
+      "approval": null
+    }
+  ],
+  "delivery": [
+    {
+      "id": "channel-delivery",
+      "name": "待确认的目标渠道交付",
+      "categories": ["ui"],
+      "channels": ["待项目负责人确认"],
+      "requirements": ["明确源文件、导出件、组合验证证据、责任人与交付版本。"],
+      "technical": {},
+      "status": "unknown",
+      "source": "模板中的交付讨论点，不是已经批准的技术规范。"
+    }
+  ]
+}

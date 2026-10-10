@@ -1,0 +1,25 @@
+{
+  "label": "version-reject-unpublished-budget",
+  "command": [
+    "python",
+    "evals/public-demo/version-workspace/tools/project_runtime.py",
+    "start",
+    "evals/public-demo/version-workspace",
+    "--request",
+    "evals/public-demo/version-requests/unpublished-four.json"
+  ],
+  "exit_code": 2,
+  "expected_exit_code": 2,
+  "stdout": {
+    "ok": false,
+    "command": "start",
+    "errors": [
+      {
+        "code": "exploration_budget",
+        "message": "Candidate count exceeds this task's director-set budget; change the project budget explicitly rather than silently increasing it."
+      }
+    ]
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:38.167156+00:00"
+}

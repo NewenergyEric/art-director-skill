@@ -1,0 +1,103 @@
+{
+  "all_inputs_unchanged": true,
+  "before": {
+    "<PROJECT_ROOT>\\evals\\team-production\\current-version-batch.json": {
+      "bytes": 4951,
+      "sha256": "cd956f9c70ddf35503f53e55309be1d3b3f797e0a80142c14b12fe44a344e3c1"
+    },
+    "<PROJECT_ROOT>\\scripts\\style_pack.py": {
+      "bytes": 54040,
+      "sha256": "405f507a8622748f1fe6944cddcb8ae747737fbb5a7c3f4b7f3d95a7834a0735"
+    },
+    "<PROJECT_ROOT>\\scripts\\team_batch.py": {
+      "bytes": 18137,
+      "sha256": "db05afefeee0b31c968f3a03827493269eb0a177209d6010331700e26fdede88"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\agents\\openai.yaml": {
+      "bytes": 363,
+      "sha256": "ad461d9a716514a8422b87872db7ca00c0b3945323e8bae971fe421a1f46ccd3"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\manifest.json": {
+      "bytes": 1070,
+      "sha256": "0d8ddd0619b05e80447390157768d38bf537189405bebc3467e2504f2ed88c7a"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\references\\style-board.png": {
+      "bytes": 1865205,
+      "sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\references\\team-art-direction.md": {
+      "bytes": 7340,
+      "sha256": "b5955fb2f62a6f141e36bb1b4b0b422c265aee5c2ecc23c98d6923f58f62f631"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\scripts\\style_pack.py": {
+      "bytes": 54040,
+      "sha256": "405f507a8622748f1fe6944cddcb8ae747737fbb5a7c3f4b7f3d95a7834a0735"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\SKILL.md": {
+      "bytes": 4960,
+      "sha256": "36f16638594e9784b755e9b7a90afb04dd6414a4a3b6f2e517532fdd2b7dc431"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\style-pack.json": {
+      "bytes": 28784,
+      "sha256": "43f026da4ab8c991394896c5236db67282e72e77bbea4dd7f2a10ea0f5bd065b"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\STYLE.md": {
+      "bytes": 22922,
+      "sha256": "65e86c847dc067a1425fb805bb023391b5face2f38965e49aa16cbd6996187c4"
+    },
+    "<PROJECT_ROOT>\\evals\\team-production\\fixture\\protocol-probe.txt": {
+      "bytes": 147,
+      "sha256": "54a39ffa52ebdaa7f9b7605d600767a3db5b2d7d7df3030579ed89a6dbbaf1f2"
+    }
+  },
+  "after": {
+    "<PROJECT_ROOT>\\evals\\team-production\\current-version-batch.json": {
+      "bytes": 4951,
+      "sha256": "cd956f9c70ddf35503f53e55309be1d3b3f797e0a80142c14b12fe44a344e3c1"
+    },
+    "<PROJECT_ROOT>\\scripts\\style_pack.py": {
+      "bytes": 54040,
+      "sha256": "405f507a8622748f1fe6944cddcb8ae747737fbb5a7c3f4b7f3d95a7834a0735"
+    },
+    "<PROJECT_ROOT>\\scripts\\team_batch.py": {
+      "bytes": 18137,
+      "sha256": "db05afefeee0b31c968f3a03827493269eb0a177209d6010331700e26fdede88"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\agents\\openai.yaml": {
+      "bytes": 363,
+      "sha256": "ad461d9a716514a8422b87872db7ca00c0b3945323e8bae971fe421a1f46ccd3"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\manifest.json": {
+      "bytes": 1070,
+      "sha256": "0d8ddd0619b05e80447390157768d38bf537189405bebc3467e2504f2ed88c7a"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\references\\style-board.png": {
+      "bytes": 1865205,
+      "sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\references\\team-art-direction.md": {
+      "bytes": 7340,
+      "sha256": "b5955fb2f62a6f141e36bb1b4b0b422c265aee5c2ecc23c98d6923f58f62f631"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\scripts\\style_pack.py": {
+      "bytes": 54040,
+      "sha256": "405f507a8622748f1fe6944cddcb8ae747737fbb5a7c3f4b7f3d95a7834a0735"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\SKILL.md": {
+      "bytes": 4960,
+      "sha256": "36f16638594e9784b755e9b7a90afb04dd6414a4a3b6f2e517532fdd2b7dc431"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\style-pack.json": {
+      "bytes": 28784,
+      "sha256": "43f026da4ab8c991394896c5236db67282e72e77bbea4dd7f2a10ea0f5bd065b"
+    },
+    "<PROJECT_ROOT>\\dist\\pop-borough-0.1.0-draft\\STYLE.md": {
+      "bytes": 22922,
+      "sha256": "65e86c847dc067a1425fb805bb023391b5face2f38965e49aa16cbd6996187c4"
+    },
+    "<PROJECT_ROOT>\\evals\\team-production\\fixture\\protocol-probe.txt": {
+      "bytes": 147,
+      "sha256": "54a39ffa52ebdaa7f9b7605d600767a3db5b2d7d7df3030579ed89a6dbbaf1f2"
+    }
+  }
+}

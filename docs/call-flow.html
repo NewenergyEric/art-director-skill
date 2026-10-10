@@ -3,87 +3,1056 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Art Director · 规范如何进入每一次创作</title>
+  <title>Art Director · 团队视觉生产调用逻辑</title>
   <style>
-    :root{--paper:#f3f0e8;--sheet:#fffdfa;--ink:#171717;--muted:#6f6a61;--line:#d7d0c3;--green:#247a67;--sage:#deeee7;--orange:#e64b32;--peach:#f7ddd5;--yellow:#f3d34a;--navy:#171717;--mono:"Cascadia Code","Consolas",monospace;--body:"Microsoft YaHei","PingFang SC",sans-serif;--display:"Georgia","Noto Serif SC","SimSun",serif}
+    :root{--paper:#f1efe7;--sheet:#fbfaf6;--ink:#233332;--muted:#68716c;--line:#d5d9cc;--green:#305b49;--sage:#e5ebdf;--orange:#c45332;--peach:#f6e6db;--yellow:#f0e7be;--navy:#213633;--mono:"Cascadia Code","Consolas",monospace;--body:"Microsoft YaHei","PingFang SC",sans-serif;--display:"Georgia","Noto Serif SC","SimSun",serif}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.7 var(--body)}button{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--orange);outline-offset:4px}::selection{background:#e8caa9}.skip{position:absolute;top:-100px;left:20px;z-index:20;padding:12px;background:var(--ink);color:#fff}.skip:focus{top:10px}
-    .masthead{background:var(--navy);color:var(--sheet);padding:18px max(28px,calc((100vw - 1480px)/2));display:flex;align-items:center;gap:18px}.logo{font:30px/1 var(--display);letter-spacing:-3px;border-right:1px solid #625e56;padding-right:18px}.brand{font-size:12px;letter-spacing:.18em;text-transform:uppercase}.edition{margin-left:auto;text-align:right;font:11px/1.6 var(--mono);color:#d5d0c6}.edition b{font-family:var(--body);font-weight:400;color:var(--yellow);letter-spacing:.09em}
+    .masthead{background:var(--navy);color:var(--sheet);padding:18px max(28px,calc((100vw - 1480px)/2));display:flex;align-items:center;gap:18px}.logo{font:30px/1 var(--display);letter-spacing:-3px;border-right:1px solid #5b6a60;padding-right:18px}.brand{font-size:12px;letter-spacing:.18em;text-transform:uppercase}.edition{margin-left:auto;text-align:right;font:11px/1.6 var(--mono);color:#becdc0}.edition b{font-family:var(--body);font-weight:400;color:#f0e6cc;letter-spacing:.09em}
     .shell{max-width:1536px;padding:0 28px;margin:0 auto}.hero{display:grid;grid-template-columns:1.55fr 1fr;gap:60px;padding:47px 0 32px;border-bottom:1px solid var(--line)}.eyebrow{display:flex;gap:12px;align-items:center;font-size:11px;letter-spacing:.17em;color:var(--green);text-transform:uppercase}.eyebrow:before{content:"";width:26px;height:2px;background:var(--orange)}h1{font-family:var(--display);font-size:clamp(30px,3.1vw,48px);font-weight:500;line-height:1.35;letter-spacing:-.045em;margin:16px 0}h1 em{color:var(--green);font-style:normal}.intro{max-width:670px;font-size:14px;color:var(--muted);margin:0;line-height:1.9}.hero-note{border-left:1px solid var(--line);padding:8px 0 0 27px;align-self:center}.hero-note strong{font-family:var(--display);font-size:20px;font-weight:500}.hero-note p{font-size:13px;color:var(--muted);margin:10px 0 13px}.call-chain{font-family:var(--mono);font-size:11px;letter-spacing:.08em;display:flex;gap:10px;flex-wrap:wrap;color:var(--green)}.call-chain span{color:#92978c}
-    .readiness{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:16px 0 20px;border-bottom:1px solid var(--line)}.readiness-mark{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px var(--peach)}.readiness p{margin:0;font-size:12px}.readiness b{font-weight:600;color:#b93825}.readiness a{color:var(--green);font-size:12px;text-decoration-thickness:1px;text-underline-offset:4px;white-space:nowrap}
+    .readiness{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:16px 0 20px;border-bottom:1px solid var(--line)}.readiness-mark{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px #eedaCE}.readiness p{margin:0;font-size:12px}.readiness b{font-weight:600;color:#964625}.readiness a{color:var(--green);font-size:12px;text-decoration-thickness:1px;text-underline-offset:4px;white-space:nowrap}
     .routebar{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px}.tabs{display:flex;gap:5px;align-items:center}.tab{border:1px solid transparent;background:transparent;padding:10px 17px;border-radius:4px;color:var(--muted);font-size:14px;transition:.15s}.tab span{font:11px var(--mono);margin-right:9px;opacity:.7}.tab[aria-selected="true"]{border-color:var(--ink);background:var(--ink);color:white}.tab:hover{border-color:var(--ink)}.legend{display:flex;gap:15px;color:var(--muted);font-size:11px;white-space:nowrap}.legend span{display:flex;align-items:center;gap:6px}.dot{width:6px;height:6px;border-radius:50%;background:var(--green)}.dot.new{background:var(--orange)}.dot.needs{background:#a28d3f}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:28px;align-items:start;padding:25px 0 38px}
     .route-heading{display:flex;gap:14px;align-items:start;margin-bottom:21px}.route-heading h2{font-size:23px;font-family:var(--display);font-weight:500;line-height:1.45;margin:0 0 6px}.route-heading p{font-size:12px;margin:0;color:var(--muted);max-width:700px}.route-count{font:42px/.9 var(--display);letter-spacing:-4px;color:#b8c1af;min-width:44px;padding-top:3px}.diagram{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.phase{min-width:0}.phase-header{display:flex;align-items:center;gap:8px;margin-bottom:13px;border-bottom:1px solid var(--line);padding-bottom:10px;position:relative}.phase-header strong{font-size:12px;font-weight:500}.phase-header span{font:10px var(--mono);color:var(--muted)}.phase:not(:last-child) .phase-header:after{content:"→";position:absolute;right:-12px;top:-1px;color:#798775;font-size:18px;background:var(--paper);z-index:1;padding:0 2px}.node{display:block;position:relative;width:100%;text-align:left;border:1px solid var(--line);background:var(--sheet);border-radius:5px;padding:15px 14px 13px;color:var(--ink);min-height:180px;transition:border-color .15s,transform .15s,box-shadow .15s}.node:hover{border-color:var(--green);transform:translateY(-2px);box-shadow:0 5px 14px #20342b09}.node[aria-pressed="true"]{border-color:var(--green);background:#f7faf2;box-shadow:inset 0 0 0 1px var(--green)}.node[aria-pressed="true"]:after{content:"↗";position:absolute;right:11px;top:10px;color:var(--green);font-size:17px}.node-kicker{display:flex;gap:7px;align-items:center;font:10px var(--mono);color:var(--muted);margin-bottom:13px}.node-kicker .state{font:10px var(--body);letter-spacing:.02em;color:var(--green);background:var(--sage);padding:1px 5px;border-radius:2px}.node-kicker .state.new{color:#9a4428;background:var(--peach)}.node-kicker .state.needs{color:#877026;background:var(--yellow)}.node h3{font-size:15px;line-height:1.5;font-weight:600;margin:0 0 6px}.node p{font-size:11px;color:var(--muted);line-height:1.7;margin:0 0 14px}.node-path{display:block;font:10px/1.6 var(--mono);overflow-wrap:anywhere;color:#72816e;border-top:1px dotted #d7ddce;padding-top:8px}.connector{text-align:center;height:29px;color:#758570;font:22px/27px var(--display)}.layer-strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:4px;margin-top:18px;background:#ebece2}.layer{padding:12px;border-right:1px solid var(--line)}.layer:last-child{border:0}.layer b{display:block;font-size:11px;font-weight:600}.layer span{display:block;font-size:10px;color:var(--muted);margin-top:3px}.layer code{font:9px var(--mono);color:var(--green);overflow-wrap:anywhere}.route-note{margin:14px 0 0;padding-left:12px;border-left:2px solid var(--orange);font-size:11px;line-height:1.9;color:var(--muted)}
     .branch{margin-top:18px;position:relative}.branch-title{text-align:center;font:11px var(--body);color:var(--muted);margin-bottom:10px}.branch-title:before{content:"↓";display:block;font:22px/1.2 var(--display);color:#788773;margin-bottom:3px}.branch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.outcome{border:1px solid var(--line);background:transparent;text-align:left;padding:12px 11px;border-radius:4px}.outcome[aria-pressed="true"]{outline:2px solid var(--green);outline-offset:-2px}.outcome:hover{background:var(--sheet)}.outcome b{font:10px var(--mono);display:block;letter-spacing:.1em;margin-bottom:4px;color:var(--green)}.outcome.fail b{color:#9b422f}.outcome.unknown b{color:#927837}.outcome strong{font-size:12px;font-weight:500}.outcome p{font-size:10px;color:var(--muted);margin:5px 0 0}.loop{border-top:1px solid var(--line);margin-top:17px;padding:13px 0 0;display:flex;align-items:center;gap:11px;font-size:11px;color:var(--muted)}.loop .loop-mark{font:24px var(--display);color:var(--orange)}.text-button{color:var(--green);background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:3px;text-align:left}
-    .detail{border:1px solid #cfc7ba;background:var(--sheet);border-radius:5px;position:sticky;top:20px;overflow:hidden}.detail-top{background:var(--ink);color:var(--sheet);padding:18px 20px 19px}.detail-top small{color:#cfc7ba;font:10px var(--mono);letter-spacing:.14em}.detail-top h2{margin:8px 0 6px;font-size:19px;font-weight:500;line-height:1.5;font-family:var(--display)}.detail-top p{margin:0;font-size:11px;color:#ddd6ca;line-height:1.8}.detail-body{padding:17px 20px 21px}.detail-section{margin:0 0 16px}.detail-label{font-size:10px;font-weight:600;letter-spacing:.08em;color:#786f63;display:flex;align-items:center;gap:8px;margin-bottom:7px}.detail-label:after{content:"";height:1px;background:#e8e2d8;flex:1}.detail-section p{margin:0;font-size:12px;line-height:1.9}.detail-section ul{padding-left:16px;margin:0;font-size:11px;line-height:1.9}.detail-section li+li{margin-top:5px}.detail-section:last-child{margin-bottom:0}.file{background:#f2eee6;border-radius:3px;padding:9px 10px;margin-top:7px}.file-head{display:flex;align-items:center;justify-content:space-between;gap:7px}.file-role{font-size:10px;color:var(--muted)}.file-code{display:block;font:10px/1.7 var(--mono);overflow-wrap:anywhere;color:var(--green);margin:5px 0 0}.file-full{font:9px/1.8 var(--mono);overflow-wrap:anywhere;color:var(--muted);padding-top:7px}.file details{margin-top:5px}.file summary{font-size:9px;color:var(--muted);cursor:pointer}.copy{flex-shrink:0;font-size:10px;background:none;color:var(--green);border:1px solid #cfc7ba;border-radius:2px;padding:2px 6px;line-height:1.5}.copy:hover{background:var(--sage)}.command-box{background:#25231f;color:#f1eee6;border-radius:4px;padding:12px;margin:8px 0 0}.command-head{display:flex;align-items:center;justify-content:space-between;font-size:9px;color:#cfc7ba;margin-bottom:9px;gap:8px}.command-head .copy{color:#f1eee6;border-color:#81776a}.command-head .copy:hover{background:#423d35}pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:10px/1.75 var(--mono)}.condition{padding:9px 11px;background:var(--sage);border-left:2px solid var(--green);font-size:11px}.unknown-note{background:var(--yellow);border-left-color:#d79b38}.detail-follow{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:13px;margin-top:18px}.detail-follow span{font-size:10px;color:var(--muted)}.detail-follow button{border:0;background:var(--green);color:white;padding:7px 10px;border-radius:3px;font-size:11px}.detail-follow button:hover{background:#165f50}
+    .detail{border:1px solid #bdc9b6;background:var(--sheet);border-radius:5px;position:sticky;top:20px;overflow:hidden}.detail-top{background:var(--ink);color:var(--sheet);padding:18px 20px 19px}.detail-top small{color:#c2cfba;font:10px var(--mono);letter-spacing:.14em}.detail-top h2{margin:8px 0 6px;font-size:19px;font-weight:500;line-height:1.5;font-family:var(--display)}.detail-top p{margin:0;font-size:11px;color:#c9d3c4;line-height:1.8}.detail-body{padding:17px 20px 21px}.detail-section{margin:0 0 16px}.detail-label{font-size:10px;font-weight:600;letter-spacing:.08em;color:#879080;display:flex;align-items:center;gap:8px;margin-bottom:7px}.detail-label:after{content:"";height:1px;background:#e3e6db;flex:1}.detail-section p{margin:0;font-size:12px;line-height:1.9}.detail-section ul{padding-left:16px;margin:0;font-size:11px;line-height:1.9}.detail-section li+li{margin-top:5px}.detail-section:last-child{margin-bottom:0}.file{background:#eef0e8;border-radius:3px;padding:9px 10px;margin-top:7px}.file-head{display:flex;align-items:center;justify-content:space-between;gap:7px}.file-role{font-size:10px;color:var(--muted)}.file-code{display:block;font:10px/1.7 var(--mono);overflow-wrap:anywhere;color:var(--green);margin:5px 0 0}.file-full{font:9px/1.8 var(--mono);overflow-wrap:anywhere;color:var(--muted);padding-top:7px}.file details{margin-top:5px}.file summary{font-size:9px;color:var(--muted);cursor:pointer}.copy{flex-shrink:0;font-size:10px;background:none;color:var(--green);border:1px solid #bdc9b6;border-radius:2px;padding:2px 6px;line-height:1.5}.copy:hover{background:#dde5d5}.command-box{background:#253734;color:#e4ecde;border-radius:4px;padding:12px;margin:8px 0 0}.command-head{display:flex;align-items:center;justify-content:space-between;font-size:9px;color:#b6c8ad;margin-bottom:9px;gap:8px}.command-head .copy{color:#dcebd1;border-color:#6a8264}.command-head .copy:hover{background:#3b513f}pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:10px/1.75 var(--mono)}.condition{padding:9px 11px;background:var(--sage);border-left:2px solid #859975;font-size:11px}.unknown-note{background:#f3eacc;border-left-color:#baa763}.detail-follow{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:13px;margin-top:18px}.detail-follow span{font-size:10px;color:var(--muted)}.detail-follow button{border:0;background:var(--green);color:white;padding:7px 10px;border-radius:3px;font-size:11px}.detail-follow button:hover{background:#223f32}
     .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:19px 0 0}.metric{border-top:2px solid var(--line);padding:11px 0}.metric strong{font:36px/1.3 var(--display);color:#8e9985}.metric b{display:block;font-size:11px;font-weight:500;margin:4px 0}.metric p{font-size:10px;color:var(--muted);margin:0;line-height:1.8}.split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}.arm{padding:15px;border:1px solid var(--line);border-radius:4px}.arm h3{margin:0 0 6px;font-size:13px;font-weight:500}.arm h3 span{font:11px var(--mono);color:var(--orange);margin-right:9px}.arm p{font-size:11px;color:var(--muted);margin:0}.arm.skill{background:#e8eddf}.experiment-status{display:flex;gap:8px;align-items:center;margin-top:14px;font-size:11px;color:#947642}.experiment-status:before{content:"";width:6px;height:6px;border-radius:50%;background:#a28d3f}
     .footnotes{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;border-top:1px solid var(--line);padding:24px 0 29px}.footnotes h3{font-size:11px;font-weight:500;margin:0 0 8px;color:var(--green)}.footnotes p{margin:0;font-size:11px;line-height:1.9;color:var(--muted)}.footnotes code{font:10px/1.8 var(--mono);overflow-wrap:anywhere}.footer{background:var(--navy);color:#c3cfbd;padding:13px 28px;font:10px/1.8 var(--mono);display:flex;justify-content:space-between;gap:20px}.footer span{font-family:var(--body)}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,15px);background:var(--ink);color:var(--sheet);box-shadow:0 5px 30px #16221a20;border:1px solid #657c62;border-radius:4px;padding:11px 18px;font-size:12px;opacity:0;pointer-events:none;transition:.2s;z-index:25;max-width:90vw}.toast.show{opacity:1;transform:translate(-50%,0)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     @media(min-width:1380px){.workspace{grid-template-columns:minmax(0,1fr) 360px;gap:35px}.node{min-height:170px;padding:17px}.node h3{font-size:16px}.node p{font-size:12px}.node-path{font-size:10px}.phase-header strong{font-size:13px}}
     @media(max-width:1120px){.hero{gap:32px}.workspace{grid-template-columns:minmax(0,1fr) 310px;gap:20px}.diagram{gap:10px}.node{padding:12px 10px;min-height:192px}.node h3{font-size:13px}.node-kicker{font-size:9px}.node-kicker .state{font-size:9px}.node-path{font-size:9px}.legend{gap:8px;font-size:10px}.tab{padding:9px 12px;font-size:13px}.detail-body{padding:15px}.detail-top{padding:17px 15px}.shell{padding:0 22px}.layer{padding:9px}}
     @media(max-width:940px){.workspace{grid-template-columns:1fr;gap:23px}.detail{position:relative;top:auto}.detail-body{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;padding:20px}.detail-section{margin:0}.detail-follow{grid-column:1/-1;margin-top:0}.detail-top{padding:18px 20px}.node{min-height:173px;padding:16px}.node h3{font-size:15px}.node p{font-size:12px}.node-path{font-size:10px}.hero{grid-template-columns:1.5fr 1fr;gap:25px}.hero-note{padding-left:20px}.hero-note strong{font-size:18px}.legend{display:none}.detail:before{content:"点击上方节点，查看对应输入、路径与判断条件";display:block;padding:9px 20px;color:var(--muted);font-size:10px;background:#e9ede2}.footnotes{gap:20px}.readiness{grid-template-columns:auto 1fr}.readiness a{grid-column:2}.readiness{row-gap:6px}}
-    @media(max-width:640px){.shell{padding:0 18px}.masthead{padding:16px 18px}.brand{font-size:10px;letter-spacing:.1em}.edition{font-size:9px}.logo{font-size:27px}.hero{grid-template-columns:1fr;gap:22px;padding:30px 0 22px}.hero-note{border-left:0;border-top:1px solid var(--line);padding:17px 0 0}.hero-note strong{font-size:16px}.hero-note p{font-size:12px;margin:8px 0 10px}.intro{font-size:12px}h1{font-size:32px;margin:14px 0}.tabs{width:100%;gap:4px}.tab{flex:1;font-size:12px;padding:9px 5px;white-space:nowrap}.tab span{font-size:9px;margin-right:5px}.routebar{margin-top:20px}.workspace{padding-top:21px}.route-heading h2{font-size:21px}.route-count{font-size:36px;min-width:37px}.diagram{grid-template-columns:1fr;gap:17px}.phase-header{margin-bottom:10px}.phase-header span{font-size:10px}.phase-header strong{font-size:12px}.phase:not(:last-child) .phase-header:after{display:none}.phase+.phase:before{content:"↓";display:block;color:#758570;text-align:center;font:24px var(--display);margin:-4px 0 9px}.phase .phase-nodes{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:relative}.phase-nodes:after{content:"→";color:#788773;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:15px}.connector{display:none}.node{padding:13px 11px;min-height:177px}.node h3{font-size:13px}.node p{font-size:11px}.node-kicker{margin-bottom:10px}.node-path{font-size:9px}.node[aria-pressed="true"]:after{right:7px;top:7px;font-size:13px}.layer-strip{grid-template-columns:1fr 1fr}.layer:nth-child(2){border-right:0}.layer:nth-child(-n+2){border-bottom:1px solid var(--line)}.branch-grid{gap:7px}.outcome{padding:10px 8px}.outcome strong{font-size:11px}.outcome p{font-size:9px}.detail-body{grid-template-columns:1fr;gap:17px}.detail-follow{grid-column:auto}.metrics{gap:13px}.metric p{font-size:9px}.split{gap:9px}.arm{padding:12px}.arm p{font-size:10px}.footnotes{grid-template-columns:1fr;gap:18px}.footer{padding:14px 18px;flex-direction:column;gap:3px}.readiness p{font-size:11px}.readiness{padding:16px 0}.route-heading p{font-size:11px}.eyebrow{font-size:10px}.file-code{font-size:10px}.command-box pre{font-size:10px}}
+    @media(max-width:640px){.shell{padding:0 18px}.masthead{padding:16px 18px}.brand{font-size:10px;letter-spacing:.1em}.edition{font-size:9px}.logo{font-size:27px}.hero{grid-template-columns:1fr;gap:22px;padding:30px 0 22px}.hero-note{border-left:0;border-top:1px solid var(--line);padding:17px 0 0}.hero-note strong{font-size:16px}.hero-note p{font-size:12px;margin:8px 0 10px}.intro{font-size:12px}h1{font-size:32px;margin:14px 0}.tabs{width:100%;gap:5px;display:grid;grid-template-columns:1fr 1fr}.tab{flex:1;font-size:12px;padding:9px 5px;white-space:nowrap}.tab span{font-size:9px;margin-right:5px}.routebar{margin-top:20px}.workspace{padding-top:21px}.route-heading h2{font-size:21px}.route-count{font-size:36px;min-width:37px}.diagram{grid-template-columns:1fr;gap:17px}.phase-header{margin-bottom:10px}.phase-header span{font-size:10px}.phase-header strong{font-size:12px}.phase:not(:last-child) .phase-header:after{display:none}.phase+.phase:before{content:"↓";display:block;color:#758570;text-align:center;font:24px var(--display);margin:-4px 0 9px}.phase .phase-nodes{display:grid;grid-template-columns:1fr 1fr;gap:16px;position:relative}.phase-nodes:after{content:"→";color:#788773;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:15px}.connector{display:none}.node{padding:13px 11px;min-height:177px}.node h3{font-size:13px}.node p{font-size:11px}.node-kicker{margin-bottom:10px}.node-path{font-size:9px}.node[aria-pressed="true"]:after{right:7px;top:7px;font-size:13px}.layer-strip{grid-template-columns:1fr 1fr}.layer:nth-child(2){border-right:0}.layer:nth-child(-n+2){border-bottom:1px solid var(--line)}.branch-grid{gap:7px}.outcome{padding:10px 8px}.outcome strong{font-size:11px}.outcome p{font-size:9px}.detail-body{grid-template-columns:1fr;gap:17px}.detail-follow{grid-column:auto}.metrics{gap:13px}.metric p{font-size:9px}.split{gap:9px}.arm{padding:12px}.arm p{font-size:10px}.footnotes{grid-template-columns:1fr;gap:18px}.footer{padding:14px 18px;flex-direction:column;gap:3px}.readiness p{font-size:11px}.readiness{padding:16px 0}.route-heading p{font-size:11px}.eyebrow{font-size:10px}.file-code{font-size:10px}.command-box pre{font-size:10px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.node:hover{transform:none}}
     @media print{body{background:white}.masthead{background:white;color:#222;border-bottom:1px solid #aaa}.edition{color:#555}.edition b{color:#222}.workspace{display:block}.detail{position:relative;break-before:page}.detail-top{background:white;color:#222}.detail-top small,.detail-top p{color:#555}.node,.phase{break-inside:avoid}.tabs,.copy,.detail-follow,.toast,.skip{display:none}.hero{padding:20px 0}.shell{padding:0}.footer{background:white;color:#444}.routebar{justify-content:flex-end}.legend{display:flex}.diagram{grid-template-columns:repeat(3,1fr)}.node{min-height:165px}.footnotes{break-inside:avoid}}
+      .detail-section>summary{font-size:11px;color:var(--green);cursor:pointer}.detail-section[open]>summary{margin-bottom:9px}.layer code{display:none}
   </style>
 </head>
 <body>
   <a class="skip" href="#route-panel">跳到调用流程</a>
   <header class="masthead">
     <div class="logo" aria-hidden="true">AD</div>
-    <div class="brand">Art Director<br>Studio notes</div>
-    <div class="edition"><b>美术总监与团队 · 工作路径</b><br>WORKFLOW ATLAS / 2026.10.09</div>
+    <div class="brand">Art Director<br>Team style system</div>
+    <div class="edition"><b>团队美术 · 调用逻辑</b><br>WORKFLOW ATLAS / 2026.10.10</div>
   </header>
   <main class="shell">
     <section class="hero" aria-labelledby="page-title">
-      <div><div class="eyebrow">一位美术总监怎样带着团队继续做</div><h1 id="page-title">让每一次修改，<br>都能被<em>下一轮听懂。</em></h1><p class="intro">从一张参考图开始，看总监怎样指出具体问题，团队怎样把角色、场景、棋子、UI 和动效拆成各自的任务，又怎样把这一轮确认的判断交给下一轮。点击任意节点，就能看到实际文件和调用方式。</p></div>
-      <div class="hero-note"><strong>总监说清判断，团队把它带进下一批素材。</strong><p>已经确认的画风和身份会跟着任务走。本轮只补动作、表情、用途和规格；评审结束后，修改原因会留下来，下一位成员不用重新猜。</p><div class="call-chain">SEE <span>→</span> BRIEF <span>→</span> REVIEW <span>→</span> REMEMBER</div></div>
+      <div><div class="eyebrow">从资料到资产的完整路径</div><h1 id="page-title">把共同的判断，<br>带进<em>整个团队。</em></h1><p class="intro">从主美已有材料与项目意图，逐步建立专业设计体系；再将类别、家族、样板、交付与验收装进项目包，交给团队持续调用。</p></div>
+      <div class="hero-note"><strong>主美建体系，成员按体系生产。</strong><p>Skill 引导主美形成可评审内容，运行器承接版本、引用、任务与交付检查。成员和外包沿用同一专业判断，各环节留下实际证据。</p><div class="call-chain">主美建项 <span>→</span> 项目包 <span>→</span> 团队制作 <span>→</span> 批次迭代</div></div>
     </section>
-    <div class="readiness"><span class="readiness-mark" aria-hidden="true"></span><p><b>先看一小批，再放大产量。</b> 每个新家族或新状态先做一个，让总监和产线负责人把理解对齐，再进入大量制作。</p><a href="#experiment" id="readiness-link">看看如何小批确认 ↗</a></div>
-    <div class="routebar"><div class="tabs" role="tablist" aria-label="选择调用路线"><button type="button" class="tab" id="tab-director" role="tab" aria-selected="true" aria-controls="route-panel" tabindex="0" data-view="director"><span>01</span>总监定方向</button><button type="button" class="tab" id="tab-production" role="tab" aria-selected="false" aria-controls="route-panel" tabindex="-1" data-view="production"><span>02</span>团队做素材</button><button type="button" class="tab" id="tab-experiment" role="tab" aria-selected="false" aria-controls="route-panel" tabindex="-1" data-view="experiment"><span>03</span>先小批验证</button></div><div class="legend" aria-label="能力状态图例"><span><i class="dot"></i>已有方法</span><span><i class="dot new"></i>本轮记录</span><span><i class="dot needs"></i>还要确认</span></div></div>
+    <div class="readiness"><span class="readiness-mark" aria-hidden="true"></span><p><b>先从主美工作台开始。</b> 查看主美怎样建立规范、组件家族与代表样板，再打包给成员按规则制作。页面交互与真实执行证据分别展示。</p><a href="workbench.html">打开主美工作台 ↗</a></div>
+    <div class="routebar"><div class="tabs" role="tablist" aria-label="选择调用路线"><button type="button" class="tab" id="tab-director" role="tab" aria-selected="true" aria-controls="route-panel" tabindex="0" data-view="director"><span>01</span>总监建规范</button><button type="button" class="tab" id="tab-production" role="tab" aria-selected="false" aria-controls="route-panel" tabindex="-1" data-view="production"><span>02</span>成员做资产</button><button type="button" class="tab" id="tab-team" role="tab" aria-selected="false" aria-controls="route-panel" tabindex="-1" data-view="team"><span>03</span>团队批次与迁移</button><button type="button" class="tab" id="tab-campaign" role="tab" aria-selected="false" aria-controls="route-panel" tabindex="-1" data-view="campaign"><span>04</span>电商组合制作</button></div><div class="legend" aria-label="能力状态图例"><span><i class="dot"></i>已有实现</span><span><i class="dot new"></i>本轮新增</span><span><i class="dot needs"></i>待执行证据</span></div></div>
     <div class="workspace"><section id="route-panel" role="tabpanel" aria-labelledby="tab-director" tabindex="0"><div class="route-heading"><div class="route-count" id="route-number">01</div><div><h2 id="route-title"></h2><p id="route-intro"></p></div></div><div id="diagram" class="diagram"></div><div id="route-extras"></div></section><aside class="detail" id="detail-panel" aria-labelledby="detail-title"><div class="detail-top"><small id="detail-kicker"></small><h2 id="detail-title"></h2><p id="detail-summary"></p></div><div class="detail-body" id="detail-body"></div></aside></div>
-    <section class="footnotes" aria-label="阅读与执行说明"><div><h3>路径从哪里开始</h3><p>从仓库根目录运行示例命令。点击节点可以展开相对路径并复制；命令框不会在页面内执行，大写占位值需要换成实际路径或实体 ID。</p></div><div><h3>什么叫“通过”</h3><p>文件完整、技术规格正确和美术方向成立，是三件不同的事。需要总监看的地方仍要保留为待确认，不能用一个总分盖过去。</p></div><div><h3>怎样开始小批确认</h3><p>每个新素材家族先选一个代表项，保存原始参考、任务卡和第一轮结果。总监与产线负责人把修改原因说清楚后，再把同一方法扩展到下一批。</p></div></section>
+    <section class="footnotes" aria-label="阅读与执行说明"><div><h3>路径从哪里开始</h3><p>点击节点，再展开“调用文件”即可查看并复制完整路径。命令模板只作说明，页面不会执行。</p></div><div><h3>什么叫“通过”</h3><p>包校验通过 ≠ 图像技术通过 ≠ 风格与身份通过。存在必要的未检查项时，交付状态保持待检查；不要用一个总分掩盖身份错误。</p></div><div><h3>体验、流程与证据</h3><p><a href="workbench.html">工作台</a>面向主美与成员；<a href="team-production.html">72秒团队动画</a>说明批次流转。苔港策略层与原创泡泡街区案例继续保留；<a href="workbench.html#public-gallery-section">更多公开候选素材</a>按独立项目展示。</p></div></section>
   </main>
-  <footer class="footer"><div>ART DIRECTOR / STUDIO WORKFLOW</div><span>让这一轮的判断，成为下一轮可以接住的起点。</span></footer>
+  <footer class="footer"><div>ART DIRECTOR / LOCAL WORKFLOW MAP</div><span>本地静态说明页 · 无联网依赖 · 不执行生成或文件操作</span></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div><div class="sr-only" id="selection-status" aria-live="polite"></div>
-  <noscript><p style="padding:24px">请启用 JavaScript 查看交互流程。也可以直接阅读 <a href="https://github.com/NewenergyEric/art-director-skill/blob/main/SKILL.md">SKILL.md</a>。</p></noscript>
+  <noscript><p style="padding:24px">启用 JavaScript 查看交互流程，或阅读 requirements-coverage.md 中的需求覆盖。</p></noscript>
   <script>
     'use strict';
-    const P = 'python scripts/style_pack.py';
-    const Q = 'python scripts/pilot.py';
-    const statusLabels = {ready:'已有实现',new:'本轮新增',needs:'待真实材料'};
+    const ROOT=(()=>{try{const page=new URL(window.location.href);if(page.protocol==='file:'){let base=decodeURIComponent(page.pathname).replace(/\/docs\/[^/]*$/,'');if(/^\/[A-Za-z]:\//.test(base))base=base.slice(1);return (page.hostname?'\\\\'+page.hostname:'')+base.replaceAll('/','\\');}}catch(_){}return '<PROJECT_ROOT>';})();
+    const statusLabels = {ready:'已有实现',new:'本轮新增',needs:'待执行证据'};
     const f = (path,role) => ({path,role});
     const nodes = {
-      d1:{number:'01',status:'new',title:'接收原图与现有档案',summary:'把零散资料变成可追踪的输入清单。',short:'scripts/pilot.py · intake',input:'原始角色设定图、已有 Word / Markdown 档案、项目说明，以及明确的来源和用途。',actions:['扫描实际交付目录，记录文件路径、摘要和可读取的元数据。','把截图、完整原图、文字档案分开标记；截图中的小图不能自动升级为身份母版。','登记缺失材料与冲突，不从文件名猜测批准状态。'],files:[f('art-director/scripts/pilot.py','本轮新增 · 材料清点工具'),f('art-director/references/pilot.md','本轮新增 · 试点规则'),f('evals/round-01/readiness.json','本轮材料状态')],output:'可检查的 intake 清单 + 缺失材料记录；后续规范继续保持 draft。',gate:'实际文件可访问，并且能区分正式来源与仅供讨论的线索。',exception:'缺原图或档案 → 记录缺口，继续整理已有证据；真实图片对照暂不启动。',command:Q+' intake --input-dir "INPUT_DIR" --out "NEW_INTAKE_DIR"',next:'d2'},
-      d2:{number:'02',status:'ready',title:'提炼总监的候选判断',summary:'从“喜欢这种感觉”变成可以观察的规则。',short:'references/discovery.md',input:'已读取的原图、档案与总监表达；每条判断都有来源。',actions:['逐项区分图中可见事实、基于材料的推断、尚未确定的内容。','为每条规则说明范围、理由、允许变化和验证方式。','从图片推断的规则标为 proposed，不能假装总监已确认。'],files:[f('art-director/SKILL.md','母 skill · 流程入口'),f('art-director/references/discovery.md','意图提炼与校准'),f('art-director/templates/entity-dossier.template.md','本轮新增 · 实体档案模板')],output:'候选规则 + 实体档案草稿 + 需要总监判断的问题。',gate:'每条约束能被理解、引用并检查，而非仅有“高级”“统一”等形容词。',exception:'材料互相冲突 → 保留候选解释和证据，交给总监选择。',next:'d3'},
-      d3:{number:'03',status:'ready',title:'分开画风、身份与变量',summary:'同一画风可以有不同角色，同一角色可以做不同动作。',short:'templates/style-pack.template.json',input:'候选规则、参考图用途、实体档案和已知制作约束。',actions:['项目画风写入 intent、tokens、global rules；类别要求写入 profiles。','实体身份绑定 entities、identity_rules、reference_ids。','动作、表情和镜头留给任务卡；参考图分别标记 style / identity / composition。'],files:[f('art-director/templates/style-pack.template.json','规范结构模板'),f('art-director/templates/production-task.template.json','本轮新增 · 任务变量模板'),f('docs/style-pack-schema.md','字段与引用契约')],output:'项目工作副本 style-pack.json；它是规范的唯一事实源。',gate:'任务能精确选择所需角色；其他实体的身份规则不会被混入。',exception:'任务要求覆盖共享规则 → 记录例外或变更，不能暗改全队基线。',next:'d4'},
-      d4:{number:'04',status:'needs',title:'用样板确认共享基线',summary:'把“文件写好了”和“审美已验证”分开。',short:'references/discovery.md → decisions',input:'真实原图、候选规范、小样板，以及实际总监反馈。',actions:['优先用角色、道具、场景、UI 的代表性组合暴露分歧。','把真实确认内容写入 decisions 与批准依据；未确认项继续标为 proposed。','确认角色固定特征和允许改动范围，并解决影响生产的 open_questions。'],files:[f('art-director/references/discovery.md','样板验证方法'),f('art-director/templates/style-pack.template.json','decisions / approval / open_questions')],output:'有真实依据的已确认基线，或标明问题的讨论草稿。',gate:'真实决策支持本次确认范围；填写 approved 字段本身不构成批准。',exception:'视觉样板未看过 / 总监未确认 → 保留 draft，可分享讨论但不称生产标准。',next:'d5'},
-      d5:{number:'05',status:'ready',title:'构建并验证独立项目包',summary:'规则、图片和入口一起交付，固定版本。',short:'scripts/style_pack.py · build / verify',input:'工作副本中的 style-pack.json、实际参考文件、有效批准依据。',actions:['validate 检查结构、引用和规则；发布基线时加 --release。','build 创建新目录，生成 SKILL.md、STYLE.md、脚本和完整性清单。','verify 检查构建产物；成功只证明结构和文件完整性。'],files:[f('art-director/scripts/style_pack.py','真实 CLI · validate / build / verify'),f('art-director/references/pack-contract.md','自包含交付契约')],output:'新的项目包目录：SKILL.md + style-pack.json + 参考资料 + manifest.json。',gate:'引用能在包内解析，版本固定，文件未意外改变，基线状态准确。',exception:'引用缺失 / 源包越界 / 目标已存在 → 读取错误并修正，不覆盖旧版本。',command:P+' validate "PACK" --release\n'+P+' build "PACK" --out "NEW_PROJECT_DIR" --release\n'+P+' verify "NEW_PROJECT_DIR"',commandNote:'已确认基线命令；讨论草稿省略 --release。',next:'d6'},
-      d6:{number:'06',status:'ready',title:'交给成员，在新会话调用',summary:'项目包自身携带规则，不依赖总监聊天历史。',short:'项目包 / SKILL.md → style-pack.json',input:'验证过的项目包目录或归档文件，以及本次生产需求。',actions:['成员打开项目 SKILL.md，读取当前版本与参考路径。','真实项目的参考文件随包交付；包内使用相对路径。','按项目约定分发或安装；该页面仅展示逻辑，不自动通知团队或安装。'],files:[f('dist/moss-harbor-0.1.0-draft/SKILL.md','已有演示包入口 · 并非克莱尔正式规范'),f('dist/moss-harbor-0.1.0-draft/style-pack.json','已有演示数据 · draft'),f('art-director/references/pack-contract.md','交接与版本规则')],output:'独立可调用的项目 skill；新成员能知道适用范围、版本和未决问题。',gate:'在新会话中只给项目包，仍能得到有正确规则与引用的任务书。',exception:'正式项目未建包 → 先使用讨论草稿，不能借用演示画风充当项目标准。',command:P+' archive "BUILT_PROJECT_DIR" --out "NEW_PROJECT_ZIP"',next:'p1',nextView:'production'},
-      p1:{number:'01',status:'ready',title:'读取项目入口与固定版本',summary:'先确认拿到的是哪一套规范。',short:'项目包 / SKILL.md → verify',input:'项目包、任务需求和当前成员会话。',actions:['读取项目 SKILL.md、style-pack.json、状态与版本。','对已构建包运行 verify；不能只读历史聊天摘要。','识别 draft 与 approved，记录本次所用版本与包指纹。'],files:[f('art-director/references/pack-contract.md','版本与入口逻辑'),f('art-director/scripts/style_pack.py','真实 CLI · verify'),f('dist/moss-harbor-0.1.0-draft/SKILL.md','可阅读的项目 skill 示例')],output:'明确的项目版本、基线状态与本次适用范围。',gate:'包可读、引用完整，成员知道自己使用哪个版本。',exception:'完整性失败 → 修复或重新获取指定包；不静默切到另一个版本。',command:P+' verify "BUILT_PROJECT_DIR"',next:'p2'},
-      p2:{number:'02',status:'ready',title:'绑定资产类别与具体实体',summary:'按 category + entity 精确取规则与参考。',short:'scripts/style_pack.py · brief',input:'本次 category、entity ID、任务描述，以及固定版本的项目包。',actions:['组合 global 规则、当前类别 profiles 和适用规则。','存在具体角色或道具时，用 --entity 绑定身份规则与身份参考。','其他实体的专属规则不进入当前任务；候选参考不会冒充批准母版。'],files:[f('art-director/scripts/style_pack.py','真实 CLI · brief'),f('art-director/references/game-art.md','类别、身份与组合任务')],output:'任务书 JSON：规则 ID、固定项、允许变化、引用用途与已知技术要求。',gate:'实体存在且类别匹配；所用身份参考对应本次实体。',exception:'缺实体或需要多类别组合 → 明确缺口，分别编译后合并，不随机挑角色。',command:P+' brief "PACK" --category character --entity "ENTITY_ID" --task "TASK" --out "NEW_BRIEF_JSON"',next:'p3'},
-      p3:{number:'03',status:'new',title:'只补充本次任务变量',summary:'动作、表情、镜头与交付规格进入任务卡。',short:'templates/production-task.template.json',input:'编译出的任务书 + 成员提出的生产需求。',actions:['将“认真裱花、半身、透明背景”等需求写成具体任务字段。','身份固定项继承自档案；未知尺寸、工具能力和批准状态不能猜。','先发现冲突：例如“只改头部姿态”与“新增双手裱花动作”需要统一变化范围。'],files:[f('art-director/templates/production-task.template.json','本轮新增 · 标准任务卡'),f('art-director/templates/entity-dossier.template.md','本轮新增 · 固定与可变特征'),f('art-director/references/game-art.md','生产约束')],output:'完整任务卡：继承的规范、允许改动、参考输入、技术规格和验收办法。',gate:'固定项与变量无冲突；必要规格已明确或准确标为未定。',exception:'冲突 / 必要信息不足 → 补充具体决定；不能靠含糊提示词掩盖。',next:'p4'},
-      p4:{number:'04',status:'needs',title:'实际传入参考，再生成',summary:'写出图片路径，不等于工具收到图片。',short:'references/tool-adapters.md',input:'任务卡、真实 style / identity / composition 参考图、可用生成或编辑工具。',actions:['先查看实际原图，再通过工具真正支持的图片参数或附件传入。','只使用工具支持的控制项，记录真实工具、模型、参数和输入清单。','保存首次输出和每轮结果；没有执行就不写“已生成”或伪造参数。'],files:[f('art-director/references/tool-adapters.md','实际输入映射与工具能力边界'),f('art-director/templates/delivery-record.template.json','生成输入与产物记录'),f('evals/round-01/readiness.json','本轮真实材料状态')],output:'实际图像文件 + 生成执行记录；刚生成不等于已合格。',gate:'相关原图已实际进入工具，结果文件可读取，执行记录来自真实调用。',exception:'缺原图 / 无生成能力 → 输出任务书和缺失项；视觉结果保持未执行。',next:'p5'},
-      p5:{number:'05',status:'new',title:'检测实际图片的技术条件',summary:'从文件读尺寸和透明情况，不从回复文字推断。',short:'art-director/scripts/pilot.py',input:'实际生成文件和任务卡中的已知技术要求。',actions:['检查可读取的 PNG 图像结构、实际尺寸与透明信息。','需要透明背景时区分“有 alpha 通道”和“存在透明像素”。','保存机器检测证据；局部透明不等于主体边缘、背景语义和视觉效果合格。','当前 pilot.py 由母 skill 提供，项目包的 build 不会自动复制这项新增工具。'],files:[f('art-director/scripts/pilot.py','本轮新增 · 母 skill 中的实际检查工具'),f('art-director/templates/production-task.template.json','技术规格来源'),f('art-director/templates/review-report.template.json','技术与视觉结果分开记录')],output:'技术检测 JSON：测量值、检查结果与限制。',gate:'适用且实际检查的技术硬要求通过；缺少必要检查不能按通过处理。',exception:'尺寸不符 / 无要求的透明信息 → 定向修正；不支持的格式或检查保持 unknown。',command:Q+' check-image "OUTPUT_PNG" --expected-width WIDTH --expected-height HEIGHT --require-transparency --out "NEW_CHECK_JSON"',commandNote:'仅传入已明确的尺寸；不要求透明时省略 --require-transparency。',next:'p6'},
-      p6:{number:'06',status:'ready',title:'逐条审查风格与身份',summary:'每个结论都连接规则、可见证据与下一步。',short:'references/review.md',input:'实际生成图、已确认参考、对应版本规则和技术检测结果。',actions:['分别检查项目画风、具体身份、构图用途和技术要求。','每条记录 rule ID、观察部位、证据、pass / fail / unknown / 不适用原因。','没有读图或看不到所需视角时，不得给出视觉合格结论。'],files:[f('art-director/references/review.md','逐规则评审方法'),f('art-director/templates/review-report.template.json','评审记录结构'),f('art-director/templates/delivery-record.template.json','交付证据汇总')],output:'可追溯的评审报告，明确硬规则问题与必要未检查项。',gate:'已确认硬规则全部满足，必要检查无缺口；建议偏离需说明影响。',exception:'按下方三个分支处理：合格交付、失败定向返工、未知补证据。',next:'pass'},
-      pass:{number:'07 / PASS',status:'ready',title:'通过：保留证据后交付',summary:'交付图像，也交付它依据什么通过。',short:'templates/delivery-record.template.json',input:'已完成的技术检测、逐条视觉审查、实际产物与生成记录。',actions:['记录项目版本、实体、规则、输入参考和输出路径。','如实说明制作阶段；概念图不能仅凭观感宣称可直接进引擎。','本轮试验把首次输出与后续修正分开记录。'],files:[f('art-director/templates/delivery-record.template.json','交付记录'),f('evals/round-01/records.json','本轮真实观测记录')],output:'有来源和检查证据的资产交付；保留已知限制。',gate:'所需检查完成，实际授权与批准范围得到满足。',exception:'还有必要未知项 → 转 unknown；不能用整体好看来抵消硬规则失误。',next:'p1'},
-      fail:{number:'07 / FAIL',status:'ready',title:'失败：只改有证据的问题',summary:'把质检意见转成可执行的局部修正。',short:'references/review.md → 定向修正',input:'失败规则、问题区域、参考对比和上一轮生成输入。',actions:['先修身份不变量和已确认硬规则，保留已经正确的部分。','记录本轮更改了哪些输入、参数或编辑区域，保留失败版本。','默认最多两轮针对性修正，实际用户预算优先；不能无限重抽后宣称一次成功。'],files:[f('art-director/references/review.md','定向修正与停止条件'),f('art-director/templates/delivery-record.template.json','每轮输入、输出与限制'),f('evals/round-01/records.json','试验返工轮次记录')],output:'新的受控修正任务 → 重新实际生成 → 再次技术与视觉检查。',gate:'每次修正针对明确失误，并复查是否破坏原本正确的规则。',exception:'连续无改善 / 工具不支持 / 规范冲突 → 停止重试并给出证据及处理方案。',next:'p3'},
-      unknown:{number:'07 / UNKNOWN',status:'ready',title:'未知：补证据，再决定',summary:'没有看过、没有测过，就保持待检查。',short:'templates/review-report.template.json',input:'缺失的参考、视角、原图、检测能力或确认依据。',actions:['说明究竟缺哪项证据，以及补足它需要什么。','草稿可以展示，但明确尚未检查的部分。','如果是规范本身的歧义，形成变更提案，不能偷偷改共享包。'],files:[f('art-director/templates/review-report.template.json','记录 unknown 与下一步'),f('art-director/templates/change-proposal.template.md','基线存在歧义时的变更提案')],output:'待检查结果 + 具体材料或决策需求；不会记为已通过。',gate:'缺失证据到位后才重做相关检查，不用推测补齐记录。',exception:'基线需要变更 → 回到总监路线，比较版本并建立新基线。',next:'p6'},
-      a1:{number:'01',status:'needs',title:'冻结真实材料与任务',summary:'两组使用同一任务事实和同一角色来源。',short:'evals/round-01/readiness.json',input:'原始角色设定图、已有档案、真实任务、可用工具与明确产出要求。',actions:['核对角色主参考、资料版本、任务清晰度与图像可访问性。','本轮预设三个任务、两种条件；先执行 T01 裱花蛋糕的一对输出，再决定是否扩展。','当前只有屏幕照片，不能据此执行正式角色身份对照；材料可放到预留目录或给出其他实际路径。'],files:[f('evals/round-01/readiness.json','当前原始材料状态'),f('evals/round-01/experiment.json','本轮实验定义'),f('evals/round-01/materials/README.md','真实材料预留目录说明')],output:'可运行的同条件任务集；原图未到位时只完成试验准备。',gate:'生产与盲审需要的原始材料齐备，规则已确认。',exception:'缺材料 → 保持未启动，不填假样本、不造通过率。',next:'a2'},
-      a2:{number:'02',status:'new',title:'预先定义判断与记录方式',summary:'先写清怎样算错、怎样算过，再看输出。',short:'evals/round-01/experiment.json',input:'已确认的实体身份与项目规则、技术要求、实验问题。',actions:['明确身份错误、首次通过和返工轮次的定义。','A/B 保持任务、工具条件和预算可比；样本分配与盲审规则写入方案。','真实成员与代理模拟必须分开标记，不把代理试验称为团队实测。'],files:[f('evals/round-01/experiment.json','分组、约束与指标定义'),f('art-director/templates/pilot-records.template.json','本轮新增 · 观测记录模板'),f('art-director/references/pilot.md','试点判定方法')],output:'预先约定的实验方案与空白记录表。',gate:'评审者能仅根据规则与证据复核结论，未检查状态有独立表达。',exception:'规则尚不明确 → 先校准样本与标准，不根据试验结果临时改口径。',next:'a3'},
-      a3:{number:'03',status:'needs',title:'A 组：按现有方式自由描述',summary:'在独立上下文表达，记录全部首次输出。',short:'evals/round-01/records.json · arm A',input:'同一原始参考与任务事实；不提供 B 组编译后的提示词。',actions:['本轮由代理在全新上下文独立组织描述；后续真人试点须单独记录，不混称团队实测。','记录工具、条件、用时与重试，保留失败版本。','不由熟悉 skill 的 Agent 替 A 组写一份“故意差”的提示词。'],files:[f('evals/round-01/experiment.json','A 组执行约定'),f('evals/round-01/records.json','真实执行记录')],output:'可追溯的自由描述组样本；没有执行时保持空记录。',gate:'执行方式符合方案，输出与记录能够逐一对应。',exception:'工具条件不一致或有辅助污染 → 标记偏差，不能直接当作公平比较。',next:'a4'},
-      a4:{number:'04',status:'needs',title:'B 组：调用档案与项目 skill',summary:'相同任务，通过规范绑定与标准任务卡生产。',short:'项目 SKILL.md → brief → 参考输入',input:'与 A 组可比的原始材料和任务，以及由其整理出的已确认规范。',actions:['读取项目包并绑定实体，编译准确的任务书。','只补本次任务变量，实际输入对应参考；保存全部首次与返工输出。','同样遵守预设工具条件与重试预算，避免无限优化 B 组。'],files:[f('art-director/scripts/style_pack.py','brief 编译'),f('art-director/templates/production-task.template.json','标准任务变量'),f('evals/round-01/records.json','真实执行记录')],output:'可追溯的 skill 组样本，含版本、输入参考和适用规则。',gate:'执行链可复核，B 组差异来自已约定的 skill 流程。',exception:'模板本身有冲突 → 记录问题；若修改基线，说明影响并重新控制对照。',next:'a5'},
-      a5:{number:'05',status:'needs',title:'盲审实际文件，记录每轮',summary:'隐藏组别，逐项检查身份与交付要求。',short:'references/review.md → records.json',input:'真实输出、批准参考、身份与风格规则、技术检测证据。',actions:['按方案隐藏组别与提示词来源，减少评审预期影响。','首次输出与返工输出分别判断；没有观测值的字段保持未评。','必要检查为 unknown 时不记为通过，并单独报告未评数量。'],files:[f('art-director/references/review.md','规则与证据评审'),f('art-director/scripts/pilot.py','实际图片检测'),f('evals/round-01/records.json','每轮观测数据')],output:'带真实依据的身份错误、首次通过、返工次数与未评记录。',gate:'每个结论可追溯到实际输出和规则；评审条件可比。',exception:'看不到图像 / 缺判断依据 → 标记未评，补足材料后再统计。',next:'a6'},
-      a6:{number:'06',status:'new',title:'汇总差异，决定是否推广',summary:'报告分母、未评样本与限制，不包装成保证。',short:'scripts/pilot.py · summarize',input:'来自真实执行与评审的 records.json。',actions:['首次通过率：首次输出的 identity / style / task / technical 全通过 ÷ 已运行单元数；未运行不计入分母。','身份错误同时报告任务级和尝试级；返工为各单元 max(0, attempts − 1) 的总和，unknown 单列。','两组都有实际样本才比较差值；代理结果不能证明真人团队改善。'],files:[f('art-director/scripts/pilot.py','本轮新增 · summarize'),f('evals/round-01/records.json','真实数据来源'),f('evals/round-01/summary.json','实际汇总 · 零样本时比率为空'),f('docs/round-01-report.md','本轮结果与限制报告')],output:'有真实样本才产生指标；当前应显示“尚未执行 / 无有效样本”。',gate:'指标可由记录重新计算，不能把结构测试通过冒充美术品质提升。',exception:'样本为空或未知过多 → 说明无法比较；保留已完成的准备工作。',command:Q+' summarize "RECORDS_JSON" --out "NEW_SUMMARY_JSON"',next:'d2',nextView:'director'},
-      version:{number:'↺ VERSION',status:'ready',title:'规范变更：比较后建立新版本',summary:'一次修正不一定改变规则；共享方向变化才进入版本流程。',short:'scripts/style_pack.py · diff',input:'真实评审反馈、旧基线、建议的新规则和影响范围。',actions:['先判断是单次失误、身份补充、类别调整还是全项目方向变化。','修改工作副本并恢复 draft，不覆盖成员正在使用的已构建包。','diff 列出变化；相关样板和决策完成后构建新版本。'],files:[f('art-director/templates/change-proposal.template.md','变更原因、影响与迁移方案'),f('art-director/scripts/style_pack.py','真实 CLI · diff'),f('art-director/references/pack-contract.md','版本与交接契约')],output:'可比较的新版本和真实决策依据；旧任务继续固定原版本。',gate:'变更范围被确认，失效的批准不沿用，新包经过构建与检查。',exception:'只是本次任务例外 → 记录限定范围，不升级成全队规范。',command:P+' diff "OLD_PACK" "NEW_WORKING_PACK"',next:'d4',nextView:'director'}
-    };
-    const views = {
-      director:{number:'01',title:'总监建立一套可交接的判断',intro:'按 01 → 06 顺序建立规范；共享包形成以后，日常生产直接进入“成员做资产”。',phases:[['材料与证据',['d1','d2']],['规范与确认',['d3','d4']],['构建与交接',['d5','d6']]],default:'d3'},
-      production:{number:'02',title:'成员在固定规范下完成一次创作',intro:'先绑定身份，再填写变量。生成后分别检查技术条件与视觉规则；失败和未知都有明确去向。',phases:[['读取与选择',['p1','p2']],['任务与生成',['p3','p4']],['技术与视觉检查',['p5','p6']]],default:'p2'},
-      experiment:{number:'03',title:'先验证代理流程，再进入团队试点',intro:'本轮预设 T01 裱花动作、T02 惊讶表情、T03 放松微笑，共六个 A/B 单元。真实原图与档案到位后先跑 T01，代理与真人结论分别统计。',phases:[['材料与实验定义',['a1','a2']],['两组分别生产',['a3','a4']],['盲审与统计',['a5','a6']]],default:'a1'}
-    };
-    let currentView = 'director', selected = 'd3', toastTimer;
+  "d1": {
+    "number": "01",
+    "status": "new",
+    "title": "从已有资料形成项目定位",
+    "short": "从已有资料形成项目定位",
+    "summary": "先给主美具体可评审的草案，再追问关键缺口。",
+    "input": "业务与受众、已有设计、参考、反例、实际使用语境。",
+    "actions": [
+      "区分已有事实、材料观察和 Agent 提案，不编造定位、数字或批准。",
+      "整理受众、目标、载体、范围与视觉阅读顺序，让主美先处理影响下一步的决定。",
+      "资料分别说明风格、身份、构图、材质或使用语境，尚无样板就明确待建立。"
+    ],
+    "files": [
+      {
+        "path": "references/director-workflow.md",
+        "role": "专业建项引导"
+      },
+      {
+        "path": "examples/harbor-studio-draft/guides/01-positioning.md",
+        "role": "项目定位手册"
+      },
+      {
+        "path": "examples/harbor-studio-draft/guides/00-index.md",
+        "role": "资料索引"
+      }
+    ],
+    "output": "可修订的项目定位、资料地图与有优先级的缺口。",
+    "gate": "明确本轮验证什么，资料用途与来源可以回看。",
+    "exception": "方向仍不清楚 → 提供具体备选及影响，请主美判断；不让成员独自猜。",
+    "next": "d2"
+  },
+  "d2": {
+    "number": "02",
+    "status": "new",
+    "title": "建立共同视觉语言与类别规范",
+    "short": "建立共同视觉语言与类别规范",
+    "summary": "把画面直觉转成实际可用的设计要求。",
+    "input": "项目意图、可用参考与真实设计判断。",
+    "actions": [
+      "从造型、比例、颜色角色、材质、光影、层级、文字与组合讨论项目的共同语言。",
+      "按角色、场景、元素、道具、UI、动效等类别写清固定项、允许变化与技术需求。",
+      "数值待验证就保留待定，不从参考图分辨率猜成正式交付规格。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-draft/guides/02-design-system.md",
+        "role": "设计系统手册"
+      },
+      {
+        "path": "examples/harbor-studio-draft/style-pack.json",
+        "role": "项目结构化规则"
+      }
+    ],
+    "output": "全局规则 → 类别要求 → 适用参考与检验方法。",
+    "gate": "要求具体到团队可以开展首件；没有依据的专业参数仍为待确认。",
+    "exception": "材料互相冲突 → 标明冲突及影响，由主美决定取舍。",
+    "next": "d3"
+  },
+  "d3": {
+    "number": "03",
+    "status": "new",
+    "title": "细化组件、家族、状态与渠道",
+    "short": "细化组件、家族、状态与渠道",
+    "summary": "同类对象共享结构，任务再开放许可变量。",
+    "input": "类别规范、对象关系、交互状态与使用位置。",
+    "actions": [
+      "以 direction.families 记录 fixed、variable、technical 与职责，不只罗列漂亮图片。",
+      "主角身份、道具母版和 UI 状态有各自约束；组合任务绑定相关组件。",
+      "以 direction.delivery 说明渠道交付，family 进入任务请求和批次回传。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-draft/style-pack.json",
+        "role": "家族与渠道规则"
+      },
+      {
+        "path": "references/pack-contract.md",
+        "role": "家族 / 样板契约"
+      },
+      {
+        "path": "scripts/project_runtime.py",
+        "role": "实际任务运行器"
+      }
+    ],
+    "output": "可路由到任务的家族、状态与交付要求。",
+    "gate": "任务选择适用家族；有家族的类别未选明确家族时保持 blocked。",
+    "exception": "缺家族或选错类别 → 先解决歧义，不自动绕开其固定要求。",
+    "next": "d4",
+    "command": "python scripts/style_pack.py brief BUILT_PACK --category ui --family FAMILY_ID --task \"具体任务\" --out NEW_BRIEF_JSON",
+    "commandNote": "大写参数替换为项目内实际值"
+  },
+  "d4": {
+    "number": "04",
+    "status": "needs",
+    "title": "建立代表样板，做首件与组合检查",
+    "short": "建立代表样板，做首件与组合检查",
+    "summary": "样板承担判断职责，数量由项目风险决定。",
+    "input": "候选母版、首件、真实 UI / 场景，以及对应参考。",
+    "actions": [
+      "代表样板可以覆盖身份、材质、场景尺度、组件状态、组合与渠道；不是每个项目固定五张。",
+      "区分 APPROVED、REF 和 REJECTED；批准需要真实记录与证据。",
+      "先做首件与完整组合，再决定哪些家族适合扩量；候选综合板不自动成为身份母版。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-draft/guides/04-reference-guide.md",
+        "role": "样板与反例说明"
+      },
+      {
+        "path": "examples/harbor-studio-draft/guides/03-delivery-review.md",
+        "role": "交付验收方法"
+      },
+      {
+        "path": "examples/harbor-studio-draft/style-pack.json",
+        "role": "真实样板状态"
+      }
+    ],
+    "output": "样板职责、待建立事项与可回看的首件评审。",
+    "gate": "必要代表样板具有真实批准依据；缺少时不通过正式 release 检查。",
+    "exception": "没有批准样板 → 保持计划 / 候选，可继续探索，不虚构正式放行。",
+    "next": "d5"
+  },
+  "d5": {
+    "number": "05",
+    "status": "new",
+    "title": "生成五份手册与可分发项目包",
+    "short": "生成五份手册与可分发项目包",
+    "summary": "可读手册、规则、所需参考和工具一起交付。",
+    "input": "已整理的源规范、引用材料与样板记录。",
+    "actions": [
+      "从结构化规范派生资料索引、项目定位、设计系统、交付验收、参考说明五手册。",
+      "build 固定规则和参考指纹；包内带 style_pack、project_runtime、team_batch 三工具。",
+      "未批准示范按 draft 构建；release 需满足真实批准与所需样板条件。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-draft/SKILL.md",
+        "role": "包内 Skill 入口"
+      },
+      {
+        "path": "examples/harbor-studio-draft/guides/00-index.md",
+        "role": "包内五手册索引"
+      },
+      {
+        "path": "examples/harbor-studio-draft/style-pack.json",
+        "role": "包指纹"
+      },
+      {
+        "path": "examples/harbor-studio-draft/STYLE.md",
+        "role": "候选 ZIP"
+      },
+      {
+        "path": "scripts/style_pack.py",
+        "role": "规范工具"
+      }
+    ],
+    "output": "可直接分发和核验的项目候选包，批准状态清楚。",
+    "gate": "引用文件与包完整性可核对，手册与规则来自同一事实源。",
+    "exception": "缺文件 / 样板 / 批准 → 记录具体问题；不把 draft 伪称 release。",
+    "next": "d6",
+    "command": "python scripts/style_pack.py build SOURCE --out NEW_PACK\npython scripts/style_pack.py archive NEW_PACK --out NEW_ZIP",
+    "commandNote": "已确认全部正式条件时才增加 --release"
+  },
+  "d6": {
+    "number": "06",
+    "status": "new",
+    "title": "成员接包，由 Agent 建立工作入口",
+    "short": "成员接包，由 Agent 建立工作入口",
+    "summary": "工程步骤由 Agent 处理，成员按自然任务开展设计。",
+    "input": "解压的项目包，以及成员的本地工作位置。",
+    "actions": [
+      "先读取包内 SKILL.md，用包内 project_runtime.py init 建工作区。",
+      "工作区产生 PROJECT.md / AGENTS.md、current 指针与包内版本；成员不必手写工程文件。",
+      "随后按类别 / 家族创建任务。分发新包后可明确启用；各电脑不会凭空同步。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-draft/scripts/project_runtime.py",
+        "role": "包内初始化工具"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/PROJECT.md",
+        "role": "真实成员入口"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/project.json",
+        "role": "当前项目指针"
+      },
+      {
+        "path": "references/member-workflow.md",
+        "role": "成员工作方法"
+      }
+    ],
+    "output": "可携带的团队规则包 + 可执行的成员工作区入口。",
+    "gate": "复制或安装后能校验本地规则、读取最新启用版并冻结任务。",
+    "exception": "同一任务继续时恢复原快照；新任务读 current，编辑草稿不静默改旧任务。",
+    "next": "p1",
+    "nextView": "production",
+    "command": "python scripts/project_runtime.py init --pack . --out ../member-workspace --allow-draft",
+    "commandNote": "在解压的候选包根目录运行；正式包不需 --allow-draft"
+  },
+  "p1": {
+    "number": "01",
+    "status": "new",
+    "title": "读取成员工作区与当前版本",
+    "short": "读取成员工作区与当前版本",
+    "summary": "成员进入项目，一句话给出新任务。",
+    "input": "本地项目入口、current 指针与本次创作意图。",
+    "actions": [
+      "Agent 读 PROJECT.md / AGENTS.md 后运行 status；不以聊天记忆替代文件。",
+      "每个新任务读取当前已启用规范；未启用的源文件草稿不直接变成团队基线。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-workspace/PROJECT.md",
+        "role": "项目入口"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/project.json",
+        "role": "当前版本"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/tools/project_runtime.py",
+        "role": "工作区运行器"
+      }
+    ],
+    "output": "已校验的版本与待解析任务。",
+    "gate": "本地包和工具完整，引用对应实际版本。",
+    "exception": "包损坏或版本来源不清楚 → 先修复材料再创建任务。",
+    "next": "p2",
+    "command": "python tools/project_runtime.py status .",
+    "commandNote": "在成员工作区运行"
+  },
+  "p2": {
+    "number": "02",
+    "status": "new",
+    "title": "绑定类别、家族、主体与组件",
+    "short": "绑定类别、家族、主体与组件",
+    "summary": "“做一组按钮”会得到完整规范上下文。",
+    "input": "明确的任务意图、类别、家族与必要主体。",
+    "actions": [
+      "Agent 理解自然语言并解决歧义，运行器验证其解析结果。",
+      "继承全局、类别、family 的 fixed / variable / technical、主体身份及组件要求。",
+      "UI、动效、组合任务各自关联必要资料，不将文本说明当作图像输入。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-ui-first/task.json",
+        "role": "UI 首件任务"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-ui-first/generation-brief.md",
+        "role": "实际编排任务书"
+      },
+      {
+        "path": "examples/harbor-studio-draft/guides/02-design-system.md",
+        "role": "项目设计系统"
+      }
+    ],
+    "output": "有依据的成员任务，避免每人重新手写风格。",
+    "gate": "家族与类别匹配；本次变化不能悄悄丢弃 must / fixed 规则。",
+    "exception": "未指定家族、混淆身份或缺关键资料 → blocked / 待澄清。",
+    "next": "p3"
+  },
+  "p3": {
+    "number": "03",
+    "status": "new",
+    "title": "冻结任务与交接要求",
+    "short": "冻结任务与交接要求",
+    "summary": "任务、规则、参考和版本一起固定。",
+    "input": "经解析的请求与当前包。",
+    "actions": [
+      "start 创建任务快照、生成任务书、handoff 和待实际检查的 review.json。",
+      "家族、状态、渠道与未知项进入快照；候选规范下正式 production 保持阻断。",
+      "进行中的任务用 resume 保留创建时依据，后续结果写到工作目录。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-ui-first/task.json",
+        "role": "冻结任务文件"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-ui-first/handoff.md",
+        "role": "交接要求"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-ui-first/review.json",
+        "role": "检查记录"
+      }
+    ],
+    "output": "可复现的任务上下文与明确交付边界。",
+    "gate": "请求合法、资料来源与任务用途清楚；正式制作条件真实成立。",
+    "exception": "资料不足可在授权范围做探索；不能把任务准备等同正式资产完成。",
+    "next": "p4",
+    "command": "python tools/project_runtime.py start . --request requests/TASK.json\npython tools/project_runtime.py resume . --task TASK_ID",
+    "commandNote": "Agent 准备实际请求文件，不要求设计师手写"
+  },
+  "p4": {
+    "number": "04",
+    "status": "needs",
+    "title": "Agent 调用图像或设计工具制作",
+    "short": "Agent 调用图像或设计工具制作",
+    "summary": "规则进入工具调用，实际产物留下来源。",
+    "input": "任务书、适用图片、文本规范、允许变化和可用工具。",
+    "actions": [
+      "先检查真正需要的图像，参考角色、风格、构图等用途分别绑定。",
+      "使用可用模型或编辑工具实际制作，记录输入、输出、参数和失败轮次。",
+      "保持计划数量与真实已生成资产数量分开；网页不代替模型调用。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-character-first/generation-brief.md",
+        "role": "任务与参考"
+      },
+      {
+        "path": "references/tool-adapters.md",
+        "role": "工具适配方法"
+      },
+      {
+        "path": "references/visual-production.md",
+        "role": "专业制作方法"
+      }
+    ],
+    "output": "实际素材和生成 / 编辑记录；当前案例尚未产生正式资产。",
+    "gate": "实际工具可用、任务上下文传入、产物可回看。",
+    "exception": "模型漂移或工具缺失 → 记录真实问题并有针对性重试，不宣称已完成。",
+    "next": "p5"
+  },
+  "p5": {
+    "number": "05",
+    "status": "needs",
+    "title": "在设计工具完成源文件与导出",
+    "short": "在设计工具完成源文件与导出",
+    "summary": "从创意图走向正式资产，还要经过编辑与适配。",
+    "input": "实际素材、目标用途、分层与导出要求。",
+    "actions": [
+      "成员或可用工具在 PS / 设计软件修整尺寸、边缘、文字和图层。",
+      "真实文字保持可编辑；渠道规格未定时不拿参考尺寸代替。",
+      "动效绑定原身份并输出实际序列，进入引擎验证。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-layout-first/handoff.md",
+        "role": "源文件交接"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-motion-first/generation-brief.md",
+        "role": "动效任务"
+      },
+      {
+        "path": "examples/harbor-studio-draft/guides/03-delivery-review.md",
+        "role": "交付验收手册"
+      }
+    ],
+    "output": "实际可编辑源文件、导出文件与所需使用证据。",
+    "gate": "文件真实存在，符合已确认用途与技术条件。",
+    "exception": "缺真实规格、编辑源或集成证据 → 保持待处理，不直接算交付。",
+    "next": "p6"
+  },
+  "p6": {
+    "number": "06",
+    "status": "needs",
+    "title": "逐项审查，再检查家族与完整组合",
+    "short": "逐项审查，再检查家族与完整组合",
+    "summary": "脚本完整性检查与艺术判断各自保留证据。",
+    "input": "实际产物、固定规则、样板与最终使用场景。",
+    "actions": [
+      "按身份、风格、家族 / 状态、技术与组合逐项检查。",
+      "必要观察缺失保持 unknown，不以文件哈希正确代替画面合格。",
+      "同时记录首次通过、身份错误和返工；质量与效率改进需要真实试验。"
+    ],
+    "files": [
+      {
+        "path": "references/review.md",
+        "role": "复核方法"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-ui-first/review.json",
+        "role": "待实际评审记录"
+      },
+      {
+        "path": "scripts/team_batch.py",
+        "role": "批次检查工具"
+      }
+    ],
+    "output": "可追溯的审查结论、返修或待补证据项。",
+    "gate": "相应责任人基于真实图像与使用证据作出判断。",
+    "exception": "按问题走 pass / fail / unknown，缺关键证据不归为通过。",
+    "next": "unknown"
+  },
+  "pass": {
+    "number": "PASS",
+    "status": "needs",
+    "title": "检查满足后保存交付证据",
+    "short": "检查满足后保存交付证据",
+    "summary": "通过结论来自真实评审和明确适用范围。",
+    "input": "完成的必要检查、实际源文件、导出与组合证据。",
+    "actions": [
+      "记录任务、资产、规则版本、检查者与范围。",
+      "对需要重新集成的用途保留后续检查，不把一次通过当成永久适用。"
+    ],
+    "files": [
+      {
+        "path": "templates/delivery-record.template.json",
+        "role": "交付记录"
+      },
+      {
+        "path": "references/team-batch-contract.md",
+        "role": "批次契约"
+      }
+    ],
+    "output": "有版本和证据的正式交接。",
+    "gate": "所有适用必要检查具备实际结论，负责人确认。",
+    "exception": "范围外使用 → 再次核对，不自动沿用批准。",
+    "next": "t3",
+    "nextView": "team"
+  },
+  "fail": {
+    "number": "FAIL",
+    "status": "needs",
+    "title": "针对具体问题返修",
+    "short": "针对具体问题返修",
+    "summary": "保留正确部分与失败证据，缩小返工范围。",
+    "input": "失败规则、问题区域、相关资产与原输出。",
+    "actions": [
+      "指出身份 / 风格 / 家族 / 技术 / 组合的具体差异。",
+      "修正受影响项，再检查其依赖；不要求全队无差别重做。"
+    ],
+    "files": [
+      {
+        "path": "references/review.md",
+        "role": "返修方法"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-ui-first/task.json",
+        "role": "原任务依据"
+      }
+    ],
+    "output": "定向修正任务与下一轮真实结果。",
+    "gate": "问题与规则对应，修复后能够重新观察。",
+    "exception": "若规范本身含糊 → 先回主美决定，不让各成员私自改标准。",
+    "next": "p3",
+    "nextView": "production"
+  },
+  "unknown": {
+    "number": "UNKNOWN",
+    "status": "needs",
+    "title": "补足材料与检查证据",
+    "short": "补足材料与检查证据",
+    "summary": "未收到、未检查与失败分别记录。",
+    "input": "尚未完成的必要观察或技术证据。",
+    "actions": [
+      "指出缺图片、源文件、真实布局还是负责人决定。",
+      "给出可执行的下一步和责任；保持待评审，不借脚本成功推断质量通过。"
+    ],
+    "files": [
+      {
+        "path": "examples/harbor-studio-workspace/tasks/game-ui-first/review.json",
+        "role": "待评审记录"
+      },
+      {
+        "path": "examples/harbor-studio-draft/guides/03-delivery-review.md",
+        "role": "验收手册"
+      }
+    ],
+    "output": "需要补齐的证据与下一步。",
+    "gate": "实际必要检查完成后再进入相应结论。",
+    "exception": "尚无真实输出 → 继续制作，不宣称正式交付。",
+    "next": "p4",
+    "nextView": "production"
+  },
+  "version": {
+    "number": "↺",
+    "status": "new",
+    "title": "主美决定采用范围，再建立新版",
+    "short": "主美决定采用范围，再建立新版",
+    "summary": "让更好的设计进入体系，保留每次决定的依据。",
+    "input": "实际视觉对比、落地成本、项目周期和受影响任务。",
+    "actions": [
+      "先判断仅用于本次还是更新家族 / 共享规则；未评估项不能自动批准。",
+      "修改源草案并保留决定与证据，比较差异后构建新版本。",
+      "明确启用新包；新任务读 current，旧任务 resume 仍读原快照。"
+    ],
+    "files": [
+      {
+        "path": "templates/creative-proposal.template.md",
+        "role": "创意采用提案"
+      },
+      {
+        "path": "references/director-workflow.md",
+        "role": "项目工作方法"
+      },
+      {
+        "path": "examples/harbor-studio-workspace/project.json",
+        "role": "当前项目指针"
+      },
+      {
+        "path": "scripts/project_runtime.py",
+        "role": "版本工具"
+      }
+    ],
+    "output": "可分发的新版本与明确迁移范围。",
+    "gate": "新包完整，样板与批准条件真实成立；成员实际拿到新版。",
+    "exception": "只改草稿不自动生效，不把候选方向当全队已经执行。",
+    "next": "d1",
+    "nextView": "director",
+    "command": "python tools/project_runtime.py publish . --pack NEW_BUILT_PACK --expect-current CURRENT_FINGERPRINT",
+    "commandNote": "只有明确决定启用时执行；候选探索工作区另按实际情况使用 --allow-draft"
+  },
+  "c1": {
+    "number": "01",
+    "status": "new",
+    "title": "建立活动视觉体系",
+    "short": "建立活动视觉体系",
+    "summary": "一套活动，同时服务 UI、海报与社媒。",
+    "input": "活动目标、商品 / 品牌资料、内容和渠道。",
+    "actions": [
+      "整理活动定位与共同视觉语言；未知价格、优惠与品牌事实保持待确认。",
+      "UI、商品、图形、字体和组合分别有要求，保留真实引用来源。"
+    ],
+    "files": [
+      {
+        "path": "examples/campaign-studio-draft/guides/01-positioning.md",
+        "role": "活动项目定位"
+      },
+      {
+        "path": "examples/campaign-studio-draft/style-pack.json",
+        "role": "活动规则"
+      }
+    ],
+    "output": "可评审的活动体系，而非单张漂亮海报。",
+    "gate": "项目目标与真实素材责任明确。",
+    "exception": "缺真实商品母版和商业信息 → 标明缺口，候选探索不视为可投放。",
+    "next": "c2"
+  },
+  "c2": {
+    "number": "02",
+    "status": "new",
+    "title": "建立组件家族与渠道交付",
+    "short": "建立组件家族与渠道交付",
+    "summary": "组合关系与渠道变化一起约束。",
+    "input": "主视觉、UI / CTA、元素家族及实际渠道。",
+    "actions": [
+      "家族要求记录 fixed / variable / technical；商品身份与文案事实不在探索变量内。",
+      "横幅、竖版与社媒允许合理重排；尺寸、安全区、文件格式逐渠道确认。"
+    ],
+    "files": [
+      {
+        "path": "examples/campaign-studio-draft/guides/02-design-system.md",
+        "role": "活动设计系统"
+      },
+      {
+        "path": "examples/campaign-studio-draft/guides/03-delivery-review.md",
+        "role": "渠道交付与验收"
+      }
+    ],
+    "output": "可复用的家族与多渠道任务依据。",
+    "gate": "适配所需的已知与未知参数可区分。",
+    "exception": "某渠道规格尚未确认 → 不宣称所有尺寸已完成。",
+    "next": "c3"
+  },
+  "c3": {
+    "number": "03",
+    "status": "new",
+    "title": "组合任务引用同版组件",
+    "short": "组合任务引用同版组件",
+    "summary": "商品、图形、字体与布局共同进入任务。",
+    "input": "一条组合需求与其 components。",
+    "actions": [
+      "Agent 按用途绑定主任务家族与关联组件，统一当前项目版本。",
+      "冻结主任务与组件的规范、技术要求及缺口；文本规则不冒充图像素材。"
+    ],
+    "files": [
+      {
+        "path": "examples/campaign-studio-workspace/tasks/campaign-layout-first/task.json",
+        "role": "组合任务"
+      },
+      {
+        "path": "examples/campaign-studio-workspace/tasks/campaign-layout-first/generation-brief.md",
+        "role": "实际组合任务书"
+      }
+    ],
+    "output": "带同版组件上下文的制作任务。",
+    "gate": "各组件类别、家族、主体与项目对应。",
+    "exception": "主体 / 家族混淆 → 先澄清，不让成员各自发挥成另一套标准。",
+    "next": "c4"
+  },
+  "c4": {
+    "number": "04",
+    "status": "needs",
+    "title": "分工制作，保留编辑源",
+    "short": "分工制作，保留编辑源",
+    "summary": "素材可以并行，最终版式有清晰负责人。",
+    "input": "同版任务、适用参考和真实工具。",
+    "actions": [
+      "商品、装饰、文字、UI 各自制作，按所需格式交接。",
+      "在设计软件完成排版与源文件，文字、优惠与标识来自确认材料。"
+    ],
+    "files": [
+      {
+        "path": "examples/campaign-studio-workspace/tasks/campaign-layout-first/handoff.md",
+        "role": "活动交接"
+      },
+      {
+        "path": "references/visual-production.md",
+        "role": "组合制作方法"
+      }
+    ],
+    "output": "实际组件、可编辑排版文件和导出。",
+    "gate": "真实来源和制作结果可回看。",
+    "exception": "本示例未生成成品物料；流程机制不能代替实际产出。",
+    "next": "c5"
+  },
+  "c5": {
+    "number": "05",
+    "status": "needs",
+    "title": "逐渠道检验完整组合",
+    "short": "逐渠道检验完整组合",
+    "summary": "单个元素合格之后，再看最终阅读与操作。",
+    "input": "完整页面 / 海报、代表设备、渠道规格和已确认信息。",
+    "actions": [
+      "复核商品身份、信息层级、文字遮挡、CTA 状态与品牌辨认。",
+      "横竖版分别检查裁切、内容长度、尺寸与可读性，不能机械缩放就宣布完成。"
+    ],
+    "files": [
+      {
+        "path": "examples/campaign-studio-draft/guides/03-delivery-review.md",
+        "role": "渠道检验"
+      },
+      {
+        "path": "examples/campaign-studio-workspace/tasks/campaign-layout-first/review.json",
+        "role": "活动复核记录"
+      }
+    ],
+    "output": "逐渠道的实际复核与返修依据。",
+    "gate": "正式信息与使用条件齐备，实际画面有观察记录。",
+    "exception": "缺关键证据 → unknown / 待投放。",
+    "next": "c6"
+  },
+  "c6": {
+    "number": "06",
+    "status": "needs",
+    "title": "交付系列物料，沉淀有效判断",
+    "short": "交付系列物料，沉淀有效判断",
+    "summary": "项目可以不断提高上限，团队继续保持一致。",
+    "input": "实际渠道产物、反馈、成本与周期信息。",
+    "actions": [
+      "记录本轮采用范围；单次探索不会直接覆盖所有人的规则。",
+      "需要更新规范时明确差异、样板与影响范围，构建新包并分发。"
+    ],
+    "files": [
+      {
+        "path": "references/director-workflow.md",
+        "role": "创意采用方法"
+      },
+      {
+        "path": "scripts/project_runtime.py",
+        "role": "版本运行器"
+      },
+      {
+        "path": "evals/director-workflow-v0.5/execution-summary.json",
+        "role": "本轮执行证据"
+      }
+    ],
+    "output": "可追溯交付与下一版本提案。",
+    "gate": "主美基于真实证据确认采用，而非自动提高评级。",
+    "exception": "跨电脑副本需分发新版；已有任务继续原依据。",
+    "next": "version"
+  },
+  "t1": {
+    "number": "01",
+    "status": "new",
+    "title": "总监固定共同判断与版本",
+    "summary": "全队共用一份基线，任务各有自己的范围。",
+    "short": "pop-borough / style-pack.json",
+    "input": "项目意图、候选风格参考、类别规则、可变范围与实际决策。",
+    "actions": [
+      "把复杂方向策略与团队生产流程分开：苔港继续作为策略案例，泡泡街区示范七线协同。",
+      "每个批次只绑定一个项目版本和真实包指纹；候选规范不等于生产批准。",
+      "角色、场景、棋子、道具、UI、动效分为六类；外包通过 owner.kind 标记责任。"
+    ],
+    "files": [
+      {
+        "path": "examples/pop-borough-draft/style-pack.json",
+        "role": "泡泡街区候选规范"
+      },
+      {
+        "path": "examples/pop-borough-draft/references/style-board.png",
+        "role": "实际生成的候选参考板"
+      },
+      {
+        "path": "examples/moss-harbor-draft/STYLE.md",
+        "role": "保留的复杂方向策略案例"
+      }
+    ],
+    "output": "同一候选基线 + 清楚的适用范围与待决事项。",
+    "gate": "每条任务能指出自己依据的版本与规则，未确认内容仍标为候选。",
+    "exception": "风格判断冲突 → 由总监解决或保留候选；不让成员各自改一份共享规范。",
+    "next": "t2"
+  },
+  "t2": {
+    "number": "02",
+    "status": "new",
+    "title": "分发七条并行任务线",
+    "summary": "50项是有负责人、有ID的计划，不是50件已完成资产。",
+    "short": "production/roster.json → batch-plan.json",
+    "input": "共同基线、成员职责、计划资产、依赖关系与必要检查。",
+    "actions": [
+      "角色8、场景6、棋子10、道具6、UI8、动效6、外包道具变体6，共50项计划。",
+      "用 task_id、asset_id、owner 和 required_checks 连接工作，不靠散落聊天确认责任。",
+      "母版或集成依赖未到位时保持未完成；外包不能自行猜测内制母版。",
+      "动效同时读取源棋子任务书与 motion 任务书，继承源棋子身份规则；不把 tile 实体绑定为 motion 实体。"
+    ],
+    "files": [
+      {
+        "path": "examples/pop-borough-draft/production/roster.json",
+        "role": "七线计划与50个具名资产"
+      },
+      {
+        "path": "examples/pop-borough-draft/production/batch-plan.json",
+        "role": "批次输入 · 初始交付为空"
+      },
+      {
+        "path": "scripts/style_pack.py",
+        "role": "按类别与实体编译任务书"
+      },
+      {
+        "path": "evals/team-production/tile-star-brief.json",
+        "role": "实际编译的源棋子任务书"
+      },
+      {
+        "path": "evals/team-production/motion-pop-brief.json",
+        "role": "实际编译的动效任务书"
+      }
+    ],
+    "output": "可逐项追踪的生产任务书与批次计划。",
+    "gate": "每项任务能回到同一基线，并有实际负责人、范围和验收要求。",
+    "exception": "缺少身份、母版、规格或依赖 → 记录具体缺口，相关检查不能算通过。",
+    "next": "t3"
+  },
+  "t3": {
+    "number": "03",
+    "status": "new",
+    "title": "每项资产带着记录交回来",
+    "summary": "图像、动效、UI组件各自保留版本和证据。",
+    "short": "batch.deliveries[]",
+    "input": "实际文件、任务/资产ID、使用的基线和逐项检查记录。",
+    "actions": [
+      "真实交付文件相对批次JSON定位，保留哈希和必要证据。",
+      "动效一套包含预备、爆点、收束三个阶段，不把帧数误记成资源数。",
+      "概念、技术可用与艺术批准分别表达；没有证据的记录保持 unknown。"
+    ],
+    "files": [
+      {
+        "path": "references/team-batch-contract.md",
+        "role": "批量交付契约"
+      },
+      {
+        "path": "templates/delivery-record.template.json",
+        "role": "单项交付记录"
+      },
+      {
+        "path": "examples/pop-borough-draft/production/batch-plan.json",
+        "role": "本案例的批次计划"
+      }
+    ],
+    "output": "能按成员、任务、资产和版本追溯的交付批次。",
+    "gate": "每条交付对应计划中的资产；路径、文件与检查证据实际存在。",
+    "exception": "未交付 → missing；缺必要评审 → review_pending，不把文件占位当完成。",
+    "next": "t4"
+  },
+  "t4": {
+    "number": "04",
+    "status": "new",
+    "title": "批次协议检查与艺术审查",
+    "summary": "先拦错版本与坏文件，再逐规则评审实际画面。",
+    "short": "scripts/team_batch.py · check",
+    "input": "批次JSON、固定基线的已构建项目包和实际交付证据。",
+    "actions": [
+      "工具核对批次基线、资产映射、文件与评审记录；不是自动看图裁判。",
+      "版本不符、文件无效、评审失败或未知，各自返回清楚状态。",
+      "ready_for_review_or_handoff 仍不等于正式艺术批准；演示模式始终明确。"
+    ],
+    "files": [
+      {
+        "path": "scripts/team_batch.py",
+        "role": "真实批次检查CLI"
+      },
+      {
+        "path": "references/team-batch-contract.md",
+        "role": "状态与证据解释"
+      },
+      {
+        "path": "references/review.md",
+        "role": "身份、风格、用途与技术分开判断"
+      },
+      {
+        "path": "evals/team-production/plan-check.json",
+        "role": "实际计划检查 · 50项missing"
+      },
+      {
+        "path": "evals/team-production/stale-version-check.json",
+        "role": "实际文本fixture · 错版本1项"
+      },
+      {
+        "path": "evals/team-production/current-version-check.json",
+        "role": "仅修正版本声明后仍待评审"
+      }
+    ],
+    "output": "真实协议演练已执行：计划50项均缺交付；文本fixture错版被拦截，修正声明后仍待评审。没有因此产生艺术批准。",
+    "gate": "适用条件与实际证据齐备，必要视觉与集成检查完成；不以脚本成功代替美术判断。",
+    "exception": "错版本只退对应资产；必要检查未知则保持待评，不拖着全队重做。",
+    "command": "python scripts/team_batch.py check BATCH_JSON --pack BUILT_PACK --out NEW_REPORT_JSON",
+    "next": "t5",
+    "commandNote": "从公开包根目录运行，替换占位路径"
+  },
+  "t5": {
+    "number": "05",
+    "status": "ready",
+    "title": "只返工有问题的部分",
+    "summary": "外包错版与视觉规则问题，处理方式不同。",
+    "short": "review → targeted revision",
+    "input": "逐资产失败原因、引用规则、问题区域与上一轮实际输出。",
+    "actions": [
+      "示例外包错误只涉及 prop-parcel-alt-coral，其他正确条目保留。",
+      "示例棋子选中态问题只改指定表现，并复查原本正确的轮廓、配色与尺寸。",
+      "每轮失败和修正记录都保留；动画中的演练通过不当作真实团队验收。"
+    ],
+    "files": [
+      {
+        "path": "references/review.md",
+        "role": "定向修正方法"
+      },
+      {
+        "path": "docs/team-production-storyboard.md",
+        "role": "明确标注的虚构团队分镜"
+      },
+      {
+        "path": "templates/delivery-record.template.json",
+        "role": "保留每轮输入与输出"
+      }
+    ],
+    "output": "修正后的受影响条目 + 重新检查结果，其他交付继续推进。",
+    "gate": "具体失败得到解决，并完成必要复查；尚未证实的问题不能伪填通过。",
+    "exception": "问题来自规范歧义 → 转版本提案，不将所有成员的规范偷偷改写。",
+    "next": "t6"
+  },
+  "t6": {
+    "number": "06",
+    "status": "new",
+    "title": "另开新批次，选择性迁移",
+    "summary": "新规则只影响指定任务，不能在一个批次混基线。",
+    "short": "PB-T03 / PB-T06 → new batch proposal",
+    "input": "拟议0.2.0规则、受影响任务、真实决策、旧版本与集成要求。",
+    "actions": [
+      "0.2.0仅为候选迁移提案；拟只为PB-T03棋子与PB-T06动效另开新批次。",
+      "原批次保持0.1.0，其他五条线继续固定旧版；不覆盖旧产物或自动全员升级。",
+      "整场景/棋盘接入之前还要检查跨版本兼容，未过检查不能随意混装。"
+    ],
+    "files": [
+      {
+        "path": "templates/change-proposal.template.md",
+        "role": "变更理由、影响与迁移计划"
+      },
+      {
+        "path": "references/team-batch-contract.md",
+        "role": "一个批次一个基线"
+      },
+      {
+        "path": "docs/team-production-storyboard.md",
+        "role": "本案例选择迁移的叙事范围"
+      }
+    ],
+    "output": "受影响任务的新批次计划与兼容性检查要求，旧批次继续可追溯。",
+    "gate": "实际决策与基线验证到位后才发布；迁移与集成通过分别判断。",
+    "exception": "兼容性未验证 → 保持待集成；不把多个版本自动混进一张棋盘。",
+    "next": "t1"
+  }
+};
+const views = {
+  "director": {
+    "number": "01",
+    "title": "主美逐步建成可分发的设计体系",
+    "intro": "资料与定位 → 视觉语言 → 组件家族 → 样板首件 → 项目包 → 团队入口。先给具体内容，主美处理关键判断。",
+    "phases": [
+      [
+        "专业体系建立",
+        [
+          "d1",
+          "d2"
+        ]
+      ],
+      [
+        "可调用规范与样板",
+        [
+          "d3",
+          "d4"
+        ]
+      ],
+      [
+        "可交接的生产入口",
+        [
+          "d5",
+          "d6"
+        ]
+      ]
+    ],
+    "default": "d1"
+  },
+  "production": {
+    "number": "02",
+    "title": "成员按类别与家族进入制作流水线",
+    "intro": "以 UI、角色、动效与组合首件为真实任务示例；工程入口自动固定版本、家族和交付上下文，实际工具与复核仍需执行。",
+    "phases": [
+      [
+        "读取项目与适用规则",
+        [
+          "p1",
+          "p2"
+        ]
+      ],
+      [
+        "固定任务与实际制作",
+        [
+          "p3",
+          "p4"
+        ]
+      ],
+      [
+        "源文件、组合与复核",
+        [
+          "p5",
+          "p6"
+        ]
+      ]
+    ],
+    "default": "p1"
+  },
+  "team": {
+    "number": "03",
+    "title": "整个团队持续按同一判断生产",
+    "intro": "原创泡泡街区：七条生产线、50项计划，演示逐项交付、定向修正与选择性迁移。",
+    "phases": [
+      [
+        "共同基线与分工",
+        [
+          "t1",
+          "t2"
+        ]
+      ],
+      [
+        "批量交付与检查",
+        [
+          "t3",
+          "t4"
+        ]
+      ],
+      [
+        "定向修正与迁移",
+        [
+          "t5",
+          "t6"
+        ]
+      ]
+    ],
+    "default": "t2"
+  },
+  "campaign": {
+    "number": "04",
+    "title": "活动、UI 与多渠道物料的同版生产",
+    "intro": "一套专业规范协调商品、图形、文字、UI 和组合；按家族调用，逐渠道交付，完整组合再检验。",
+    "phases": [
+      [
+        "活动体系与家族",
+        [
+          "c1",
+          "c2"
+        ]
+      ],
+      [
+        "同版任务与分工",
+        [
+          "c3",
+          "c4"
+        ]
+      ],
+      [
+        "渠道复核与迭代",
+        [
+          "c5",
+          "c6"
+        ]
+      ]
+    ],
+    "default": "c1"
+  }
+};
+
+    let currentView = 'director', selected = 'd1', toastTimer;
     const esc = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-    function displayPath(path){return path.replace(/^art-director\//,'');}
-    function fullPath(path){return displayPath(path);}
-    function nodeMarkup(id){const n=nodes[id];return `<button type="button" class="node" data-node="${id}" aria-pressed="false" aria-controls="detail-panel"><span class="node-kicker">${n.number}<span class="state ${n.status==='ready'?'':n.status}">${statusLabels[n.status]}</span></span><h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p><code class="node-path">${esc(displayPath(n.short))}</code></button>`;}
+    function fullPath(path){return ROOT+'\\'+path.replaceAll('/','\\');}
+    function nodeMarkup(id){const n=nodes[id];return `<button type="button" class="node" data-node="${id}" aria-pressed="false" aria-controls="detail-panel"><span class="node-kicker">${n.number}<span class="state ${n.status==='ready'?'':n.status}">${statusLabels[n.status]}</span></span><h3>${esc(n.title)}</h3><p>${esc(n.summary)}</p><span class="node-path">查看输入、调用与判断 →</span></button>`;}
     function renderView(view,node,updateHash=true){
       if(!views[view])view='director';currentView=view;const v=views[view];
       document.querySelectorAll('[role=tab]').forEach(tab=>{const active=tab.dataset.view===view;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;});
@@ -91,9 +1060,10 @@
       document.getElementById('route-number').textContent=v.number;document.getElementById('route-title').textContent=v.title;document.getElementById('route-intro').textContent=v.intro;
       document.getElementById('diagram').innerHTML=v.phases.map(([title,ids],index)=>`<section class="phase" aria-label="阶段 ${index+1}：${esc(title)}"><div class="phase-header"><span>PHASE 0${index+1}</span><strong>${esc(title)}</strong></div><div class="phase-nodes">${nodeMarkup(ids[0])}<div class="connector" aria-hidden="true">↓</div>${nodeMarkup(ids[1])}</div></section>`).join('');
       let extras='';
-      if(view==='director')extras=`<div class="layer-strip" aria-label="规范分层"><div class="layer"><b>项目画风</b><span>所有资产共用的视觉语言</span><code>intent / global rules</code></div><div class="layer"><b>类别规范</b><span>角色、场景、道具、UI</span><code>profiles / scoped rules</code></div><div class="layer"><b>实体身份</b><span>特定角色必须保留的特征</span><code>entities / identity refs</code></div><div class="layer"><b>本次变量</b><span>动作、表情、镜头与规格</span><code>production task</code></div></div><p class="route-note">只有 JSON 是规范事实源。STYLE.md 与项目 SKILL.md 由脚本派生，避免同时维护多份相互冲突的规则。</p>`;
+      if(view==='team')extras=`<div class="layer-strip"><div class="layer"><b>7条任务线</b><span>六类资产＋外包责任</span><code>owner / task_id</code></div><div class="layer"><b>50项计划</b><span>计划数量，非真实交付</span><code>asset_ids</code></div><div class="layer"><b>1批次1基线</b><span>版本与指纹共同固定</span><code>baseline</code></div><div class="layer"><b>2条拟迁移</b><span>另开新批次，先验兼容</span><code>PB-T03 / PB-T06</code></div></div><p class="route-note">以上为虚构团队流程。<a href="team-production.html">播放完整72秒演示</a>；苔港作为复杂方向策略层保留，公开工作台说明成员入口。</p>`;
+      if(view==='director')extras=`<div class="layer-strip" aria-label="规范分层"><div class="layer"><b>项目画风</b><span>所有资产共用的视觉语言</span><code>intent / global rules</code></div><div class="layer"><b>类别规范</b><span>角色、场景、道具、UI</span><code>profiles / scoped rules</code></div><div class="layer"><b>家族与身份</b><span>组件状态、许可变量与主体母版</span><code>direction.families / entities</code></div><div class="layer"><b>本次变量</b><span>动作、表情、镜头与规格</span><code>production task</code></div></div><p class="route-note">结构化规范生成五份可读手册与项目 Skill；修改草案后重新生成同版产物，避免手册、任务与规则各自漂移。</p>`;
       if(view==='production')extras=`<div class="branch"><div class="branch-title">根据实际证据，选择后续路径</div><div class="branch-grid"><button type="button" class="outcome" data-node="pass" aria-pressed="false"><b>PASS →</b><strong>保存证据，交付资产</strong><p>固定版本、参考、输出与检查记录。</p></button><button type="button" class="outcome fail" data-node="fail" aria-pressed="false"><b>FAIL ↺</b><strong>定向修正，再次质检</strong><p>回到任务 / 生成，保留失败版本。</p></button><button type="button" class="outcome unknown" data-node="unknown" aria-pressed="false"><b>UNKNOWN …</b><strong>补足证据，继续审查</strong><p>必要项未检查时，不能记为通过。</p></button></div></div>`;
-      if(view==='experiment')extras=`<div class="split"><article class="arm"><h3><span>A</span>现有方式</h3><p>原始资料 + 成员自由表达。保留真实提示词，不故意削弱对照组。</p></article><article class="arm skill"><h3><span>B</span>使用项目 skill</h3><p>相同任务事实 + 规范绑定 + 标准任务卡。工具条件与预算保持可比。</p></article></div><div class="metrics" aria-label="尚无真实试验数据"><div class="metric"><strong>—</strong><b>身份错误</b><p>依据已确认身份规则逐项观察。没有实际图片，无法判断。</p></div><div class="metric"><strong>—</strong><b>首次通过率</b><p>首次输出满足必要技术与视觉要求。展示分母与未评数。</p></div><div class="metric"><strong>—</strong><b>返工轮次</b><p>记录实际修正次数与未完成状态，不隐藏失败产物。</p></div></div><div class="experiment-status">尚无真实 A/B 图像样本。此处不是实时统计面板；实际状态与结果以试点文件为准。</div>`;
+      if(view==='campaign')extras=`<div class="layer-strip"><div class="layer"><b>商品身份</b><span>包装与品牌保持</span></div><div class="layer"><b>正式文案</b><span>价格与优惠不猜补</span></div><div class="layer"><b>家族同版</b><span>类别、状态与渠道共同约束</span></div><div class="layer"><b>组合复核</b><span>独立元素通过仍不够</span></div></div><p class="route-note">新活动项目已生成五手册、可分发包和真实组合任务快照；实际 UI、海报、社媒物料与投放效果仍待验证。</p>`;
       extras+=`<div class="loop"><span class="loop-mark" aria-hidden="true">↺</span><span>若反馈改变共享规则：<button type="button" class="text-button" data-node="version">变更提案 → diff 比较 → 样板确认 → 新版本构建</button></span></div>`;
       document.getElementById('route-extras').innerHTML=extras;
       const available=v.phases.flatMap(p=>p[1]).concat(view==='production'?['pass','fail','unknown']:[]).concat('version');
@@ -105,8 +1075,8 @@
       document.querySelectorAll('[data-node]').forEach(el=>{if(el.matches('.node,.outcome'))el.setAttribute('aria-pressed',String(el.dataset.node===id));});
       document.getElementById('detail-kicker').textContent='STEP '+n.number+' / '+statusLabels[n.status];document.getElementById('detail-title').textContent=n.title;document.getElementById('detail-summary').textContent=n.summary;
       let content=section('输入',`<p>${esc(n.input)}</p>`)+section('AGENT 在这里做什么',`<ul>${n.actions.map(x=>'<li>'+esc(x)+'</li>').join('')}</ul>`);
-      content+=section('调用的文件与路径',n.files.map(file=>`<div class="file"><div class="file-head"><span class="file-role">${esc(file.role)}</span><button type="button" class="copy" data-copy="${esc(fullPath(file.path))}" aria-label="复制 ${esc(displayPath(file.path))} 相对路径">复制</button></div><code class="file-code">${esc(displayPath(file.path))}</code><details><summary>展开相对路径</summary><div class="file-full">${esc(fullPath(file.path))}</div></details></div>`).join(''));
-      if(n.command)content+=section('真实命令 · 按实际路径替换',`<div class="command-box"><div class="command-head"><span>大写值为占位符${n.commandNote?' · '+esc(n.commandNote):''}</span><button type="button" class="copy" data-command="${id}" aria-label="复制命令模板">复制</button></div><pre>${esc(n.command)}</pre></div>`);
+      content+='<details class="detail-section"><summary>展开调用文件与完整路径</summary>'+n.files.map(file=>`<div class="file"><div class="file-head"><span class="file-role">${esc(file.role)}</span><button type="button" class="copy" data-copy="${esc(fullPath(file.path))}" aria-label="复制 ${esc(file.path)} 完整路径">复制</button></div><a class="file-code" href="../${esc(file.path)}">${esc(file.path)} ↗</a><details><summary>展开完整路径</summary><div class="file-full">${esc(fullPath(file.path))}</div></details></div>`).join('')+'</details>';
+      if(n.command)content+='<details class="detail-section"><summary>展开命令模板（说明，不执行）</summary>'+`<div class="command-box"><div class="command-head"><span>大写值为占位符${n.commandNote?' · '+esc(n.commandNote):''}</span><button type="button" class="copy" data-command="${id}" aria-label="复制命令模板">复制</button></div><pre>${esc(n.command)}</pre></div>`+'</details>';
       content+=section('产物',`<p>${esc(n.output)}</p>`)+section('进入下一步的条件',`<div class="condition">${esc(n.gate)}</div>`)+section('异常去向',`<div class="condition unknown-note">${esc(n.exception)}</div>`);
       content+=`<div class="detail-follow"><span>沿调用路径继续</span><button type="button" data-next="${n.next}" data-next-view="${n.nextView||currentView}">${esc(nodes[n.next].title)} →</button></div>`;
       document.getElementById('detail-body').innerHTML=content;document.getElementById('selection-status').textContent='已选择：'+n.title+'。详细输入、文件路径与检查条件已更新。';
@@ -124,7 +1094,7 @@
       const copy=e.target.closest('[data-copy]');if(copy){copyText(copy.dataset.copy);return;}
       const command=e.target.closest('[data-command]');if(command){copyText(nodes[command.dataset.command].command);return;}
       const next=e.target.closest('[data-next]');if(next){renderView(next.dataset.nextView,next.dataset.next);return;}
-      if(e.target.closest('#readiness-link')){e.preventDefault();renderView('experiment');document.getElementById('tab-experiment').focus();}
+
     });
     document.querySelector('[role=tablist]').addEventListener('keydown',e=>{const tabs=Array.from(document.querySelectorAll('[role=tab]'));const index=tabs.indexOf(document.activeElement);if(index<0)return;let target=null;if(e.key==='ArrowRight')target=(index+1)%tabs.length;if(e.key==='ArrowLeft')target=(index+tabs.length-1)%tabs.length;if(e.key==='Home')target=0;if(e.key==='End')target=tabs.length-1;if(target!==null){e.preventDefault();tabs[target].focus();renderView(tabs[target].dataset.view);}});
     function fromHash(){const [view,node]=location.hash.slice(1).split('/');renderView(view||'director',node,false);}

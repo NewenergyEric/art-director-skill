@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "project_id": "pop-borough",
+  "label": "泡泡街区 Pop Borough — 七线生产计划",
+  "mode": "demonstration",
+  "status": "planned_only",
+  "baseline_version": "0.1.0",
+  "planned_quantity": 50,
+  "count_unit": "一个具名静态资产状态或一套包含 anticipation/burst/settle 三阶段的动效；不把动效帧数计为资产数量。",
+  "scope_note": "虚构案例的计划数据，无真实人员指派、无量产交付、无总监审批。外包是 owner.kind，不是第七种美术类别。",
+  "parallel_note": "七线可从同一候选基线开始设计；依赖用于后续接入与验收，依赖资产未到位时相关集成检查保持 not_evaluated。",
+  "category_totals": {"character": 8, "environment": 6, "tile": 10, "prop": 12, "ui": 8, "motion": 6},
+  "production_lines": [
+    {
+      "task_id": "PB-T01",
+      "label": "角色制作",
+      "category": "character",
+      "owner": {"id": "character-lead", "role": "角色负责人", "kind": "internal"},
+      "responsibility": "制作 Mira 八种可复用姿态，维护短深蓝头发、珊瑚短夹克、米色围巾与薄荷挎包的文字身份提案。",
+      "planned_quantity": 8,
+      "dependencies": [{"task_id": "PB-T02", "use": "角色与街区背景的合成检查；不阻塞先行姿态探索"}],
+      "required_checks": ["identity", "style", "technical", "integration"],
+      "acceptance_criteria": ["逐张对照 Mira 的身份特征，姿势变化不代替重新设计", "使用候选统一描边、色板和两级阴影", "检查画布、透明边缘、锚点与命名记录", "在目标背景和显示尺度中检查角色识别；未知项不计通过"],
+      "assets": [
+        {"asset_id": "char-mira-idle", "label": "Mira 待机", "entity_id": "mira"},
+        {"asset_id": "char-mira-happy", "label": "Mira 开心", "entity_id": "mira"},
+        {"asset_id": "char-mira-surprised", "label": "Mira 惊讶", "entity_id": "mira"},
+        {"asset_id": "char-mira-carry", "label": "Mira 抱邮包", "entity_id": "mira"},
+        {"asset_id": "char-mira-wave", "label": "Mira 挥手", "entity_id": "mira"},
+        {"asset_id": "char-mira-point", "label": "Mira 指路", "entity_id": "mira"},
+        {"asset_id": "char-mira-win", "label": "Mira 胜利", "entity_id": "mira"},
+        {"asset_id": "char-mira-try-again", "label": "Mira 再试一次", "entity_id": "mira"}
+      ]
+    },
+    {
+      "task_id": "PB-T02",
+      "label": "场景制作",
+      "category": "environment",
+      "owner": {"id": "environment-lead", "role": "场景负责人", "kind": "internal"},
+      "responsibility": "制作六个日光街区与店铺背景，保留棋盘和信息区的安静空间。",
+      "planned_quantity": 6,
+      "dependencies": [],
+      "required_checks": ["style", "technical", "integration"],
+      "acceptance_criteria": ["圆角店铺、平面阴影与暖奶油底统一", "入口、街道与故事用途清楚，背景细节不抢棋盘", "检查画布、分层和预留区域记录", "在候选棋盘布局中合成，安全区最终尺寸仍待确认"],
+      "assets": [
+        {"asset_id": "env-main-street", "label": "日光主街"},
+        {"asset_id": "env-bakery", "label": "面包店"},
+        {"asset_id": "env-fruit-store", "label": "水果店"},
+        {"asset_id": "env-florist", "label": "花店"},
+        {"asset_id": "env-park-corner", "label": "公园转角"},
+        {"asset_id": "env-parcel-stop", "label": "邮包站"}
+      ]
+    },
+    {
+      "task_id": "PB-T03",
+      "label": "棋子制作",
+      "category": "tile",
+      "owner": {"id": "tile-artist", "role": "棋子负责人", "kind": "internal"},
+      "responsibility": "制作五种棋子各基础态与选中态，以颜色和轮廓共同区分。",
+      "planned_quantity": 10,
+      "dependencies": [],
+      "required_checks": ["identity", "style", "technical", "integration"],
+      "acceptance_criteria": ["红苹果、绿叶、黄星、蓝水滴、粉花的主轮廓保持区分", "选中态保留本体外形，不只用色相表达状态", "检查共同画布、锚点、透明边缘与成套命名", "在候选棋盘尺寸和灰度观察中记录可辨认性；人工结论需证据"],
+      "assets": [
+        {"asset_id": "tile-apple-default", "label": "红苹果·基础", "entity_id": "tile-apple"},
+        {"asset_id": "tile-apple-selected", "label": "红苹果·选中", "entity_id": "tile-apple"},
+        {"asset_id": "tile-leaf-default", "label": "绿叶·基础", "entity_id": "tile-leaf"},
+        {"asset_id": "tile-leaf-selected", "label": "绿叶·选中", "entity_id": "tile-leaf"},
+        {"asset_id": "tile-star-default", "label": "黄星·基础", "entity_id": "tile-star"},
+        {"asset_id": "tile-star-selected", "label": "黄星·选中", "entity_id": "tile-star"},
+        {"asset_id": "tile-drop-default", "label": "蓝水滴·基础", "entity_id": "tile-drop"},
+        {"asset_id": "tile-drop-selected", "label": "蓝水滴·选中", "entity_id": "tile-drop"},
+        {"asset_id": "tile-flower-default", "label": "粉花·基础", "entity_id": "tile-flower"},
+        {"asset_id": "tile-flower-selected", "label": "粉花·选中", "entity_id": "tile-flower"}
+      ]
+    },
+    {
+      "task_id": "PB-T04",
+      "label": "道具制作",
+      "category": "prop",
+      "owner": {"id": "prop-artist", "role": "道具负责人", "kind": "internal"},
+      "responsibility": "制作纸风车、木槌和邮包的基础形状与操作状态，为外包提供可追溯母版。",
+      "planned_quantity": 6,
+      "dependencies": [],
+      "required_checks": ["identity", "style", "technical", "integration"],
+      "acceptance_criteria": ["三种道具以纸叶片、锤头和包裹折盖分别表达用途", "状态变化保留比例与关键结构", "交付母版与状态分层记录，未交付母版前外包保持依赖未满足", "棋盘内显示不与五种基础棋子混淆"],
+      "assets": [
+        {"asset_id": "prop-pinwheel-idle", "label": "纸风车·静止", "entity_id": "pinwheel"},
+        {"asset_id": "prop-pinwheel-active", "label": "纸风车·激活", "entity_id": "pinwheel"},
+        {"asset_id": "prop-mallet-idle", "label": "木槌·静止", "entity_id": "mallet"},
+        {"asset_id": "prop-mallet-active", "label": "木槌·激活", "entity_id": "mallet"},
+        {"asset_id": "prop-parcel-closed", "label": "邮包·关闭", "entity_id": "parcel"},
+        {"asset_id": "prop-parcel-open", "label": "邮包·开启", "entity_id": "parcel"}
+      ]
+    },
+    {
+      "task_id": "PB-T05",
+      "label": "UI 制作",
+      "category": "ui",
+      "owner": {"id": "ui-designer", "role": "UI 负责人", "kind": "internal"},
+      "responsibility": "制作八个界面组件，真实文本独立排版，维持圆角和深色细描边。",
+      "planned_quantity": 8,
+      "dependencies": [{"task_id": "PB-T03", "use": "目标面板中棋子图标和状态的接入检查"}],
+      "required_checks": ["style", "technical", "integration"],
+      "acceptance_criteria": ["按钮与面板保持简洁圆角和候选统一描边", "真实文字、数字与图标分层，生成图中文字不作最终排版", "记录字体来源、中文覆盖与组件边界，未知字体不称已授权", "在真实字数和目标尺寸下检查可读性、焦点与交互状态"],
+      "assets": [
+        {"asset_id": "ui-button-play", "label": "开始按钮"},
+        {"asset_id": "ui-button-pause", "label": "暂停按钮"},
+        {"asset_id": "ui-button-retry", "label": "重试按钮"},
+        {"asset_id": "ui-button-next", "label": "下一关按钮"},
+        {"asset_id": "ui-moves-counter", "label": "步数计数"},
+        {"asset_id": "ui-goal-panel", "label": "目标面板"},
+        {"asset_id": "ui-dialog-win", "label": "胜利弹窗"},
+        {"asset_id": "ui-dialog-retry", "label": "重试弹窗"}
+      ]
+    },
+    {
+      "task_id": "PB-T06",
+      "label": "动效制作",
+      "category": "motion",
+      "owner": {"id": "motion-designer", "role": "动效负责人", "kind": "internal"},
+      "responsibility": "制作六套 anticipation/burst/settle 三阶段动效，以弹性小爆点表达反馈，继承源棋子与道具的身份。",
+      "planned_quantity": 6,
+      "dependencies": [{"task_id": "PB-T03", "use": "棋子轮廓与锚点"}, {"task_id": "PB-T04", "use": "道具轮廓与奖励收集素材"}],
+      "required_checks": ["identity", "style", "technical", "integration"],
+      "acceptance_criteria": ["逐帧继承源棋子与道具身份，不给无五官棋子新增眼睛或嘴，不重设计种类轮廓", "每套明确预备、爆点、收束三个阶段", "使用小范围弹性和有限碎片，结果棋子清楚", "记录时长、帧率、锚点与循环方式；预算数值均为待验证提案", "以棋盘叠加回放检查遮挡与连续触发；未测性能不记通过"],
+      "assets": [
+        {"asset_id": "motion-swap-valid", "label": "有效交换"},
+        {"asset_id": "motion-swap-invalid", "label": "无效交换回弹"},
+        {"asset_id": "motion-tile-pop", "label": "单棋消除"},
+        {"asset_id": "motion-line-clear", "label": "直线消除"},
+        {"asset_id": "motion-combo-pulse", "label": "连击提示"},
+        {"asset_id": "motion-reward-collect", "label": "奖励收集"}
+      ]
+    },
+    {
+      "task_id": "PB-T07",
+      "label": "外包包装与配色变体",
+      "category": "prop",
+      "owner": {"id": "outsource-studio", "role": "外包道具供应商", "kind": "external"},
+      "responsibility": "基于指定母版制作六个配色或表面包装变体；逐项返回版本、母版来源与检查证据。",
+      "planned_quantity": 6,
+      "dependencies": [{"task_id": "PB-T04", "asset_ids": ["prop-pinwheel-idle", "prop-mallet-idle", "prop-parcel-closed"], "use": "等待对应母版；不得从整张样板图猜测已确认结构"}],
+      "required_checks": ["identity", "style", "technical", "integration"],
+      "acceptance_criteria": ["只改任务允许的配色和表面包装，保留母版结构", "使用与内制相同的版本、艺术与工程检查门", "每个资产单独关联规范指纹、母版和文件；错版本只退受影响条目", "外包角色不改变prop类别，也不自动获得审批状态"],
+      "assets": [
+        {"asset_id": "prop-pinwheel-alt-coral", "label": "风车·珊瑚变体", "entity_id": "pinwheel"},
+        {"asset_id": "prop-pinwheel-alt-mint", "label": "风车·薄荷变体", "entity_id": "pinwheel"},
+        {"asset_id": "prop-mallet-alt-blue", "label": "木槌·蓝色变体", "entity_id": "mallet"},
+        {"asset_id": "prop-mallet-alt-yellow", "label": "木槌·黄色变体", "entity_id": "mallet"},
+        {"asset_id": "prop-parcel-alt-coral", "label": "邮包·珊瑚包装", "entity_id": "parcel"},
+        {"asset_id": "prop-parcel-alt-mint", "label": "邮包·薄荷包装", "entity_id": "parcel"}
+      ]
+    }
+  ]
+}

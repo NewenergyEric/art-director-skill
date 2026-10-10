@@ -1,0 +1,27 @@
+{
+  "label": "campaign-pack-verify",
+  "command": [
+    "python",
+    "art-director/scripts/style_pack.py",
+    "verify",
+    "dist/campaign-kit-0.1.0-draft"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "command": "verify",
+    "pack": {
+      "id": "weekend-campaign",
+      "version": "0.1.0",
+      "status": "draft",
+      "fingerprint": "f7147528ec51046fe38bce314e2d3cbbca3a95b5dcfcd6addb8300039fcd074d"
+    },
+    "release": false,
+    "errors": [],
+    "warnings": [],
+    "scope_of_check": "Unsigned content integrity only; neither origin/approver authentication nor artistic acceptance."
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:33.719789+00:00"
+}

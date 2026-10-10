@@ -1,0 +1,40 @@
+{
+  "label": "campaign-composition",
+  "command": [
+    "python",
+    "examples/campaign-public-workspace/tools/project_runtime.py",
+    "start",
+    "examples/campaign-public-workspace",
+    "--request",
+    "examples/campaign-kit-draft/requests/summer-banner.json"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "command": "start",
+    "task_id": "campaign-banner-001",
+    "task_dir": "<PROJECT_ROOT>\\examples\\campaign-public-workspace\\tasks\\campaign-banner-001",
+    "work_dir": "<PROJECT_ROOT>\\examples\\campaign-public-workspace\\work\\campaign-banner-001",
+    "baseline": {
+      "version": "0.1.0",
+      "fingerprint": "f7147528ec51046fe38bce314e2d3cbbca3a95b5dcfcd6addb8300039fcd074d",
+      "path": "releases/0.1.0",
+      "release": false
+    },
+    "status": "prepared_for_exploration",
+    "ready": false,
+    "production_approved": false,
+    "blockers": [],
+    "attention": [
+      "缺真实商品母版、品牌标识和批准风格样板",
+      "缺正式活动文字、价格、日期与细则",
+      "缺已选字体及实际渠道尺寸",
+      "尚未生成图像或进行PS/Figma排版、投放验收"
+    ],
+    "generation_brief": "<PROJECT_ROOT>\\examples\\campaign-public-workspace\\tasks\\campaign-banner-001\\generation-brief.md",
+    "handoff": "<PROJECT_ROOT>\\examples\\campaign-public-workspace\\tasks\\campaign-banner-001\\handoff.md"
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:35.135377+00:00"
+}

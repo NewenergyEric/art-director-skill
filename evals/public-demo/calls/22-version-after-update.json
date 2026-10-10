@@ -1,0 +1,40 @@
+{
+  "label": "version-after-update",
+  "command": [
+    "python",
+    "evals/public-demo/version-workspace/tools/project_runtime.py",
+    "start",
+    "evals/public-demo/version-workspace",
+    "--request",
+    "evals/public-demo/version-requests/after-update.json"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "command": "start",
+    "task_id": "after-update",
+    "task_dir": "<PROJECT_ROOT>\\evals\\public-demo\\version-workspace\\tasks\\after-update",
+    "work_dir": "<PROJECT_ROOT>\\evals\\public-demo\\version-workspace\\work\\after-update",
+    "baseline": {
+      "version": "0.2.1",
+      "fingerprint": "ebf5faab25f968332e850fc3b4003a4666f2acf426e81b8cd1d8f9226ca2bb95",
+      "path": "releases/0.2.1",
+      "release": false
+    },
+    "status": "prepared_for_exploration",
+    "ready": false,
+    "production_approved": false,
+    "blockers": [],
+    "attention": [
+      "尚无真实负责人确认的精细角色设定图与批准记录",
+      "需要真实图像模型生成并检查身份、风格和候选差异",
+      "需要确认正式画布、显示尺寸、锚点与 PS 等可编辑交付要求",
+      "需要用真实团队实验评估身份错误、首次通过率和返工轮次"
+    ],
+    "generation_brief": "<PROJECT_ROOT>\\evals\\public-demo\\version-workspace\\tasks\\after-update\\generation-brief.md",
+    "handoff": "<PROJECT_ROOT>\\evals\\public-demo\\version-workspace\\tasks\\after-update\\handoff.md"
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:41.267677+00:00"
+}

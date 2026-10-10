@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "project_id": "weekend-campaign",
+  "current": {
+    "version": "0.1.0",
+    "fingerprint": "f7147528ec51046fe38bce314e2d3cbbca3a95b5dcfcd6addb8300039fcd074d",
+    "path": "releases/0.1.0",
+    "release": false
+  },
+  "created_at": "2026-10-09T15:51:34+00:00",
+  "updated_at": "2026-10-09T15:51:34+00:00",
+  "history": [
+    {
+      "baseline": {
+        "version": "0.1.0",
+        "fingerprint": "f7147528ec51046fe38bce314e2d3cbbca3a95b5dcfcd6addb8300039fcd074d",
+        "path": "releases/0.1.0",
+        "release": false
+      },
+      "adopted_at": "2026-10-09T15:51:34+00:00"
+    }
+  ]
+}

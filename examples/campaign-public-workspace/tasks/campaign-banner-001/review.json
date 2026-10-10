@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "task_id": "campaign-banner-001",
+  "baseline": {
+    "version": "0.1.0",
+    "fingerprint": "f7147528ec51046fe38bce314e2d3cbbca3a95b5dcfcd6addb8300039fcd074d",
+    "path": "releases/0.1.0",
+    "release": false
+  },
+  "production_approved": false,
+  "checks": [
+    {
+      "criterion": "instruction_conflicts",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "identity",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "style",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "task",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "technical",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "integration",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "director_acceptance",
+      "result": "unknown",
+      "evidence": null
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "CAMPAIGN-STYLE",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "COPY-TRUTH",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "COMPOSITION-CONTEXT",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "PRODUCT-IDENTITY",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "DECORATION-SPACE",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "TYPE-HIERARCHY",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    }
+  ],
+  "stages": [
+    {
+      "id": "concept",
+      "label": "创意候选与主美选择",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "single_asset",
+      "label": "按冻结参考单独生成资产",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "photoshop",
+      "label": "PS 调整尺寸、透明边缘与可编辑源文件",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "integration",
+      "label": "实际投放版面、界面或游戏场景中的集成检查",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "delivery",
+      "label": "最终导出、来源与交付复核",
+      "result": "unknown",
+      "evidence": null
+    }
+  ]
+}

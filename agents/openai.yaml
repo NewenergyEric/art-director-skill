@@ -1,4 +1,4 @@
 interface:
   display_name: "美术总监 · Art Director"
-  short_description: "把总监的判断编译成各职能都能执行、评审和延续的项目风格包"
-  default_prompt: "使用 $art-director。先读取已有规范、批准样板和最近评审，把画风、身份、本次任务和技术规格分开；先验证代表小批，再为各条视觉产线生成可版本化的任务包。"
+  short_description: "引导总监建成专业规范与项目包，让团队按共同标准制作、质检和持续交付"
+  default_prompt: "使用 $art-director，读取我的项目资料，带我建立定位、视觉语言、组件家族、代表样板和验收要求，封装成团队能直接调用的项目包，并接上制作与交付流程。"

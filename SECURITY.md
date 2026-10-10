@@ -2,7 +2,7 @@
 
 This document declares the network access, credential handling, subprocesses, and file-deletion boundaries in Art Director so the claims can be checked against the repository.
 
-**TL;DR: the project-pack tools run locally. `style_pack.py`, `pilot.py`, and `package_release.py` make no network requests, read no API keys, and send no telemetry. Project references and client material remain on the machine unless the user deliberately uploads or publishes them with another tool.**
+**TL;DR: the project-pack tools run locally. `style_pack.py`, `project_runtime.py`, `team_batch.py`, `pilot.py`, and `package_release.py` make no network requests, read no API keys, and send no telemetry. Project references and client material remain on the machine unless the user deliberately uploads or publishes them with another tool.**
 
 ## Supported versions
 
@@ -10,9 +10,9 @@ Security fixes are applied to the current release line.
 
 | Version | Supported |
 |---|---|
-| `0.2.x` | Yes |
-| `0.1.x` | Critical fixes only |
-| `< 0.1` | No |
+| `0.5.x` | Yes |
+| `0.2.x` | Critical fixes only |
+| `< 0.2` | No |
 
 ## Complete network surface
 
@@ -20,7 +20,7 @@ The runtime scripts contain no HTTP client and define no outbound destination.
 
 | Activity | Network destination | Data sent | When |
 |---|---|---|---|
-| Core project-pack commands | None | Nothing | `validate`, `render`, `brief`, `build`, `verify`, `archive`, `diff`, `intake`, `check-image`, and `summarize` are local |
+| Core project-pack commands | None | Nothing | Pack, project runtime, batch, intake, image-check, and summary commands are local |
 | Dependency installation | The npm or Python registry configured by the user | Standard package-manager requests | Only when the user runs `npm install` or installs optional Pillow |
 | Remotion browser setup | Remotion/Google browser download endpoint | Standard download request; no project assets | Only when no compatible local Chrome/Edge executable is supplied |
 | GitHub README media | `github.com` / `githubusercontent.com` | Standard browser request for public release assets | Only when a reader opens the README |

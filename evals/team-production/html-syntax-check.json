@@ -1,0 +1,17 @@
+{
+  "results": [
+    {
+      "path": "docs/team-production.html",
+      "javascript_syntax": "pass",
+      "static_duplicate_ids": [],
+      "scripts": 1
+    },
+    {
+      "path": "docs/call-flow.html",
+      "javascript_syntax": "pass",
+      "static_duplicate_ids": [],
+      "scripts": 1
+    }
+  ],
+  "browser_visual_review": "not_performed"
+}

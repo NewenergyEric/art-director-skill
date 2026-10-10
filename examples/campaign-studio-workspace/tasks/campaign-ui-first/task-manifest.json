@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "campaign-ui-first",
+  "files": {
+    "brief.json": "5a13396bf8fa1adfe47d217a22b29e49d29844821d7249272cabad29a0c00530",
+    "generation-brief.md": "4c30b89834226f350ae7c3099579a292f220859ee3dcb5b3c67359a52884c71d",
+    "handoff.md": "aa7b222b824c69f5e17d5fdddfdac2fad80b30e8b20f6f9420f1bd1ba68beca7",
+    "request.json": "9a762ea80bf9196d636d7ea82a7d34a388de29d1368a7b16736dda582d5d8d86",
+    "review.json": "64a2b69428185cc555b9964ad363adf246c593660cd9a4a6ee1618a50ce825bf",
+    "task.json": "2f633e70193bb6e21c8ba91c9eec0fd4eb5e8458cd40316cea3f4e6c8289a05d"
+  },
+  "notice": "Frozen input hashes are unsigned; real outputs and review evidence belong under work/, not in this snapshot."
+}

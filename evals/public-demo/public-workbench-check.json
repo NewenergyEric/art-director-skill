@@ -1,0 +1,591 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-09T16:20:01.326Z",
+  "command": "node evals/public-demo/public-workbench-check.cjs",
+  "script": "evals/public-demo/public-workbench-check.cjs",
+  "script_sha256": "1410a68886c78c39d9da7936a690b44e8c5bbd1b23b3d1e71aecf90737b0355c",
+  "runtime": {
+    "node": "v24.13.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "checked_files": [
+    {
+      "path": "docs/workbench.html",
+      "sha256": "9f6db2f017adf1af0172b4fc42939a536493d6cf644ebcc7d5aa330e6bd1eabb",
+      "bytes": 74702
+    },
+    {
+      "path": "docs/call-flow.html",
+      "sha256": "8d1fc332372985fdc7ca5cb99dc4c5e8f88bc0776989b1f43e0619cff93fd318",
+      "bytes": 63598
+    },
+    {
+      "path": "docs/team-production.html",
+      "sha256": "2af61ad6400bc3a3cb0b15858197e7bae62376c1c10397f70afca1fa2bb356ba",
+      "bytes": 52893
+    }
+  ],
+  "result": {
+    "passed": 61,
+    "failed": 0,
+    "total": 61,
+    "public_paths_checked": 56,
+    "public_paths_exist": 56
+  },
+  "restricted_case_scan": {
+    "performed": true,
+    "policy_source": "ephemeral process environment; vocabulary omitted from public artifacts",
+    "policy_sha256": "785f969322215ade899d97011347f9877e2cf176c8426b9f11f4016016c37768",
+    "html_source_and_hidden_data_clear": true
+  },
+  "checks": [
+    {
+      "name": "restricted-case audit vocabulary supplied",
+      "pass": true
+    },
+    {
+      "name": "docs/workbench.html: JavaScript syntax",
+      "pass": true
+    },
+    {
+      "name": "docs/workbench.html: no restricted-case tokens in source or hidden data",
+      "pass": true
+    },
+    {
+      "name": "docs/workbench.html: unique HTML IDs",
+      "pass": true
+    },
+    {
+      "name": "docs/workbench.html: no remote resource dependency",
+      "pass": true
+    },
+    {
+      "name": "docs/call-flow.html: JavaScript syntax",
+      "pass": true
+    },
+    {
+      "name": "docs/call-flow.html: no restricted-case tokens in source or hidden data",
+      "pass": true
+    },
+    {
+      "name": "docs/call-flow.html: unique HTML IDs",
+      "pass": true
+    },
+    {
+      "name": "docs/call-flow.html: no remote resource dependency",
+      "pass": true
+    },
+    {
+      "name": "docs/team-production.html: JavaScript syntax",
+      "pass": true
+    },
+    {
+      "name": "docs/team-production.html: no restricted-case tokens in source or hidden data",
+      "pass": true
+    },
+    {
+      "name": "docs/team-production.html: unique HTML IDs",
+      "pass": true
+    },
+    {
+      "name": "docs/team-production.html: no remote resource dependency",
+      "pass": true
+    },
+    {
+      "name": "public member/exploration defaults",
+      "pass": true
+    },
+    {
+      "name": "Mira aliases route to public character",
+      "pass": true
+    },
+    {
+      "name": "candidate production stays blocked",
+      "pass": true
+    },
+    {
+      "name": "pose-only rejects clothing changes",
+      "pass": true
+    },
+    {
+      "name": "pose-only default outfit is public costume",
+      "pass": true
+    },
+    {
+      "name": "identity redesign remains blocked",
+      "pass": true
+    },
+    {
+      "name": "unidentified subject requires clarification",
+      "pass": true
+    },
+    {
+      "name": "empty request rejected",
+      "pass": true
+    },
+    {
+      "name": "unverified promotional amount flagged",
+      "pass": true
+    },
+    {
+      "name": "public image presented as whole composite candidate",
+      "pass": true
+    },
+    {
+      "name": "public identity and project style replaced",
+      "pass": true
+    },
+    {
+      "name": "task preview pins current version",
+      "pass": true
+    },
+    {
+      "name": "blocked mode creates no new task",
+      "pass": true
+    },
+    {
+      "name": "pose suggestions stay within scope",
+      "pass": true
+    },
+    {
+      "name": "campaign schematic does not invent product art or price",
+      "pass": true
+    },
+    {
+      "name": "copy-only task does not expose layout proposals",
+      "pass": true
+    },
+    {
+      "name": "campaign cannot inherit character budget change",
+      "pass": true
+    },
+    {
+      "name": "changed context clears prior judgement",
+      "pass": true
+    },
+    {
+      "name": "incomplete judgement cannot propose a shared change",
+      "pass": true
+    },
+    {
+      "name": "single-task adoption leaves project version unchanged",
+      "pass": true
+    },
+    {
+      "name": "complete judgement creates candidate only",
+      "pass": true
+    },
+    {
+      "name": "explicit simulated switch creates new-task version",
+      "pass": true
+    },
+    {
+      "name": "switch does not mislabel an old preview",
+      "pass": true
+    },
+    {
+      "name": "old tasks keep 0.2.0/3 while new task uses 0.2.1/4",
+      "pass": true
+    },
+    {
+      "name": "campaign version unaffected by character change",
+      "pass": true
+    },
+    {
+      "name": "reset affects local demonstration only",
+      "pass": true
+    },
+    {
+      "name": "delivery stages require actual evidence",
+      "pass": true
+    },
+    {
+      "name": "prototype contains no network/storage writes",
+      "pass": true
+    },
+    {
+      "name": "requirements coverage visible",
+      "pass": true
+    },
+    {
+      "name": "reduced-motion preference supported",
+      "pass": true
+    },
+    {
+      "name": "only four approved routes remain",
+      "pass": true
+    },
+    {
+      "name": "all route destinations resolve",
+      "pass": true
+    },
+    {
+      "name": "member route uses public workspace",
+      "pass": true
+    },
+    {
+      "name": "call-flow entry opens workbench",
+      "pass": true
+    },
+    {
+      "name": "original team plan remains seven lines and 50 assets",
+      "pass": true
+    },
+    {
+      "name": "original team reports zero real art delivery",
+      "pass": true
+    },
+    {
+      "name": "all static/dynamic/data paths stay in approved public roots",
+      "pass": true
+    },
+    {
+      "name": "all public references exist",
+      "pass": true
+    },
+    {
+      "name": "no restricted-case token in any referenced path",
+      "pass": true
+    },
+    {
+      "name": "linked textual artifacts contain no restricted-case tokens",
+      "pass": true
+    },
+    {
+      "name": "public board preserves original generated pixels",
+      "pass": true
+    },
+    {
+      "name": "copied-path root follows relocated package",
+      "pass": true
+    },
+    {
+      "name": "runtime proof belongs to new public execution",
+      "pass": true
+    },
+    {
+      "name": "six candidate boards retain six independent projects",
+      "pass": true
+    },
+    {
+      "name": "gallery image bytes match the inspected source manifest",
+      "pass": true
+    },
+    {
+      "name": "gallery PNG dimensions match source manifest",
+      "pass": true
+    },
+    {
+      "name": "all gallery objects render their specific rules and checks",
+      "pass": true
+    },
+    {
+      "name": "independent gallery is not attached to Mira task references",
+      "pass": true
+    }
+  ],
+  "public_paths": [
+    {
+      "path": "examples/mira-public-workspace/PROJECT.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/project.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-draft/style-pack.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/tasks/mira-raincoat-001/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/tasks/mira-raincoat-001/generation-brief.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/tasks/mira-raincoat-001/handoff.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/tasks/mira-raincoat-001/review.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/scripts/project_runtime.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-public-workspace/PROJECT.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-kit-draft/style-pack.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-kit-draft/requests/summer-banner.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-public-workspace/tasks/campaign-banner-001/brief.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/version-workspace/project.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/version-workspace/tasks/before-update/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/version-workspace/tasks/draft-edit-only/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/version-workspace/tasks/after-update/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/summary.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/README.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/tasks/mira-pose-001/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/requirements-coverage.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/README.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/manifest.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-draft/references/style-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/asset-system-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/asset-family.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/pseudo-3d-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/comic-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/traditional-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/painterly-card-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/references/discovery.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/references/visual-production.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/references/member-workflow.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/scripts/style_pack.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/references/tool-adapters.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/scripts/pilot.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/references/review.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/pop-borough-draft/style-pack.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/pop-borough-draft/references/style-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/moss-harbor-draft/STYLE.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/pop-borough-draft/production/roster.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/pop-borough-draft/production/batch-plan.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/tile-star-brief.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/motion-pop-brief.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/references/team-batch-contract.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/templates/delivery-record.template.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/scripts/team_batch.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/plan-check.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/stale-version-check.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/current-version-check.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/team-production-storyboard.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "art-director/templates/change-proposal.template.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "dist/pop-borough-0.1.0-draft/SKILL.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/execution-summary.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/workbench.html",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/team-production.html",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/call-flow.html",
+      "allowed": true,
+      "exists": true
+    }
+  ],
+  "reference_board": {
+    "path": "examples/mira-public-draft/references/style-board.png",
+    "sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+    "source_sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+    "treatment": "Whole public composite board displayed; no bitmap edit."
+  },
+  "browser_visual_validation": {
+    "performed": false,
+    "reason": "Previous URL access was restricted. No browser retry or alternative browser access was attempted."
+  },
+  "scope": {
+    "method": "Static source/reference auditing and actual page state/render functions in a Node VM with a minimal DOM mock.",
+    "limitations": [
+      "No browser pixel or responsive visual acceptance.",
+      "No complete browser event, clipboard permission or accessibility audit.",
+      "No new artwork, editing-software execution, real publication or team-effectiveness proof."
+    ],
+    "writes": [
+      "evals/public-demo/public-workbench-check.json"
+    ]
+  }
+}

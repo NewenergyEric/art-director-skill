@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "campaign-layout-first",
+  "files": {
+    "brief.json": "c024c08e7e095386f0bc7a44c96818b2eb61ce94ec554817987325c4f3dae34d",
+    "generation-brief.md": "6d48ee04f81ce48d76b464ff1a3712264644f43c00e6b455c7186989cf1657a9",
+    "handoff.md": "363c6b17c9343e342aaf79a17603426257073023995c4620275e88bda7ecc983",
+    "request.json": "883d545c543e406743ddd37504e950b1b3ec5529346dfe4c4722fa80eb31027e",
+    "review.json": "e06183c18ffd78da4a8f74b243d1ed69ccc076e1d1549091259b0d8f40bb3a4c",
+    "task.json": "412190d2b933dacb4efd81134a321f157a6150faef84ac76c250eda56bab9c5d"
+  },
+  "notice": "Frozen input hashes are unsigned; real outputs and review evidence belong under work/, not in this snapshot."
+}

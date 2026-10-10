@@ -1,0 +1,27 @@
+{
+  "step": "04-verify",
+  "command": [
+    "python",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\review-pack\\scripts\\style_pack.py",
+    "verify",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\review-pack"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "met_expectation": true,
+  "result": {
+    "ok": true,
+    "command": "verify",
+    "pack": {
+      "id": "neighbourhood-life-draft",
+      "version": "0.1.0",
+      "status": "draft",
+      "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81"
+    },
+    "release": false,
+    "errors": [],
+    "warnings": [],
+    "scope_of_check": "Unsigned content integrity only; neither origin/approver authentication nor artistic acceptance."
+  },
+  "stderr": ""
+}

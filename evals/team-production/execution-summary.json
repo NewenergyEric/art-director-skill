@@ -1,0 +1,79 @@
+{
+  "scope": "Actual protocol checks using a fictional project plan and explicit text fixture; no production art deliveries.",
+  "baseline": {
+    "project_id": "pop-borough",
+    "version": "0.1.0",
+    "fingerprint": "414e047bd52f77735bddb4ae60d92113fc475aa0241442e1b89ad62bb54cc65f"
+  },
+  "reports": {
+    "plan": {
+      "exit_code": 1,
+      "input_valid": true,
+      "plan_valid": true,
+      "ready": false,
+      "production_approved": false,
+      "summary": {
+        "expected_assets": 50,
+        "delivered_assets": 0,
+        "missing_assets": 50,
+        "ready_assets": 0,
+        "pending_assets": 50,
+        "blocked_assets": 0,
+        "status_counts": {
+          "missing": 50,
+          "version_mismatch": 0,
+          "file_invalid": 0,
+          "review_failed": 0,
+          "review_pending": 0,
+          "ready_for_review_or_handoff": 0
+        }
+      }
+    },
+    "stale-version": {
+      "exit_code": 1,
+      "input_valid": true,
+      "plan_valid": true,
+      "ready": false,
+      "production_approved": false,
+      "summary": {
+        "expected_assets": 50,
+        "delivered_assets": 1,
+        "missing_assets": 49,
+        "ready_assets": 0,
+        "pending_assets": 49,
+        "blocked_assets": 1,
+        "status_counts": {
+          "missing": 49,
+          "version_mismatch": 1,
+          "file_invalid": 0,
+          "review_failed": 0,
+          "review_pending": 0,
+          "ready_for_review_or_handoff": 0
+        }
+      }
+    },
+    "current-version": {
+      "exit_code": 1,
+      "input_valid": true,
+      "plan_valid": true,
+      "ready": false,
+      "production_approved": false,
+      "summary": {
+        "expected_assets": 50,
+        "delivered_assets": 1,
+        "missing_assets": 49,
+        "ready_assets": 0,
+        "pending_assets": 50,
+        "blocked_assets": 0,
+        "status_counts": {
+          "missing": 49,
+          "version_mismatch": 0,
+          "file_invalid": 0,
+          "review_failed": 0,
+          "review_pending": 1,
+          "ready_for_review_or_handoff": 0
+        }
+      }
+    }
+  }
+}

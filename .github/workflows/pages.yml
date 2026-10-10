@@ -1,11 +1,26 @@
-name: Publish call flow
+name: Publish workbench
 
 on:
   push:
     branches: [main]
     paths:
-      - "docs/call-flow.html"
-      - "docs/index.html"
+      - "docs/**"
+      - "examples/harbor-studio-draft/**"
+      - "examples/harbor-studio-workspace/**"
+      - "examples/campaign-studio-draft/**"
+      - "examples/campaign-studio-workspace/**"
+      - "examples/mira-public-draft/**"
+      - "examples/mira-public-workspace/**"
+      - "examples/campaign-kit-draft/**"
+      - "examples/campaign-public-workspace/**"
+      - "examples/pop-borough-draft/**"
+      - "evals/director-workflow-v0.5/**"
+      - "evals/public-demo/**"
+      - "evals/team-production/**"
+      - "references/**"
+      - "scripts/**"
+      - "templates/**"
+      - "SKILL.md"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -25,13 +40,33 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+      - name: Stage the interactive documentation
+        shell: bash
+        run: |
+          mkdir -p _site/examples _site/evals
+          cp -R docs _site/docs
+          cp docs/site-index.html _site/index.html
+          cp -R examples/harbor-studio-draft _site/examples/
+          cp -R examples/harbor-studio-workspace _site/examples/
+          cp -R examples/campaign-studio-draft _site/examples/
+          cp -R examples/campaign-studio-workspace _site/examples/
+          cp -R examples/mira-public-draft _site/examples/
+          cp -R examples/mira-public-workspace _site/examples/
+          cp -R examples/campaign-kit-draft _site/examples/
+          cp -R examples/campaign-public-workspace _site/examples/
+          cp -R examples/pop-borough-draft _site/examples/
+          cp -R evals/director-workflow-v0.5 _site/evals/
+          cp -R evals/public-demo _site/evals/
+          cp -R evals/team-production _site/evals/
+          cp -R references scripts templates _site/
+          cp SKILL.md _site/
       - uses: actions/configure-pages@v5
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: _site
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

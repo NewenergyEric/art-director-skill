@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "task_id": "mira-production-001",
+  "baseline": {
+    "version": "0.2.0",
+    "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+    "path": "releases/0.2.0",
+    "release": false
+  },
+  "production_approved": false,
+  "checks": [
+    {
+      "criterion": "instruction_conflicts",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "identity",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "style",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "task",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "technical",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "integration",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "director_acceptance",
+      "result": "unknown",
+      "evidence": null
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "STYLE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "PALETTE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "LINE-SHADE",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "IDENTITY-FACE",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "IDENTITY-HAIR",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "OUTFIT-SLOT",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "REVIEW-IDENTITY",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "DELIVERY-SOURCE",
+      "strength": "must",
+      "verification": "technical",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "CREATIVE-ADOPTION",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    }
+  ],
+  "stages": [
+    {
+      "id": "concept",
+      "label": "创意候选与主美选择",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "single_asset",
+      "label": "按冻结参考单独生成资产",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "photoshop",
+      "label": "PS 调整尺寸、透明边缘与可编辑源文件",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "integration",
+      "label": "实际投放版面、界面或游戏场景中的集成检查",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "delivery",
+      "label": "最终导出、来源与交付复核",
+      "result": "unknown",
+      "evidence": null
+    }
+  ]
+}

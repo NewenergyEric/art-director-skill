@@ -7,7 +7,7 @@
     "medium": "unspecified",
     "view": "待确定游戏视角",
     "target_platform": "待确定",
-    "asset_types": ["character", "environment", "prop", "ui"]
+    "asset_types": ["character", "environment", "tile", "prop", "ui", "motion"]
   },
   "intent": {
     "summary": "先从总监现有材料中提炼意图，再确认项目美术基线。",
@@ -32,8 +32,10 @@
   "profiles": {
     "character": {"brief": "确认角色比例、身份特征和游戏中的识别需求。", "fixed": [], "variable": [], "technical": {}},
     "environment": {"brief": "确认场景空间关系、背景层级及视角。", "fixed": [], "variable": [], "technical": {}},
+    "tile": {"brief": "确认棋子身份、状态编码与实际棋盘识别需求。", "fixed": [], "variable": [], "technical": {}},
     "prop": {"brief": "确认用途、尺度、材质与交互可读性。", "fixed": [], "variable": [], "technical": {}},
-    "ui": {"brief": "确认实际字体、语言覆盖、层级与图标风格。", "fixed": [], "variable": [], "technical": {}}
+    "ui": {"brief": "确认实际字体、语言覆盖、层级与图标风格。", "fixed": [], "variable": [], "technical": {}},
+    "motion": {"brief": "确认源对象身份、动作节奏、遮挡范围及实际播放条件。", "fixed": [], "variable": [], "technical": {}}
   },
   "entities": [],
   "recipes": [],

@@ -1,0 +1,116 @@
+{
+  "label": "campaign-source-validate",
+  "command": [
+    "python",
+    "art-director/scripts/style_pack.py",
+    "validate",
+    "examples/campaign-kit-draft"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "release": false,
+    "errors": [],
+    "warnings": [
+      {
+        "code": "release_requirement",
+        "path": "$.status",
+        "message": "A release requires status='approved'."
+      },
+      {
+        "code": "candidate_reference",
+        "path": "$.references[0]",
+        "message": "Candidate reference: do not present it as approved production guidance."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved style reference covering 'product'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved context reference covering 'product'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved style reference covering 'graphic'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved context reference covering 'graphic'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved style reference covering 'typography'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved context reference covering 'typography'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved style reference covering 'layout'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved context reference covering 'layout'."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[0].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[1].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[2].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[3].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[4].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[5].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.entities[0].reference_ids",
+        "message": "Released entities need at least one approved identity reference."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.open_questions",
+        "message": "Resolve every open question before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.approval",
+        "message": "A release requires a named approval record and an existing evidence file."
+      }
+    ],
+    "scope_of_check": "Structure, local file presence, cross-references and recorded release prerequisites only; no visual assessment or approval identity authentication."
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:33.403162+00:00"
+}

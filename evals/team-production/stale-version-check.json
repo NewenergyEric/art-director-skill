@@ -1,0 +1,2697 @@
+{
+  "schema_version": "1.0",
+  "command": "check",
+  "ok": false,
+  "input_valid": true,
+  "plan_valid": true,
+  "ready": false,
+  "production_approved": false,
+  "scope_of_check": "Checks one verified pack, declared assignments and baselines, file SHA256, and the presence of nonempty review evidence. Review pass/fail/unknown are recorded claims, not independently assessed conclusions. No artistic quality, reviewer identity, engine integration, performance or production approval is verified.",
+  "errors": [],
+  "warnings": [
+    {
+      "code": "unreleased_pack",
+      "path": "pack",
+      "message": "Pack was built without --release; readiness remains draft review/handoff only."
+    },
+    {
+      "code": "demonstration_only",
+      "path": "$.mode",
+      "message": "This is a demonstration snapshot; passing checks cannot grant production approval."
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "char-mira-idle",
+      "task_id": "PB-T01",
+      "category": "character",
+      "owner": {
+        "id": "character-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作原创送货员Mira的八种候选姿态；保留文字身份约束，等待单独身份设定图。",
+        "fixed": [
+          "短深蓝头发",
+          "珊瑚色短夹克",
+          "米色围巾",
+          "薄荷小挎包",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "表情",
+          "朝向",
+          "手势",
+          "携带邮包"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_sprite_and_editable_source",
+          "canvas_px": [
+            512,
+            512
+          ],
+          "background": "transparent",
+          "anchor": "统一脚底锚点，位置待实测确认",
+          "identity_reference": "missing; style board is not an identity reference",
+          "target_display_px": null
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "char-mira-happy",
+      "task_id": "PB-T01",
+      "category": "character",
+      "owner": {
+        "id": "character-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作原创送货员Mira的八种候选姿态；保留文字身份约束，等待单独身份设定图。",
+        "fixed": [
+          "短深蓝头发",
+          "珊瑚色短夹克",
+          "米色围巾",
+          "薄荷小挎包",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "表情",
+          "朝向",
+          "手势",
+          "携带邮包"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_sprite_and_editable_source",
+          "canvas_px": [
+            512,
+            512
+          ],
+          "background": "transparent",
+          "anchor": "统一脚底锚点，位置待实测确认",
+          "identity_reference": "missing; style board is not an identity reference",
+          "target_display_px": null
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "char-mira-surprised",
+      "task_id": "PB-T01",
+      "category": "character",
+      "owner": {
+        "id": "character-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作原创送货员Mira的八种候选姿态；保留文字身份约束，等待单独身份设定图。",
+        "fixed": [
+          "短深蓝头发",
+          "珊瑚色短夹克",
+          "米色围巾",
+          "薄荷小挎包",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "表情",
+          "朝向",
+          "手势",
+          "携带邮包"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_sprite_and_editable_source",
+          "canvas_px": [
+            512,
+            512
+          ],
+          "background": "transparent",
+          "anchor": "统一脚底锚点，位置待实测确认",
+          "identity_reference": "missing; style board is not an identity reference",
+          "target_display_px": null
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "char-mira-carry",
+      "task_id": "PB-T01",
+      "category": "character",
+      "owner": {
+        "id": "character-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作原创送货员Mira的八种候选姿态；保留文字身份约束，等待单独身份设定图。",
+        "fixed": [
+          "短深蓝头发",
+          "珊瑚色短夹克",
+          "米色围巾",
+          "薄荷小挎包",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "表情",
+          "朝向",
+          "手势",
+          "携带邮包"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_sprite_and_editable_source",
+          "canvas_px": [
+            512,
+            512
+          ],
+          "background": "transparent",
+          "anchor": "统一脚底锚点，位置待实测确认",
+          "identity_reference": "missing; style board is not an identity reference",
+          "target_display_px": null
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "char-mira-wave",
+      "task_id": "PB-T01",
+      "category": "character",
+      "owner": {
+        "id": "character-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作原创送货员Mira的八种候选姿态；保留文字身份约束，等待单独身份设定图。",
+        "fixed": [
+          "短深蓝头发",
+          "珊瑚色短夹克",
+          "米色围巾",
+          "薄荷小挎包",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "表情",
+          "朝向",
+          "手势",
+          "携带邮包"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_sprite_and_editable_source",
+          "canvas_px": [
+            512,
+            512
+          ],
+          "background": "transparent",
+          "anchor": "统一脚底锚点，位置待实测确认",
+          "identity_reference": "missing; style board is not an identity reference",
+          "target_display_px": null
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "char-mira-point",
+      "task_id": "PB-T01",
+      "category": "character",
+      "owner": {
+        "id": "character-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作原创送货员Mira的八种候选姿态；保留文字身份约束，等待单独身份设定图。",
+        "fixed": [
+          "短深蓝头发",
+          "珊瑚色短夹克",
+          "米色围巾",
+          "薄荷小挎包",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "表情",
+          "朝向",
+          "手势",
+          "携带邮包"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_sprite_and_editable_source",
+          "canvas_px": [
+            512,
+            512
+          ],
+          "background": "transparent",
+          "anchor": "统一脚底锚点，位置待实测确认",
+          "identity_reference": "missing; style board is not an identity reference",
+          "target_display_px": null
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "char-mira-win",
+      "task_id": "PB-T01",
+      "category": "character",
+      "owner": {
+        "id": "character-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作原创送货员Mira的八种候选姿态；保留文字身份约束，等待单独身份设定图。",
+        "fixed": [
+          "短深蓝头发",
+          "珊瑚色短夹克",
+          "米色围巾",
+          "薄荷小挎包",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "表情",
+          "朝向",
+          "手势",
+          "携带邮包"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_sprite_and_editable_source",
+          "canvas_px": [
+            512,
+            512
+          ],
+          "background": "transparent",
+          "anchor": "统一脚底锚点，位置待实测确认",
+          "identity_reference": "missing; style board is not an identity reference",
+          "target_display_px": null
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "char-mira-try-again",
+      "task_id": "PB-T01",
+      "category": "character",
+      "owner": {
+        "id": "character-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作原创送货员Mira的八种候选姿态；保留文字身份约束，等待单独身份设定图。",
+        "fixed": [
+          "短深蓝头发",
+          "珊瑚色短夹克",
+          "米色围巾",
+          "薄荷小挎包",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "表情",
+          "朝向",
+          "手势",
+          "携带邮包"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_sprite_and_editable_source",
+          "canvas_px": [
+            512,
+            512
+          ],
+          "background": "transparent",
+          "anchor": "统一脚底锚点，位置待实测确认",
+          "identity_reference": "missing; style board is not an identity reference",
+          "target_display_px": null
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "env-main-street",
+      "task_id": "PB-T02",
+      "category": "environment",
+      "owner": {
+        "id": "environment-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六个日光圆角街区背景，保留棋盘和信息区的低细节空间。",
+        "fixed": [
+          "日光方向一致",
+          "圆角店铺形体",
+          "入口可辨",
+          "棋盘后方低细节"
+        ],
+        "variable": [
+          "店铺用途",
+          "货物",
+          "店招形状",
+          "街角生活细节"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_layered_background",
+          "canvas_px": [
+            1600,
+            900
+          ],
+          "layers": [
+            "sky",
+            "far_buildings",
+            "street",
+            "foreground"
+          ],
+          "board_safe_area": "待实际布局与设备确认",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "env-bakery",
+      "task_id": "PB-T02",
+      "category": "environment",
+      "owner": {
+        "id": "environment-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六个日光圆角街区背景，保留棋盘和信息区的低细节空间。",
+        "fixed": [
+          "日光方向一致",
+          "圆角店铺形体",
+          "入口可辨",
+          "棋盘后方低细节"
+        ],
+        "variable": [
+          "店铺用途",
+          "货物",
+          "店招形状",
+          "街角生活细节"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_layered_background",
+          "canvas_px": [
+            1600,
+            900
+          ],
+          "layers": [
+            "sky",
+            "far_buildings",
+            "street",
+            "foreground"
+          ],
+          "board_safe_area": "待实际布局与设备确认",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "env-fruit-store",
+      "task_id": "PB-T02",
+      "category": "environment",
+      "owner": {
+        "id": "environment-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六个日光圆角街区背景，保留棋盘和信息区的低细节空间。",
+        "fixed": [
+          "日光方向一致",
+          "圆角店铺形体",
+          "入口可辨",
+          "棋盘后方低细节"
+        ],
+        "variable": [
+          "店铺用途",
+          "货物",
+          "店招形状",
+          "街角生活细节"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_layered_background",
+          "canvas_px": [
+            1600,
+            900
+          ],
+          "layers": [
+            "sky",
+            "far_buildings",
+            "street",
+            "foreground"
+          ],
+          "board_safe_area": "待实际布局与设备确认",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "env-florist",
+      "task_id": "PB-T02",
+      "category": "environment",
+      "owner": {
+        "id": "environment-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六个日光圆角街区背景，保留棋盘和信息区的低细节空间。",
+        "fixed": [
+          "日光方向一致",
+          "圆角店铺形体",
+          "入口可辨",
+          "棋盘后方低细节"
+        ],
+        "variable": [
+          "店铺用途",
+          "货物",
+          "店招形状",
+          "街角生活细节"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_layered_background",
+          "canvas_px": [
+            1600,
+            900
+          ],
+          "layers": [
+            "sky",
+            "far_buildings",
+            "street",
+            "foreground"
+          ],
+          "board_safe_area": "待实际布局与设备确认",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "env-park-corner",
+      "task_id": "PB-T02",
+      "category": "environment",
+      "owner": {
+        "id": "environment-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六个日光圆角街区背景，保留棋盘和信息区的低细节空间。",
+        "fixed": [
+          "日光方向一致",
+          "圆角店铺形体",
+          "入口可辨",
+          "棋盘后方低细节"
+        ],
+        "variable": [
+          "店铺用途",
+          "货物",
+          "店招形状",
+          "街角生活细节"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_layered_background",
+          "canvas_px": [
+            1600,
+            900
+          ],
+          "layers": [
+            "sky",
+            "far_buildings",
+            "street",
+            "foreground"
+          ],
+          "board_safe_area": "待实际布局与设备确认",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "env-parcel-stop",
+      "task_id": "PB-T02",
+      "category": "environment",
+      "owner": {
+        "id": "environment-lead",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六个日光圆角街区背景，保留棋盘和信息区的低细节空间。",
+        "fixed": [
+          "日光方向一致",
+          "圆角店铺形体",
+          "入口可辨",
+          "棋盘后方低细节"
+        ],
+        "variable": [
+          "店铺用途",
+          "货物",
+          "店招形状",
+          "街角生活细节"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_layered_background",
+          "canvas_px": [
+            1600,
+            900
+          ],
+          "layers": [
+            "sky",
+            "far_buildings",
+            "street",
+            "foreground"
+          ],
+          "board_safe_area": "待实际布局与设备确认",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "tile-apple-default",
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作红苹果、绿叶、黄星、蓝水滴、粉花各基础和选中两态，以颜色和轮廓共同识别。",
+        "fixed": [
+          "五种独立轮廓",
+          "种类与候选色对应",
+          "无五官",
+          "共同锚点",
+          "选中态保留本体"
+        ],
+        "variable": [
+          "允许范围内的状态外圈",
+          "轻微手绘轮廓起伏"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_rgba_tile_states",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "proposed_display_px": [
+            64,
+            64
+          ],
+          "proposed_selected_ring_px_at_display": 2,
+          "anchor": "center",
+          "background": "transparent",
+          "checks": [
+            "目标尺寸合成",
+            "相邻棋子并排",
+            "灰度观察",
+            "透明边缘"
+          ]
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "tile-apple-selected",
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作红苹果、绿叶、黄星、蓝水滴、粉花各基础和选中两态，以颜色和轮廓共同识别。",
+        "fixed": [
+          "五种独立轮廓",
+          "种类与候选色对应",
+          "无五官",
+          "共同锚点",
+          "选中态保留本体"
+        ],
+        "variable": [
+          "允许范围内的状态外圈",
+          "轻微手绘轮廓起伏"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_rgba_tile_states",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "proposed_display_px": [
+            64,
+            64
+          ],
+          "proposed_selected_ring_px_at_display": 2,
+          "anchor": "center",
+          "background": "transparent",
+          "checks": [
+            "目标尺寸合成",
+            "相邻棋子并排",
+            "灰度观察",
+            "透明边缘"
+          ]
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "tile-leaf-default",
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作红苹果、绿叶、黄星、蓝水滴、粉花各基础和选中两态，以颜色和轮廓共同识别。",
+        "fixed": [
+          "五种独立轮廓",
+          "种类与候选色对应",
+          "无五官",
+          "共同锚点",
+          "选中态保留本体"
+        ],
+        "variable": [
+          "允许范围内的状态外圈",
+          "轻微手绘轮廓起伏"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_rgba_tile_states",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "proposed_display_px": [
+            64,
+            64
+          ],
+          "proposed_selected_ring_px_at_display": 2,
+          "anchor": "center",
+          "background": "transparent",
+          "checks": [
+            "目标尺寸合成",
+            "相邻棋子并排",
+            "灰度观察",
+            "透明边缘"
+          ]
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "tile-leaf-selected",
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作红苹果、绿叶、黄星、蓝水滴、粉花各基础和选中两态，以颜色和轮廓共同识别。",
+        "fixed": [
+          "五种独立轮廓",
+          "种类与候选色对应",
+          "无五官",
+          "共同锚点",
+          "选中态保留本体"
+        ],
+        "variable": [
+          "允许范围内的状态外圈",
+          "轻微手绘轮廓起伏"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_rgba_tile_states",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "proposed_display_px": [
+            64,
+            64
+          ],
+          "proposed_selected_ring_px_at_display": 2,
+          "anchor": "center",
+          "background": "transparent",
+          "checks": [
+            "目标尺寸合成",
+            "相邻棋子并排",
+            "灰度观察",
+            "透明边缘"
+          ]
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "tile-star-default",
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作红苹果、绿叶、黄星、蓝水滴、粉花各基础和选中两态，以颜色和轮廓共同识别。",
+        "fixed": [
+          "五种独立轮廓",
+          "种类与候选色对应",
+          "无五官",
+          "共同锚点",
+          "选中态保留本体"
+        ],
+        "variable": [
+          "允许范围内的状态外圈",
+          "轻微手绘轮廓起伏"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_rgba_tile_states",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "proposed_display_px": [
+            64,
+            64
+          ],
+          "proposed_selected_ring_px_at_display": 2,
+          "anchor": "center",
+          "background": "transparent",
+          "checks": [
+            "目标尺寸合成",
+            "相邻棋子并排",
+            "灰度观察",
+            "透明边缘"
+          ]
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "tile-star-selected",
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作红苹果、绿叶、黄星、蓝水滴、粉花各基础和选中两态，以颜色和轮廓共同识别。",
+        "fixed": [
+          "五种独立轮廓",
+          "种类与候选色对应",
+          "无五官",
+          "共同锚点",
+          "选中态保留本体"
+        ],
+        "variable": [
+          "允许范围内的状态外圈",
+          "轻微手绘轮廓起伏"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_rgba_tile_states",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "proposed_display_px": [
+            64,
+            64
+          ],
+          "proposed_selected_ring_px_at_display": 2,
+          "anchor": "center",
+          "background": "transparent",
+          "checks": [
+            "目标尺寸合成",
+            "相邻棋子并排",
+            "灰度观察",
+            "透明边缘"
+          ]
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "tile-drop-default",
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作红苹果、绿叶、黄星、蓝水滴、粉花各基础和选中两态，以颜色和轮廓共同识别。",
+        "fixed": [
+          "五种独立轮廓",
+          "种类与候选色对应",
+          "无五官",
+          "共同锚点",
+          "选中态保留本体"
+        ],
+        "variable": [
+          "允许范围内的状态外圈",
+          "轻微手绘轮廓起伏"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_rgba_tile_states",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "proposed_display_px": [
+            64,
+            64
+          ],
+          "proposed_selected_ring_px_at_display": 2,
+          "anchor": "center",
+          "background": "transparent",
+          "checks": [
+            "目标尺寸合成",
+            "相邻棋子并排",
+            "灰度观察",
+            "透明边缘"
+          ]
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "tile-drop-selected",
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作红苹果、绿叶、黄星、蓝水滴、粉花各基础和选中两态，以颜色和轮廓共同识别。",
+        "fixed": [
+          "五种独立轮廓",
+          "种类与候选色对应",
+          "无五官",
+          "共同锚点",
+          "选中态保留本体"
+        ],
+        "variable": [
+          "允许范围内的状态外圈",
+          "轻微手绘轮廓起伏"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_rgba_tile_states",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "proposed_display_px": [
+            64,
+            64
+          ],
+          "proposed_selected_ring_px_at_display": 2,
+          "anchor": "center",
+          "background": "transparent",
+          "checks": [
+            "目标尺寸合成",
+            "相邻棋子并排",
+            "灰度观察",
+            "透明边缘"
+          ]
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "tile-flower-default",
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作红苹果、绿叶、黄星、蓝水滴、粉花各基础和选中两态，以颜色和轮廓共同识别。",
+        "fixed": [
+          "五种独立轮廓",
+          "种类与候选色对应",
+          "无五官",
+          "共同锚点",
+          "选中态保留本体"
+        ],
+        "variable": [
+          "允许范围内的状态外圈",
+          "轻微手绘轮廓起伏"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_rgba_tile_states",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "proposed_display_px": [
+            64,
+            64
+          ],
+          "proposed_selected_ring_px_at_display": 2,
+          "anchor": "center",
+          "background": "transparent",
+          "checks": [
+            "目标尺寸合成",
+            "相邻棋子并排",
+            "灰度观察",
+            "透明边缘"
+          ]
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "tile-flower-selected",
+      "task_id": "PB-T03",
+      "category": "tile",
+      "owner": {
+        "id": "tile-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作红苹果、绿叶、黄星、蓝水滴、粉花各基础和选中两态，以颜色和轮廓共同识别。",
+        "fixed": [
+          "五种独立轮廓",
+          "种类与候选色对应",
+          "无五官",
+          "共同锚点",
+          "选中态保留本体"
+        ],
+        "variable": [
+          "允许范围内的状态外圈",
+          "轻微手绘轮廓起伏"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_rgba_tile_states",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "proposed_display_px": [
+            64,
+            64
+          ],
+          "proposed_selected_ring_px_at_display": 2,
+          "anchor": "center",
+          "background": "transparent",
+          "checks": [
+            "目标尺寸合成",
+            "相邻棋子并排",
+            "灰度观察",
+            "透明边缘"
+          ]
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-pinwheel-idle",
+      "task_id": "PB-T04",
+      "category": "prop",
+      "owner": {
+        "id": "prop-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-pinwheel-active",
+      "task_id": "PB-T04",
+      "category": "prop",
+      "owner": {
+        "id": "prop-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-mallet-idle",
+      "task_id": "PB-T04",
+      "category": "prop",
+      "owner": {
+        "id": "prop-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-mallet-active",
+      "task_id": "PB-T04",
+      "category": "prop",
+      "owner": {
+        "id": "prop-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-parcel-closed",
+      "task_id": "PB-T04",
+      "category": "prop",
+      "owner": {
+        "id": "prop-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-parcel-open",
+      "task_id": "PB-T04",
+      "category": "prop",
+      "owner": {
+        "id": "prop-artist",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "ui-button-play",
+      "task_id": "PB-T05",
+      "category": "ui",
+      "owner": {
+        "id": "ui-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作八个候选组件，真实文字另排，清楚呈现操作层级。",
+        "fixed": [
+          "简洁圆角",
+          "深色细描边",
+          "文字图形分层",
+          "不侵占棋盘操作区"
+        ],
+        "variable": [
+          "按钮填色",
+          "主次层级",
+          "真实字体与字号提案"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_component_and_text_layout",
+          "target_language": [
+            "zh-CN",
+            "en"
+          ],
+          "font_file": null,
+          "dimensions": "按实际布局另行确认",
+          "nine_slice": "按组件逐项确认，不预设已适配",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "ui-button-pause",
+      "task_id": "PB-T05",
+      "category": "ui",
+      "owner": {
+        "id": "ui-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作八个候选组件，真实文字另排，清楚呈现操作层级。",
+        "fixed": [
+          "简洁圆角",
+          "深色细描边",
+          "文字图形分层",
+          "不侵占棋盘操作区"
+        ],
+        "variable": [
+          "按钮填色",
+          "主次层级",
+          "真实字体与字号提案"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_component_and_text_layout",
+          "target_language": [
+            "zh-CN",
+            "en"
+          ],
+          "font_file": null,
+          "dimensions": "按实际布局另行确认",
+          "nine_slice": "按组件逐项确认，不预设已适配",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "ui-button-retry",
+      "task_id": "PB-T05",
+      "category": "ui",
+      "owner": {
+        "id": "ui-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作八个候选组件，真实文字另排，清楚呈现操作层级。",
+        "fixed": [
+          "简洁圆角",
+          "深色细描边",
+          "文字图形分层",
+          "不侵占棋盘操作区"
+        ],
+        "variable": [
+          "按钮填色",
+          "主次层级",
+          "真实字体与字号提案"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_component_and_text_layout",
+          "target_language": [
+            "zh-CN",
+            "en"
+          ],
+          "font_file": null,
+          "dimensions": "按实际布局另行确认",
+          "nine_slice": "按组件逐项确认，不预设已适配",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "ui-button-next",
+      "task_id": "PB-T05",
+      "category": "ui",
+      "owner": {
+        "id": "ui-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作八个候选组件，真实文字另排，清楚呈现操作层级。",
+        "fixed": [
+          "简洁圆角",
+          "深色细描边",
+          "文字图形分层",
+          "不侵占棋盘操作区"
+        ],
+        "variable": [
+          "按钮填色",
+          "主次层级",
+          "真实字体与字号提案"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_component_and_text_layout",
+          "target_language": [
+            "zh-CN",
+            "en"
+          ],
+          "font_file": null,
+          "dimensions": "按实际布局另行确认",
+          "nine_slice": "按组件逐项确认，不预设已适配",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "ui-moves-counter",
+      "task_id": "PB-T05",
+      "category": "ui",
+      "owner": {
+        "id": "ui-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作八个候选组件，真实文字另排，清楚呈现操作层级。",
+        "fixed": [
+          "简洁圆角",
+          "深色细描边",
+          "文字图形分层",
+          "不侵占棋盘操作区"
+        ],
+        "variable": [
+          "按钮填色",
+          "主次层级",
+          "真实字体与字号提案"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_component_and_text_layout",
+          "target_language": [
+            "zh-CN",
+            "en"
+          ],
+          "font_file": null,
+          "dimensions": "按实际布局另行确认",
+          "nine_slice": "按组件逐项确认，不预设已适配",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "ui-goal-panel",
+      "task_id": "PB-T05",
+      "category": "ui",
+      "owner": {
+        "id": "ui-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作八个候选组件，真实文字另排，清楚呈现操作层级。",
+        "fixed": [
+          "简洁圆角",
+          "深色细描边",
+          "文字图形分层",
+          "不侵占棋盘操作区"
+        ],
+        "variable": [
+          "按钮填色",
+          "主次层级",
+          "真实字体与字号提案"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_component_and_text_layout",
+          "target_language": [
+            "zh-CN",
+            "en"
+          ],
+          "font_file": null,
+          "dimensions": "按实际布局另行确认",
+          "nine_slice": "按组件逐项确认，不预设已适配",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "ui-dialog-win",
+      "task_id": "PB-T05",
+      "category": "ui",
+      "owner": {
+        "id": "ui-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作八个候选组件，真实文字另排，清楚呈现操作层级。",
+        "fixed": [
+          "简洁圆角",
+          "深色细描边",
+          "文字图形分层",
+          "不侵占棋盘操作区"
+        ],
+        "variable": [
+          "按钮填色",
+          "主次层级",
+          "真实字体与字号提案"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_component_and_text_layout",
+          "target_language": [
+            "zh-CN",
+            "en"
+          ],
+          "font_file": null,
+          "dimensions": "按实际布局另行确认",
+          "nine_slice": "按组件逐项确认，不预设已适配",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "ui-dialog-retry",
+      "task_id": "PB-T05",
+      "category": "ui",
+      "owner": {
+        "id": "ui-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作八个候选组件，真实文字另排，清楚呈现操作层级。",
+        "fixed": [
+          "简洁圆角",
+          "深色细描边",
+          "文字图形分层",
+          "不侵占棋盘操作区"
+        ],
+        "variable": [
+          "按钮填色",
+          "主次层级",
+          "真实字体与字号提案"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_component_and_text_layout",
+          "target_language": [
+            "zh-CN",
+            "en"
+          ],
+          "font_file": null,
+          "dimensions": "按实际布局另行确认",
+          "nine_slice": "按组件逐项确认，不预设已适配",
+          "engine_integration": "not_tested"
+        }
+      },
+      "required_checks": [
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "motion-swap-valid",
+      "task_id": "PB-T06",
+      "category": "motion",
+      "owner": {
+        "id": "motion-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六套三阶段弹性反馈；逐套回放检查棋盘遮挡和身份连续性。",
+        "fixed": [
+          "anticipation/burst/settle三个阶段",
+          "小爆点",
+          "结果可辨",
+          "静态实体身份不变"
+        ],
+        "variable": [
+          "各阶段时长",
+          "允许的短暂变形",
+          "反馈强度"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_motion_package_with_timeline",
+          "proposed_duration_ms_range": [
+            160,
+            280
+          ],
+          "proposed_preview_fps": 30,
+          "proposed_single_pop_peak_cell_ratio": 1.25,
+          "stages": [
+            "anticipation",
+            "burst",
+            "settle"
+          ],
+          "format": "待引擎、骨骼或序列帧方案确认",
+          "performance_validation": "not_performed"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "motion-swap-invalid",
+      "task_id": "PB-T06",
+      "category": "motion",
+      "owner": {
+        "id": "motion-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六套三阶段弹性反馈；逐套回放检查棋盘遮挡和身份连续性。",
+        "fixed": [
+          "anticipation/burst/settle三个阶段",
+          "小爆点",
+          "结果可辨",
+          "静态实体身份不变"
+        ],
+        "variable": [
+          "各阶段时长",
+          "允许的短暂变形",
+          "反馈强度"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_motion_package_with_timeline",
+          "proposed_duration_ms_range": [
+            160,
+            280
+          ],
+          "proposed_preview_fps": 30,
+          "proposed_single_pop_peak_cell_ratio": 1.25,
+          "stages": [
+            "anticipation",
+            "burst",
+            "settle"
+          ],
+          "format": "待引擎、骨骼或序列帧方案确认",
+          "performance_validation": "not_performed"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "motion-tile-pop",
+      "task_id": "PB-T06",
+      "category": "motion",
+      "owner": {
+        "id": "motion-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六套三阶段弹性反馈；逐套回放检查棋盘遮挡和身份连续性。",
+        "fixed": [
+          "anticipation/burst/settle三个阶段",
+          "小爆点",
+          "结果可辨",
+          "静态实体身份不变"
+        ],
+        "variable": [
+          "各阶段时长",
+          "允许的短暂变形",
+          "反馈强度"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_motion_package_with_timeline",
+          "proposed_duration_ms_range": [
+            160,
+            280
+          ],
+          "proposed_preview_fps": 30,
+          "proposed_single_pop_peak_cell_ratio": 1.25,
+          "stages": [
+            "anticipation",
+            "burst",
+            "settle"
+          ],
+          "format": "待引擎、骨骼或序列帧方案确认",
+          "performance_validation": "not_performed"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "motion-line-clear",
+      "task_id": "PB-T06",
+      "category": "motion",
+      "owner": {
+        "id": "motion-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六套三阶段弹性反馈；逐套回放检查棋盘遮挡和身份连续性。",
+        "fixed": [
+          "anticipation/burst/settle三个阶段",
+          "小爆点",
+          "结果可辨",
+          "静态实体身份不变"
+        ],
+        "variable": [
+          "各阶段时长",
+          "允许的短暂变形",
+          "反馈强度"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_motion_package_with_timeline",
+          "proposed_duration_ms_range": [
+            160,
+            280
+          ],
+          "proposed_preview_fps": 30,
+          "proposed_single_pop_peak_cell_ratio": 1.25,
+          "stages": [
+            "anticipation",
+            "burst",
+            "settle"
+          ],
+          "format": "待引擎、骨骼或序列帧方案确认",
+          "performance_validation": "not_performed"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "motion-combo-pulse",
+      "task_id": "PB-T06",
+      "category": "motion",
+      "owner": {
+        "id": "motion-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六套三阶段弹性反馈；逐套回放检查棋盘遮挡和身份连续性。",
+        "fixed": [
+          "anticipation/burst/settle三个阶段",
+          "小爆点",
+          "结果可辨",
+          "静态实体身份不变"
+        ],
+        "variable": [
+          "各阶段时长",
+          "允许的短暂变形",
+          "反馈强度"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_motion_package_with_timeline",
+          "proposed_duration_ms_range": [
+            160,
+            280
+          ],
+          "proposed_preview_fps": 30,
+          "proposed_single_pop_peak_cell_ratio": 1.25,
+          "stages": [
+            "anticipation",
+            "burst",
+            "settle"
+          ],
+          "format": "待引擎、骨骼或序列帧方案确认",
+          "performance_validation": "not_performed"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "motion-reward-collect",
+      "task_id": "PB-T06",
+      "category": "motion",
+      "owner": {
+        "id": "motion-designer",
+        "kind": "internal"
+      },
+      "profile": {
+        "brief": "制作六套三阶段弹性反馈；逐套回放检查棋盘遮挡和身份连续性。",
+        "fixed": [
+          "anticipation/burst/settle三个阶段",
+          "小爆点",
+          "结果可辨",
+          "静态实体身份不变"
+        ],
+        "variable": [
+          "各阶段时长",
+          "允许的短暂变形",
+          "反馈强度"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_motion_package_with_timeline",
+          "proposed_duration_ms_range": [
+            160,
+            280
+          ],
+          "proposed_preview_fps": 30,
+          "proposed_single_pop_peak_cell_ratio": 1.25,
+          "stages": [
+            "anticipation",
+            "burst",
+            "settle"
+          ],
+          "format": "待引擎、骨骼或序列帧方案确认",
+          "performance_validation": "not_performed"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-pinwheel-alt-coral",
+      "task_id": "PB-T07",
+      "category": "prop",
+      "owner": {
+        "id": "outsource-studio",
+        "kind": "external"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-pinwheel-alt-mint",
+      "task_id": "PB-T07",
+      "category": "prop",
+      "owner": {
+        "id": "outsource-studio",
+        "kind": "external"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-mallet-alt-blue",
+      "task_id": "PB-T07",
+      "category": "prop",
+      "owner": {
+        "id": "outsource-studio",
+        "kind": "external"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-mallet-alt-yellow",
+      "task_id": "PB-T07",
+      "category": "prop",
+      "owner": {
+        "id": "outsource-studio",
+        "kind": "external"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    },
+    {
+      "asset_id": "prop-parcel-alt-coral",
+      "task_id": "PB-T07",
+      "category": "prop",
+      "owner": {
+        "id": "outsource-studio",
+        "kind": "external"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": {
+        "project_id": "pop-borough",
+        "version": "0.0.9",
+        "fingerprint": "414e047bd52f77735bddb4ae60d92113fc475aa0241442e1b89ad62bb54cc65f"
+      },
+      "status": "version_mismatch",
+      "ready": false,
+      "blockers": [
+        "version_mismatch",
+        "review_pending"
+      ],
+      "file_checks": [
+        {
+          "path": "fixture/protocol-probe.txt",
+          "sha256": "54a39ffa52ebdaa7f9b7605d600767a3db5b2d7d7df3030579ed89a6dbbaf1f2",
+          "bytes": 147,
+          "valid": true,
+          "issues": [],
+          "expected_sha256": "54a39ffa52ebdaa7f9b7605d600767a3db5b2d7d7df3030579ed89a6dbbaf1f2"
+        }
+      ],
+      "review_checks": [
+        {
+          "criterion": "identity",
+          "required": true,
+          "recorded": true,
+          "result": "unknown",
+          "evidence_path": null,
+          "evidence": null,
+          "accepted": false
+        },
+        {
+          "criterion": "style",
+          "required": true,
+          "recorded": true,
+          "result": "unknown",
+          "evidence_path": null,
+          "evidence": null,
+          "accepted": false
+        },
+        {
+          "criterion": "technical",
+          "required": true,
+          "recorded": true,
+          "result": "unknown",
+          "evidence_path": null,
+          "evidence": null,
+          "accepted": false
+        },
+        {
+          "criterion": "integration",
+          "required": true,
+          "recorded": true,
+          "result": "unknown",
+          "evidence_path": null,
+          "evidence": null,
+          "accepted": false
+        }
+      ]
+    },
+    {
+      "asset_id": "prop-parcel-alt-mint",
+      "task_id": "PB-T07",
+      "category": "prop",
+      "owner": {
+        "id": "outsource-studio",
+        "kind": "external"
+      },
+      "profile": {
+        "brief": "制作纸风车、木槌和邮包的基础状态与外包配色包装变体。",
+        "fixed": [
+          "关键功能结构",
+          "母版与变体可追溯",
+          "统一轮廓与两级明暗"
+        ],
+        "variable": [
+          "指定配色",
+          "表面包装",
+          "激活或开启状态"
+        ],
+        "technical": {
+          "status": "proposed_not_validated",
+          "deliverable": "candidate_master_and_variants",
+          "canvas_px": [
+            256,
+            256
+          ],
+          "background": "transparent",
+          "anchor": "center; master and variants must match",
+          "external_delivery": "逐资产记录母版来源、任务id、版本和指纹",
+          "source_master_status": "planned_not_delivered"
+        }
+      },
+      "required_checks": [
+        "identity",
+        "style",
+        "technical",
+        "integration"
+      ],
+      "delivery_baseline": null,
+      "status": "missing",
+      "ready": false,
+      "blockers": [
+        "missing"
+      ],
+      "file_checks": [],
+      "review_checks": []
+    }
+  ],
+  "pack_verified": true,
+  "batch_id": "PB-FIXTURE-STALE-001",
+  "mode": "demonstration",
+  "baseline": {
+    "project_id": "pop-borough",
+    "version": "0.1.0",
+    "fingerprint": "414e047bd52f77735bddb4ae60d92113fc475aa0241442e1b89ad62bb54cc65f"
+  },
+  "verified_baseline": {
+    "project_id": "pop-borough",
+    "version": "0.1.0",
+    "fingerprint": "414e047bd52f77735bddb4ae60d92113fc475aa0241442e1b89ad62bb54cc65f"
+  },
+  "pack_release": false,
+  "summary": {
+    "expected_assets": 50,
+    "delivered_assets": 1,
+    "missing_assets": 49,
+    "ready_assets": 0,
+    "pending_assets": 49,
+    "blocked_assets": 1,
+    "status_counts": {
+      "missing": 49,
+      "version_mismatch": 1,
+      "file_invalid": 0,
+      "review_failed": 0,
+      "review_pending": 0,
+      "ready_for_review_or_handoff": 0
+    }
+  },
+  "out": "<PROJECT_ROOT>\\evals\\team-production\\stale-version-check.json"
+}

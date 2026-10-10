@@ -1,0 +1,1365 @@
+{
+  "ok": true,
+  "command": "brief",
+  "pack": {
+    "id": "neighbourhood-life-draft",
+    "name": "邻里日常 · 四人团队评审草案",
+    "version": "0.1.0",
+    "status": "draft",
+    "release": false,
+    "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81"
+  },
+  "task": "主按钮 disabled；只验证任务书，未生成。",
+  "category": "ui",
+  "scope": {
+    "medium": "未定；现有材料为平面候选插画，不推定最终 2D 或 3D",
+    "view": "未定；方向图街角透视只作阅读观察，游戏相机待选择",
+    "target_platform": "未定；手机示意不构成平台决定",
+    "asset_types": [
+      "character",
+      "environment",
+      "prop",
+      "ui",
+      "layout"
+    ]
+  },
+  "intent": {
+    "summary": "为轻松街区生活游戏建立共同视觉判断、五类资产接口与可按组件/状态调用的候选任务；先用少量有职责的小样换取主美决定。",
+    "pillars": [
+      "温暖可亲：表情与日常动作传达居民关系，不依靠大量装饰字或夸张特效。",
+      "生活感来自植物、店铺陈设和使用痕迹；可操作物件用完整大形保持辨认。",
+      "叙事层、操作层和奖励层共享轮廓与色彩语言，各自承担不同注意力任务。",
+      "四人优先复用家族、状态和组合接口；一套真实组合完成后再扩批。"
+    ],
+    "avoid": [
+      "不把方向总览板当已批准的游戏画面或可直接拆出的资产。",
+      "不让每个类别自行选择渲染、描边和配色规则。",
+      "不按参考手机图虚定平台、格数和导出尺寸。",
+      "不把视觉等级测试写成已经决定的合成玩法。"
+    ]
+  },
+  "tokens": {
+    "colors": {},
+    "fonts": {}
+  },
+  "profile": {
+    "brief": "控件解决操作和反馈；继承深轮廓、大形与暖浅底，不照搬参考手机的结构。",
+    "fixed": [
+      "TYPE-01 适用；状态语义先于配色。",
+      "组件内图标引用对应资产和状态，不复制一份脱离来源的图。"
+    ],
+    "variable": [
+      "文本长度、图标槽位、家族定义的状态。"
+    ],
+    "technical": {
+      "screen_and_orientation": null,
+      "safe_area": null,
+      "font": null,
+      "touch_target": null,
+      "contrast_target": null,
+      "export_and_implementation": null
+    }
+  },
+  "rules": [
+    {
+      "id": "G-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "所有视觉规则、家族与样板保持候选状态；本包只能用于讨论、任务准备与另行授权的探索。",
+      "rationale": "现图与本次情境没有真实主美批准；成功构建不能代替美术决定。",
+      "allowed_variation": [
+        "可用自然语言记录主美后续选择，再回写 JSON 重建新版本。"
+      ],
+      "evidence": [
+        "brief-evidence"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "G-02",
+      "scope": [
+        "global"
+      ],
+      "strength": "should",
+      "statement": "以完整的大轮廓、少量内部结构和干净色块建立识别；先大形再补生活细节。",
+      "rationale": "板中角色主发束、图标轮廓和 UI 都以大形组织；四人团队容易共享这一判断。",
+      "allowed_variation": [
+        "场景允许比 UI 更多细节；缩小或叠放时先删不承担身份/功能的细节。"
+      ],
+      "evidence": [
+        "board-style"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "G-03",
+      "scope": [
+        "global"
+      ],
+      "strength": "should",
+      "statement": "候选共同轮廓为深蓝偏黑、圆转角；按实际显示类别校准视觉粗细，不直接统一所有资产的像素线宽。",
+      "rationale": "图中角色、道具、UI 有深色边线；场景线条更柔和且受透视影响。",
+      "allowed_variation": [
+        "场景远景可弱化轮廓；UI 状态边界仍需清晰。"
+      ],
+      "evidence": [
+        "board-style"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "G-04",
+      "scope": [
+        "global"
+      ],
+      "strength": "should",
+      "statement": "先统一色彩角色：暖浅底承托，薄荷作成长/进度，珊瑚作主行动，金黄作奖励；各状态还需文字或形状提示。",
+      "rationale": "颜色来自板中可见呼应，语义映射是 Agent 候选；避免不同人把同一颜色解释成不同交互。",
+      "allowed_variation": [
+        "同世界局部材质色可以扩展；不得仅用颜色区分状态。"
+      ],
+      "evidence": [
+        "board-style"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "G-05",
+      "scope": [
+        "global"
+      ],
+      "strength": "should",
+      "statement": "材质以一处主明暗和少量高光交代体积；避免新增照片质感、金属反射或大量微纹理。",
+      "rationale": "图标与角色都呈柔和体积，写实材质会造成跨类别割裂。",
+      "allowed_variation": [
+        "街区砖墙可作节奏纹理；交互区与小图标需减密。"
+      ],
+      "evidence": [
+        "board-style"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "G-06",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "最终认可前同时看单件、相邻物件和真实使用背景；未知屏幕条件只允许相对尺度草图评审。",
+      "rationale": "方向图是展示板，未验证显示尺度和操作条件。",
+      "allowed_variation": [
+        "本阶段可用无固定像素要求的并排图和位置草图。"
+      ],
+      "evidence": [
+        "brief-evidence"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "G-07",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "素材名、任务、版本、家族和状态一起交接；概念图、编辑源文件、导出件和使用检查分别声明完成情况。",
+      "rationale": "只有状态和来源可追踪，团队才能独立继续而不靠聊天复述。",
+      "allowed_variation": [
+        "文件可按实际制作工具选择，工具与工程规格确定后补真实格式。"
+      ],
+      "evidence": [
+        "brief-evidence"
+      ],
+      "verification": "technical",
+      "status": "proposed"
+    },
+    {
+      "id": "UI-01",
+      "scope": [
+        "ui"
+      ],
+      "strength": "must",
+      "statement": "图形反馈、文案和可点击状态分别表达；按钮、卡片及角标都保留清楚的文字区域，不能把装饰当作状态唯一证据。",
+      "rationale": "方向图缺真实文字与错误/禁用状态；仅凭色彩或表情不能保证操作可读。",
+      "allowed_variation": [
+        "可调整文字区宽度与换行策略；真实字体、触控范围和读屏语义待实现条件确定。"
+      ],
+      "evidence": [
+        "board-style",
+        "brief-evidence"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "BTN-01",
+      "scope": [
+        "ui"
+      ],
+      "strength": "must",
+      "statement": "主按钮的 normal/pressed/disabled/loading/complete 共用同一轮廓和文字区域：按下用内缩或落差，禁用加原因，加载保留稳定尺寸并禁止重复提交，完成显示结果而非继续邀请点击。",
+      "rationale": "主按钮有视觉依据，其他状态语义是本次建议，需要实际界面验证。",
+      "allowed_variation": [
+        "disabled、loading、complete 不必同时出现；具体交互由产品逻辑确认，长文字状态应能换行/扩容。"
+      ],
+      "evidence": [
+        "board-style",
+        "brief-evidence"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TYPE-01",
+      "scope": [
+        "ui",
+        "layout"
+      ],
+      "strength": "must",
+      "statement": "中文、数字、日期和操作文案使用可编辑文字；字体家族、字重、授权和回退未确定前不写入字体 token。",
+      "rationale": "板上没有真实字体依据，用户明确字体未定。",
+      "allowed_variation": [
+        "首样可用带“临时排版”标记的系统字体作结构测量，不能当正式字体批准。"
+      ],
+      "evidence": [
+        "brief-evidence"
+      ],
+      "verification": "technical",
+      "status": "proposed"
+    }
+  ],
+  "references": [
+    {
+      "id": "board-style",
+      "path": "references/style-board.png",
+      "role": "style",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "整板只提取轮廓、形体、色彩与细节密度。各区域含义见 brief-and-observations.md；它不是独立状态资产，也不是实际游戏使用场景。",
+      "status": "candidate",
+      "provenance": {
+        "source": "用户指定的已生成原创候选板，复制像素未改动",
+        "original_sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+        "approval": "none",
+        "model_and_prompt": "unknown",
+        "usage": "本次草案评审与交接；没有真实主美批准"
+      },
+      "usage": "candidate_exploration_only"
+    },
+    {
+      "id": "brief-evidence",
+      "path": "references/brief-and-observations.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "文本来源和观察边界。不是图像、不是实际显示尺度 context 样板；后续仍需真实使用场景参考。",
+      "status": "candidate",
+      "provenance": "本轮需求逐字转录与 AI 对唯一方向图的观察；不构造批准。",
+      "usage": "candidate_exploration_only"
+    }
+  ],
+  "reference_base": "Paths are relative to the pack root; locate this pack by id/version/fingerprint, not by the current working directory.",
+  "reference_roles": {
+    "style": "Visual language only",
+    "identity": "Same entity's identity and fixed features",
+    "composition": "Layout only",
+    "material": "Material treatment",
+    "context": "Actual game/use context and scale",
+    "counterexample": "Negative evidence; never a positive generation reference",
+    "font": "Typography guidance and font source"
+  },
+  "entity": null,
+  "family": {
+    "id": "action-button",
+    "name": "主行动按钮家族",
+    "category": "ui",
+    "purpose": "用于街区/合成/活动入口的主要操作，先验证一个长文案禁用按钮。",
+    "rule_ids": [
+      "UI-01",
+      "BTN-01",
+      "TYPE-01"
+    ],
+    "reference_ids": [],
+    "fixed": [
+      "组件：primary-button；normal/pressed/disabled/loading/complete 共用轮廓和文本区域。",
+      "disabled 保留可读操作标签并给原因；loading 保留尺寸且避免重复提交；complete 表达完成结果。",
+      "图标与文字有各自区域；长中文不靠压扁字形解决。",
+      "默认示例文案“确认”，仅布局占位；真实文案由具体任务提供。"
+    ],
+    "variable": [
+      "状态和文案；可替换匹配语义的图标；不随状态重设外轮廓家族。"
+    ],
+    "technical": {
+      "owner_proposed": "成员 D：UI 与宣传；主美评焦点，产品确认状态触发",
+      "font": null,
+      "screen_and_touch_area": null,
+      "real_strings": null
+    },
+    "status": "proposed",
+    "task_controls": {
+      "slots": {
+        "component": {
+          "default": "primary-button",
+          "guidance": "唯一主按钮组件；次级按钮未来另建，当前不猜同样配色。"
+        },
+        "state": {
+          "default": "normal",
+          "guidance": "normal/pressed/disabled/loading/complete；边界依 BTN-01。"
+        },
+        "copy": {
+          "default": "确认〔临时布局文案〕",
+          "guidance": "用任务真实文本替换，不虚构结果与奖励。"
+        },
+        "reason": {
+          "default": "未提供〔只作占位〕",
+          "guidance": "disabled 必须补实际原因；此时只做结构稿。"
+        }
+      },
+      "exploration": {
+        "allowed_slots": [
+          "component",
+          "state",
+          "copy",
+          "reason"
+        ],
+        "max_candidates": 1
+      }
+    }
+  },
+  "exemplars": [
+    {
+      "id": "s0-board",
+      "name": "S0 已有候选总览板",
+      "family_ids": [],
+      "purpose": "提供共同讨论起点；不能证明任何家族全状态或真实屏幕成立。",
+      "reference_ids": [
+        "board-style"
+      ],
+      "acceptance": [
+        "已实际打开；只记录可见区域的观察。",
+        "不承担身份、合成链、状态、渠道和制作链的完整验收。"
+      ],
+      "required": false,
+      "status": "candidate",
+      "approval": null
+    },
+    {
+      "id": "s3-button",
+      "name": "S3 主按钮状态与文字首件",
+      "family_ids": [
+        "action-button"
+      ],
+      "purpose": "验证从概念到可编辑组件的制作方法；D 制作，主美评视觉、产品定触发逻辑。",
+      "reference_ids": [],
+      "acceptance": [
+        "展示 normal/pressed/disabled/loading/complete；同一标签和轮廓可以跟踪。",
+        "有真实短/长中文、数字和禁用原因后排版；未提供前只交占位结构。",
+        "至少置于暖浅底与街区背景检查；字体、尺寸、触控范围确认后做真实显示测试。",
+        "保存可编辑组件源文件、状态导出和组合截图；本轮仅任务书，无源文件。"
+      ],
+      "required": true,
+      "status": "planned",
+      "approval": null
+    },
+    {
+      "id": "s5-promo",
+      "name": "S5 活动宣传结构与裁切",
+      "family_ids": [
+        "event-promo",
+        "residents",
+        "street-corner",
+        "merge-garden",
+        "action-button"
+      ],
+      "purpose": "在前述选择和真实活动表齐备后验证游戏资产到宣传的转换；D 组合，B/C 提源，主美审信息。",
+      "reference_ids": [],
+      "acceptance": [
+        "标题、主视觉、时间条件、行动入口、细则先后可读；本轮只安排占位结构。",
+        "按届时确认的一横一竖或真实渠道重排，不提前写假尺寸。",
+        "主体身份、物件结构和按钮语义一致；文字保留可编辑。",
+        "无渠道/活动表不能宣称能投放；本轮无实际宣传图。"
+      ],
+      "required": true,
+      "status": "planned",
+      "approval": null
+    }
+  ],
+  "delivery": [
+    {
+      "id": "draft-review",
+      "name": "D0 草案评审交接",
+      "categories": [
+        "character",
+        "environment",
+        "prop",
+        "ui",
+        "layout"
+      ],
+      "channels": [
+        "主美本地评审"
+      ],
+      "requirements": [
+        "交付单一 JSON 源、五份派生手册、完整候选原图与来源、成员入口、样板计划、待定选择和验证记录。",
+        "任何 proposed/must 都是候选硬要求，不是已生效的团队标准。",
+        "同事能解压找相同规则与参考；本轮验证任务编译，不进行生成。"
+      ],
+      "technical": {
+        "format": "JSON / Markdown / PNG 原图；压缩包可独立解压",
+        "stage": "draft",
+        "screen_requirement": "不要求猜测最终屏幕",
+        "budget": "unknown；未消耗外部生成预算"
+      },
+      "status": "proposed",
+      "source": "Agent 为本次初稿拟定；具体规格由主美/产品/技术和渠道信息决定，未批准。"
+    },
+    {
+      "id": "first-piece",
+      "name": "D1 首件与真实制作链",
+      "categories": [
+        "character",
+        "environment",
+        "prop",
+        "ui",
+        "layout"
+      ],
+      "channels": [
+        "待定游戏画面与评审场景"
+      ],
+      "requirements": [
+        "每个小样带 task_id、资产 ID、负责人角色、包版本/指纹和输入参考。",
+        "分开原始候选、真实编辑源文件、导出件、逐规则记录与组合观察。",
+        "概念被选择后，再用目标工具实际制作一个代表资源；工具、时间、返工与失败均记录。",
+        "四人按家族分工，D 或主美汇集最终组合；单件通过不等于组合通过。"
+      ],
+      "technical": {
+        "source_tool": null,
+        "real_outputs": null,
+        "time_and_cost_budget": null,
+        "display_size": null
+      },
+      "status": "proposed",
+      "source": "Agent 为本次初稿拟定；具体规格由主美/产品/技术和渠道信息决定，未批准。"
+    },
+    {
+      "id": "game-delivery",
+      "name": "D2 游戏正式资产",
+      "categories": [
+        "character",
+        "environment",
+        "prop",
+        "ui"
+      ],
+      "channels": [
+        "实际游戏平台待定"
+      ],
+      "requirements": [
+        "媒介、相机、屏幕、交互和性能预算确定后补工程契约；不能从 PNG 推定可进引擎。",
+        "2D 若采用需确认分层、透明、锚点、裁切、动画/图集；3D 若采用需确认单位、UV、材质、骨骼、LOD/碰撞。",
+        "检验真实界面中的物件、长文案、状态、遮挡与必要导入；未执行即 unknown。"
+      ],
+      "technical": {
+        "medium": null,
+        "platform": null,
+        "screen": null,
+        "camera": null,
+        "performance_budget": null,
+        "export_spec": null
+      },
+      "status": "unknown",
+      "source": "Agent 为本次初稿拟定；具体规格由主美/产品/技术和渠道信息决定，未批准。"
+    },
+    {
+      "id": "promo-delivery",
+      "name": "D3 活动宣传交付",
+      "categories": [
+        "layout",
+        "character",
+        "environment",
+        "prop",
+        "ui"
+      ],
+      "channels": [
+        "投放/社媒/游戏内入口均待确认"
+      ],
+      "requirements": [
+        "活动负责人提供真实标题、时间、条件、奖励与法律细则（如有）；缺项保留占位。",
+        "每个渠道交可编辑源、真实文字/字体来源、重排后的导出与裁切检查。",
+        "检查角色/物件身份与传播信息，不把渠道取舍反向升级到全项目规则。"
+      ],
+      "technical": {
+        "channel_specs": null,
+        "activity_sheet": null,
+        "font_and_rights": null,
+        "exports": null
+      },
+      "status": "unknown",
+      "source": "Agent 为本次初稿拟定；具体规格由主美/产品/技术和渠道信息决定，未批准。"
+    }
+  ],
+  "direction_checks": [
+    {
+      "criterion": "family/action-button/fixed/1",
+      "statement": "组件：primary-button；normal/pressed/disabled/loading/complete 共用轮廓和文本区域。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/action-button/fixed/2",
+      "statement": "disabled 保留可读操作标签并给原因；loading 保留尺寸且避免重复提交；complete 表达完成结果。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/action-button/fixed/3",
+      "statement": "图标与文字有各自区域；长中文不靠压扁字形解决。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/action-button/fixed/4",
+      "statement": "默认示例文案“确认”，仅布局占位；真实文案由具体任务提供。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/action-button/technical",
+      "statement": "按家族技术约束核对：{\"owner_proposed\": \"成员 D：UI 与宣传；主美评焦点，产品确认状态触发\", \"font\": null, \"screen_and_touch_area\": null, \"real_strings\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/UI-01",
+      "statement": "图形反馈、文案和可点击状态分别表达；按钮、卡片及角标都保留清楚的文字区域，不能把装饰当作状态唯一证据。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/BTN-01",
+      "statement": "主按钮的 normal/pressed/disabled/loading/complete 共用同一轮廓和文字区域：按下用内缩或落差，禁用加原因，加载保留稳定尺寸并禁止重复提交，完成显示结果而非继续邀请点击。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/TYPE-01",
+      "statement": "中文、数字、日期和操作文案使用可编辑文字；字体家族、字重、授权和回退未确定前不写入字体 token。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/s0-board/acceptance/1",
+      "statement": "已实际打开；只记录可见区域的观察。",
+      "source_status": "candidate",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/s0-board/acceptance/2",
+      "statement": "不承担身份、合成链、状态、渠道和制作链的完整验收。",
+      "source_status": "candidate",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/s3-button/acceptance/1",
+      "statement": "展示 normal/pressed/disabled/loading/complete；同一标签和轮廓可以跟踪。",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/s3-button/acceptance/2",
+      "statement": "有真实短/长中文、数字和禁用原因后排版；未提供前只交占位结构。",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/s3-button/acceptance/3",
+      "statement": "至少置于暖浅底与街区背景检查；字体、尺寸、触控范围确认后做真实显示测试。",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/s3-button/acceptance/4",
+      "statement": "保存可编辑组件源文件、状态导出和组合截图；本轮仅任务书，无源文件。",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/s5-promo/acceptance/1",
+      "statement": "标题、主视觉、时间条件、行动入口、细则先后可读；本轮只安排占位结构。",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/s5-promo/acceptance/2",
+      "statement": "按届时确认的一横一竖或真实渠道重排，不提前写假尺寸。",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/s5-promo/acceptance/3",
+      "statement": "主体身份、物件结构和按钮语义一致；文字保留可编辑。",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/s5-promo/acceptance/4",
+      "statement": "无渠道/活动表不能宣称能投放；本轮无实际宣传图。",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/draft-review/requirement/1",
+      "statement": "交付单一 JSON 源、五份派生手册、完整候选原图与来源、成员入口、样板计划、待定选择和验证记录。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/draft-review/requirement/2",
+      "statement": "任何 proposed/must 都是候选硬要求，不是已生效的团队标准。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/draft-review/requirement/3",
+      "statement": "同事能解压找相同规则与参考；本轮验证任务编译，不进行生成。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/draft-review/technical",
+      "statement": "按渠道技术约束核对：{\"format\": \"JSON / Markdown / PNG 原图；压缩包可独立解压\", \"stage\": \"draft\", \"screen_requirement\": \"不要求猜测最终屏幕\", \"budget\": \"unknown；未消耗外部生成预算\"}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/first-piece/requirement/1",
+      "statement": "每个小样带 task_id、资产 ID、负责人角色、包版本/指纹和输入参考。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/first-piece/requirement/2",
+      "statement": "分开原始候选、真实编辑源文件、导出件、逐规则记录与组合观察。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/first-piece/requirement/3",
+      "statement": "概念被选择后，再用目标工具实际制作一个代表资源；工具、时间、返工与失败均记录。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/first-piece/requirement/4",
+      "statement": "四人按家族分工，D 或主美汇集最终组合；单件通过不等于组合通过。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/first-piece/technical",
+      "statement": "按渠道技术约束核对：{\"source_tool\": null, \"real_outputs\": null, \"time_and_cost_budget\": null, \"display_size\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-delivery/requirement/1",
+      "statement": "媒介、相机、屏幕、交互和性能预算确定后补工程契约；不能从 PNG 推定可进引擎。",
+      "source_status": "unknown",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-delivery/requirement/2",
+      "statement": "2D 若采用需确认分层、透明、锚点、裁切、动画/图集；3D 若采用需确认单位、UV、材质、骨骼、LOD/碰撞。",
+      "source_status": "unknown",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-delivery/requirement/3",
+      "statement": "检验真实界面中的物件、长文案、状态、遮挡与必要导入；未执行即 unknown。",
+      "source_status": "unknown",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-delivery/technical",
+      "statement": "按渠道技术约束核对：{\"medium\": null, \"platform\": null, \"screen\": null, \"camera\": null, \"performance_budget\": null, \"export_spec\": null}",
+      "source_status": "unknown",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/promo-delivery/requirement/1",
+      "statement": "活动负责人提供真实标题、时间、条件、奖励与法律细则（如有）；缺项保留占位。",
+      "source_status": "unknown",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/promo-delivery/requirement/2",
+      "statement": "每个渠道交可编辑源、真实文字/字体来源、重排后的导出与裁切检查。",
+      "source_status": "unknown",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/promo-delivery/requirement/3",
+      "statement": "检查角色/物件身份与传播信息，不把渠道取舍反向升级到全项目规则。",
+      "source_status": "unknown",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/promo-delivery/technical",
+      "statement": "按渠道技术约束核对：{\"channel_specs\": null, \"activity_sheet\": null, \"font_and_rights\": null, \"exports\": null}",
+      "source_status": "unknown",
+      "result": "unknown",
+      "evidence": null
+    }
+  ],
+  "recipes": [],
+  "decisions": [],
+  "unresolved": [
+    {
+      "code": "release_requirement",
+      "path": "$.status",
+      "message": "A release requires status='approved'."
+    },
+    {
+      "code": "candidate_reference",
+      "path": "$.references[0]",
+      "message": "Candidate reference: do not present it as approved production guidance."
+    },
+    {
+      "code": "candidate_reference",
+      "path": "$.references[1]",
+      "message": "Candidate reference: do not present it as approved production guidance."
+    },
+    {
+      "code": "candidate_reference",
+      "path": "$.references[2]",
+      "message": "Candidate reference: do not present it as approved production guidance."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'character'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'character'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'environment'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'environment'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'prop'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'prop'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'ui'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'ui'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved style reference covering 'layout'."
+    },
+    {
+      "code": "reference_coverage",
+      "path": "$.references",
+      "message": "A release needs an approved context reference covering 'layout'."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[0].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[1].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[2].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[3].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[4].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[5].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[6].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[7].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[8].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[9].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[10].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[11].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[12].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[13].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[14].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[15].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[16].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[17].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[18].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[19].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[20].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.rules[21].status",
+      "message": "All release rules must be confirmed."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.entities[0].reference_ids",
+      "message": "Released entities need at least one approved identity reference."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.decisions[0].status",
+      "message": "Resolve proposed decisions before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.decisions[1].status",
+      "message": "Resolve proposed decisions before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.decisions[2].status",
+      "message": "Resolve proposed decisions before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.open_questions",
+      "message": "Resolve every open question before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.approval",
+      "message": "A release requires a named approval record and an existing evidence file."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[1].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[2].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[3].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[4].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[5].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[6].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[7].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.positioning[8].status",
+      "message": "Resolve positioning proposals/unknowns before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[0].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[1].technical.camera",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[1].technical.module_and_engine_contract",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[1].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[2].technical.merge_recipe",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[2].technical.level_count",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[2].technical.display_size",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[2].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[3].technical.world_scale",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[3].technical.pivot",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[3].technical.collision",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[3].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[4].technical.font",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[4].technical.screen_and_touch_area",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[4].technical.real_strings",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[4].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[5].technical.screen_layout",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[5].technical.longest_name",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[5].technical.lock_conditions",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[5].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[6].technical.anchor_and_safe_area",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[6].technical.state_conditions",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[6].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[7].technical.channels",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[7].technical.dimensions",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[7].technical.safe_area",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[7].technical.activity_sheet",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.families[7].technical.font",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.families[7].status",
+      "message": "Confirm family requirements before release."
+    },
+    {
+      "code": "required_exemplar",
+      "path": "$.direction.exemplars[1].status",
+      "message": "This required sample has not been approved."
+    },
+    {
+      "code": "required_exemplar",
+      "path": "$.direction.exemplars[2].status",
+      "message": "This required sample has not been approved."
+    },
+    {
+      "code": "required_exemplar",
+      "path": "$.direction.exemplars[3].status",
+      "message": "This required sample has not been approved."
+    },
+    {
+      "code": "required_exemplar",
+      "path": "$.direction.exemplars[4].status",
+      "message": "This required sample has not been approved."
+    },
+    {
+      "code": "required_exemplar",
+      "path": "$.direction.exemplars[5].status",
+      "message": "This required sample has not been approved."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.delivery[0].status",
+      "message": "Confirm delivery channels and requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[1].technical.source_tool",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[1].technical.real_outputs",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[1].technical.time_and_cost_budget",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[1].technical.display_size",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.delivery[1].status",
+      "message": "Confirm delivery channels and requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[2].technical.medium",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[2].technical.platform",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[2].technical.screen",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[2].technical.camera",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[2].technical.performance_budget",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[2].technical.export_spec",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.delivery[2].status",
+      "message": "Confirm delivery channels and requirements before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[3].technical.channel_specs",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[3].technical.activity_sheet",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[3].technical.font_and_rights",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "unknown_technical",
+      "path": "$.direction.delivery[3].technical.exports",
+      "message": "A declared technical parameter is unknown (null); resolve it before release."
+    },
+    {
+      "code": "release_requirement",
+      "path": "$.direction.delivery[3].status",
+      "message": "Confirm delivery channels and requirements before release."
+    },
+    {
+      "code": "unreleased_pack",
+      "path": "$",
+      "message": "This pack has not been built with --release. Treat all delivery as draft exploration."
+    }
+  ],
+  "review": [
+    {
+      "rule_id": "G-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "G-02",
+      "strength": "should",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "G-03",
+      "strength": "should",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "G-04",
+      "strength": "should",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "G-05",
+      "strength": "should",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "G-06",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "G-07",
+      "strength": "must",
+      "verification": "technical",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "UI-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "BTN-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "TYPE-01",
+      "strength": "must",
+      "verification": "technical",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    }
+  ],
+  "workflow": [
+    "Read applicable confirmed rules and approved references; mark candidate/proposed inputs explicitly.",
+    "Inspect image contents before claiming visual understanding; unavailable observations remain unknown.",
+    "Bind identity for a reused entity; keep role-specific references separate and exclude counterexamples from positive references.",
+    "Use only available production tools; if unavailable, hand off this brief without claiming asset generation.",
+    "Record tool/model/settings/seed when available and preserve originals outside the immutable pack.",
+    "Review style, identity, context, readability and technical constraints using pass/fail/unknown with evidence.",
+    "Return version/fingerprint, task, source references, assets, review and unresolved items; structural validation is not artistic approval."
+  ]
+}

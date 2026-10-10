@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "mira-public-demo",
+    "name": "米拉 Mira · 公开成员工作流示范",
+    "domain": "game-art",
+    "owner": "虚构公开演示；没有真实负责人批准"
+  },
+  "version": "0.2.0",
+  "status": "draft",
+  "scope": {
+    "medium": "2d",
+    "view": "原角色候选参考与独立全身变化",
+    "target_platform": "用于公开工作流演示；正式显示和投放规格待确认",
+    "asset_types": [
+      "character"
+    ]
+  },
+  "intent": {
+    "summary": "成员只提出服装与姿态变化，Agent 绑定现有候选身份、共用风格和当前版本，生成可交接的制作任务。通过明确的可变槽位保留创意空间，所有艺术结果仍需实际观察。",
+    "pillars": [
+      "风格与候选身份随任务读取",
+      "默认衣装不当作永久身份",
+      "主美管理底线、预算与版本",
+      "输出状态有真实证据才升级"
+    ],
+    "avoid": [
+      "让成员重复手写整套风格",
+      "由换装任务静默改脸或改发型",
+      "把未知质检写成通过",
+      "把任务书当作完成的正式资产"
+    ]
+  },
+  "tokens": {
+    "colors": {
+      "coral": "#F47C6A",
+      "mint": "#80CDA8",
+      "yellow": "#FFD66B",
+      "blue": "#7BAFE8",
+      "ink": "#25303E",
+      "paper": "#FFF4DB"
+    },
+    "fonts": {}
+  },
+  "rules": [
+    {
+      "id": "STYLE-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "候选风格采用轻量美式漫画：清晰的深蓝灰轮廓、扁平色块、友好日光和简化形体。",
+      "rationale": "不同成员共享可观察的风格依据。",
+      "allowed_variation": [
+        "动作可有幽默夸张，保持主体可读。"
+      ],
+      "evidence": [
+        "MIRA-STYLE",
+        "MIRA-DIRECTION"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "PALETTE-01",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "以暖奶油、深蓝灰和珊瑚/薄荷/黄/蓝形成候选色系；衣装变化仍需与同一色系协调。",
+      "rationale": "服装有空间，系列仍有共同色彩判断。",
+      "allowed_variation": [
+        "可提新色方案，记录理由并提交审阅。"
+      ],
+      "evidence": [
+        "MIRA-DIRECTION"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "LINE-SHADE",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "轮廓连续清楚，内部细节节制；明暗以基色加一级块状阴影表达。",
+      "rationale": "降低逐张切换画法造成的差异。",
+      "allowed_variation": [
+        "线宽按实际显示尺度成套调整。"
+      ],
+      "evidence": [
+        "MIRA-STYLE",
+        "MIRA-DIRECTION"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "IDENTITY-FACE",
+      "scope": [
+        "character"
+      ],
+      "strength": "must",
+      "statement": "换装或换姿势仍参照左上 Mira 候选角色及其头像：暖肤色、简化深色大眼、圆润面部及其相对比例；不得把任务解释为重新设计长相。小图不足以保证精细面部一致。",
+      "rationale": "区分同一角色的新任务与重新设计角色。",
+      "allowed_variation": [
+        "可在本次表情槽位范围变化；需要实际并排检查。"
+      ],
+      "evidence": [
+        "MIRA-IDENTITY"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "IDENTITY-HAIR",
+      "scope": [
+        "character"
+      ],
+      "strength": "must",
+      "statement": "保留候选参考中的深蓝短波波头、侧分及微卷的主要轮廓；雨衣或姿势不授权改变发色、发际或头发长度。",
+      "rationale": "头发是此候选角色的识别线索。",
+      "allowed_variation": [
+        "随动作有轻微发丝移动，关键轮廓仍应可识别。"
+      ],
+      "evidence": [
+        "MIRA-IDENTITY"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "OUTFIT-SLOT",
+      "scope": [
+        "character"
+      ],
+      "strength": "must",
+      "statement": "珊瑚短夹克、奶油围巾与薄荷挎包为默认衣装；任务明确改 outfit 时允许替换它们，未指定 outfit 时继承默认值。",
+      "rationale": "使换装有创意空间，同时避免姿势任务顺带重设计衣装。",
+      "allowed_variation": [
+        "雨衣剪裁、配件与配色可作为候选探索。"
+      ],
+      "evidence": [
+        "MIRA-DIRECTION"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "REVIEW-IDENTITY",
+      "scope": [
+        "character"
+      ],
+      "strength": "must",
+      "statement": "生成后逐张比较参考与新图的面部、头发、年龄观感、风格和任务变更；未看图、细节不足或意见不一致均保留 unknown。",
+      "rationale": "结构化身份规则不能自动证明图像没有变脸。",
+      "allowed_variation": [],
+      "evidence": [
+        "MIRA-DIRECTION"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    },
+    {
+      "id": "DELIVERY-SOURCE",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "任务书、实际生成原图、修改后的可编辑源、导出文件和检查证据分别留存，携带项目版本与指纹；当前演示没有新生成图像或 PSD。",
+      "rationale": "后续成员可追溯依据，避免把概念图冒充生产文件。",
+      "allowed_variation": [],
+      "evidence": [
+        "MIRA-DIRECTION"
+      ],
+      "verification": "technical",
+      "status": "proposed"
+    },
+    {
+      "id": "CREATIVE-ADOPTION",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "探索只在开放槽位内进行；优秀候选需记录收益、返工成本和排期影响，由真实负责人决定是否提升项目规范版本。",
+      "rationale": "底线保留，创意发现可以改变后续基线。",
+      "allowed_variation": [],
+      "evidence": [
+        "MIRA-DIRECTION"
+      ],
+      "verification": "human",
+      "status": "proposed"
+    }
+  ],
+  "references": [
+    {
+      "id": "MIRA-STYLE",
+      "path": "references/style-board.png",
+      "role": "style",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "原创综合候选风格板；不是正式资产库或审批证据。",
+      "status": "candidate",
+      "provenance": {
+        "type": "generated_candidate_copy",
+        "source": "原创 Pop Borough 候选综合板的逐字节拷贝",
+        "source_sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+        "approval": "none"
+      }
+    },
+    {
+      "id": "MIRA-IDENTITY",
+      "path": "references/identity-candidate-board.png",
+      "role": "identity",
+      "applies_to": [
+        "character"
+      ],
+      "notes": "仅指向图中左上角送货员 Mira 及其旁边头像。候选身份引用；未裁切、未编辑，缺精细脸部和转面，不能宣称已锁定身份。",
+      "status": "candidate",
+      "provenance": {
+        "type": "candidate_region_reference",
+        "source": "同一原创图中的可见候选角色",
+        "source_sha256": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+        "region_description": "左上角角色与相邻头像，仅作候选对象定位",
+        "approval": "none"
+      }
+    },
+    {
+      "id": "MIRA-DIRECTION",
+      "path": "references/art-direction.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "公开演示的原创文本方向，区分身份、默认衣装和探索槽位。此文件须由 Agent 阅读，不能作为图像模型图片附件。",
+      "status": "candidate",
+      "provenance": {
+        "type": "authored_demo",
+        "source": "原创工作流示范文本",
+        "approval": "none"
+      }
+    }
+  ],
+  "profiles": {
+    "character": {
+      "brief": "在同一候选角色下制作换装或姿态提案，再实际检查身份与风格。",
+      "fixed": [
+        "同一候选人物的脸部与头发识别线索",
+        "轻量美式漫画轮廓、色系与块状阴影"
+      ],
+      "variable": [
+        "outfit",
+        "pose",
+        "expression",
+        "composition"
+      ],
+      "technical": {
+        "status": "proposed_not_validated",
+        "candidate_canvas_px": [
+          1024,
+          1024
+        ],
+        "final_canvas_px": null,
+        "background": "transparent for the requested standalone asset; verify actual alpha after generation",
+        "editable_source": "实际 PS 或其他制作源待交付",
+        "identity_reference_status": "candidate composite region only; no approved detailed turnaround",
+        "required_checks": [
+          "参考与新图并排看脸和头发",
+          "服装与姿态是否符合任务",
+          "实际目标尺寸、透明边缘、锚点",
+          "可编辑源和导出一致性",
+          "实际组合环境"
+        ]
+      },
+      "task_controls": {
+        "slots": {
+          "outfit": {
+            "default": "珊瑚短夹克、奶油围巾、薄荷挎包；默认衣装可由本次任务替换",
+            "guidance": "可改服装剪裁、颜色与配件；不可据此改变脸、头发和年龄观感。"
+          },
+          "pose": {
+            "default": "自然站姿，手臂清楚可读",
+            "guidance": "改变姿势时检查肢体、手部和遮挡，保留候选身份。"
+          },
+          "expression": {
+            "default": "友好轻微微笑",
+            "guidance": "保持面部比例与人物年龄观感，仅调整允许的表情。"
+          },
+          "composition": {
+            "default": "独立单角色全身，四周留出裁切安全区",
+            "guidance": "构图可探索，但不要添加未要求的文字或把背景烘焙成正式透明资产。"
+          }
+        },
+        "exploration": {
+          "allowed_slots": [
+            "outfit",
+            "pose",
+            "expression",
+            "composition"
+          ],
+          "max_candidates": 3
+        }
+      }
+    }
+  },
+  "entities": [
+    {
+      "id": "mira",
+      "kind": "character",
+      "identity_rules": [
+        "IDENTITY-FACE",
+        "IDENTITY-HAIR"
+      ],
+      "reference_ids": [
+        "MIRA-IDENTITY"
+      ],
+      "fixed_features": [
+        "暖肤色与参考脸部相对比例（精细细节未验证）",
+        "深蓝短侧分微卷波波头",
+        "候选人物的年龄观感"
+      ],
+      "variations": [
+        "outfit",
+        "pose",
+        "expression",
+        "composition"
+      ],
+      "aliases": [
+        "女主",
+        "米拉"
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "id": "reference-guided-candidate",
+      "tool": "目标环境中实际可用且已授权的图像编辑工具",
+      "model": "unknown",
+      "capabilities": [
+        "reference-image",
+        "edit"
+      ],
+      "instructions": "先查看候选图并阅读文本方向；同一图片按 SHA 去重后发送一次，说明风格与候选身份双重用途。只加任务变化，保留身份底线，实际生成后保存回执并逐张检查。无图像工具时仅交接任务书。",
+      "reference_ids": [
+        "MIRA-STYLE",
+        "MIRA-IDENTITY",
+        "MIRA-DIRECTION"
+      ],
+      "limitations": [
+        "没有已批准的精细身份母版",
+        "任务书不会自行调用图像工具或 PS",
+        "哈希与规则绑定不能证明画面风格和身份正确"
+      ],
+      "status": "untested"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "PUBLIC-DEMO",
+      "decision": "以原创 Mira 示范换装与姿势的低门槛成员入口，保留独立候选版本和未完成检查。",
+      "rationale": "公开展示团队流程，不使用客户的角色或源图。",
+      "status": "proposed",
+      "source": "受托编写的原创公开工作流案例"
+    }
+  ],
+  "open_questions": [
+    "尚无真实负责人确认的精细角色设定图与批准记录",
+    "需要真实图像模型生成并检查身份、风格和候选差异",
+    "需要确认正式画布、显示尺寸、锚点与 PS 等可编辑交付要求",
+    "需要用真实团队实验评估身份错误、首次通过率和返工轮次"
+  ],
+  "approval": null
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "task_id": "campaign-banner-001",
+  "request": "用本次活动规范做横幅，商品包装不变，给3个构图提案；正式促销文案和价格没给，先留待补。",
+  "category": "layout",
+  "subject": null,
+  "mode": "exploration",
+  "changes": {
+    "composition": "商品与促销信息分区，探索留白和装饰关系"
+  },
+  "exploration": {
+    "slots": [
+      "composition"
+    ],
+    "candidates": 3
+  },
+  "owner": {
+    "id": "demo-layout-designer",
+    "kind": "internal"
+  },
+  "components": [
+    {
+      "category": "product",
+      "subject": "主商品"
+    },
+    {
+      "category": "graphic",
+      "subject": null
+    },
+    {
+      "category": "typography",
+      "subject": null
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "label": "version-init",
+  "command": [
+    "python",
+    "art-director/scripts/project_runtime.py",
+    "init",
+    "--pack",
+    "dist/mira-public-0.2.0-draft",
+    "--out",
+    "evals/public-demo/version-workspace",
+    "--allow-draft"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "command": "init",
+    "workspace": "<PROJECT_ROOT>\\evals\\public-demo\\version-workspace",
+    "current": {
+      "version": "0.2.0",
+      "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+      "path": "releases/0.2.0",
+      "release": false
+    },
+    "candidate_workspace": true,
+    "production_approved": false
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:35.904010+00:00"
+}

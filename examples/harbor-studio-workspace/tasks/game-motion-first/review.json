@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0",
+  "task_id": "game-motion-first",
+  "baseline": {
+    "version": "0.5.0",
+    "fingerprint": "6c0e0e9ae893db942198b590fdee9911e92133d7c50c5d92cb7237a9cb2f2d75",
+    "path": "releases/0.5.0",
+    "release": false
+  },
+  "production_approved": false,
+  "checks": [
+    {
+      "criterion": "instruction_conflicts",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "identity",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "style",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "task",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "technical",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "integration",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "director_acceptance",
+      "result": "unknown",
+      "evidence": null
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "STYLE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "PALETTE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "LINE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "SHADE-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "READ-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "REF-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "MOTION-01",
+      "strength": "must",
+      "verification": "visual",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "MOTION-02",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "DELIVERY-01",
+      "strength": "must",
+      "verification": "technical",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    },
+    {
+      "rule_id": "REVIEW-01",
+      "strength": "must",
+      "verification": "human",
+      "result": "unknown",
+      "evidence": "",
+      "correction": ""
+    }
+  ],
+  "direction_checks": [
+    {
+      "criterion": "family/feedback-effects/fixed/1",
+      "statement": "预备、命中、收束",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/feedback-effects/fixed/2",
+      "statement": "结果清楚",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/feedback-effects/fixed/3",
+      "statement": "不新增棋子五官",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "family/feedback-effects/technical",
+      "statement": "按家族技术约束核对：{\"engine_format\": null, \"duration_ms\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/MOTION-01",
+      "statement": "每套动效明确anticipation预备、burst爆点、settle收束三个阶段，以弹性小爆点和短暂反馈服务操作结果。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/MOTION-02",
+      "statement": "动效避免遮挡棋盘；单棋消除的候选峰值包围盒不超过棋格1.25倍，并以叠加回放检查邻格与结果可见性；该数值不代表实测性能或通过验收。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "rule/MOTION-03",
+      "statement": "动作只改变位置、缩放、旋转与允许的短暂变形；不得给无五官的静态棋子新增眼睛或嘴，也不得重设计种类轮廓。",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/direction-board/acceptance/1",
+      "statement": "说明借鉴部分和不继承的细节",
+      "source_status": "candidate",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/direction-board/acceptance/2",
+      "statement": "所有判断仍为候选",
+      "source_status": "candidate",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/item-chain/acceptance/1",
+      "statement": "升级和激活保留结构",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/item-chain/acceptance/2",
+      "statement": "相邻物件可辨",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "exemplar/item-chain/acceptance/3",
+      "statement": "效果不遮挡关键反馈",
+      "source_status": "planned",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-runtime/requirement/1",
+      "statement": "交付可编辑源、单件导出、组合预览与检查记录",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-runtime/requirement/2",
+      "statement": "首件被接收后再按同一版本扩批",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-runtime/requirement/3",
+      "statement": "外包与内制使用同一资产编号和验收标准",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "criterion": "delivery/game-runtime/technical",
+      "statement": "按渠道技术约束核对：{\"final_dimensions\": null, \"color_export_profile\": null}",
+      "source_status": "proposed",
+      "result": "unknown",
+      "evidence": null
+    }
+  ],
+  "stages": [
+    {
+      "id": "concept",
+      "label": "创意候选与主美选择",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "single_asset",
+      "label": "按冻结参考单独生成资产",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "photoshop",
+      "label": "PS 调整尺寸、透明边缘与可编辑源文件",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "integration",
+      "label": "实际投放版面、界面或游戏场景中的集成检查",
+      "result": "unknown",
+      "evidence": null
+    },
+    {
+      "id": "delivery",
+      "label": "最终导出、来源与交付复核",
+      "result": "unknown",
+      "evidence": null
+    }
+  ]
+}

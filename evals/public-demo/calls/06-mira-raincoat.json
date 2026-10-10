@@ -1,0 +1,40 @@
+{
+  "label": "mira-raincoat",
+  "command": [
+    "python",
+    "examples/mira-public-workspace/tools/project_runtime.py",
+    "start",
+    "examples/mira-public-workspace",
+    "--request",
+    "examples/mira-public-draft/requests/raincoat-three.json"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "command": "start",
+    "task_id": "mira-raincoat-001",
+    "task_dir": "<PROJECT_ROOT>\\examples\\mira-public-workspace\\tasks\\mira-raincoat-001",
+    "work_dir": "<PROJECT_ROOT>\\examples\\mira-public-workspace\\work\\mira-raincoat-001",
+    "baseline": {
+      "version": "0.2.0",
+      "fingerprint": "d7f74d3a2f5e76d7c380d4dc4b80a8f200f7e6655ff2e2c1985ade45d35a6624",
+      "path": "releases/0.2.0",
+      "release": false
+    },
+    "status": "prepared_for_exploration",
+    "ready": false,
+    "production_approved": false,
+    "blockers": [],
+    "attention": [
+      "尚无真实负责人确认的精细角色设定图与批准记录",
+      "需要真实图像模型生成并检查身份、风格和候选差异",
+      "需要确认正式画布、显示尺寸、锚点与 PS 等可编辑交付要求",
+      "需要用真实团队实验评估身份错误、首次通过率和返工轮次"
+    ],
+    "generation_brief": "<PROJECT_ROOT>\\examples\\mira-public-workspace\\tasks\\mira-raincoat-001\\generation-brief.md",
+    "handoff": "<PROJECT_ROOT>\\examples\\mira-public-workspace\\tasks\\mira-raincoat-001\\handoff.md"
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:30.917012+00:00"
+}

@@ -1,0 +1,913 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-10T00:44:14.837Z",
+  "command": "node evals/director-workflow-v0.5/demo-check.cjs",
+  "script": {
+    "path": "evals/director-workflow-v0.5/demo-check.cjs",
+    "sha256": "4fb01db6ccca39df3fc374e1d287176633fe8c46d48102e3d57c2f43a1ad611f"
+  },
+  "checked_files": [
+    {
+      "path": "docs/workbench.html",
+      "sha256": "2e86e27476da9d494e6851b9a9d475bcb0662f712267cc895de4f9a45ffa96df",
+      "bytes": 81569
+    },
+    {
+      "path": "docs/call-flow.html",
+      "sha256": "0c9f2b3b26cd106a1f4bd1bd5b109412e2a82ebc98febc0bf0aa9ea4cfd81b85",
+      "bytes": 71260
+    },
+    {
+      "path": "docs/member-workbench.html",
+      "sha256": "41749c75041361d1dc490ecf099775d6c5f99587fecbdba24109562fd7f14e6f",
+      "bytes": 75034
+    },
+    {
+      "path": "docs/team-production.html",
+      "sha256": "9dedada2f14b2fbd0439c1ff5cb80d4d2fb89bcb2e80ee984726333906e5b07a",
+      "bytes": 52802
+    }
+  ],
+  "result": {
+    "passed": 89,
+    "failed": 0,
+    "total": 89,
+    "paths": 100,
+    "missing": 0
+  },
+  "checks": [
+    {
+      "name": "restricted vocabulary supplied without embedding it in public files",
+      "pass": true
+    },
+    {
+      "name": "docs/workbench.html: JavaScript parses",
+      "pass": true
+    },
+    {
+      "name": "docs/workbench.html: static IDs unique",
+      "pass": true
+    },
+    {
+      "name": "docs/workbench.html: no restricted text in visible or hidden data",
+      "pass": true
+    },
+    {
+      "name": "docs/workbench.html: no external script, style, or image dependency",
+      "pass": true
+    },
+    {
+      "name": "docs/call-flow.html: JavaScript parses",
+      "pass": true
+    },
+    {
+      "name": "docs/call-flow.html: static IDs unique",
+      "pass": true
+    },
+    {
+      "name": "docs/call-flow.html: no restricted text in visible or hidden data",
+      "pass": true
+    },
+    {
+      "name": "docs/call-flow.html: no external script, style, or image dependency",
+      "pass": true
+    },
+    {
+      "name": "docs/member-workbench.html: JavaScript parses",
+      "pass": true
+    },
+    {
+      "name": "docs/member-workbench.html: static IDs unique",
+      "pass": true
+    },
+    {
+      "name": "docs/member-workbench.html: no restricted text in visible or hidden data",
+      "pass": true
+    },
+    {
+      "name": "docs/member-workbench.html: no external script, style, or image dependency",
+      "pass": true
+    },
+    {
+      "name": "docs/team-production.html: JavaScript parses",
+      "pass": true
+    },
+    {
+      "name": "docs/team-production.html: static IDs unique",
+      "pass": true
+    },
+    {
+      "name": "docs/team-production.html: no restricted text in visible or hidden data",
+      "pass": true
+    },
+    {
+      "name": "docs/team-production.html: no external script, style, or image dependency",
+      "pass": true
+    },
+    {
+      "name": "director intake is default; single-task example is secondary",
+      "pass": true
+    },
+    {
+      "name": "six complete lifecycle stages are represented",
+      "pass": true
+    },
+    {
+      "name": "first screen includes concrete positioning and gaps",
+      "pass": true
+    },
+    {
+      "name": "initial HTML does not masquerade as a live production app",
+      "pass": true
+    },
+    {
+      "name": "all six retained candidate boards render",
+      "pass": true
+    },
+    {
+      "name": "gallery keeps independent project boundaries",
+      "pass": true
+    },
+    {
+      "name": "empty director decision is not fabricated",
+      "pass": true
+    },
+    {
+      "name": "director can form a specific local decision draft",
+      "pass": true
+    },
+    {
+      "name": "director draft text is escaped",
+      "pass": true
+    },
+    {
+      "name": "sample roles are not treated as a universal fixed count",
+      "pass": true
+    },
+    {
+      "name": "all selected review topics still do not grant approval",
+      "pass": true
+    },
+    {
+      "name": "self-contained five guides and three scripts are described",
+      "pass": true
+    },
+    {
+      "name": "receiving a package requires init before workspace start",
+      "pass": true
+    },
+    {
+      "name": "package remains a clearly marked draft",
+      "pass": true
+    },
+    {
+      "name": "member entry reaches production without repeating full setup",
+      "pass": true
+    },
+    {
+      "name": "empty member task is rejected",
+      "pass": true
+    },
+    {
+      "name": "exploration preview is available",
+      "pass": true
+    },
+    {
+      "name": "task preview escapes user text",
+      "pass": true
+    },
+    {
+      "name": "preview freezes project version and family identifier",
+      "pass": true
+    },
+    {
+      "name": "draft production preview is blocked",
+      "pass": true
+    },
+    {
+      "name": "changing family clears previous task preview",
+      "pass": true
+    },
+    {
+      "name": "mode change preserves member task text",
+      "pass": true
+    },
+    {
+      "name": "UI state and engineering requirements are visible",
+      "pass": true
+    },
+    {
+      "name": "project switch keeps role but clears decisions and previews",
+      "pass": true
+    },
+    {
+      "name": "campaign can select independent UI family",
+      "pass": true
+    },
+    {
+      "name": "campaign does not invent product imagery or facts",
+      "pass": true
+    },
+    {
+      "name": "unknown project selection cannot mutate state",
+      "pass": true
+    },
+    {
+      "name": "incomplete creative adoption remains undecided",
+      "pass": true
+    },
+    {
+      "name": "complete choices form a proposal, not approval",
+      "pass": true
+    },
+    {
+      "name": "quality issue selection updates remediation",
+      "pass": true
+    },
+    {
+      "name": "unknown checks and actual team metrics remain unresolved",
+      "pass": true
+    },
+    {
+      "name": "keyboard End navigates to last lifecycle stage",
+      "pass": true
+    },
+    {
+      "name": "keyboard Home returns to intake",
+      "pass": true
+    },
+    {
+      "name": "keyboard tab navigation wraps",
+      "pass": true
+    },
+    {
+      "name": "reset restores director-first state without persistent storage",
+      "pass": true
+    },
+    {
+      "name": "reduced motion and narrow viewport rules exist",
+      "pass": true
+    },
+    {
+      "name": "game: displayed family identifiers match actual project",
+      "pass": true
+    },
+    {
+      "name": "game: displayed sample responsibilities match actual project",
+      "pass": true
+    },
+    {
+      "name": "game: stage 1 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "game: stage 2 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "game: stage 3 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "game: stage 4 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "game: stage 5 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "game: stage 6 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "campaign: displayed family identifiers match actual project",
+      "pass": true
+    },
+    {
+      "name": "campaign: displayed sample responsibilities match actual project",
+      "pass": true
+    },
+    {
+      "name": "campaign: stage 1 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "campaign: stage 2 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "campaign: stage 3 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "campaign: stage 4 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "campaign: stage 5 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "campaign: stage 6 renders substantial content",
+      "pass": true
+    },
+    {
+      "name": "full paths follow relocated offline package",
+      "pass": true
+    },
+    {
+      "name": "call map starts with professional director intake",
+      "pass": true
+    },
+    {
+      "name": "call map lead describes director system building, not outfit play",
+      "pass": true
+    },
+    {
+      "name": "all call map transitions resolve",
+      "pass": true
+    },
+    {
+      "name": "call map preserves director/member/team/campaign paths",
+      "pass": true
+    },
+    {
+      "name": "call map director covers family and sample gates",
+      "pass": true
+    },
+    {
+      "name": "call map uses family CLI and portable init semantics",
+      "pass": true
+    },
+    {
+      "name": "call map production expands beyond outfit tasks",
+      "pass": true
+    },
+    {
+      "name": "path inspector opens actual artifacts",
+      "pass": true
+    },
+    {
+      "name": "retained member page identifies itself as a secondary example",
+      "pass": true
+    },
+    {
+      "name": "retained single-task page still initializes its public example",
+      "pass": true
+    },
+    {
+      "name": "retained single-task page can still switch to campaign",
+      "pass": true
+    },
+    {
+      "name": "original team animation keeps seven lines and fifty planned assets",
+      "pass": true
+    },
+    {
+      "name": "team animation still reports zero actual art deliveries",
+      "pass": true
+    },
+    {
+      "name": "six gallery files preserve verified original bytes and dimensions",
+      "pass": true
+    },
+    {
+      "name": "all rendered content remains free of restricted tokens",
+      "pass": true
+    },
+    {
+      "name": "all linked artifacts stay inside public source roots",
+      "pass": true
+    },
+    {
+      "name": "all linked artifacts actually exist",
+      "pass": true
+    },
+    {
+      "name": "linked path names have no restricted case tokens",
+      "pass": true
+    },
+    {
+      "name": "linked text files have no restricted case tokens",
+      "pass": true
+    }
+  ],
+  "public_paths": [
+    {
+      "path": "SKILL.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/README.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/asset-family.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/asset-system-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/comic-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/manifest.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/painterly-card-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/pseudo-3d-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/assets/public-gallery/traditional-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/call-flow.html",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/director-workflow-v0.5.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/member-workbench.html",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/requirements-coverage.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/team-production-storyboard.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/team-production.html",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "docs/workbench.html",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/director-workflow-v0.5/execution-summary.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/README.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/summary.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/version-workspace/project.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/version-workspace/tasks/after-update/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/version-workspace/tasks/before-update/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/public-demo/version-workspace/tasks/draft-edit-only/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/current-version-check.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/execution-summary.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/motion-pop-brief.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/plan-check.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/stale-version-check.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "evals/team-production/tile-star-brief.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-kit-draft/requests/summer-banner.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-kit-draft/style-pack.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-public-workspace/PROJECT.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-public-workspace/tasks/campaign-banner-001/brief.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-draft/guides/00-index.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-draft/guides/01-positioning.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-draft/guides/02-design-system.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-draft/guides/03-delivery-review.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-draft/guides/04-reference-guide.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-draft/style-pack.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-workspace/PROJECT.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-workspace/project.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-workspace/releases/0.5.0/SKILL.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-workspace/releases/0.5.0/STYLE.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-workspace/releases/0.5.0/manifest.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-workspace/releases/0.5.0/scripts/project_runtime.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-workspace/tasks/campaign-layout-first/generation-brief.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-workspace/tasks/campaign-layout-first/handoff.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-workspace/tasks/campaign-layout-first/review.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/campaign-studio-workspace/tasks/campaign-layout-first/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-draft/SKILL.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-draft/STYLE.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-draft/guides/00-index.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-draft/guides/01-positioning.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-draft/guides/02-design-system.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-draft/guides/03-delivery-review.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-draft/guides/04-reference-guide.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-draft/scripts/project_runtime.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-draft/style-pack.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/PROJECT.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/project.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/releases/0.5.0/SKILL.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/releases/0.5.0/STYLE.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/releases/0.5.0/manifest.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/releases/0.5.0/scripts/project_runtime.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/tasks/game-character-first/generation-brief.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/tasks/game-layout-first/handoff.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/tasks/game-motion-first/generation-brief.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/tasks/game-ui-first/generation-brief.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/tasks/game-ui-first/handoff.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/tasks/game-ui-first/review.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/tasks/game-ui-first/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/harbor-studio-workspace/tools/project_runtime.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-draft/references/style-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-draft/style-pack.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/PROJECT.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/project.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/tasks/mira-pose-001/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/tasks/mira-raincoat-001/generation-brief.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/tasks/mira-raincoat-001/handoff.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/tasks/mira-raincoat-001/review.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/mira-public-workspace/tasks/mira-raincoat-001/task.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/moss-harbor-draft/STYLE.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/pop-borough-draft/SKILL.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/pop-borough-draft/production/batch-plan.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/pop-borough-draft/production/roster.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/pop-borough-draft/references/style-board.png",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "examples/pop-borough-draft/style-pack.json",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "references/director-workflow.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "references/member-workflow.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "references/pack-contract.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "references/review.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "references/team-batch-contract.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "references/tool-adapters.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "references/visual-production.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "scripts/project_runtime.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "scripts/style_pack.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "scripts/team_batch.py",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "templates/change-proposal.template.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "templates/creative-proposal.template.md",
+      "allowed": true,
+      "exists": true
+    },
+    {
+      "path": "templates/delivery-record.template.json",
+      "allowed": true,
+      "exists": true
+    }
+  ],
+  "restricted_scan": {
+    "performed": true,
+    "policy_sha256": "cc8e6c4563eb1cbc7b68fee6acb0834fccfd8aeef511edd5813cfd10493804e4",
+    "source": "Ephemeral process environment; vocabulary excluded from this public report."
+  },
+  "method": "Static HTML/JavaScript, actual page functions and selected event handlers in Node VM with minimal DOM mock.",
+  "browser_visual_validation": {
+    "performed": false,
+    "reason": "Prior browser URL policy prevented access. No browser retry or alternate route was used."
+  },
+  "limitations": [
+    "No rendered pixel or responsive visual acceptance.",
+    "No full browser event/accessibility or clipboard permission audit.",
+    "No real artwork generation, design-software operation, approval or team effectiveness claim."
+  ]
+}

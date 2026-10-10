@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "task_id": "game-ui-first",
+  "files": {
+    "brief.json": "4e4088e5e1c110942fbbf178dd22e871887ca3539d20eec7938888f7bd0f2b67",
+    "generation-brief.md": "d85a260948e16518ea0d0aa0f0a6c47458bb39d5daefea11929ca630bec3019c",
+    "handoff.md": "c6dc228521430f300643d63aad5a61ca2e9e5c82ee25ed21b443b57ce41a256d",
+    "request.json": "760d25fb23a263c1192feb6179a1773eff55c20167e48164c14d92d0aeeb05de",
+    "review.json": "139af32e322f3abf4dadbb7d223bd073326ad0f715cadcdea80fa8c99a642670",
+    "task.json": "b336be936369c5aa3c867c1c9f0dbbb4b2c128545c6e4dcfa41e51a7b0722830"
+  },
+  "notice": "Frozen input hashes are unsigned; real outputs and review evidence belong under work/, not in this snapshot."
+}

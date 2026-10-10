@@ -1,0 +1,132 @@
+{
+  "label": "version-render-updated",
+  "command": [
+    "python",
+    "art-director/scripts/style_pack.py",
+    "render",
+    "evals/public-demo/version-source"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": {
+    "ok": true,
+    "command": "render",
+    "pack": "<PROJECT_ROOT>\\evals\\public-demo\\version-source",
+    "generated": [
+      "SKILL.md",
+      "STYLE.md",
+      "agents/openai.yaml",
+      "scripts/style_pack.py"
+    ],
+    "fingerprint": "ebf5faab25f968332e850fc3b4003a4666f2acf426e81b8cd1d8f9226ca2bb95",
+    "warnings": [
+      {
+        "code": "release_requirement",
+        "path": "$.status",
+        "message": "A release requires status='approved'."
+      },
+      {
+        "code": "candidate_reference",
+        "path": "$.references[0]",
+        "message": "Candidate reference: do not present it as approved production guidance."
+      },
+      {
+        "code": "candidate_reference",
+        "path": "$.references[1]",
+        "message": "Candidate reference: do not present it as approved production guidance."
+      },
+      {
+        "code": "candidate_reference",
+        "path": "$.references[2]",
+        "message": "Candidate reference: do not present it as approved production guidance."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved style reference covering 'character'."
+      },
+      {
+        "code": "reference_coverage",
+        "path": "$.references",
+        "message": "A release needs an approved context reference covering 'character'."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[0].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[1].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[2].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[3].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[4].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[5].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[6].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[7].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.rules[8].status",
+        "message": "All release rules must be confirmed."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.entities[0].reference_ids",
+        "message": "Released entities need at least one approved identity reference."
+      },
+      {
+        "code": "untested_recipe",
+        "path": "$.recipes[0]",
+        "message": "Recipe has no verified outcome; label outputs as unverified until evaluated."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.decisions[0].status",
+        "message": "Resolve proposed decisions before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.decisions[1].status",
+        "message": "Resolve proposed decisions before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.open_questions",
+        "message": "Resolve every open question before release."
+      },
+      {
+        "code": "release_requirement",
+        "path": "$.approval",
+        "message": "A release requires a named approval record and an existing evidence file."
+      }
+    ]
+  },
+  "stderr": "",
+  "executed_at": "2026-10-09T15:51:38.613148+00:00"
+}

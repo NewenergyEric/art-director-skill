@@ -3,6 +3,7 @@ name: Validate skill
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -18,25 +19,27 @@ jobs:
         python-version: ["3.10", "3.12"]
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
       - name: Enable image decoding checks
         run: python -m pip install Pillow
       - name: Run deterministic tests
         run: python -m unittest discover -s tests -v
-      - name: Validate the fictional example
-        run: python scripts/style_pack.py validate examples/moss-harbor-draft
+      - name: Validate the director-led examples
+        run: |
+          python scripts/style_pack.py validate examples/harbor-studio-draft
+          python scripts/style_pack.py validate examples/campaign-studio-draft
       - name: Package the mother skill
-        run: python scripts/package_release.py --out "${{ runner.temp }}/art-director-v0.2.0.zip"
+        run: python scripts/package_release.py --out "${{ runner.temp }}/art-director-v0.5.1.zip"
 
   motion:
     name: Remotion compositions
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
         with:
           node-version: 20
           cache: npm

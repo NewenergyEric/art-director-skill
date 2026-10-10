@@ -1,0 +1,29 @@
+{
+  "step": "05-archive",
+  "command": [
+    "python",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\review-pack\\scripts\\style_pack.py",
+    "archive",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\review-pack",
+    "--out",
+    "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\neighbourhood-life-draft-0.1.0.zip"
+  ],
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "met_expectation": true,
+  "result": {
+    "ok": true,
+    "command": "archive",
+    "out": "<PROJECT_ROOT>\\evals\\director-workflow-v0.5\\forward\\neighbourhood-life-draft-0.1.0.zip",
+    "sha256": "35e682ec5c296f8abaedc8e563244b87c1843bcf5193e6eec3af4a8ddacc1430",
+    "files": 16,
+    "pack": {
+      "id": "neighbourhood-life-draft",
+      "version": "0.1.0",
+      "status": "draft",
+      "fingerprint": "9c45f5e9933a57ea407b08c62198f2ae7fd899e1b25f48dead78231e89827d81"
+    },
+    "release": false
+  },
+  "stderr": ""
+}

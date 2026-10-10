@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "executed_at": "2026-10-10T08:36:35+08:00",
+  "command": "python -m unittest discover -s tests -v",
+  "tests_run": 108,
+  "passed": 106,
+  "failures": 0,
+  "errors": 0,
+  "skipped": [
+    {
+      "test": "test_symlink_reference_escape_fails_when_supported",
+      "reason": "The Windows host did not grant symlink creation privileges."
+    },
+    {
+      "test": "test_links_even_inside_batch_directory_are_rejected_when_supported",
+      "reason": "The Windows host did not grant symlink creation privileges."
+    }
+  ],
+  "successful": true,
+  "elapsed_seconds": 178.499,
+  "scope": "Synthetic protocol tests. This does not evaluate artwork, image-model output, Photoshop work, approval, or human-team quality.",
+  "source_sha256": {
+    "scripts/pilot.py": "7f5a5759855913ea239c56df86175eceef93cf4a51c23b70c08ad7f192ca1a72",
+    "scripts/project_runtime.py": "a279ebb932c861f55b30c4c1369bd031ea3c3a5bafde33e020ec2b6c3a05ca2d",
+    "scripts/style_pack.py": "5d4d2fe5eb9c966e72f8b9f94202f2bd1ad4ed2658050add159b80173de49d7e",
+    "scripts/team_batch.py": "f656bf89575567f17266117d227c80333cec2bfa552fb49f87b61439c4a86d52"
+  }
+}

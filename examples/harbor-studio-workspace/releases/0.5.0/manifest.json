@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "format": "team-v1",
+  "pack": {
+    "id": "harbor-studio",
+    "version": "0.5.0",
+    "status": "draft",
+    "fingerprint": "6c0e0e9ae893db942198b590fdee9911e92133d7c50c5d92cb7237a9cb2f2d75"
+  },
+  "release": false,
+  "files": {
+    "SKILL.md": "6a9824de78ac473d3ca3d43baa3d230c631cebf7e7e3c78e261d690004a50dcd",
+    "STYLE.md": "6b74be2199748d72afd5555fe724edeae8c0ca15698531f1a936e278b300fa70",
+    "agents/openai.yaml": "c9722f0eb2259c6911bb7c8f08753314391ec3683ca8acc9ed0c68350bc9c8e3",
+    "guides/00-index.md": "6b47aa9d276aaa7a458f886e21b6f869d8bbdec6c712771f50fb5f3939f935b6",
+    "guides/01-positioning.md": "5a79de664126e99752dffacd0ffba2866e94b530ae65d93dba614d635070285a",
+    "guides/02-design-system.md": "1cdc9c4a048303496afae99bb4c3a2073c2f0f84123b00d773cfa896f7e9f62c",
+    "guides/03-delivery-review.md": "397c1a555d2dea96129ca53b1e89062f8e856fd9cbd13894140cdbe7a20c8202",
+    "guides/04-reference-guide.md": "3a6997cde908a113eec594d423a9a6fdf0ffad64f921e1b2ea1ca3e9d2301b90",
+    "references/director-source-notes.md": "99cc06bf6508f596aa19bb52730f0f55c964cc494c07ba28b78ed864d7811c35",
+    "references/identity-candidate.png": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+    "references/style-board.png": "6e281fc7a35749b83a054683e23668264dd1bfba5892c9b772dfeca6727a3453",
+    "scripts/project_runtime.py": "a279ebb932c861f55b30c4c1369bd031ea3c3a5bafde33e020ec2b6c3a05ca2d",
+    "scripts/style_pack.py": "5d4d2fe5eb9c966e72f8b9f94202f2bd1ad4ed2658050add159b80173de49d7e",
+    "scripts/team_batch.py": "f656bf89575567f17266117d227c80333cec2bfa552fb49f87b61439c4a86d52",
+    "style-pack.json": "8daf70475c99c6145a044eaf8d11f1c811d56147a7b3d6b79509b50da2fe9db2"
+  },
+  "integrity_notice": "Content hashes detect changes; this unsigned manifest does not authenticate origin, approval identity or artistic quality."
+}

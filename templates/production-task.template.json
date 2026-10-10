@@ -2,6 +2,10 @@
   "record_type": "art-production-task",
   "record_version": "1.0",
   "task_id": null,
+  "batch_id": null,
+  "owner": { "id": null, "kind": null },
+  "asset_ids": [],
+  "dependencies": [],
   "project_id": null,
   "pack": {
     "version": null,
@@ -12,6 +16,7 @@
     "original_request": null,
     "source_request_record": null,
     "category": null,
+    "family_id": null,
     "entity_id": null,
     "goal": null,
     "purpose": null,
@@ -86,6 +91,7 @@
   "existing_authorization_evidence": [],
   "notes": [
     "This is an unfilled task template, not an executed prompt or approved asset.",
+    "For team production, bind batch_id, owner (internal/external), task_id and explicit asset_ids. Outsourcing uses the real art category. Dependencies require integration review, not only individual file checks.",
     "source_materials entries should record id, path, sha256, type, source, version, permission evidence and observed limitations.",
     "reference_bindings entries should record reference_id, source_material_id, role, entity_id, evidence_location and status. Do not treat proposed bindings as approved references.",
     "Keep planned reference bindings separate from actual_reference_inputs verified in tool calls.",
