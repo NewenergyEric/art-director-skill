@@ -1,41 +1,54 @@
-# 公开表达与视觉记忆
+# Public presentation and visual memory
 
-本指南只约束 Art Director 自身的 README、介绍与演示片，不替用户项目预设风格。
+This guide governs Art Director’s own README, introduction and film. It does not impose a style on user projects.
 
-## 说清它如何被使用
+## Explain the work
 
-核心主张：**一个团队/项目，一份视觉记忆。** 英文：**One team, one visual memory.**
+The fixed claim is **One team, one visual memory.** Chinese: **一个团队/项目，一份视觉记忆。**
 
-先说具体用途：主美把参考、规范和判断建成可分发的项目 Skill；成员在自己的 Agent 中按项目规则制作、检查和交付。视觉记忆包括视觉语言、组件要求、样板、允许变化、交付要求和评审记录。主美保留方向与发布决定。
+The director turns references, rules and professional decisions into a distributable project Skill. Teammates create, review and deliver from that pack in their own agents. A solo creator can perform both roles. Visual memory includes visual language, component requirements, samples, permitted variation, delivery criteria and review records. Direction and release decisions remain with the director.
 
-公开介绍要让读者立即知道：提供什么、对 Agent 说什么、会拿到什么。用一段真实可执行的开场白解释能力，不堆“基线、指纹、调用路径”等工程术语。技术细节放进按需展开的说明或工程文档。
+Readers should understand what to provide, what to ask their agent and what they receive. Use concrete starting prompts and actual outputs. Put fingerprints, command details and other engineering mechanics in expandable or specialist documentation.
 
-## 一个介绍入口
+## English first, one introduction
 
-README 是完整的上手入口；`docs/landing.html` 承载影片、安装和两类用户的对话示例。使用发生在 Agent 中。不要再把介绍页做成需要学习的模拟业务系统，也不要增加并列的产品介绍、空间展厅、主美控制台。
+`README.md` and `docs/landing.html` are the English defaults. `README.en.md` is a maintained compatibility copy of the default README. `README.zh.md` and `docs/landing.zh.html` preserve the complete Chinese alternatives. Both languages share the same claims, section IDs, visual system and interaction script. Language switches preserve the current section. The root Skill, agent metadata and default human/agent guides use English, while user project documents follow the user’s requested language. Original project fixtures and detailed internal references may retain Chinese; label linked examples accordingly.
 
-旧展示地址保留为到统一介绍相应段落的跳转。新增内容优先加入 README 或专业文档；确有独立用户任务时才增加网页。展示版面只演示真实能力，不暗示按钮连接了实际模型、审批或团队服务。
+The website explains the product and provides the film, installation and starting prompts. Actual work happens in the agent. Legacy showcase and workbench addresses redirect to the corresponding section. Do not recreate competing simulated consoles or imply that a showcase button invokes a live model, approval service or team backend.
 
-## 视觉语法一致，构图随内容变化
+## Shared visual grammar, varied compositions
 
-- 海军蓝 `#001f3f`、青绿 `#007d86`、薄荷 `#92e4da`、雾白 `#f5f9fb` 是公共表达色板。
-- 使用仓库 OFL 许可的 Noto Sans SC 可变子集。大标题允许粗细反差、倾斜、错位和压图，正文以易读为先。改字后重建字体子集，网站和影片使用相同字节。
-- 前中后景、遮挡、透视和对象的连续移动形成深度。运动解释资料到规则、规则到项目包、项目包到任务的关系，不能只让作品悬浮。
-- 同一视觉系统不等于复制版式。收资料可以是图文叠置，建立规范可聚焦一份真实要求，分发可展开关系，评审应清楚显示问题和改变。
-- 网站用静态层次承载阅读，只让用户主动播放影片；保留字幕、文字过程、键盘焦点、移动端布局与 reduced-motion 行为。
+- Public palette: navy `#001f3f`, teal `#007d86`, mint `#92e4da`, mist white `#f5f9fb`.
+- Use the repository’s OFL variable Noto Sans SC subset. Headers can use weight contrast, skew, rotation and image overlap; body copy stays upright and legible. Rebuild the subset after visible copy changes. Website and render font files must match.
+- Use layers, occlusion, perspective and continuous object movement to explain how materials become rules, a pack and a task. Floating artwork alone does not demonstrate a function.
+- Vary composition with the work: overlapping input materials, a focused requirement sheet, a distribution diagram, and a specific review change. Consistency does not mean duplicating every layout.
+- Keep the website static for reading, with a manually played film, captions, transcript, keyboard focus, mobile layouts and reduced-motion behavior.
 
-## 18–25 秒讲完一次协作
+## One complete 24-second workflow
 
-当前源为 `motion/src/DepthShowcase.tsx`，24 秒的同一叙事同时生成中英文 GIF 和 MP4：
+`motion/src/DepthShowcase.tsx` produces matched English and Chinese GIF/MP4 versions:
 
-1. 已有作品、参考、批注交给 Agent。
-2. 形成具体组件要求，用样板让主美校准。
-3. 规范、样板与交付要求打包，分给成员。
-4. 成员说出任务，Agent 沿用规则、参考与版本制作。
-5. 对照要求发现偏差，说明修改依据，共性问题回到主美。
+1. Give existing work, references and notes to the agent.
+2. Define actionable component requirements and calibrate with samples.
+3. Share rules, samples and delivery requirements as a project pack.
+4. A teammate describes a task; the agent uses its rules, references and version.
+5. Review the result, explain revisions and return shared issues to the director.
 
-每段必须有可见的输入、行动或结果。重要文字留出稳定阅读时间；在关系发生变化时使用连续缓动，不用装饰性漂浮代替功能说明。案例始终标明流程示意和候选素材，不冒充真实生产录屏或自动审美批准。
+Each beat shows an input, action or result. Leave stable reading holds and use eased motion when relationships change. Chapter buttons pause on completed scenes rather than halfway through transitions. Keep the full film within the established 18–25 second range. Label the film as an illustrated workflow using original candidate artwork, not an approved production recording.
 
-GIF 用于 GitHub：800 × 450、运动段 20 fps，当前完整故事预算 6 MiB；静止帧可合并，不能靠缩短故事省体积。MP4 使用 1280 × 720、30 fps、H.264 faststart，预算 5 MiB。页面视频 `preload="none"`，用户点击后再加载；离开页面暂停。无音轨时保持画面自解释，并提供文字过程。
+The default page, README preview, film, poster, captions and social preview are English. Chinese equivalents remain available. Reuse verified language editions when only the default language changes; regenerate any asset whose actual copy changes.
 
-发布前检查：中英文含义对齐；只有一套当前影片；旧链接跳转有效；在实际 README 宽度和手机上能读清；复制开场白有效；样板/草案/批准边界仍准确。重建媒体及清单，再执行 `evals/presentation/check.py --probe` 与仓库要求的验证。
+## Related roles belong at the end
+
+Use the same four-role graphic as the companion repositories, with links to Market Intelligence, Reverse Analyst, Production Manager and Art Director. Show opportunity → competitor/system evidence → resource and project assessment → original art direction, with sample, player and effort feedback into earlier decisions. A solo creator wears four hats; a team shares responsibilities. Engineering implements and validates those decisions alongside art and content production.
+
+Keep the role map the final main-content section in the README and introduction. On phones, show the same questions and handoffs as a legible vertical sequence. Link the full diagram and the detailed handoff guide. This is a collaboration map, not a claim that the Skills automatically orchestrate one another.
+
+## Build and check
+
+- GIF: 800 × 450, full 24-second story, 20 FPS during motion, 96-color palette and `gifsicle -O3 --lossy=20`; budget 6 MiB per language.
+- MP4: 1280 × 720, 30 FPS, H.264 faststart; budget 5 MiB per language. Same-origin player sources, `preload="none"`, controls and no autoplay.
+- Use a static reduced-motion fallback for the README. Keep captions and a text workflow beside the player.
+- Use a version query when replacing cached media or fonts. Record file sizes and hashes in the manifest.
+- Run the presentation checker; visually inspect the opening, densest work surface and conclusion in both languages. Check desktop/mobile layout, language switching, copy feedback, chapter stops and the final role map.
+- Keep technical validation separate from visual approval and unmeasured productivity claims.

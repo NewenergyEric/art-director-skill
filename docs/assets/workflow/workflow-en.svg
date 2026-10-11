@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img"><title>Make the right game.</title><desc>Sample tests, player response and actual effort feed back into earlier decisions.</desc><rect width="1600" height="900" fill="#001f3f"/>
+<text x="64" y="59.84" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="18" font-weight="600" fill="#92e4da">THE GAME CREATOR WORKFLOW</text>
+<text x="64" y="163.6" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="70" font-weight="800" fill="#f5f9fb">Make the right game.</text>
+<text x="65" y="220.64" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="28" font-weight="450" fill="#b2cbd7">Four decisions. One shared project.</text>
+<text x="1394" y="63.6" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="20" font-weight="400" fill="#b2cbd7">01 — 04</text>
+<polyline points="85,304 1510,304" fill="none" stroke="#31586b" stroke-width="2"/>
+<circle cx="85" cy="304" r="21" fill="#92e4da" stroke="#92e4da"/>
+<text x="77" y="309.24" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="23" font-weight="750" fill="#001f3f">1</text>
+<polyline points="395,295 406,304 395,313" fill="none" stroke="#92e4da" stroke-width="2"/>
+<text x="64" y="372.96" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="17" font-weight="700" fill="#92e4da">MARKET INTELLIGENCE</text>
+<text x="64" y="435.32" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="39" font-weight="750" fill="#f5f9fb">What is worth</text>
+<text x="64" y="489.32" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="39" font-weight="750" fill="#f5f9fb">making?</text>
+<text x="64" y="551.72" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="19" font-weight="450" fill="#b2cbd7">Audience · genre · IP</text>
+<text x="64" y="583.72" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="19" font-weight="450" fill="#b2cbd7">Region · language · payment</text>
+<polyline points="64,620 389,620" fill="none" stroke="#31586b" stroke-width="1"/>
+<text x="64" y="668.36" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="22" font-weight="700" fill="#92e4da">Opportunity brief</text>
+<text x="64" y="701.96" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="17" font-weight="420" fill="#b2cbd7">Evidence + next test</text>
+<circle cx="465" cy="304" r="21" fill="#92e4da" stroke="#92e4da"/>
+<text x="457" y="309.24" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="23" font-weight="750" fill="#001f3f">2</text>
+<polyline points="775,295 786,304 775,313" fill="none" stroke="#92e4da" stroke-width="2"/>
+<text x="444" y="372.96" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="17" font-weight="700" fill="#92e4da">REVERSE ANALYST</text>
+<text x="444" y="435.32" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="39" font-weight="750" fill="#f5f9fb">What do</text>
+<text x="444" y="489.32" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="39" font-weight="750" fill="#f5f9fb">competitors do?</text>
+<text x="444" y="551.72" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="19" font-weight="450" fill="#b2cbd7">Loops · rules · progression</text>
+<text x="444" y="583.72" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="19" font-weight="450" fill="#b2cbd7">Content · asset families</text>
+<polyline points="444,620 769,620" fill="none" stroke="#31586b" stroke-width="1"/>
+<text x="444" y="668.36" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="22" font-weight="700" fill="#92e4da">System &amp; asset BOM</text>
+<text x="444" y="701.96" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="17" font-weight="420" fill="#b2cbd7">Findings + unknowns</text>
+<circle cx="845" cy="304" r="21" fill="#92e4da" stroke="#92e4da"/>
+<text x="837" y="309.24" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="23" font-weight="750" fill="#001f3f">3</text>
+<polyline points="1155,295 1166,304 1155,313" fill="none" stroke="#92e4da" stroke-width="2"/>
+<text x="824" y="372.96" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="17" font-weight="700" fill="#92e4da">PRODUCTION MANAGER</text>
+<text x="824" y="435.32" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="39" font-weight="750" fill="#f5f9fb">Can we afford it</text>
+<text x="824" y="489.32" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="39" font-weight="750" fill="#f5f9fb">and finish it?</text>
+<text x="824" y="551.72" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="19" font-weight="450" fill="#b2cbd7">Scope · quantities · capacity</text>
+<text x="824" y="583.72" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="19" font-weight="450" fill="#b2cbd7">Cost · dependencies · acceptance</text>
+<polyline points="824,620 1149,620" fill="none" stroke="#31586b" stroke-width="1"/>
+<text x="824" y="668.36" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="22" font-weight="700" fill="#92e4da">Executable work packages</text>
+<text x="824" y="701.96" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="17" font-weight="420" fill="#b2cbd7">Version + owner + acceptance</text>
+<circle cx="1225" cy="304" r="21" fill="#92e4da" stroke="#92e4da"/>
+<text x="1217" y="309.24" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="23" font-weight="750" fill="#001f3f">4</text>
+<text x="1204" y="372.96" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="17" font-weight="700" fill="#92e4da">ART DIRECTOR</text>
+<text x="1204" y="435.32" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="39" font-weight="750" fill="#f5f9fb">What makes it</text>
+<text x="1204" y="489.32" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="39" font-weight="750" fill="#f5f9fb">visually ours?</text>
+<text x="1204" y="551.72" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="19" font-weight="450" fill="#b2cbd7">Visual direction · core assets</text>
+<text x="1204" y="583.72" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="19" font-weight="450" fill="#b2cbd7">Original samples · shared rules</text>
+<polyline points="1204,620 1529,620" fill="none" stroke="#31586b" stroke-width="1"/>
+<text x="1204" y="668.36" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="22" font-weight="700" fill="#92e4da">Project visual pack</text>
+<text x="1204" y="701.96" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="17" font-weight="420" fill="#b2cbd7">Standards + reviewed samples</text>
+<polyline points="1490,741 1490,792 91,792" fill="none" stroke="#007d86" stroke-width="2"/>
+<polyline points="102,782 90,792 102,802" fill="none" stroke="#92e4da" stroke-width="2"/>
+<rect x="256" y="767" width="1084" height="40" fill="#001f3f"/>
+<text x="277" y="793.72" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="19" font-weight="500" fill="#92e4da">Sample tests, player response and actual effort feed back into earlier decisions.</text>
+<text x="64" y="867.08" font-family="Noto Sans SC,Segoe UI,sans-serif" font-size="16" font-weight="400" fill="#b2cbd7">SOLO: FOUR HATS.  TEAM: SHARED EVIDENCE.  Engineering implements and validates these choices.</text></svg>
