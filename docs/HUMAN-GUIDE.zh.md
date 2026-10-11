@@ -1,8 +1,8 @@
-[English](HUMAN-GUIDE.md) · 中文
+[English](HUMAN-GUIDE.en.md) · 中文
 
 # 在你的 Agent 里使用 Art Director
 
-Art Director 帮主美逐步建立规范，再把规则、样板与交付要求打包给团队。成员在自己的 Agent 中使用这个包，制作和检查具体设计。
+Art Director 帮主美逐步建立规范，再把规则、样板与交付要求打包给团队。成员在自己的 Agent 中使用这个包，制作和检查具体设计。个人创作者也可以轮流承担两种角色，跨任务保留已经确认的决定。
 
 ## 1. 安装
 
@@ -10,7 +10,7 @@ Art Director 帮主美逐步建立规范，再把规则、样板与交付要求�
 npx skills add https://github.com/NewenergyEric/art-director-skill
 ```
 
-也可以下载[当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=english-first-20261011)，交给 Agent 安装。核心脚本需要 Python 3.10+。生成或编辑设计使用宿主中已有的工具；Skill 不附带图像模型。
+也可以下载[当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=chinese-primary-20261011)，交给 Agent 安装。核心脚本需要 Python 3.10+。生成或编辑设计使用宿主中已有的工具；Skill 不附带图像模型。
 
 ## 2. 主美从现有资料开始
 
@@ -38,4 +38,8 @@ Agent 将任务接到相关类别、组件、参考和项目版本。之后继�
 
 结构、尺寸等技术检查与视觉判断分别记录。没检查的内容不会自动通过。影响整个项目的改变交回主美；新任务读取新版本，进行中的任务保留原版本。
 
-[24 秒演示与开场白](landing.zh.html) · [项目包示例](../examples/harbor-studio-draft/guides/00-index.md) · [Agent 与工程接入](AGENT-GUIDE.zh.md)
+## 5. 接上其他岗位
+
+市场研究判断什么值得做，游戏拆解梳理竞对与资产家族，制作管理评估体量、产能和工作包，美术总监建立原创方向与共享规范。样板、原型反馈和实际工时会反过来修正前面的判断。
+
+[四岗位交接关系](WORKFLOW.md) · [24 秒演示与开场白](landing.html) · [项目包示例](../examples/harbor-studio-draft/guides/00-index.md) · [Agent 与工程接入](AGENT-GUIDE.md)

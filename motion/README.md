@@ -16,4 +16,4 @@ Requires Python 3.10+, Node.js 20+, FFmpeg and gifsicle. These are presentation 
 
 The OFL variable Noto Sans SC font is shared by the site and film. Run `python scripts/prepare_web_font.py SOURCE_TTF` after copy changes. It updates both copies. `--skip-render` re-encodes existing masters; `--social-only` refreshes the social image. Validate with `python evals/presentation/check.py --probe`.
 
-English is the default for the README, introduction player, captions and social preview. `docs/landing.zh.html` preserves the matching Chinese page. Changing the default does not change the verified 24-second films; regenerate `SocialPreview` with `--social-only` when its language or copy changes.
+Chinese is the default for the README, introduction player, captions and social preview. `docs/landing.en.html` preserves the complete English alternative; `docs/landing.zh.html` remains a compatibility copy of the default Chinese page. Changing the default does not change the verified 24-second films; regenerate `SocialPreview` with `--social-only` when its language or copy changes.

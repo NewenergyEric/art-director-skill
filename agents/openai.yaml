@@ -1,4 +1,4 @@
 interface:
-  display_name: "Art Director"
-  short_description: "Build art direction that travels with every project task"
-  default_prompt: "Use $art-director. Read my project materials, help me establish the visual language, component families, representative samples and acceptance requirements, then package the rules for the team and connect them to production and delivery."
+  display_name: "美术总监 · Art Director"
+  short_description: "把主美判断锁成团队与 Agent 都能执行、交接和版本化的视觉项目包"
+  default_prompt: "使用 $art-director，先读取 SKILL.md 和我的项目资料，带我建立定位、视觉语言、组件家族、代表样板和验收要求，封装成团队能直接调用的项目包，并接上制作与交付流程。"

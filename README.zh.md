@@ -1,4 +1,4 @@
-<p align="right"><a href="README.md">English</a> · <strong>中文</strong></p>
+<p align="right"><strong>中文</strong> · <a href="README.en.md">English</a></p>
 
 # Art Director
 
@@ -8,12 +8,12 @@
 
 把散落的参考图、设计规范和主美批注，整理成项目专属的 Skill。主美跟着 Agent 逐步建立规则；成员拿到项目包，在自己的 Agent 里接着做。角色、场景、UI、商品和海报，都从同一套规范出发。个人创作者也可以轮流承担主美与制作角色，让跨时间、跨任务的交付保持一致。
 
-<a href="https://newenergyeric.github.io/art-director-skill/docs/landing.zh.html#film"><picture>
+<a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film"><picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=agent-first-20261010">
   <img src="assets/readme/depth-preview-zh.gif?v=agent-first-20261010" width="100%" alt="24 秒功能演示：整理参考、建立规范与样板、打包给团队、按规则制作、检查偏差并返修。">
 </picture></a>
 
-<p align="center"><sub>24 秒，看一次完整协作 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.zh.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a></sub></p>
+<p align="center"><sub>24 秒，看一次完整协作 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a></sub></p>
 
 ## 装好，然后直接说
 
@@ -82,11 +82,11 @@ npx skills add https://github.com/NewenergyEric/art-director-skill
 <details>
 <summary><strong>安装要求、离线包与技术文档</strong></summary>
 
-核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可下载[当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=english-first-20261011)。成员需要收到主美导出的完整项目包，仅安装通用 Skill 不会自动获得项目资料。
+核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可下载[当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=chinese-primary-20261011)。成员需要收到主美导出的完整项目包，仅安装通用 Skill 不会自动获得项目资料。
 
 设计师用自然语言工作，文件整理和命令由 Agent 处理。
 
-[详细上手说明](docs/HUMAN-GUIDE.zh.md) · [Agent 与工程接入](docs/AGENT-GUIDE.zh.md) · [Skill 入口](SKILL.md) · [项目包契约](references/pack-contract.md)
+[详细上手说明](docs/HUMAN-GUIDE.md) · [Agent 与工程接入](docs/AGENT-GUIDE.md) · [Skill 入口](SKILL.md) · [项目包契约](references/pack-contract.md)
 
 ```sh
 python scripts/style_pack.py validate examples/harbor-studio-draft
@@ -120,6 +120,6 @@ python scripts/style_pack.py build examples/harbor-studio-draft --out NEW_PACK
 
 个人制作者可以轮流承担四个岗位；团队通过同一份资料交接：什么值得做、竞对做了什么、资源和体量如何评估，以及如何创作自己的核心美术。
 
-[岗位如何交接证据、范围与美术资产](docs/WORKFLOW.zh.md) · [Art Director](https://github.com/NewenergyEric/art-director-skill)
+[岗位如何交接证据、范围与美术资产](docs/WORKFLOW.md) · [Art Director](https://github.com/NewenergyEric/art-director-skill)
 
 ![市场研究、竞品拆解、项目评估与核心美术创作；样板与成本反馈推动前序决定修订。](docs/assets/workflow/workflow-zh.png)

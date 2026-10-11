@@ -1,4 +1,4 @@
-<p align="right"><strong>English</strong> · <a href="README.zh.md">中文</a></p>
+<p align="right"><a href="README.md">中文</a> · <strong>English</strong></p>
 
 # Art Director
 
@@ -8,12 +8,12 @@
 
 Turn scattered references, design rules and review notes into a project-specific Skill. The director builds the rules with an agent; teammates load the project pack into their own agents and continue from there. Characters, environments, UI, products and campaigns share the same foundation. Solo creators can wear both hats, keeping decisions consistent across sessions and deliveries.
 
-<a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film"><picture>
+<a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film"><picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=agent-first-20261010">
   <img src="assets/readme/depth-preview-en.gif?v=agent-first-20261010" width="100%" alt="24-second workflow: organize references, define rules and samples, share a project pack, create from those rules, review and revise.">
 </picture></a>
 
-<p align="center"><sub>A complete collaboration in 24 seconds · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">Watch the film</a> · <a href="docs/assets/motion/depth-showcase-en.mp4">Download English MP4</a></sub></p>
+<p align="center"><sub>A complete collaboration in 24 seconds · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film">Watch the film</a> · <a href="docs/assets/motion/depth-showcase-en.mp4">Download English MP4</a></sub></p>
 
 ## Install, then ask
 
@@ -82,11 +82,11 @@ Both are runnable fictional drafts with Chinese project-authored content. The fi
 <details>
 <summary><strong>Requirements, offline package and technical documentation</strong></summary>
 
-Core tools require Python 3.10+ and use the standard library; Pillow is optional for pixel checks. A Skill ZIP is also available as the [current build](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=english-first-20261011). Teammates need the director’s complete project pack; installing the general Skill does not provide project materials.
+Core tools require Python 3.10+ and use the standard library; Pillow is optional for pixel checks. A Skill ZIP is also available as the [current build](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=chinese-primary-20261011). Teammates need the director’s complete project pack; installing the general Skill does not provide project materials.
 
 Designers use natural language. The agent handles files and commands.
 
-[Detailed user guide](docs/HUMAN-GUIDE.md) · [Agent and engineering guide](docs/AGENT-GUIDE.md) · [Skill entrypoint](SKILL.md) · [Project pack contract](references/pack-contract.md)
+[Detailed user guide](docs/HUMAN-GUIDE.en.md) · [Agent and engineering guide](docs/AGENT-GUIDE.en.md) · [Skill reading edition](docs/SKILL.en.md) · [Project pack contract](references/pack-contract.md)
 
 ```sh
 python scripts/style_pack.py validate examples/harbor-studio-draft
@@ -120,6 +120,6 @@ Made by Eric and Agents.
 
 For a solo creator these are four hats; for a team they are connected responsibilities. Explore what is worth making, what competitors do, the resources it requires, and the original art that defines it.
 
-[How the roles exchange evidence, scope and visual assets](docs/WORKFLOW.md) · [Art Director](https://github.com/NewenergyEric/art-director-skill)
+[How the roles exchange evidence, scope and visual assets](docs/WORKFLOW.en.md) · [Art Director](https://github.com/NewenergyEric/art-director-skill)
 
 ![Market intelligence → competitor analysis → production assessment → original art direction; prototype and cost feedback revise earlier decisions.](docs/assets/workflow/workflow-en.png)

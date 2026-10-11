@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Make the use of the Skill clear: establish original art direction, package confirmed rules, and create consistent deliveries in the user’s own agent. English is the default; a complete Chinese introduction uses the same visual system. The fixed claim is **One team, one visual memory.** / **一个团队/项目，一份视觉记忆。**
+Make the use of the Skill clear: establish original art direction, package confirmed rules, and create consistent deliveries in the user’s own agent. Chinese is the default; the complete English alternative uses the same visual system. The fixed claim is **One team, one visual memory.** / **一个团队/项目，一份视觉记忆。**
 
 ## Design foundation
 

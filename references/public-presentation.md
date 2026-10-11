@@ -10,9 +10,9 @@ The director turns references, rules and professional decisions into a distribut
 
 Readers should understand what to provide, what to ask their agent and what they receive. Use concrete starting prompts and actual outputs. Put fingerprints, command details and other engineering mechanics in expandable or specialist documentation.
 
-## English first, one introduction
+## Chinese primary, English secondary, one introduction
 
-`README.md` and `docs/landing.html` are the English defaults. `README.en.md` is a maintained compatibility copy of the default README. `README.zh.md` and `docs/landing.zh.html` preserve the complete Chinese alternatives. Both languages share the same claims, section IDs, visual system and interaction script. Language switches preserve the current section. The root Skill, agent metadata and default human/agent guides use English, while user project documents follow the user’s requested language. Original project fixtures and detailed internal references may retain Chinese; label linked examples accordingly.
+`README.md` and `docs/landing.html` are the Chinese defaults. `README.en.md` and `docs/landing.en.html` preserve the complete English alternatives. `README.zh.md` and `docs/landing.zh.html` are maintained compatibility copies of the Chinese defaults. Both languages share the same claims, section IDs, visual system and interaction script. Language switches preserve the current section. The root Skill, agent metadata and default human/agent/workflow guides use Chinese; the guides have `.en.md` reading editions, and `docs/SKILL.en.md` explains the same Skill in English. User replies and project documents follow the user’s requested language. Original project fixtures retain their evidence; label their language in the English edition.
 
 The website explains the product and provides the film, installation and starting prompts. Actual work happens in the agent. Legacy showcase and workbench addresses redirect to the corresponding section. Do not recreate competing simulated consoles or imply that a showcase button invokes a live model, approval service or team backend.
 
@@ -36,7 +36,7 @@ The website explains the product and provides the film, installation and startin
 
 Each beat shows an input, action or result. Leave stable reading holds and use eased motion when relationships change. Chapter buttons pause on completed scenes rather than halfway through transitions. Keep the full film within the established 18–25 second range. Label the film as an illustrated workflow using original candidate artwork, not an approved production recording.
 
-The default page, README preview, film, poster, captions and social preview are English. Chinese equivalents remain available. Reuse verified language editions when only the default language changes; regenerate any asset whose actual copy changes.
+The default page, README preview, film, poster, captions and social preview are Chinese. English equivalents remain available. Reuse verified language editions when only the default language changes; regenerate any asset whose actual copy changes.
 
 ## Related roles belong at the end
 

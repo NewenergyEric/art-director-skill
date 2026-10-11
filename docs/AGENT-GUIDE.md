@@ -1,41 +1,41 @@
-# Agent guide · art-director
+[English](AGENT-GUIDE.en.md) · 中文
 
-English · [中文](AGENT-GUIDE.zh.md)
+# Agent 使用说明 · art-director
 
-## Entry and reading order
+## 入口与读取顺序
 
-Read the root `SKILL.md`, then select `references/director-workflow.md`, `references/member-workflow.md`, `references/review.md` or `references/pack-contract.md` for the current work. For a specific project, read its `PROJECT.md`, `style-pack.json` and version fingerprint. Some detailed reference methods and fictional project fixtures retain their original Chinese; the default Skill and public guides are English. Respond in the user’s requested language.
+先读根目录 `SKILL.md`，再按工作状态读取 `references/director-workflow.md`、`references/member-workflow.md`、`references/review.md` 或 `references/pack-contract.md`。具体项目先读项目包中的 `PROJECT.md`、`style-pack.json` 和当前版本指纹。
 
-## Director workflow
+## 总监工作流
 
-1. Inspect available materials. Distinguish facts, confirmed decisions, agent proposals and unknowns.
-2. Define positioning, visual language, asset categories, component families, entity identity, fixed requirements, variables and counterexamples.
-3. Select representative samples and first articles that resolve real uncertainty. Preserve approval evidence and acceptance methods.
-4. Generate and check a project pack with `validate`, `render`, `build` and `verify`. Use `--release` for the confirmed production baseline.
-5. Hand over the complete pack. Start versioned tasks in a workspace, then record technical checks, visual judgments and unchecked items.
-6. Separate individual revisions from shared-rule changes. Shared changes need a diff, a new pack and preserved prior versions.
+1. 盘点现有材料，区分事实、已确认决定、Agent 建议和待定项。
+2. 建立定位、全局视觉语言、类别/组件家族、实体身份、固定项、变量和反例。
+3. 选择能消除分歧的代表样板与首件，留下批准依据和验收办法。
+4. 用 `validate`、`render`、`build`、`verify` 生成并检查项目包；发布前用 `--release`。
+5. 把包交给成员，按版本、家族和任务创建工作区；批次结束后记录技术检查、视觉判断和未检查项。
+6. 反馈区分单件修正与共享基线变更；共享变更必须 diff、出新包、保留旧版本。
 
-## Member workflow
+## 成员工作流
 
-Pin the project version, categories, component family, entities and use. Separate identity from this task’s permitted changes. Prepare the brief, reference roles, output specifications and acceptance checks. Deliver source files, exports, in-context compositions and evidence appropriate to the actual stage.
+固定项目版本、类别、家族、实体与用途；分开身份底线和本次变量；准备任务书、参考用途、输出规格和验收；制作后交付源文件、导出、组合结果和证据。
 
-## Failure paths
+## 失败分支
 
-- Incomplete materials: organize what exists and identify consequential gaps; empty templates are not a completed project.
-- Conflicting references: identify their roles and conflicts and present the director with a decision; do not silently blend them.
-- Failed first article: stop scaling the batch, record the cause, revise the input, rule or tool, and check again.
-- Version or fingerprint mismatch: stop the affected task and render/verify again or restore the correct snapshot.
-- No image access: limit conclusions to structure and technical checks; do not claim visual review.
-- Request to bypass approval or overwrite a published pack: preserve the baseline and prepare a change proposal in a new output directory.
+- 如果资料不足 → 先整理实际可用内容，列出影响当前决定的缺口，不输出空模板冒充完成。
+- 如果参考冲突 → 标出用途和冲突，停在总监决定点，不静默混合。
+- 如果首件不通过 → 停止批量扩展，记录原因并修规则/输入/工具后重新验证。
+- 如果版本或指纹不一致 → 停止任务，重新 render/verify 或恢复正确快照。
+- 如果没有图像访问 → 只做结构/技术检查，明确不能给视觉审核结论。
+- 如果有人要求越过批准或覆盖旧包 → 拒绝该动作，生成变更提案和新输出目录。
 
-## Delivery contract
+## 输出契约
 
-State the goal, reused version, outputs, stage, evidence, unchecked items and next action. The pack must carry its own rules, reference provenance, tool requirements and version data; it must not depend on development-machine paths or the original chat.
+每次交付都说明目标、沿用的版本、输出、当前阶段、证据、未检查项和下一步。项目包必须自带规则、参考来源、工具和版本信息，不能依赖开发机绝对路径。
 
-## Keep the evidence honest
+## 不要做
 
-A dress-up demo is only one member task. Image dimensions are not automatically delivery specifications. An `approved` field is not proof of authorization. Never invent prices, copy or brand information. A polished concept is not automatically an engine-ready asset.
+不要把换装 demo 当成 Skill 的核心；不要把图片尺寸猜成正式规格；不要把 `approved` 字段当真人授权；不要在没有真实来源时补价格、文字或品牌信息；不要把漂亮的概念图当成可进引擎资产。
 
-## Related roles
+## 关联岗位
 
-Use [the four-role workflow](WORKFLOW.md) when the user needs market evidence, competitor analysis or production assessment. Hand over the question, evidence/version, decisions, constraints, work scope, owner and acceptance requirements. The map describes responsibilities, not a built-in automatic multi-agent dispatcher.
+市场研究、竞品拆解与制作评估可交接给[四岗位工作流](WORKFLOW.md)中的对应 Skill。交接问题、证据与版本、有效决定、约束、工作范围、责任人和验收要求。这是岗位协作关系，不代表自动调度多个 Agent。
