@@ -186,4 +186,4 @@ export const DepthShowcase: React.FC<{language: Language; preview?: boolean}> = 
   </AbsoluteFill>;
 };
 
-export const DepthSocialPreview: React.FC = () => <AbsoluteFill style={{background: C.navy, color: '#fff', fontFamily: fieldFont, overflow: 'hidden'}}><FieldFonts/><div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 80% 35%, #07505d 0%, transparent 57%)'}}/><div style={{position: 'absolute', left: 56, top: 33, fontSize: 18, letterSpacing: 3}}>ART DIRECTOR <span style={{color: C.mint}}>●</span></div><SharedArtwork frame={680} language="en"/><Closing language="en" social/></AbsoluteFill>;
+export const DepthSocialPreview: React.FC = () => <AbsoluteFill style={{background: C.navy, color: '#fff', fontFamily: fieldFont, overflow: 'hidden'}}><FieldFonts/><div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 80% 35%, #07505d 0%, transparent 57%)'}}/><div style={{position: 'absolute', left: 56, top: 33, fontSize: 18, letterSpacing: 3}}>ART DIRECTOR <span style={{color: C.mint}}>●</span></div><SharedArtwork frame={680} language="zh"/><Closing language="zh" social/></AbsoluteFill>;

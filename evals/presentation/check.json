@@ -1,7 +1,7 @@
 {
   "method": "Shared claim, public links, canonical media budgets and checksums; optional ffprobe.",
-  "passed": 112,
-  "total": 112,
+  "passed": 132,
+  "total": 132,
   "failed": [],
   "checks": [
     {
@@ -57,7 +57,7 @@
       "pass": true
     },
     {
-      "name": "legacy English README stays synchronized with the default",
+      "name": "Chinese README compatibility copy stays synchronized with the default",
       "pass": true
     },
     {
@@ -81,39 +81,39 @@
       "pass": true
     },
     {
-      "name": "en: canonical GIF is valid, 800 px wide, and under 6 MiB",
-      "pass": true
-    },
-    {
-      "name": "en: reduced-motion poster exists and is non-empty",
-      "pass": true
-    },
-    {
-      "name": "README.zh.md: one canonical repository-hosted GIF",
-      "pass": true
-    },
-    {
-      "name": "README.zh.md: one introduction instead of competing web interfaces",
-      "pass": true
-    },
-    {
-      "name": "README.zh.md: uses the shared core claim",
-      "pass": true
-    },
-    {
-      "name": "README.zh.md: contains no legacy public media reference",
-      "pass": true
-    },
-    {
-      "name": "README.zh.md: ends with the shared four-role diagram",
-      "pass": true
-    },
-    {
       "name": "zh: canonical GIF is valid, 800 px wide, and under 6 MiB",
       "pass": true
     },
     {
       "name": "zh: reduced-motion poster exists and is non-empty",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: one canonical repository-hosted GIF",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: one introduction instead of competing web interfaces",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: uses the shared core claim",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: contains no legacy public media reference",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: ends with the shared four-role diagram",
+      "pass": true
+    },
+    {
+      "name": "en: canonical GIF is valid, 800 px wide, and under 6 MiB",
+      "pass": true
+    },
+    {
+      "name": "en: reduced-motion poster exists and is non-empty",
       "pass": true
     },
     {
@@ -153,11 +153,11 @@
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/visual-memory.css?v=english-first-20261011",
+      "name": "landing.html: local link assets/visual-memory.css?v=chinese-primary-20261011",
       "pass": true
     },
     {
-      "name": "landing.html: local link landing.zh.html",
+      "name": "landing.html: local link landing.en.html",
       "pass": true
     },
     {
@@ -165,43 +165,115 @@
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/depth-showcase-en.jpg?v=agent-first-20261010",
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.jpg?v=agent-first-20261010",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/depth-showcase-en.mp4?v=agent-first-20261010",
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=agent-first-20261010",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/workflow-en.vtt",
+      "name": "landing.html: local link assets/motion/workflow-zh.vtt",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/depth-showcase-en.mp4",
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/depth-showcase-en.mp4?v=agent-first-20261010",
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=agent-first-20261010",
       "pass": true
     },
     {
-      "name": "landing.html: local link landing.zh.html#film",
+      "name": "landing.html: local link landing.en.html#film",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/workflow/workflow-en.png",
+      "name": "landing.html: local link assets/workflow/workflow-zh.png",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/workflow/workflow-en.png",
+      "name": "landing.html: local link assets/workflow/workflow-zh.png",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/workflow/workflow-en.png",
+      "name": "landing.html: local link assets/workflow/workflow-zh.png",
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/introduction.js?v=english-first-20261011",
+      "name": "landing.html: local link assets/introduction.js?v=chinese-primary-20261011",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: loads the shared visual-memory stylesheet",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: player and captions match its language",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: shared interactions and a language switch",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: related-role diagram is the final section",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: four real companion Skill links",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/visual-memory.css?v=chinese-primary-20261011",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link landing.html",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/depth-game.webp",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/depth-showcase-en.jpg?v=agent-first-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/depth-showcase-en.mp4?v=agent-first-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/workflow-en.vtt",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/depth-showcase-en.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/depth-showcase-en.mp4?v=agent-first-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link landing.html#film",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/workflow/workflow-en.png",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/workflow/workflow-en.png",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/workflow/workflow-en.png",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/introduction.js?v=chinese-primary-20261011",
       "pass": true
     },
     {
@@ -225,11 +297,11 @@
       "pass": true
     },
     {
-      "name": "landing.zh.html: local link assets/visual-memory.css?v=english-first-20261011",
+      "name": "landing.zh.html: local link assets/visual-memory.css?v=chinese-primary-20261011",
       "pass": true
     },
     {
-      "name": "landing.zh.html: local link landing.html",
+      "name": "landing.zh.html: local link landing.en.html",
       "pass": true
     },
     {
@@ -257,7 +329,7 @@
       "pass": true
     },
     {
-      "name": "landing.zh.html: local link landing.html#film",
+      "name": "landing.zh.html: local link landing.en.html#film",
       "pass": true
     },
     {
@@ -273,7 +345,7 @@
       "pass": true
     },
     {
-      "name": "landing.zh.html: local link assets/introduction.js?v=english-first-20261011",
+      "name": "landing.zh.html: local link assets/introduction.js?v=chinese-primary-20261011",
       "pass": true
     },
     {
@@ -341,7 +413,15 @@
       "pass": true
     },
     {
-      "name": "English default and complete Chinese alternate declare their languages",
+      "name": "Chinese default and complete English alternate declare their languages",
+      "pass": true
+    },
+    {
+      "name": "Chinese page compatibility copy stays synchronized with the default",
+      "pass": true
+    },
+    {
+      "name": "language links open the opposite edition",
       "pass": true
     },
     {
