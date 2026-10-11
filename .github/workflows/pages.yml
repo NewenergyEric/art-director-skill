@@ -20,7 +20,9 @@ on:
       - "references/**"
       - "scripts/**"
       - "templates/**"
+      - "agents/**"
       - "SKILL.md"
+      - "LICENSE"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -61,6 +63,12 @@ jobs:
           cp -R evals/team-production _site/evals/
           cp -R references scripts templates _site/
           cp SKILL.md _site/
+      - name: Build the current installable Skill alongside the introduction
+        shell: bash
+        run: |
+          python scripts/package_release.py --out "$RUNNER_TEMP/art-director-pages.zip"
+          mkdir -p _site/downloads
+          cp "$RUNNER_TEMP/art-director-pages.zip" _site/downloads/art-director.zip
       - uses: actions/configure-pages@v5
         with:
           enablement: true

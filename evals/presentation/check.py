@@ -17,6 +17,7 @@ MIB = 1024 * 1024
 PUBLIC_PAGES = (
     'showcase.html',
     'landing.html',
+    'landing.zh.html',
     'workbench.html',
     'member-workbench.html',
     'call-flow.html',
@@ -82,18 +83,24 @@ def main():
               path.is_file() and path.stat().st_size == item['bytes']
               and hashlib.sha256(path.read_bytes()).hexdigest() == item['sha256'])
 
-    for lang, readme in [('zh', 'README.md'), ('en', 'README.en.md')]:
+    check('legacy English README stays synchronized with the default',
+          (ROOT / 'README.en.md').read_bytes() == (ROOT / 'README.md').read_bytes())
+    for lang, readme in [('en', 'README.md'), ('zh', 'README.zh.md')]:
         text = (ROOT / readme).read_text(encoding='utf-8')
         images = re.findall(r'<img\b[^>]*src="([^"]+)"', text)
         gifs = [urlsplit(src).path for src in images if urlsplit(src).path.endswith('.gif')]
         check(readme + ': one canonical repository-hosted GIF',
               gifs == [f'assets/readme/depth-preview-{lang}.gif'])
         check(readme + ': one introduction instead of competing web interfaces',
-              'docs/landing.html' in text and not any(name in text for name in ('workbench.html', 'showcase.html', 'call-flow.html', 'team-production.html')))
+              ('docs/landing.html' if lang == 'en' else 'docs/landing.zh.html') in text
+              and not any(name in text for name in ('workbench.html', 'showcase.html', 'call-flow.html', 'team-production.html')))
         expected_claim = '一个团队/项目，一份视觉记忆。' if lang == 'zh' else 'One team, one visual memory.'
         check(readme + ': uses the shared core claim', expected_claim in text)
         check(readme + ': contains no legacy public media reference',
               not any(name in text for name in LEGACY_MEDIA) and '70 秒' not in text and '70-second' not in text)
+        map_path = f'docs/assets/workflow/workflow-{lang}.png'
+        check(readme + ': ends with the shared four-role diagram',
+              text.rstrip().endswith(map_path + ')') and (ROOT / map_path).is_file())
 
         gif = ROOT / f'assets/readme/depth-preview-{lang}.gif'
         data = gif.read_bytes()
@@ -117,8 +124,23 @@ def main():
         path = ROOT / 'docs' / name
         text = path.read_text(encoding='utf-8')
         public_text += '\n' + text
-        if name == 'landing.html':
+        if name in ('landing.html', 'landing.zh.html'):
             check(name + ': loads the shared visual-memory stylesheet', 'assets/visual-memory.css' in text)
+            lang = 'zh' if name == 'landing.zh.html' else 'en'
+            check(name + ': player and captions match its language',
+                  f'depth-showcase-{lang}.mp4' in text
+                  and f'workflow-{lang}.vtt' in text
+                  and f'srclang="{lang}"' in text)
+            check(name + ': shared interactions and a language switch',
+                  'assets/introduction.js' in text and 'data-language-link' in text
+                  and 'hreflang="en"' in text and 'hreflang="zh-CN"' in text)
+            sections = re.findall(r'<section\b[^>]*\bid="([^"]+)"', text)
+            check(name + ': related-role diagram is the final section',
+                  sections[-1:] == ['ecosystem'] and 'class="role-mobile"' in text)
+            check(name + ': four real companion Skill links',
+                  all('https://github.com/NewenergyEric/' + repo in text for repo in (
+                      'game-market-intelligence', 'game-reverse-analyst',
+                      'game-production-manager', 'art-director-skill')))
         else:
             redirect = re.search(r'http-equiv="refresh" content="0; url=([^"]+)"', text)
             check(name + ': redirects to the unified introduction',
@@ -145,6 +167,12 @@ def main():
           all(token in stylesheet for token in ('#001f3f', '#007d86', '#92e4da',
                                                 'prefers-reduced-motion', ':focus-visible')))
     landing = (ROOT / 'docs/landing.html').read_text(encoding='utf-8')
+    chinese_landing = (ROOT / 'docs/landing.zh.html').read_text(encoding='utf-8')
+    check('English default and complete Chinese alternate declare their languages',
+          '<html lang="en">' in landing and '<html lang="zh-CN">' in chinese_landing)
+    check('language editions keep the same section and control IDs',
+          set(re.findall(r'\bid="([^"]+)"', landing))
+          == set(re.findall(r'\bid="([^"]+)"', chinese_landing)))
     ids = re.findall(r'\bid="([^"]+)"', landing)
     check('introduction IDs are unique', len(ids) == len(set(ids)))
     for anchor in re.findall(r'href="#([^"]+)"', landing):
@@ -160,8 +188,9 @@ def main():
     check('five navigable chapters cover the workflow in sequence',
           len(chapters) == 5 and chapters == sorted(chapters)
           and chapters[0] == 0 and 17 <= chapters[-1] < 24)
-    check('captions cover the complete 24-second story',
-          '00:24.000' in (ROOT / 'docs/assets/motion/workflow-zh.vtt').read_text(encoding='utf-8'))
+    check('both caption editions cover the complete 24-second story',
+          all('00:24.000' in (ROOT / f'docs/assets/motion/workflow-{lang}.vtt').read_text(encoding='utf-8')
+              for lang in ('en', 'zh')))
     motion_source = (ROOT / 'motion/src/DepthShowcase.tsx').read_text(encoding='utf-8')
     check('public source keeps the requested Chinese and English claims',
           '一个团队/项目，' in motion_source and '一份视觉记忆。' in motion_source

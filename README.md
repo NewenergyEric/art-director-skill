@@ -1,92 +1,92 @@
-<p align="right"><strong>中文</strong> · <a href="README.en.md">English</a></p>
+<p align="right"><strong>English</strong> · <a href="README.zh.md">中文</a></p>
 
 # Art Director
 
-### 一个团队/项目，一份视觉记忆。
+### One team, one visual memory.
 
-**主美不用反复解释，团队有据可依。**
+**Less re-explaining for the director. Shared context for the team.**
 
-把散落的参考图、设计规范和主美批注，整理成项目专属的 Skill。主美跟着 Agent 逐步建立规则；成员拿到项目包，在自己的 Agent 里接着做。角色、场景、UI、商品和海报，都从同一套规范出发。
+Turn scattered references, design rules and review notes into a project-specific Skill. The director builds the rules with an agent; teammates load the project pack into their own agents and continue from there. Characters, environments, UI, products and campaigns share the same foundation. Solo creators can wear both hats, keeping decisions consistent across sessions and deliveries.
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=agent-first-20261010">
-  <img src="assets/readme/depth-preview-zh.gif?v=agent-first-20261010" width="100%" alt="24 秒功能演示：整理参考、建立规范与样板、打包给团队、按规则制作、检查偏差并返修。">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=agent-first-20261010">
+  <img src="assets/readme/depth-preview-en.gif?v=agent-first-20261010" width="100%" alt="24-second workflow: organize references, define rules and samples, share a project pack, create from those rules, review and revise.">
 </picture></a>
 
-<p align="center"><sub>24 秒，看一次完整协作 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a></sub></p>
+<p align="center"><sub>A complete collaboration in 24 seconds · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">Watch the film</a> · <a href="docs/assets/motion/depth-showcase-en.mp4">Download English MP4</a></sub></p>
 
-## 装好，然后直接说
+## Install, then ask
 
-在支持 Agent Skills 的工具中安装，例如 Codex、Claude Code 或 Cursor：
+Install in an Agent Skills-compatible tool, such as Codex, Claude Code or Cursor:
 
 ```sh
 npx skills add https://github.com/NewenergyEric/art-director-skill
 ```
 
-日常工作都在你的 Agent 中完成。把资料放进它能读取的文件夹，再说出要做的事。
+Work in your agent. Put your materials in a folder it can read, then describe what you need.
 
-### 我是主美，要把规范建立起来
+### I’m the director. Help me establish the rules.
 
-> 使用 `$art-director`。这是现有作品、参考和批注。先帮我整理一版美术规范，再一步步补齐角色、场景和 UI 组件的要求，做代表样板让我确认，最后打包给团队。
+> Use `$art-director`. Here are our existing designs, references and notes. Draft our art direction, then help me define the character, environment and UI requirements. Prepare representative samples for me to review, and package the result for the team.
 
-**你会得到：** 有具体内容的规范初稿、需要你决定的问题，以及可交接的项目包。资料不齐也可以开始；Agent 会先整理已有内容，再补问影响下一步的问题。
+**You get:** a substantive draft, decisions that need your input, and a shareable project pack. Incomplete inputs are enough to start. The agent organizes what exists and asks about the gaps that matter next.
 
-你可以像和设计同事交流一样修改：“按钮要更厚实，禁用态降低饱和度”“角色比例沿用这张，服装可以变”。Agent 将这些判断整理进规范，保持手册和项目包同步。
+Revise it as you would with a colleague: “Make the buttons feel thicker; lower the saturation of the disabled state.” Or: “Keep these character proportions; clothing can vary.” The agent records those decisions and keeps the guides and pack in sync.
 
-### 我是成员，要按主美的规则做设计
+### I’m a teammate. Help me design within the rules.
 
-先把主美分发的**完整项目包**交给 Agent，再说：
+Give your agent the **complete project pack** from the director, then say:
 
-> 读取这个项目包。按里面的 UI 规范做按钮的默认、按下、禁用三态。先给我首件，说明沿用了哪些规则，以及还有什么要检查。
+> Read this project pack. Create the default, pressed and disabled button states using its UI rules. Show me a first sample, explain which rules you used, and list anything still needing a check.
 
-**你会得到：** 带着项目版本、相关规则和参考的制作任务，以及首件和检查记录。之后可以继续说“把这组三态放回主界面检查”，不用重新解释项目风格。
+**You get:** a production task with its project version, relevant rules and references, followed by the sample and check record. Continue with “Check these states inside the main screen” without explaining the whole style again.
 
-具体设计由 Agent 调用当前可用的生成或编辑工具完成。Skill 负责把规范接到制作过程；它本身不附带绘图模型或设计软件。
+The agent creates or edits through the tools available in your environment. This Skill carries the rules into that work; it does not include an image model or design application.
 
-### 已有结果，要检查和修改
+### I have a result. Help me review and revise it.
 
-> 对照项目规范检查这批资产，把不一致的位置、依据和修改建议列出来。先修正这一个按钮，再看同类组件有没有同样的问题。
+> Check these assets against the project rules. List the inconsistencies, their basis and specific fixes. Correct this button first, then check related components for the same issue.
 
-**你会得到：** 能执行的返修清单，区分视觉问题、技术问题和暂时没检查的内容。影响整个项目的变化交回主美确认，再发布新版。
+**You get:** an actionable revision list that distinguishes visual issues, technical issues and unchecked items. Changes affecting the whole project go back to the director before a new version is published.
 
-## 它把哪些事连起来
+## What it connects
 
-| 你现在要做的事 | Skill 帮你推进到哪里 |
+| Where you are | What the Skill helps you do |
 |---|---|
-| 参考很多，还没形成规范 | 整理项目定位、整体风格、各类资产和组件要求 |
-| 文字说不清，团队理解有分歧 | 用代表样板与实际组合校准，把确认的判断记下来 |
-| 新成员或外包加入 | 分发包含规范、样板、参考和交付要求的项目包 |
-| 多人同时制作 | 每个任务沿用明确版本，保留固定项与允许变化 |
-| 交付风格不一，反复返工 | 对照规则检查，给出具体修正依据，记录共性问题 |
+| Many references, no coherent spec | Organize project goals, visual language and asset or component requirements |
+| Different interpretations of the same brief | Calibrate with representative samples and real compositions; record decisions |
+| A teammate or vendor is joining | Share a pack containing rules, samples, references and delivery requirements |
+| Several people are producing at once | Keep each task on a clear version, with fixed elements and allowed variations |
+| Deliveries drift and revisions repeat | Review against the rules, explain fixes and capture recurring issues |
 
-“视觉记忆”就是这些共同依据。**让交付保持一致，不是让每张图长得一样。**
+That shared context is the project’s **visual memory**. Consistent delivery leaves room for different designs.
 
-## 主美最后交给团队什么
+## What the team receives
 
-一份可以直接压缩分发的项目包，包含：
+A project pack ready to zip and share, containing:
 
-- **五份可读手册：** 资料索引、项目定位、设计规范、交付与验收、参考与反例。
-- **项目专属 Skill：** 让成员的 Agent 知道本项目要沿用什么、可以改变什么。
-- **项目资料与版本记录：** 相关参考、样板、工具和文件清单一起走，不依赖原来的聊天记录。
+- **Five readable guides:** material index, project brief, design rules, delivery and review, references and counterexamples.
+- **A project-specific Skill:** tells each teammate’s agent what to preserve and what may vary.
+- **Materials and version records:** relevant references, samples, tools and file inventory travel together, without the original chat history.
 
-已有规范可以接着完善，不必从头重建。新版本由主美发布；进行中的任务保留原来的版本，避免做到一半规则变了。
+Build on an existing design system. The director publishes updates; ongoing tasks retain their original versions so the rules do not shift midway.
 
-## 看两份实际项目包
+## Explore two project packs
 
-[港湾工作室 · 游戏美术](examples/harbor-studio-draft/guides/00-index.md)：角色、场景、UI、物品家族如何写进同一套规范。
+[Harbor Studio · game art](examples/harbor-studio-draft/guides/00-index.md): characters, environments, UI and item families in one specification.
 
-[周末轻饮 · 活动设计](examples/campaign-studio-draft/guides/00-index.md)：商品、图形、文案、UI 与横竖版物料如何一起交付。
+[Weekend Light · campaign design](examples/campaign-studio-draft/guides/00-index.md): products, graphics, copy, UI and multiple formats delivered together.
 
-两份都是可运行的虚构项目草案。动画是流程示意，所用作品为原创候选素材，不代表已获主美批准。
+Both are runnable fictional drafts with Chinese project-authored content. The film illustrates the workflow with original candidate artwork; it is not a recording of an approved production run.
 
 <details>
-<summary><strong>安装要求、离线包与技术文档</strong></summary>
+<summary><strong>Requirements, offline package and technical documentation</strong></summary>
 
-核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可从 [Release](https://github.com/NewenergyEric/art-director-skill/releases/latest) 下载 Skill ZIP。成员需要收到主美导出的完整项目包，仅安装通用 Skill 不会自动获得项目资料。
+Core tools require Python 3.10+ and use the standard library; Pillow is optional for pixel checks. A Skill ZIP is also available as the [current build](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=english-first-20261011). Teammates need the director’s complete project pack; installing the general Skill does not provide project materials.
 
-设计师用自然语言工作，文件整理和命令由 Agent 处理。
+Designers use natural language. The agent handles files and commands.
 
-[详细上手说明](docs/HUMAN-GUIDE.md) · [Agent 与工程接入](docs/AGENT-GUIDE.md) · [Skill 入口](SKILL.md) · [项目包契约](references/pack-contract.md)
+[Detailed user guide](docs/HUMAN-GUIDE.md) · [Agent and engineering guide](docs/AGENT-GUIDE.md) · [Skill entrypoint](SKILL.md) · [Project pack contract](references/pack-contract.md)
 
 ```sh
 python scripts/style_pack.py validate examples/harbor-studio-draft
@@ -95,19 +95,31 @@ python scripts/style_pack.py build examples/harbor-studio-draft --out NEW_PACK
 
 </details>
 
+---
+
 <details>
-<summary><strong>验证情况与能力边界</strong></summary>
+<summary><strong>Validation and limits</strong></summary>
 
-108 项确定性测试覆盖项目包、规则关联、版本冻结、交付检查和搬迁使用。Python 3.10 / 3.12 在 Windows / Linux 上持续验证，展示片与 CodeQL 独立检查。
+108 deterministic tests cover packs, rule references, frozen versions, delivery checks and relocation. Python 3.10 / 3.12 runs on Windows / Linux; the film and CodeQL have independent checks.
 
-[当前 CI](https://github.com/NewenergyEric/art-director-skill/actions) · [可复核的验收记录](evals/director-workflow-v0.5/acceptance.md)
+[Current CI](https://github.com/NewenergyEric/art-director-skill/actions) · [Reproducible acceptance evidence](evals/director-workflow-v0.5/acceptance.md)
 
-这些检查验证文件和工作流程，不代替主美的审美判断、真实软件或引擎中的效果验收。未知规格、候选方案和未检查内容会保持可见。
+These checks verify files and workflow contracts, not aesthetic quality or acceptance inside a real design tool or engine. Unknown specifications, proposals and unchecked work stay visible.
 
-项目包工具在本地运行，不自动上传项目材料。使用生成或编辑服务时，按宿主工具和你的授权处理资料。
+Pack tools run locally and do not automatically upload project materials. Generation and editing services follow your host tools and authorization.
 
 </details>
 
-[MIT License](LICENSE) · [安全说明](SECURITY.md) · [分享使用反馈](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml)
+---
 
-由 Eric 与 Agents 一起制作。
+[MIT License](LICENSE) · [Security](SECURITY.md) · [Share feedback](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml)
+
+Made by Eric and Agents.
+
+## Four roles. One game worth making.
+
+For a solo creator these are four hats; for a team they are connected responsibilities. Explore what is worth making, what competitors do, the resources it requires, and the original art that defines it.
+
+[How the roles exchange evidence, scope and visual assets](docs/WORKFLOW.md) · [Art Director](https://github.com/NewenergyEric/art-director-skill)
+
+![Market intelligence → competitor analysis → production assessment → original art direction; prototype and cost feedback revise earlier decisions.](docs/assets/workflow/workflow-en.png)

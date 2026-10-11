@@ -1,4 +1,4 @@
-<p align="right"><a href="README.md">中文</a> · <strong>English</strong></p>
+<p align="right"><strong>English</strong> · <a href="README.zh.md">中文</a></p>
 
 # Art Director
 
@@ -6,9 +6,9 @@
 
 **Less re-explaining for the director. Shared context for the team.**
 
-Turn scattered references, design rules and review notes into a project-specific Skill. The director builds the rules with an agent; teammates load the project pack into their own agents and continue from there. Characters, environments, UI, products and campaigns share the same foundation.
+Turn scattered references, design rules and review notes into a project-specific Skill. The director builds the rules with an agent; teammates load the project pack into their own agents and continue from there. Characters, environments, UI, products and campaigns share the same foundation. Solo creators can wear both hats, keeping decisions consistent across sessions and deliveries.
 
-<a href="docs/assets/motion/depth-showcase-en.mp4"><picture>
+<a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film"><picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=agent-first-20261010">
   <img src="assets/readme/depth-preview-en.gif?v=agent-first-20261010" width="100%" alt="24-second workflow: organize references, define rules and samples, share a project pack, create from those rules, review and revise.">
 </picture></a>
@@ -77,12 +77,12 @@ Build on an existing design system. The director publishes updates; ongoing task
 
 [Weekend Light · campaign design](examples/campaign-studio-draft/guides/00-index.md): products, graphics, copy, UI and multiple formats delivered together.
 
-Both are runnable fictional drafts. The film illustrates the workflow with original candidate artwork; it is not a recording of an approved production run.
+Both are runnable fictional drafts with Chinese project-authored content. The film illustrates the workflow with original candidate artwork; it is not a recording of an approved production run.
 
 <details>
 <summary><strong>Requirements, offline package and technical documentation</strong></summary>
 
-Core tools require Python 3.10+ and use the standard library; Pillow is optional for pixel checks. A Skill ZIP is also available from [Releases](https://github.com/NewenergyEric/art-director-skill/releases/latest). Teammates need the director’s complete project pack; installing the general Skill does not provide project materials.
+Core tools require Python 3.10+ and use the standard library; Pillow is optional for pixel checks. A Skill ZIP is also available as the [current build](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=english-first-20261011). Teammates need the director’s complete project pack; installing the general Skill does not provide project materials.
 
 Designers use natural language. The agent handles files and commands.
 
@@ -94,6 +94,8 @@ python scripts/style_pack.py build examples/harbor-studio-draft --out NEW_PACK
 ```
 
 </details>
+
+---
 
 <details>
 <summary><strong>Validation and limits</strong></summary>
@@ -108,6 +110,16 @@ Pack tools run locally and do not automatically upload project materials. Genera
 
 </details>
 
+---
+
 [MIT License](LICENSE) · [Security](SECURITY.md) · [Share feedback](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml)
 
 Made by Eric and Agents.
+
+## Four roles. One game worth making.
+
+For a solo creator these are four hats; for a team they are connected responsibilities. Explore what is worth making, what competitors do, the resources it requires, and the original art that defines it.
+
+[How the roles exchange evidence, scope and visual assets](docs/WORKFLOW.md) · [Art Director](https://github.com/NewenergyEric/art-director-skill)
+
+![Market intelligence → competitor analysis → production assessment → original art direction; prototype and cost feedback revise earlier decisions.](docs/assets/workflow/workflow-en.png)

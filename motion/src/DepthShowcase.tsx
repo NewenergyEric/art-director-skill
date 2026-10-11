@@ -167,7 +167,7 @@ function Closing({language, social = false}: {language: Language; social?: boole
       <div style={{marginTop: 44, fontSize: 30, color: C.paper}}>{tr(language, '让每一次交付，都有共同依据。', 'A shared foundation for every delivery.')}</div>
       <div style={{marginTop: 36, fontSize: 25, color: C.mint}}>{tr(language, '装上 Skill，在你的 Agent 里开始。', 'Install the Skill. Start in your agent.')}</div>
     </div>
-    <div style={{position: 'absolute', left: 858, top: 499, width: 310, padding: '20px 25px', background: C.teal, border: '1px solid #92e4da', borderRadius: 12, boxShadow: shadow, transform: 'rotate(4deg)', zIndex: 4}}><Label>ONE VERSION / EVERY DELIVERY</Label><div style={{fontSize: 29, fontWeight: 750, marginTop: 12}}>STYLE.md → SKILL.md</div></div>
+    <div style={{position: 'absolute', left: social ? 846 : 858, top: social ? 458 : 499, width: social ? 364 : 310, padding: social ? '17px 23px' : '20px 25px', background: C.teal, border: '1px solid #92e4da', borderRadius: 12, boxShadow: shadow, transform: 'rotate(4deg)', zIndex: 4}}><Label>ONE VERSION / EVERY DELIVERY</Label><div style={{fontSize: social ? 24 : 29, fontWeight: 750, marginTop: 12}}>STYLE.md → SKILL.md</div></div>
   </>;
 }
 
@@ -186,4 +186,4 @@ export const DepthShowcase: React.FC<{language: Language; preview?: boolean}> = 
   </AbsoluteFill>;
 };
 
-export const DepthSocialPreview: React.FC = () => <AbsoluteFill style={{background: C.navy, color: '#fff', fontFamily: fieldFont, overflow: 'hidden'}}><FieldFonts/><div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 80% 35%, #07505d 0%, transparent 57%)'}}/><div style={{position: 'absolute', left: 56, top: 33, fontSize: 18, letterSpacing: 3}}>ART DIRECTOR <span style={{color: C.mint}}>●</span></div><SharedArtwork frame={680} language="zh"/><Closing language="zh" social/></AbsoluteFill>;
+export const DepthSocialPreview: React.FC = () => <AbsoluteFill style={{background: C.navy, color: '#fff', fontFamily: fieldFont, overflow: 'hidden'}}><FieldFonts/><div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 80% 35%, #07505d 0%, transparent 57%)'}}/><div style={{position: 'absolute', left: 56, top: 33, fontSize: 18, letterSpacing: 3}}>ART DIRECTOR <span style={{color: C.mint}}>●</span></div><SharedArtwork frame={680} language="en"/><Closing language="en" social/></AbsoluteFill>;

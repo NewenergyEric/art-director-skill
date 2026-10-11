@@ -1,7 +1,7 @@
 {
   "method": "Shared claim, public links, canonical media budgets and checksums; optional ffprobe.",
-  "passed": 80,
-  "total": 80,
+  "passed": 112,
+  "total": 112,
   "failed": [],
   "checks": [
     {
@@ -57,6 +57,10 @@
       "pass": true
     },
     {
+      "name": "legacy English README stays synchronized with the default",
+      "pass": true
+    },
+    {
       "name": "README.md: one canonical repository-hosted GIF",
       "pass": true
     },
@@ -73,27 +77,7 @@
       "pass": true
     },
     {
-      "name": "zh: canonical GIF is valid, 800 px wide, and under 6 MiB",
-      "pass": true
-    },
-    {
-      "name": "zh: reduced-motion poster exists and is non-empty",
-      "pass": true
-    },
-    {
-      "name": "README.en.md: one canonical repository-hosted GIF",
-      "pass": true
-    },
-    {
-      "name": "README.en.md: one introduction instead of competing web interfaces",
-      "pass": true
-    },
-    {
-      "name": "README.en.md: uses the shared core claim",
-      "pass": true
-    },
-    {
-      "name": "README.en.md: contains no legacy public media reference",
+      "name": "README.md: ends with the shared four-role diagram",
       "pass": true
     },
     {
@@ -102,6 +86,34 @@
     },
     {
       "name": "en: reduced-motion poster exists and is non-empty",
+      "pass": true
+    },
+    {
+      "name": "README.zh.md: one canonical repository-hosted GIF",
+      "pass": true
+    },
+    {
+      "name": "README.zh.md: one introduction instead of competing web interfaces",
+      "pass": true
+    },
+    {
+      "name": "README.zh.md: uses the shared core claim",
+      "pass": true
+    },
+    {
+      "name": "README.zh.md: contains no legacy public media reference",
+      "pass": true
+    },
+    {
+      "name": "README.zh.md: ends with the shared four-role diagram",
+      "pass": true
+    },
+    {
+      "name": "zh: canonical GIF is valid, 800 px wide, and under 6 MiB",
+      "pass": true
+    },
+    {
+      "name": "zh: reduced-motion poster exists and is non-empty",
       "pass": true
     },
     {
@@ -125,7 +137,27 @@
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/visual-memory.css?v=agent-first-20261010",
+      "name": "landing.html: player and captions match its language",
+      "pass": true
+    },
+    {
+      "name": "landing.html: shared interactions and a language switch",
+      "pass": true
+    },
+    {
+      "name": "landing.html: related-role diagram is the final section",
+      "pass": true
+    },
+    {
+      "name": "landing.html: four real companion Skill links",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/visual-memory.css?v=english-first-20261011",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link landing.zh.html",
       "pass": true
     },
     {
@@ -133,27 +165,115 @@
       "pass": true
     },
     {
-      "name": "landing.html: local link assets/motion/depth-showcase-zh.jpg?v=agent-first-20261010",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=agent-first-20261010",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/workflow-zh.vtt",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4",
-      "pass": true
-    },
-    {
-      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=agent-first-20261010",
+      "name": "landing.html: local link assets/motion/depth-showcase-en.jpg?v=agent-first-20261010",
       "pass": true
     },
     {
       "name": "landing.html: local link assets/motion/depth-showcase-en.mp4?v=agent-first-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/workflow-en.vtt",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-showcase-en.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-showcase-en.mp4?v=agent-first-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link landing.zh.html#film",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/workflow/workflow-en.png",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/workflow/workflow-en.png",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/workflow/workflow-en.png",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/introduction.js?v=english-first-20261011",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: loads the shared visual-memory stylesheet",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: player and captions match its language",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: shared interactions and a language switch",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: related-role diagram is the final section",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: four real companion Skill links",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/visual-memory.css?v=english-first-20261011",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link landing.html",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/depth-game.webp",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/depth-showcase-zh.jpg?v=agent-first-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/depth-showcase-zh.mp4?v=agent-first-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/workflow-zh.vtt",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/depth-showcase-zh.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/depth-showcase-zh.mp4?v=agent-first-20261010",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link landing.html#film",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/workflow/workflow-zh.png",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/workflow/workflow-zh.png",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/workflow/workflow-zh.png",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/introduction.js?v=english-first-20261011",
       "pass": true
     },
     {
@@ -221,6 +341,14 @@
       "pass": true
     },
     {
+      "name": "English default and complete Chinese alternate declare their languages",
+      "pass": true
+    },
+    {
+      "name": "language editions keep the same section and control IDs",
+      "pass": true
+    },
+    {
       "name": "introduction IDs are unique",
       "pass": true
     },
@@ -269,7 +397,7 @@
       "pass": true
     },
     {
-      "name": "captions cover the complete 24-second story",
+      "name": "both caption editions cover the complete 24-second story",
       "pass": true
     },
     {
