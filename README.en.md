@@ -1,5 +1,7 @@
 <p align="right"><a href="README.md">中文</a> · <strong>English</strong></p>
 
+[**Game Dev Skills**](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.en.md) · [Market research](https://github.com/NewenergyEric/game-market-intelligence/blob/main/README.en.md) · [Reverse analysis](https://github.com/NewenergyEric/game-reverse-analyst/blob/main/README.en.md) · [Production planning](https://github.com/NewenergyEric/game-production-manager/blob/main/README.en.md) · [Art direction](https://github.com/NewenergyEric/art-director-skill/blob/main/README.en.md)
+
 # Art Director
 
 ### One team, one visual memory.
@@ -14,6 +16,18 @@ Turn scattered references, design rules and review notes into a project-specific
 </picture></a>
 
 <p align="center"><sub>A complete collaboration in 24 seconds · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film">Watch the film</a> · <a href="docs/assets/motion/depth-showcase-en.mp4">Download English MP4</a></sub></p>
+
+## Why I built this
+
+**Keep the director’s judgment with the work as it changes hands.**
+
+This Skill grew out of conversations with an art-director friend. He cared about a character’s personality, the feel of an image and the connections a game creates. Yet so much time went into explaining the same decisions: which part of a reference mattered, why a button felt wrong, what a new teammate needed to know.
+
+I wanted those decisions to travel. An agent helps the director articulate them; samples make them reviewable; a project pack carries the rules and references to the team. The aim is more room for creative judgment and a clearer starting point for the next person.
+
+That handoff problem also appears in market research, competitor analysis and production planning. Game Dev Skills connects those responsibilities so each role can build on the work already done.
+
+<!-- Testimonial reserved: add only real feedback with explicit permission to quote and attribute. No customer endorsement is currently claimed. -->
 
 ## Install, then ask
 
@@ -116,10 +130,27 @@ Pack tools run locally and do not automatically upload project materials. Genera
 
 Made by Eric and Agents.
 
+## Tell me where the handoff breaks
+
+After trying one task, share the goal, public inputs, actual output and what was still missing.
+
+[Share feedback or a case](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml)
+
 ## Four roles. One game worth making.
 
 For a solo creator these are four hats; for a team they are connected responsibilities. Explore what is worth making, what competitors do, the resources it requires, and the original art that defines it.
 
-[How the roles exchange evidence, scope and visual assets](docs/WORKFLOW.en.md) · [Art Director](https://github.com/NewenergyEric/art-director-skill)
+[How the roles exchange evidence, scope and visual assets](docs/WORKFLOW.en.md) · [Explore all four roles](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.en.md)
+
+| Your question | Start here | Carry forward |
+|---|---|---|
+| What is worth making? | [Market research](https://github.com/NewenergyEric/game-market-intelligence/blob/main/README.en.md) | Options, sources and validation gaps |
+| How does it work? | [Reverse analysis](https://github.com/NewenergyEric/game-reverse-analyst/blob/main/README.en.md) | Rules, implementation evidence and asset BOM |
+| Can we scope and deliver it? | [Production planning](https://github.com/NewenergyEric/game-production-manager/blob/main/README.en.md) | SOW, work packages, dependencies and acceptance |
+| What defines the art? | [Art direction](https://github.com/NewenergyEric/art-director-skill/blob/main/README.en.md) | Shared rules, representative samples and project pack |
+
+**Solo creator:** start with the question blocking you and switch roles as needed. **Team:** hand off actual reports, BOMs, work packages and art rules, keeping sources, versions and open decisions visible.
+
+This is a collaboration method; it does not include an orchestrator that automatically runs four agents in sequence.
 
 ![Market intelligence → competitor analysis → production assessment → original art direction; prototype and cost feedback revise earlier decisions.](docs/assets/workflow/workflow-en.png)

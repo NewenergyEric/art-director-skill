@@ -1,5 +1,7 @@
 <p align="right"><strong>中文</strong> · <a href="README.en.md">English</a></p>
 
+[**Game Dev Skills**](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.md) · [市场研究](https://github.com/NewenergyEric/game-market-intelligence) · [游戏拆解](https://github.com/NewenergyEric/game-reverse-analyst) · [制作管理](https://github.com/NewenergyEric/game-production-manager) · [美术总监](https://github.com/NewenergyEric/art-director-skill)
+
 # Art Director
 
 ### 一个团队/项目，一份视觉记忆。
@@ -14,6 +16,18 @@
 </picture></a>
 
 <p align="center"><sub>24 秒，看一次完整协作 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a></sub></p>
+
+## 为什么做这个
+
+**让主美的判断，跟着作品一起交到下一位手里。**
+
+这个 Skill 起于和一位主美朋友的讨论。他在意角色的气质、画面的感觉，也在意游戏里人与人的连接。但许多时间花在了反复解释：这张参考借鉴哪里，那个按钮为什么不对，换了一个成员后又要从头讲起。
+
+我想把这些判断留下来：先让 Agent 帮主美梳理，再通过样板确认，最后连同规范与参考一起交给团队。让主美把更多时间留给创作，也让接手的人知道从哪里开始。
+
+从美术交接出发，同一个问题又延伸到市场研究、竞品拆解和制作安排。这就是 Game Dev Skills：把每个岗位做过的判断，变成下一个岗位能接着用的资料。
+
+<!-- Testimonial reserved: add only real feedback with explicit permission to quote and attribute. No customer endorsement is currently claimed. -->
 
 ## 装好，然后直接说
 
@@ -116,10 +130,27 @@ python scripts/style_pack.py build examples/harbor-studio-draft --out NEW_PACK
 
 由 Eric 与 Agents 一起制作。
 
+## 告诉我，你在哪一步卡住
+
+用过一次后，欢迎留下：你想完成什么、给了哪些可公开资料、拿到了什么，以及还缺哪一步。
+
+[分享使用反馈或案例](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml)
+
 ## 四个岗位，共同做出值得做的游戏
 
 个人制作者可以轮流承担四个岗位；团队通过同一份资料交接：什么值得做、竞对做了什么、资源和体量如何评估，以及如何创作自己的核心美术。
 
-[岗位如何交接证据、范围与美术资产](docs/WORKFLOW.md) · [Art Director](https://github.com/NewenergyEric/art-director-skill)
+[岗位如何交接证据、范围与美术资产](docs/WORKFLOW.md) · [四岗位总览](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.md)
+
+| 眼前的问题 | 从这个岗位开始 | 带到下一步的资料 |
+|---|---|---|
+| 什么值得做？ | [市场研究](https://github.com/NewenergyEric/game-market-intelligence) | 机会比较、来源与验证缺口 |
+| 竞对做了什么？ | [游戏拆解](https://github.com/NewenergyEric/game-reverse-analyst) | 规则、实现依据与资产 BOM |
+| 做得起，也做得完吗？ | [制作管理](https://github.com/NewenergyEric/game-production-manager) | SOW、工作包、依赖与验收 |
+| 核心美术如何建立？ | [美术总监](https://github.com/NewenergyEric/art-director-skill) | 共享规范、代表样板与项目包 |
+
+**个人创作者：** 从当前卡住的问题开始，按需要切换岗位。**团队：** 用实际报告、BOM、工作包和美术规范交接；每一步保留来源、版本与未定项。
+
+这是协作方法，当前没有自动串行执行四个 Agent 的编排器。
 
 ![市场研究、竞品拆解、项目评估与核心美术创作；样板与成本反馈推动前序决定修订。](docs/assets/workflow/workflow-zh.png)
