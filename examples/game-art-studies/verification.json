@@ -1,0 +1,643 @@
+{
+  "date": "2026-10-13",
+  "scope": "Executed deterministic checks only. Visual candidate review is described separately in docs/CASE-STUDIES.md; no production approval.",
+  "source_sha256": "a0318234a5d4722e0fe1d820a99653242def8e546e322a4cb4f86f71d64f4830",
+  "checks": [
+    {
+      "check": "draft source validates",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "ok": true,
+      "release": false,
+      "errors": [],
+      "warnings": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[0]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[1]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[2]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[3]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[4]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[5]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'character'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'character'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[1].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[2].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[3].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.decisions[0].status",
+          "message": "Resolve proposed decisions before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        }
+      ],
+      "scope_of_check": "Structure, local file presence, cross-references and recorded release prerequisites only; no visual assessment or approval identity authentication."
+    },
+    {
+      "check": "derived Skill and style render",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "ok": true,
+      "warnings": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[0]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[1]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[2]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[3]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[4]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[5]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'character'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'character'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[1].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[2].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[3].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.decisions[0].status",
+          "message": "Resolve proposed decisions before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        }
+      ]
+    },
+    {
+      "check": "scoped prop brief",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "ok": true
+    },
+    {
+      "check": "draft pack builds",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "ok": true,
+      "release": false,
+      "warnings": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[0]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[1]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[2]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[3]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[4]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[5]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'character'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'character'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[1].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[2].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[3].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.decisions[0].status",
+          "message": "Resolve proposed decisions before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        }
+      ]
+    },
+    {
+      "check": "built pack integrity",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "ok": true,
+      "release": false,
+      "errors": [],
+      "warnings": [],
+      "scope_of_check": "Unsigned content integrity only; neither origin/approver authentication nor artistic acceptance."
+    },
+    {
+      "check": "relocated pack integrity",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "ok": true,
+      "release": false,
+      "errors": [],
+      "warnings": [],
+      "scope_of_check": "Unsigned content integrity only; neither origin/approver authentication nor artistic acceptance."
+    },
+    {
+      "check": "bundled brief after relocation",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "ok": true
+    },
+    {
+      "check": "archive a verified draft",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "ok": true,
+      "release": false
+    },
+    {
+      "check": "unapproved production release is rejected",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "ok": false,
+      "release": true,
+      "errors": [
+        {
+          "code": "release_requirement",
+          "path": "$.status",
+          "message": "A release requires status='approved'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'prop'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'environment'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved style reference covering 'character'."
+        },
+        {
+          "code": "reference_coverage",
+          "path": "$.references",
+          "message": "A release needs an approved context reference covering 'character'."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[0].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[1].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[2].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[3].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[4].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.rules[5].status",
+          "message": "All release rules must be confirmed."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[0].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[1].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[2].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.entities[3].reference_ids",
+          "message": "Released entities need at least one approved identity reference."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.decisions[0].status",
+          "message": "Resolve proposed decisions before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.open_questions",
+          "message": "Resolve every open question before release."
+        },
+        {
+          "code": "release_requirement",
+          "path": "$.approval",
+          "message": "A release requires a named approval record and an existing evidence file."
+        }
+      ],
+      "warnings": [
+        {
+          "code": "candidate_reference",
+          "path": "$.references[0]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[1]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[2]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[3]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[4]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        },
+        {
+          "code": "candidate_reference",
+          "path": "$.references[5]",
+          "message": "Candidate reference: do not present it as approved production guidance."
+        }
+      ],
+      "scope_of_check": "Structure, local file presence, cross-references and recorded release prerequisites only; no visual assessment or approval identity authentication."
+    },
+    {
+      "check": "missing reference is rejected",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "ok": false,
+      "release": false,
+      "errors": [
+        {
+          "code": "missing_file",
+          "path": "references/lantern-l2.png",
+          "message": "Referenced file is missing or is not a regular file: references/lantern-l2.png"
+        },
+        {
+          "code": "missing_file",
+          "path": "references/lantern-l2.png",
+          "message": "Manifest-listed file is missing."
+        },
+        {
+          "code": "missing_file",
+          "path": "$.references[2].path",
+          "message": "Referenced file is missing or is not a regular file: references/lantern-l2.png"
+        }
+      ],
+      "warnings": [],
+      "scope_of_check": "Unsigned content integrity only; neither origin/approver authentication nor artistic acceptance."
+    }
+  ],
+  "draft_archive_bytes": 945161
+}

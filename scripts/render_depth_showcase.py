@@ -71,7 +71,7 @@ def main():
         optimizer = next((str(p) for p in (vendor / 'gifsicle.exe', vendor / 'gifsicle') if p.is_file()), None)
     if not optimizer:
         parser.error('Install gifsicle and supply --gifsicle; see motion/README.md')
-    output = ROOT / 'motion/out/workflow-20261010'
+    output = ROOT / 'motion/out/game-art-20261013'
     output.mkdir(parents=True, exist_ok=True)
     web = ROOT / 'docs/assets/motion'
     ffmpeg = executable('ffmpeg')
@@ -106,13 +106,13 @@ def main():
         raw_gif = output / f'raw-preview-{lang}.gif'
         gif(ffmpeg, preview, raw_gif, 20, width=800, max_colors=96, dither='none')
         published_gif = ROOT / f'assets/readme/depth-preview-{lang}.gif'
-        run([optimizer, '-O3', '--lossy=20', str(raw_gif), '-o', str(published_gif)])
+        run([optimizer, '-O3', str(raw_gif), '-o', str(published_gif)])
         if published_gif.stat().st_size > 6 * 1024 * 1024:
             raise RuntimeError(f'{published_gif.name} exceeds the 6 MiB full-story budget')
         still(ffmpeg, video, web / f'depth-showcase-{lang}.jpg', at=22.6)
         shutil.copy2(web / f'depth-showcase-{lang}.jpg', ROOT / f'assets/readme/depth-preview-{lang}.jpg')
     if not args.social_only:
-        for source, name in [('studio/asset-system-board.png', 'game'), ('styles/comic-board.png', 'comic'), ('styles/traditional-board.png', 'traditional')]:
+        for source, name in [('cases/tidekeeper.jpg', 'game'), ('cases/bramble.jpg', 'comic'), ('cases/depot.jpg', 'traditional')]:
             run([ffmpeg, '-hide_banner', '-loglevel', 'error', '-y', '-i', str(PUBLIC_DIR / source),
                  '-vf', 'scale=680:-2:flags=lanczos', '-c:v', 'libwebp', '-quality', '82', str(web / f'depth-{name}.webp')])
     social = ROOT / 'assets/readme/social-preview.png'
@@ -131,14 +131,14 @@ def main():
         'readme_preview': 'depth-preview',
         'font': 'Noto Sans SC, OFL variable subset',
         'visual_system': 'One team, one visual memory.',
-        'story': ['collect', 'define-and-calibrate', 'share-pack', 'create', 'review-and-revise'],
+        'story': ['game-purpose', 'define-sample', 'extend-family', 'check-in-context', 'revise-and-share'],
         'depth_showcase': {
             'duration_seconds': 24,
             'fps': 30,
             'preview_seconds': 24,
             'preview_fps': 20,
             'preview_width': 800,
-            'gif_optimizer': 'gifsicle -O3 --lossy=20; 96 colors, no dithering',
+            'gif_optimizer': 'gifsicle -O3 (lossless optimization); 96 colors, no dithering',
         },
     }
     files = [

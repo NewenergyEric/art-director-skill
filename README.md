@@ -1,140 +1,122 @@
 <p align="right"><strong>中文</strong> · <a href="README.en.md">English</a></p>
 
-[**Game Dev Skills**](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.md) · [市场研究](https://github.com/NewenergyEric/game-market-intelligence) · [游戏拆解](https://github.com/NewenergyEric/game-reverse-analyst) · [制作管理](https://github.com/NewenergyEric/game-production-manager) · [美术总监](https://github.com/NewenergyEric/art-director-skill)
+[**Game Dev Skills**](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.md) · [市场研究](https://github.com/NewenergyEric/game-market-intelligence) · [游戏拆解](https://github.com/NewenergyEric/game-reverse-analyst) · [制作管理](https://github.com/NewenergyEric/game-production-manager) · **美术总监**
 
 # Art Director
 
 ### 一个团队/项目，一份视觉记忆。
 
-**主美不用反复解释，团队有据可依。**
+**单张都不错，放在一起却不像同一款游戏？**
 
-把散落的参考图、设计规范和主美批注，整理成项目专属的 Skill。主美跟着 Agent 逐步建立规则；成员拿到项目包，在自己的 Agent 里接着做。角色、场景、UI、商品和海报，都从同一套规范出发。个人创作者也可以轮流承担主美与制作角色，让跨时间、跨任务的交付保持一致。
+Art Director 帮主美把参考、作品和批注，变成团队能沿用的设计规范。先做代表样板，再扩展角色、物品、场景和 UI；每次制作都带上该项目的规则、参考与检查要求。个人制作，也能把上次做对的判断留给下一次。
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=agent-first-20261010">
-  <img src="assets/readme/depth-preview-zh.gif?v=agent-first-20261010" width="100%" alt="24 秒功能演示：整理参考、建立规范与样板、打包给团队、按规则制作、检查偏差并返修。">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=game-art-20261013">
+  <img src="assets/readme/depth-preview-zh.gif?v=game-art-20261013" width="100%" alt="24 秒原创游戏美术案例：建立样板、扩展灯具家族、检查棋盘合成、定向返修与项目包交接。">
 </picture></a>
 
-<p align="center"><sub>24 秒，看一次完整协作 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a></sub></p>
+<p align="center"><sub>24 秒：从样板到成套资产 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a> · <a href="docs/CASE-STUDIES.md">看案例与检查记录</a></sub></p>
 
-## 为什么做这个
-
-**让主美的判断，跟着作品一起交到下一位手里。**
-
-这个 Skill 起于和一位主美朋友的讨论。他在意角色的气质、画面的感觉，也在意游戏里人与人的连接。但许多时间花在了反复解释：这张参考借鉴哪里，那个按钮为什么不对，换了一个成员后又要从头讲起。
-
-我想把这些判断留下来：先让 Agent 帮主美梳理，再通过样板确认，最后连同规范与参考一起交给团队。让主美把更多时间留给创作，也让接手的人知道从哪里开始。
-
-从美术交接出发，同一个问题又延伸到市场研究、竞品拆解和制作安排。这就是 Game Dev Skills：把每个岗位做过的判断，变成下一个岗位能接着用的资料。
-
-<!-- Testimonial reserved: add only real feedback with explicit permission to quote and attribute. No customer endorsement is currently claimed. -->
-
-## 装好，然后直接说
-
-在支持 Agent Skills 的工具中安装，例如 Codex、Claude Code 或 Cursor：
+## 装好，在你的 Agent 里开始
 
 ```sh
 npx skills add https://github.com/NewenergyEric/art-director-skill
 ```
 
-日常工作都在你的 Agent 中完成。把资料放进它能读取的文件夹，再说出要做的事。
+在支持 Agent Skills 的工具里使用，例如 Codex、Claude Code 或 Cursor。把资料放进 Agent 能读取的文件夹，然后直接说：
 
-### 我是主美，要把规范建立起来
+> 使用 `$art-director`。这是我们的玩法、参考图、已有作品和主美批注。先梳理视觉方向，做一件代表样板；再带我补齐各类资产与组件的要求，打成团队能直接使用的项目包。
 
-> 使用 `$art-director`。这是现有作品、参考和批注。先帮我整理一版美术规范，再一步步补齐角色、场景和 UI 组件的要求，做代表样板让我确认，最后打包给团队。
+已有规范就接着完善，不必重做。绘图与编辑由 Agent 调用当前可用工具完成；Skill 不附带图像模型。
 
-**你会得到：** 有具体内容的规范初稿、需要你决定的问题，以及可交接的项目包。资料不齐也可以开始；Agent 会先整理已有内容，再补问影响下一步的问题。
+## 看作品，也看它解决了什么
 
-你可以像和设计同事交流一样修改：“按钮要更厚实，禁用态降低饱和度”“角色比例沿用这张，服装可以变”。Agent 将这些判断整理进规范，保持手册和项目包同步。
+### 01 · 合成链，不能只是换四种颜色
 
-### 我是成员，要按主美的规则做设计
+![潮灯小镇：灯匠修复航标的原创游戏主视觉。](docs/assets/cases/tidekeeper.jpg)
 
-先把主美分发的**完整项目包**交给 Agent，再说：
+<p align="center">
+  <img src="docs/assets/cases/lantern-l1.png" width="22%" alt="Tidekeeper L1">
+  <img src="docs/assets/cases/lantern-l2.png" width="22%" alt="Tidekeeper L2">
+  <img src="docs/assets/cases/lantern-l3.png" width="22%" alt="Tidekeeper L3">
+  <img src="docs/assets/cases/lantern-l4.png" width="22%" alt="Tidekeeper L4">
+</p>
 
-> 读取这个项目包。按里面的 UI 规范做按钮的默认、按下、禁用三态。先给我首件，说明沿用了哪些规则，以及还有什么要检查。
+从海港样板扩展出四件独立道具：**同镜头、同光源、同材料；不同等级，有不同轮廓。** 再放到 64 / 96 px 的合成试验里看是否分得清。
 
-**你会得到：** 带着项目版本、相关规则和参考的制作任务，以及首件和检查记录。之后可以继续说“把这组三态放回主界面检查”，不用重新解释项目风格。
+[看原稿、修正版与透明检查](docs/CASE-STUDIES.md#tidekeeper) · [打开实际规则源](examples/tidekeeper-draft/style-pack.json)
 
-具体设计由 Agent 调用当前可用的生成或编辑工具完成。Skill 负责把规范接到制作过程；它本身不附带绘图模型或设计软件。
+### 02 · 场景很漂亮，玩家却找不到路
 
-### 已有结果，要检查和修改
+![荆棘信使：小角色、清楚的树枝路径与暖光目的地。](docs/assets/cases/bramble.jpg)
 
-> 对照项目规范检查这批资产，把不一致的位置、依据和修改建议列出来。先修正这一个按钮，再看同类组件有没有同样的问题。
+角色用浅雾衬出轮廓，路径横贯中景，目的地留下暖光。**画风不只是一组关键词，还包括玩家先看见什么。**
 
-**你会得到：** 能执行的返修清单，区分视觉问题、技术问题和暂时没检查的内容。影响整个项目的变化交回主美确认，再发布新版。
+[看手绘冒险的设计判断](docs/CASE-STUDIES.md#bramble)
 
-## 它把哪些事连起来
+### 03 · 升级建筑，别升级成另一个项目
 
-| 你现在要做的事 | Skill 帮你推进到哪里 |
-|---|---|
-| 参考很多，还没形成规范 | 整理项目定位、整体风格、各类资产和组件要求 |
-| 文字说不清，团队理解有分歧 | 用代表样板与实际组合校准，把确认的判断记下来 |
-| 新成员或外包加入 | 分发包含规范、样板、参考和交付要求的项目包 |
-| 多人同时制作 | 每个任务沿用明确版本，保留固定项与允许变化 |
-| 交付风格不一，反复返工 | 对照规则检查，给出具体修正依据，记录共性问题 |
+![赤砂补给站：保留入口、建造语汇与镜头的三级建筑升级概念。](docs/assets/cases/depot.jpg)
 
-“视觉记忆”就是这些共同依据。**让交付保持一致，不是让每张图长得一样。**
+从小屋到水塔、风泵，让功能扩展改变体量。风轮数量不对，就只修风轮；保留已经成立的建筑体系。
 
-## 主美最后交给团队什么
+[看定向修改与剩余检查](docs/CASE-STUDIES.md#depot)
 
-一份可以直接压缩分发的项目包，包含：
+以上是实际生成的原创候选案例，包含 Agent 看图自查与文件实测。棋盘为合成示意；真实设备、引擎导入与主美生产验收另行记录。
 
-- **五份可读手册：** 资料索引、项目定位、设计规范、交付与验收、参考与反例。
-- **项目专属 Skill：** 让成员的 Agent 知道本项目要沿用什么、可以改变什么。
-- **项目资料与版本记录：** 相关参考、样板、工具和文件清单一起走，不依赖原来的聊天记录。
+## 从主美的判断，到团队的交付
 
-已有规范可以接着完善，不必从头重建。新版本由主美发布；进行中的任务保留原来的版本，避免做到一半规则变了。
+1. **先整理已有内容。** 参考借鉴哪里、什么不能变，Agent 先写出具体初稿。
+2. **用样板确定方向。** 看形状、比例、材料与用途，发现偏差就针对性修改。
+3. **把规则带到任务。** 项目包包含规范、样板、参考、版本与交付要求，成员在自己的 Agent 中接着做。
+4. **放回使用场景检查。** 不只看单张，还看家族关系、实际尺寸与组合；共性问题回到规范。
 
-## 看两份实际项目包
+你最后交给团队的是五份可读手册、项目专属 Skill 和相关资料，能直接压缩分发。进行中的任务保留原版本，新任务使用已发布的新版本。
 
-[港湾工作室 · 游戏美术](examples/harbor-studio-draft/guides/00-index.md)：角色、场景、UI、物品家族如何写进同一套规范。
+成员拿到主美的**完整项目包**后可以说：
 
-[周末轻饮 · 活动设计](examples/campaign-studio-draft/guides/00-index.md)：商品、图形、文案、UI 与横竖版物料如何一起交付。
+> 按这版规范扩展两级灯具，保持镜头、光源和材料，让升级轮廓更清楚。先给我首件，再放回棋盘检查。记录沿用的规则与还没验证的内容。
 
-两份都是可运行的虚构项目草案。动画是流程示意，所用作品为原创候选素材，不代表已获主美批准。
+主美也可以继续说：
+
+> 这张太写实，海面细节抢了修灯动作。只简化表面和背景，保留人物身份、手部接触与空间关系，然后对照原稿复查。
+
+## 为什么做这个
+
+这个 Skill 起于和一位主美朋友的讨论。他在意角色的气质、画面的感觉，也在意游戏里人与人的连接；但许多时间花在重复解释参考、组件与返工原因。
+
+我想让这些判断跟着作品交到下一位手里。主美保留创作与判断，Agent 负责整理、关联与交接。从这个问题出发，又连接到市场研究、竞品拆解和制作安排，成为 Game Dev Skills。
+
+<!-- Testimonial reserved: no customer endorsement is claimed. -->
 
 <details>
-<summary><strong>安装要求、离线包与技术文档</strong></summary>
+<summary><strong>项目包、说明书与安装要求</strong></summary>
 
-核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可下载[当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=chinese-primary-20261011)。成员需要收到主美导出的完整项目包，仅安装通用 Skill 不会自动获得项目资料。
+核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可[下载当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=game-art-20261013)。仅安装通用 Skill，不会自动获得团队私有资料。
 
-设计师用自然语言工作，文件整理和命令由 Agent 处理。
+[人类上手说明](docs/HUMAN-GUIDE.md) · [Agent 与工程接入](docs/AGENT-GUIDE.md) · [Skill 入口](SKILL.md) · [游戏美术质量流程](references/game-art-quality.md)
 
-[详细上手说明](docs/HUMAN-GUIDE.md) · [Agent 与工程接入](docs/AGENT-GUIDE.md) · [Skill 入口](SKILL.md) · [项目包契约](references/pack-contract.md)
+[潮灯首件草案](examples/tidekeeper-draft/style-pack.json) · [港湾工作室完整建项示例](examples/harbor-studio-draft/guides/00-index.md) · [品牌与活动设计示例](examples/campaign-studio-draft/guides/00-index.md)
 
 ```sh
-python scripts/style_pack.py validate examples/harbor-studio-draft
-python scripts/style_pack.py build examples/harbor-studio-draft --out NEW_PACK
+python scripts/style_pack.py validate examples/tidekeeper-draft
+python scripts/style_pack.py build examples/tidekeeper-draft --out NEW_PACK
 ```
 
 </details>
 
----
-
 <details>
-<summary><strong>验证情况与能力边界</strong></summary>
+<summary><strong>验证与边界</strong></summary>
 
-108 项确定性测试覆盖项目包、规则关联、版本冻结、交付检查和搬迁使用。Python 3.10 / 3.12 在 Windows / Linux 上持续验证，展示片与 CodeQL 独立检查。
+[当前 CI](https://github.com/NewenergyEric/art-director-skill/actions) · [原创案例证据](docs/CASE-STUDIES.md) · [项目工作流验收](evals/director-workflow-v0.5/acceptance.md)
 
-[当前 CI](https://github.com/NewenergyEric/art-director-skill/actions) · [可复核的验收记录](evals/director-workflow-v0.5/acceptance.md)
-
-这些检查验证文件和工作流程，不代替主美的审美判断、真实软件或引擎中的效果验收。未知规格、候选方案和未检查内容会保持可见。
-
-项目包工具在本地运行，不自动上传项目材料。使用生成或编辑服务时，按宿主工具和你的授权处理资料。
+结构与文件检查不代替艺术判断，视觉自查不代替主美批准。项目包工具在本地运行；使用生成服务时，按宿主工具和你的授权处理资料。
 
 </details>
 
----
-
-[MIT License](LICENSE) · [安全说明](SECURITY.md) · [分享使用反馈](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml)
+[告诉我，你在哪一步卡住](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml) · [MIT](LICENSE) · [安全说明](SECURITY.md)
 
 由 Eric 与 Agents 一起制作。
-
-## 告诉我，你在哪一步卡住
-
-用过一次后，欢迎留下：你想完成什么、给了哪些可公开资料、拿到了什么，以及还缺哪一步。
-
-[分享使用反馈或案例](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml)
 
 ## 四个岗位，共同做出值得做的游戏
 

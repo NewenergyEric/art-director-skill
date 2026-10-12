@@ -8,11 +8,11 @@
   "font": "Noto Sans SC, OFL variable subset",
   "visual_system": "One team, one visual memory.",
   "story": [
-    "collect",
-    "define-and-calibrate",
-    "share-pack",
-    "create",
-    "review-and-revise"
+    "game-purpose",
+    "define-sample",
+    "extend-family",
+    "check-in-context",
+    "revise-and-share"
   ],
   "depth_showcase": {
     "duration_seconds": 24,
@@ -20,68 +20,68 @@
     "preview_seconds": 24,
     "preview_fps": 20,
     "preview_width": 800,
-    "gif_optimizer": "gifsicle -O3 --lossy=20; 96 colors, no dithering"
+    "gif_optimizer": "gifsicle -O3 (lossless optimization); 96 colors, no dithering"
   },
   "assets": [
     {
       "path": "assets/readme/depth-preview-en.gif",
-      "bytes": 5029749,
-      "sha256": "334bb345254f3acac9a24ed1e1f845d0c650ed8bb3ef7558c65162ce0bef7b6e"
+      "bytes": 5126098,
+      "sha256": "cf69063b3d7548200f63dc2cb75e41d6c320fa62875ad65355d387e2dc72a7c0"
     },
     {
       "path": "assets/readme/depth-preview-en.jpg",
-      "bytes": 68217,
-      "sha256": "95d7acf56d558bd529296b0ccac6e7d484d9be96a397327032272fddd0596bec"
+      "bytes": 58860,
+      "sha256": "bbdc0c7e000c62c620bb082d9592f29dcb0381c849d79c27b7a8e0c5ac1cacc6"
     },
     {
       "path": "assets/readme/depth-preview-zh.gif",
-      "bytes": 4827485,
-      "sha256": "bb4d76ce17dd1edd628f12363adf522c94075cd3c4dcae8b23d988483e94a843"
+      "bytes": 5087729,
+      "sha256": "2bda0dd3eb20df60423e8f68e6a0ef65a96b9a6bf442e41ed24ae571ea974c42"
     },
     {
       "path": "assets/readme/depth-preview-zh.jpg",
-      "bytes": 70617,
-      "sha256": "c8034b242e593e3ce62745179114e9c9affb3f47797c46e55b6e575d66dfd02f"
+      "bytes": 58292,
+      "sha256": "8582c3bcf313052a2ccf6792ab62c8798f3177f83ea7bdb3bec0494dd6797296"
     },
     {
       "path": "assets/readme/social-preview.png",
-      "bytes": 688675,
-      "sha256": "dbdd5e7574d7ca2808ff9918b9788b573232bf8a310e94fb4bcf8945266de8a3"
+      "bytes": 1299536,
+      "sha256": "3d3b91384a38dfd5227939cbc2233630812bc6e5b885150dcb993f9b96d14430"
     },
     {
       "path": "docs/assets/motion/depth-comic.webp",
-      "bytes": 98204,
-      "sha256": "859d7a3606787f50e0c12b23afbe8b8f151661a436b76fc5bcbe1a06de2db158"
+      "bytes": 55326,
+      "sha256": "8e385cd62f039a689b91e80637bd1ae172c781d55b69bd1a70ee86370cd39062"
     },
     {
       "path": "docs/assets/motion/depth-game.webp",
-      "bytes": 62804,
-      "sha256": "c5ee333404e242ed63c5f71d53c835de3bfa5df3992d0ac30e15a1cb7044e81b"
+      "bytes": 54996,
+      "sha256": "a69f900da38793043f9c05a95f17fd1d4eaba35dc7653ff2a832584841b72691"
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.jpg",
-      "bytes": 68217,
-      "sha256": "95d7acf56d558bd529296b0ccac6e7d484d9be96a397327032272fddd0596bec"
+      "bytes": 58860,
+      "sha256": "bbdc0c7e000c62c620bb082d9592f29dcb0381c849d79c27b7a8e0c5ac1cacc6"
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.mp4",
-      "bytes": 1995788,
-      "sha256": "871f0f62a149c7d8c6540775ba6b7548e5055ba5523838f04f1f36f79435ce2a"
+      "bytes": 1802424,
+      "sha256": "87af8e68027b4c138c77b81c118b758d01c59b77727b029204e703062fde21ac"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.jpg",
-      "bytes": 70617,
-      "sha256": "c8034b242e593e3ce62745179114e9c9affb3f47797c46e55b6e575d66dfd02f"
+      "bytes": 58292,
+      "sha256": "8582c3bcf313052a2ccf6792ab62c8798f3177f83ea7bdb3bec0494dd6797296"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.mp4",
-      "bytes": 1902850,
-      "sha256": "366b7780ed9da56a95dc1147250ad923df2e3bb2569be8297be2c5e0ff27b60e"
+      "bytes": 1751733,
+      "sha256": "56b77f1b4df3cb77b91fa2e9b1fa2830cda04048d5d3f37e4909781c2fd6f8a7"
     },
     {
       "path": "docs/assets/motion/depth-traditional.webp",
-      "bytes": 83332,
-      "sha256": "ddb1122cf6360451eebcb5187719e2e58436bc5bc2feae67b14c11b01d6cf194"
+      "bytes": 33108,
+      "sha256": "701104b168c5cf5ff5168113e2c6ddea825a4f8cfcedac568f57b6f97981b862"
     }
   ]
 }

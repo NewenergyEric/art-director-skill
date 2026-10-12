@@ -14,6 +14,8 @@ on:
       - "examples/campaign-kit-draft/**"
       - "examples/campaign-public-workspace/**"
       - "examples/pop-borough-draft/**"
+      - "examples/tidekeeper-draft/**"
+      - "examples/game-art-studies/**"
       - "evals/director-workflow-v0.5/**"
       - "evals/public-demo/**"
       - "evals/team-production/**"
@@ -58,6 +60,8 @@ jobs:
           cp -R examples/campaign-kit-draft _site/examples/
           cp -R examples/campaign-public-workspace _site/examples/
           cp -R examples/pop-borough-draft _site/examples/
+          cp -R examples/tidekeeper-draft _site/examples/
+          cp -R examples/game-art-studies _site/examples/
           cp -R evals/director-workflow-v0.5 _site/evals/
           cp -R evals/public-demo _site/evals/
           cp -R evals/team-production _site/evals/

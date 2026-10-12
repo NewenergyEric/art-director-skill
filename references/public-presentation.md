@@ -28,15 +28,21 @@ The website explains the product and provides the film, installation and startin
 
 `motion/src/DepthShowcase.tsx` produces matched English and Chinese GIF/MP4 versions:
 
-1. Give existing work, references and notes to the agent.
-2. Define actionable component requirements and calibrate with samples.
-3. Share rules, samples and delivery requirements as a project pack.
-4. A teammate describes a task; the agent uses its rules, references and version.
-5. Review the result, explain revisions and return shared issues to the director.
+1. Show an original game scene and the player experience it serves.
+2. Establish a representative sample and visible rules for shape, camera, light and materials.
+3. Extend separate assets into a family with distinct structural silhouettes.
+4. Reduce the assets to stated study sizes and composite them in context.
+5. Show an actual before/after revision, then carry rules, samples and check records into a team pack.
 
 Each beat shows an input, action or result. Leave stable reading holds and use eased motion when relationships change. Chapter buttons pause on completed scenes rather than halfway through transitions. Keep the full film within the established 18–25 second range. Label the film as an illustrated workflow using original candidate artwork, not an approved production recording.
 
 The default page, README preview, film, poster, captions and social preview are Chinese. English equivalents remain available. Reuse verified language editions when only the default language changes; regenerate any asset whose actual copy changes.
+
+## Art is the evidence
+
+Lead with original game artwork, a concrete player or production problem, and a visible consequence. Use different visual languages for different genres, not one board recolored. The current cases cover merge props, an illustrated adventure environment and isometric upgrades. Preserve the initial images and targeted revisions; link prompts, reference relationships and file checks from the case guide. Do not publish third-party reference artwork as our work.
+
+Separate concept boards from individual assets and individual assets from engine-ready deliverables. Use the first-article and context checks in `game-art-quality.md`. Keep work marked candidate until an actual director decision exists. A self-review cannot establish that our art exceeds a benchmark account or measures real-player performance.
 
 ## Related roles belong at the end
 
@@ -46,7 +52,7 @@ Keep the role map the final main-content section in the README and introduction.
 
 ## Build and check
 
-- GIF: 800 × 450, full 24-second story, 20 FPS during motion, 96-color palette and `gifsicle -O3 --lossy=20`; budget 6 MiB per language.
+- GIF: 800 × 450, full 24-second story, 20 FPS during motion, 96-color palette and `gifsicle -O3`; budget 6 MiB per language.
 - MP4: 1280 × 720, 30 FPS, H.264 faststart; budget 5 MiB per language. Same-origin player sources, `preload="none"`, controls and no autoplay.
 - Use a static reduced-motion fallback for the README. Keep captions and a text workflow beside the player.
 - Use a version query when replacing cached media or fonts. Record file sizes and hashes in the manifest.

@@ -33,6 +33,7 @@ jobs:
         run: |
           python scripts/style_pack.py validate examples/harbor-studio-draft
           python scripts/style_pack.py validate examples/campaign-studio-draft
+          python scripts/style_pack.py validate examples/tidekeeper-draft
       - name: Package the mother skill
         run: python scripts/package_release.py --out "${{ runner.temp }}/art-director-v0.5.1.zip"
 

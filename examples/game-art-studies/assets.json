@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-13",
+  "tool": "built-in image_gen.imagegen",
+  "model_version": "not provided",
+  "seed": "not provided",
+  "method": "Original generated raster; FFmpeg only resizes/encodes distribution copies. No third-party artwork is bundled.",
+  "assets": [
+    {
+      "id": "tidekeeper",
+      "path": "docs/assets/cases/tidekeeper.jpg",
+      "width": 1440,
+      "height": 810,
+      "bytes": 386012,
+      "sha256": "245987fecf732512b0dd9219141761dab4fff4754da946010262d909e4d95baf",
+      "source_sha256": "39443edb9006aae8db364a3d92b11ed247866fdceadee1cc2d23ef6c1404b595",
+      "status": "candidate",
+      "approval": null
+    },
+    {
+      "id": "tidekeeper-before",
+      "path": "docs/assets/cases/tidekeeper-before.jpg",
+      "width": 1440,
+      "height": 810,
+      "bytes": 429110,
+      "sha256": "a472fe5f96a90b275a87501066a769b12640ac80a8423f63bb7fa5261ed65238",
+      "source_sha256": "41008ee2a7d186d87eaf48b69ed1682de465b6f5e584fcd6f5cab7c6b5089e3c",
+      "status": "candidate",
+      "approval": null
+    },
+    {
+      "id": "bramble",
+      "path": "docs/assets/cases/bramble.jpg",
+      "width": 1440,
+      "height": 810,
+      "bytes": 376898,
+      "sha256": "1e1af8ca5fcdc39c1061de3d8be4a8e5717ed920efc44ba3f87f9ad1cd7b0580",
+      "source_sha256": "f4b66065470ce88400b63a70d63876cdd5012b96c5c29eaac2d70f39c73040db",
+      "status": "candidate",
+      "approval": null
+    },
+    {
+      "id": "depot",
+      "path": "docs/assets/cases/depot.jpg",
+      "width": 1440,
+      "height": 810,
+      "bytes": 275134,
+      "sha256": "199cba23daad35b3234224fcb31bc340e0924b15b49ec0f1e3269122c92c1e99",
+      "source_sha256": "a411f2fc7c5b54bf5269348f8b0e596476c1ecdab3ad041cda00ae7f82175a7f",
+      "status": "candidate",
+      "approval": null
+    },
+    {
+      "id": "depot-before",
+      "path": "docs/assets/cases/depot-before.jpg",
+      "width": 1440,
+      "height": 810,
+      "bytes": 278545,
+      "sha256": "a0e8e1e31dd6f4cadcdf7014a37b357d85e6b356074bd7bfd996f623e48cd310",
+      "source_sha256": "ab7beed205bc8d1f0e8dba604c25bb320dd5b3790028bb018eb11c6e9096a9c3",
+      "status": "candidate",
+      "approval": null
+    },
+    {
+      "id": "lantern-l1",
+      "path": "docs/assets/cases/lantern-l1.png",
+      "width": 512,
+      "height": 512,
+      "bytes": 136002,
+      "sha256": "e7407707734ea24d162c1052dac8fdd89b7f3da5004f2172252521bc5800db14",
+      "source_sha256": "fa77d6bbd432f1605bddc71cc3c0352170ad8339b4a20233cbff57b1491f4254",
+      "status": "candidate",
+      "approval": null,
+      "export_normalization": "Full source canvas resized to 384 x 384, centered in transparent 512 x 512; no pixels cropped or alpha thresholded.",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparent_pixels": 200478,
+        "visible_pixels": 61666,
+        "foreground_bounds": [
+          64,
+          84,
+          430,
+          442
+        ],
+        "edge_clear_pixels": 64
+      }
+    },
+    {
+      "id": "lantern-l2",
+      "path": "docs/assets/cases/lantern-l2.png",
+      "width": 512,
+      "height": 512,
+      "bytes": 122902,
+      "sha256": "ec78d7d410f3ddced5edc2ae043ab968a2e4d504a80c9263e4ce17a585057ddb",
+      "source_sha256": "3c7b154a948fae47ec059ad793b58d5f43824c89ab653c897d3702b934c2f51e",
+      "status": "candidate",
+      "approval": null,
+      "export_normalization": "Full source canvas resized to 384 x 384, centered in transparent 512 x 512; no pixels cropped or alpha thresholded.",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparent_pixels": 217924,
+        "visible_pixels": 44220,
+        "foreground_bounds": [
+          116,
+          68,
+          337,
+          438
+        ],
+        "edge_clear_pixels": 68
+      }
+    },
+    {
+      "id": "lantern-l3",
+      "path": "docs/assets/cases/lantern-l3.png",
+      "width": 512,
+      "height": 512,
+      "bytes": 155346,
+      "sha256": "64316cfef9e4d06c3fb4a767e48389a8ca1b795004ab9dab1dc2778a6096986a",
+      "source_sha256": "2c56b077c40c2e8380258da3542c3808126867d44e12f7d8ac2d2a86fc28c102",
+      "status": "candidate",
+      "approval": null,
+      "export_normalization": "Full source canvas resized to 384 x 384, centered in transparent 512 x 512; no pixels cropped or alpha thresholded.",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparent_pixels": 200098,
+        "visible_pixels": 62046,
+        "foreground_bounds": [
+          64,
+          98,
+          422,
+          421
+        ],
+        "edge_clear_pixels": 64
+      }
+    },
+    {
+      "id": "lantern-l4",
+      "path": "docs/assets/cases/lantern-l4.png",
+      "width": 512,
+      "height": 512,
+      "bytes": 85776,
+      "sha256": "78456c7330e89af0555712420bdb78dd3e04d55f36001098af358854f296b954",
+      "source_sha256": "1573191d7b9d6dde354a2ce3c0d55e6342a3029e46584966604751875b4a9ad5",
+      "status": "candidate",
+      "approval": null,
+      "export_normalization": "Full source canvas resized to 384 x 384, centered in transparent 512 x 512; no pixels cropped or alpha thresholded.",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparent_pixels": 230781,
+        "visible_pixels": 31363,
+        "foreground_bounds": [
+          156,
+          80,
+          363,
+          431
+        ],
+        "edge_clear_pixels": 80
+      }
+    }
+  ]
+}

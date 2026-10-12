@@ -1,9 +1,10 @@
 import React from 'react';
 import {Composition} from 'remotion';
-import {DepthShowcase, DepthSocialPreview, DEPTH_FRAMES} from './DepthShowcase';
+import {DepthShowcase, DepthSocialPreview, GameArtProof, DEPTH_FRAMES} from './DepthShowcase';
 
 export const RemotionRoot: React.FC = () => (
   <>
+    <Composition id="GameArtProof" component={GameArtProof} durationInFrames={1} fps={30} width={1280} height={720}/>
     {(['zh', 'en'] as const).map(language => <Composition
       key={`depth-preview-${language}`}
       id={language === 'zh' ? 'DepthPreviewZH' : 'DepthPreviewEN'}
