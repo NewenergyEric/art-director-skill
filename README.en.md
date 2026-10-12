@@ -1,140 +1,122 @@
 <p align="right"><a href="README.md">中文</a> · <strong>English</strong></p>
 
-[**Game Dev Skills**](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.en.md) · [Market research](https://github.com/NewenergyEric/game-market-intelligence/blob/main/README.en.md) · [Reverse analysis](https://github.com/NewenergyEric/game-reverse-analyst/blob/main/README.en.md) · [Production planning](https://github.com/NewenergyEric/game-production-manager/blob/main/README.en.md) · [Art direction](https://github.com/NewenergyEric/art-director-skill/blob/main/README.en.md)
+[**Game Dev Skills**](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.md) · [Market Intelligence](https://github.com/NewenergyEric/game-market-intelligence) · [Reverse Analyst](https://github.com/NewenergyEric/game-reverse-analyst) · [Production Manager](https://github.com/NewenergyEric/game-production-manager) · **Art Director**
 
 # Art Director
 
 ### One team, one visual memory.
 
-**Less re-explaining for the director. Shared context for the team.**
+**Strong images. A game that still feels inconsistent?**
 
-Turn scattered references, design rules and review notes into a project-specific Skill. The director builds the rules with an agent; teammates load the project pack into their own agents and continue from there. Characters, environments, UI, products and campaigns share the same foundation. Solo creators can wear both hats, keeping decisions consistent across sessions and deliveries.
+Turn the director’s references, work and notes into a shared project Skill. Start with a representative sample, then extend characters, items, environments and UI. Every task carries the project’s rules, references and checks. Solo creators can carry yesterday’s decisions into the next session, too.
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=agent-first-20261010">
-  <img src="assets/readme/depth-preview-en.gif?v=agent-first-20261010" width="100%" alt="24-second workflow: organize references, define rules and samples, share a project pack, create from those rules, review and revise.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=game-art-20261013">
+  <img src="assets/readme/depth-preview-en.gif?v=game-art-20261013" width="100%" alt="24-second original game-art study: define a sample, extend an item family, check a composited board, revise and hand off a project pack.">
 </picture></a>
 
-<p align="center"><sub>A complete collaboration in 24 seconds · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film">Watch the film</a> · <a href="docs/assets/motion/depth-showcase-en.mp4">Download English MP4</a></sub></p>
+<p align="center"><sub>24 seconds: from sample to asset family · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film">Watch the clear version</a> · <a href="docs/assets/motion/depth-showcase-en.mp4">Download MP4</a> · <a href="docs/CASE-STUDIES.en.md">Read the case evidence</a></sub></p>
 
-## Why I built this
-
-**Keep the director’s judgment with the work as it changes hands.**
-
-This Skill grew out of conversations with an art-director friend. He cared about a character’s personality, the feel of an image and the connections a game creates. Yet so much time went into explaining the same decisions: which part of a reference mattered, why a button felt wrong, what a new teammate needed to know.
-
-I wanted those decisions to travel. An agent helps the director articulate them; samples make them reviewable; a project pack carries the rules and references to the team. The aim is more room for creative judgment and a clearer starting point for the next person.
-
-That handoff problem also appears in market research, competitor analysis and production planning. Game Dev Skills connects those responsibilities so each role can build on the work already done.
-
-<!-- Testimonial reserved: add only real feedback with explicit permission to quote and attribute. No customer endorsement is currently claimed. -->
-
-## Install, then ask
-
-Install in an Agent Skills-compatible tool, such as Codex, Claude Code or Cursor:
+## Install. Then work in your agent.
 
 ```sh
 npx skills add https://github.com/NewenergyEric/art-director-skill
 ```
 
-Work in your agent. Put your materials in a folder it can read, then describe what you need.
+Use a tool that supports Agent Skills, such as Codex, Claude Code or Cursor. Give the agent access to your materials and say:
 
-### I’m the director. Help me establish the rules.
+> Use `$art-director`. Here are our gameplay notes, references, existing work and art-director feedback. Propose the visual direction and make a representative sample. Then help establish the asset and component requirements and package them for the team.
 
-> Use `$art-director`. Here are our existing designs, references and notes. Draft our art direction, then help me define the character, environment and UI requirements. Prepare representative samples for me to review, and package the result for the team.
+Continue existing direction without rebuilding it. Your agent uses its available generation and editing tools; this Skill does not include an image model.
 
-**You get:** a substantive draft, decisions that need your input, and a shareable project pack. Incomplete inputs are enough to start. The agent organizes what exists and asks about the gaps that matter next.
+## See the work and the problem it addresses
 
-Revise it as you would with a colleague: “Make the buttons feel thicker; lower the saturation of the disabled state.” Or: “Keep these character proportions; clothing can vary.” The agent records those decisions and keeps the guides and pack in sync.
+### 01 · An upgrade chain needs more than four colors
 
-### I’m a teammate. Help me design within the rules.
+![Tidekeeper: original key art showing a mechanic repairing a coastal beacon.](docs/assets/cases/tidekeeper.jpg)
 
-Give your agent the **complete project pack** from the director, then say:
+<p align="center">
+  <img src="docs/assets/cases/lantern-l1.png" width="22%" alt="Tidekeeper L1">
+  <img src="docs/assets/cases/lantern-l2.png" width="22%" alt="Tidekeeper L2">
+  <img src="docs/assets/cases/lantern-l3.png" width="22%" alt="Tidekeeper L3">
+  <img src="docs/assets/cases/lantern-l4.png" width="22%" alt="Tidekeeper L4">
+</p>
 
-> Read this project pack. Create the default, pressed and disabled button states using its UI rules. Show me a first sample, explain which rules you used, and list anything still needing a check.
+Four separate item candidates inherit **view, light and materials while changing silhouette and structure**. They are then inspected at 64 / 96 px in a composited study.
 
-**You get:** a production task with its project version, relevant rules and references, followed by the sample and check record. Continue with “Check these states inside the main screen” without explaining the whole style again.
+[Original, revision and alpha checks](docs/CASE-STUDIES.en.md#tidekeeper) · [Actual rule source](examples/tidekeeper-draft/style-pack.json)
 
-The agent creates or edits through the tools available in your environment. This Skill carries the rules into that work; it does not include an image model or design application.
+### 02 · A beautiful world still needs a readable route
 
-### I have a result. Help me review and revise it.
+![Bramble Courier: a small character, branch route and warm destination.](docs/assets/cases/bramble.jpg)
 
-> Check these assets against the project rules. List the inconsistencies, their basis and specific fixes. Correct this button first, then check related components for the same issue.
+Pale mist separates the courier, a branch carries the route across the middle ground, and a warm window marks the destination. **Art direction includes what the player notices first.**
 
-**You get:** an actionable revision list that distinguishes visual issues, technical issues and unchecked items. Changes affecting the whole project go back to the director before a new version is published.
+[Read the adventure-art decisions](docs/CASE-STUDIES.en.md#bramble)
 
-## What it connects
+### 03 · Upgrade the building. Keep the world intact.
 
-| Where you are | What the Skill helps you do |
-|---|---|
-| Many references, no coherent spec | Organize project goals, visual language and asset or component requirements |
-| Different interpretations of the same brief | Calibrate with representative samples and real compositions; record decisions |
-| A teammate or vendor is joining | Share a pack containing rules, samples, references and delivery requirements |
-| Several people are producing at once | Keep each task on a clear version, with fixed elements and allowed variations |
-| Deliveries drift and revisions repeat | Review against the rules, explain fixes and capture recurring issues |
+![Red Dune Depot: three upgrade concepts retain the entrance, construction language and camera.](docs/assets/cases/depot.jpg)
 
-That shared context is the project’s **visual memory**. Consistent delivery leaves room for different designs.
+Hut, water tower, wind pump: new functions change the massing. When the rotor had the wrong blade count, that element was revised while preserving the building system.
 
-## What the team receives
+[See the targeted revision and open checks](docs/CASE-STUDIES.en.md#depot)
 
-A project pack ready to zip and share, containing:
+These are actual original generations with agent visual observations and file measurements. The board is a composited study. Device checks, engine import and director production approval remain separate.
 
-- **Five readable guides:** material index, project brief, design rules, delivery and review, references and counterexamples.
-- **A project-specific Skill:** tells each teammate’s agent what to preserve and what may vary.
-- **Materials and version records:** relevant references, samples, tools and file inventory travel together, without the original chat history.
+## From the director’s decisions to the team’s delivery
 
-Build on an existing design system. The director publishes updates; ongoing tasks retain their original versions so the rules do not shift midway.
+1. **Use the existing material.** Draft what each reference contributes and what must stay fixed.
+2. **Calibrate with a sample.** Inspect shape, proportion, materials and purpose; revise a specific problem.
+3. **Carry the rules into each task.** Teammates receive a project Skill, samples, references, version and delivery requirements.
+4. **Check in context.** Review families, display size and combinations; return shared issues to the direction.
 
-## Explore two project packs
+The handoff includes five readable guides, a project-specific Skill and the relevant files. It can be distributed as a ZIP. Existing tasks retain their original version; new tasks use the published current pack.
 
-[Harbor Studio · game art](examples/harbor-studio-draft/guides/00-index.md): characters, environments, UI and item families in one specification.
+After receiving the director’s **complete project pack**, a teammate can say:
 
-[Weekend Light · campaign design](examples/campaign-studio-draft/guides/00-index.md): products, graphics, copy, UI and multiple formats delivered together.
+> Extend two levels of this lighting family. Keep the view, light and materials, with clearer upgrade silhouettes. Show the first article, then check it on the board. Record the rules used and the checks still open.
 
-Both are runnable fictional drafts with Chinese project-authored content. The film illustrates the workflow with original candidate artwork; it is not a recording of an approved production run.
+The director can continue:
+
+> This is too realistic: ocean detail distracts from the repair. Simplify the surfaces and background. Keep character identity, hand contact and spatial relationships, then compare the revision.
+
+## Why this exists
+
+This Skill began in a conversation with an art-director friend who cared about character, atmosphere and how games connect people. Too much time went into repeating the same reference explanations, component decisions and revision notes.
+
+The aim is to pass those decisions along with the work. The director keeps creative judgment; the agent organizes the context and handoff. The same need connects market research, competitive analysis and production planning in Game Dev Skills.
+
+<!-- Testimonial reserved: no customer endorsement is claimed. -->
 
 <details>
-<summary><strong>Requirements, offline package and technical documentation</strong></summary>
+<summary><strong>Project packs, guides and requirements</strong></summary>
 
-Core tools require Python 3.10+ and use the standard library; Pillow is optional for pixel checks. A Skill ZIP is also available as the [current build](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=chinese-primary-20261011). Teammates need the director’s complete project pack; installing the general Skill does not provide project materials.
+Core tools use Python 3.10+ and its standard library; Pillow is optional for pixel checks. You can also [download the current Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=game-art-20261013). Installing the general Skill does not grant access to private team materials.
 
-Designers use natural language. The agent handles files and commands.
+[Human guide](docs/HUMAN-GUIDE.en.md) · [Agent integration](docs/AGENT-GUIDE.en.md) · [Skill reading edition](docs/SKILL.en.md) · [Game-art quality method](references/game-art-quality.md)
 
-[Detailed user guide](docs/HUMAN-GUIDE.en.md) · [Agent and engineering guide](docs/AGENT-GUIDE.en.md) · [Skill reading edition](docs/SKILL.en.md) · [Project pack contract](references/pack-contract.md)
+[Tidekeeper first-article draft](examples/tidekeeper-draft/style-pack.json) · [Harbor Studio setup example](examples/harbor-studio-draft/guides/00-index.md) · [Campaign design example](examples/campaign-studio-draft/guides/00-index.md)
 
 ```sh
-python scripts/style_pack.py validate examples/harbor-studio-draft
-python scripts/style_pack.py build examples/harbor-studio-draft --out NEW_PACK
+python scripts/style_pack.py validate examples/tidekeeper-draft
+python scripts/style_pack.py build examples/tidekeeper-draft --out NEW_PACK
 ```
 
 </details>
 
----
-
 <details>
 <summary><strong>Validation and limits</strong></summary>
 
-108 deterministic tests cover packs, rule references, frozen versions, delivery checks and relocation. Python 3.10 / 3.12 runs on Windows / Linux; the film and CodeQL have independent checks.
+[Current CI](https://github.com/NewenergyEric/art-director-skill/actions) · [Original case evidence](docs/CASE-STUDIES.en.md) · [Workflow acceptance](evals/director-workflow-v0.5/acceptance.md)
 
-[Current CI](https://github.com/NewenergyEric/art-director-skill/actions) · [Reproducible acceptance evidence](evals/director-workflow-v0.5/acceptance.md)
-
-These checks verify files and workflow contracts, not aesthetic quality or acceptance inside a real design tool or engine. Unknown specifications, proposals and unchecked work stay visible.
-
-Pack tools run locally and do not automatically upload project materials. Generation and editing services follow your host tools and authorization.
+File checks do not establish artistic quality; agent observations do not establish director approval. Pack tools run locally. Generation services follow the host’s tools and your authorization.
 
 </details>
 
----
-
-[MIT License](LICENSE) · [Security](SECURITY.md) · [Share feedback](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml)
+[Tell us where you got stuck](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml) · [MIT](LICENSE) · [Security](SECURITY.md)
 
 Made by Eric and Agents.
-
-## Tell me where the handoff breaks
-
-After trying one task, share the goal, public inputs, actual output and what was still missing.
-
-[Share feedback or a case](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml)
 
 ## Four roles. One game worth making.
 

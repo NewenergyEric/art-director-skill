@@ -1,0 +1,587 @@
+{
+  "checks": [
+    {
+      "check": "tidekeeper hash",
+      "passed": true
+    },
+    {
+      "check": "tidekeeper motion copy",
+      "passed": true
+    },
+    {
+      "check": "tidekeeper-before hash",
+      "passed": true
+    },
+    {
+      "check": "tidekeeper-before motion copy",
+      "passed": true
+    },
+    {
+      "check": "bramble hash",
+      "passed": true
+    },
+    {
+      "check": "bramble motion copy",
+      "passed": true
+    },
+    {
+      "check": "depot hash",
+      "passed": true
+    },
+    {
+      "check": "depot motion copy",
+      "passed": true
+    },
+    {
+      "check": "depot-before hash",
+      "passed": true
+    },
+    {
+      "check": "depot-before motion copy",
+      "passed": true
+    },
+    {
+      "check": "lantern-l1 hash",
+      "passed": true
+    },
+    {
+      "check": "lantern-l1 motion copy",
+      "passed": true
+    },
+    {
+      "check": "lantern-l1 alpha and 64px minimum clearance",
+      "passed": true
+    },
+    {
+      "check": "lantern-l1 pack copy",
+      "passed": true
+    },
+    {
+      "check": "lantern-l2 hash",
+      "passed": true
+    },
+    {
+      "check": "lantern-l2 motion copy",
+      "passed": true
+    },
+    {
+      "check": "lantern-l2 alpha and 64px minimum clearance",
+      "passed": true
+    },
+    {
+      "check": "lantern-l2 pack copy",
+      "passed": true
+    },
+    {
+      "check": "lantern-l3 hash",
+      "passed": true
+    },
+    {
+      "check": "lantern-l3 motion copy",
+      "passed": true
+    },
+    {
+      "check": "lantern-l3 alpha and 64px minimum clearance",
+      "passed": true
+    },
+    {
+      "check": "lantern-l3 pack copy",
+      "passed": true
+    },
+    {
+      "check": "lantern-l4 hash",
+      "passed": true
+    },
+    {
+      "check": "lantern-l4 motion copy",
+      "passed": true
+    },
+    {
+      "check": "lantern-l4 alpha and 64px minimum clearance",
+      "passed": true
+    },
+    {
+      "check": "lantern-l4 pack copy",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/assets/cases/tidekeeper.jpg",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/CASE-STUDIES.md#tidekeeper",
+      "passed": true
+    },
+    {
+      "check": "README.md link examples/tidekeeper-draft/style-pack.json",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/assets/cases/bramble.jpg",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/CASE-STUDIES.md#bramble",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/assets/cases/depot.jpg",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/CASE-STUDIES.md#depot",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/HUMAN-GUIDE.md",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/AGENT-GUIDE.md",
+      "passed": true
+    },
+    {
+      "check": "README.md link SKILL.md",
+      "passed": true
+    },
+    {
+      "check": "README.md link references/game-art-quality.md",
+      "passed": true
+    },
+    {
+      "check": "README.md link examples/tidekeeper-draft/style-pack.json",
+      "passed": true
+    },
+    {
+      "check": "README.md link examples/harbor-studio-draft/guides/00-index.md",
+      "passed": true
+    },
+    {
+      "check": "README.md link examples/campaign-studio-draft/guides/00-index.md",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/CASE-STUDIES.md",
+      "passed": true
+    },
+    {
+      "check": "README.md link evals/director-workflow-v0.5/acceptance.md",
+      "passed": true
+    },
+    {
+      "check": "README.md link LICENSE",
+      "passed": true
+    },
+    {
+      "check": "README.md link SECURITY.md",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/WORKFLOW.md",
+      "passed": true
+    },
+    {
+      "check": "README.md link docs/assets/workflow/workflow-zh.png",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/assets/cases/tidekeeper.jpg",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/CASE-STUDIES.en.md#tidekeeper",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link examples/tidekeeper-draft/style-pack.json",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/assets/cases/bramble.jpg",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/CASE-STUDIES.en.md#bramble",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/assets/cases/depot.jpg",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/CASE-STUDIES.en.md#depot",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/HUMAN-GUIDE.en.md",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/AGENT-GUIDE.en.md",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/SKILL.en.md",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link references/game-art-quality.md",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link examples/tidekeeper-draft/style-pack.json",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link examples/harbor-studio-draft/guides/00-index.md",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link examples/campaign-studio-draft/guides/00-index.md",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/CASE-STUDIES.en.md",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link evals/director-workflow-v0.5/acceptance.md",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link LICENSE",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link SECURITY.md",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/WORKFLOW.en.md",
+      "passed": true
+    },
+    {
+      "check": "README.en.md link docs/assets/workflow/workflow-en.png",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/assets/cases/tidekeeper.jpg",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/CASE-STUDIES.md#tidekeeper",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link examples/tidekeeper-draft/style-pack.json",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/assets/cases/bramble.jpg",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/CASE-STUDIES.md#bramble",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/assets/cases/depot.jpg",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/CASE-STUDIES.md#depot",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/HUMAN-GUIDE.md",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/AGENT-GUIDE.md",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link SKILL.md",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link references/game-art-quality.md",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link examples/tidekeeper-draft/style-pack.json",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link examples/harbor-studio-draft/guides/00-index.md",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link examples/campaign-studio-draft/guides/00-index.md",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/CASE-STUDIES.md",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link evals/director-workflow-v0.5/acceptance.md",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link LICENSE",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link SECURITY.md",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/WORKFLOW.md",
+      "passed": true
+    },
+    {
+      "check": "README.zh.md link docs/assets/workflow/workflow-zh.png",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link CASE-STUDIES.en.md",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link assets/cases/tidekeeper.jpg",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link assets/cases/tidekeeper-before.jpg",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../examples/game-art-studies/prompts/tidekeeper-keyart.txt",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../examples/game-art-studies/prompts/tidekeeper-edit-v2.txt",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link assets/cases/readability.png",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../examples/tidekeeper-draft/style-pack.json",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../examples/game-art-studies/verification.json",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../examples/game-art-studies/prompts/",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../examples/game-art-studies/assets.json",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link assets/cases/bramble.jpg",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../examples/game-art-studies/prompts/bramble-keyart.txt",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link assets/cases/depot.jpg",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link assets/cases/depot-before.jpg",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../examples/game-art-studies/prompts/depot-upgrades.txt",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../examples/game-art-studies/prompts/depot-rotor-fix.txt",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../references/game-art-quality.md",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.md link ../templates/game-art-first-article.template.md",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link CASE-STUDIES.md",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link assets/cases/tidekeeper.jpg",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link assets/cases/tidekeeper-before.jpg",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../examples/game-art-studies/prompts/tidekeeper-keyart.txt",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../examples/game-art-studies/prompts/tidekeeper-edit-v2.txt",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link assets/cases/readability.png",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../examples/tidekeeper-draft/style-pack.json",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../examples/game-art-studies/verification.json",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../examples/game-art-studies/prompts/",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../examples/game-art-studies/assets.json",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link assets/cases/bramble.jpg",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../examples/game-art-studies/prompts/bramble-keyart.txt",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link assets/cases/depot.jpg",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link assets/cases/depot-before.jpg",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../examples/game-art-studies/prompts/depot-upgrades.txt",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../examples/game-art-studies/prompts/depot-rotor-fix.txt",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../references/game-art-quality.md",
+      "passed": true
+    },
+    {
+      "check": "docs\\CASE-STUDIES.en.md link ../templates/game-art-first-article.template.md",
+      "passed": true
+    },
+    {
+      "check": "references\\game-art-quality.md link ../templates/game-art-first-article.template.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\game-art-studies\\README.md link ../../docs/CASE-STUDIES.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\game-art-studies\\README.md link ../../docs/CASE-STUDIES.en.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\game-art-studies\\README.md link ../tidekeeper-draft/",
+      "passed": true
+    },
+    {
+      "check": "examples\\game-art-studies\\README.md link ../../docs/assets/cases/",
+      "passed": true
+    },
+    {
+      "check": "examples\\game-art-studies\\README.md link ../../motion/src/DepthShowcase.tsx",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\SKILL.md link guides/00-index.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\00-index.md link 01-positioning.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\00-index.md link 02-design-system.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\00-index.md link 03-delivery-review.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\00-index.md link 04-reference-guide.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\00-index.md link ../style-pack.json",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\00-index.md link ../STYLE.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\00-index.md link ../SKILL.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\02-design-system.md link ../STYLE.md",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\04-reference-guide.md link ../references/tidekeeper.jpg",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\04-reference-guide.md link ../references/lantern-l1.png",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\04-reference-guide.md link ../references/lantern-l2.png",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\04-reference-guide.md link ../references/lantern-l3.png",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\04-reference-guide.md link ../references/lantern-l4.png",
+      "passed": true
+    },
+    {
+      "check": "examples\\tidekeeper-draft\\guides\\04-reference-guide.md link ../references/production-notes.md",
+      "passed": true
+    },
+    {
+      "check": "Chinese README compatibility copy",
+      "passed": true
+    },
+    {
+      "check": "Chinese landing compatibility copy",
+      "passed": true
+    }
+  ],
+  "passed": 145,
+  "total": 145,
+  "failed": []
+}

@@ -4,186 +4,42 @@ import {FieldFonts, fieldFont} from './RenderFonts';
 
 export const DEPTH_FRAMES = 720;
 type Language = 'zh' | 'en';
-const C = {navy: '#001f3f', teal: '#007d86', mint: '#92e4da', paper: '#f5f9fb', muted: '#b2cbd7'};
-const clamp = (n: number) => Math.max(0, Math.min(1, n));
-const ease = (n: number) => {const t = clamp(n); return t * t * (3 - 2 * t);};
-const progress = (frame: number, start: number, duration = 22) => ease((frame - start) / duration);
-const mix = (a: number, b: number, t: number) => a + (b - a) * t;
-const tr = (language: Language, zh: string, en: string) => language === 'zh' ? zh : en;
-const shadow = '0 22px 64px #0007, 0 1px 0 #ffffff38 inset';
-
-// Reading intervals are still; shared objects travel when their role changes.
-const beats = [0, 120, 252, 372, 516, 630, DEPTH_FRAMES];
-const headings = {
-  zh: [['从你手上的', '资料开始。'], ['把风格说到', '能执行。'], ['打成一个包，', '交给整个团队。'], ['说出任务，', '沿用同一版。'], ['查出偏差，', '带着依据改。']],
-  en: [['Start with', 'what you have.'], ['Make the style', 'actionable.'], ['One project pack.', 'The whole team.'], ['Describe the task.', 'Use the same rules.'], ['Find the drift.', 'Fix it with context.']],
-};
-
-function Beat({frame, index, children}: {frame: number; index: number; children: React.ReactNode}) {
-  const enter = index === 0 ? 1 : progress(frame, beats[index] - 15, 25);
-  const leave = index === 5 ? 0 : progress(frame, beats[index + 1] - 15, 25);
-  if (enter === 0 || leave === 1) return null;
-  return <AbsoluteFill style={{zIndex: 2, opacity: enter * (1 - leave), transform: `translateY(${(1 - enter) * 34 - leave * 24}px)`}}>{children}</AbsoluteFill>;
+const C = {navy:'#001f3f', teal:'#007d86', mint:'#92e4da', paper:'#f5f9fb', cream:'#fff1d5'};
+const clamp=(v:number)=>Math.max(0,Math.min(1,v));
+const ease=(v:number)=>{const n=clamp(v);return n*n*(3-2*n);};
+const p=(f:number,s:number,d=24)=>ease((f-s)/d);
+const t=(l:Language,a:string,b:string)=>l==='zh'?a:b;
+const art=(name:string)=>staticFile('cases/'+name);
+const stops=[0,102,234,360,486,606,720];
+function Scene({f,i,children}:{f:number;i:number;children:React.ReactNode}){
+  const enter=i===0?1:p(f,stops[i]-6,12),leave=i===5?0:p(f,stops[i+1]-6,12);
+  if(!enter||leave===1)return null;
+  return <AbsoluteFill style={{opacity:enter*(1-leave),overflow:'hidden'}}>{children}</AbsoluteFill>;
 }
-
-function Heading({index, language}: {index: number; language: Language}) {
-  const lines = headings[language][index];
-  const centered = index === 2;
-  return <div style={{position: 'absolute', left: centered ? 70 : 56, top: 108, zIndex: 5, width: centered ? 1140 : 710, textAlign: centered ? 'center' : 'left'}}>
-    <div style={{fontSize: 18, color: C.mint, letterSpacing: 2, marginBottom: 18}}>{['01 / COLLECT', '02 / DEFINE', '03 / SHARE', '04 / CREATE', '05 / REVIEW'][index]}</div>
-    <div style={{fontSize: language === 'zh' ? (centered ? 66 : 73) : 62, fontWeight: 420, lineHeight: 1.13, letterSpacing: -3, transform: 'rotate(-2deg) skewX(-4deg)', transformOrigin: centered ? 'center' : 'left'}}>
-      {lines[0]}<br/><strong style={{fontWeight: 820, color: C.mint}}>{lines[1]}</strong>
-    </div>
-  </div>;
+function Photo({name,style={}}:{name:string;style?:React.CSSProperties}){return <Img src={art(name)} style={{width:'100%',height:'100%',objectFit:'cover',...style}}/>;}
+function Kicker({children,light=true}:{children:React.ReactNode;light?:boolean}){return <div style={{fontSize:17,letterSpacing:2,fontWeight:650,color:light?C.mint:C.teal}}>{children}</div>;}
+function Head({children,style={}}:{children:React.ReactNode;style?:React.CSSProperties}){return <div style={{fontSize:68,fontWeight:820,lineHeight:1.12,letterSpacing:-3,...style}}>{children}</div>;}
+function Caption({children,dark=false}:{children:React.ReactNode;dark?:boolean}){return <div style={{position:'absolute',left:54,bottom:52,fontSize:23,fontWeight:550,color:dark?C.navy:C.paper,lineHeight:1.5}}>{children}</div>;}
+function Lamp({n,style={}}:{n:number;style?:React.CSSProperties}){return <Img src={art(`lantern-l${n}.png`)} style={{objectFit:'contain',...style}}/>;}
+const names={zh:['矮油灯','提柄风灯','圆镜探照灯','锥形航标'],en:['Pocket lamp','Storm lantern','Searchlight','Coastal beacon']};
+function Opening({f,l}:{f:number;l:Language}){
+  const a=p(f,0,28);
+  return <><Photo name="bramble.jpg" style={{transform:`scale(${1.035-.035*a})`}}/><AbsoluteFill style={{background:'linear-gradient(90deg,#101923cf 0%,#10192385 41%,transparent 78%)'}}/>
+    <div style={{position:'absolute',left:54,top:112,transform:`translateX(${(1-a)*-26}px)`}}><Kicker>ART DIRECTOR / GAME ART SKILL</Kicker><Head style={{marginTop:29,fontSize:l==='zh'?76:69,maxWidth:730,transform:'rotate(-2deg)'}}>{t(l,'好看，还要','Beautiful.')}<br/><span style={{color:C.cream}}>{t(l,'像你的游戏。','Built for your game.')}</span></Head><p style={{fontSize:26,maxWidth:530,lineHeight:1.55,marginTop:33}}>{t(l,'角色、物品、场景，放在一起才见真章。','Characters, items, environments. The real test is how they work together.')}</p></div>
+    <Caption>{t(l,'从用途出发 · 原创手绘冒险场景','START WITH THE PLAYER EXPERIENCE · ORIGINAL ADVENTURE ART')}</Caption></>;
 }
-
-function Label({children, dark = false}: {children: React.ReactNode; dark?: boolean}) {
-  return <div style={{fontSize: 17, letterSpacing: 1, color: dark ? C.teal : C.mint, fontWeight: 650}}>{children}</div>;
+function Direction({f,l}:{f:number;l:Language}){return <><Photo name="tidekeeper.jpg"/><AbsoluteFill style={{background:'linear-gradient(90deg,#001f3feb, #001f3fab 37%,#001f3f05 74%)'}}/>
+  <div style={{position:'absolute',left:54,top:105,width:595}}><Kicker>{t(l,'01 / 主美建立样板','01 / DIRECTOR DEFINES A SAMPLE')}</Kicker><Head style={{marginTop:24}}>{t(l,'把“这种感觉”，','Make the feeling')}<br/><span style={{color:C.mint}}>{t(l,'说到能执行。','actionable.')}</span></Head><div style={{marginTop:34,fontSize:27,lineHeight:1.9,opacity:p(f,110,25)}}>{t(l,'大色面 · 上左光 · 海绿搪瓷与黄铜','Broad shapes · upper-left light')}<br/>{t(l,'先看一件，再确定共同语言。','Sea-green enamel · warm brass')}</div></div>
+  <div style={{position:'absolute',right:58,bottom:112,borderLeft:'3px solid '+C.cream,padding:'10px 18px',background:'#001f3fd9',fontSize:25,opacity:p(f,148),transform:`translateY(${(1-p(f,148))*20}px)`}}>{t(l,'修灯动作，是画面的焦点。','The repair action is the focal point.')}</div><Caption>{t(l,'主美提供作品与批注 → Agent 整理候选规则 → 用样板校准','WORK + NOTES → PROPOSED RULES → SAMPLE REVIEW')}</Caption></>;}
+function Family({f,l}:{f:number;l:Language}){return <AbsoluteFill style={{background:C.cream,color:C.navy}}><div style={{position:'absolute',left:54,top:87}}><Kicker light={false}>{t(l,'02 / 成套扩展','02 / BUILD A FAMILY')}</Kicker><Head style={{marginTop:20,fontSize:l==='zh'?61:57}}>{t(l,'同一种画风，四种清楚的轮廓。','One visual language. Four distinct silhouettes.')}</Head></div>
+  {[1,2,3,4].map((n,i)=>{const a=p(f,242+i*8,26);return <div key={n} style={{position:'absolute',left:43+i*302,top:259,width:283,opacity:a,transform:`translateY(${(1-a)*78}px) rotate(${(1-a)*(i%2?7:-7)}deg)`}}><Lamp n={n} style={{width:283,height:303}}/><div style={{fontSize:24,textAlign:'center',marginTop:12}}><span style={{fontSize:16,color:C.teal,marginRight:13}}>L{n}</span>{names[l][i]}</div></div>;})}<Caption dark>{t(l,'固定镜头、光源与材料；等级改变结构，不只换色。','Keep view, light and materials. Change the structure, not just the color.')}</Caption></AbsoluteFill>;}
+function Context({f,l}:{f:number;l:Language}){
+ const join=p(f,400,28),pop=p(f,428,18),cells=[1,2,3,4,2,1,4,3,1,2,3,4];
+ return <AbsoluteFill style={{background:C.navy}}><div style={{position:'absolute',left:54,top:105,width:510}}><Kicker>{t(l,'03 / 放回使用场景','03 / CHECK IN CONTEXT')}</Kicker><Head style={{marginTop:23,fontSize:65}}>{t(l,'缩小以后，','Still readable')}<br/><span style={{color:C.mint}}>{t(l,'还认得出来吗？','at game size?')}</span></Head><p style={{fontSize:27,lineHeight:1.65,marginTop:34}}>{t(l,'并排看等级，放回棋盘看密度。','Check adjacent levels and board density.')}<br/>{t(l,'64 / 96 px 是本次试验尺度。','64 / 96 px are study sizes.')}</p><div style={{display:'flex',gap:22,marginTop:23}}>{[1,2,3,4].map(n=><div key={n} style={{width:80,height:80,background:'#e2f1ef',borderRadius:8,display:'grid',placeItems:'center'}}><Lamp n={n} style={{width:64,height:64}}/></div>)}</div></div>
+ <div style={{position:'absolute',right:52,top:99,width:554,height:501,background:'#e2f1ef',border:'9px solid #548a8c',borderRadius:24,boxShadow:'22px 24px 0 #002e49',transform:`perspective(1200px) rotateY(${(1-p(f,365,26))*-10}deg)`}}><div style={{padding:'19px 25px',color:C.navy,fontSize:20,fontWeight:750,borderBottom:'1px solid #93b8b9'}}>{t(l,'潮灯小镇 / 棋盘合成示意','TIDEKEEPER / COMPOSITED BOARD STUDY')}</div><div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:8,padding:16}}>{cells.map((n,i)=><div key={i} style={{height:105,background:i===5||i===6?'#b3d8cf':'#cee5e1',borderRadius:9,display:'grid',placeItems:'center'}}>{i!==5&&i!==6&&<Lamp n={n} style={{width:96,height:96}}/>}</div>)}</div>{[0,1].map(i=><Lamp key={i} n={1} style={{position:'absolute',left:156+i*128+(i===0?128*join:0),top:202,width:96,height:96,opacity:1-pop,transform:`scale(${1-.13*join})`}}/>)}<Lamp n={2} style={{position:'absolute',left:280,top:198,width:104,height:104,opacity:pop,transform:`scale(${.65+.35*pop})`}}/><div style={{position:'absolute',bottom:13,left:20,right:20,color:C.teal,fontSize:17}}>{t(l,'仅演示资产关系；非游戏运行录屏','Asset relationship study; not a game recording')}</div></div><Caption>{t(l,'检查：轮廓 · 等级差异 · 背景对比 · 透明边缘','CHECK: SHAPE · LEVEL DIFFERENCE · CONTRAST · ALPHA EDGES')}</Caption></AbsoluteFill>;
 }
-
-const positions = [
-  {x: 765, y: 128, w: 416, h: 424, r: 8},
-  {x: 880, y: 162, w: 282, h: 393, r: 9},
-  {x: 490, y: 356, w: 300, h: 182, r: -4},
-  {x: 930, y: 110, w: 255, h: 174, r: 5},
-  {x: 1000, y: 172, w: 186, h: 138, r: 7},
-  {x: 808, y: 115, w: 362, h: 450, r: 8},
-];
-function SharedArtwork({frame, language}: {frame: number; language: Language}) {
-  let pos = positions[0];
-  for (let i = 1; i < positions.length; i++) {
-    const t = progress(frame, beats[i] - 18, 32);
-    pos = {x: mix(pos.x, positions[i].x, t), y: mix(pos.y, positions[i].y, t), w: mix(pos.w, positions[i].w, t), h: mix(pos.h, positions[i].h, t), r: mix(pos.r, positions[i].r, t)};
-  }
-  const vanish = progress(frame, 272, 16) * (1 - progress(frame, 360, 18));
-  return <div style={{position: 'absolute', left: pos.x, top: pos.y, width: pos.w, height: pos.h, padding: 10, background: C.paper, borderRadius: 12, transform: `perspective(1300px) rotateY(-8deg) rotate(${pos.r}deg)`, boxShadow: shadow, opacity: 1 - vanish, zIndex: 1}}>
-    <div style={{height: 'calc(100% - 32px)', overflow: 'hidden', borderRadius: 5}}><Img src={staticFile('studio/asset-system-board.png')} style={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: '15% 20%'}}/></div>
-    <div style={{fontSize: 15, color: C.navy, paddingTop: 9, display: 'flex', justifyContent: 'space-between'}}><span>{tr(language, '项目参考 · 原创候选', 'PROJECT REFERENCE')}</span><span style={{color: C.teal}}>●</span></div>
-  </div>;
-}
-
-function InputBeat({frame, language}: {frame: number; language: Language}) {
-  const intake = progress(frame, 12, 25);
-  return <>
-    <Heading index={0} language={language}/>
-    <div style={{position: 'absolute', left: 60, top: 348, width: 585, padding: '23px 28px', border: '1px solid #92e4da60', background: '#06344d', borderRadius: 12, boxShadow: shadow, transform: `translateX(${(1 - intake) * -26}px)`, opacity: intake}}>
-      <Label>{tr(language, '你对 Agent 说', 'YOU → YOUR AGENT')}</Label>
-      <p style={{fontSize: 30, margin: '13px 0 0', lineHeight: 1.5}}>{tr(language, '“用这些参考，建立项目规范。”', '“Turn these references into our project’s art direction.”')}</p>
-    </div>
-    {[tr(language, '已有作品', 'Your work'), tr(language, '喜欢的参考', 'References'), tr(language, '主美的批注', 'Director’s notes')].map((text, i) => {
-      const t = progress(frame, 5 + i * 8, 24);
-      return <div key={text} style={{position: 'absolute', left: 692 + i * 168, top: 554 + (i % 2) * 17, padding: '14px 23px', borderRadius: 6, background: i === 2 ? C.mint : C.paper, color: C.navy, fontSize: 22, boxShadow: shadow, transform: `translateY(${(1 - t) * 66}px) rotate(${i * 4 - 7}deg)`, opacity: t}}>{text}</div>;
-    })}
-    <div style={{position: 'absolute', left: 61, top: 550, width: 580, fontSize: 25, lineHeight: 1.45, color: C.muted}}>{tr(language, '资料不完整，也能先整理出初稿。', 'Start with a draft, even with incomplete inputs.')}</div>
-  </>;
-}
-
-function DefineBeat({frame, language}: {frame: number; language: Language}) {
-  const p = progress(frame, 127, 30), confirm = progress(frame, 207, 18);
-  return <>
-    <Heading index={1} language={language}/>
-    <div style={{position: 'absolute', left: 641, top: 176, width: 466, padding: '29px 33px', color: C.navy, background: C.paper, borderRadius: 12, boxShadow: shadow, zIndex: 3, transform: `perspective(1500px) rotateY(${mix(-12, -3, p)}deg) rotate(${mix(-6, -2, p)}deg) translateY(${(1 - p) * 40}px)`}}>
-      <Label dark>{tr(language, '设计规范 / UI 组件', 'DESIGN RULES / UI')}</Label>
-      <div style={{fontSize: 38, fontWeight: 800, margin: '15px 0 22px'}}>{tr(language, '每种状态，都有依据', 'Every state, defined')}</div>
-      {[
-        [tr(language, '固定', 'KEEP'), tr(language, '配色 · 轮廓 · 光源', 'Palette · shape · lighting')],
-        [tr(language, '变化', 'VARY'), tr(language, '默认 · 按下 · 禁用', 'Default · pressed · disabled')],
-        [tr(language, '验收', 'CHECK'), tr(language, '实际尺寸 · 放回界面', 'Actual size · in context')],
-      ].map(([label, text], i) => <div key={label} style={{display: 'flex', gap: 22, padding: '16px 0', borderTop: '1px solid #bfcfd4', opacity: progress(frame, 140 + i * 12, 17)}}><span style={{fontSize: 18, color: C.teal, width: 52, flexShrink: 0, paddingTop: 3}}>{label}</span><span style={{fontSize: 25}}>{text}</span></div>)}
-      <div style={{position: 'absolute', right: -20, bottom: -31, color: C.paper, background: C.teal, fontSize: language === 'zh' ? 24 : 19, fontWeight: 650, padding: '15px 23px', borderRadius: 6, boxShadow: shadow, opacity: confirm, transform: `scale(${mix(1.3, 1, confirm)}) rotate(-7deg)`}}>{tr(language, '主美看样板，再确认', 'DIRECTOR REVIEWS THE SAMPLE')}</div>
-    </div>
-    <div style={{position: 'absolute', left: 60, top: 374, width: 485, fontSize: 29, lineHeight: 1.7, color: C.muted}}>{tr(language, 'Agent 整理要求与样板，\n主美逐步校准。', 'Your agent organizes the rules.\nThe director reviews samples.').split('\n').map(t => <div key={t}>{t}</div>)}</div>
-    <div style={{position: 'absolute', left: 60, top: 529, display: 'flex', gap: 9}}>{[C.teal, '#ef7e36', '#609ccb', '#aeb6a0', C.paper].map((c, i) => <div key={c} style={{width: 49, height: 49, borderRadius: i === 0 ? '50%' : 6, background: c, transform: `translateY(${(1 - progress(frame, 156 + i * 5, 20)) * 16}px)`, opacity: progress(frame, 156 + i * 5, 20)}}/>)}</div>
-  </>;
-}
-
-function ShareBeat({frame, language}: {frame: number; language: Language}) {
-  const fold = progress(frame, 254, 33), send = progress(frame, 294, 31);
-  return <>
-    <Heading index={2} language={language}/>
-    <svg width="1280" height="720" style={{position: 'absolute', inset: 0}}>{[-1, 1].map(side => <path key={side} d={`M 640 422 C ${640 + side * 160} 360, ${640 + side * 210} 488, ${640 + side * 365} 448`} stroke={C.mint} strokeWidth="2" fill="none" strokeDasharray="600" strokeDashoffset={600 * (1 - send)} opacity=".7"/>)}</svg>
-    {[0, 1, 2].map(i => <div key={i} style={{position: 'absolute', left: mix(405 + i * 84, 478 + i * 8, fold), top: mix(335 + i * 13, 325 + i * 6, fold), width: 304, height: 219, background: i === 2 ? C.teal : '#cadfdf', borderRadius: 13, border: '1px solid #92e4da', boxShadow: shadow, transform: `perspective(1500px) rotateY(${mix(-12, 12, fold)}deg) rotate(${mix(-9 + i * 8, -4, fold)}deg)`, color: C.paper, padding: '24px 28px', zIndex: i + 1}}>
-      {i === 2 && <><Label>PROJECT SKILL / v1.0</Label><div style={{fontSize: 36, fontWeight: 800, marginTop: 15}}>SKILL.md</div><div style={{fontSize: 24, lineHeight: 1.5, marginTop: 19}}>{tr(language, '规范 + 样板 + 交付要求', 'Rules + samples + delivery specs')}</div></>}
-    </div>)}
-    {[-1, 1].map((side, i) => <div key={side} style={{position: 'absolute', left: side === -1 ? 93 : 891, top: 382, width: 265, padding: '26px 20px', border: '1px solid #a4e6e45e', borderRadius: 12, background: '#0a3b52', opacity: send, transform: `translateX(${side * (1 - send) * -75}px) rotate(${side * 5}deg)`, textAlign: 'center'}}><div style={{fontSize: 28, fontWeight: 700}}>{tr(language, i === 0 ? '团队成员' : '外包伙伴', i === 0 ? 'Teammates' : 'External partners')}</div><div style={{fontSize: 20, color: C.mint, marginTop: 14}}>PROJECT v1.0</div></div>)}
-    <div style={{position: 'absolute', top: 609, left: 0, width: '100%', textAlign: 'center', fontSize: 26, color: C.muted, opacity: send}}>{tr(language, '装进各自的 Agent，不用重讲一遍。', 'Load it in their agents. Keep the context.')}</div>
-  </>;
-}
-
-function GameButton({state, corrected = true, compact = false}: {state: number; corrected?: boolean; compact?: boolean}) {
-  const colors = ['#ec8b43', '#be6228', corrected ? '#b7bbb7' : '#ee8d45'];
-  return <div style={{height: compact ? 62 : 79, minWidth: compact ? 145 : 183, borderRadius: 18, border: `3px solid ${state === 2 && corrected ? '#828d8c' : '#8d4922'}`, background: `linear-gradient(${colors[state]}, ${state === 1 ? '#a84e1d' : colors[state]})`, color: state === 2 && corrected ? '#637473' : '#fff8e9', boxShadow: `inset 0 4px 0 #ffffff65, 0 ${state === 1 ? 2 : 7}px 0 ${state === 2 && corrected ? '#7e8987' : '#783d21'}`, fontSize: compact ? 26 : 32, fontWeight: 800, display: 'flex', alignItems: 'center', justifyContent: 'center', transform: state === 1 ? 'translateY(5px)' : undefined}}>GO</div>;
-}
-
-function CreateBeat({frame, language}: {frame: number; language: Language}) {
-  return <>
-    <Heading index={3} language={language}/>
-    <div style={{position: 'absolute', left: 61, top: 351, width: 524, fontSize: 31, lineHeight: 1.5, padding: '21px 25px', background: '#0a3b52', border: '1px solid #92e4da70', borderRadius: 12, boxShadow: shadow}}><Label>{tr(language, '成员对 Agent 说', 'TEAMMATE → AGENT')}</Label><div style={{marginTop: 12}}>{tr(language, '“按项目规则，做按钮三态。”', '“Make the three button states using our project rules.”')}</div></div>
-    <div style={{position: 'absolute', left: 64, top: 547, width: 525, fontSize: 25, lineHeight: 1.4, color: C.muted}}>{tr(language, '规则、参考、版本，自动接到任务里。', 'Rules, references and version travel with the task.')}</div>
-  </>;
-}
-
-function ReviewBeat({frame, language}: {frame: number; language: Language}) {
-  return <>
-    <Heading index={4} language={language}/>
-    <div style={{position: 'absolute', left: 60, top: 362, width: 491, fontSize: 29, lineHeight: 1.75, color: C.muted}}>{tr(language, '按规则逐项检查，\n把返工说清楚。', 'Check against the rules.\nMake the revision specific.').split('\n').map(t => <div key={t}>{t}</div>)}</div>
-    <div style={{position: 'absolute', left: 62, top: 529, width: 525, fontSize: 25, color: C.mint, opacity: progress(frame, 584, 16)}}>{tr(language, '共性问题，交主美更新规范。', 'Shared issues go back to the director.')}</div>
-  </>;
-}
-
-// The production card becomes the review card. The disabled button stays the
-// same object while the camera focus moves to it, then its state is corrected.
-function TaskSurface({frame, language}: {frame: number; language: Language}) {
-  const enter = progress(frame, 387, 24), leave = progress(frame, 618, 25);
-  if (frame < 387 || frame > 643) return null;
-  const focus = progress(frame, 502, 38), fix = progress(frame, 563, 25);
-  return <div style={{position: 'absolute', zIndex: 4, left: mix(664, 657, focus), top: mix(313, 266, focus), width: 552, height: 303, padding: '24px 26px', color: C.navy, background: C.paper, borderRadius: 13, boxShadow: shadow, opacity: enter * (1 - leave), transform: `perspective(1500px) rotateY(${mix(-10, -3, enter)}deg) rotate(-2deg) translateY(${leave * -30}px)`, overflow: 'hidden'}}>
-    <div style={{position: 'absolute', left: 26, top: 24, opacity: 1 - focus}}><Label dark>{tr(language, '本次制作 / UI 按钮', 'TASK / UI BUTTONS')}</Label></div>
-    <div style={{position: 'absolute', left: 26, top: 24, opacity: focus}}><Label dark>{tr(language, '对照规范 / 禁用态', 'CHECK AGAINST THE RULE / DISABLED')}</Label></div>
-    <span style={{position: 'absolute', right: 26, top: 24, color: C.teal, fontSize: 18, opacity: 1 - focus}}>v1.0</span>
-    {[0, 1, 2].map(i => {
-      const shown = progress(frame, 413 + i * 15, 20);
-      const x = i === 2 ? mix(368, 30, focus) : 26 + i * 171 - focus * 420;
-      return <div key={i} style={{position: 'absolute', left: x, top: 85 + (1 - shown) * 26, opacity: shown * (i === 2 ? 1 : 1 - focus), width: 145, transform: `scale(${i === 2 ? mix(1, 1.23, focus) : 1})`, transformOrigin: 'left top'}}>
-        <div style={{opacity: i === 2 ? 1 - fix : 1}}><GameButton state={i} corrected={false} compact/></div>
-        {i === 2 && <div style={{position: 'absolute', left: 0, right: 0, top: 0, opacity: fix}}><GameButton state={2} compact/></div>}
-        <div style={{textAlign: 'center', fontSize: 20, marginTop: 22, opacity: 1 - focus}}>{language === 'zh' ? ['默认', '按下', '禁用'][i] : ['Default', 'Pressed', 'Disabled'][i]}</div>
-        {i === 2 && <div style={{position: 'absolute', inset: '-9px -9px auto', height: 87, border: '2px solid #cf703a', borderRadius: 23, opacity: progress(frame, 477, 15) * (1 - fix)}}/>}
-      </div>;
-    })}
-    <div style={{position: 'absolute', left: 260, top: 86, right: 24, opacity: focus, fontSize: 25, lineHeight: 1.45}}>{tr(language, '降低饱和度，\n拉开状态差异。', 'Lower saturation.\nMake the state distinct.').split('\n').map(t => <div key={t}>{t}</div>)}</div>
-    <div style={{position: 'absolute', left: 26, right: 26, top: 221, borderTop: '1px solid #bccdd4', paddingTop: 20, fontSize: 21}}>
-      <div style={{color: C.teal, opacity: 1 - focus}}>{tr(language, '沿用配色、轮廓与光源 · 首件待评审', 'Shared palette, shape and lighting · draft')}</div>
-      <div style={{position: 'absolute', top: 20, opacity: focus}}>{tr(language, '问题 → 修改依据 → 复查', 'Issue → rule → recheck')}</div>
-    </div>
-  </div>;
-}
-
-function Closing({language, social = false}: {language: Language; social?: boolean}) {
-  return <>
-    <div style={{position: 'absolute', left: 56, top: social ? 126 : 158, zIndex: 5}}>
-      <div style={{fontSize: 17, color: C.muted, letterSpacing: 2, marginBottom: 36}}>ONE TEAM, ONE VISUAL MEMORY.</div>
-      <div style={{transform: 'rotate(-3deg) skewX(-5deg)', transformOrigin: 'left', letterSpacing: -4, lineHeight: 1.12}}><div style={{fontSize: language === 'zh' ? 64 : 71, fontWeight: 400}}>{tr(language, '一个团队/项目，', 'One team,')}</div><div style={{fontSize: language === 'zh' ? 108 : 82, fontWeight: 830, color: C.mint, marginTop: 13}}>{tr(language, '一份视觉记忆。', 'one visual memory.')}</div></div>
-      <div style={{marginTop: 44, fontSize: 30, color: C.paper}}>{tr(language, '让每一次交付，都有共同依据。', 'A shared foundation for every delivery.')}</div>
-      <div style={{marginTop: 36, fontSize: 25, color: C.mint}}>{tr(language, '装上 Skill，在你的 Agent 里开始。', 'Install the Skill. Start in your agent.')}</div>
-    </div>
-    <div style={{position: 'absolute', left: social ? 846 : 858, top: social ? 458 : 499, width: social ? 364 : 310, padding: social ? '17px 23px' : '20px 25px', background: C.teal, border: '1px solid #92e4da', borderRadius: 12, boxShadow: shadow, transform: 'rotate(4deg)', zIndex: 4}}><Label>ONE VERSION / EVERY DELIVERY</Label><div style={{fontSize: social ? 24 : 29, fontWeight: 750, marginTop: 12}}>STYLE.md → SKILL.md</div></div>
-  </>;
-}
-
-export const DepthShowcase: React.FC<{language: Language; preview?: boolean}> = ({language}) => {
-  const frame = useCurrentFrame();
-  const phase = Math.min(5, beats.findIndex((end, i) => i > 0 && frame < end) - 1);
-  return <AbsoluteFill style={{background: C.navy, color: '#fff', fontFamily: fieldFont, overflow: 'hidden', boxSizing: 'border-box'}}>
-    <FieldFonts/>
-    <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 80% 35%, #07505d 0%, transparent 57%)'}}/>
-    <svg width="1280" height="720" style={{position: 'absolute', inset: 0, opacity: .2}}><ellipse cx="970" cy="532" rx="430" ry="100" fill="none" stroke="#92e4da" strokeWidth="1" transform="rotate(-9 970 532)"/><ellipse cx="970" cy="532" rx="498" ry="132" fill="none" stroke="#92e4da" strokeWidth=".7" transform="rotate(-9 970 532)"/></svg>
-    <div style={{position: 'absolute', left: 56, right: 56, top: 32, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 17, letterSpacing: 2}}><span>ART DIRECTOR <span style={{color: C.mint}}>●</span></span><span style={{fontSize: 15, color: C.muted}}>{tr(language, '在你的 Agent 里完成', 'WORK IN YOUR AGENT')}</span></div>
-    <SharedArtwork frame={frame} language={language}/><TaskSurface frame={frame} language={language}/>
-    <Beat frame={frame} index={0}><InputBeat frame={frame} language={language}/></Beat><Beat frame={frame} index={1}><DefineBeat frame={frame} language={language}/></Beat><Beat frame={frame} index={2}><ShareBeat frame={frame} language={language}/></Beat><Beat frame={frame} index={3}><CreateBeat frame={frame} language={language}/></Beat><Beat frame={frame} index={4}><ReviewBeat frame={frame} language={language}/></Beat><Beat frame={frame} index={5}><Closing language={language}/></Beat>
-    <div style={{position: 'absolute', left: 56, right: 56, bottom: 30, display: 'flex', alignItems: 'center', gap: 25, fontSize: 17, color: C.muted}}>{(language === 'zh' ? ['资料', '规范与样板', '项目包', '成员制作', '检查与返修'] : ['Inputs', 'Rules & samples', 'Project pack', 'Team task', 'Review & revise']).map((label, i) => <span key={label} style={{color: phase === i ? C.mint : C.muted, fontWeight: phase === i ? 800 : 400}}>{label}{i < 4 ? '  →' : ''}</span>)}<span style={{marginLeft: 'auto', fontSize: 13}}>{tr(language, '流程示意 · 原创候选素材', 'ILLUSTRATED FLOW · CANDIDATE ART')}</span></div>
-    <div style={{position: 'absolute', bottom: 0, height: 3, width: `${frame / (DEPTH_FRAMES - 1) * 100}%`, background: C.mint}}/>
-  </AbsoluteFill>;
-};
-
-export const DepthSocialPreview: React.FC = () => <AbsoluteFill style={{background: C.navy, color: '#fff', fontFamily: fieldFont, overflow: 'hidden'}}><FieldFonts/><div style={{position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 80% 35%, #07505d 0%, transparent 57%)'}}/><div style={{position: 'absolute', left: 56, top: 33, fontSize: 18, letterSpacing: 3}}>ART DIRECTOR <span style={{color: C.mint}}>●</span></div><SharedArtwork frame={680} language="zh"/><Closing language="zh" social/></AbsoluteFill>;
+function Revision({f,l}:{f:number;l:Language}){const wipe=p(f,513,40);return <AbsoluteFill style={{background:C.navy}}><div style={{position:'absolute',inset:'72px 0 110px'}}><Photo name="tidekeeper-before.jpg"/><AbsoluteFill style={{clipPath:`inset(0 ${100*(1-wipe)}% 0 0)`}}><Photo name="tidekeeper.jpg"/></AbsoluteFill><div style={{position:'absolute',left:`${wipe*100}%`,top:0,bottom:0,width:3,background:C.mint,opacity:wipe>0&&wipe<1?1:0}}/></div><div style={{position:'absolute',left:42,top:102,padding:'20px 26px',background:'#001f3fe8',maxWidth:665}}><Kicker>{t(l,'04 / 有依据地返修','04 / REVISE WITH A REASON')}</Kicker><Head style={{fontSize:l==='zh'?54:48,marginTop:15,whiteSpace:'pre-line'}}>{t(l,'减少噪点，\n让动作先被看见。','Less surface noise. A clearer action.')}</Head></div><div style={{position:'absolute',right:36,bottom:133,padding:'11px 19px',background:C.cream,color:C.navy,fontSize:20}}>{wipe<.5?t(l,'原稿 / 材质过于写实','BEFORE / too much surface realism'):t(l,'修正版 / 保留角色、动作与空间','AFTER / identity, action and space retained')}</div><Caption>{t(l,'实际生成迭代 · 记录哪里改了，也保留尚未验证的内容。','ACTUAL GENERATED ITERATION · KEEP THE CHANGE AND THE OPEN CHECKS.')}</Caption></AbsoluteFill>;}
+function Closing({l}:{l:Language}){return <AbsoluteFill style={{background:C.navy}}><div style={{position:'absolute',left:708,top:64,width:645,height:570,overflow:'hidden',transform:'rotate(4deg)'}}><Photo name="depot.jpg" style={{objectPosition:'84% center'}}/></div><AbsoluteFill style={{background:'linear-gradient(90deg,#001f3f 42%,#001f3ff0 54%,transparent 77%)'}}/><div style={{position:'absolute',left:54,top:117,zIndex:2}}><Kicker>ONE TEAM, ONE VISUAL MEMORY.</Kicker><Head style={{marginTop:31,fontSize:l==='zh'?64:68,fontWeight:400,transform:'rotate(-2deg)',transformOrigin:'left'}}>{t(l,'一个团队/项目，','One team,')}<br/><strong style={{fontSize:l==='zh'?84:73,fontWeight:850,color:C.mint}}>{t(l,'一份视觉记忆。','one visual memory.')}</strong></Head><p style={{fontSize:27,lineHeight:1.7,marginTop:37}}>{t(l,'规范、样板、任务与检查记录，','Rules, samples, tasks and review notes.')}<br/>{t(l,'打成项目包，团队接着做。','One project pack. The team continues.')}</p><div style={{fontSize:24,color:C.mint,marginTop:27}}>{t(l,'装上 Skill，在你的 Agent 里开始。','Install the Skill. Start in your agent.')}</div></div></AbsoluteFill>;}
+export function DepthShowcase({language='zh'}:{language?:Language;preview?:boolean}){const f=useCurrentFrame();return <AbsoluteFill style={{background:C.navy,color:C.paper,fontFamily:fieldFont}}><FieldFonts/><Scene f={f} i={0}><Opening f={f} l={language}/></Scene><Scene f={f} i={1}><Direction f={f} l={language}/></Scene><Scene f={f} i={2}><Family f={f} l={language}/></Scene><Scene f={f} i={3}><Context f={f} l={language}/></Scene><Scene f={f} i={4}><Revision f={f} l={language}/></Scene><Scene f={f} i={5}><Closing l={language}/></Scene><div style={{position:'absolute',left:28,top:22,fontSize:12,letterSpacing:2,color:f>=228&&f<363?C.teal:'#e4f4f0',zIndex:9}}>ART DIRECTOR</div><div style={{position:'absolute',right:28,top:22,fontSize:12,color:f>=228&&f<363?C.teal:'#e4f4f0',zIndex:9}}>{t(language,'原创候选 · 流程演示','ORIGINAL CANDIDATES · ILLUSTRATED WORKFLOW')}</div><div style={{position:'absolute',left:0,bottom:0,width:`${(f+1)/720*100}%`,height:4,background:C.mint}}/></AbsoluteFill>;}
+export function DepthSocialPreview(){return <AbsoluteFill style={{fontFamily:fieldFont,color:C.paper}}><FieldFonts/><Photo name="bramble.jpg"/><AbsoluteFill style={{background:'linear-gradient(90deg,#001f3ff2,#001f3f70 58%,transparent)'}}/><div style={{position:'absolute',left:58,top:88}}><Kicker>ART DIRECTOR / GAME ART SKILL</Kicker><Head style={{fontSize:85,marginTop:30,transform:'rotate(-2deg)'}}>好看，还要<br/><span style={{color:C.mint}}>像你的游戏。</span></Head><p style={{fontSize:28,marginTop:35}}>一个团队/项目，一份视觉记忆。</p><div style={{fontSize:20,color:C.mint}}>从样板到成套资产，在你的 Agent 中完成。</div></div></AbsoluteFill>;}
+export function GameArtProof(){return <AbsoluteFill style={{fontFamily:fieldFont,color:C.navy,background:'#f5f9fb',padding:40}}><FieldFonts/><h1 style={{margin:'0 0 14px',fontSize:34}}>透明边缘与同屏识别 / 64 px · 96 px</h1><p style={{margin:'0 0 20px',fontSize:18}}>浏览器合成试验，非游戏运行截图。文件与主美验收状态分开记录。</p>{[C.navy,'#e2f1ef'].map(bg=><div key={bg} style={{display:'flex',alignItems:'center',justifyContent:'space-around',background:bg,padding:22,marginBottom:14,borderRadius:8}}>{[1,2,3,4].map(n=><div key={n} style={{display:'flex',gap:14,alignItems:'center'}}><Lamp n={n} style={{width:64,height:64}}/><Lamp n={n} style={{width:96,height:96}}/></div>)}</div>)}<div style={{display:'flex',alignItems:'center',justifyContent:'space-around',marginTop:6}}>{[1,2,3,4].map(n=><div key={n} style={{textAlign:'center',display:'flex',flexDirection:'column',alignItems:'center'}}><Lamp n={n} style={{width:170,height:170}}/><span style={{fontSize:21}}>L{n} / {names.zh[n-1]}</span></div>)}</div></AbsoluteFill>;}

@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "tidekeeper",
+    "name": "潮灯小镇 · 灯具首件与家族草案",
+    "domain": "game-art",
+    "owner": "待项目主美接手"
+  },
+  "version": "0.1.0",
+  "status": "draft",
+  "scope": {
+    "medium": "2D generated concept and item candidates",
+    "view": "略俯视三分之四道具视角；主视觉使用叙事镜头",
+    "target_platform": "本次 64 / 96 px 浏览器合成试验；真实设备待确认",
+    "asset_types": [
+      "prop",
+      "environment",
+      "character"
+    ]
+  },
+  "intent": {
+    "summary": "原创休闲修复游戏：收集与合成灯具，逐步恢复沿海小镇的航标。先验证海港样板能否指导成套物品。",
+    "pillars": [
+      "温暖的修复行为",
+      "清楚的物品升级轮廓",
+      "搪瓷与黄铜的共同材料语言"
+    ],
+    "avoid": [
+      "只靠换色区别等级",
+      "写实材质噪点抢走玩法焦点",
+      "整板冒充独立可用资源"
+    ]
+  },
+  "tokens": {
+    "colors": {},
+    "fonts": {}
+  },
+  "rules": [
+    {
+      "id": "TK-MATERIAL",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "海绿搪瓷、蜂蜜色黄铜、奶油玻璃；上左暖主光。用大色面与克制的高光区分材料。",
+      "rationale": "保留海港修复世界的共同语言。",
+      "allowed_variation": [
+        "题材与当前等级所需的结构变化；不能覆盖共同视觉要求"
+      ],
+      "evidence": [
+        "TK-KEY"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-SHAPE",
+      "scope": [
+        "prop"
+      ],
+      "strength": "must",
+      "statement": "灯具按矮灯、提柄风灯、圆镜探照灯、锥形航标区分；相邻等级不能只换色。",
+      "rationale": "让升级在小尺寸下可读。",
+      "allowed_variation": [
+        "题材与当前等级所需的结构变化；不能覆盖共同视觉要求"
+      ],
+      "evidence": [
+        "TK-KEY"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-VIEW",
+      "scope": [
+        "prop"
+      ],
+      "strength": "must",
+      "statement": "单件使用略俯视的三分之四正面视角，完整露出轮廓。",
+      "rationale": "并列与合成时不会因镜头不同误读体量。",
+      "allowed_variation": [
+        "题材与当前等级所需的结构变化；不能覆盖共同视觉要求"
+      ],
+      "evidence": [
+        "TK-KEY"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-CONTEXT",
+      "scope": [
+        "prop"
+      ],
+      "strength": "must",
+      "statement": "在标明的 64 与 96 px 试验尺度、浅深背景与棋盘合成中看实际结果。真实设备未验证。",
+      "rationale": "大图精致不证明小图可读。",
+      "allowed_variation": [
+        "题材与当前等级所需的结构变化；不能覆盖共同视觉要求"
+      ],
+      "evidence": [
+        "TK-KEY"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-EXPORT",
+      "scope": [
+        "prop"
+      ],
+      "strength": "must",
+      "statement": "导出有可见主体的 RGBA PNG；检查尺寸、alpha、边距与浅深背景边缘。发现问题保留待修记录。",
+      "rationale": "文件扩展名或存在透明像素不能证明交付合格。",
+      "allowed_variation": [
+        "题材与当前等级所需的结构变化；不能覆盖共同视觉要求"
+      ],
+      "evidence": [
+        "TK-KEY"
+      ],
+      "verification": "technical",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-STORY",
+      "scope": [
+        "environment",
+        "character"
+      ],
+      "strength": "must",
+      "statement": "主视觉让修灯动作成为焦点，并把手、灯、栈桥与远处灯塔连成空间关系。",
+      "rationale": "用事件与空间表达玩法世界，而非通用背景图。",
+      "allowed_variation": [
+        "题材与当前等级所需的结构变化；不能覆盖共同视觉要求"
+      ],
+      "evidence": [
+        "TK-KEY"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    }
+  ],
+  "references": [
+    {
+      "id": "TK-KEY",
+      "path": "references/tidekeeper.jpg",
+      "role": "style",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "2026-10-13 实际生成的原创候选。不是已批准基线；不是第三方作品。",
+      "status": "candidate",
+      "provenance": {
+        "type": "generated_original",
+        "source": "built-in image_gen.imagegen；任务依据与提示记录在 references/production-notes.md"
+      }
+    },
+    {
+      "id": "TK-L1",
+      "path": "references/lantern-l1.png",
+      "role": "identity",
+      "applies_to": [
+        "prop"
+      ],
+      "notes": "2026-10-13 实际生成的原创候选。不是已批准基线；不是第三方作品。",
+      "status": "candidate",
+      "provenance": {
+        "type": "generated_original",
+        "source": "built-in image_gen.imagegen；任务依据与提示记录在 references/production-notes.md"
+      }
+    },
+    {
+      "id": "TK-L2",
+      "path": "references/lantern-l2.png",
+      "role": "identity",
+      "applies_to": [
+        "prop"
+      ],
+      "notes": "2026-10-13 实际生成的原创候选。不是已批准基线；不是第三方作品。",
+      "status": "candidate",
+      "provenance": {
+        "type": "generated_original",
+        "source": "built-in image_gen.imagegen；任务依据与提示记录在 references/production-notes.md"
+      }
+    },
+    {
+      "id": "TK-L3",
+      "path": "references/lantern-l3.png",
+      "role": "identity",
+      "applies_to": [
+        "prop"
+      ],
+      "notes": "2026-10-13 实际生成的原创候选。不是已批准基线；不是第三方作品。",
+      "status": "candidate",
+      "provenance": {
+        "type": "generated_original",
+        "source": "built-in image_gen.imagegen；任务依据与提示记录在 references/production-notes.md"
+      }
+    },
+    {
+      "id": "TK-L4",
+      "path": "references/lantern-l4.png",
+      "role": "identity",
+      "applies_to": [
+        "prop"
+      ],
+      "notes": "2026-10-13 实际生成的原创候选。不是已批准基线；不是第三方作品。",
+      "status": "candidate",
+      "provenance": {
+        "type": "generated_original",
+        "source": "built-in image_gen.imagegen；任务依据与提示记录在 references/production-notes.md"
+      }
+    },
+    {
+      "id": "TK-CONTEXT",
+      "path": "references/production-notes.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "本次案例假设、执行提示及边界。",
+      "status": "candidate",
+      "provenance": {
+        "type": "authored_demo",
+        "source": "2026-10-13 原创案例执行记录"
+      }
+    }
+  ],
+  "profiles": {
+    "prop": {
+      "brief": "沿用海港样板制作灯具家族；分别生成独立 PNG，再组合检查。",
+      "fixed": [
+        "海绿搪瓷 / 黄铜 / 奶油玻璃",
+        "上左光源",
+        "三分之四镜头"
+      ],
+      "variable": [
+        "灯具等级与结构轮廓"
+      ],
+      "technical": {
+        "demo_export_px": [
+          512,
+          512
+        ],
+        "demo_display_px": [
+          64,
+          96
+        ],
+        "engine_format": null,
+        "production_approved": false
+      },
+      "task_controls": {
+        "slots": {
+          "level": {
+            "default": "L2 提柄风灯",
+            "guidance": "按等级形状要求；保留共同材料与视角"
+          }
+        }
+      }
+    },
+    "environment": {
+      "brief": "海港栈桥到灯塔的空间关系，主体附近细节更集中。",
+      "fixed": [
+        "修复主题",
+        "共同材料和冷暖关系"
+      ],
+      "variable": [
+        "故事镜头"
+      ],
+      "technical": {
+        "engine_layers": null
+      }
+    },
+    "character": {
+      "brief": "年轻成年灯匠：短深蓝发、暖肤、芥黄披肩、靛蓝工装、珊瑚色鞋。",
+      "fixed": [
+        "当前角色候选身份"
+      ],
+      "variable": [
+        "修灯动作"
+      ],
+      "technical": {
+        "turnaround": null,
+        "rig": null
+      }
+    }
+  },
+  "entities": [
+    {
+      "id": "light-l1",
+      "kind": "prop",
+      "aliases": [
+        "矮油灯",
+        "L1"
+      ],
+      "identity_rules": [
+        "TK-SHAPE"
+      ],
+      "reference_ids": [
+        "TK-L1"
+      ],
+      "fixed_features": [
+        "矮油灯的主体结构轮廓"
+      ],
+      "variations": [
+        "经任务明确允许的状态"
+      ]
+    },
+    {
+      "id": "light-l2",
+      "kind": "prop",
+      "aliases": [
+        "提柄风灯",
+        "L2"
+      ],
+      "identity_rules": [
+        "TK-SHAPE"
+      ],
+      "reference_ids": [
+        "TK-L2"
+      ],
+      "fixed_features": [
+        "提柄风灯的主体结构轮廓"
+      ],
+      "variations": [
+        "经任务明确允许的状态"
+      ]
+    },
+    {
+      "id": "light-l3",
+      "kind": "prop",
+      "aliases": [
+        "圆镜探照灯",
+        "L3"
+      ],
+      "identity_rules": [
+        "TK-SHAPE"
+      ],
+      "reference_ids": [
+        "TK-L3"
+      ],
+      "fixed_features": [
+        "圆镜探照灯的主体结构轮廓"
+      ],
+      "variations": [
+        "经任务明确允许的状态"
+      ]
+    },
+    {
+      "id": "light-l4",
+      "kind": "prop",
+      "aliases": [
+        "锥形航标",
+        "L4"
+      ],
+      "identity_rules": [
+        "TK-SHAPE"
+      ],
+      "reference_ids": [
+        "TK-L4"
+      ],
+      "fixed_features": [
+        "锥形航标的主体结构轮廓"
+      ],
+      "variations": [
+        "经任务明确允许的状态"
+      ]
+    }
+  ],
+  "recipes": [],
+  "decisions": [
+    {
+      "id": "TK-DRAFT-01",
+      "decision": "用四个灯具候选验证同一材料语言与不同轮廓；主视觉从写实细节转向更清楚的大色面。",
+      "rationale": "响应实际看图反馈，记录首件到扩展与返修。",
+      "status": "proposed",
+      "source": "2026-10-13 原创案例试用与 Agent 看图自查；不是客户验收。"
+    }
+  ],
+  "open_questions": [
+    "项目负责人是否认可当前画风与等级链？",
+    "透明边缘与画布边距仍需依生产规格复核。",
+    "真实设备、棋盘密度、导出锚点和引擎导入尚未确认。",
+    "多视角身份、分层源文件、动作与真人团队复用尚未验证。"
+  ],
+  "approval": null
+}

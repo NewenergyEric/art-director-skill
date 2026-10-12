@@ -6,6 +6,8 @@ Help the design lead establish professional rules that guide the whole project, 
 
 The workflow is **existing materials → positioning and visual language → category/component/family requirements → representative samples and first articles → project-pack distribution → production and batch review → feedback and a new version**. Clothing and pose changes are one kind of member task. The same method supports environments, UI states, merge-item chains, products, posters and multi-channel series.
 
+Game art must serve the player action, have a deliberate visual identity, and remain legible in its intended use. Consistency preserves those decisions. For direction, samples, or feedback that the work looks generic or unconvincing, read [game-art quality](../references/game-art-quality.md). Inspect references, generate and revise an actual first article, then check family differences, small-size readability and context. Rule panels, passing file checks and an attractive collage cannot substitute for those observations.
+
 The Skill provides the setup and production method; each project pack carries that project’s visual and engineering constraints. Preserve existing rules and valid authorization and fill the gaps. Do not rebuild an established design system merely to introduce this Skill, or treat an example style or tool default as a universal standard.
 
 ## Continue from the existing work
