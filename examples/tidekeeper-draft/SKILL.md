@@ -7,7 +7,7 @@ description: "为 潮灯小镇 · 灯具首件与家族草案（tidekeeper）制
 
 固定项目 `tidekeeper`，版本 `0.1.0`，源状态 `draft`。
 交付状态：草案交付 / 尚未经过 release 构建。
-内容指纹：`4e8a4e63723ce8c3c1693553f7cb94c09799ee5b745d5cd948d64aa3336ab292`。
+内容指纹：`b2a3ddf1535339cef9f897dedbe0e134c92354c0f278e9f0ecfcd578086b67b0`。
 
 先读 [资料索引与样板计划](guides/00-index.md)，按需要读取定位、类别/家族、交付和参考手册。五份手册都由同一份 style-pack.json 生成。此包已包含成员运行工具和批次检查器，可以整体解压到新位置使用，无需母 skill 目录。
 

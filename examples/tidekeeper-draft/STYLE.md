@@ -2,7 +2,7 @@
 
 项目：`tidekeeper` · 版本：`0.1.0` · 状态：`draft`
 交付状态：草案交付 / 尚未经过 release 构建
-内容指纹：`4e8a4e63723ce8c3c1693553f7cb94c09799ee5b745d5cd948d64aa3336ab292`
+内容指纹：`b2a3ddf1535339cef9f897dedbe0e134c92354c0f278e9f0ecfcd578086b67b0`
 
 本文件由 style-pack.json 生成。修改源 JSON 后在未发布的工作副本中重新 render；不能把本文件的改写当作规范变更或总监批准。
 

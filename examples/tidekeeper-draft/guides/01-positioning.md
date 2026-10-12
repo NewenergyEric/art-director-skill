@@ -4,7 +4,7 @@
 
 交付状态：草案交付，尚未经 release 构建。
 
-规范指纹：`4e8a4e63723ce8c3c1693553f7cb94c09799ee5b745d5cd948d64aa3336ab292`
+规范指纹：`b2a3ddf1535339cef9f897dedbe0e134c92354c0f278e9f0ecfcd578086b67b0`
 
 由 style-pack.json 派生。修改规范请修改源文件并重建新版本；本手册不是独立审批或第二份规范源。unknown / proposed / planned / candidate 都不等于已确认，未明确参数不得推测为专业定值。
 
