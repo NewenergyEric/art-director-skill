@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TK-CHAR-WAVE",
+  "category": "character",
+  "family": "dialogue",
+  "subject": "阿澜",
+  "request": "保留阿澜的脸、发型、比例与默认服装，制作她微笑挥手的对话立绘。",
+  "mode": "exploration",
+  "changes": {
+    "pose": "右手抬到肩旁挥手、另一手自然下垂",
+    "expression": "开朗微笑"
+  },
+  "exploration": {
+    "slots": [
+      "pose",
+      "expression"
+    ],
+    "candidates": 1
+  },
+  "owner": {
+    "id": "agent-member-self-test",
+    "kind": "internal"
+  },
+  "components": []
+}

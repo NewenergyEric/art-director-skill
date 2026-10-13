@@ -28,11 +28,11 @@ The website explains the product and provides the film, installation and startin
 
 `motion/src/DepthShowcase.tsx` produces matched English and Chinese GIF/MP4 versions:
 
-1. Show an original game scene and the player experience it serves.
-2. Establish a representative sample and visible rules for shape, camera, light and materials.
-3. Extend separate assets into a family with distinct structural silhouettes.
-4. Reduce the assets to stated study sizes and composite them in context.
-5. Show an actual before/after revision, then carry rules, samples and check records into a team pack.
+1. Lead with “One team, one visual memory.” Show the actual project and its shared delivery problem.
+2. Establish representative samples and actionable rules, then pack their dependencies.
+3. Show actual member continuations across character, environment, items and UI.
+4. Compose the new assets and operate the same editable UI source: merge, order, inventory and feedback.
+5. Compare actual before/after outputs and carry discovered gaps into a new candidate version.
 
 Each beat shows an input, action or result. Leave stable reading holds and use eased motion when relationships change. Chapter buttons pause on completed scenes rather than halfway through transitions. Keep the full film within the established 18–25 second range. Label the film as an illustrated workflow using original candidate artwork, not an approved production recording.
 

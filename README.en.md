@@ -11,11 +11,11 @@
 Turn the director’s references, work and notes into a shared project Skill. Start with a representative sample, then extend characters, items, environments and UI. Every task carries the project’s rules, references and checks. Solo creators can carry yesterday’s decisions into the next session, too.
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=game-art-20261013">
-  <img src="assets/readme/depth-preview-en.gif?v=game-art-20261013" width="100%" alt="24-second original game-art study: define a sample, extend an item family, check a composited board, revise and hand off a project pack.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=visual-memory-20261013">
+  <img src="assets/readme/depth-preview-en.gif?v=visual-memory-20261013" width="100%" alt="24-second original game-art study: define a sample, extend an item family, check a composited board, revise and hand off a project pack.">
 </picture></a>
 
-<p align="center"><sub>24 seconds: from sample to asset family · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film">Watch the clear version</a> · <a href="docs/assets/motion/depth-showcase-en.mp4">Download MP4</a> · <a href="docs/CASE-STUDIES.en.md">Read the case evidence</a></sub></p>
+<p align="center"><sub>24 seconds: from direction to team delivery · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film">Watch the clear version</a> · <a href="docs/assets/motion/depth-showcase-en.mp4">Download MP4</a> · <a href="docs/CASE-STUDIES.en.md">Read the case evidence</a></sub></p>
 
 ## Install. Then work in your agent.
 
@@ -29,40 +29,26 @@ Use a tool that supports Agent Skills, such as Codex, Claude Code or Cursor. Giv
 
 Continue existing direction without rebuilding it. Your agent uses its available generation and editing tools; this Skill does not include an image model.
 
-## See the work and the problem it addresses
+## Can the next person carry the direction forward?
 
-### 01 · An upgrade chain needs more than four colors
+![Tidekeeper: continued character, environment, merge chain and editable game UI in one composition.](docs/assets/tidekeeper/overview.png)
 
-![Tidekeeper: original key art showing a mechanic repairing a coastal beacon.](docs/assets/cases/tidekeeper.jpg)
+We ran **Tidekeeper** through a full handoff: establish character, workshop, item and UI samples; distribute a pack; start five tasks in a new directory; continue Alan's pose, the workshop's restoration, L3/L4 lamps and a new order.
+
+**The first pass did not fully work.** The assets carried over, but the UI felt like empty cards. A landscape scene cropped out important windows on a portrait screen. The next candidate version added order characters, resource icons, repair materials, button states and a portrait adaptation, then recomposed the actual outputs.
 
 <p align="center">
-  <img src="docs/assets/cases/lantern-l1.png" width="22%" alt="Tidekeeper L1">
-  <img src="docs/assets/cases/lantern-l2.png" width="22%" alt="Tidekeeper L2">
-  <img src="docs/assets/cases/lantern-l3.png" width="22%" alt="Tidekeeper L3">
-  <img src="docs/assets/cases/lantern-l4.png" width="22%" alt="Tidekeeper L4">
+  <img src="docs/assets/tidekeeper/lamp-l1.png" width="21%" alt="L1 Pocket lamp">
+  <img src="docs/assets/tidekeeper/lamp-l2.png" width="21%" alt="L2 Storm lantern">
+  <img src="docs/assets/tidekeeper/lamp-l3.png" width="21%" alt="L3 Searchlight">
+  <img src="docs/assets/tidekeeper/lamp-l4.png" width="21%" alt="L4 Coastal beacon">
 </p>
 
-Four separate item candidates inherit **view, light and materials while changing silhouette and structure**. They are then inspected at 64 / 96 px in a composited study.
+Merged items now satisfy orders. Delivery consumes inventory, grants rewards and unlocks crates. Both orders must be complete before the restored workshop appears. **Consistency has to survive the actual delivery context.**
 
-[Original, revision and alpha checks](docs/CASE-STUDIES.en.md#tidekeeper) · [Actual rule source](examples/tidekeeper-draft/style-pack.json)
+[Read the handoff and revisions](docs/TIDEKEEPER-HANDOFF.en.md) · [Try the Chinese game-art prototype](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper/member-ui.html) · [Read the project rules](examples/tidekeeper-handoff/style-pack.json)
 
-### 02 · A beautiful world still needs a readable route
-
-![Bramble Courier: a small character, branch route and warm destination.](docs/assets/cases/bramble.jpg)
-
-Pale mist separates the courier, a branch carries the route across the middle ground, and a warm window marks the destination. **Art direction includes what the player notices first.**
-
-[Read the adventure-art decisions](docs/CASE-STUDIES.en.md#bramble)
-
-### 03 · Upgrade the building. Keep the world intact.
-
-![Red Dune Depot: three upgrade concepts retain the entrance, construction language and camera.](docs/assets/cases/depot.jpg)
-
-Hut, water tower, wind pump: new functions change the massing. When the rotor had the wrong blade count, that element was revised while preserving the building system.
-
-[See the targeted revision and open checks](docs/CASE-STUDIES.en.md#depot)
-
-These are actual original generations with agent visual observations and file measurements. The board is a composited study. Device checks, engine import and director production approval remain separate.
+This is one agent's relocated-directory self-test using original candidates. Human art-direction approval, device and engine acceptance remain open. [Earlier adventure, building and lamp studies](docs/CASE-STUDIES.en.md) retain their originals and revision records.
 
 ## From the director’s decisions to the team’s delivery
 
@@ -92,7 +78,7 @@ The aim is to pass those decisions along with the work. The director keeps creat
 <details>
 <summary><strong>Project packs, guides and requirements</strong></summary>
 
-Core tools use Python 3.10+ and its standard library; Pillow is optional for pixel checks. You can also [download the current Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=game-art-20261013). Installing the general Skill does not grant access to private team materials.
+Core tools use Python 3.10+ and its standard library; Pillow is optional for pixel checks. You can also [download the current Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-memory-20261013). Installing the general Skill does not grant access to private team materials.
 
 [Human guide](docs/HUMAN-GUIDE.en.md) · [Agent integration](docs/AGENT-GUIDE.en.md) · [Skill reading edition](docs/SKILL.en.md) · [Game-art quality method](references/game-art-quality.md)
 

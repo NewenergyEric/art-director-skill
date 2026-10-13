@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TK-UI-ORDER",
+  "category": "ui",
+  "family": "orders",
+  "subject": null,
+  "request": "沿用包内UI组件，把订单改为“为码头点亮第一座航标”，需要L4；制作缺件、可提交、已交付状态，并接入新角色和修复场景。",
+  "mode": "exploration",
+  "changes": {
+    "order": "为码头点亮第一座航标 / L4",
+    "state": "缺件、可提交、已交付三态"
+  },
+  "exploration": {
+    "slots": [
+      "order",
+      "state"
+    ],
+    "candidates": 1
+  },
+  "owner": {
+    "id": "agent-member-self-test",
+    "kind": "internal"
+  },
+  "components": [
+    {
+      "category": "character",
+      "subject": "阿澜",
+      "family": "dialogue"
+    },
+    {
+      "category": "environment",
+      "subject": "旧灯房",
+      "family": "workshop"
+    },
+    {
+      "category": "prop",
+      "subject": null,
+      "family": "light-chain"
+    }
+  ]
+}

@@ -1,0 +1,584 @@
+{
+  "method": "Shared claim, public links, canonical media budgets and checksums; optional ffprobe.",
+  "passed": 144,
+  "total": 144,
+  "failed": [],
+  "checks": [
+    {
+      "name": "manifest describes the complete 24-second workflow",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/depth-preview-en.gif: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/depth-preview-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/depth-preview-zh.gif: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/depth-preview-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "assets/readme/social-preview.png: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-comic.webp: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-game.webp: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-showcase-en.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-showcase-en.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-showcase-zh.jpg: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-showcase-zh.mp4: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "docs/assets/motion/depth-traditional.webp: matches recorded bytes and digest",
+      "pass": true
+    },
+    {
+      "name": "Chinese README compatibility copy stays synchronized with the default",
+      "pass": true
+    },
+    {
+      "name": "README.md: one canonical repository-hosted GIF",
+      "pass": true
+    },
+    {
+      "name": "README.md: one introduction instead of competing web interfaces",
+      "pass": true
+    },
+    {
+      "name": "README.md: uses the shared core claim",
+      "pass": true
+    },
+    {
+      "name": "README.md: contains no legacy public media reference",
+      "pass": true
+    },
+    {
+      "name": "README.md: ends with the shared four-role diagram",
+      "pass": true
+    },
+    {
+      "name": "zh: canonical GIF is valid, 800 px wide, and under 6 MiB",
+      "pass": true
+    },
+    {
+      "name": "zh: reduced-motion poster exists and is non-empty",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: one canonical repository-hosted GIF",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: one introduction instead of competing web interfaces",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: uses the shared core claim",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: contains no legacy public media reference",
+      "pass": true
+    },
+    {
+      "name": "README.en.md: ends with the shared four-role diagram",
+      "pass": true
+    },
+    {
+      "name": "en: canonical GIF is valid, 800 px wide, and under 6 MiB",
+      "pass": true
+    },
+    {
+      "name": "en: reduced-motion poster exists and is non-empty",
+      "pass": true
+    },
+    {
+      "name": "legacy README GIFs have been removed",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: redirects to the unified introduction",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: redirect anchor exists",
+      "pass": true
+    },
+    {
+      "name": "showcase.html: local link landing.html#film",
+      "pass": true
+    },
+    {
+      "name": "landing.html: loads the shared visual-memory stylesheet",
+      "pass": true
+    },
+    {
+      "name": "landing.html: player and captions match its language",
+      "pass": true
+    },
+    {
+      "name": "landing.html: shared interactions and a language switch",
+      "pass": true
+    },
+    {
+      "name": "landing.html: related-role diagram is the final section",
+      "pass": true
+    },
+    {
+      "name": "landing.html: four real companion Skill links",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/visual-memory.css?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/handoff.css?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link landing.en.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/tidekeeper/workshop-after.jpg",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/tidekeeper/character-wave.png",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/tidekeeper/overview.png",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/tidekeeper/member-ui.html",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.jpg?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/workflow-zh.vtt",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link landing.en.html#film",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/workflow/workflow-zh.png",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/workflow/workflow-zh.png",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/workflow/workflow-zh.png",
+      "pass": true
+    },
+    {
+      "name": "landing.html: local link assets/introduction.js?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: loads the shared visual-memory stylesheet",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: player and captions match its language",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: shared interactions and a language switch",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: related-role diagram is the final section",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: four real companion Skill links",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/visual-memory.css?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/handoff.css?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link landing.html",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/tidekeeper/workshop-after.jpg",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/tidekeeper/character-wave.png",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/tidekeeper/overview.png",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/tidekeeper/member-ui.html",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/depth-showcase-en.jpg?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/depth-showcase-en.mp4?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/workflow-en.vtt",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/depth-showcase-en.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/motion/depth-showcase-en.mp4?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link landing.html#film",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/workflow/workflow-en.png",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/workflow/workflow-en.png",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/workflow/workflow-en.png",
+      "pass": true
+    },
+    {
+      "name": "landing.en.html: local link assets/introduction.js?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: loads the shared visual-memory stylesheet",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: player and captions match its language",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: shared interactions and a language switch",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: related-role diagram is the final section",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: four real companion Skill links",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/visual-memory.css?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/handoff.css?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link landing.en.html",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/tidekeeper/workshop-after.jpg",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/tidekeeper/character-wave.png",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/tidekeeper/overview.png",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/tidekeeper/member-ui.html",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/depth-showcase-zh.jpg?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/workflow-zh.vtt",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/depth-showcase-zh.mp4",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/motion/depth-showcase-zh.mp4?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link landing.en.html#film",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/workflow/workflow-zh.png",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/workflow/workflow-zh.png",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/workflow/workflow-zh.png",
+      "pass": true
+    },
+    {
+      "name": "landing.zh.html: local link assets/introduction.js?v=visual-memory-20261013",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: redirects to the unified introduction",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: redirect anchor exists",
+      "pass": true
+    },
+    {
+      "name": "workbench.html: local link landing.html#director",
+      "pass": true
+    },
+    {
+      "name": "member-workbench.html: redirects to the unified introduction",
+      "pass": true
+    },
+    {
+      "name": "member-workbench.html: redirect anchor exists",
+      "pass": true
+    },
+    {
+      "name": "member-workbench.html: local link landing.html#member",
+      "pass": true
+    },
+    {
+      "name": "call-flow.html: redirects to the unified introduction",
+      "pass": true
+    },
+    {
+      "name": "call-flow.html: redirect anchor exists",
+      "pass": true
+    },
+    {
+      "name": "call-flow.html: local link landing.html#details",
+      "pass": true
+    },
+    {
+      "name": "team-production.html: redirects to the unified introduction",
+      "pass": true
+    },
+    {
+      "name": "team-production.html: redirect anchor exists",
+      "pass": true
+    },
+    {
+      "name": "team-production.html: local link landing.html#workflow",
+      "pass": true
+    },
+    {
+      "name": "public pages do not link legacy films or clips",
+      "pass": true
+    },
+    {
+      "name": "public videos are manual and lazy",
+      "pass": true
+    },
+    {
+      "name": "shared stylesheet self-hosts the licensed variable face",
+      "pass": true
+    },
+    {
+      "name": "shared stylesheet preserves the public palette and readable alternatives",
+      "pass": true
+    },
+    {
+      "name": "Chinese default and complete English alternate declare their languages",
+      "pass": true
+    },
+    {
+      "name": "Chinese page compatibility copy stays synchronized with the default",
+      "pass": true
+    },
+    {
+      "name": "language links open the opposite edition",
+      "pass": true
+    },
+    {
+      "name": "language editions keep the same section and control IDs",
+      "pass": true
+    },
+    {
+      "name": "introduction IDs are unique",
+      "pass": true
+    },
+    {
+      "name": "introduction anchor: start",
+      "pass": true
+    },
+    {
+      "name": "introduction anchor: top",
+      "pass": true
+    },
+    {
+      "name": "introduction anchor: film",
+      "pass": true
+    },
+    {
+      "name": "introduction anchor: start",
+      "pass": true
+    },
+    {
+      "name": "introduction anchor: start",
+      "pass": true
+    },
+    {
+      "name": "introduction anchor: cases",
+      "pass": true
+    },
+    {
+      "name": "copy button has a source: install-command",
+      "pass": true
+    },
+    {
+      "name": "copy button has a source: director-prompt",
+      "pass": true
+    },
+    {
+      "name": "copy button has a source: member-prompt",
+      "pass": true
+    },
+    {
+      "name": "one optional film, native controls, captions and a text alternative",
+      "pass": true
+    },
+    {
+      "name": "five navigable chapters cover the workflow in sequence",
+      "pass": true
+    },
+    {
+      "name": "both caption editions cover the complete 24-second story",
+      "pass": true
+    },
+    {
+      "name": "public source keeps the requested Chinese and English claims",
+      "pass": true
+    },
+    {
+      "name": "English core claim keeps the fixed comma punctuation",
+      "pass": true
+    },
+    {
+      "name": "CI renders only current visual-memory compositions",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: under 5 MiB",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-zh.mp4: H.264, 1280x720, 30 fps, 24 seconds",
+      "pass": true
+    },
+    {
+      "name": "zh: README GIF is 800 px and includes the full 24 seconds",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: under 5 MiB",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: faststart metadata precedes video payload",
+      "pass": true
+    },
+    {
+      "name": "depth-showcase-en.mp4: H.264, 1280x720, 30 fps, 24 seconds",
+      "pass": true
+    },
+    {
+      "name": "en: README GIF is 800 px and includes the full 24 seconds",
+      "pass": true
+    },
+    {
+      "name": "web and render share the same licensed font bytes",
+      "pass": true
+    },
+    {
+      "name": "public fonts are OFL and render-only proprietary fonts stay ignored",
+      "pass": true
+    }
+  ]
+}

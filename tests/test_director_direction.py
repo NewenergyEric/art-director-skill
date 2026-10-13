@@ -97,6 +97,21 @@ class DirectorDirectionTests(unittest.TestCase):
         self.assertTrue(all(r["result"] == "unknown" for r in review["direction_checks"]))
         self.assertIn("Test cards", Path(result["generation_brief"]).read_text(encoding="utf-8"))
 
+    def test_relocated_pack_keeps_production_review_without_mother_skill(self):
+        moved = self.work / "received-alone"
+        shutil.copytree(self.pack, moved)
+        bundled = moved / "scripts/style_pack.py"
+        self.cli("verify", moved, script=bundled)
+        guide = (moved / "guides/03-delivery-review.md").read_text(encoding="utf-8")
+        for requirement in ("实际参考输入", "宣传画面", "角色的新动作", "相邻等级轮廓", "真实可编辑文字", "实际新输出", "alpha=0", "交接自测"):
+            self.assertIn(requirement, guide)
+        self.assertNotIn(str(ROOT), guide)
+        # Rebuild solely with the received CLI, then verify the same instructions
+        # survived. This catches a hidden dependency on the mother's references.
+        rebuilt = self.work / "rebuilt-from-received"
+        self.cli("build", moved, "--out", rebuilt, script=bundled)
+        self.assertEqual(guide, (rebuilt / "guides/03-delivery-review.md").read_text(encoding="utf-8"))
+
     def test_family_selection_is_required_not_guessed_and_category_must_match(self):
         self.init()
         result = self.start(self.ui_request(family=None, changes={}, exploration={"slots": [], "candidates": 1}), expected=1)

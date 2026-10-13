@@ -2,6 +2,8 @@
 
 # Three game problems. Three art approaches.
 
+**Follow-up:** the [four-category Tidekeeper handoff](TIDEKEEPER-HANDOFF.en.md) adds actual character, environment, UI and item continuation, including the sparse-UI and portrait-crop failures. The studies below remain earlier explorations, not the current merge-game baseline.
+
 These original candidates were generated and revised on 2026-10-13. They test whether art direction can become observable work, related assets and a transferable task. Each study uses a different language of shape, material and space.
 
 Generation, agent visual inspection and file checks are recorded separately. No art director has approved these for production. Player testing and engine acceptance remain open.

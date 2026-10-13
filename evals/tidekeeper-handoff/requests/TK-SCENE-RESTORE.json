@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TK-SCENE-RESTORE",
+  "category": "environment",
+  "family": "workshop",
+  "subject": "旧灯房",
+  "request": "按包内同机位修复旧灯房：补齐门前木板，打开前两扇窗，点亮门灯。其余结构不变。",
+  "mode": "exploration",
+  "changes": {
+    "restoration": "门前补板、前两窗打开、门灯亮"
+  },
+  "exploration": {
+    "slots": [
+      "restoration"
+    ],
+    "candidates": 1
+  },
+  "owner": {
+    "id": "agent-member-self-test",
+    "kind": "internal"
+  },
+  "components": []
+}

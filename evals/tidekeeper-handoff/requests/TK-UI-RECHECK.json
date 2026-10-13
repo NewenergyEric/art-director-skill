@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TK-UI-RECHECK",
+  "category": "ui",
+  "family": "orders",
+  "subject": null,
+  "request": "沿用新版游戏资产与竖屏规范，重查缺件、合成、交付、解锁和地图组合。",
+  "mode": "exploration",
+  "changes": {
+    "order": "第一盏归航灯 / L4；木料 / W2",
+    "state": "缺件、可提交、交付与修复"
+  },
+  "exploration": {
+    "slots": [
+      "order",
+      "state"
+    ],
+    "candidates": 1
+  },
+  "owner": {
+    "id": "agent-member-self-test",
+    "kind": "internal"
+  },
+  "components": [
+    {
+      "category": "character",
+      "subject": "阿澜",
+      "family": "dialogue"
+    },
+    {
+      "category": "environment",
+      "subject": "旧灯房",
+      "family": "workshop"
+    },
+    {
+      "category": "prop",
+      "subject": null,
+      "family": "light-chain"
+    }
+  ]
+}

@@ -2,6 +2,10 @@
 
 # Art Director
 
+**One team, one visual memory.** Carry the director's decisions, samples and delivery requirements into the next person's actual work.
+
+For a first handoff or a multi-category trial, use [cross-category handoff](../references/cross-category-handoff.md). Include the game's own UI artwork, editable type and state behavior; check assets together at the target viewport, including crop safety. A relocated-directory self-test by one agent is not an independent team trial.
+
 Help the design lead establish professional rules that guide the whole project, then connect them to tasks, generation and editing, first-article checks, batches and delivery. Directors and teammates work in design language; the agent handles material organization, rule references, tool use, packaging and versions. A solo creator may perform both roles. Respond and produce project documents in the user’s requested language; Chinese is the default for this Skill’s public materials, with English alternatives available, not a restriction on its users.
 
 The workflow is **existing materials → positioning and visual language → category/component/family requirements → representative samples and first articles → project-pack distribution → production and batch review → feedback and a new version**. Clothing and pose changes are one kind of member task. The same method supports environments, UI states, merge-item chains, products, posters and multi-channel series.

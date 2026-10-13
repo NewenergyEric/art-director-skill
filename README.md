@@ -11,11 +11,11 @@
 Art Director 帮主美把参考、作品和批注，变成团队能沿用的设计规范。先做代表样板，再扩展角色、物品、场景和 UI；每次制作都带上该项目的规则、参考与检查要求。个人制作，也能把上次做对的判断留给下一次。
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=game-art-20261013">
-  <img src="assets/readme/depth-preview-zh.gif?v=game-art-20261013" width="100%" alt="24 秒原创游戏美术案例：建立样板、扩展灯具家族、检查棋盘合成、定向返修与项目包交接。">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=visual-memory-20261013">
+  <img src="assets/readme/depth-preview-zh.gif?v=visual-memory-20261013" width="100%" alt="24 秒潮灯小镇：主美建立规范，成员接包续作四类资产，组合、操作、返修。">
 </picture></a>
 
-<p align="center"><sub>24 秒：从样板到成套资产 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a> · <a href="docs/CASE-STUDIES.md">看案例与检查记录</a></sub></p>
+<p align="center"><sub>24 秒：从主美建规范，到成员交付 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a> · <a href="docs/CASE-STUDIES.md">看案例与检查记录</a></sub></p>
 
 ## 装好，在你的 Agent 里开始
 
@@ -29,40 +29,26 @@ npx skills add https://github.com/NewenergyEric/art-director-skill
 
 已有规范就接着完善，不必重做。绘图与编辑由 Agent 调用当前可用工具完成；Skill 不附带图像模型。
 
-## 看作品，也看它解决了什么
+## 同一份规范，下一位能接着做吗？
 
-### 01 · 合成链，不能只是换四种颜色
+![潮灯小镇：成员续作的角色、场景、合成链与实际 UI 组合。](docs/assets/tidekeeper/overview.png)
 
-![潮灯小镇：灯匠修复航标的原创游戏主视觉。](docs/assets/cases/tidekeeper.jpg)
+我们用 **潮灯小镇** 做了一次完整交接：先建立角色、灯房、灯具与 UI 样板，打包后在新目录开始五个任务，继续制作阿澜的新动作、灯房修复状态、L3/L4 灯具和新订单。
+
+**第一次没有全通过。** 道具和角色能接上，UI 却像空卡片；横版场景放进竖屏，还裁掉了门窗。于是把这些问题带回规范：补齐订单角色、资源图标、修缮材料、按钮状态和竖版适配，再把实际输出放进同一画面检查。
 
 <p align="center">
-  <img src="docs/assets/cases/lantern-l1.png" width="22%" alt="Tidekeeper L1">
-  <img src="docs/assets/cases/lantern-l2.png" width="22%" alt="Tidekeeper L2">
-  <img src="docs/assets/cases/lantern-l3.png" width="22%" alt="Tidekeeper L3">
-  <img src="docs/assets/cases/lantern-l4.png" width="22%" alt="Tidekeeper L4">
+  <img src="docs/assets/tidekeeper/lamp-l1.png" width="21%" alt="L1 口袋油灯">
+  <img src="docs/assets/tidekeeper/lamp-l2.png" width="21%" alt="L2 手提风灯">
+  <img src="docs/assets/tidekeeper/lamp-l3.png" width="21%" alt="L3 圆镜探照灯">
+  <img src="docs/assets/tidekeeper/lamp-l4.png" width="21%" alt="L4 小小航标灯">
 </p>
 
-从海港样板扩展出四件独立道具：**同镜头、同光源、同材料；不同等级，有不同轮廓。** 再放到 64 / 96 px 的合成试验里看是否分得清。
+现在，合成后的物品能进入订单；交付消耗库存、获得奖励、解开货箱；完成两张订单后，才看见修好的灯房。**一致性要在交付画面里成立。**
 
-[看原稿、修正版与透明检查](docs/CASE-STUDIES.md#tidekeeper) · [打开实际规则源](examples/tidekeeper-draft/style-pack.json)
+[看完整交接、失败与修正](docs/TIDEKEEPER-HANDOFF.md) · [试试这段游戏美术原型](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper/member-ui.html) · [看项目规范源](examples/tidekeeper-handoff/style-pack.json)
 
-### 02 · 场景很漂亮，玩家却找不到路
-
-![荆棘信使：小角色、清楚的树枝路径与暖光目的地。](docs/assets/cases/bramble.jpg)
-
-角色用浅雾衬出轮廓，路径横贯中景，目的地留下暖光。**画风不只是一组关键词，还包括玩家先看见什么。**
-
-[看手绘冒险的设计判断](docs/CASE-STUDIES.md#bramble)
-
-### 03 · 升级建筑，别升级成另一个项目
-
-![赤砂补给站：保留入口、建造语汇与镜头的三级建筑升级概念。](docs/assets/cases/depot.jpg)
-
-从小屋到水塔、风泵，让功能扩展改变体量。风轮数量不对，就只修风轮；保留已经成立的建筑体系。
-
-[看定向修改与剩余检查](docs/CASE-STUDIES.md#depot)
-
-以上是实际生成的原创候选案例，包含 Agent 看图自查与文件实测。棋盘为合成示意；真实设备、引擎导入与主美生产验收另行记录。
+这是一位 Agent 在隔离目录里的交接自测，素材为原创候选；真实主美审阅、设备与引擎验收仍待进行。[此前的冒险场景、建筑升级与灯具探索](docs/CASE-STUDIES.md)也保留了原稿和修改记录。
 
 ## 从主美的判断，到团队的交付
 
@@ -92,7 +78,7 @@ npx skills add https://github.com/NewenergyEric/art-director-skill
 <details>
 <summary><strong>项目包、说明书与安装要求</strong></summary>
 
-核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可[下载当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=game-art-20261013)。仅安装通用 Skill，不会自动获得团队私有资料。
+核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可[下载当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-memory-20261013)。仅安装通用 Skill，不会自动获得团队私有资料。
 
 [人类上手说明](docs/HUMAN-GUIDE.md) · [Agent 与工程接入](docs/AGENT-GUIDE.md) · [Skill 入口](SKILL.md) · [游戏美术质量流程](references/game-art-quality.md)
 
