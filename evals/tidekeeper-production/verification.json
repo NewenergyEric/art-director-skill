@@ -1,0 +1,47 @@
+{
+  "method": "One-agent self-test, rebuilt and relocated received pack; file/schema and actual PNG decoding, not native Mac acceptance.",
+  "pack": {
+    "id": "tidekeeper",
+    "version": "0.3.0",
+    "status": "draft",
+    "fingerprint": "fc586948fa3f8e059f42c5710729e4aa531e1781f0ffe91f0ef2104842e21e3a",
+    "manifest_sha256": "d988db55c300cb1a72d92bb29efe5afce3f43aa93b4a7bf80e5bc8ffc57a085f"
+  },
+  "assets": 27,
+  "exports": [
+    {
+      "scene": "ruined",
+      "layers": 1,
+      "rgba8": true,
+      "recipe_placement": true
+    },
+    {
+      "scene": "repair",
+      "layers": 3,
+      "rgba8": true,
+      "recipe_placement": true
+    },
+    {
+      "scene": "day",
+      "layers": 3,
+      "rgba8": true,
+      "recipe_placement": true
+    },
+    {
+      "scene": "dusk",
+      "layers": 3,
+      "rgba8": true,
+      "recipe_placement": true
+    },
+    {
+      "scene": "arrival",
+      "layers": 4,
+      "rgba8": true,
+      "recipe_placement": true
+    }
+  ],
+  "files": 70,
+  "director_approval": "pending",
+  "native_compositor_open": "not_tested",
+  "engine_and_device": "not_tested"
+}

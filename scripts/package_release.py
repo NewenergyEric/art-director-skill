@@ -11,14 +11,18 @@ import zipfile
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", required=True, type=Path)
+    parser.add_argument("--skill", choices=("art-director", "game-art-production"), default="art-director")
     args = parser.parse_args()
     source = Path(__file__).resolve().parents[1]
+    repository = source
+    if args.skill == "game-art-production":
+        source = source / "skills/game-art-production"
     destination = args.out.resolve()
     if destination == source or source in destination.parents:
         parser.error("Archive must be outside the source skill folder")
     if destination.exists():
         parser.error("Destination already exists; choose a new release filename")
-    required = ("SKILL.md", "LICENSE", "scripts/style_pack.py", "templates/style-pack.template.json")
+    required = ("SKILL.md", "LICENSE", "scripts/style_pack.py", "templates/style-pack.template.json") if args.skill == "art-director" else ("SKILL.md", "scripts/production.py", "agents/openai.yaml")
     if not all((source / name).is_file() for name in required):
         parser.error("Skill is incomplete")
     files = [
@@ -31,6 +35,8 @@ def main() -> int:
     ]
     for folder in ("agents", "references", "templates"):
         files.extend(path for path in (source / folder).rglob("*") if path.is_file())
+    if args.skill == "game-art-production":
+        files = [path for path in source.rglob("*") if path.is_file() and "__pycache__" not in path.parts and path.suffix != ".pyc"]
     files = sorted(set(files))
     for path in files:
         if path.is_symlink():
@@ -41,11 +47,16 @@ def main() -> int:
         with zipfile.ZipFile(destination, "x", compression=zipfile.ZIP_DEFLATED) as archive:
             created = True
             for path in files:
-                name = "art-director/" + path.relative_to(source).as_posix()
+                name = args.skill + "/" + path.relative_to(source).as_posix()
                 info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
                 info.compress_type = zipfile.ZIP_DEFLATED
                 info.external_attr = 0o100644 << 16
                 archive.writestr(info, path.read_bytes())
+            if args.skill == "game-art-production":
+                info = zipfile.ZipInfo(args.skill + "/LICENSE", date_time=(1980, 1, 1, 0, 0, 0))
+                info.compress_type = zipfile.ZIP_DEFLATED
+                info.external_attr = 0o100644 << 16
+                archive.writestr(info, (repository / "LICENSE").read_bytes())
         with zipfile.ZipFile(destination) as archive:
             if archive.testzip() is not None:
                 raise ValueError("Archive CRC verification failed")
@@ -54,7 +65,7 @@ def main() -> int:
             destination.unlink(missing_ok=True)
         raise
     import json
-    print(json.dumps({"archive": str(destination), "files": len(files),
+    print(json.dumps({"archive": str(destination), "files": len(files) + (args.skill == "game-art-production"),
                       "sha256": hashlib.sha256(destination.read_bytes()).hexdigest()},
                      ensure_ascii=False, indent=2))
     return 0

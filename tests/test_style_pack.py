@@ -495,6 +495,16 @@ class StylePackContractTests(unittest.TestCase):
             self.assertFalse(Path(reference["path"]).is_absolute())
             self.assertTrue((relocated / reference["path"]).is_file())
 
+    def test_frozen_json_bytes_do_not_depend_on_platform_newlines(self):
+        built = self.work / "canonical-json"
+        self.cli("build", self.pack, "--out", built)
+        for name in ("style-pack.json", "manifest.json"):
+            raw = (built / name).read_bytes()
+            self.assertNotIn(b"\r\n", raw, name)
+            data = json.loads(raw)
+            expected = (json.dumps(data, ensure_ascii=False, indent=2, allow_nan=False) + "\n").encode("utf-8")
+            self.assertEqual(raw, expected, name)
+
     def test_release_build_is_verifiable_and_keeps_test_only_evidence(self):
         self.approve_test_fixture()
         built = self.work / "release-test-only"

@@ -1,6 +1,6 @@
 # Guidance for agents working in this repository
 
-This repository packages one Agent Skill at the repository root. It also contains deterministic tools for building project-specific art-direction skills.
+This repository packages `art-director` at the repository root and the optional `skills/game-art-production` companion. They share project packs; do not duplicate aesthetic rules. It also contains deterministic tools for building project-specific art-direction skills.
 
 ## Keep the skill discoverable
 

@@ -792,7 +792,7 @@ def build_pack(root: Path, argument: str, release=False):
     with tempfile.TemporaryDirectory(prefix=".style-build-", dir=out.parent) as temporary:
         staged = Path(temporary) / "pack"
         staged.mkdir()
-        (staged / "style-pack.json").write_text(json_text(data), encoding="utf-8")
+        (staged / "style-pack.json").write_bytes(json_text(data).encode("utf-8"))
         for relative in asset_paths(data):
             target = staged / relative
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -809,7 +809,7 @@ def build_pack(root: Path, argument: str, release=False):
         manifest = {"schema_version": SCHEMA_VERSION, "format": TEAM_FORMAT, "pack": {"id": data["project"]["id"], "version": data["version"], "status": data["status"], "fingerprint": fingerprint(data, staged)},
                     "release": bool(release), "files": {relative: file_digest(staged / relative) for relative in files},
                     "integrity_notice": "Content hashes detect changes; this unsigned manifest does not authenticate origin, approval identity or artistic quality."}
-        (staged / "manifest.json").write_text(json_text(manifest), encoding="utf-8")
+        (staged / "manifest.json").write_bytes(json_text(manifest).encode("utf-8"))
         verification = verify_pack(staged)
         if not verification["ok"]:
             return verification

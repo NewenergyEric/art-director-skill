@@ -131,7 +131,7 @@ def main():
         'readme_preview': 'depth-preview',
         'font': 'Noto Sans SC, OFL variable subset',
         'visual_system': 'One team, one visual memory.',
-        'story': ['shared-memory', 'director-baseline', 'member-continuation', 'ui-interaction', 'review-and-revise'],
+        'story': ['shared-memory', 'director-baseline', 'member-continuation', 'ui-interaction', 'repair-light-arrival', 'shared-delivery'],
         'depth_showcase': {
             'duration_seconds': 24,
             'fps': 30,

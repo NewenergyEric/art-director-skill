@@ -11,8 +11,8 @@
 Turn the director’s references, work and notes into a shared project Skill. Start with a representative sample, then extend characters, items, environments and UI. Every task carries the project’s rules, references and checks. Solo creators can carry yesterday’s decisions into the next session, too.
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=visual-memory-20261013">
-  <img src="assets/readme/depth-preview-en.gif?v=visual-memory-20261013" width="100%" alt="24-second original game-art study: define a sample, extend an item family, check a composited board, revise and hand off a project pack.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=production-20261013">
+  <img src="assets/readme/depth-preview-en.gif?v=production-20261013" width="100%" alt="24-second original game-art study: define a sample, extend an item family, check a composited board, revise and hand off a project pack.">
 </picture></a>
 
 <p align="center"><sub>24 seconds: from direction to team delivery · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#film">Watch the clear version</a> · <a href="docs/assets/motion/depth-showcase-en.mp4">Download MP4</a> · <a href="docs/CASE-STUDIES.en.md">Read the case evidence</a></sub></p>
@@ -20,7 +20,7 @@ Turn the director’s references, work and notes into a shared project Skill. St
 ## Install. Then work in your agent.
 
 ```sh
-npx skills add https://github.com/NewenergyEric/art-director-skill
+npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-director
 ```
 
 Use a tool that supports Agent Skills, such as Codex, Claude Code or Cursor. Give the agent access to your materials and say:
@@ -31,7 +31,7 @@ Continue existing direction without rebuilding it. Your agent uses its available
 
 ## Can the next person carry the direction forward?
 
-![Tidekeeper: continued character, environment, merge chain and editable game UI in one composition.](docs/assets/tidekeeper/overview.png)
+![Tidekeeper: the same character in new poses and a complete item upgrade chain, continued from the project pack.](docs/assets/tidekeeper-campaign/team-world.png)
 
 We ran **Tidekeeper** through a full handoff: establish character, workshop, item and UI samples; distribute a pack; start five tasks in a new directory; continue Alan's pose, the workshop's restoration, L3/L4 lamps and a new order.
 
@@ -44,9 +44,11 @@ We ran **Tidekeeper** through a full handoff: establish character, workshop, ite
   <img src="docs/assets/tidekeeper/lamp-l4.png" width="21%" alt="L4 Coastal beacon">
 </p>
 
-Merged items now satisfy orders. Delivery consumes inventory, grants rewards and unlocks crates. Both orders must be complete before the restored workshop appears. **Consistency has to survive the actual delivery context.**
+Timber delivery now triggers repairs. A delivered lamp lights the evening, then a supply boat comes home. Poses, day/night, dust, light and water effects follow one story. **Consistency has to survive the continuous experience.**
 
-[Read the handoff and revisions](docs/TIDEKEEPER-HANDOFF.en.md) · [Try the Chinese game-art prototype](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper/member-ui.html) · [Read the project rules](examples/tidekeeper-handoff/style-pack.json)
+[Earlier handoff and revisions](docs/TIDEKEEPER-HANDOFF.en.md) · [Try repair, lighting and arrival](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-production/play.html) · [Production evidence](docs/TIDEKEEPER-PRODUCTION.md)
+
+![Repair, lighting and boat arrival use the same scene recipes.](docs/assets/tidekeeper-production/states-proof.png)
 
 This is one agent's relocated-directory self-test using original candidates. Human art-direction approval, device and engine acceptance remain open. [Earlier adventure, building and lamp studies](docs/CASE-STUDIES.en.md) retain their originals and revision records.
 
@@ -67,6 +69,25 @@ The director can continue:
 
 > This is too realistic: ocean detail distracts from the repair. Simplify the surfaces and background. Keep character identity, hand contact and spatial relationships, then compare the revision.
 
+## Two Skills, one project baseline
+
+| What you need | Entry point | Delivery |
+|---|---|---|
+| Direction, samples, category rules and acceptance | **art-director** | A portable project pack |
+| Continued generation, assembly and delivery | **game-art-production** (optional) | Task dependencies, scene recipes, checks and layered files |
+
+The production Skill consumes the same pack and reports missing assets, changed versions and blocked dependencies. It does not create a second set of art rules. Standard asset delivery works without [Compositor](https://github.com/robbietilton/Compositor); use the optional `.comp` export for layered editing.
+
+```sh
+npx skills add https://github.com/NewenergyEric/art-director-skill --skill game-art-production
+```
+
+Or [download the production Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/game-art-production.zip), then ask:
+
+> Use `$game-art-production` with this complete project pack. Continue repair poses, evening states and arrival effects. Check scale and contact points, then deliver editable layered scenes.
+
+Tidekeeper includes **19 artwork files, 27 checked assets and dependencies, and 5 scene recipes**. The agent's tools generate images; Compositor edits layers and does not run game animation. Format and relocation checks passed; native Mac opening has not been tested. [Production Skill](skills/game-art-production/SKILL.md) · [Candidate delivery](docs/assets/tidekeeper-production/tidekeeper-production-0.3.0.zip)
+
 ## Why this exists
 
 This Skill began in a conversation with an art-director friend who cared about character, atmosphere and how games connect people. Too much time went into repeating the same reference explanations, component decisions and revision notes.
@@ -78,7 +99,7 @@ The aim is to pass those decisions along with the work. The director keeps creat
 <details>
 <summary><strong>Project packs, guides and requirements</strong></summary>
 
-Core tools use Python 3.10+ and its standard library; Pillow is optional for pixel checks. You can also [download the current Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-memory-20261013). Installing the general Skill does not grant access to private team materials.
+Core tools use Python 3.10+ and its standard library; Pillow is optional for pixel checks. You can also [download the current Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=production-20261013). Installing the general Skill does not grant access to private team materials.
 
 [Human guide](docs/HUMAN-GUIDE.en.md) · [Agent integration](docs/AGENT-GUIDE.en.md) · [Skill reading edition](docs/SKILL.en.md) · [Game-art quality method](references/game-art-quality.md)
 

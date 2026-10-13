@@ -26,7 +26,9 @@ The current canonical rules live in [public presentation](../references/public-p
 
 ## Composition
 
-Keep one headline, one principal action and one original-art surface in the opening. A light lead and heavy mint hook overlap imagery with a slight skew and rotation; body text remains upright. Allow English and Chinese different line lengths instead of shrinking all type to fit a shared box.
+For Tidekeeper campaign imagery, follow the [game presentation method](../references/game-presentation.md): full-bleed game art, short action-led hooks, outlined dimensional display lettering and reusable original game elements. Do not use repeated explanation-column/phone-frame slides. The current implementation is `motion/src/GameCampaign.tsx`, with webpage treatments in `docs/assets/campaign.css`; [element provenance](assets/tidekeeper-campaign/README.md) records the actual generation and official store reference. These are this fictional project's materials, not a universal style for every game.
+
+Keep one headline, one principal action and one original-art surface in the opening. The warm display hook overlaps the artwork with a slight skew and rotation; body text remains upright. Allow English and Chinese different line lengths instead of shrinking all type to fit a shared box.
 
 Use flat editorial sections, generous space and fine dividers. Keep install and agent prompts easy to copy. Use the final dark section for the four-role diagram, with a vertical equivalent on phones. Match the companion repositories’ map and include concrete handoffs plus feedback. Native GitHub text follows GitHub’s fonts; custom typography belongs in rendered media.
 

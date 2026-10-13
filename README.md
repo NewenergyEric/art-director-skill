@@ -11,8 +11,8 @@
 Art Director 帮主美把参考、作品和批注，变成团队能沿用的设计规范。先做代表样板，再扩展角色、物品、场景和 UI；每次制作都带上该项目的规则、参考与检查要求。个人制作，也能把上次做对的判断留给下一次。
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=visual-memory-20261013">
-  <img src="assets/readme/depth-preview-zh.gif?v=visual-memory-20261013" width="100%" alt="24 秒潮灯小镇：主美建立规范，成员接包续作四类资产，组合、操作、返修。">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=production-20261013">
+  <img src="assets/readme/depth-preview-zh.gif?v=production-20261013" width="100%" alt="24 秒潮灯小镇：主美建立规范，成员接包续作四类资产，组合、操作、返修。">
 </picture></a>
 
 <p align="center"><sub>24 秒：从主美建规范，到成员交付 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a> · <a href="docs/CASE-STUDIES.md">看案例与检查记录</a></sub></p>
@@ -20,7 +20,7 @@ Art Director 帮主美把参考、作品和批注，变成团队能沿用的设�
 ## 装好，在你的 Agent 里开始
 
 ```sh
-npx skills add https://github.com/NewenergyEric/art-director-skill
+npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-director
 ```
 
 在支持 Agent Skills 的工具里使用，例如 Codex、Claude Code 或 Cursor。把资料放进 Agent 能读取的文件夹，然后直接说：
@@ -31,7 +31,7 @@ npx skills add https://github.com/NewenergyEric/art-director-skill
 
 ## 同一份规范，下一位能接着做吗？
 
-![潮灯小镇：成员续作的角色、场景、合成链与实际 UI 组合。](docs/assets/tidekeeper/overview.png)
+![潮灯小镇：同一角色的不同姿势与完整灯具升级链，按项目规范继续。](docs/assets/tidekeeper-campaign/team-world.png)
 
 我们用 **潮灯小镇** 做了一次完整交接：先建立角色、灯房、灯具与 UI 样板，打包后在新目录开始五个任务，继续制作阿澜的新动作、灯房修复状态、L3/L4 灯具和新订单。
 
@@ -44,9 +44,11 @@ npx skills add https://github.com/NewenergyEric/art-director-skill
   <img src="docs/assets/tidekeeper/lamp-l4.png" width="21%" alt="L4 小小航标灯">
 </p>
 
-现在，合成后的物品能进入订单；交付消耗库存、获得奖励、解开货箱；完成两张订单后，才看见修好的灯房。**一致性要在交付画面里成立。**
+现在，交木料会触发修缮，交灯具后点亮夜晚，再招呼补给船靠岸。角色动作、昼夜、扬尘、灯光和水纹跟着同一段故事变化。**一致性要在连续的使用画面里成立。**
 
-[看完整交接、失败与修正](docs/TIDEKEEPER-HANDOFF.md) · [试试这段游戏美术原型](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper/member-ui.html) · [看项目规范源](examples/tidekeeper-handoff/style-pack.json)
+[看前次交接与修正](docs/TIDEKEEPER-HANDOFF.md) · [试试修缮、点灯与归航](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-production/play.html) · [本轮生成与交付记录](docs/TIDEKEEPER-PRODUCTION.md)
+
+![同一项目规范下的修缮、点灯与归航；共享场景配方。](docs/assets/tidekeeper-production/states-proof.png)
 
 这是一位 Agent 在隔离目录里的交接自测，素材为原创候选；真实主美审阅、设备与引擎验收仍待进行。[此前的冒险场景、建筑升级与灯具探索](docs/CASE-STUDIES.md)也保留了原稿和修改记录。
 
@@ -67,6 +69,25 @@ npx skills add https://github.com/NewenergyEric/art-director-skill
 
 > 这张太写实，海面细节抢了修灯动作。只简化表面和背景，保留人物身份、手部接触与空间关系，然后对照原稿复查。
 
+## 两个 Skill，一份项目规范
+
+| 你现在要做的事 | 使用哪个入口 | 得到什么 |
+|---|---|---|
+| 建立方向、样板、类别与验收要求 | **art-director** | 可分发的专业项目包 |
+| 接包后连续生成、组合与交付 | **game-art-production**（可选） | 任务依赖、场景配方、检查记录与分层文件 |
+
+先让首件成立，再组织生产。新制作 Skill 读取同一项目包，能发现缺素材、旧版本和下游依赖变化；不会另立一份画风规范。普通资产交付可以直接使用，可编辑场景则能导出给 [Compositor](https://github.com/robbietilton/Compositor)。
+
+```sh
+npx skills add https://github.com/NewenergyEric/art-director-skill --skill game-art-production
+```
+
+也可[下载制作 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/game-art-production.zip)，然后说：
+
+> 使用 `$game-art-production`，读取这个完整项目包。继续做修缮动作、傍晚场景和归航效果，先检查同屏比例与接触点，再交付可继续编辑的分层场景。
+
+潮灯案例已有 **19 张美术素材、27 项受检查的资产与依赖、5 个场景配方**。生成使用 Agent 的图像工具；Compositor 负责图层编辑，不生成图片或播放游戏动画。目前验证了文件格式与换目录交付，Mac 原生打开尚未验证。[查看制作 Skill](skills/game-art-production/SKILL.md) · [下载本轮候选交付包](docs/assets/tidekeeper-production/tidekeeper-production-0.3.0.zip)
+
 ## 为什么做这个
 
 这个 Skill 起于和一位主美朋友的讨论。他在意角色的气质、画面的感觉，也在意游戏里人与人的连接；但许多时间花在重复解释参考、组件与返工原因。
@@ -78,7 +99,7 @@ npx skills add https://github.com/NewenergyEric/art-director-skill
 <details>
 <summary><strong>项目包、说明书与安装要求</strong></summary>
 
-核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可[下载当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-memory-20261013)。仅安装通用 Skill，不会自动获得团队私有资料。
+核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可[下载当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=production-20261013)。仅安装通用 Skill，不会自动获得团队私有资料。
 
 [人类上手说明](docs/HUMAN-GUIDE.md) · [Agent 与工程接入](docs/AGENT-GUIDE.md) · [Skill 入口](SKILL.md) · [游戏美术质量流程](references/game-art-quality.md)
 

@@ -12,7 +12,8 @@
     "director-baseline",
     "member-continuation",
     "ui-interaction",
-    "review-and-revise"
+    "repair-light-arrival",
+    "shared-delivery"
   ],
   "depth_showcase": {
     "duration_seconds": 24,
@@ -25,28 +26,28 @@
   "assets": [
     {
       "path": "assets/readme/depth-preview-en.gif",
-      "bytes": 4024640,
-      "sha256": "ed4604ecbdc77ea44b5dfa5f5f83d3c96542d4d84b34f85f82e84ea7cd13a6e8"
+      "bytes": 5677807,
+      "sha256": "7fa9798fc365adf0e5722ba4927086591b7ad8ddcaafdf12913b424ab59427ac"
     },
     {
       "path": "assets/readme/depth-preview-en.jpg",
-      "bytes": 49656,
-      "sha256": "3247c085954374efe4349879b1155c09ae7c8731bda26c91abda3f5044684675"
+      "bytes": 92830,
+      "sha256": "307c648a52758024acc2e2943e410663e00424d51ceaa7ac995a83a087edd5a7"
     },
     {
       "path": "assets/readme/depth-preview-zh.gif",
-      "bytes": 3954661,
-      "sha256": "d4ba27af472062609fefb0e1e00cd55786c7309fcc64f6c3b4a6a6d65f5b1618"
+      "bytes": 5666293,
+      "sha256": "283867a397b7602bdf85969d28ca85897ffd6539b1df2fbb921847c7f3ce366b"
     },
     {
       "path": "assets/readme/depth-preview-zh.jpg",
-      "bytes": 49298,
-      "sha256": "9f0e886405fa0b836e78c252835a3085c46775c3b60e85fa83f78c14229ed983"
+      "bytes": 93675,
+      "sha256": "1f80b7c0b2faba79bfccd2d902a104db6c93e35b4449d0d1ac5b04d5e0d44ee6"
     },
     {
       "path": "assets/readme/social-preview.png",
-      "bytes": 970821,
-      "sha256": "d86d16caeedd33998d6bc37d294c979cff10c236b82998298060a1b9dfd4cabd"
+      "bytes": 1402780,
+      "sha256": "b4ded3f1591c2125aab593f954a4a82a030c7b58f3eddcb13ce23b26b28e324d"
     },
     {
       "path": "docs/assets/motion/depth-comic.webp",
@@ -60,23 +61,23 @@
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.jpg",
-      "bytes": 49656,
-      "sha256": "3247c085954374efe4349879b1155c09ae7c8731bda26c91abda3f5044684675"
+      "bytes": 92830,
+      "sha256": "307c648a52758024acc2e2943e410663e00424d51ceaa7ac995a83a087edd5a7"
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.mp4",
-      "bytes": 1455354,
-      "sha256": "236561d4bae4c468581f65dbe7413dd717409f094e5de1379662ec7281e19272"
+      "bytes": 2265741,
+      "sha256": "3434f9b12919d067453786895072d672622aa4428cab8f903480ec764724c0c9"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.jpg",
-      "bytes": 49298,
-      "sha256": "9f0e886405fa0b836e78c252835a3085c46775c3b60e85fa83f78c14229ed983"
+      "bytes": 93675,
+      "sha256": "1f80b7c0b2faba79bfccd2d902a104db6c93e35b4449d0d1ac5b04d5e0d44ee6"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.mp4",
-      "bytes": 1443581,
-      "sha256": "12ac742015996cc1f9bfbc2f3ea506fb4c3f93fb8a3e381ab4de5639527ce9c0"
+      "bytes": 2277019,
+      "sha256": "5d15e8959997ce99d9ff7f2c95d1d39df8bfb3a62ba99de0fd58ad6b4d5e8650"
     },
     {
       "path": "docs/assets/motion/depth-traditional.webp",

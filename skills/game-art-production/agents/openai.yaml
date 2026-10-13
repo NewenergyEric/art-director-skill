@@ -1,0 +1,6 @@
+interface:
+  display_name: "游戏美术制作"
+  short_description: "沿用同一项目规范，组织资产生成、场景组合与分层交付"
+  default_prompt: "使用 $game-art-production 读取这个项目包，继续制作游戏资产，检查动作、场景变化和 UI 的组合一致性，并记录交付结果。"
+policy:
+  allow_implicit_invocation: true
