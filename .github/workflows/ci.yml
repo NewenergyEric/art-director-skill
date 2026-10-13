@@ -35,12 +35,17 @@ jobs:
           python scripts/style_pack.py validate examples/campaign-studio-draft
           python scripts/style_pack.py validate examples/tidekeeper-draft
           python scripts/style_pack.py validate examples/tidekeeper-handoff
+          python scripts/style_pack.py validate examples/tidekeeper-production
       - name: Verify the portable Tidekeeper candidate and rejection cases
         run: python evals/tidekeeper-handoff/reproduce.py --out "${{ runner.temp }}/tidekeeper-check"
       - name: Verify public handoff evidence
         run: python evals/tidekeeper-handoff/check-evidence.py
       - name: Package the mother skill
         run: python scripts/package_release.py --out "${{ runner.temp }}/art-director-v0.5.1.zip"
+      - name: Verify continuous scenes and Compositor delivery
+        run: python evals/tidekeeper-production/reproduce.py --out "${{ runner.temp }}/tidekeeper-production"
+      - name: Package the optional production Skill
+        run: python scripts/package_release.py --skill game-art-production --out "${{ runner.temp }}/game-art-production.zip"
 
   motion:
     name: Remotion compositions
@@ -53,7 +58,9 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Check the playable art study state transitions
-        run: node evals/tidekeeper-handoff/check-ui.mjs
+        run: |
+          node evals/tidekeeper-handoff/check-ui.mjs
+          node evals/tidekeeper-production/check-scenes.mjs
       - name: Compile and list compositions
         run: npm run motion:check -- --browser-executable=/usr/bin/google-chrome --chrome-mode=chrome-for-testing
       - name: Render the spatial film with its bundled OFL font

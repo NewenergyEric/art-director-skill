@@ -1,0 +1,1408 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "tidekeeper",
+    "name": "潮灯小镇 · 连续场景与生产交付试作",
+    "domain": "game-art",
+    "owner": "原创案例自测，待真实项目主美审阅"
+  },
+  "version": "0.3.0",
+  "status": "draft",
+  "scope": {
+    "medium": "2D casual mobile merge-game art, editable UI and event-driven scene study",
+    "view": "角色对话立绘 / 俯视三分之四地图 / 轻俯视棋子 / 平面UI，各自有样板",
+    "target_platform": "390×844 浏览器试作；真实手机与引擎待测",
+    "asset_types": [
+      "character",
+      "environment",
+      "prop",
+      "ui",
+      "motion"
+    ]
+  },
+  "intent": {
+    "summary": "一个团队/项目，一份视觉记忆。沿用四类资产交接成果，扩展修缮、点灯与归航；场景、动作、效果与UI共用事件和配方，导出可追溯的分层候选。",
+    "pillars": [
+      "像休闲合成游戏，先服务格内识别与操作",
+      "保留海港修复的共同形状与色彩语言",
+      "身份、类别、单次变化分开，组合时检验"
+    ],
+    "avoid": [
+      "把宣传插画当游戏画面标准",
+      "让写实金属噪点淹没小格轮廓",
+      "只统一配色而不统一结构、镜头和状态"
+    ]
+  },
+  "tokens": {
+    "colors": {
+      "teal": "#2DAEA3",
+      "gold": "#F8C353",
+      "cream": "#FFF1CA",
+      "coral": "#F17F63",
+      "ink": "#214C50"
+    },
+    "fonts": {
+      "ui": {
+        "family": "TideSans / Noto Sans SC",
+        "fallback": [
+          "Microsoft YaHei",
+          "sans-serif"
+        ]
+      }
+    }
+  },
+  "rules": [
+    {
+      "id": "TK-FORM",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "饱满大体块、干净局部色、柔和宽高光与上左主光；按类别简化细节。不是每件都涂同一种颜色或材料。",
+      "rationale": "让同一世界在不同资源职责下成立。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-NOTES"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-USE",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "先看实际使用：对话角色、地图、棋子、订单与按钮各有职责。宣传构图不继承为通用制作约束。",
+      "rationale": "避免统一到错误类型或错误镜头。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-NOTES"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-CHAR-ID",
+      "scope": [
+        "character"
+      ],
+      "strength": "must",
+      "statement": "阿澜：暖棕肤、棕色杏眼、浓眉、圆颊短鼻、深蓝不对称大块短卷发、小耳钉，成年体态约5.5头身。",
+      "rationale": "同一人改变动作仍能识别。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-CHAR"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-CHAR-DRAW",
+      "scope": [
+        "character"
+      ],
+      "strength": "must",
+      "statement": "用宽色面与柔和塑形；发型分成大块，省略发丝与布料织纹；保持小尺寸脸部表情可读。",
+      "rationale": "区别剧情角色立绘与精细宣传插画。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-CHAR"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-SCENE-ID",
+      "scope": [
+        "environment"
+      ],
+      "strength": "must",
+      "statement": "旧灯房：珊瑚色弧形坡屋顶、右侧烟囱、奶油墙、前面中央门和两窗、门上圆形灯徽，海水在左，木平台及门前缺板的位置固定。",
+      "rationale": "修复前后应是同一地点。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-MAP"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-SCENE-VIEW",
+      "scope": [
+        "environment"
+      ],
+      "strength": "must",
+      "statement": "俯视三分之四地图机位保持；不添加天空或电影镜头；只修改任务授权的修复部位。",
+      "rationale": "修复状态可以直接对照。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-MAP"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-ITEM-SHAPE",
+      "scope": [
+        "prop"
+      ],
+      "strength": "must",
+      "statement": "L1圆腹侧环矮灯，L2宽体拱柄提灯，L3大圆镜/U形支架探照灯，L4短粗锥形航标；两件同级生成下一级，生产器不参与此链。",
+      "rationale": "同级易配对、相邻等级有轮廓差异。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-NOTES"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-ITEM-MATERIAL",
+      "scope": [
+        "prop"
+      ],
+      "strength": "must",
+      "statement": "海绿主体、蜂蜜黄宽金属块、奶油灯面、珊瑚单钮；轻俯视三分之四；粗护栏与大开口。删除细螺钉、细杆、镜面噪点及外发光。",
+      "rationale": "在小格内看见功能轮廓。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-LAMPS"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-ITEM-SCALE",
+      "scope": [
+        "prop"
+      ],
+      "strength": "must",
+      "statement": "在实际约50px棋盘格及46/64/96px比较轮廓和透明边缘；512px RGBA，完整原画布等比缩放补边，目标有效占比70–90%。",
+      "rationale": "不能用大图精细代替格内清楚。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-NOTES"
+      ],
+      "verification": "technical",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-UI-STATE",
+      "scope": [
+        "ui"
+      ],
+      "strength": "must",
+      "statement": "订单有缺件/可提交/已交付状态；缺件按钮不可提交，有货交付消耗实际目标物并更新反馈。选中与生产器角标各自明确。",
+      "rationale": "真实信息与反馈服务合成操作。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-UI"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-UI-TEXT",
+      "scope": [
+        "ui"
+      ],
+      "strength": "must",
+      "statement": "海港角色站在奶油订单台后；暖木框、海绿双色棋格、草绿凸起动作按钮。数值17px粗斜体，按钮12px粗字与短阴影，说明11px；装饰字与可编辑正文分开。",
+      "rationale": "文字和图像各司其职；数值仍为试作设置。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-UI",
+        "TK-FONT"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-COMPOSE",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "最终使用同版本的真实成员输出组合检查；对话立绘是UI叠层，不作为等距地图小人；棋子不可压住格子边界和角标。",
+      "rationale": "分开正确也要组合正确。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-NOTES"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-UI-ART",
+      "scope": [
+        "ui"
+      ],
+      "strength": "must",
+      "statement": "UI须包含本项目角色订单、贝壳金币、体力、两条合成链、生产器、锁定货箱、状态标记与物品说明。每项对应可读职责，不添加无效充值或活动按钮。",
+      "rationale": "此次组合自测与用户反馈暴露的缺口。",
+      "allowed_variation": [
+        "任务声明的文案与状态，保留共同语言。"
+      ],
+      "evidence": [
+        "TK-UI",
+        "TK-UI-SHOT"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-VIEWPORT",
+      "scope": [
+        "environment",
+        "ui"
+      ],
+      "strength": "must",
+      "statement": "使用竖版前后适配图，保留屋顶、门、两扇正窗和平台；390×844中完整显示建筑，不把横图直接cover铺满。",
+      "rationale": "此次组合自测与用户反馈暴露的缺口。",
+      "allowed_variation": [
+        "任务声明的文案与状态，保留共同语言。"
+      ],
+      "evidence": [
+        "TK-PORTRAIT-BEFORE",
+        "TK-PORTRAIT-AFTER"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-STATE",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "同一场景的修复和昼夜状态保留机位、门窗、屋脊与栈桥地标。生成后的地标须逐点对照；不可仅凭尺寸相同判定一致。",
+      "rationale": "确保连续状态和组合仍属于同一项目。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-PRODUCTION-NOTES"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-ACTION",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "阿澜姿势沿用身份与服装；叙事插演标注为独立姿势，接触点落在栈桥内，不冒充地图转面或骨骼动画。",
+      "rationale": "确保连续状态和组合仍属于同一项目。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-PRODUCTION-NOTES"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    },
+    {
+      "id": "TK-FX",
+      "scope": [
+        "global"
+      ],
+      "strength": "must",
+      "statement": "扬尘、灯光、水纹与奖励由具体事件触发，沿用柔和大形与暖光；不盖住订单、人物脸和主要交互。减少动态模式可直接完成事件。",
+      "rationale": "确保连续状态和组合仍属于同一项目。",
+      "allowed_variation": [
+        "只变化本任务声明的槽位，保留其余结构。"
+      ],
+      "evidence": [
+        "TK-PRODUCTION-NOTES"
+      ],
+      "verification": "visual",
+      "status": "proposed"
+    }
+  ],
+  "references": [
+    {
+      "id": "TK-NOTES",
+      "path": "references/handoff-notes.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "项目定位、类别翻译、接口和试作边界。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-PROMPTS",
+      "path": "references/generation-prompts.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "真实生成提示与输入关系，不是额外批准。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-CHAR",
+      "path": "references/character-base.png",
+      "role": "identity",
+      "applies_to": [
+        "character"
+      ],
+      "notes": "阿澜身份和默认服装。地图角色视角未覆盖。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-MAP",
+      "path": "references/workshop-before.jpg",
+      "role": "identity",
+      "applies_to": [
+        "environment"
+      ],
+      "notes": "旧灯房结构与机位；成员修复时绑定该实体。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-LAMPS",
+      "path": "references/lamp-l1.png",
+      "role": "style",
+      "applies_to": [
+        "prop"
+      ],
+      "notes": "物品材料、粗轮廓、高光与镜头。L1身份不是L3/L4结构。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-L2",
+      "path": "references/lamp-l2.png",
+      "role": "style",
+      "applies_to": [
+        "prop"
+      ],
+      "notes": "L2扩展首件；成员L3/L4沿用处理语言，不沿用L2剪影。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-PRODUCER",
+      "path": "references/producer.png",
+      "role": "identity",
+      "applies_to": [
+        "prop"
+      ],
+      "notes": "灯匠工作箱生产器；不是合成链成员。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-UI",
+      "path": "references/ui-first.html",
+      "role": "composition",
+      "applies_to": [
+        "ui"
+      ],
+      "notes": "UI首件实际源码，依赖本目录JS、字体和图片。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-UI-KIT",
+      "path": "references/ui-kit.js",
+      "role": "context",
+      "applies_to": [
+        "ui"
+      ],
+      "notes": "可编辑组件、状态及交互；这是项目源码材料，不代表正式游戏实现。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-FONT",
+      "path": "references/tide-sans.woff2",
+      "role": "font",
+      "applies_to": [
+        "ui"
+      ],
+      "notes": "Noto Sans SC OFL子集，许可见OFL.txt。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-FONT-LICENSE",
+      "path": "references/OFL.txt",
+      "role": "context",
+      "applies_to": [
+        "ui"
+      ],
+      "notes": "随包字体许可。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-OLD",
+      "path": "references/counterexample-old-lamp.png",
+      "role": "counterexample",
+      "applies_to": [
+        "prop"
+      ],
+      "notes": "不采用细杆、窄体、写实金属细节；不要作为正向生图输入。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-UI-SHOT",
+      "path": "references/ui-first.png",
+      "role": "composition",
+      "applies_to": [
+        "ui"
+      ],
+      "notes": "ui-first.html 的实际渲染，390×844；字体和素材由同包源码提供。",
+      "status": "candidate",
+      "provenance": {
+        "type": "native-ui-render",
+        "source": "Remotion renders the same ui-kit.js markup and CSS; not image-generated text."
+      }
+    },
+    {
+      "id": "TK-WAVE",
+      "path": "references/character-wave.png",
+      "role": "identity",
+      "applies_to": [
+        "character"
+      ],
+      "notes": "阿澜挥手变体；0.2.0成员实际续作。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-AFTER",
+      "path": "references/workshop-after.jpg",
+      "role": "identity",
+      "applies_to": [
+        "environment"
+      ],
+      "notes": "同机位修复前后；0.2.0成员实际续作。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-L3",
+      "path": "references/lamp-l3.png",
+      "role": "style",
+      "applies_to": [
+        "prop",
+        "ui"
+      ],
+      "notes": "L3圆镜轮廓；0.2.0成员实际续作。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-L4",
+      "path": "references/lamp-l4.png",
+      "role": "style",
+      "applies_to": [
+        "prop",
+        "ui"
+      ],
+      "notes": "L4航标轮廓；0.2.0成员实际续作。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-PORTRAIT-BEFORE",
+      "path": "references/workshop-before-portrait.jpg",
+      "role": "composition",
+      "applies_to": [
+        "environment",
+        "ui"
+      ],
+      "notes": "竖版未修复布局和安全区。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-PORTRAIT-AFTER",
+      "path": "references/workshop-after-portrait.jpg",
+      "role": "composition",
+      "applies_to": [
+        "environment",
+        "ui"
+      ],
+      "notes": "竖版修复后的布局；先生成此适配再编辑未修复状态。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-WOOD1",
+      "path": "references/wood-l1.png",
+      "role": "style",
+      "applies_to": [
+        "prop",
+        "ui"
+      ],
+      "notes": "木料一级；暖木与海绿宽带。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-WOOD2",
+      "path": "references/wood-l2.png",
+      "role": "style",
+      "applies_to": [
+        "prop",
+        "ui"
+      ],
+      "notes": "木料二级；成捆轮廓与珊瑚扣。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-COIN",
+      "path": "references/coin.png",
+      "role": "style",
+      "applies_to": [
+        "ui"
+      ],
+      "notes": "贝壳金币，资源栏24px检查。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-ENERGY",
+      "path": "references/energy.png",
+      "role": "style",
+      "applies_to": [
+        "ui"
+      ],
+      "notes": "体力图标，资源栏与生产器共同使用。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-NERI",
+      "path": "references/neri.png",
+      "role": "identity",
+      "applies_to": [
+        "character",
+        "ui"
+      ],
+      "notes": "奈莉订单半身像，不沿用阿澜身份或全身导出比例。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-LOCK",
+      "path": "references/locked.png",
+      "role": "style",
+      "applies_to": [
+        "prop",
+        "ui"
+      ],
+      "notes": "缠网旧货箱，锁定区占位。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-FAIL-UI",
+      "path": "references/ui-flat-v020.png",
+      "role": "counterexample",
+      "applies_to": [
+        "ui"
+      ],
+      "notes": "首版过空、卡片化，保留作为实际失败。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-FAIL-CROP",
+      "path": "references/ui-crop-failure.png",
+      "role": "counterexample",
+      "applies_to": [
+        "environment",
+        "ui"
+      ],
+      "notes": "横版cover竖屏导致建筑裁切。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "原创自测生成/原生渲染；实际输入与提示见 generation-prompts.md。"
+      }
+    },
+    {
+      "id": "TK-PRODUCTION-1",
+      "path": "references/workshop-night.jpg",
+      "role": "composition",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "0.3 连续场景候选；实际生成、事件源码或配方，见 production-notes.md。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-PRODUCTION-2",
+      "path": "references/character-repair.png",
+      "role": "identity",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "0.3 连续场景候选；实际生成、事件源码或配方，见 production-notes.md。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-PRODUCTION-3",
+      "path": "references/character-signal.png",
+      "role": "identity",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "0.3 连续场景候选；实际生成、事件源码或配方，见 production-notes.md。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-PRODUCTION-4",
+      "path": "references/supply-boat.png",
+      "role": "composition",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "0.3 连续场景候选；实际生成、事件源码或配方，见 production-notes.md。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-PRODUCTION-5",
+      "path": "references/scene-player.js",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "0.3 连续场景候选；实际生成、事件源码或配方，见 production-notes.md。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-PRODUCTION-6",
+      "path": "references/scene-recipes.json",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "0.3 连续场景候选；实际生成、事件源码或配方，见 production-notes.md。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-PRODUCTION-7",
+      "path": "references/play.html",
+      "role": "composition",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "0.3 连续场景候选；实际生成、事件源码或配方，见 production-notes.md。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-PRODUCTION-8",
+      "path": "references/production-prompts.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "0.3 连续场景候选；实际生成、事件源码或配方，见 production-notes.md。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    },
+    {
+      "id": "TK-PRODUCTION-NOTES",
+      "path": "references/production-notes.md",
+      "role": "context",
+      "applies_to": [
+        "global"
+      ],
+      "notes": "0.3 连续场景候选；实际生成、事件源码或配方，见 production-notes.md。",
+      "status": "candidate",
+      "provenance": {
+        "type": "original-study",
+        "source": "本次原创交接自测；来源和生成文本见 handoff-notes.md / generation-prompts.md；不是已批准生产基线。"
+      }
+    }
+  ],
+  "profiles": {
+    "character": {
+      "brief": "阿澜对话立绘与修缮、举灯叙事插演。",
+      "fixed": [
+        "TK-CHAR-DRAW；具体身份与比例按所绑定实体，不把阿澜身份应用到其他角色。"
+      ],
+      "variable": [
+        "表情、动作；本轮沿用默认服装。"
+      ],
+      "technical": {
+        "study_display_height_px": 220,
+        "source_format": "RGBA PNG；非分层PSD",
+        "engine_rig": null,
+        "dialogue_export_px": [
+          768,
+          1152
+        ],
+        "action_export_px": [
+          640,
+          960
+        ],
+        "scene_pose": "225×337.5 on 900×1600 canvas; cutout vignette, not map turnarounds or skeletal animation"
+      },
+      "task_controls": {
+        "slots": {
+          "pose": {
+            "default": "站立手扶工具包",
+            "guidance": "仅改变动作，不更换身份。"
+          },
+          "expression": {
+            "default": "亲切微笑",
+            "guidance": "允许微笑幅度变化。"
+          },
+          "outfit": {
+            "default": "芥黄短披肩、米白内衫、靛蓝卷腿工装、棕工具包、珊瑚鞋",
+            "guidance": "本轮不换装；默认服装不自动成为永久身份。"
+          }
+        },
+        "exploration": {
+          "allowed_slots": [
+            "pose",
+            "expression",
+            "outfit"
+          ],
+          "max_candidates": 2
+        }
+      }
+    },
+    "environment": {
+      "brief": "旧灯房待修、修好与傍晚状态；保留主体机位与地标。",
+      "fixed": [
+        "建筑结构与镜头；门窗数及位置；岸线。"
+      ],
+      "variable": [
+        "修补木板、窗户开合、门灯亮灭。",
+        "授权昼夜与窗灯变化，不改门窗和栈桥地标。"
+      ],
+      "technical": {
+        "study_export_px": [
+          1440,
+          810
+        ],
+        "engine_layers": null,
+        "portrait_use": "独立竖版样板；390px宽完整显示，不能用横版cover裁掉门窗。",
+        "state_export_px": [
+          900,
+          1600
+        ]
+      },
+      "task_controls": {
+        "slots": {
+          "restoration": {
+            "default": "未修复",
+            "guidance": "只改授权修复点，不重绘布局。"
+          },
+          "lighting": {
+            "default": "白天",
+            "guidance": "可变傍晚，保留主体色相与地标；检查中间帧。"
+          }
+        },
+        "exploration": {
+          "allowed_slots": [
+            "restoration",
+            "lighting"
+          ],
+          "max_candidates": 2
+        }
+      }
+    },
+    "prop": {
+      "brief": "合成棋子、工作箱与独立地图补给船；按家族选镜头和尺度。",
+      "fixed": [
+        "材料、光源、镜头和有效占比。"
+      ],
+      "variable": [
+        "等级轮廓按家族变更。"
+      ],
+      "technical": {
+        "study_export_px": [
+          512,
+          512
+        ],
+        "study_cell_px": 50,
+        "engine_anchor": null,
+        "map_boat_export_px": [
+          720,
+          480
+        ]
+      },
+      "task_controls": {
+        "slots": {
+          "level": {
+            "default": "L1",
+            "guidance": "L1/L2为首件，成员继续L3/L4。"
+          },
+          "use": {
+            "default": "合成棋子",
+            "guidance": "地图船按对应场景机位和落位制作；不套50px格内占比。"
+          }
+        },
+        "exploration": {
+          "allowed_slots": [
+            "level",
+            "use"
+          ],
+          "max_candidates": 2
+        }
+      }
+    },
+    "ui": {
+      "brief": "竖屏合成棋盘与订单组件。",
+      "fixed": [
+        "资源栏、订单、棋盘、反馈、导航分工；同一套按钮与格子。"
+      ],
+      "variable": [
+        "订单文案与目标等级、缺件/可提交/已提交状态。"
+      ],
+      "technical": {
+        "study_viewport_px": [
+          390,
+          844
+        ],
+        "grid": [
+          7,
+          8
+        ],
+        "source_format": "HTML/CSS/JS with bundled font",
+        "engine_widget_format": null
+      },
+      "task_controls": {
+        "slots": {
+          "order": {
+            "default": "第一盏归航灯 / L4；栈桥需要新木料 / W2",
+            "guidance": "成员可换L4订单，保留状态逻辑。"
+          },
+          "state": {
+            "default": "灯具缺件、木料可提交",
+            "guidance": "缺件不可提交；完成消耗需求物并变为已交付。"
+          }
+        },
+        "exploration": {
+          "allowed_slots": [
+            "order",
+            "state"
+          ],
+          "max_candidates": 2
+        }
+      }
+    },
+    "motion": {
+      "brief": "修缮、点灯、归航事件的动作与效果组合。",
+      "fixed": [
+        "TK-ACTION：身份、服装、接触点与姿势用途。",
+        "TK-FX：效果触发原因、层级、形状与可读性。",
+        "终点、大小和朝向读取同一场景配方。"
+      ],
+      "variable": [
+        "已授权事件、时间、强度与减少动态表现。"
+      ],
+      "technical": {
+        "scene_canvas_px": [
+          900,
+          1600
+        ],
+        "study_viewport_px": [
+          390,
+          844
+        ],
+        "repair_ms": 2600,
+        "light_ms": 2800,
+        "arrival_ms": 3800,
+        "source_format": "Separate PNG poses + frame-driven HTML/JS/SVG effects",
+        "engine_animation": null
+      },
+      "task_controls": {
+        "slots": {
+          "event": {
+            "default": "修缮",
+            "guidance": "修缮、点灯、归航；先说明触发和完成条件。"
+          },
+          "intensity": {
+            "default": "低强度",
+            "guidance": "不遮脸、门窗或交互；减少动态直接完成。"
+          }
+        },
+        "exploration": {
+          "allowed_slots": [
+            "event",
+            "intensity"
+          ],
+          "max_candidates": 2
+        }
+      }
+    }
+  },
+  "entities": [
+    {
+      "id": "alan",
+      "kind": "character",
+      "aliases": [
+        "阿澜",
+        "灯匠"
+      ],
+      "identity_rules": [
+        "TK-CHAR-ID"
+      ],
+      "reference_ids": [
+        "TK-CHAR"
+      ],
+      "fixed_features": [
+        "TK-CHAR-ID 所列脸、发块、体态"
+      ],
+      "variations": [
+        "动作和表情"
+      ]
+    },
+    {
+      "id": "old-workshop",
+      "kind": "environment",
+      "aliases": [
+        "旧灯房",
+        "灯房"
+      ],
+      "identity_rules": [
+        "TK-SCENE-ID"
+      ],
+      "reference_ids": [
+        "TK-MAP"
+      ],
+      "fixed_features": [
+        "建筑结构、镜头与岸线"
+      ],
+      "variations": [
+        "修复状态"
+      ]
+    }
+  ],
+  "recipes": [],
+  "decisions": [
+    {
+      "id": "TK-REVISION-02",
+      "decision": "本次将试作方向由精细宣传插画校准为休闲合成游戏的角色、地图、棋子与UI；先做类别首件再交包。",
+      "rationale": "用户指出画风、物品或界面不像真正的合成游戏；不能只保持错误的一致性。",
+      "status": "proposed",
+      "source": "2026-10-13 用户反馈与本次实际生成/代码制作；视觉选择是Agent建议，非主美已批准。"
+    }
+  ],
+  "open_questions": [
+    "真实主美是否接受本版视觉方向与样板？",
+    "真实手机、目标棋盘密度、引擎格式与性能尚未验收。",
+    "分层编辑源、角色多视角与地图行走动画不在本次交接切片内。"
+  ],
+  "approval": null,
+  "direction": {
+    "positioning": [
+      {
+        "id": "slice",
+        "topic": "当前验证范围",
+        "statement": "一个灯房修复切片，角色/场景/UI/合成链均以真实文件交接。交接由同一Agent在隔离目录自测。",
+        "status": "proposed",
+        "source": "用户要求完整跑潮灯小镇并检查一致性。"
+      }
+    ],
+    "families": [
+      {
+        "id": "dialogue",
+        "name": "剧情角色",
+        "category": "character",
+        "purpose": "新动作延续同一身份",
+        "rule_ids": [
+          "TK-CHAR-DRAW"
+        ],
+        "reference_ids": [
+          "TK-CHAR"
+        ],
+        "fixed": [
+          "画风与展示职责一致；具体比例、身份和裁切按实体样板。"
+        ],
+        "variable": [
+          "动作与表情"
+        ],
+        "technical": {},
+        "status": "proposed"
+      },
+      {
+        "id": "workshop",
+        "name": "灯房修复",
+        "category": "environment",
+        "purpose": "同地点状态变体",
+        "rule_ids": [
+          "TK-SCENE-VIEW",
+          "TK-VIEWPORT"
+        ],
+        "reference_ids": [
+          "TK-MAP",
+          "TK-PORTRAIT-BEFORE",
+          "TK-PORTRAIT-AFTER"
+        ],
+        "fixed": [
+          "同机位与结构"
+        ],
+        "variable": [
+          "授权修复点"
+        ],
+        "technical": {},
+        "status": "proposed"
+      },
+      {
+        "id": "light-chain",
+        "name": "灯具合成链",
+        "category": "prop",
+        "purpose": "L1到L4升级和格内识别",
+        "rule_ids": [
+          "TK-ITEM-SHAPE",
+          "TK-ITEM-MATERIAL",
+          "TK-ITEM-SCALE"
+        ],
+        "reference_ids": [
+          "TK-LAMPS",
+          "TK-L2"
+        ],
+        "fixed": [
+          "同材料、镜头、光源"
+        ],
+        "variable": [
+          "四级结构轮廓"
+        ],
+        "technical": {},
+        "status": "proposed"
+      },
+      {
+        "id": "orders",
+        "name": "订单与棋盘",
+        "category": "ui",
+        "purpose": "真实可用的状态组件",
+        "rule_ids": [
+          "TK-UI-STATE",
+          "TK-UI-TEXT",
+          "TK-UI-ART",
+          "TK-VIEWPORT"
+        ],
+        "reference_ids": [
+          "TK-UI",
+          "TK-UI-KIT",
+          "TK-FONT",
+          "TK-L3",
+          "TK-L4",
+          "TK-PORTRAIT-BEFORE",
+          "TK-PORTRAIT-AFTER",
+          "TK-WOOD1",
+          "TK-WOOD2",
+          "TK-COIN",
+          "TK-ENERGY",
+          "TK-NERI",
+          "TK-LOCK",
+          "TK-FAIL-UI",
+          "TK-FAIL-CROP"
+        ],
+        "fixed": [
+          "层级、状态语义与文字源"
+        ],
+        "variable": [
+          "订单和目标等级"
+        ],
+        "technical": {},
+        "status": "proposed"
+      },
+      {
+        "id": "repair-chain",
+        "name": "木料修缮链",
+        "category": "prop",
+        "purpose": "木板到整捆木料，支持第二张实际订单",
+        "rule_ids": [
+          "TK-ITEM-SHAPE",
+          "TK-ITEM-SCALE"
+        ],
+        "reference_ids": [
+          "TK-WOOD1",
+          "TK-WOOD2"
+        ],
+        "fixed": [
+          "大体块、同光源、暖木与海绿宽带"
+        ],
+        "variable": [
+          "一级单块与二级成捆结构"
+        ],
+        "technical": {
+          "levels": 2
+        },
+        "status": "proposed"
+      },
+      {
+        "id": "harbor-events",
+        "name": "港湾事件动作与效果",
+        "category": "motion",
+        "purpose": "连续状态组合仍沿用同一项目规范",
+        "rule_ids": [
+          "TK-STATE",
+          "TK-ACTION",
+          "TK-FX"
+        ],
+        "reference_ids": [
+          "TK-PRODUCTION-NOTES"
+        ],
+        "fixed": [
+          "结构、身份、接触点和图层次序；交付只有一次奖励。"
+        ],
+        "variable": [
+          "授权修复、照明和路径时序"
+        ],
+        "technical": {
+          "scene_recipe": "references/scene-recipes.json"
+        },
+        "status": "proposed"
+      }
+    ],
+    "exemplars": [
+      {
+        "id": "sample-dialogue",
+        "name": "剧情角色首件",
+        "family_ids": [
+          "dialogue"
+        ],
+        "purpose": "新动作延续同一身份",
+        "reference_ids": [
+          "TK-CHAR"
+        ],
+        "acceptance": [
+          "约5.5头身；对话立绘用途",
+          "实际输出与首件并排看；在目标使用画面复查。"
+        ],
+        "required": true,
+        "status": "candidate",
+        "approval": null
+      },
+      {
+        "id": "sample-workshop",
+        "name": "灯房修复首件",
+        "family_ids": [
+          "workshop"
+        ],
+        "purpose": "同地点状态变体",
+        "reference_ids": [
+          "TK-MAP"
+        ],
+        "acceptance": [
+          "同机位与结构",
+          "实际输出与首件并排看；在目标使用画面复查。"
+        ],
+        "required": true,
+        "status": "candidate",
+        "approval": null
+      },
+      {
+        "id": "sample-light-chain",
+        "name": "灯具合成链首件",
+        "family_ids": [
+          "light-chain"
+        ],
+        "purpose": "L1到L4升级和格内识别",
+        "reference_ids": [
+          "TK-LAMPS",
+          "TK-L2"
+        ],
+        "acceptance": [
+          "同材料、镜头、光源",
+          "实际输出与首件并排看；在目标使用画面复查。"
+        ],
+        "required": true,
+        "status": "candidate",
+        "approval": null
+      },
+      {
+        "id": "sample-orders",
+        "name": "订单与棋盘首件",
+        "family_ids": [
+          "orders"
+        ],
+        "purpose": "真实可用的状态组件",
+        "reference_ids": [
+          "TK-UI",
+          "TK-UI-KIT",
+          "TK-FONT",
+          "TK-UI-SHOT"
+        ],
+        "acceptance": [
+          "层级、状态语义与文字源",
+          "实际输出与首件并排看；在目标使用画面复查。"
+        ],
+        "required": true,
+        "status": "candidate",
+        "approval": null
+      }
+    ],
+    "delivery": [
+      {
+        "id": "study-delivery",
+        "name": "四类资产与组合检查",
+        "categories": [
+          "character",
+          "environment",
+          "prop",
+          "ui"
+        ],
+        "channels": [
+          "本地浏览器及可读项目包"
+        ],
+        "requirements": [
+          "提交新动作、修复后场景、新UI订单状态和L3/L4实际文件。",
+          "按项目样板及真实组合记录差异；保留失败稿。",
+          "不混入原聊天外带素材；本次为候选试作，不宣布引擎可用。"
+        ],
+        "technical": {
+          "viewport_px": [
+            390,
+            844
+          ],
+          "engine_import": null
+        },
+        "status": "proposed",
+        "source": "本次原创交接试作范围。"
+      }
+    ]
+  }
+}

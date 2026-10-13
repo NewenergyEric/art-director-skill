@@ -16,7 +16,10 @@ on:
       - "examples/pop-borough-draft/**"
       - "examples/tidekeeper-draft/**"
       - "examples/tidekeeper-handoff/**"
+      - "examples/tidekeeper-production/**"
+      - "skills/game-art-production/**"
       - "evals/tidekeeper-handoff/**"
+      - "evals/tidekeeper-production/**"
       - "examples/game-art-studies/**"
       - "evals/director-workflow-v0.5/**"
       - "evals/public-demo/**"
@@ -64,6 +67,9 @@ jobs:
           cp -R examples/pop-borough-draft _site/examples/
           cp -R examples/tidekeeper-draft _site/examples/
           cp -R examples/tidekeeper-handoff _site/examples/
+          cp -R examples/tidekeeper-production _site/examples/
+          cp -R skills _site/
+          cp -R evals/tidekeeper-production _site/evals/
           cp -R evals/tidekeeper-handoff _site/evals/
           cp -R examples/game-art-studies _site/examples/
           cp -R evals/director-workflow-v0.5 _site/evals/
@@ -77,6 +83,8 @@ jobs:
           python scripts/package_release.py --out "$RUNNER_TEMP/art-director-pages.zip"
           mkdir -p _site/downloads
           cp "$RUNNER_TEMP/art-director-pages.zip" _site/downloads/art-director.zip
+          python scripts/package_release.py --skill game-art-production --out "$RUNNER_TEMP/game-art-production-pages.zip"
+          cp "$RUNNER_TEMP/game-art-production-pages.zip" _site/downloads/game-art-production.zip
       - uses: actions/configure-pages@v5
         with:
           enablement: true

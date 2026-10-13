@@ -1,0 +1,4 @@
+interface:
+  display_name: "潮灯小镇 · 连续场景与生产交付试作 · 视觉规范"
+  short_description: "基于项目固定版本、风格与身份约束，制作并评审团队视觉资产及组合设计"
+  default_prompt: "使用 $tidekeeper-art-style，为当前项目生成带版本与参考依据的视觉任务书，并逐项评审。"

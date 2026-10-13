@@ -193,11 +193,11 @@ def main():
     chapters = [float(value) for value in re.findall(r'data-seek="([^"]+)"', landing)]
     check('five navigable chapters cover the workflow in sequence',
           len(chapters) == 5 and chapters == sorted(chapters)
-          and chapters[0] == 0 and 17 <= chapters[-1] < 24)
+          and chapters[0] == 0 and 14 <= chapters[-1] < 24)
     check('both caption editions cover the complete 24-second story',
           all('00:24.000' in (ROOT / f'docs/assets/motion/workflow-{lang}.vtt').read_text(encoding='utf-8')
               for lang in ('en', 'zh')))
-    motion_source = (ROOT / 'motion/src/DepthShowcase.tsx').read_text(encoding='utf-8')
+    motion_source = (ROOT / 'motion/src/GameCampaign.tsx').read_text(encoding='utf-8')
     check('public source keeps the requested Chinese and English claims',
           '一个团队/项目，' in motion_source and '一份视觉记忆。' in motion_source
           and 'One team,' in motion_source and 'one visual memory.' in motion_source)

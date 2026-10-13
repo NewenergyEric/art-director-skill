@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>潮灯小镇 · 修缮、点灯与归航</title>
+<style>@font-face{font-family:TideSans;src:url(tide-sans.woff2);font-weight:100 900}html,body{min-height:100%;background:#143f4b}#frame{position:relative;margin:auto}#game{transform-origin:top left}#failure{padding:24px;color:#fff4d8;font-family:sans-serif}</style><style id="kit"></style>
+<div id="frame"><div id="game"></div></div><p id="failure" role="alert" hidden></p>
+<script type="module">
+import {productionCss,mountProduction} from './scene-player.js';
+document.querySelector('#kit').textContent=productionCss;
+try{const response=await fetch('./scene-recipes.json');if(!response.ok)throw new Error('场景配方无法载入');const recipe=await response.json();mountProduction(document.querySelector('#game'),recipe);const fit=()=>{const scale=Math.min(1,innerWidth/390,innerHeight/844);document.querySelector('#game').style.transform=`scale(${scale})`;Object.assign(document.querySelector('#frame').style,{width:390*scale+'px',height:844*scale+'px'});};fit();addEventListener('resize',fit);}catch(e){document.querySelector('#failure').hidden=false;document.querySelector('#failure').textContent='加载失败，请刷新后再试：'+e.message;}
+</script></html>

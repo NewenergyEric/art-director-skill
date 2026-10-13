@@ -1,0 +1,584 @@
+{
+  "schema_version": "1.0",
+  "assets": {
+    "workshop-before-portrait": {
+      "id": "workshop-before-portrait",
+      "path": "references/workshop-before-portrait.jpg",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [
+        "workshop-after-portrait"
+      ],
+      "pixels": [
+        900,
+        1600
+      ],
+      "alpha": false,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE",
+          "TK-STATE"
+        ],
+        "variation": "Revised damaged dock, closed shutters; preserve geometry.",
+        "prompt_record": "references/production-prompts.md"
+      }
+    },
+    "workshop-after-portrait": {
+      "id": "workshop-after-portrait",
+      "path": "references/workshop-after-portrait.jpg",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        900,
+        1599
+      ],
+      "alpha": false,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE",
+          "TK-STATE"
+        ],
+        "variation": "workshop-after-portrait",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "workshop-night": {
+      "id": "workshop-night",
+      "path": "references/workshop-night.jpg",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [
+        "workshop-after-portrait"
+      ],
+      "pixels": [
+        900,
+        1600
+      ],
+      "alpha": false,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE",
+          "TK-STATE"
+        ],
+        "variation": "workshop-night",
+        "prompt_record": "references/production-prompts.md"
+      }
+    },
+    "character-base": {
+      "id": "character-base",
+      "path": "references/character-base.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        768,
+        1152
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE",
+          "TK-CHAR-ID",
+          "TK-ACTION"
+        ],
+        "variation": "character-base",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "character-wave": {
+      "id": "character-wave",
+      "path": "references/character-wave.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        768,
+        1152
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE",
+          "TK-CHAR-ID",
+          "TK-ACTION"
+        ],
+        "variation": "character-wave",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "character-repair": {
+      "id": "character-repair",
+      "path": "references/character-repair.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [
+        "character-base"
+      ],
+      "pixels": [
+        640,
+        960
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE",
+          "TK-CHAR-ID",
+          "TK-ACTION"
+        ],
+        "variation": "character-repair",
+        "prompt_record": "references/production-prompts.md"
+      }
+    },
+    "character-signal": {
+      "id": "character-signal",
+      "path": "references/character-signal.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [
+        "character-base"
+      ],
+      "pixels": [
+        640,
+        960
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE",
+          "TK-CHAR-ID",
+          "TK-ACTION"
+        ],
+        "variation": "character-signal",
+        "prompt_record": "references/production-prompts.md"
+      }
+    },
+    "supply-boat": {
+      "id": "supply-boat",
+      "path": "references/supply-boat.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [
+        "workshop-after-portrait"
+      ],
+      "pixels": [
+        720,
+        480
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "supply-boat",
+        "prompt_record": "references/production-prompts.md"
+      }
+    },
+    "wood-l1": {
+      "id": "wood-l1",
+      "path": "references/wood-l1.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        512,
+        512
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "wood-l1",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "wood-l2": {
+      "id": "wood-l2",
+      "path": "references/wood-l2.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        512,
+        512
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "wood-l2",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "lamp-l1": {
+      "id": "lamp-l1",
+      "path": "references/lamp-l1.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        512,
+        512
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "lamp-l1",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "lamp-l2": {
+      "id": "lamp-l2",
+      "path": "references/lamp-l2.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        512,
+        512
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "lamp-l2",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "lamp-l3": {
+      "id": "lamp-l3",
+      "path": "references/lamp-l3.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        512,
+        512
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "lamp-l3",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "lamp-l4": {
+      "id": "lamp-l4",
+      "path": "references/lamp-l4.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        512,
+        512
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "lamp-l4",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "producer": {
+      "id": "producer",
+      "path": "references/producer.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        512,
+        512
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "producer",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "neri": {
+      "id": "neri",
+      "path": "references/neri.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        600,
+        800
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "neri",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "locked": {
+      "id": "locked",
+      "path": "references/locked.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        512,
+        512
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "locked",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "coin": {
+      "id": "coin",
+      "path": "references/coin.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        512,
+        512
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "coin",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    },
+    "energy": {
+      "id": "energy",
+      "path": "references/energy.png",
+      "kind": "image",
+      "status": "candidate",
+      "depends_on": [],
+      "pixels": [
+        512,
+        512
+      ],
+      "alpha": true,
+      "task": {
+        "rules": [
+          "TK-FORM",
+          "TK-USE"
+        ],
+        "variation": "energy",
+        "prompt_record": "references/generation-prompts.md"
+      }
+    }
+  },
+  "scenes": [
+    {
+      "id": "ruined",
+      "width": 900,
+      "height": 1600,
+      "layers": [
+        {
+          "id": "background",
+          "asset": "workshop-before-portrait",
+          "box": [
+            0,
+            0,
+            900,
+            1600
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repair",
+      "width": 900,
+      "height": 1600,
+      "layers": [
+        {
+          "id": "background",
+          "asset": "workshop-before-portrait",
+          "box": [
+            0,
+            0,
+            900,
+            1600
+          ]
+        },
+        {
+          "id": "alan",
+          "asset": "character-repair",
+          "box": [
+            330,
+            540,
+            225,
+            337.5
+          ]
+        },
+        {
+          "id": "materials",
+          "asset": "wood-l2",
+          "box": [
+            498,
+            849,
+            125,
+            125
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day",
+      "width": 900,
+      "height": 1600,
+      "layers": [
+        {
+          "id": "background",
+          "asset": "workshop-after-portrait",
+          "box": [
+            0,
+            0,
+            900,
+            1600
+          ]
+        },
+        {
+          "id": "alan",
+          "asset": "character-base",
+          "box": [
+            330,
+            540,
+            225,
+            337.5
+          ]
+        },
+        {
+          "id": "beacon",
+          "asset": "lamp-l4",
+          "box": [
+            554,
+            850,
+            112,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dusk",
+      "width": 900,
+      "height": 1600,
+      "layers": [
+        {
+          "id": "background",
+          "asset": "workshop-night",
+          "box": [
+            0,
+            0,
+            900,
+            1600
+          ]
+        },
+        {
+          "id": "alan",
+          "asset": "character-signal",
+          "box": [
+            330,
+            540,
+            225,
+            337.5
+          ]
+        },
+        {
+          "id": "beacon",
+          "asset": "lamp-l4",
+          "box": [
+            554,
+            850,
+            112,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrival",
+      "width": 900,
+      "height": 1600,
+      "layers": [
+        {
+          "id": "background",
+          "asset": "workshop-night",
+          "box": [
+            0,
+            0,
+            900,
+            1600
+          ]
+        },
+        {
+          "id": "alan",
+          "asset": "character-signal",
+          "box": [
+            330,
+            540,
+            225,
+            337.5
+          ]
+        },
+        {
+          "id": "beacon",
+          "asset": "lamp-l4",
+          "box": [
+            554,
+            850,
+            112,
+            112
+          ]
+        },
+        {
+          "id": "boat",
+          "asset": "supply-boat",
+          "box": [
+            70,
+            990,
+            370,
+            246.667
+          ],
+          "flipX": true
+        }
+      ]
+    }
+  ]
+}

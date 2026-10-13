@@ -1,0 +1,45 @@
+/* Tidekeeper campaign: artwork and display lettering share the game's materials.
+   Reading, installation and controls retain ordinary accessible text. */
+.game-hero{background:#198398}
+.game-hero:after{background:linear-gradient(90deg,#0e647044,transparent 78%),linear-gradient(0deg,#083f6599,transparent 38%)}
+.game-hero .hero-scene{opacity:1;filter:saturate(1.08)}
+.game-hero .hero-inner{min-height:685px;padding-top:38px}
+.game-hero .eyebrow{color:#fff8dd;text-shadow:0 2px 3px #164c58;font-weight:850;letter-spacing:1.3px}
+.game-hero h1{max-width:930px;margin-top:46px;transform:rotate(-3deg) skewX(-5deg)}
+.game-hero h1 span,.game-hero h1 strong{position:relative;isolation:isolate;font-weight:900;color:#ffe18a;line-height:1.16;text-shadow:none}
+.game-hero h1 [data-lettering]:before,.game-hero h1 [data-lettering]:after{content:attr(data-lettering);position:absolute;inset:0;color:#fff7dc;pointer-events:none}
+.game-hero h1 [data-lettering]:before{z-index:-2;-webkit-text-stroke:.12em #145565;color:#145565;text-shadow:0 .08em 0 #103e4e,0 .12em .14em #0a405655}
+.game-hero h1 [data-lettering]:after{z-index:-1;-webkit-text-stroke:.04em #fff7dc}
+.game-hero h1 span{font-size:clamp(38px,5vw,66px);color:#fff9e2}
+.game-hero h1 strong{font-size:clamp(60px,7.8vw,104px);margin-top:8px}
+.game-hero .hero-person{width:35%;height:600px;right:-1%;bottom:-22px;z-index:2;filter:drop-shadow(0 16px 6px #083c5755)}
+.game-hero .hero-copy{color:#fffced;text-shadow:0 2px 4px #123d4d;font-weight:650;font-size:20px;max-width:650px;margin-top:31px}
+.game-hero .primary{background:linear-gradient(#e4ff8b,#9bd64a 50%,#60ab2f 51%,#76c431);border:3px solid #fff4b8;border-radius:17px;box-shadow:0 6px 0 #216b3e,inset 0 2px 0 #ffffffaa;color:#193e31;font-weight:900;transition:transform .15s}
+.game-hero .primary:hover{transform:translateY(-2px)}
+.game-hero .text-link{color:#fff6d8;font-weight:750;text-shadow:0 2px 2px #194350}
+.game-hero .hero-foot{position:absolute;left:0;right:0;bottom:20px;border:0;color:#fff3d4;text-shadow:0 2px 3px #174754;margin-top:0;z-index:4}
+.campaign-prop{position:absolute;width:154px;height:auto;object-fit:contain;right:29%;bottom:5px;z-index:2;pointer-events:none;filter:drop-shadow(0 10px 5px #063d5955);transform:rotate(-12deg)}
+.campaign-prop.second{width:111px;right:41%;bottom:14px;transform:rotate(9deg)}
+.handoff-overview{border-radius:5px;box-shadow:0 8px 0 #ead29b,0 13px 30px #16485518}
+.case-tide .handoff-title{font-weight:850}
+.film-frame{background:#ecd99f;padding:7px;border-radius:13px;box-shadow:0 7px 0 #b88d51,0 19px 35px #163f4c18}
+html:lang(en) .game-hero h1 strong{font-size:clamp(52px,6.9vw,90px)}
+@media(max-width:900px){.game-hero .hero-person{width:34%;height:470px;right:-4%}.game-hero .hero-copy{max-width:75%}.campaign-prop{width:124px;right:28%}.campaign-prop.second{width:96px;right:40%}}
+@media(max-width:620px){
+  .game-hero .hero-inner{min-height:705px;padding-top:28px}
+  .game-hero h1{margin-top:33px;transform:rotate(-3deg) skewX(-4deg)}
+  .game-hero h1 span{font-size:clamp(29px,8.4vw,46px)}
+  .game-hero h1 strong{font-size:clamp(39px,11.5vw,64px)}
+  .game-hero .hero-copy{max-width:100%;font-size:16px;line-height:1.9;margin-top:32px}
+  .game-hero .hero-person{width:213px;height:347px;right:-20px;bottom:8px}
+  .game-hero .actions{position:relative;max-width:75%;gap:23px;align-items:flex-start;flex-direction:column;margin-top:31px;margin-bottom:0}
+  .game-hero .button{padding:12px 16px;font-size:14px}
+  .game-hero .hero-foot{margin-top:0;font-size:10px}
+  .campaign-prop{width:120px;right:auto;left:32px;bottom:53px}
+  .campaign-prop.second{width:93px;right:auto;left:135px;bottom:58px}
+  html:lang(en) .game-hero h1 strong{font-size:42px;max-width:350px}
+  html:lang(en) .game-hero .hero-inner{min-height:760px}
+  html:lang(en) .game-hero .hero-person{height:310px}
+  html:lang(en) .game-hero .hero-copy{max-width:100%}
+}
+@media(prefers-reduced-motion:reduce){.game-hero .primary{transition:none}}
