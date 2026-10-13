@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "task_id": "TK-CHAIN-L4",
+  "category": "prop",
+  "family": "light-chain",
+  "subject": null,
+  "request": "继续制作 L4 短粗锥形航标，延续 L1/L2 视觉语言，轮廓需区别于L3。",
+  "mode": "exploration",
+  "changes": {
+    "level": "L4 短粗锥形航标"
+  },
+  "exploration": {
+    "slots": [
+      "level"
+    ],
+    "candidates": 1
+  },
+  "owner": {
+    "id": "agent-member-self-test",
+    "kind": "internal"
+  },
+  "components": []
+}

@@ -1,0 +1,386 @@
+{
+  "method": "Same-agent relocated-directory handoff self-test, not an independent team trial. Export files are public; full generator originals are retained locally, with source hashes where recorded.",
+  "initial_version": "0.2.0",
+  "frozen_deliveries": [
+    {
+      "task_id": "TK-CHAR-WAVE",
+      "asset_id": "character-wave",
+      "file": "character-wave.png",
+      "actual_input_reference_ids": [
+        "TK-CHAR"
+      ],
+      "input_sha256": {
+        "TK-CHAR": "47c541c57286d242bd816855adce654b5fc4159ee4d3fbaba48c4733b1c01e44"
+      },
+      "pack_version": "0.2.0",
+      "fingerprint": "9f24ba82a726248c5d26f9f8c17f218f4c96a29d4fcb4cbef1a83b7283e3cb63",
+      "tool": "built-in image_gen",
+      "model": null,
+      "seed": null,
+      "generation_file_id": "exec-bf06ef34-737e-4c6a-98ed-02183935c172.png",
+      "sha256": "7fb48b018ee080143405ba42b07fdcdc77a06b8fcf569871614b2f03b0b6d109",
+      "status": "candidate",
+      "production_approved": false,
+      "review": "candidate; see the report for first-pass UI and crop failures"
+    },
+    {
+      "task_id": "TK-SCENE-RESTORE",
+      "asset_id": "workshop-after",
+      "file": "workshop-after.jpg",
+      "actual_input_reference_ids": [
+        "TK-MAP"
+      ],
+      "input_sha256": {
+        "TK-MAP": "1b07259b8d2392e38a39d63b64006828e7eda84e56579eaa01ebcae2d4f9a743"
+      },
+      "pack_version": "0.2.0",
+      "fingerprint": "9f24ba82a726248c5d26f9f8c17f218f4c96a29d4fcb4cbef1a83b7283e3cb63",
+      "tool": "built-in image_gen",
+      "model": null,
+      "seed": null,
+      "generation_file_id": "exec-00960b5d-f22f-4cac-bd81-b06837cd9f61.png",
+      "sha256": "7d58a78af742b3d5b8c6990ddb067e475a43eb8e59d095d1086cb9c289bc80e2",
+      "status": "candidate",
+      "production_approved": false,
+      "review": "candidate; see the report for first-pass UI and crop failures"
+    },
+    {
+      "task_id": "TK-CHAIN-L3",
+      "asset_id": "lamp-l3",
+      "file": "lamp-l3.png",
+      "actual_input_reference_ids": [
+        "TK-LAMPS",
+        "TK-L2"
+      ],
+      "input_sha256": {
+        "TK-LAMPS": "03e5ae0a44a12db32afdc47465562f3eb1f305d13bfb37698214a71493d7b59d",
+        "TK-L2": "319ccd679c7cdf01058eaf2f9958c48fd90d367b5422c48a06f921a8418bb661"
+      },
+      "pack_version": "0.2.0",
+      "fingerprint": "9f24ba82a726248c5d26f9f8c17f218f4c96a29d4fcb4cbef1a83b7283e3cb63",
+      "tool": "built-in image_gen",
+      "model": null,
+      "seed": null,
+      "generation_file_id": "exec-f2dac193-d60e-44a0-9342-01eee51083f6.png",
+      "sha256": "33dfb26763a74bb0943cde361c1db3b604a353f339baed06c5ec2973f8686995",
+      "status": "candidate",
+      "production_approved": false,
+      "review": "candidate; see the report for first-pass UI and crop failures"
+    },
+    {
+      "task_id": "TK-CHAIN-L4",
+      "asset_id": "lamp-l4",
+      "file": "lamp-l4.png",
+      "actual_input_reference_ids": [
+        "TK-LAMPS",
+        "TK-L2"
+      ],
+      "input_sha256": {
+        "TK-LAMPS": "03e5ae0a44a12db32afdc47465562f3eb1f305d13bfb37698214a71493d7b59d",
+        "TK-L2": "319ccd679c7cdf01058eaf2f9958c48fd90d367b5422c48a06f921a8418bb661"
+      },
+      "pack_version": "0.2.0",
+      "fingerprint": "9f24ba82a726248c5d26f9f8c17f218f4c96a29d4fcb4cbef1a83b7283e3cb63",
+      "tool": "built-in image_gen",
+      "model": null,
+      "seed": null,
+      "generation_file_id": "exec-10d5f400-7e47-4b6b-ab40-ff9c250f6bf5.png",
+      "sha256": "f9c7e7019f7d28ed069dc4631f7202cbda85bf90aa7aa9953a7aeeeba9b0bca7",
+      "status": "candidate",
+      "production_approved": false,
+      "review": "candidate; see the report for first-pass UI and crop failures"
+    },
+    {
+      "task_id": "TK-UI-ORDER",
+      "asset_id": "member-ui",
+      "file": "member-ui.html",
+      "actual_input_reference_ids": [
+        "TK-UI",
+        "TK-UI-KIT",
+        "TK-UI-SHOT",
+        "TK-FONT",
+        "TK-CHAR",
+        "TK-MAP",
+        "TK-LAMPS",
+        "TK-L2"
+      ],
+      "actual_new_assets": [
+        "character-wave.png",
+        "workshop-after.jpg",
+        "lamp-l3.png",
+        "lamp-l4.png"
+      ],
+      "pack_version": "0.2.0",
+      "fingerprint": "9f24ba82a726248c5d26f9f8c17f218f4c96a29d4fcb4cbef1a83b7283e3cb63",
+      "tool": "native HTML/CSS/JS based on received ui-kit.js",
+      "sha256": "2e4ed04006f3248119a9f7475cc594ef7e65b0610e849f7876fef4009e1fcd6c",
+      "status": "candidate",
+      "production_approved": false,
+      "review": "candidate; see the report for first-pass UI and crop failures"
+    }
+  ],
+  "frozen_delivery_archive": "member-deliveries-0.2.0.zip",
+  "revision": "0.2.1",
+  "revision_reason": [
+    "sparse non-game UI",
+    "landscape crop in portrait viewport",
+    "next click swallowed after drag"
+  ],
+  "additional_generations": [
+    {
+      "file": "workshop-after-portrait.jpg",
+      "source_generation_id": "exec-c01d0f0d-8b58-4777-86dc-063ded59ec8e.png",
+      "source_sha256": "7d00307155bec8e2913f8b1e47f78e006ba7138fc446d4a5d3efcefc38501169",
+      "sha256": "c0863cef87a4ccfe802125937a234d8db930b1ac50058a4c4efebad42b8f7198",
+      "prompt": "Adapt the supplied ORIGINAL restored TIDEKEEPER game map into a PORTRAIT 9:16 mobile map background. This is a framing/outpainting correction for the same asset, not a new location. Preserve its exact clean casual mobile-game rendering, daylight, color scheme, camera angle, building design and geometry, coral curved roof, one chimney, central teal door, BOTH open front windows, unchanged closed side windows, lit door lamp, lamp emblem, repaired deck, crates and shoreline.\nCRITICAL: show the ENTIRE workshop roof, chimney, left and right front windows together inside the central upper-middle 60% of the portrait image. Keep those features away from left/right crop edges. Show water at the left. Expand world space above with the existing stone lane, low hedges and compact trees, and below with a broad quiet dock area and teal water. Reframe/zoom out only enough to fit ALL the important building and platform parts. Same near-isometric angle, no horizon or sky, no new buildings or landmarks.\nThe lower 22% must be quiet open dock/water, left blank for a separate dialogue interface. No text, no characters, no UI or controls generated into the picture. Portrait 9:16 image, not the original landscape canvas.",
+      "tool": "built-in image_gen",
+      "status": "candidate",
+      "model": null,
+      "seed": null,
+      "export": "whole-canvas resize and transparent padding; no alpha removal"
+    },
+    {
+      "file": "workshop-before-portrait.jpg",
+      "source_generation_id": "exec-eaae9b96-5b61-4722-ab99-6fd1577c6c14.png",
+      "source_sha256": "295d08a677b4521f634cc7dcb51567ad4da7908bc9611eb10c1994bd54a60baf",
+      "sha256": "97436d29dcfbedeaf337952cc9a2a117f104e60cea57fa34bad6ab5dc19a3a60",
+      "prompt": "Edit only the THREE restoration state details in this portrait TIDEKEEPER map. Preserve the exact portrait framing, building, roof, chimney, emblem, shore, dock, greenery, props, camera, colors and rendering.\nReturn this location to its BEFORE-repair state: (1) close the teal shutters on the two FRONT windows, keeping the exact window arches and positions; (2) remove two short deck planks directly before the central door, exposing small dark gaps, not a large hole; (3) switch OFF the small hanging wall lamp next to the door. Do not change the right-side wall windows or any other part of the scene. No new objects, no characters, text, UI or time-of-day change. Same portrait 9:16 image. This is the paired before-state of this exact portrait composition.",
+      "tool": "built-in image_gen",
+      "status": "candidate",
+      "model": null,
+      "seed": null,
+      "export": "whole-canvas resize and transparent padding; no alpha removal"
+    },
+    {
+      "file": "wood-l1.png",
+      "source_generation_id": "exec-0c5eea0f-007e-4ccd-afa2-08e928890844.png",
+      "source_sha256": "c36ba8e4a087dd637eb63fd22d8acb32c90016e1f7c41245f81a0ef56976f8ec",
+      "sha256": "63e290ab968c152b4877e265ccd7dc736126395f48d8ff9abf9ca4c7d79efa6b",
+      "prompt": "Create ONE matching casual mobile merge-game item sprite, true transparent background. Reference image is the shape, material, view and lighting style. Subject: repair chain LEVEL ONE, a single SHORT thick honey-colored wooden plank with heavily rounded beveled ends, one large teal painted stripe across its middle. Diagonal bottom left to top right, three-quarter top view, broad clean soft planes, minimal grain, upper-left soft light. Readable and dense at 46px, 85% canvas occupancy. It must look like one part that can merge into the reference strapped stack of planks, not a long thin realistic timber. No letters, border, ground shadow, UI or background. Square sprite.",
+      "tool": "built-in image_gen",
+      "status": "candidate",
+      "model": null,
+      "seed": null,
+      "export": "whole-canvas resize and transparent padding; no alpha removal"
+    },
+    {
+      "file": "wood-l2.png",
+      "source_generation_id": "exec-7a6dbb9a-1cbd-4675-89bb-4a7475b8d84d.png",
+      "source_sha256": "4354a69315ec1cd2a3431b9f6035741cccad722d010b94b561786a16a9dff95c",
+      "sha256": "6a8c73be3639529940d05fbb0db4a42020d25810eb8bbb4df82c60921c28605e",
+      "prompt": "Create ONE production-ready original casual mobile merge-game item sprite for the coastal game Tidekeeper. The attached lamp is a STYLE reference: use its chunky rounded sculpted shapes, broad clean colored planes, soft upper-left highlight, dense readable silhouette and restrained soft material shading, not its lamp identity.\nSubject: a SMALL STACK OF THREE thick honey-colored wooden repair planks, short and wide, held by one big teal fabric strap with a round coral clasp. Three beveled end faces clearly readable, just two broad wood grain marks, no microtexture. This is repair-chain level 2, must read at 46 pixels. Friendly premium casual-game inventory art, three-quarter slightly top-down view, crisp silhouette, 85% canvas occupancy centered. NO UI, NO text, NO numbers, NO border or frame, no background and no cast ground shadow. True RGBA transparent background. Square canvas.",
+      "tool": "built-in image_gen",
+      "status": "candidate",
+      "model": null,
+      "seed": null,
+      "export": "whole-canvas resize and transparent padding; no alpha removal"
+    },
+    {
+      "file": "coin.png",
+      "source_generation_id": "exec-5dcce904-3c81-4d0b-aa3b-8d6663f54e87.png",
+      "source_sha256": "35ef56bf8343e07a7922745fe79633d0ea9d12a08a0d14d051ce63273fbbda5d",
+      "sha256": "d04b113a6420ef90b3521d55f318249b143d52776fac4ef4be9ea1df0bc87012",
+      "prompt": "Create ONE original casual mobile-game currency sprite for Tidekeeper, consistent with the reference object's chunky beveled silhouette and broad warm upper-left highlight. Subject: a large thick GOLD COIN, facing almost front with slight perspective, bearing a simple embossed SEASHELL fan emblem in the center. Honey gold rim, pale buttery highlight, warm amber inset. Polished illustrated toy volume, no photoreal reflections, no thin intricate engraving, no words or numbers. The emblem should read at 24 pixels. Centered on a square canvas, 85 percent occupancy, true transparent RGBA background, no floor shadow, no ring of light outside silhouette, no UI.",
+      "tool": "built-in image_gen",
+      "status": "candidate",
+      "model": null,
+      "seed": null,
+      "export": "whole-canvas resize and transparent padding; no alpha removal"
+    },
+    {
+      "file": "energy.png",
+      "source_generation_id": "exec-35a6fc27-99fb-417f-98ab-528ad7d4a0c1.png",
+      "source_sha256": "fd0f6fa279c1da33e5e6d8929c9ddd389150074ad4c81e2d8134417df7517e57",
+      "sha256": "3757d5bc13beee0cf19dfb845cd3fae00a0ffcfa5d4e23a1f142454b9e305116",
+      "prompt": "Create ONE original premium casual mobile-game ENERGY icon. Style reference is the attached chunky softly sculpted item. A single thick golden-yellow LIGHTNING BOLT, playful broad zig-zag silhouette with beveled edges and orange side plane, pale cream highlight upper left. Slight clockwise tilt, rounded safe corners, juicy but clean game-art volume, extremely clear at 24px. No circle, no frame, no letters or text, no extra sparks, no glow outside silhouette or cast ground shadow. Centered square canvas, 85% occupancy, true transparent RGBA.",
+      "tool": "built-in image_gen",
+      "status": "candidate",
+      "model": null,
+      "seed": null,
+      "export": "whole-canvas resize and transparent padding; no alpha removal"
+    },
+    {
+      "file": "neri.png",
+      "source_generation_id": "exec-8723162d-84db-493b-a3c2-b2b3a3f94307.png",
+      "source_sha256": "b93f068c592764614fb082ae54ade5f05641a1e39021ec93d0a49dd68500a4c8",
+      "sha256": "8aefe0444985ec1d490e5ececd8b57262dcccf2a1a4963f7866fc68924d7cf10",
+      "prompt": "Create one ORIGINAL female harbor keeper character portrait, named Aunt Neri, in the SAME premium casual mobile-game illustration/rendering language as the attached young lamp mechanic. The attached person is a STYLE reference only, not same identity. Neri is a cheerful stout 60-year-old seafarer woman with silver hair in a broad wavy bun, round friendly face, tan skin and smile lines, teal thick rectangular glasses pushed atop hair, rolled ivory sleeve shirt with a wide teal sailor collar, coral bandana and mustard apron. Both hands hold a short coil of thick cream harbor rope at waist. Design broad clean silhouette and painted toy volume, colorful but calm, soft upper-left light. Waist-up order-customer cutout. Head large enough to read expressions at 100px. Both elbows and full hair entirely in frame. No tiny patterns or text, no photoreal skin. True transparent RGBA background, no cast shadow or glow. Portrait 3:4 canvas, character occupies 88 percent height.",
+      "tool": "built-in image_gen",
+      "status": "candidate",
+      "model": null,
+      "seed": null,
+      "export": "whole-canvas resize and transparent padding; no alpha removal"
+    },
+    {
+      "file": "locked.png",
+      "source_generation_id": "exec-929cd738-52e1-4111-8843-76ad928d9da2.png",
+      "source_sha256": "54cdae8f6b7a9e58f9ae4706afe030308e55d0ae3077db1d5d4a2292adf83ecf",
+      "sha256": "222f7f58abf40bc7d1c4cf6e5742120261f881fec199720180c5b80e7de99b7b",
+      "prompt": "Create ONE original casual mobile merge-game BLOCKED TILE obstacle sprite. Style match attached lamp's chunky soft sculpted shape language and upper-left lighting. Subject: a short wide honey-wood shipping crate, corners rounded, coral cross brace, draped in a THICK cream fishing rope net with only 4 large diamond holes across its face, and a small rounded teal-and-gold padlock prominently at center front. Slight top-down 3/4 view, broad clear planes, warm colors, tiny teal barnacle on one corner. This is a blocked board area waiting to be opened in a coastal repair game. Dense legible silhouette at 46px; no thin wire spiderweb. One unified obstacle object, square canvas 88% occupancy, transparent RGBA background; no text, no frame, no ground or shadow beyond object.",
+      "tool": "built-in image_gen",
+      "status": "candidate",
+      "model": null,
+      "seed": null,
+      "export": "whole-canvas resize and transparent padding; no alpha removal"
+    }
+  ],
+  "final_pack": {
+    "id": "tidekeeper",
+    "version": "0.2.1",
+    "status": "draft",
+    "fingerprint": "4b35136e2eae3a15768adb6b5bfe3987082a06126836e129717a9fcdd2a889e3"
+  },
+  "final_files": [
+    {
+      "file": "character-base.png",
+      "bytes": 400471,
+      "sha256": "47c541c57286d242bd816855adce654b5fc4159ee4d3fbaba48c4733b1c01e44"
+    },
+    {
+      "file": "character-wave.png",
+      "bytes": 314060,
+      "sha256": "7fb48b018ee080143405ba42b07fdcdc77a06b8fcf569871614b2f03b0b6d109"
+    },
+    {
+      "file": "coin.png",
+      "bytes": 190165,
+      "sha256": "d04b113a6420ef90b3521d55f318249b143d52776fac4ef4be9ea1df0bc87012"
+    },
+    {
+      "file": "counterexample-old-lamp.png",
+      "bytes": 122902,
+      "sha256": "ec78d7d410f3ddced5edc2ae043ab968a2e4d504a80c9263e4ce17a585057ddb"
+    },
+    {
+      "file": "energy.png",
+      "bytes": 110124,
+      "sha256": "3757d5bc13beee0cf19dfb845cd3fae00a0ffcfa5d4e23a1f142454b9e305116"
+    },
+    {
+      "file": "lamp-l1.png",
+      "bytes": 152080,
+      "sha256": "03e5ae0a44a12db32afdc47465562f3eb1f305d13bfb37698214a71493d7b59d"
+    },
+    {
+      "file": "lamp-l2.png",
+      "bytes": 166782,
+      "sha256": "319ccd679c7cdf01058eaf2f9958c48fd90d367b5422c48a06f921a8418bb661"
+    },
+    {
+      "file": "lamp-l3.png",
+      "bytes": 152173,
+      "sha256": "33dfb26763a74bb0943cde361c1db3b604a353f339baed06c5ec2973f8686995"
+    },
+    {
+      "file": "lamp-l4.png",
+      "bytes": 120448,
+      "sha256": "f9c7e7019f7d28ed069dc4631f7202cbda85bf90aa7aa9953a7aeeeba9b0bca7"
+    },
+    {
+      "file": "locked.png",
+      "bytes": 293191,
+      "sha256": "222f7f58abf40bc7d1c4cf6e5742120261f881fec199720180c5b80e7de99b7b"
+    },
+    {
+      "file": "member-ui.html",
+      "bytes": 528,
+      "sha256": "5d3ae1fa5db89a38287b20b8c8f9c2f864e357fba8f75d1e911e402eaf3c4892"
+    },
+    {
+      "file": "neri.png",
+      "bytes": 482539,
+      "sha256": "8aefe0444985ec1d490e5ececd8b57262dcccf2a1a4963f7866fc68924d7cf10"
+    },
+    {
+      "file": "overview.png",
+      "bytes": 1084431,
+      "sha256": "fa42e19ab90a6752ba724c3fa25d723c90a9065b86df895bcbb8f244b2fdaca0"
+    },
+    {
+      "file": "producer.png",
+      "bytes": 195181,
+      "sha256": "6225e64d0c16cb071cab9c222702cc66670b4b14af186e937119f0523a37b255"
+    },
+    {
+      "file": "small-size-proof.png",
+      "bytes": 308743,
+      "sha256": "0121ec881e1b1f818ed62188ca5d9b07b41414182757464e7342de253ce49c7e"
+    },
+    {
+      "file": "tide-sans.woff2",
+      "bytes": 96692,
+      "sha256": "e1583425cc84c3f40c104d917bf4c4e1eebe2ca9810fbaac8e8d8259c1597310"
+    },
+    {
+      "file": "ui-crop-failure.png",
+      "bytes": 486645,
+      "sha256": "69da48a4a37bed0bafc422184d8bf960b05afbba5ff508271b24071c42f4f310"
+    },
+    {
+      "file": "ui-done.png",
+      "bytes": 367103,
+      "sha256": "3fca4f8aa8ba265124a6b9e6dfaf89e80e843545822f4f7d8a4ab76c37a40a40"
+    },
+    {
+      "file": "ui-first.png",
+      "bytes": 138766,
+      "sha256": "875e66083aff102ccbe1060137c8d8f4b3bf99f8c00fd974636b856e40c44522"
+    },
+    {
+      "file": "ui-flat-v020.png",
+      "bytes": 138766,
+      "sha256": "875e66083aff102ccbe1060137c8d8f4b3bf99f8c00fd974636b856e40c44522"
+    },
+    {
+      "file": "ui-kit.js",
+      "bytes": 18700,
+      "sha256": "c8c72ab86495ab8bf4edb351a560fe6ba938adf841b3b6a6a5a7a8a4590aa8f6"
+    },
+    {
+      "file": "ui-map.png",
+      "bytes": 523979,
+      "sha256": "4e407fa1abcd8460a43bdbd5fc7766a4e246d21c0865b8203306b628bb885964"
+    },
+    {
+      "file": "ui-missing.png",
+      "bytes": 373580,
+      "sha256": "024f668f9d372109e2057956c84e35737984d57913db188f2316606d4ea82420"
+    },
+    {
+      "file": "ui-ready.png",
+      "bytes": 368702,
+      "sha256": "ab10f9d2b51fcb6cda989e9696f54af7f26498f48bd0663eac27988acb712485"
+    },
+    {
+      "file": "wood-l1.png",
+      "bytes": 151237,
+      "sha256": "63e290ab968c152b4877e265ccd7dc736126395f48d8ff9abf9ca4c7d79efa6b"
+    },
+    {
+      "file": "wood-l2.png",
+      "bytes": 205034,
+      "sha256": "6a8c73be3639529940d05fbb0db4a42020d25810eb8bbb4df82c60921c28605e"
+    },
+    {
+      "file": "workshop-after-portrait.jpg",
+      "bytes": 309312,
+      "sha256": "c0863cef87a4ccfe802125937a234d8db930b1ac50058a4c4efebad42b8f7198"
+    },
+    {
+      "file": "workshop-after.jpg",
+      "bytes": 268852,
+      "sha256": "7d58a78af742b3d5b8c6990ddb067e475a43eb8e59d095d1086cb9c289bc80e2"
+    },
+    {
+      "file": "workshop-before-portrait.jpg",
+      "bytes": 298688,
+      "sha256": "97436d29dcfbedeaf337952cc9a2a117f104e60cea57fa34bad6ab5dc19a3a60"
+    },
+    {
+      "file": "workshop-before.jpg",
+      "bytes": 260888,
+      "sha256": "1b07259b8d2392e38a39d63b64006828e7eda84e56579eaa01ebcae2d4f9a743"
+    }
+  ],
+  "production_approved": false
+}

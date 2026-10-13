@@ -71,7 +71,7 @@ def main():
         optimizer = next((str(p) for p in (vendor / 'gifsicle.exe', vendor / 'gifsicle') if p.is_file()), None)
     if not optimizer:
         parser.error('Install gifsicle and supply --gifsicle; see motion/README.md')
-    output = ROOT / 'motion/out/game-art-20261013'
+    output = ROOT / 'motion/out/visual-memory-20261013'
     output.mkdir(parents=True, exist_ok=True)
     web = ROOT / 'docs/assets/motion'
     ffmpeg = executable('ffmpeg')
@@ -90,7 +90,7 @@ def main():
                            'DepthShowcase' + lang.upper(), frames,
                            f'--public-dir={PUBLIC_DIR}', '--sequence', f'--image-format={extension}',
                            f'--image-sequence-pattern=frame-[frame].{extension}',
-                           '--concurrency=4', f'--props={props}']
+                           '--concurrency=4', '--log=error', f'--props={props}']
                 if browser:
                     command += [f'--browser-executable={browser}', '--chrome-mode=chrome-for-testing']
                 run(command)
@@ -131,7 +131,7 @@ def main():
         'readme_preview': 'depth-preview',
         'font': 'Noto Sans SC, OFL variable subset',
         'visual_system': 'One team, one visual memory.',
-        'story': ['game-purpose', 'define-sample', 'extend-family', 'check-in-context', 'revise-and-share'],
+        'story': ['shared-memory', 'director-baseline', 'member-continuation', 'ui-interaction', 'review-and-revise'],
         'depth_showcase': {
             'duration_seconds': 24,
             'fps': 30,
