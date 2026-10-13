@@ -46,7 +46,7 @@ def main():
     result={'method':'One-agent self-test, rebuilt and relocated received pack; file/schema and actual PNG decoding, not native Mac acceptance.',
             'pack':checked['pack'],'assets':len(checked['order']),'exports':exports,'files':built['files'],
             'director_approval':'pending','native_compositor_open':'not_tested','engine_and_device':'not_tested'}
-    (out/'verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    (out/'verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     with zipfile.ZipFile(out/'tidekeeper-production-0.3.0.zip','x',zipfile.ZIP_DEFLATED) as z:
         for source in sorted(moved.rglob('*')):
             if source.is_file():
