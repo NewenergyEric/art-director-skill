@@ -1,22 +1,42 @@
-# 四个岗位，共同做出值得做的游戏
+# Four roles. One game worth making.
 
-[English](WORKFLOW.en.md)
+[中文](WORKFLOW.zh.md)
 
-个人游戏制作者可以轮流承担四个岗位；团队则由不同负责人承担。共同依据是有版本的证据、决定与项目资料。可以从当前问题进入，样板、玩家反馈与实际成本会让前面的决定继续修正。
+For a solo creator these are four hats; for a team they are four accountable roles. They share decisions and versioned evidence rather than relying on the original chat. Start at the question you have; return to earlier decisions when evidence changes.
 
-![四个岗位的决策、交接与反馈关系](assets/workflow/workflow-zh.png)
+![Four connected decisions before and during game production](assets/workflow/workflow-en.png)
 
-| 要解决的问题 | 岗位 | 具体交接成果 | 回来的反馈 |
+| Question | Role | Concrete handoff | What comes back |
 |---|---|---|---|
-| 什么值得做，为谁做，在哪里做？ | [市场研究总监](https://github.com/NewenergyEric/game-market-intelligence) | 类型、IP、地区、语言、付费路线比较；证据与待验证项 | 样板反应、成本假设、新市场证据 |
-| 竞对做了什么，如何构成？ | [游戏拆解分析师](https://github.com/NewenergyEric/game-reverse-analyst) | 体验循环、成长与经济规则、内容节奏、资产家族 BOM；必要时追到实现 | 差异化、缺失内容与结构复用的问题 |
-| 我们做得起、做得完吗？ | [游戏制作项目经理](https://github.com/NewenergyEric/game-production-manager) | SOW、基础件/变体/状态数量、产能与成本情景、依赖、版本任务包及验收 | 实际产能、返工、瓶颈、范围变更 |
-| 如何建立自己的核心美术？ | [Art Director](https://github.com/NewenergyEric/art-director-skill) | 原创视觉方向、角色/场景/UI/物品代表样板、设计规范、样板评审、项目分发包 | 样板质量、风格决定、制作耗时、返修成本 |
+| What is worth making, for whom, and where? | [Market Intelligence Director](https://github.com/NewenergyEric/game-market-intelligence) | Product-route comparison, audience/IP/region/language/payment evidence, open tests | Prototype response, cost assumptions and new market evidence |
+| What do competitors actually do? | [Game Reverse Analyst](https://github.com/NewenergyEric/game-reverse-analyst) | Experience loops, progression/economy rules, content cadence, asset-family BOM, implementation evidence where useful | Questions about differentiation, missing content and reusable structure |
+| Can we afford it and finish it? | [Game Production Manager](https://github.com/NewenergyEric/game-production-manager) | SOW, base/variant/state quantities, capacity and cost scenarios, dependencies, versioned work packages and acceptance | Actual throughput, revisions, bottlenecks and scope changes |
+| What makes it visually ours? | [Art Director](https://github.com/NewenergyEric/art-director-skill) | Original visual direction, representative characters/scenes/UI/items, design rules, sample reviews and a distributable project pack | Sample quality, style decisions, production effort and revision cost |
 
-## 一次具体交接
+## A concrete handoff
 
-“玩家交付物品后改造社区角落”先作为体验提案。市场研究验证人群、地区、付费和差异化；拆解分析识别状态变化与内容家族；项目经理拆出订单规则、UI 状态、场景状态、本地化、QA 与集成，并保留成本/产能未知；Art Director 建立原创角色、场景和 UI 样板，将确认的选择写进项目规范。
+“A delivered item changes a neighborhood corner” starts as an experience proposal. Market research tests audience, region, monetization and differentiation. Competitor analysis identifies state transitions and content families. Production management separates order rules, UI states, scene states, localization, QA and integration, with explicit unknowns for cost and capacity. Art Director establishes original character, environment and UI samples, then turns confirmed choices into the project's visual rules.
 
-用首批代表资产与原型结果修订 BOM、工作量及商业假设，再扩大制作。工程与美术、内容制作一起实现并验证这些决定。
+Use the first representative assets and prototype results to revise the BOM, effort assumptions and commercial hypothesis before scaling. Engineering implements and validates those decisions alongside art and content production.
 
-交接链条：**问题 → 证据与版本 → 建议/有效决定 → 约束 → 资产与工作范围 → 责任人 → 验收 → 反馈**。这张图描述协作方式，不代表已经实现了自动调度四个 Agent 的系统。
+The shared handoff carries: **question → evidence/version → proposed or confirmed decision → constraints → asset/work scope → owner → acceptance → feedback**. A diagram describes the collaboration; it does not claim an automatic multi-agent orchestration system.
+
+## Editable relationship diagram
+
+The diagram below records the same responsibilities and feedback as the shared family graphic. The roles can exchange versioned handoffs through the user’s agent; the graphic does not imply an automatic dispatcher.
+
+```mermaid
+flowchart LR
+    accTitle: Four roles for game creators
+    accDescr: Market research informs competitor analysis, which informs production scope and original art. Prototype results, sample quality and actual effort feed back into the earlier decisions. One creator can take all four roles.
+    market["What is worth making?<br/>Market Intelligence"] -->|Opportunity brief| reverse["What do competitors do?<br/>Reverse Analyst"]
+    reverse -->|System and asset BOM| production["Can we afford and finish it?<br/>Production Manager"]
+    production -->|Scope and work packages| art["What makes it visually ours?<br/>Art Director"]
+    art -.->|Sample effort and revisions| production
+    art -.->|Prototype and player evidence| market
+    production -.->|Feasibility and cost| market
+    classDef role fill:#001f3f,stroke:#92e4da,color:#f5f9fb
+    classDef current fill:#007d86,stroke:#92e4da,color:#f5f9fb
+    class market,reverse,production role
+    class art current
+```

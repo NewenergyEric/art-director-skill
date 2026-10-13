@@ -1,16 +1,16 @@
 # Use Art Director in your agent
 
-English · [中文](HUMAN-GUIDE.md)
+English · [中文](HUMAN-GUIDE.zh.md)
 
 Art Director helps a design lead establish professional rules, then share the rules, samples and delivery requirements as a project pack. Teammates use that pack in their own agents to create and review designs. Solo creators can take both roles and preserve decisions across sessions.
 
 ## 1. Install
 
 ```sh
-npx skills add https://github.com/NewenergyEric/art-director-skill
+npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-director
 ```
 
-You can also download a Skill ZIP as the [current build](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=chinese-primary-20261011) and ask your agent to install it. Core helpers require Python 3.10+. Creation and editing use tools available in the host; this Skill does not include an image model.
+You can also download a Skill ZIP as the [current build](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-memory-20261013) and ask your agent to install it. Core helpers require Python 3.10+. Creation and editing use tools available in the host; this Skill does not include an image model.
 
 ## 2. Establish direction from existing materials
 
@@ -42,4 +42,4 @@ Technical checks and visual judgments have separate records. Unchecked work stay
 
 Market Intelligence explores what is worth making. Reverse Analyst examines competitors and asset families. Production Manager assesses scope, capacity and work packages. Art Director develops original visual direction and the shared rules for production. Samples, prototype results and actual effort inform earlier decisions.
 
-[24-second film and prompts](landing.en.html) · [Four-role handoff map](WORKFLOW.en.md) · [Example project pack, in Chinese](../examples/harbor-studio-draft/guides/00-index.md) · [Agent and engineering guide](AGENT-GUIDE.en.md)
+[24-second film and prompts](landing.html) · [Four-role handoff map](WORKFLOW.md) · [Example project pack, in Chinese](../examples/harbor-studio-draft/guides/00-index.md) · [Agent and engineering guide](AGENT-GUIDE.md)

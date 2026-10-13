@@ -1,0 +1,100 @@
+{
+  "status": "candidate",
+  "approval": null,
+  "projectPack": {
+    "id": "duskwood-watch",
+    "generatedAgainstVersion": "0.3.0",
+    "generatedAgainstFingerprint": "48e6130af23163006c00f453dffc6e2d5456558fac1d79098b46615d75616d0c",
+    "compatibleVersion": "0.3.1",
+    "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88",
+    "status": "draft"
+  },
+  "assets": [
+    {
+      "id": "moonmoth",
+      "image": "moonmoth-walk.png",
+      "metadata": "moonmoth-animation.json",
+      "frameSize": [
+        448,
+        448
+      ],
+      "frames": 8,
+      "fps": 10,
+      "displayHeight": 112,
+      "contentHeightRange": [
+        40.8,
+        67.0
+      ],
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9419642857142857
+      },
+      "sha256": "7c6d5b4e774beb5e1abbbd3fa32106975f38a59843a2eb8c3e4cbc418379e9d2"
+    },
+    {
+      "id": "sporepod",
+      "image": "sporepod-walk.png",
+      "metadata": "sporepod-animation.json",
+      "frameSize": [
+        384,
+        384
+      ],
+      "frames": 8,
+      "fps": 6,
+      "displayHeight": 96,
+      "contentHeightRange": [
+        39.5,
+        74.0
+      ],
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9010416666666666
+      },
+      "sha256": "0a58aea8389e84435c7d06d3fd0fe7ba98f323f79bdaeb335f005b34e782d9bb"
+    },
+    {
+      "id": "rootguard",
+      "image": "rootguard-walk.png",
+      "metadata": "rootguard-animation.json",
+      "frameSize": [
+        448,
+        352
+      ],
+      "frames": 8,
+      "fps": 6,
+      "displayHeight": 126,
+      "contentHeightRange": [
+        87.0,
+        91.6
+      ],
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9005681818181818
+      },
+      "sha256": "0198bd2c8e2bbb771a5628b2d70031c31a84f748f3b3bd752c46fd697cfd9661"
+    },
+    {
+      "id": "keeper",
+      "image": "keeper-walk.png",
+      "metadata": "keeper-animation.json",
+      "rig": "keeper-rig.json",
+      "frameSize": [
+        384,
+        448
+      ],
+      "frames": 12,
+      "fps": 12,
+      "displayHeight": 122,
+      "contentHeightRange": [
+        93.13392857142857,
+        95.58482142857143
+      ],
+      "anchor": {
+        "x": 0.5,
+        "y": 0.9017857142857143
+      },
+      "strideWorldPxAtDisplay": 43.57142857142857,
+      "sha256": "8626eb4ef23705a819be849d2c632d9e0eb0747c7db433cb41c63560913766fd"
+    }
+  ]
+}

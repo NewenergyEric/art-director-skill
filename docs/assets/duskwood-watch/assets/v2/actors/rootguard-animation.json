@@ -1,0 +1,294 @@
+{
+  "assetId": "DW-V2-ROOTGUARD",
+  "status": "candidate",
+  "approval": null,
+  "file": "rootguard-walk.png",
+  "frameWidth": 448,
+  "frameHeight": 352,
+  "count": 8,
+  "fps": 6,
+  "loop": true,
+  "idleFrame": 0,
+  "anchor": {
+    "x": 0.5,
+    "y": 0.9005681818181818
+  },
+  "anchorPx": {
+    "x": 224,
+    "y": 317
+  },
+  "registrationRootPx": {
+    "x": 224,
+    "y": 317
+  },
+  "displayHeight": 126,
+  "contentHeightAtDisplay": [
+    90.2,
+    89.5,
+    91.6,
+    90.6,
+    87.0,
+    87.7,
+    87.0,
+    89.5
+  ],
+  "contentWidthAtDisplay": [
+    121.0,
+    120.6,
+    119.9,
+    120.6,
+    116.0,
+    124.9,
+    116.7,
+    117.4
+  ],
+  "facing": "right-three-quarter",
+  "behavior": "armored slow root-crab; splayed root-leg march and small claw counter-swing",
+  "frames": [
+    {
+      "x": 0,
+      "y": 0,
+      "w": 448,
+      "h": 352,
+      "durationMs": 166.66666666666666,
+      "sourceCrop": [
+        5,
+        140,
+        389,
+        429
+      ],
+      "sourceRoot": [
+        185,
+        425
+      ],
+      "uniformScale": 0.9,
+      "destinationOffset": [
+        62,
+        60
+      ],
+      "boundsAlphaGt96": [
+        66,
+        64,
+        404,
+        316
+      ],
+      "phase": "wide support"
+    },
+    {
+      "x": 448,
+      "y": 0,
+      "w": 448,
+      "h": 352,
+      "durationMs": 166.66666666666666,
+      "sourceCrop": [
+        389,
+        143,
+        768,
+        427
+      ],
+      "sourceRoot": [
+        570,
+        423
+      ],
+      "uniformScale": 0.9,
+      "destinationOffset": [
+        61,
+        65
+      ],
+      "boundsAlphaGt96": [
+        64,
+        68,
+        401,
+        318
+      ],
+      "phase": "recovery roots"
+    },
+    {
+      "x": 896,
+      "y": 0,
+      "w": 448,
+      "h": 352,
+      "durationMs": 166.66666666666666,
+      "sourceCrop": [
+        768,
+        141,
+        1146,
+        433
+      ],
+      "sourceRoot": [
+        947,
+        429
+      ],
+      "uniformScale": 0.9,
+      "destinationOffset": [
+        63,
+        58
+      ],
+      "boundsAlphaGt96": [
+        64,
+        62,
+        399,
+        318
+      ],
+      "phase": "reaching roots"
+    },
+    {
+      "x": 1344,
+      "y": 0,
+      "w": 448,
+      "h": 352,
+      "durationMs": 166.66666666666666,
+      "sourceCrop": [
+        1148,
+        145,
+        1530,
+        435
+      ],
+      "sourceRoot": [
+        1330,
+        431
+      ],
+      "uniformScale": 0.9,
+      "destinationOffset": [
+        60,
+        60
+      ],
+      "boundsAlphaGt96": [
+        63,
+        64,
+        400,
+        317
+      ],
+      "phase": "weight transfer"
+    },
+    {
+      "x": 1792,
+      "y": 0,
+      "w": 448,
+      "h": 352,
+      "durationMs": 166.66666666666666,
+      "sourceCrop": [
+        17,
+        593,
+        384,
+        872
+      ],
+      "sourceRoot": [
+        186,
+        868
+      ],
+      "uniformScale": 0.9,
+      "destinationOffset": [
+        72,
+        70
+      ],
+      "boundsAlphaGt96": [
+        75,
+        74,
+        399,
+        317
+      ],
+      "phase": "opposite support"
+    },
+    {
+      "x": 2240,
+      "y": 0,
+      "w": 448,
+      "h": 352,
+      "durationMs": 166.66666666666666,
+      "sourceCrop": [
+        386,
+        595,
+        781,
+        874
+      ],
+      "sourceRoot": [
+        570,
+        870
+      ],
+      "uniformScale": 0.9,
+      "destinationOffset": [
+        58,
+        70
+      ],
+      "boundsAlphaGt96": [
+        61,
+        73,
+        410,
+        318
+      ],
+      "phase": "root flex"
+    },
+    {
+      "x": 2688,
+      "y": 0,
+      "w": 448,
+      "h": 352,
+      "durationMs": 166.66666666666666,
+      "sourceCrop": [
+        781,
+        600,
+        1151,
+        878
+      ],
+      "sourceRoot": [
+        948,
+        874
+      ],
+      "uniformScale": 0.9,
+      "destinationOffset": [
+        74,
+        70
+      ],
+      "boundsAlphaGt96": [
+        78,
+        74,
+        404,
+        317
+      ],
+      "phase": "forward reach"
+    },
+    {
+      "x": 3136,
+      "y": 0,
+      "w": 448,
+      "h": 352,
+      "durationMs": 166.66666666666666,
+      "sourceCrop": [
+        1154,
+        589,
+        1527,
+        875
+      ],
+      "sourceRoot": [
+        1332,
+        871
+      ],
+      "uniformScale": 0.9,
+      "destinationOffset": [
+        64,
+        63
+      ],
+      "boundsAlphaGt96": [
+        68,
+        67,
+        396,
+        317
+      ],
+      "phase": "return support"
+    }
+  ],
+  "projectPack": {
+    "id": "duskwood-watch",
+    "generatedAgainstVersion": "0.3.0",
+    "generatedAgainstFingerprint": "48e6130af23163006c00f453dffc6e2d5456558fac1d79098b46615d75616d0c",
+    "compatibleVersion": "0.3.1",
+    "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88",
+    "status": "draft"
+  },
+  "source": "../../../evidence/v2/actors/raw/rootguard-march-raw-v1.png",
+  "sourceSha256": "79750982a79260a43c77778d4b5fbf1947ff2165cffd7b13681e83f1996f6ad7",
+  "sha256": "0198bd2c8e2bbb771a5628b2d70031c31a84f748f3b3bd752c46fd697cfd9661",
+  "production": "8 original image_gen poses; deterministic slicing, one uniform scale, root registration only",
+  "review": "../../../evidence/v2/actors/actors-review.md"
+}

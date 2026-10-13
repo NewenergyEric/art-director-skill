@@ -1,109 +1,150 @@
-<p align="right"><strong>中文</strong> · <a href="README.en.md">English</a></p>
+<p align="right"><strong>English</strong> · <a href="README.zh.md">中文</a></p>
 
-[**Game Dev Skills**](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.md) · [市场研究](https://github.com/NewenergyEric/game-market-intelligence) · [游戏拆解](https://github.com/NewenergyEric/game-reverse-analyst) · [制作管理](https://github.com/NewenergyEric/game-production-manager) · **美术总监**
+[**Game Dev Skills**](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.en.md) · [Market Intelligence](https://github.com/NewenergyEric/game-market-intelligence) · [Reverse Analyst](https://github.com/NewenergyEric/game-reverse-analyst) · [Production Manager](https://github.com/NewenergyEric/game-production-manager) · **Art Director**
 
 # Art Director
 
-### 一个团队/项目，一份视觉记忆。
+### One team, one visual memory.
 
-**单张都不错，放在一起却不像同一款游戏？**
+Shared art direction for people and agents making the same game.
 
-Art Director 帮主美把参考、作品和批注，变成团队能沿用的设计规范。先做代表样板，再扩展角色、物品、场景和 UI；每次制作都带上该项目的规则、参考与检查要求。个人制作，也能把上次做对的判断留给下一次。
+## A story about an art-director friend
+
+Of everyone I know, he is one of the people I would most readily call an artist.
+
+In games, a lot of conversations are about pipelines, tools and efficiency. He talks about how a group of people can speak to one another through something they make. He cares about that elusive thing: how it feels.
+
+For a while, we met often for meals or coffee. Whenever work came up, he had the same complaint: he had spent another whole day explaining “what we’re trying to make” to a new teammate, an outsourcing partner, or another AI that was becoming better at following instructions and worse at making its own judgments.
+
+I asked him, “Which part actually frustrates you?”
+
+He thought for a moment. “It’s not that their work is bad. It’s that I have to explain everything from the beginning, every time. I finish explaining one version, and then I have to start again with the next. And once making a game becomes pure engineering—processes, parameters, checklists—the artistry, the playfulness, the fun starts to disappear.”
+
+That stayed with me.
+
+I’m a game lover and an FDE—a forward-deployed engineer. My work is about helping people connect the pieces. I realized that his problem had never been his taste. His taste was good. The problem was that **he couldn’t hand it over or reuse it.** It lived in his head, and in those few minutes when he explained it all again.
+
+So we talked some more and did a few interviews. We gradually drew out the judgments behind his work: the references, the samples, what could change and what had to stay. We shaped them into something another person, or even an AI, could work from.
+
+It doesn’t design for him or replace his taste. It gives that “feeling” a form he can pass on.
+
+Later, he actually started using it.
+
+That’s why I made a “visual memory”: to keep an artist’s sensibility from being swallowed by engineering.
+
+— Eric
+
+## What Art Director does
+
+Art Director helps a director establish the visual language, representative samples and requirements for each asset family. Team members and agents receive a versioned project pack with clear assignments and the references they need to produce consistent characters, environments, items and UI. A solo creator can keep the same decisions across sessions.
 
 <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=production-20261013">
-  <img src="assets/readme/depth-preview-zh.gif?v=production-20261013" width="100%" alt="24 秒潮灯小镇：主美建立规范，成员接包续作四类资产，组合、操作、返修。">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-en.jpg?v=human-story-20261013">
+  <img src="assets/readme/depth-preview-en.gif?v=human-story-20261013" width="100%" alt="24-second original game-art study: define a sample, extend an item family, check a composited board, revise and hand off a project pack.">
 </picture></a>
 
-<p align="center"><sub>24 秒：从主美建规范，到成员交付 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a> · <a href="docs/CASE-STUDIES.md">看案例与检查记录</a></sub></p>
+<p align="center"><sub>24 seconds: from direction to team delivery · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">Watch the clear version</a> · <a href="docs/assets/motion/depth-showcase-en.mp4">Download MP4</a> · <a href="docs/CASE-STUDIES.en.md">Read the case evidence</a></sub></p>
 
-## 装好，在你的 Agent 里开始
+## Install. Then work in your agent.
 
 ```sh
 npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-director
 ```
 
-在支持 Agent Skills 的工具里使用，例如 Codex、Claude Code 或 Cursor。把资料放进 Agent 能读取的文件夹，然后直接说：
+Use a tool that supports Agent Skills, such as Codex, Claude Code or Cursor. Give the agent access to your materials and say:
 
-> 使用 `$art-director`。这是我们的玩法、参考图、已有作品和主美批注。先梳理视觉方向，做一件代表样板；再带我补齐各类资产与组件的要求，打成团队能直接使用的项目包。
+> Use `$art-director`. Here are our gameplay notes, references, existing work and art-director feedback. Propose the visual direction and make a representative sample. Then help establish the asset and component requirements and package them for the team.
 
-已有规范就接着完善，不必重做。绘图与编辑由 Agent 调用当前可用工具完成；Skill 不附带图像模型。
+Continue existing direction without rebuilding it. Your agent uses its available generation and editing tools; this Skill does not include an image model.
 
-## 同一份规范，下一位能接着做吗？
+## Play the samples
 
-![潮灯小镇：同一角色的不同姿势与完整灯具升级链，按项目规范继续。](docs/assets/tidekeeper-campaign/team-world.png)
+### Tidekeeper · Merge and restore
 
-我们用 **潮灯小镇** 做了一次完整交接：先建立角色、灯房、灯具与 UI 样板，打包后在新目录开始五个任务，继续制作阿澜的新动作、灯房修复状态、L3/L4 灯具和新订单。
+![Tidekeeper 0.5.0: the lighthouse, repair order and merge board in the playable game.](docs/assets/tidekeeper-playable/gameplay.png?v=lighthouse-20261014)
 
-**第一次没有全通过。** 道具和角色能接上，UI 却像空卡片；横版场景放进竖屏，还裁掉了门窗。于是把这些问题带回规范：补齐订单角色、资源图标、修缮材料、按钮状态和竖版适配，再把实际输出放进同一画面检查。
+Merge seven item families into repair orders. The **0.5.0 candidate** follows the job from fixing the dock and lighthouse timberwork to fitting the lens, adding oil, lighting the tower and welcoming the supply boat. New items and scene states continue the harbor's existing art direction.
+
+[Play Tidekeeper (Chinese UI)](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-playable/play.html)
+
+### Duskwood Watch · Explore and defend
+
+![Duskwood Watch: a hand-painted forest with a lantern keeper, forest creatures and defensive structures.](docs/assets/duskwood-watch/combat.png?v=duskwood-v2-20261014)
+
+Carry your lantern through a hand-painted forest, gather supplies and build defenses for four nights on one map. Moving the light strips dark armor; fuel, items and upgrades shape how you defend the clearing. This is the **0.4.0 draft**, developed from one shared project pack.
+
+[Play Duskwood Watch (Chinese UI)](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.html)
+
+Both are original browser candidates. Human art-direction approval and production device/engine acceptance remain open. [How the agents used the Skill, what was checked and what remains](docs/AGENT-ART-TEAM.en.md).
+
+<details>
+<summary><strong>Tidekeeper's earlier handoff and 0.3.0 layered export</strong></summary>
+
+The earlier handoff established character, workshop, item and UI samples, distributed a pack and started five tasks in a new directory: Alan's pose, workshop restoration, L3/L4 lamps and a new order. This was one agent's relocated-directory self-test.
+
+![Tidekeeper's earlier character poses and item family, continued from the project pack.](docs/assets/tidekeeper-campaign/team-world.png)
+
+The first pass did not fully work. The assets carried over, but the UI felt like empty cards. A landscape scene cropped out important windows on a portrait screen. Revisions added order characters, resource icons, repair materials, button states and a portrait adaptation.
 
 <p align="center">
-  <img src="docs/assets/tidekeeper/lamp-l1.png" width="21%" alt="L1 口袋油灯">
-  <img src="docs/assets/tidekeeper/lamp-l2.png" width="21%" alt="L2 手提风灯">
-  <img src="docs/assets/tidekeeper/lamp-l3.png" width="21%" alt="L3 圆镜探照灯">
-  <img src="docs/assets/tidekeeper/lamp-l4.png" width="21%" alt="L4 小小航标灯">
+  <img src="docs/assets/tidekeeper/lamp-l1.png" width="21%" alt="L1 Pocket lamp">
+  <img src="docs/assets/tidekeeper/lamp-l2.png" width="21%" alt="L2 Storm lantern">
+  <img src="docs/assets/tidekeeper/lamp-l3.png" width="21%" alt="L3 Searchlight">
+  <img src="docs/assets/tidekeeper/lamp-l4.png" width="21%" alt="L4 Coastal beacon">
 </p>
 
-现在，交木料会触发修缮，交灯具后点亮夜晚，再招呼补给船靠岸。角色动作、昼夜、扬尘、灯光和水纹跟着同一段故事变化。**一致性要在连续的使用画面里成立。**
+![Tidekeeper's earlier repair, lighting and boat-arrival scene studies.](docs/assets/tidekeeper-production/states-proof.png)
 
-[看前次交接与修正](docs/TIDEKEEPER-HANDOFF.md) · [试试修缮、点灯与归航](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-production/play.html) · [本轮生成与交付记录](docs/TIDEKEEPER-PRODUCTION.md)
+The frozen **0.3.0** package contains 19 artwork files, 27 checked assets and dependencies, and 5 scene recipes. Its Compositor format and relocation checks passed; native Mac opening remains untested. This archive predates the eight-frame repair sequence in 0.4.0.
 
-![同一项目规范下的修缮、点灯与归航；共享场景配方。](docs/assets/tidekeeper-production/states-proof.png)
+[Handoff and revisions](docs/TIDEKEEPER-HANDOFF.en.md) · [0.3.0 production evidence](docs/TIDEKEEPER-PRODUCTION.en.md) · [0.3.0 candidate ZIP](docs/assets/tidekeeper-production/tidekeeper-production-0.3.0.zip) · [Earlier visual studies](docs/CASE-STUDIES.en.md)
 
-这是一位 Agent 在隔离目录里的交接自测，素材为原创候选；真实主美审阅、设备与引擎验收仍待进行。[此前的冒险场景、建筑升级与灯具探索](docs/CASE-STUDIES.md)也保留了原稿和修改记录。
+</details>
 
-## 从主美的判断，到团队的交付
+## From the director’s decisions to the team’s delivery
 
-1. **先整理已有内容。** 参考借鉴哪里、什么不能变，Agent 先写出具体初稿。
-2. **用样板确定方向。** 看形状、比例、材料与用途，发现偏差就针对性修改。
-3. **把规则带到任务。** 项目包包含规范、样板、参考、版本与交付要求，成员在自己的 Agent 中接着做。
-4. **放回使用场景检查。** 不只看单张，还看家族关系、实际尺寸与组合；共性问题回到规范。
+1. **Use the existing material.** Draft what each reference contributes and what must stay fixed.
+2. **Calibrate with a sample.** Inspect shape, proportion, materials and purpose; revise a specific problem.
+3. **Carry the rules into each task.** Teammates receive a project Skill, samples, references, version and delivery requirements.
+4. **Check in context.** Review families, display size and combinations; return shared issues to the direction.
 
-你最后交给团队的是五份可读手册、项目专属 Skill 和相关资料，能直接压缩分发。进行中的任务保留原版本，新任务使用已发布的新版本。
+The handoff includes five readable guides, a project-specific Skill and the relevant files. It can be distributed as a ZIP. Existing tasks retain their original version; new tasks use the published current pack.
 
-成员拿到主美的**完整项目包**后可以说：
+After receiving the director’s **complete project pack**, a teammate can say:
 
-> 按这版规范扩展两级灯具，保持镜头、光源和材料，让升级轮廓更清楚。先给我首件，再放回棋盘检查。记录沿用的规则与还没验证的内容。
+> Extend two levels of this lighting family. Keep the view, light and materials, with clearer upgrade silhouettes. Show the first article, then check it on the board. Record the rules used and the checks still open.
 
-主美也可以继续说：
+The director can continue:
 
-> 这张太写实，海面细节抢了修灯动作。只简化表面和背景，保留人物身份、手部接触与空间关系，然后对照原稿复查。
+> This is too realistic: ocean detail distracts from the repair. Simplify the surfaces and background. Keep character identity, hand contact and spatial relationships, then compare the revision.
 
-## 两个 Skill，一份项目规范
+## Two Skills, one project baseline
 
-| 你现在要做的事 | 使用哪个入口 | 得到什么 |
+| What you need | Entry point | Delivery |
 |---|---|---|
-| 建立方向、样板、类别与验收要求 | **art-director** | 可分发的专业项目包 |
-| 接包后连续生成、组合与交付 | **game-art-production**（可选） | 任务依赖、场景配方、检查记录与分层文件 |
+| Direction, samples, category rules and acceptance | **art-director** | A portable project pack |
+| Continued generation, assembly and delivery | **game-art-production** (optional) | Task dependencies, scene recipes, checks and layered files |
 
-先让首件成立，再组织生产。新制作 Skill 读取同一项目包，能发现缺素材、旧版本和下游依赖变化；不会另立一份画风规范。普通资产交付可以直接使用，可编辑场景则能导出给 [Compositor](https://github.com/robbietilton/Compositor)。
+The production Skill consumes the same pack and reports missing assets, changed versions and blocked dependencies. It does not create a second set of art rules. Standard asset delivery works without [Compositor](https://github.com/robbietilton/Compositor); use the optional `.comp` export for layered editing.
 
 ```sh
 npx skills add https://github.com/NewenergyEric/art-director-skill --skill game-art-production
 ```
 
-也可[下载制作 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/game-art-production.zip)，然后说：
+Or [download the production Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/game-art-production.zip), then ask:
 
-> 使用 `$game-art-production`，读取这个完整项目包。继续做修缮动作、傍晚场景和归航效果，先检查同屏比例与接触点，再交付可继续编辑的分层场景。
+> Use `$game-art-production` with this complete project pack. Continue repair poses, evening states and arrival effects. Check scale and contact points, then deliver editable layered scenes.
 
-潮灯案例已有 **19 张美术素材、27 项受检查的资产与依赖、5 个场景配方**。生成使用 Agent 的图像工具；Compositor 负责图层编辑，不生成图片或播放游戏动画。目前验证了文件格式与换目录交付，Mac 原生打开尚未验证。[查看制作 Skill](skills/game-art-production/SKILL.md) · [下载本轮候选交付包](docs/assets/tidekeeper-production/tidekeeper-production-0.3.0.zip)
-
-## 为什么做这个
-
-这个 Skill 起于和一位主美朋友的讨论。他在意角色的气质、画面的感觉，也在意游戏里人与人的连接；但许多时间花在重复解释参考、组件与返工原因。
-
-我想让这些判断跟着作品交到下一位手里。主美保留创作与判断，Agent 负责整理、关联与交接。从这个问题出发，又连接到市场研究、竞品拆解和制作安排，成为 Game Dev Skills。
-
-<!-- Testimonial reserved: no customer endorsement is claimed. -->
+The agent's tools generate images; Compositor edits layers and does not run game animation. [Production Skill](skills/game-art-production/SKILL.md) · [Sample production and checks](docs/AGENT-ART-TEAM.en.md)
 
 <details>
-<summary><strong>项目包、说明书与安装要求</strong></summary>
+<summary><strong>Project packs, guides and requirements</strong></summary>
 
-核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可[下载当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=production-20261013)。仅安装通用 Skill，不会自动获得团队私有资料。
+Core tools use Python 3.10+ and its standard library; Pillow is optional for pixel checks. You can also [download the current Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=human-story-20261013). Installing the general Skill does not grant access to private team materials.
 
-[人类上手说明](docs/HUMAN-GUIDE.md) · [Agent 与工程接入](docs/AGENT-GUIDE.md) · [Skill 入口](SKILL.md) · [游戏美术质量流程](references/game-art-quality.md)
+[Human guide](docs/HUMAN-GUIDE.en.md) · [Agent integration](docs/AGENT-GUIDE.en.md) · [Skill reading edition](docs/SKILL.en.md) · [Game-art quality method](references/game-art-quality.md)
 
-[潮灯首件草案](examples/tidekeeper-draft/style-pack.json) · [港湾工作室完整建项示例](examples/harbor-studio-draft/guides/00-index.md) · [品牌与活动设计示例](examples/campaign-studio-draft/guides/00-index.md)
+[Tidekeeper first-article draft](examples/tidekeeper-draft/style-pack.json) · [Harbor Studio setup example](examples/harbor-studio-draft/guides/00-index.md) · [Campaign design example](examples/campaign-studio-draft/guides/00-index.md)
 
 ```sh
 python scripts/style_pack.py validate examples/tidekeeper-draft
@@ -113,33 +154,33 @@ python scripts/style_pack.py build examples/tidekeeper-draft --out NEW_PACK
 </details>
 
 <details>
-<summary><strong>验证与边界</strong></summary>
+<summary><strong>Validation and limits</strong></summary>
 
-[当前 CI](https://github.com/NewenergyEric/art-director-skill/actions) · [原创案例证据](docs/CASE-STUDIES.md) · [项目工作流验收](evals/director-workflow-v0.5/acceptance.md)
+[Current CI](https://github.com/NewenergyEric/art-director-skill/actions) · [Original case evidence](docs/CASE-STUDIES.en.md) · [Workflow acceptance](evals/director-workflow-v0.5/acceptance.md)
 
-结构与文件检查不代替艺术判断，视觉自查不代替主美批准。项目包工具在本地运行；使用生成服务时，按宿主工具和你的授权处理资料。
+File checks do not establish artistic quality; agent observations do not establish director approval. Pack tools run locally. Generation services follow the host’s tools and your authorization.
 
 </details>
 
-[告诉我，你在哪一步卡住](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml) · [MIT](LICENSE) · [安全说明](SECURITY.md)
+[Tell us where you got stuck](https://github.com/NewenergyEric/art-director-skill/issues/new?template=showcase.yml) · [MIT](LICENSE) · [Security](SECURITY.md)
 
-由 Eric 与 Agents 一起制作。
+Made by Eric and Agents.
 
-## 四个岗位，共同做出值得做的游戏
+## Four roles. One game worth making.
 
-个人制作者可以轮流承担四个岗位；团队通过同一份资料交接：什么值得做、竞对做了什么、资源和体量如何评估，以及如何创作自己的核心美术。
+For a solo creator these are four hats; for a team they are connected responsibilities. Explore what is worth making, what competitors do, the resources it requires, and the original art that defines it.
 
-[岗位如何交接证据、范围与美术资产](docs/WORKFLOW.md) · [四岗位总览](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.md)
+[How the roles exchange evidence, scope and visual assets](docs/WORKFLOW.en.md) · [Explore all four roles](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.en.md)
 
-| 眼前的问题 | 从这个岗位开始 | 带到下一步的资料 |
+| Your question | Start here | Carry forward |
 |---|---|---|
-| 什么值得做？ | [市场研究](https://github.com/NewenergyEric/game-market-intelligence) | 机会比较、来源与验证缺口 |
-| 竞对做了什么？ | [游戏拆解](https://github.com/NewenergyEric/game-reverse-analyst) | 规则、实现依据与资产 BOM |
-| 做得起，也做得完吗？ | [制作管理](https://github.com/NewenergyEric/game-production-manager) | SOW、工作包、依赖与验收 |
-| 核心美术如何建立？ | [美术总监](https://github.com/NewenergyEric/art-director-skill) | 共享规范、代表样板与项目包 |
+| What is worth making? | [Market research](https://github.com/NewenergyEric/game-market-intelligence/blob/main/README.en.md) | Options, sources and validation gaps |
+| How does it work? | [Reverse analysis](https://github.com/NewenergyEric/game-reverse-analyst/blob/main/README.en.md) | Rules, implementation evidence and asset BOM |
+| Can we scope and deliver it? | [Production planning](https://github.com/NewenergyEric/game-production-manager/blob/main/README.en.md) | SOW, work packages, dependencies and acceptance |
+| What defines the art? | [Art direction](https://github.com/NewenergyEric/art-director-skill/blob/main/README.en.md) | Shared rules, representative samples and project pack |
 
-**个人创作者：** 从当前卡住的问题开始，按需要切换岗位。**团队：** 用实际报告、BOM、工作包和美术规范交接；每一步保留来源、版本与未定项。
+**Solo creator:** start with the question blocking you and switch roles as needed. **Team:** hand off actual reports, BOMs, work packages and art rules, keeping sources, versions and open decisions visible.
 
-这是协作方法，当前没有自动串行执行四个 Agent 的编排器。
+This is a collaboration method; it does not include an orchestrator that automatically runs four agents in sequence.
 
-![市场研究、竞品拆解、项目评估与核心美术创作；样板与成本反馈推动前序决定修订。](docs/assets/workflow/workflow-zh.png)
+![Market intelligence → competitor analysis → production assessment → original art direction; prototype and cost feedback revise earlier decisions.](docs/assets/workflow/workflow-en.png)

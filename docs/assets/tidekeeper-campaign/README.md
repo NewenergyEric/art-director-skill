@@ -1,4 +1,12 @@
-# 潮灯小镇宣传元素
+# Tidekeeper campaign artwork
+
+The introduction uses the same original game artwork with short, direct copy. It does not copy the reference game's assets. Bree Serif display lettering and the renamed WenKai web subset replace the previous heavy italic outline; body/UI copy stays readable. The main claim appears once, in the closing shot.
+
+`repair-six-poses.png` is an actual six-drawing character animation atlas made with built-in imagegen on 2026-10-13. Preparation, anticipation, downstroke, contact, rebound and settling change the character's arms, wrist, head and torso. The unchanged 1536 × 1024 source is cropped at its six cell positions in `motion/src/GameCampaign.tsx`; the top-row crop includes 18 pixels of gutter so the plank edge is retained. Measured nail anchors register each drawing to a common contact point. Dust begins on the contact pose. [The production record](repair-animation.json) retains the exact prompts, reference paths, registration measurements, timings and checksum. Alpha samples outside the character are zero; no background is composited into the film. Small silhouette variations remain between drawings, so this is a candidate promotional sequence, not a human-approved runtime animation. It is separate from the frozen 0.3.0 game pack.
+
+An earlier eight-pose draft was not selected because its cell boundaries were too tight. The six-frame candidate has more breathing room. A transparency edit was retained as the source of the published atlas. The renderer does not claim that the prompt's requested padding was perfectly achieved.
+
+## Earlier title-plaque provenance
 
 `title-plaque.png` 是本轮实际生成的独立透明标题牌，借用项目已有的青绿搪瓷、奶油木边、珊瑚装饰和绳结。它用于宣传标题，不属于运行时核心美术包，也不改变 0.3.0 的游戏规则。`motion/src/GameCampaign.tsx` 保留标题、合成与动画源文件；`docs/assets/campaign.css` 保留网页文字与按钮样式。
 

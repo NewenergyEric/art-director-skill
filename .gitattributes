@@ -21,3 +21,11 @@
 *.woff2 binary
 # Captions are published as byte-verified media; keep the same bytes on every OS.
 *.vtt text eol=lf
+# Frozen playable imports are verified against their original ZIP bytes.
+docs/assets/tidekeeper-playable/** -text whitespace=cr-at-eol
+docs/assets/duskwood-watch/** -text whitespace=cr-at-eol
+# Preserve upstream license text and frozen generation-record whitespace.
+docs/assets/fonts/*-OFL.txt -whitespace
+motion/public/fonts/*-OFL.txt -whitespace
+docs/assets/duskwood-watch/assets/notosanssc-OFL.txt -whitespace
+docs/assets/tidekeeper-playable/art/expansion/generation-scenes.md whitespace=cr-at-eol,-blank-at-eof

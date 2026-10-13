@@ -21,14 +21,18 @@ def main():
     text += ''.join(path.read_text(encoding='utf-8') for path in (ROOT / 'motion/src').glob('*.tsx'))
     text += ''.join(path.read_text(encoding='utf-8') for path in (ROOT / 'examples/tidekeeper-production/references').glob('*.js'))
     text += ''.join(chr(code) for code in range(32, 127))
+    destination = ROOT / 'docs/assets/fonts/noto-sans-sc-subset.woff2'
+    retained = set()
+    if destination.is_file():
+        with TTFont(destination) as previous:
+            retained.update(previous.getBestCmap())
     font = TTFont(args.source)
     options = subset.Options()
     options.layout_features = ['*']
     job = subset.Subsetter(options=options)
-    job.populate(text=text)
+    job.populate(text=text, unicodes=retained)
     job.subset(font)
     font.flavor = 'woff2'
-    destination = ROOT / 'docs/assets/fonts/noto-sans-sc-subset.woff2'
     font.save(destination)
     render_font = ROOT / 'motion/public/fonts/field-sans.woff2'
     render_font.write_bytes(destination.read_bytes())

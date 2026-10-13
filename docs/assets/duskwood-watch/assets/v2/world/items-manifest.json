@@ -1,0 +1,703 @@
+{
+  "batch": "items",
+  "status": "candidate",
+  "approval": null,
+  "pack_version": "0.3.1",
+  "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88",
+  "initial_generation_pack": "0.3.0",
+  "compatible_migration": "0.3.0 -> 0.3.1; same image references and visual grammar, adds supplies family and corrects canvas to 1600x1000",
+  "atlas": "items-atlas.png",
+  "grid": {
+    "columns": 4,
+    "rows": 3,
+    "cellWidth": 256,
+    "cellHeight": 256
+  },
+  "source_size": [
+    1448,
+    1086
+  ],
+  "source_sha256": "6658c477b3df320f3b8f8f1aeab8ed76685b3500db826ff4f8db21d17a4c7e9e",
+  "raw_row_cuts": [
+    0,
+    367,
+    696,
+    1086
+  ],
+  "crop_bounds_alpha_threshold": 8,
+  "margin_fraction": 0.1,
+  "items": [
+    {
+      "name": "lamp-seed-coin",
+      "file": "lamp-seed-coin.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        0,
+        0,
+        378,
+        367
+      ],
+      "raw_visible_rect_local": [
+        78,
+        79,
+        323,
+        331
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.8134920634920635,
+      "frame_rect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          28,
+          26,
+          227,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.4939
+      },
+      "sha256": "5a71ab09e3ef53a67638bf1efdb28fd61dfba9474e2b85a1f68d3b684ce53265"
+    },
+    {
+      "name": "moon-crystal",
+      "file": "moon-crystal.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        378,
+        0,
+        704,
+        367
+      ],
+      "raw_visible_rect_local": [
+        56,
+        50,
+        279,
+        350
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.6833333333333333,
+      "frame_rect": [
+        256,
+        0,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          52,
+          26,
+          204,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.6981
+      },
+      "sha256": "d3a8f8bf3c5a4a57737652b9afc0975ad199e6f94eebf4ffa03c976a8935f7ee"
+    },
+    {
+      "name": "branch-bundle",
+      "file": "branch-bundle.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        704,
+        0,
+        1089,
+        367
+      ],
+      "raw_visible_rect_local": [
+        48,
+        46,
+        349,
+        336
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.6810631229235881,
+      "frame_rect": [
+        512,
+        0,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          27,
+          29,
+          231,
+          227
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.6595
+      },
+      "sha256": "b8dfa2fafc3c961922ddcff2c3b577de0144002ede52920f66430ce84377e73a"
+    },
+    {
+      "name": "rune-stone",
+      "file": "rune-stone.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        1089,
+        0,
+        1448,
+        367
+      ],
+      "raw_visible_rect_local": [
+        37,
+        84,
+        291,
+        343
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.7915057915057915,
+      "frame_rect": [
+        768,
+        0,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          28,
+          26,
+          229,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.5394
+      },
+      "sha256": "0ba8dca2f6d0671e96bc848a19972facf0c70af8d5c3695874774159f283c43f"
+    },
+    {
+      "name": "amber-resin",
+      "file": "amber-resin.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        0,
+        367,
+        364,
+        696
+      ],
+      "raw_visible_rect_local": [
+        64,
+        31,
+        310,
+        310
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.7347670250896058,
+      "frame_rect": [
+        0,
+        256,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          38,
+          26,
+          219,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.6035
+      },
+      "sha256": "ea8b556b4427316501bd469b2f2d069d62656ade8479398173d7a73c1fc9108a"
+    },
+    {
+      "name": "copper-gear",
+      "file": "copper-gear.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        364,
+        367,
+        728,
+        696
+      ],
+      "raw_visible_rect_local": [
+        56,
+        39,
+        314,
+        303
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.7765151515151515,
+      "frame_rect": [
+        256,
+        256,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          29,
+          26,
+          228,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.5534
+      },
+      "sha256": "0d07993f780be1f354260fdb5bd2ab8151422a5d7aae3c2ce05baa950e278a58"
+    },
+    {
+      "name": "moss-oil",
+      "file": "moss-oil.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        728,
+        367,
+        1080,
+        696
+      ],
+      "raw_visible_rect_local": [
+        51,
+        34,
+        306,
+        313
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.7347670250896058,
+      "frame_rect": [
+        512,
+        256,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          35,
+          26,
+          221,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.5927
+      },
+      "sha256": "d966cfce348774eb2d1d7ac6ab1554dc8989188ee7fa6e172260e4a63d2a19e3"
+    },
+    {
+      "name": "copper-hammer",
+      "file": "copper-hammer.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        1080,
+        367,
+        1448,
+        696
+      ],
+      "raw_visible_rect_local": [
+        48,
+        18,
+        332,
+        318
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.6833333333333333,
+      "frame_rect": [
+        768,
+        256,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          32,
+          26,
+          225,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.7252
+      },
+      "sha256": "8e9bb61df81bdb0869d203bbe1f3492fe2d75674e470c23d85a32b58e64cea6d"
+    },
+    {
+      "name": "pruning-hook",
+      "file": "pruning-hook.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        0,
+        696,
+        382,
+        1086
+      ],
+      "raw_visible_rect_local": [
+        78,
+        34,
+        331,
+        316
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.7269503546099291,
+      "frame_rect": [
+        0,
+        512,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          36,
+          26,
+          219,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.7717
+      },
+      "sha256": "0bb7164d183c00ba6353d5abb3546f44a3ae93e9c802c1b528787d72a8e7545f"
+    },
+    {
+      "name": "shovel",
+      "file": "shovel.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        382,
+        696,
+        744,
+        1086
+      ],
+      "raw_visible_rect_local": [
+        52,
+        11,
+        296,
+        328
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.6466876971608833,
+      "frame_rect": [
+        256,
+        512,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          49,
+          26,
+          207,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.788
+      },
+      "sha256": "fd7b35fcfb3901952df14b2310d895af3cf69eb42b3bc152ff6d80d3ba369d69"
+    },
+    {
+      "name": "herbal-potion",
+      "file": "herbal-potion.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        744,
+        696,
+        1097,
+        1086
+      ],
+      "raw_visible_rect_local": [
+        98,
+        18,
+        277,
+        326
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.6655844155844156,
+      "frame_rect": [
+        512,
+        512,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          68,
+          26,
+          187,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.7599
+      },
+      "sha256": "7848e97d7b93847b6d2e26e566654703046b12b503b4d75b74d8fb2e35e3bd68"
+    },
+    {
+      "name": "night-charm",
+      "file": "night-charm.png",
+      "category": "items",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        1097,
+        696,
+        1448,
+        1086
+      ],
+      "raw_visible_rect_local": [
+        78,
+        11,
+        254,
+        320
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "scale": 0.6634304207119741,
+      "frame_rect": [
+        768,
+        512,
+        256,
+        256
+      ],
+      "stats": {
+        "size": [
+          256,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          70,
+          26,
+          187,
+          231
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.8038
+      },
+      "sha256": "867aeba8284d06bf3dbf0e9b852f995bb8d49e15ad0430ca3e2d93354b9e6f44"
+    }
+  ]
+}

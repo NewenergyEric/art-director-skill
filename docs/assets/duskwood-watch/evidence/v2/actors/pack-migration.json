@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-13",
+  "fromVersion": "0.3.0",
+  "fromFingerprint": "48e6130af23163006c00f453dffc6e2d5456558fac1d79098b46615d75616d0c",
+  "toVersion": "0.3.1",
+  "toFingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88",
+  "authorization": "Root agent explicitly authorized compatible migration: canvas updated to 1600x1000 and item family added; actor visual and runtime interfaces unchanged.",
+  "fromVerify": "pass: content integrity, no errors or warnings",
+  "toVerify": "pass: content integrity, no errors or warnings",
+  "imagesRegeneratedForMigration": false,
+  "approval": null,
+  "status": "candidate"
+}

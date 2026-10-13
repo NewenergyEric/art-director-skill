@@ -1,0 +1,1263 @@
+{
+  "schema_version": "1.0",
+  "status": "candidate",
+  "approval": null,
+  "baseline": {
+    "project_id": "duskwood-watch",
+    "version": "0.3.1",
+    "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+  },
+  "logical_canvas": [
+    1600,
+    1000
+  ],
+  "asset_count": 28,
+  "counts": {
+    "items": 12,
+    "scene": 12,
+    "ui": 4
+  },
+  "manifest_paths": [
+    "items-manifest.json",
+    "scene-manifest.json",
+    "ui-manifest.json"
+  ],
+  "receipt": "../../../evidence/v2/world/world-receipt.json",
+  "review": "../../../evidence/v2/world/world-review.md",
+  "runtime_verified": false,
+  "atlas_rect_convention": "x,y,width,height",
+  "assets": [
+    {
+      "id": "lamp-seed-coin",
+      "file": "lamp-seed-coin.png",
+      "category": "items",
+      "intended_function": "currency",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        0,
+        0,
+        378,
+        367
+      ],
+      "source_visible_rect_local": [
+        78,
+        79,
+        323,
+        331
+      ],
+      "scale": 0.8134920634920635,
+      "sha256": "5a71ab09e3ef53a67638bf1efdb28fd61dfba9474e2b85a1f68d3b684ce53265",
+      "status": "candidate"
+    },
+    {
+      "id": "moon-crystal",
+      "file": "moon-crystal.png",
+      "category": "items",
+      "intended_function": "rare material",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        256,
+        0,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        378,
+        0,
+        704,
+        367
+      ],
+      "source_visible_rect_local": [
+        56,
+        50,
+        279,
+        350
+      ],
+      "scale": 0.6833333333333333,
+      "sha256": "d3a8f8bf3c5a4a57737652b9afc0975ad199e6f94eebf4ffa03c976a8935f7ee",
+      "status": "candidate"
+    },
+    {
+      "id": "branch-bundle",
+      "file": "branch-bundle.png",
+      "category": "items",
+      "intended_function": "wood material",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        512,
+        0,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        704,
+        0,
+        1089,
+        367
+      ],
+      "source_visible_rect_local": [
+        48,
+        46,
+        349,
+        336
+      ],
+      "scale": 0.6810631229235881,
+      "sha256": "b8dfa2fafc3c961922ddcff2c3b577de0144002ede52920f66430ce84377e73a",
+      "status": "candidate"
+    },
+    {
+      "id": "rune-stone",
+      "file": "rune-stone.png",
+      "category": "items",
+      "intended_function": "stone material",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        768,
+        0,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        1089,
+        0,
+        1448,
+        367
+      ],
+      "source_visible_rect_local": [
+        37,
+        84,
+        291,
+        343
+      ],
+      "scale": 0.7915057915057915,
+      "sha256": "0ba8dca2f6d0671e96bc848a19972facf0c70af8d5c3695874774159f283c43f",
+      "status": "candidate"
+    },
+    {
+      "id": "amber-resin",
+      "file": "amber-resin.png",
+      "category": "items",
+      "intended_function": "resin material",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        0,
+        256,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        0,
+        367,
+        364,
+        696
+      ],
+      "source_visible_rect_local": [
+        64,
+        31,
+        310,
+        310
+      ],
+      "scale": 0.7347670250896058,
+      "sha256": "ea8b556b4427316501bd469b2f2d069d62656ade8479398173d7a73c1fc9108a",
+      "status": "candidate"
+    },
+    {
+      "id": "copper-gear",
+      "file": "copper-gear.png",
+      "category": "items",
+      "intended_function": "mechanical material",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        256,
+        256,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        364,
+        367,
+        728,
+        696
+      ],
+      "source_visible_rect_local": [
+        56,
+        39,
+        314,
+        303
+      ],
+      "scale": 0.7765151515151515,
+      "sha256": "0d07993f780be1f354260fdb5bd2ab8151422a5d7aae3c2ce05baa950e278a58",
+      "status": "candidate"
+    },
+    {
+      "id": "moss-oil",
+      "file": "moss-oil.png",
+      "category": "items",
+      "intended_function": "lamp refill consumable",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        512,
+        256,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        728,
+        367,
+        1080,
+        696
+      ],
+      "source_visible_rect_local": [
+        51,
+        34,
+        306,
+        313
+      ],
+      "scale": 0.7347670250896058,
+      "sha256": "d966cfce348774eb2d1d7ac6ab1554dc8989188ee7fa6e172260e4a63d2a19e3",
+      "status": "candidate"
+    },
+    {
+      "id": "copper-hammer",
+      "file": "copper-hammer.png",
+      "category": "items",
+      "intended_function": "upgrade tool",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        768,
+        256,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        1080,
+        367,
+        1448,
+        696
+      ],
+      "source_visible_rect_local": [
+        48,
+        18,
+        332,
+        318
+      ],
+      "scale": 0.6833333333333333,
+      "sha256": "8e9bb61df81bdb0869d203bbe1f3492fe2d75674e470c23d85a32b58e64cea6d",
+      "status": "candidate"
+    },
+    {
+      "id": "pruning-hook",
+      "file": "pruning-hook.png",
+      "category": "items",
+      "intended_function": "quick-harvest tool",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        0,
+        512,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        0,
+        696,
+        382,
+        1086
+      ],
+      "source_visible_rect_local": [
+        78,
+        34,
+        331,
+        316
+      ],
+      "scale": 0.7269503546099291,
+      "sha256": "0bb7164d183c00ba6353d5abb3546f44a3ae93e9c802c1b528787d72a8e7545f",
+      "status": "candidate"
+    },
+    {
+      "id": "shovel",
+      "file": "shovel.png",
+      "category": "items",
+      "intended_function": "trap placement tool",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        256,
+        512,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        382,
+        696,
+        744,
+        1086
+      ],
+      "source_visible_rect_local": [
+        52,
+        11,
+        296,
+        328
+      ],
+      "scale": 0.6466876971608833,
+      "sha256": "fd7b35fcfb3901952df14b2310d895af3cf69eb42b3bc152ff6d80d3ba369d69",
+      "status": "candidate"
+    },
+    {
+      "id": "herbal-potion",
+      "file": "herbal-potion.png",
+      "category": "items",
+      "intended_function": "mobile light refill consumable",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        512,
+        512,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        744,
+        696,
+        1097,
+        1086
+      ],
+      "source_visible_rect_local": [
+        98,
+        18,
+        277,
+        326
+      ],
+      "scale": 0.6655844155844156,
+      "sha256": "7848e97d7b93847b6d2e26e566654703046b12b503b4d75b74d8fb2e35e3bd68",
+      "status": "candidate"
+    },
+    {
+      "id": "night-charm",
+      "file": "night-charm.png",
+      "category": "items",
+      "intended_function": "barrier consumable",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        256,
+        256
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        128,
+        128
+      ],
+      "game_display_px": 40,
+      "game_display_axis": "height",
+      "atlas": "items-atlas.png",
+      "frame_rect": [
+        768,
+        512,
+        256,
+        256
+      ],
+      "source": "../../../evidence/v2/world/raw/items-generated.png",
+      "source_cell_rect": [
+        1097,
+        696,
+        1448,
+        1086
+      ],
+      "source_visible_rect_local": [
+        78,
+        11,
+        254,
+        320
+      ],
+      "scale": 0.6634304207119741,
+      "sha256": "867aeba8284d06bf3dbf0e9b852f995bb8d49e15ad0430ca3e2d93354b9e6f44",
+      "status": "candidate"
+    },
+    {
+      "id": "lamp-off",
+      "file": "lamp-off.png",
+      "category": "scene",
+      "intended_function": "lamp inactive state",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 160,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        0,
+        0,
+        374,
+        389
+      ],
+      "source_visible_rect_local": [
+        91,
+        42,
+        311,
+        373
+      ],
+      "scale": 1.2386706948640482,
+      "sha256": "da081a96a1cd8a9af280517637015ebfc128a3befe4e960fa9cbcd7a134fef8b",
+      "status": "candidate"
+    },
+    {
+      "id": "lamp-on",
+      "file": "lamp-on.png",
+      "category": "scene",
+      "intended_function": "lamp active state",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 160,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        374,
+        0,
+        704,
+        389
+      ],
+      "source_visible_rect_local": [
+        63,
+        42,
+        283,
+        373
+      ],
+      "scale": 1.2386706948640482,
+      "sha256": "213a940216b63e612c310f9293914aae6e821d64c081df869bf59f722d82468f",
+      "status": "candidate"
+    },
+    {
+      "id": "toolbox",
+      "file": "toolbox.png",
+      "category": "scene",
+      "intended_function": "world tool container",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 120,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        704,
+        0,
+        1083,
+        389
+      ],
+      "source_visible_rect_local": [
+        49,
+        126,
+        345,
+        367
+      ],
+      "scale": 1.3837837837837839,
+      "sha256": "473659b7e6dea292a54e9538eaefd16b3abf563c7ea9e407d2c201e61ae53e2d",
+      "status": "candidate"
+    },
+    {
+      "id": "woodpile",
+      "file": "woodpile.png",
+      "category": "scene",
+      "intended_function": "wood collection landmark",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 90,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        1083,
+        0,
+        1448,
+        389
+      ],
+      "source_visible_rect_local": [
+        35,
+        141,
+        323,
+        357
+      ],
+      "scale": 1.4222222222222223,
+      "sha256": "33dfa3eb8dc4972ab8703eacc41be6d4b6b4549cc5b169fc140a1d23365a777b",
+      "status": "candidate"
+    },
+    {
+      "id": "crystal-cluster",
+      "file": "crystal-cluster.png",
+      "category": "scene",
+      "intended_function": "crystal collection landmark",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 140,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        0,
+        389,
+        360,
+        728
+      ],
+      "source_visible_rect_local": [
+        64,
+        48,
+        336,
+        324
+      ],
+      "scale": 1.4840579710144928,
+      "sha256": "376facaff3d2cee60cbf13d30040efa05f74dbb300d38d48a9018f110f834498",
+      "status": "candidate"
+    },
+    {
+      "id": "herb-bush",
+      "file": "herb-bush.png",
+      "category": "scene",
+      "intended_function": "herb collection landmark",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 110,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        360,
+        389,
+        720,
+        728
+      ],
+      "source_visible_rect_local": [
+        25,
+        28,
+        341,
+        321
+      ],
+      "scale": 1.2962025316455696,
+      "sha256": "fcf1074673a3ed94f5c06d46ae11181293f6a5d2b0fe9662c12aac33b8ea0fea",
+      "status": "candidate"
+    },
+    {
+      "id": "broken-arch",
+      "file": "broken-arch.png",
+      "category": "scene",
+      "intended_function": "world ruin",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 230,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        720,
+        389,
+        1115,
+        728
+      ],
+      "source_visible_rect_local": [
+        21,
+        18,
+        371,
+        328
+      ],
+      "scale": 1.1702857142857144,
+      "sha256": "27130d535b8a98bb08ddf0ccfca995e1c863b1c70b962e7ffea3f9ff1fd48943",
+      "status": "candidate"
+    },
+    {
+      "id": "signpost",
+      "file": "signpost.png",
+      "category": "scene",
+      "intended_function": "wayfinding prop",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 130,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        1115,
+        389,
+        1448,
+        728
+      ],
+      "source_visible_rect_local": [
+        25,
+        17,
+        275,
+        332
+      ],
+      "scale": 1.3003174603174603,
+      "sha256": "c522cae10fb0a9c3e294ea4c82dedfc5900c24fe69e1d4311e2738acdc78c509",
+      "status": "candidate"
+    },
+    {
+      "id": "mushrooms",
+      "file": "mushrooms.png",
+      "category": "scene",
+      "intended_function": "environment dressing",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 90,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        0,
+        728,
+        372,
+        1086
+      ],
+      "source_visible_rect_local": [
+        54,
+        37,
+        340,
+        306
+      ],
+      "scale": 1.4321678321678322,
+      "sha256": "3de32a423ff906735f97a1ed1d98373b3da580c8539eebc19c9d9bed49095958",
+      "status": "candidate"
+    },
+    {
+      "id": "reeds",
+      "file": "reeds.png",
+      "category": "scene",
+      "intended_function": "environment dressing",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 150,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        372,
+        728,
+        722,
+        1086
+      ],
+      "source_visible_rect_local": [
+        34,
+        8,
+        333,
+        311
+      ],
+      "scale": 1.3518151815181518,
+      "sha256": "0216c5d3892ce028df1dca249766ecbaf1cc66801a93713e75ec485d251125ec",
+      "status": "candidate"
+    },
+    {
+      "id": "foreground-branch",
+      "file": "foreground-branch.png",
+      "category": "scene",
+      "intended_function": "foreground dressing",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 250,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        722,
+        728,
+        1095,
+        1086
+      ],
+      "source_visible_rect_local": [
+        17,
+        33,
+        352,
+        310
+      ],
+      "scale": 1.2226865671641791,
+      "sha256": "940c4eb43b3c38419bbbe84b8c8ce016cb852b29922d8b0124a8e1c6433776d5",
+      "status": "candidate"
+    },
+    {
+      "id": "moss-rock",
+      "file": "moss-rock.png",
+      "category": "scene",
+      "intended_function": "environment dressing",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 95,
+      "game_display_axis": "height",
+      "atlas": "scene-atlas.png",
+      "frame_rect": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "source_cell_rect": [
+        1095,
+        728,
+        1448,
+        1086
+      ],
+      "source_visible_rect_local": [
+        22,
+        75,
+        313,
+        305
+      ],
+      "scale": 1.4075601374570448,
+      "sha256": "4c981ec948e7aabb1d63053c3a8006dd7a8eebc19ef26571a5d99407fe3e164b",
+      "status": "candidate"
+    },
+    {
+      "id": "resource-plaque",
+      "file": "resource-plaque.png",
+      "category": "ui",
+      "intended_function": "resource HUD skin",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        768,
+        193
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        384,
+        96.5
+      ],
+      "game_display_px": 220,
+      "game_display_axis": "width",
+      "atlas": "ui-atlas.png",
+      "frame_rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/ui-generated.png",
+      "source_cell_rect": [
+        0,
+        0,
+        732,
+        574
+      ],
+      "source_visible_rect_local": [
+        21,
+        264,
+        698,
+        434
+      ],
+      "scale": 0.9075332348596752,
+      "sha256": "a7df08525e8d22ba631fc632b2503901792fba91a98e3bd9c326e6c57012328b",
+      "status": "candidate"
+    },
+    {
+      "id": "skill-medallion",
+      "file": "skill-medallion.png",
+      "category": "ui",
+      "intended_function": "skill UI skin",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        256,
+        256
+      ],
+      "game_display_px": 78,
+      "game_display_axis": "width",
+      "atlas": "ui-atlas.png",
+      "frame_rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/ui-generated.png",
+      "source_cell_rect": [
+        732,
+        0,
+        1254,
+        574
+      ],
+      "source_visible_rect_local": [
+        35,
+        171,
+        422,
+        516
+      ],
+      "scale": 1.0583979328165376,
+      "sha256": "7f72ae5682f59064c094b6ca26158049b08dbc337460cdf4ae288a8b2c16b245",
+      "status": "candidate"
+    },
+    {
+      "id": "build-wheel",
+      "file": "build-wheel.png",
+      "category": "ui",
+      "intended_function": "three-option build UI skin",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        512,
+        512
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        256,
+        256
+      ],
+      "game_display_px": 210,
+      "game_display_axis": "width",
+      "atlas": "ui-atlas.png",
+      "frame_rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/ui-generated.png",
+      "source_cell_rect": [
+        0,
+        574,
+        594,
+        1254
+      ],
+      "source_visible_rect_local": [
+        90,
+        58,
+        562,
+        539
+      ],
+      "scale": 0.8515592515592516,
+      "sha256": "72ae2c4d1b70e58b3baf7d7718eaea18af312959a4cb36e108d07d18c529b711",
+      "status": "candidate"
+    },
+    {
+      "id": "inventory-tray",
+      "file": "inventory-tray.png",
+      "category": "ui",
+      "intended_function": "six-slot inventory skin",
+      "gameplay_status": "planned or integrating; not verified by this asset task",
+      "size": [
+        768,
+        247
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "anchor_px": [
+        384,
+        123.5
+      ],
+      "game_display_px": 400,
+      "game_display_axis": "width",
+      "atlas": "ui-atlas.png",
+      "frame_rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "source": "../../../evidence/v2/world/raw/ui-generated.png",
+      "source_cell_rect": [
+        594,
+        574,
+        1254,
+        1254
+      ],
+      "source_visible_rect_local": [
+        32,
+        225,
+        617,
+        413
+      ],
+      "scale": 1.0502564102564105,
+      "sha256": "9cd3ce2984fbb23c5ad5e07e041c280b9cffe8f1494c68f9461a863a0fa262fd",
+      "status": "candidate"
+    }
+  ]
+}

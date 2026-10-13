@@ -1,4 +1,4 @@
-[English](TIDEKEEPER-HANDOFF.en.md) · [返回介绍](https://newenergyeric.github.io/art-director-skill/docs/landing.html)
+[English](TIDEKEEPER-HANDOFF.en.md) · [返回介绍](https://newenergyeric.github.io/art-director-skill/docs/landing.zh.html)
 
 # 潮灯小镇：一份视觉记忆，怎样交到下一位手里
 

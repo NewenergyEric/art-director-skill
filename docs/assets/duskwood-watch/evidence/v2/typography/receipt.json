@@ -1,0 +1,11 @@
+{
+  "status": "candidate",
+  "tool": "image_gen",
+  "generationId": "exec-69b5d8e6-ef4c-4be5-9ca2-468840503ee7",
+  "prompt": "title-prompt.txt",
+  "output": "../../../assets/v2/title.png",
+  "modelVersion": "unavailable",
+  "seed": "unavailable",
+  "editableText": "暮林守望",
+  "role": "title lettering only; all UI text uses Noto Sans SC"
+}

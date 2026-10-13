@@ -1,0 +1,378 @@
+{
+  "asset_id": "enemy-walk",
+  "task_id": "forest-enemy-motion-20261013",
+  "status": "candidate",
+  "approval": null,
+  "pack_version": "0.1.0",
+  "fingerprint": "c9a19f22bc6bceb84f2e6e0a92711dbeb7eb0fa5a3cb52b9634c31421b62ed90",
+  "image": "enemy-walk.png",
+  "frameWidth": 336,
+  "frameHeight": 256,
+  "count": 8,
+  "frameCount": 8,
+  "fps": 10,
+  "columns": 8,
+  "rows": 1,
+  "anchor": [
+    0.5,
+    0.96875
+  ],
+  "anchorPixels": [
+    168.0,
+    248
+  ],
+  "loop": true,
+  "facing": "right",
+  "intended_display_height_px": 64,
+  "source": "raw/enemy-walk-v2-generated.png",
+  "source_grid": {
+    "columns": 4,
+    "rows": 2,
+    "size": [
+      1774,
+      887
+    ]
+  },
+  "reference": "enemy.png",
+  "reference_sha256": "b4ed0c4f6802109afac2b88717dee32e6f3e253ab3be79d51a712f36e5c05251",
+  "tool": "built-in image_gen",
+  "model": "not exposed",
+  "seed": "not exposed",
+  "registration": "One scale across all frames; alpha>8 determines visible crop; source RGBA preserved inside crop; equal ground baseline by translation only; no per-frame stretch or independent height normalization.",
+  "common_scale": 0.9477911646586346,
+  "baseline_px": 248,
+  "frames": [
+    {
+      "index": 0,
+      "source_cell_bbox": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "source_content_bbox_local": [
+        85,
+        151,
+        411,
+        394
+      ],
+      "same_scale": 0.9477911646586346,
+      "destination_offset": [
+        14,
+        18
+      ],
+      "stats": {
+        "size": [
+          336,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          14,
+          18,
+          323,
+          248
+        ],
+        "outer_border_nonzero_alpha_pixels": 0,
+        "fully_transparent_fraction": 0.452
+      },
+      "pixel_sha256": "705524fa3d61b7816525ed78fb576aa9ec106da1e0083ea77aa5ab810d437a9c"
+    },
+    {
+      "index": 1,
+      "source_cell_bbox": [
+        444,
+        0,
+        887,
+        444
+      ],
+      "source_content_bbox_local": [
+        76,
+        148,
+        395,
+        388
+      ],
+      "same_scale": 0.9477911646586346,
+      "destination_offset": [
+        17,
+        21
+      ],
+      "stats": {
+        "size": [
+          336,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          17,
+          21,
+          319,
+          248
+        ],
+        "outer_border_nonzero_alpha_pixels": 0,
+        "fully_transparent_fraction": 0.4525
+      },
+      "pixel_sha256": "b0cf2a54e1437ea3805dcb7841eefcd440aa11b32aa9480f47bf98643bc62c69"
+    },
+    {
+      "index": 2,
+      "source_cell_bbox": [
+        887,
+        0,
+        1330,
+        444
+      ],
+      "source_content_bbox_local": [
+        73,
+        146,
+        398,
+        385
+      ],
+      "same_scale": 0.9477911646586346,
+      "destination_offset": [
+        14,
+        21
+      ],
+      "stats": {
+        "size": [
+          336,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          14,
+          21,
+          322,
+          248
+        ],
+        "outer_border_nonzero_alpha_pixels": 0,
+        "fully_transparent_fraction": 0.4189
+      },
+      "pixel_sha256": "4d1400f79d7bce2fd36b9e25c2fab2de8c8e30c960202ec214fc933912a254d9"
+    },
+    {
+      "index": 3,
+      "source_cell_bbox": [
+        1330,
+        0,
+        1774,
+        444
+      ],
+      "source_content_bbox_local": [
+        70,
+        146,
+        390,
+        395
+      ],
+      "same_scale": 0.9477911646586346,
+      "destination_offset": [
+        16,
+        12
+      ],
+      "stats": {
+        "size": [
+          336,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          16,
+          12,
+          319,
+          248
+        ],
+        "outer_border_nonzero_alpha_pixels": 0,
+        "fully_transparent_fraction": 0.436
+      },
+      "pixel_sha256": "b832a08b3f3dd90658814e64d50a2be4a0603a9eff65cf6e66dfc7f0b4ec76ee"
+    },
+    {
+      "index": 4,
+      "source_cell_bbox": [
+        0,
+        444,
+        444,
+        887
+      ],
+      "source_content_bbox_local": [
+        82,
+        83,
+        410,
+        325
+      ],
+      "same_scale": 0.9477911646586346,
+      "destination_offset": [
+        12,
+        19
+      ],
+      "stats": {
+        "size": [
+          336,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          12,
+          19,
+          323,
+          248
+        ],
+        "outer_border_nonzero_alpha_pixels": 0,
+        "fully_transparent_fraction": 0.422
+      },
+      "pixel_sha256": "1894fbf0651c1661b7928d3f032f49092c0e0f56e44fc2b21f188628498819eb"
+    },
+    {
+      "index": 5,
+      "source_cell_bbox": [
+        444,
+        444,
+        887,
+        887
+      ],
+      "source_content_bbox_local": [
+        80,
+        78,
+        404,
+        314
+      ],
+      "same_scale": 0.9477911646586346,
+      "destination_offset": [
+        14,
+        24
+      ],
+      "stats": {
+        "size": [
+          336,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          14,
+          24,
+          321,
+          248
+        ],
+        "outer_border_nonzero_alpha_pixels": 0,
+        "fully_transparent_fraction": 0.4342
+      },
+      "pixel_sha256": "38ef985fd5dd285ae70cca54436ae3e6d3d5b34642ebf6d843f6919b5be7f062"
+    },
+    {
+      "index": 6,
+      "source_cell_bbox": [
+        887,
+        444,
+        1330,
+        887
+      ],
+      "source_content_bbox_local": [
+        75,
+        76,
+        403,
+        322
+      ],
+      "same_scale": 0.9477911646586346,
+      "destination_offset": [
+        12,
+        15
+      ],
+      "stats": {
+        "size": [
+          336,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          12,
+          15,
+          323,
+          248
+        ],
+        "outer_border_nonzero_alpha_pixels": 0,
+        "fully_transparent_fraction": 0.4056
+      },
+      "pixel_sha256": "aba4887d07caddb8dc27d3296ee487da11cb3bf5cbabeb2445d0fcc655e20062"
+    },
+    {
+      "index": 7,
+      "source_cell_bbox": [
+        1330,
+        444,
+        1774,
+        887
+      ],
+      "source_content_bbox_local": [
+        75,
+        79,
+        406,
+        327
+      ],
+      "same_scale": 0.9477911646586346,
+      "destination_offset": [
+        11,
+        13
+      ],
+      "stats": {
+        "size": [
+          336,
+          256
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          11,
+          13,
+          325,
+          248
+        ],
+        "outer_border_nonzero_alpha_pixels": 0,
+        "fully_transparent_fraction": 0.4143
+      },
+      "pixel_sha256": "ab1f5c9aa1493431eae210818ba31f17a1eee93f415b84069b31fa4fe3bbdc21"
+    }
+  ],
+  "unique_frame_pixel_hashes": 8,
+  "adjacent_mean_rgb_deltas_including_8_to_1": [
+    20.5674,
+    14.9194,
+    24.5918,
+    19.8341,
+    21.7123,
+    22.5845,
+    17.4217,
+    16.9082
+  ],
+  "automatic_metrics_notice": "Pixel uniqueness and differences are technical diagnostics, not proof of gait quality; use the contact sheet and review."
+}

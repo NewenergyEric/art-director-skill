@@ -7,10 +7,10 @@ Art Director 帮主美逐步建立规范，再把规则、样板与交付要求�
 ## 1. 安装
 
 ```sh
-npx skills add https://github.com/NewenergyEric/art-director-skill
+npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-director
 ```
 
-也可以下载[当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=chinese-primary-20261011)，交给 Agent 安装。核心脚本需要 Python 3.10+。生成或编辑设计使用宿主中已有的工具；Skill 不附带图像模型。
+也可以下载[当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-memory-20261013)，交给 Agent 安装。核心脚本需要 Python 3.10+。生成或编辑设计使用宿主中已有的工具；Skill 不附带图像模型。
 
 ## 2. 主美从现有资料开始
 
@@ -42,4 +42,4 @@ Agent 将任务接到相关类别、组件、参考和项目版本。之后继�
 
 市场研究判断什么值得做，游戏拆解梳理竞对与资产家族，制作管理评估体量、产能和工作包，美术总监建立原创方向与共享规范。样板、原型反馈和实际工时会反过来修正前面的判断。
 
-[四岗位交接关系](WORKFLOW.md) · [24 秒演示与开场白](landing.html) · [项目包示例](../examples/harbor-studio-draft/guides/00-index.md) · [Agent 与工程接入](AGENT-GUIDE.md)
+[四岗位交接关系](WORKFLOW.zh.md) · [24 秒演示与开场白](landing.zh.html) · [项目包示例](../examples/harbor-studio-draft/guides/00-index.md) · [Agent 与工程接入](AGENT-GUIDE.zh.md)

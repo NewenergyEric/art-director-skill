@@ -1,6 +1,6 @@
 # Four roles. One game worth making.
 
-[中文](WORKFLOW.md)
+[中文](WORKFLOW.zh.md)
 
 For a solo creator these are four hats; for a team they are four accountable roles. They share decisions and versioned evidence rather than relying on the original chat. Start at the question you have; return to earlier decisions when evidence changes.
 

@@ -104,7 +104,7 @@ def main():
              '-movflags', '+faststart', str(video)])
         # Both formats show the same complete journey, including the review.
         raw_gif = output / f'raw-preview-{lang}.gif'
-        gif(ffmpeg, preview, raw_gif, 20, width=800, max_colors=96, dither='none')
+        gif(ffmpeg, preview, raw_gif, 20, width=800, max_colors=128, dither='none')
         published_gif = ROOT / f'assets/readme/depth-preview-{lang}.gif'
         run([optimizer, '-O3', str(raw_gif), '-o', str(published_gif)])
         if published_gif.stat().st_size > 6 * 1024 * 1024:
@@ -129,16 +129,18 @@ def main():
         'readme_duration_seconds': 24,
         'master_duration_seconds': 24,
         'readme_preview': 'depth-preview',
-        'font': 'Noto Sans SC, OFL variable subset',
+        'font': 'Bree Serif (English display); Harbor Brush Display, a renamed LXGW WenKai subset (Chinese display); Noto Sans SC (UI and body). All OFL.',
         'visual_system': 'One team, one visual memory.',
-        'story': ['shared-memory', 'director-baseline', 'member-continuation', 'ui-interaction', 'repair-light-arrival', 'shared-delivery'],
+        'story': ['define-style', 'share-art-direction', 'team-components', 'review-in-context', 'coherent-scene-and-action', 'one-visual-memory'],
+        'chapters_seconds': [0, 3.5, 7, 10.5, 14.5, 21],
+        'action': {'type': 'six-drawing sprite sequence', 'source': 'docs/assets/tidekeeper-campaign/repair-six-poses.png', 'cell_layout': [3, 2], 'cycle_frames_at_30fps': 39, 'exposures': [8, 7, 3, 3, 6, 12], 'status': 'candidate promotional animation; not a frozen production-pack asset'},
         'depth_showcase': {
             'duration_seconds': 24,
             'fps': 30,
             'preview_seconds': 24,
             'preview_fps': 20,
             'preview_width': 800,
-            'gif_optimizer': 'gifsicle -O3 (lossless optimization); 96 colors, no dithering',
+            'gif_optimizer': 'gifsicle -O3 (lossless optimization); 128 colors, no dithering',
         },
     }
     files = [

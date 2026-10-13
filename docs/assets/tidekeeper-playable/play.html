@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#184e57">
+  <meta name="description" content="备齐木材与绳索，修复灯塔结构，装好透镜并注油点灯，迎接第一艘归船。">
+  <title>潮灯小镇 · 重燃灯塔</title>
+  <link rel="icon" href="../tidekeeper-production/lamp-l4.png">
+  <link rel="preload" href="tide-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <main id="game" class="game" aria-label="潮灯小镇">
+    <header class="topbar">
+      <a class="wordmark" href="play.html" aria-label="潮灯小镇">潮灯小镇<span>重燃灯塔</span></a>
+      <div class="topbar-right">
+        <div class="wallet" aria-label="贝壳金币"><img src="art/expansion/coin-pile.png" alt=""><span id="coins">0</span></div>
+        <div class="wallet token-wallet" aria-label="航运券"><img src="art/expansion/shipping-token.png" alt=""><span id="tokens">2</span></div>
+        <button class="icon-button" id="catalog-button" aria-label="材料图鉴" title="材料图鉴"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15"/></svg></button>
+        <button class="icon-button" id="sound-button" aria-label="关闭声音" title="声音"></button>
+        <button class="icon-button" id="help-button" aria-label="玩法与设置" title="玩法与设置">?</button>
+      </div>
+    </header>
+    <div class="play-space">
+      <section class="harbor" aria-label="灯塔与栈桥">
+        <canvas id="scene" width="900" height="1600" aria-label="等待修缮的灯塔">你的浏览器暂时不能显示海港，请使用支持 Canvas 的浏览器。</canvas>
+        <div class="harbor-vignette" aria-hidden="true"></div>
+        <div class="chapter"><span id="chapter-label">第一章</span><span id="chapter-name">修好栈桥</span></div>
+        <div class="scene-caption" id="scene-caption"></div>
+        <div class="scene-controls" id="scene-controls"></div>
+      </section>
+      <section class="workbench" id="workbench" aria-label="灯匠工作台">
+        <div class="order" id="order"></div>
+        <div class="bench-heading"><h2>工作台</h2><div class="bench-tools"><button id="supply-button" aria-label="打开港湾补给" title="补给">补给</button><button id="hint-button" aria-label="找一对可以合成的物品" title="找一对">提示</button><button id="undo-button" aria-label="撤销上一步" title="撤销上一步" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 4-5 5 5 5M3 9h10a6 6 0 0 1 0 12"/></svg></button></div></div>
+        <div class="board-frame">
+          <div class="board" id="board" role="group" aria-label="合成棋盘，五行五列"></div>
+          <div class="board-effects" id="board-effects" aria-hidden="true"></div>
+        </div>
+        <div class="item-info" id="item-info" aria-live="polite"></div>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <div class="overlay" id="overlay" hidden></div>
+  <div class="drag-ghost" id="drag-ghost" hidden aria-hidden="true"></div>
+  <noscript><div class="noscript">请启用 JavaScript，和阿澜一起重燃灯塔。</div></noscript>
+  <script src="game-core.js"></script>
+  <script src="animation-manifest.js" onerror="window.TIDEKEEPER_ANIMATION = null"></script>
+  <script src="game.js"></script>
+</body>
+</html>
