@@ -6,6 +6,7 @@
 *.yml text eol=lf
 *.html text eol=lf
 *.svg text eol=lf
+*.txt text eol=lf
 *.js text eol=lf
 *.mjs text eol=lf
 *.tsx text eol=lf
