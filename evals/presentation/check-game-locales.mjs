@@ -151,8 +151,9 @@ const duskCase = read('docs/assets/duskwood-watch/index.en.html');
 assert.match(duskCase, /class="consistency-board"/);
 assert.match(duskCase, /SAME PROJECT PACK/);
 assert.match(duskCase, /href="play\.en\.html"/);
-for (const asset of ['combat.png', 'assets/keeper-base.png', 'assets/enemy.png', 'assets/v2/world/lamp-on.png', 'assets/v2/weapons/ballista-base.png']) {
+for (const asset of ['combat-en.png', 'assets/keeper-base.png', 'assets/enemy.png', 'assets/v2/world/lamp-on.png', 'assets/v2/weapons/ballista-base.png']) {
   assert.ok(duskCase.includes(asset), `Duskwood case is missing ${asset}`);
   assert.ok(fs.existsSync(new URL(`docs/assets/duskwood-watch/${asset}`, root)), `Duskwood case asset does not exist: ${asset}`);
 }
+assert.ok(read('docs/assets/duskwood-watch/play.en.html').includes('combat-en.png'), 'English loading poster must use the English gameplay capture');
 console.log('PASS: four repair chapters, notices, rewards, cross-language saves, unchanged Duskwood world data, bilingual Canvas rendering and English entry points.');

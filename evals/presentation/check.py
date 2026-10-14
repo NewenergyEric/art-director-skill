@@ -100,6 +100,16 @@ def main():
             expected_game = f'docs/assets/{folder}/{page}' + ('.en.html' if lang == 'en' else '.html')
             check(readme + ': game entry matches language: ' + folder,
                   expected_game + ')' in text and (ROOT / expected_game).is_file())
+        expected_screens = ({
+            'docs/assets/tidekeeper-playable/gameplay-en.png',
+            'docs/assets/duskwood-watch/combat-en.png',
+        } if lang == 'en' else {
+            'docs/assets/tidekeeper-playable/gameplay.png',
+            'docs/assets/duskwood-watch/combat.png',
+        })
+        image_paths = {urlsplit(src).path for src in images}
+        check(readme + ': gameplay screenshots match the page language',
+              expected_screens.issubset(image_paths))
         check(readme + ': uses the shared core claim', expected_claim in text)
         check(readme + ': contains no legacy public media reference',
               not any(name in text for name in LEGACY_MEDIA) and '70 秒' not in text and '70-second' not in text)
@@ -136,6 +146,16 @@ def main():
                 expected_game = f'assets/{folder}/{page}' + ('.en.html' if lang == 'en' else '.html')
                 check(name + ': game entry matches language: ' + folder,
                       f'href="{expected_game}"' in text)
+            expected_screens = ({
+                'assets/tidekeeper-playable/gameplay-en.png',
+                'assets/duskwood-watch/combat-en.png',
+            } if lang == 'en' else {
+                'assets/tidekeeper-playable/gameplay.png',
+                'assets/duskwood-watch/combat.png',
+            })
+            image_paths = {urlsplit(src).path for src in re.findall(r'<img\b[^>]*src="([^"]+)"', text)}
+            check(name + ': gameplay screenshots match the page language',
+                  expected_screens.issubset(image_paths))
             check(name + ': player and captions match its language',
                   f'depth-showcase-{lang}.mp4' in text
                   and f'workflow-{lang}.vtt' in text
@@ -195,6 +215,10 @@ def main():
           and 'SAME PROJECT PACK' in dusk_case
           and 'href="play.en.html"' in dusk_case
           and 'game-v2.js' not in dusk_case)
+    check('Duskwood English case and loading poster use the English gameplay capture',
+          'combat-en.png' in dusk_case
+          and 'combat.png' not in dusk_case.replace('combat-en.png', '')
+          and 'combat-en.png' in (ROOT / 'docs/assets/duskwood-watch/play.en.html').read_text(encoding='utf-8'))
     for src, target in local_links(dusk_case_path, dusk_case):
         check('Duskwood case local link ' + src,
               target.is_relative_to(ROOT) and target.is_file())
