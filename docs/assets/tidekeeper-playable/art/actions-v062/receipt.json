@@ -1,0 +1,327 @@
+{
+  "version": "0.6.2-candidate",
+  "date": "2026-10-14T13:15:46.327883+00:00",
+  "humanApproval": null,
+  "frozenBaselineReverified": true,
+  "projectFingerprint": "fc586948fa3f8e059f42c5710729e4aa531e1781f0ffe91f0ef2104842e21e3a",
+  "method": "same-source 2D cutouts with localized elbow meshes; fixed clean plates; rigid tools with explicit ownership. No 3D rig.",
+  "generationCalls": [
+    {
+      "tool": "built-in imagegen",
+      "toolOutput": "exec-5babb918-8e14-48fb-8d45-44b20b78e16b.png",
+      "transparent_background": true,
+      "model": "not returned",
+      "seed": "not returned",
+      "output": "source/repair-clean-v1.png",
+      "sha256": "cd2caf0ef6b82d999119738bb9328ef6e11ef455af21b7aaffe5df256f6c630f",
+      "size": [
+        1024,
+        1536
+      ],
+      "prompt": "prompts/repair-clean.txt",
+      "promptSha256": "1cca5d74c4deb18e51539aad195e5d63ab8a7d44dbe4cdfb514cc3ccb0252a47",
+      "status": "selected",
+      "references": [
+        {
+          "path": "docs/assets/tidekeeper-playable/art/actions-v061/repair/repair-04.png",
+          "sha256": "95632c2caa587f7710e4f84cbba06bd2ea6966d7a24499e84102708cf3aa8cf0"
+        }
+      ]
+    },
+    {
+      "tool": "built-in imagegen",
+      "toolOutput": "exec-4618f2b6-42f6-4ee4-be0d-3ab0ebbe3ecd.png",
+      "transparent_background": true,
+      "model": "not returned",
+      "seed": "not returned",
+      "output": "source/lamp-master-v1.png",
+      "sha256": "6574305398b0539b19f898b9bc4902d35a541ac1e2f5cad49037088ac63ceb38",
+      "size": [
+        1145,
+        1374
+      ],
+      "prompt": "prompts/lamp-workstation-master.txt",
+      "promptSha256": "c2d2cbdf9790fb48c999efde61f171f58bea9765fa6361ff5f8c656c8205ed1e",
+      "status": "selected",
+      "references": [
+        {
+          "path": "docs/assets/tidekeeper-playable/art/actions-v061/beckon/beckon-03.png",
+          "sha256": "4b96e432d71f2665fe91563c9c3cf40f94b383dd7fbd8b60e658041f54a3265b"
+        },
+        {
+          "path": "docs/assets/tidekeeper-playable/art/actions-v060/ignition/ignition-04.png",
+          "sha256": "ac1bea77ac5078d58c68d365f05c806e678ee48b0e954e016949a4bd60d6e627"
+        }
+      ]
+    },
+    {
+      "tool": "built-in imagegen",
+      "toolOutput": "exec-8f6e44e2-7645-4541-8a05-eed60a0739ff.png",
+      "transparent_background": true,
+      "model": "not returned",
+      "seed": "not returned",
+      "output": "source/lamp-clean-v1.png",
+      "sha256": "33e1b05fb80b81ba2d8b68fac1fd5b708c7f68c70bfa7c26c7d10e15fda15940",
+      "size": [
+        1145,
+        1374
+      ],
+      "prompt": "prompts/lamp-clean.txt",
+      "promptSha256": "275bc6cf931da4549a1a58d0e8cb3a75d22385cbc5763f00fb2994631e7399d8",
+      "status": "selected",
+      "references": [
+        {
+          "path": "docs/assets/tidekeeper-playable/art/actions-v062/source/lamp-master-v1.png",
+          "sha256": "6574305398b0539b19f898b9bc4902d35a541ac1e2f5cad49037088ac63ceb38"
+        }
+      ]
+    },
+    {
+      "tool": "built-in imagegen",
+      "toolOutput": "exec-a6c29759-2c03-43ec-bf22-2d7d46816b63.png",
+      "transparent_background": true,
+      "model": "not returned",
+      "seed": "not returned",
+      "output": "source/repair-clean-alpha-rejected.png",
+      "sha256": "8508b0a46b38adc8960de678656812523fee5e7324167b961c625a9fbbf8773f",
+      "size": [
+        1024,
+        1536
+      ],
+      "prompt": "prompts/repair-clean-alpha.txt",
+      "promptSha256": "5a3aa6cb1df6c05b0df65205e7a1f9ccba83c1dee96a9dc35ea2f564c884f743",
+      "status": "rejected: changed composition and scale",
+      "references": [
+        {
+          "path": "docs/assets/tidekeeper-playable/art/actions-v062/source/repair-clean-v1.png",
+          "sha256": "cd2caf0ef6b82d999119738bb9328ef6e11ef455af21b7aaffe5df256f6c630f"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "actualImagegenCalls": 4,
+    "selectedNewRawImages": 3,
+    "rejectedNewRawImages": 1,
+    "continuousActions": 3,
+    "fixedActionMasters": 3,
+    "cleanPlates": 2,
+    "newPaintedAnimationFrames": 0,
+    "retainedLensPaintedFrames": 6,
+    "timingMarkersNotPaintedFrames": 18
+  },
+  "sources": [
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v062/beckon-master.png",
+      "sha256": "4b96e432d71f2665fe91563c9c3cf40f94b383dd7fbd8b60e658041f54a3265b",
+      "bytes": 160471
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v062/lamp-clean.png",
+      "sha256": "33e1b05fb80b81ba2d8b68fac1fd5b708c7f68c70bfa7c26c7d10e15fda15940",
+      "bytes": 1358911
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v062/lamp-master.png",
+      "sha256": "6574305398b0539b19f898b9bc4902d35a541ac1e2f5cad49037088ac63ceb38",
+      "bytes": 1476636
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v062/repair-clean.png",
+      "sha256": "cd2caf0ef6b82d999119738bb9328ef6e11ef455af21b7aaffe5df256f6c630f",
+      "bytes": 1595639
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v062/repair-master.png",
+      "sha256": "95632c2caa587f7710e4f84cbba06bd2ea6966d7a24499e84102708cf3aa8cf0",
+      "bytes": 193908
+    }
+  ],
+  "runtimeHashes": {
+    "play.html": "ded443a5a424652f3d2b680726171a09e4a251cf12122332df02e02baeaec8a1",
+    "play.en.html": "96d9ea1a8bfff001c47fd8682d0bc9e20c6dd43493dbab6b6354ff58ecb23438",
+    "locale-en.js": "e2409747619efa99c441f1874690de72b55e6398eaf86ec398d2e8a4a514c9cc",
+    "game.js": "71c88a37f68a9681787ca13c742af0f579162e1a2979d1ac5b43f0affef2659a",
+    "game-core.js": "fc06f8af66ca1b055891ab9488d4ae3562ee0d2307b6dbc0f7b92f67e1979a79",
+    "game.css": "554c31bda588f67ad3e20c17d2f51ba862520dd29fabd959fc53b87df8187135",
+    "animation-manifest.js": "65a6da540543b686a69ad6a6f188ebafe3d070aeaaf16a838088d207bae79488",
+    "continuous-motion.js": "2fa5cf52ba9b71435d63001e2cdf79732fbff98cf0f5d472592fa1a2b6b6ea40",
+    "tide-sans.woff2": "18f31b532143d8be8283522447d56bb3deb64bcbbacbf4dda294f8f7475a6b2e"
+  },
+  "reviewPageSHA256": "2c7d5d55cb4c51fc06a4cb544ed0fcdf86cacfab639427217c932ed0694cc789",
+  "visualReview": "docs/TIDEKEEPER-CONTINUITY.zh.md",
+  "skillFeedback": "skills/game-art-production/references/continuous-actions.md",
+  "referenceCase": "Nocturnal Restitution matte-rig files inspected read-only; not an approval transfer",
+  "normalSpeed": {
+    "zh": {
+      "elapsedMs": 35889,
+      "final": {
+        "phase": "complete",
+        "coins": 225,
+        "merges": 17,
+        "tokensSpent": 0
+      }
+    },
+    "en": {
+      "elapsedMs": 37045,
+      "final": {
+        "phase": "complete",
+        "coins": 225,
+        "merges": 17,
+        "tokensSpent": 0
+      }
+    }
+  },
+  "continuity": {
+    "status": "passed",
+    "date": "2026-10-14T13:03:54.938Z",
+    "runtimeSha256": {
+      "play.html": "ded443a5a424652f3d2b680726171a09e4a251cf12122332df02e02baeaec8a1",
+      "play.en.html": "96d9ea1a8bfff001c47fd8682d0bc9e20c6dd43493dbab6b6354ff58ecb23438",
+      "locale-en.js": "e2409747619efa99c441f1874690de72b55e6398eaf86ec398d2e8a4a514c9cc",
+      "game.js": "71c88a37f68a9681787ca13c742af0f579162e1a2979d1ac5b43f0affef2659a",
+      "game-core.js": "fc06f8af66ca1b055891ab9488d4ae3562ee0d2307b6dbc0f7b92f67e1979a79",
+      "game.css": "554c31bda588f67ad3e20c17d2f51ba862520dd29fabd959fc53b87df8187135",
+      "animation-manifest.js": "65a6da540543b686a69ad6a6f188ebafe3d070aeaaf16a838088d207bae79488",
+      "continuous-motion.js": "2fa5cf52ba9b71435d63001e2cdf79732fbff98cf0f5d472592fa1a2b6b6ea40",
+      "tide-sans.woff2": "18f31b532143d8be8283522447d56bb3deb64bcbbacbf4dda294f8f7475a6b2e"
+    },
+    "invariants": {
+      "repair": {
+        "sampleCount": 105,
+        "regions": {
+          "face": [
+            178,
+            226,
+            65,
+            60
+          ],
+          "clothes": [
+            120,
+            480,
+            40,
+            40
+          ],
+          "boot": [
+            55,
+            510,
+            40,
+            30
+          ]
+        },
+        "changed": {
+          "face": [],
+          "clothes": [],
+          "boot": []
+        }
+      },
+      "ignition": {
+        "sampleCount": 105,
+        "regions": {
+          "face": [
+            110,
+            95,
+            50,
+            45
+          ],
+          "clothes": [
+            95,
+            355,
+            40,
+            55
+          ],
+          "lampBase": [
+            370,
+            350,
+            70,
+            160
+          ]
+        },
+        "changed": {
+          "face": [],
+          "clothes": [],
+          "lampBase": []
+        }
+      },
+      "beckon": {
+        "sampleCount": 105,
+        "regions": {
+          "face": [
+            165,
+            114,
+            45,
+            45
+          ],
+          "clothes": [
+            177,
+            280,
+            40,
+            70
+          ],
+          "boots": [
+            100,
+            510,
+            170,
+            35
+          ]
+        },
+        "changed": {
+          "face": [],
+          "clothes": [],
+          "boots": []
+        }
+      }
+    },
+    "seams": {
+      "repair": 0,
+      "beckon": 0,
+      "ignition-1200": {
+        "hand": 0.10169768585206025,
+        "taper": 0,
+        "jugRotation": 1.0890830630937531e-11
+      },
+      "ignition-1450": {
+        "hand": 2.8478746365843272e-09,
+        "taper": 0,
+        "jugRotation": 0
+      },
+      "ignition-3000": {
+        "hand": 0,
+        "taper": 0,
+        "jugRotation": 0
+      },
+      "ignitionReturn": 0.1016976861247272
+    },
+    "maxIgnitionForearmScaleError": 0.01083175488517829,
+    "paintedFrames": 0,
+    "wickContact": 0.0909302627410934,
+    "errors": [],
+    "scope": "315 raster samples verify selected fixed regions and handoff coordinates. Supporting evidence; not automatic anatomical or natural-motion approval."
+  },
+  "limitations": [
+    "limited local 2D motion, mostly fixed torso",
+    "no native 3D source or physical-phone testing",
+    "lens installation retains previous six painted poses",
+    "no user art approval"
+  ],
+  "pathConvention": "Generation outputs/prompts are relative to this receipt; reference paths and sources are repository-relative. Original source fields retain their hashes. Publication changes are listed separately.",
+  "publicationRuntimeHashes": {
+    "play.html": "ded443a5a424652f3d2b680726171a09e4a251cf12122332df02e02baeaec8a1",
+    "play.en.html": "96d9ea1a8bfff001c47fd8682d0bc9e20c6dd43493dbab6b6354ff58ecb23438",
+    "locale-en.js": "e2409747619efa99c441f1874690de72b55e6398eaf86ec398d2e8a4a514c9cc",
+    "game.js": "7b991e90753757bdf3698313362f231388343fb1a77bcc0eaaf1eac0019420b8",
+    "game-core.js": "fc06f8af66ca1b055891ab9488d4ae3562ee0d2307b6dbc0f7b92f67e1979a79",
+    "game.css": "554c31bda588f67ad3e20c17d2f51ba862520dd29fabd959fc53b87df8187135",
+    "animation-manifest.js": "65a6da540543b686a69ad6a6f188ebafe3d070aeaaf16a838088d207bae79488",
+    "continuous-motion.js": "2fa5cf52ba9b71435d63001e2cdf79732fbff98cf0f5d472592fa1a2b6b6ea40",
+    "tide-sans.woff2": "18f31b532143d8be8283522447d56bb3deb64bcbbacbf4dda294f8f7475a6b2e"
+  },
+  "publicationAdjustments": [
+    {
+      "path": "game.js",
+      "sourceSha256": "71c88a37f68a9681787ca13c742af0f579162e1a2979d1ac5b43f0affef2659a",
+      "publicationSha256": "7b991e90753757bdf3698313362f231388343fb1a77bcc0eaaf1eac0019420b8",
+      "reason": "Use literal translation calls for both repair titles so the existing localization check can identify them; displayed strings and motion are unchanged."
+    }
+  ]
+}

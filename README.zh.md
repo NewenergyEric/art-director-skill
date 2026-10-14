@@ -68,7 +68,7 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-d
   </tr>
 </table>
 
-用七个合成家族完成修缮订单。**0.5.0 候选版**从修栈桥、修灯塔木构件，到安装透镜、注油点灯、迎接归船，把新物品与连续场景接进原有的港湾美术方向。
+用七个合成家族完成修缮订单。**0.6.2 候选版**修栈桥、修灯塔、安装透镜、注油点灯并迎接归船。维修、点灯和招手采用同母版连续局部动作，在受限幅度内保持人物比例、衣服与工具一致。[连续播放与制作复核](docs/TIDEKEEPER-CONTINUITY.zh.md)保留具体修正、运行证据和剩余限制。
 
 [试玩潮灯小镇](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-playable/play.html)
 

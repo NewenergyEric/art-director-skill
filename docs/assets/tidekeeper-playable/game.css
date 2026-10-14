@@ -102,3 +102,25 @@ html:lang(en) .info-copy{min-width:0}
  .supply-dialog{padding:27px 21px}.supply-dialog h2{font-size:23px}.supply-option{padding:10px 8px;gap:8px}.supply-option>img{width:49px;height:51px}.supply-copy strong{font-size:11px}.supply-actions .action-button{min-width:100px;font-size:10px;padding:5px 8px}.pair-button{font-size:9px}
 }
 @media(max-width:370px){.topbar{padding:0 10px}.wordmark{font-size:18px}.topbar-right{gap:4px}.wallet,.token-wallet{font-size:12px}.wallet img,.token-wallet img{width:23px;height:24px}.icon-button{height:27px;width:27px}.harbor{height:146px}.order-summary h1{font-size:15px}.requirement>img{width:30px}.requirement-copy strong{font-size:8px}.requirements{gap:4px}.requirement{padding:5px 2px;gap:2px}.order-reward{display:flex}.catalog-family[data-family="lamp"] .catalog-chain{gap:1px}.catalog-family[data-family="lamp"] .catalog-chain>div{min-width:0;flex:1}.catalog-family[data-family="lamp"] .catalog-chain img{width:40px}.catalog-family[data-family="lamp"] .catalog-chain strong{font-size:7px}.supply-option>img{width:41px}.supply-option{gap:5px}.supply-actions .action-button{min-width:94px}.supply-copy strong{font-size:10px}}
+
+/* An action's first pose is visible immediately; viewport easing must not consume it. */
+.game.scene-focused .harbor{transition:none}
+/* Landscape keeps the complete harbor and its action controls on screen. */
+@media(orientation:landscape) and (max-height:600px){
+ body{padding:10px;display:block}
+ .game{max-width:1100px;width:100%;min-height:0;margin:auto;border-radius:14px}
+ .topbar{height:50px;padding:0 15px}.wordmark{font-size:20px}.wordmark span{display:none}
+ .topbar-right{gap:6px}.wallet,.token-wallet{font-size:13px}.wallet img,.token-wallet img{width:25px;height:25px}.icon-button{width:29px;height:29px}
+ .play-space{display:grid;grid-template-columns:minmax(200px,1fr) minmax(300px,360px);height:calc(100dvh - 72px);min-height:0}
+ .harbor{height:100%;min-height:0;transition:none}
+ .workbench{height:100%;overflow-y:auto;overscroll-behavior:contain;padding:10px 15px 14px;border:0;border-left:2px solid #f9f1ce}
+ .order{min-height:135px}.order-summary{min-height:25px;margin-bottom:5px}.order-summary h1{font-size:15px}.requirements{margin-bottom:6px}.requirement{min-height:55px}
+ .bench-heading{height:30px}.board-frame{max-width:310px;margin-inline:auto}.item-info{min-height:57px}
+ .game.scene-focused{width:100%;max-width:1000px}.scene-focused .play-space{display:block;height:calc(100dvh - 72px)}
+ .scene-focused .harbor{height:100%;min-height:0}
+ .scene-focused .topbar{padding:0 15px}.scene-focused .wordmark{font-size:20px}.scene-focused .topbar-right{gap:6px}
+ .scene-focused .chapter{top:13px;left:17px}.scene-focused .scene-controls{left:auto;right:18px;bottom:20px;width:200px;max-width:25%}
+ .scene-focused .scene-status{font-size:11px}.scene-focused .scene-button{min-height:42px;font-size:12px;padding:8px 12px}
+ .scene-focused .scene-caption{left:auto;right:18px;bottom:100px;width:200px;max-width:25%}.scene-focused .scene-caption h2{font-size:18px}
+ .dialog{max-height:calc(100dvh - 24px)}.overlay{padding:12px}.intro-scene{height:130px}.intro-body{padding:17px 24px}.intro-body p{margin-bottom:13px}.intro-kicker{margin-bottom:6px}
+}

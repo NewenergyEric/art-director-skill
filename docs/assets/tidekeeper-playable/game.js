@@ -44,7 +44,7 @@
   let lastFrame = performance.now();
   let savedAt = 0;
   let manualUntil = 0;
-  let lastRepairFrame = -1;
+  let actionGeometry = null;
   let ready = false;
   let cssWidth = 0, cssHeight = 0;
   let fxTimers = [];
@@ -77,33 +77,72 @@
   const isFocusedScene = () => state.phase !== 'intro' && !C.isBoardPhase(state);
   const isRepairing = () => state.phase === 'repairing_dock' || state.phase === 'repairing_tower';
 
-  function animationData() {
+  const ACTION_PHASES = { repairing_dock: 'repair', repairing_tower: 'repair', installing_lens: 'lens', lighting: 'ignition', arriving: 'beckon' };
+  function animationData(name = 'repair') {
     const manifest = window.TIDEKEEPER_ANIMATION;
-    const repair = manifest?.repair || manifest?.animations?.repair || (manifest?.frames ? manifest : null);
-    if (!repair?.frames?.length) return null;
-    return repair;
+    const animation = manifest?.actions?.[name] || manifest?.animations?.[name] || manifest?.[name] || (name === 'repair' && manifest?.frames ? manifest : null);
+    return animation?.frames?.length ? animation : null;
   }
   function frameSource(frame) { return typeof frame === 'string' ? frame : frame.src || frame.path || frame.image; }
   function frameDuration(frame, animation) { return Math.max(25, Number(frame?.duration ?? frame?.durationMs ?? animation.frameDuration ?? animation.frameDurationMs) || 120); }
-  function repairFrame(time) {
-    const animation = animationData();
-    if (!animation) return { src: ART + 'character-repair.png', index: -1, box: [385, 540, 225, 337.5], sinceHit: -1, contact: [498, 849] };
-    const duration = animation.frames.reduce((sum, frame) => sum + frameDuration(frame, animation), 0);
-    const animationTime = Math.min(Math.max(0, time), duration * (animation.loops || 2) - .01);
-    const loopTime = animationTime % duration;
-    let elapsed = 0, index = 0, contactStart = 0;
-    const markedImpacts = animation.frames.map((frame, i) => frame.impact ? i : -1).filter(i => i >= 0);
-    const contactFrames = animation.contactFrames || (markedImpacts.length ? markedImpacts : [animation.contactFrame ?? Math.floor(animation.frames.length * .5)]);
-    for (let i = 0; i < animation.frames.length; i++) {
-      if (contactFrames.includes(i)) contactStart = elapsed;
-      const d = frameDuration(animation.frames[i], animation);
-      if (loopTime >= elapsed && loopTime < elapsed + d) index = i;
-      elapsed += d;
-    }
-    const frame = animation.frames[index];
-    const box = animation.displayBox || animation.box || [385, 540, 225, 337.5];
-    const contact = frame?.contactWorld || animation.contactWorld || animation.contact || [498, 849];
-    return { src: frameSource(frame), index, box, contact, sinceHit: (loopTime - contactStart + duration) % duration, contactFrames };
+  function actionTimeline(name) {
+    const animation = animationData(name);
+    if (!animation) return { animation: null, frames: [], events: [], cycle: 0, duration: 0, loops: 0 };
+    let cycle = 0;
+    const frames = animation.frames.map((frame, index) => {
+      const entry = { frame, index, start: cycle, duration: frameDuration(frame, animation) };
+      cycle += entry.duration;
+      return entry;
+    });
+    const loops = Math.max(1, Math.floor(animation.loops || 1));
+    const events = [];
+    const sourceEvents = [...(animation.events || [])];
+    frames.forEach(({ frame, index, start }) => {
+      const names = [frame.event, ...(frame.events || []), frame.impact ? 'impact' : null].filter(Boolean);
+      if (name === 'repair' && !names.length && (animation.contactFrames || [animation.contactFrame]).includes(index)) names.push('impact');
+      names.forEach(event => sourceEvents.push(typeof event === 'string' ? { name: event, time: start, frame: index } : { ...event, time: event.time ?? start, frame: index }));
+    });
+    for (let loop = 0; loop < loops; loop++) sourceEvents.forEach(event => {
+      const at = Number(event.time ?? event.at ?? frames[event.frame ?? event.frameIndex]?.start);
+      if (Number.isFinite(at)) events.push({ ...event, name: event.name || event.type, time: loop * cycle + at, loop });
+    });
+    return { animation, frames, events: events.filter((event, index, all) => all.findIndex(other => other.name === event.name && other.time === event.time) === index).sort((a, b) => a.time - b.time), cycle, duration: cycle * loops, loops };
+  }
+  function actionFrame(name, time) {
+    const timeline = actionTimeline(name), animation = timeline.animation;
+    if (!animation) return { name, src: name === 'repair' ? ART + 'character-repair.png' : ART + 'character-base.png', index: -1, frameCount: 0, phase: 'unavailable', elapsed: Math.max(0, time), duration: 0, eventTimes: [], box: [385, 540, 225, 337.5], sinceHit: -1, contact: [498, 849] };
+    const elapsed = Math.max(0, Number(time) || 0);
+    const animationTime = Math.min(elapsed, timeline.duration - .01);
+    const loopTime = animationTime % timeline.cycle, loop = Math.floor(animationTime / timeline.cycle);
+    const entry = timeline.frames.find(frame => loopTime < frame.start + frame.duration) || timeline.frames.at(-1);
+    const frame = entry.frame;
+    const box = frame.displayBox || animation.displayBox || animation.box || [385, 540, 225, 337.5];
+    const frameSize = animation.frameSize || [400, 600];
+    const contactLocal = frame.contactLocal || animation.contactLocal;
+    const contact = frame.contactWorld || animation.contactWorld || animation.contact || (contactLocal ? [box[0] + contactLocal[0] * box[2] / frameSize[0], box[1] + contactLocal[1] * box[3] / frameSize[1]] : [498, 849]);
+    const impact = timeline.events.filter(event => event.name === 'impact' && event.time <= elapsed).at(-1);
+    return { name, frameKind: animation.rig ? "continuous timing keys" : "painted poses", paintedSourceFrames: animation.paintedSourceFrames || timeline.frames.length, rigPose: animation.rig ? window.TidekeeperMotion.pose(name, time) : null, src: frameSource(frame), index: entry.index, frameCount: timeline.frames.length, phase: frame.phase || String(entry.index + 1), elapsed, duration: timeline.duration, cycleDuration: timeline.cycle, loop, loops: timeline.loops, box, frameSize, contact, contactLocal, groundLocal: animation.groundLocal, display: animation.display, eventTimes: timeline.events, sinceHit: impact ? elapsed - impact.time : -1 };
+  }
+  const repairFrame = time => actionFrame('repair', time);
+  function beckonPose() {
+    if (!['beacon', 'arriving', 'reward', 'complete'].includes(state.phase) || !animationData('beckon')) return null;
+    const time = state.phase === 'beacon' ? 0 : state.phase === 'arriving' ? state.phaseTime : actionTimeline('beckon').duration;
+    return actionFrame('beckon', time);
+  }
+  function actionEventTime(name, event, fallback) {
+    return actionTimeline(name).events.find(entry => entry.name === event)?.time ?? fallback;
+  }
+  function beaconVisible() {
+    return ['beacon', 'arriving', 'reward', 'complete'].includes(state.phase) || state.phase === 'lighting' && state.phaseTime >= actionEventTime('ignition', 'ignite', 2200);
+  }
+  function playActionEvents(phase, from, to) {
+    const name = ACTION_PHASES[phase];
+    if (!name) return;
+    actionTimeline(name).events.filter(event => event.time > from && event.time <= to).forEach(event => {
+      if (event.name === 'impact') sound('wood');
+      else if (event.name === 'ignite') sound('lit');
+      else if (event.name === 'seat' || event.name === 'latch') sound('supply');
+    });
   }
 
   function sound(name) {
@@ -154,7 +193,7 @@
     state = result.state;
     if (old.phase !== state.phase) {
       clearEffects();
-      lastRepairFrame = -1;
+      actionGeometry = null;
       if (isBusy()) {
         toastUntil = 0;
         $('toast').classList.remove('visible');
@@ -187,7 +226,7 @@
       (event.slots || [event.to]).forEach(slot => board.querySelector(`[data-cell="${slot}"]`)?.classList.add('supply-pop'));
     }
     if (event.type === 'submitted') { sound('supply'); if (event.ready) tell(T("材料交齐了，可以开工。"), 1800); }
-    if (event.type === 'stage-complete') { sound(event.stage === 'fuel' ? 'lit' : 'merge'); if (event.stage !== 'fuel') tell(T("{0} · +{1} 金币", C.STAGES[event.stage].name, event.coins), 2200); }
+    if (event.type === 'stage-complete') { sound('merge'); if (event.stage !== 'fuel') tell(T("{0} · +{1} 金币", C.STAGES[event.stage].name, event.coins), 2200); }
     if (event.type === 'arrived' || event.type === 'start') sound(event.type);
     if (event.type === 'win') { sound('win'); showDialog('win'); }
     if (event.type === 'start') { hideDialog(); $('board').querySelector('[data-cell="1"]')?.focus({ preventScroll: true }); }
@@ -341,6 +380,49 @@
     for (const [x, y, width] of placement.feet) ellipse(x, y + 1, width * .66, 4, '#334c45', lit ? .27 : .18);
     drawImage(ART + file, placement.box);
   }
+  function drawActionPose(name, time, frame, box) {
+    if (!animationData(name)?.rig || !window.TidekeeperMotion.draw(ctx, name, time, box)) drawImage(frame.src, box);
+  }
+  function drawActionInset(name, time, view) {
+    const animation = animationData(name);
+    if (!animation) return;
+    const frame = actionFrame(name, time);
+    // The inset is a narrative lamp-room close-up, never a map-scale actor.
+    // Its screen-space box stays fixed while the harbor changes layout.
+    const landscape = view.width > view.height * 1.35;
+    const panelTop = landscape ? 78 : 82;
+    const maxHeight = Math.max(160, view.height - panelTop - (landscape ? 18 : 150));
+    const width = Math.max(84, Math.min(name === "ignition" ? 246 : 218, view.width * (landscape ? .28 : name === "ignition" ? .60 : .47), (maxHeight - 30) * frame.frameSize[0] / frame.frameSize[1]));
+    const height = (width - 8) * frame.frameSize[1] / frame.frameSize[0] + 28, x = 14, y = panelTop;
+    const inner = [x + 4, y + 24, width - 8, height - 28];
+    const toScreen = point => [view.left / view.ratio + point[0] * view.scale / view.ratio, (point[1] - view.top) * view.scale / view.ratio];
+    const lamp = toScreen(SCENE_LAYOUT.lampRoom);
+    const target = toScreen(name === 'repair' ? frame.contact : name === 'beckon' ? SCENE_LAYOUT.standingGround : SCENE_LAYOUT.lampRoom);
+    const local = frame.contactLocal || [310, 300];
+    const fixture = [inner[0] + local[0] * inner[2] / frame.frameSize[0], inner[1] + local[1] * inner[3] / frame.frameSize[1]];
+    const origin = canvas.getBoundingClientRect();
+    actionGeometry = { x: origin.left + x, y: origin.top + y, width, height, fixture: { x: origin.left + fixture[0], y: origin.top + fixture[1] }, worldLamp: { x: origin.left + lamp[0], y: origin.top + lamp[1] }, worldTarget: { x: origin.left + target[0], y: origin.top + target[1] } };
+    ctx.save(); ctx.setTransform(view.ratio, 0, 0, view.ratio, 0, 0);
+    ctx.strokeStyle = '#f8e4a8'; ctx.lineWidth = 1.5; ctx.globalAlpha = .85;
+    ctx.beginPath(); ctx.moveTo(x + width, y + 28); ctx.lineTo(target[0] - 5, target[1] + 5); ctx.stroke();
+    ctx.beginPath(); ctx.arc(target[0], target[1], 5, 0, Math.PI * 2); ctx.stroke();
+    ctx.globalAlpha = 1; ctx.fillStyle = '#fff0cfed'; ctx.strokeStyle = '#b68451'; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.roundRect(x, y, width, height, 13); ctx.fill(); ctx.stroke();
+    const title = name === 'repair' ? (state.phase === 'repairing_tower' ? T('修复塔身') : T('修好栈桥')) : name === 'beckon' ? T('招呼归船') : T('灯室');
+    ctx.fillStyle = '#466b5b'; ctx.font = '700 12px TideSans, sans-serif'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillText(title, x + 12, y + 13, width - 24);
+    ctx.save(); ctx.beginPath(); ctx.roundRect(...inner, 8); ctx.clip();
+    drawActionPose(name, time, frame, inner);
+    if (name === 'repair' && frame.sinceHit >= 0 && frame.sinceHit < 225) {
+      const p = frame.sinceHit / 225;
+      for (let i = 0; i < 5; i++) ellipse(fixture[0] + Math.cos(i * 2.4) * p * 13, fixture[1] - p * (7 + i * 2), 1 + p * 2, 1 + p, i % 2 ? '#dbbc88' : '#e5bb78', .62 * (1 - p));
+    }
+    const ignite = actionEventTime('ignition', 'ignite', 2200);
+    if (name === 'ignition' && time >= ignite) {
+      const p = clamp((time - ignite) / 220), size = (animation.effectRadius || 16) * inner[2] / frame.frameSize[0];
+      glow(fixture[0], fixture[1], Math.max(20, size * 5), .35 * p);
+    }
+    ctx.restore(); ctx.restore();
+  }
   function drawScene() {
     if (!ctx || !ready) return;
     const bounds = canvas.getBoundingClientRect();
@@ -349,16 +431,19 @@
       cssWidth = bounds.width; cssHeight = bounds.height;
       canvas.width = Math.max(1, Math.round(cssWidth * ratio)); canvas.height = Math.max(1, Math.round(cssHeight * ratio));
     }
-    const scale = Math.max(canvas.width / 900, canvas.height / 1600);
-    const viewHeight = canvas.height / scale, left = (canvas.width - 900 * scale) / 2;
+    const landscape = isFocusedScene() && bounds.width > bounds.height * 1.35;
+    const scale = (landscape ? Math.min : Math.max)(canvas.width / 900, canvas.height / 1600);
+    const viewHeight = canvas.height / scale, left = (canvas.width - 900 * scale) * (landscape ? .54 : .5);
     const camera = SCENE_LAYOUT.cameras[C.stageFor(state) || 'fuel'];
     const requestedTop = isFocusedScene() ? 0 : innerWidth < 800 ? camera.mobileTop : camera.desktopTop;
     const top = clamp(requestedTop, 0, Math.max(0, 1600 - viewHeight));
-    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = '#277d83'; ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.setTransform(scale, 0, 0, scale, left, -top * scale);
     const phase = state.phase, time = state.phaseTime;
-    const lit = ['lighting', 'beacon', 'arriving', 'reward', 'complete'].includes(phase);
-    const night = phase === 'lighting' ? smooth(time / C.DURATIONS.lighting) : lit ? 1 : 0;
+    const returningPose = beckonPose();
+    const lit = beaconVisible();
+    const igniteAt = actionEventTime('ignition', 'ignite', 2200);
+    const night = phase === 'lighting' ? smooth((time - igniteAt) / Math.max(1, C.DURATIONS.lighting - igniteAt)) : lit ? 1 : 0;
     const sceneFiles = {
       intro: 'scene-dock-broken.jpg', dock: 'scene-dock-broken.jpg', repairing_dock: 'scene-dock-broken.jpg',
       tower: 'scene-tower-broken.jpg', repairing_tower: 'scene-tower-broken.jpg',
@@ -368,7 +453,9 @@
     };
     drawImage(NEW + sceneFiles[phase], [0, 0, 900, 1600]);
     const targetScene = { repairing_dock: 'scene-tower-broken.jpg', repairing_tower: 'scene-tower-repaired.jpg', installing_lens: 'scene-lens-installed.jpg', lighting: 'scene-night-lit.jpg' }[phase];
-    if (targetScene) drawImage(NEW + targetScene, [0, 0, 900, 1600], phase === 'lighting' ? night : smooth((time / C.DURATIONS[phase] - .62) / .38));
+    const installAt = actionEventTime('lens', 'release', actionEventTime('lens', 'seat', 1500));
+    const targetAlpha = phase === 'lighting' ? night : phase === 'installing_lens' ? smooth((time - installAt) / Math.max(1, C.DURATIONS.installing_lens - installAt)) : smooth((time / C.DURATIONS[phase] - .75) / .25);
+    if (targetScene) drawImage(NEW + targetScene, [0, 0, 900, 1600], targetAlpha);
 
     const riggingAlpha = state.completed.includes('dock') ? 1 : phase === 'repairing_dock' ? smooth((time / C.DURATIONS[phase] - .62) / .38) : 0;
     if (riggingAlpha > 0) {
@@ -382,18 +469,19 @@
     if (isRepairing()) {
       const frame = repairFrame(time);
       const box = frame.box;
-      ellipse(box[0] + box[2] * .5, box[1] + box[3] * .955, box[2] * .3, 9, '#394644', .18);
-      drawImage(frame.src, box);
+      const ground = frame.groundLocal || [200, 573];
+      ellipse(box[0] + ground[0] * box[2] / (frame.frameSize?.[0] || 400), box[1] + ground[1] * box[3] / (frame.frameSize?.[1] || 600), box[2] * .3, 9, '#394644', .18);
+      drawActionPose("repair", time, frame, box);
       drawImage(ART + 'wood-l2.png', [625, 850, 108, 108], .96);
       if (frame.sinceHit >= 0 && frame.sinceHit < 225) {
         const p = frame.sinceHit / 225;
         for (let i = 0; i < 5; i++) ellipse(frame.contact[0] + Math.cos(i * 2.4) * p * 31, frame.contact[1] - p * (16 + i * 3), 3 + p * 6, 2 + p * 3, i % 2 ? '#dbbc88' : '#f6dfad', .62 * (1 - p));
       }
-      if (frame.index !== lastRepairFrame) {
-        if (frame.contactFrames?.includes(frame.index)) sound('wood');
-        lastRepairFrame = frame.index;
-      }
-    } else if (phase !== 'intro') {
+    } else if (returningPose) {
+      const frame = returningPose;
+      if (frame.groundLocal) ellipse(frame.box[0] + frame.groundLocal[0] * frame.box[2] / frame.frameSize[0], frame.box[1] + frame.groundLocal[1] * frame.box[3] / frame.frameSize[1], frame.box[2] * .27, 6, '#334c45', .27);
+      drawActionPose("beckon", frame.elapsed, frame, frame.box);
+    } else if (phase !== 'intro' && !['installing_lens', 'lighting'].includes(phase)) {
       const signaling = ['beacon', 'arriving', 'reward'].includes(phase);
       const actor = phase === 'complete' ? 'character-wave.png' : signaling ? 'character-signal.png' : 'character-base.png';
       drawStaticPose(actor, lit);
@@ -404,6 +492,8 @@
       glow(SCENE_LAYOUT.lampRoom[0], SCENE_LAYOUT.lampRoom[1], 115, .36 * night);
     }
     if (phase === 'arriving' || phase === 'reward' || phase === 'complete') {
+      // The offstage approach belongs to the sea, not the landscape UI margins.
+      ctx.save(); ctx.beginPath(); ctx.rect(0, 0, 900, 1600); ctx.clip();
       const t = phase === 'arriving' ? smooth(time / C.DURATIONS.arriving) : 1;
       const x = SCENE_LAYOUT.boatStart[0] + (SCENE_LAYOUT.boatEnd[0] - SCENE_LAYOUT.boatStart[0]) * t;
       const y = SCENE_LAYOUT.boatStart[1] + (SCENE_LAYOUT.boatEnd[1] - SCENE_LAYOUT.boatStart[1]) * t;
@@ -412,6 +502,7 @@
       ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x + 24, y + 189); ctx.quadraticCurveTo(x + 159, y + 250, x + 326, y + 201); ctx.stroke(); ctx.restore();
       ellipse(x + 204, y + 178, 154, 25, '#164e64', .14);
       drawImage(ART + 'supply-boat.png', [x, y, ...SCENE_LAYOUT.boatSize], 1, true);
+      ctx.restore();
     }
     if (lit && !reducedMotion) {
       ctx.save(); ctx.strokeStyle = '#c6e3c6'; ctx.lineCap = 'round'; ctx.lineWidth = 2.5;
@@ -422,6 +513,8 @@
       }
       ctx.restore();
     }
+    actionGeometry = null;
+    if (phase === 'installing_lens' || phase === 'lighting' || landscape && ACTION_PHASES[phase]) drawActionInset(ACTION_PHASES[phase], time, { width: bounds.width, height: bounds.height, ratio, scale, left, top });
   }
 
   function showDialog(kind) {
@@ -591,9 +684,10 @@
     if (toastUntil && presentationTime >= toastUntil) { $('toast').classList.remove('visible'); toastUntil = 0; }
     if (hintPair && presentationTime >= hintUntil) { hintPair = null; board.querySelectorAll('.hint').forEach(node => node.classList.remove('hint')); }
     if (dialog || !ready) return;
-    const oldPhase = state.phase;
+    const oldPhase = state.phase, oldTime = state.phaseTime;
     const result = C.step(state, dt);
     state = result.state;
+    playActionEvents(oldPhase, oldTime, state.phase === oldPhase ? state.phaseTime : C.DURATIONS[oldPhase] || 0);
     if (state.phase !== oldPhase) { renderUI(); save(); handleEvent(result.event); }
     else if (isBusy()) updateProgress();
     if (isBusy() && presentationTime - savedAt > 700) { save(); savedAt = presentationTime; }
@@ -612,7 +706,7 @@
     return window.render_game_to_text();
   };
   window.render_game_to_text = () => JSON.stringify({
-    title: T("潮灯小镇 · 重燃灯塔"), version: C.VERSION, phase: state.phase, dialog, ready,
+    title: T("潮灯小镇 · 重燃灯塔"), version: C.VERSION, buildVersion: '0.6.2-candidate', phase: state.phase, dialog, ready,
     coordinates: 'Board row/column indices start at 0; viewport x grows right, y grows down. Scene art is 900×1600.',
     coins: state.coins, tokens: state.tokens, tokensSpent: state.tokensSpent, merges: state.merges, selected: state.selected,
     completed: state.completed, order: C.stageFor(state) ? { stage: C.stageFor(state), requirements: C.requirements(state), ready: C.orderReady(state) } : null,
@@ -623,12 +717,14 @@
     }),
     phaseTime: Math.round(state.phaseTime), duration: C.DURATIONS[state.phase] || 0,
     repairFrame: isRepairing() ? repairFrame(state.phaseTime).index : null,
-    sceneBeaconVisible: ['lighting', 'beacon', 'arriving', 'reward', 'complete'].includes(state.phase),
+    action: ACTION_PHASES[state.phase] ? { ...actionFrame(ACTION_PHASES[state.phase], state.phaseTime), inset: actionGeometry } : null,
+    characterPose: beckonPose() ? { name: 'beckon', index: beckonPose().index, src: beckonPose().src, held: state.phase !== 'arriving', box: beckonPose().box, groundLocal: beckonPose().groundLocal } : null,
+    sceneBeaconVisible: beaconVisible(),
     beaconLocation: 'tower-lantern-room', lampRoom: SCENE_LAYOUT.lampRoom,
     riggingMounted: state.completed.includes('dock'), riggingHook: SCENE_LAYOUT.dockRigging.hook,
     sound: soundEnabled, reducedMotion, assetErrors
   });
-  window.Tidekeeper = { getState: () => JSON.parse(C.serialize(state)), getAnimationFrame: () => repairFrame(state.phaseTime), getStaticPosePlacement: staticPosePlacement, sceneLayout: SCENE_LAYOUT };
+  window.Tidekeeper = { getState: () => JSON.parse(C.serialize(state)), getAnimationFrame: () => repairFrame(state.phaseTime), getActionFrame: (name, time) => actionFrame(name, time), getActionGeometry: () => actionGeometry ? JSON.parse(JSON.stringify(actionGeometry)) : null, getStaticPosePlacement: staticPosePlacement, sceneLayout: SCENE_LAYOUT };
   window.addEventListener('pagehide', save);
   window.addEventListener('beforeunload', save);
   document.addEventListener('visibilitychange', () => { if (document.hidden) { save(); cancelDrag(); } lastFrame = performance.now(); });
@@ -642,8 +738,8 @@
   const sceneFiles = ['scene-dock-broken.jpg', 'scene-tower-broken.jpg', 'scene-tower-repaired.jpg', 'scene-lens-installed.jpg', 'scene-night-lit.jpg'].map(file => NEW + file);
   const itemFiles = Object.keys(C.ITEMS).map(itemSource);
   const currencyFiles = Object.values(C.CURRENCIES).map(currency => currency.image);
-  const extraFrames = animationData()?.frames.map(frameSource).filter(Boolean) || [];
-  window.tidekeeperReady = Promise.all([...new Set([...files, ...sceneFiles, ...itemFiles, ...currencyFiles, ...extraFrames])].map(preload)).then(() => {
+  const extraFrames = ['repair', 'lens', 'ignition', 'beckon'].flatMap(name => animationData(name)?.frames.map(frameSource).filter(Boolean) || []);
+  window.tidekeeperReady = Promise.all([window.TidekeeperMotion.ready, ...[...new Set([...files, ...sceneFiles, ...itemFiles, ...currencyFiles, ...extraFrames])].map(preload)]).then(() => {
     if (assetErrors.length) { showDialog('load-error'); return false; }
     ready = true; drawScene();
     if (state.phase === 'intro') showDialog('intro');
