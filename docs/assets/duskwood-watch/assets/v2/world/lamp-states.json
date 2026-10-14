@@ -1,0 +1,18 @@
+{
+  "image": "lamp-states.png",
+  "frameWidth": 512,
+  "frameHeight": 512,
+  "count": 2,
+  "anchor": [
+    0.5,
+    0.9
+  ],
+  "states": {
+    "off": 0,
+    "on": 1
+  },
+  "common_scale": 1.2386706948640482,
+  "pack_version": "0.3.1",
+  "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88",
+  "status": "candidate"
+}

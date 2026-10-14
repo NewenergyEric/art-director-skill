@@ -1,0 +1,703 @@
+{
+  "batch": "scene",
+  "status": "candidate",
+  "approval": null,
+  "pack_version": "0.3.1",
+  "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88",
+  "initial_generation_pack": "0.3.0",
+  "compatible_migration": "0.3.0 -> 0.3.1; same image references and visual grammar, adds supplies family and corrects canvas to 1600x1000",
+  "atlas": "scene-atlas.png",
+  "grid": {
+    "columns": 4,
+    "rows": 3,
+    "cellWidth": 512,
+    "cellHeight": 512
+  },
+  "source_size": [
+    1448,
+    1086
+  ],
+  "source_sha256": "d048d0158c4a60ede2d705cd2cb462dc6f91c333d795ad71e5c255a9717283b4",
+  "raw_row_cuts": [
+    0,
+    389,
+    728,
+    1086
+  ],
+  "crop_bounds_alpha_threshold": 8,
+  "margin_fraction": 0.1,
+  "items": [
+    {
+      "name": "lamp-off",
+      "file": "lamp-off.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 160,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        0,
+        0,
+        374,
+        389
+      ],
+      "raw_visible_rect_local": [
+        91,
+        42,
+        311,
+        373
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.2386706948640482,
+      "frame_rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          121,
+          51,
+          393,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.7292
+      },
+      "sha256": "da081a96a1cd8a9af280517637015ebfc128a3befe4e960fa9cbcd7a134fef8b"
+    },
+    {
+      "name": "lamp-on",
+      "file": "lamp-on.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 160,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        374,
+        0,
+        704,
+        389
+      ],
+      "raw_visible_rect_local": [
+        63,
+        42,
+        283,
+        373
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.2386706948640482,
+      "frame_rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          120,
+          51,
+          393,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.7295
+      },
+      "sha256": "213a940216b63e612c310f9293914aae6e821d64c081df869bf59f722d82468f"
+    },
+    {
+      "name": "toolbox",
+      "file": "toolbox.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 120,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        704,
+        0,
+        1083,
+        389
+      ],
+      "raw_visible_rect_local": [
+        49,
+        126,
+        345,
+        367
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.3837837837837839,
+      "frame_rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          51,
+          128,
+          461,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.6155
+      },
+      "sha256": "473659b7e6dea292a54e9538eaefd16b3abf563c7ea9e407d2c201e61ae53e2d"
+    },
+    {
+      "name": "woodpile",
+      "file": "woodpile.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 90,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        1083,
+        0,
+        1448,
+        389
+      ],
+      "raw_visible_rect_local": [
+        35,
+        141,
+        323,
+        357
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.4222222222222223,
+      "frame_rect": [
+        1536,
+        0,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          51,
+          155,
+          461,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.6528
+      },
+      "sha256": "33dfa3eb8dc4972ab8703eacc41be6d4b6b4549cc5b169fc140a1d23365a777b"
+    },
+    {
+      "name": "crystal-cluster",
+      "file": "crystal-cluster.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 140,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        0,
+        389,
+        360,
+        728
+      ],
+      "raw_visible_rect_local": [
+        64,
+        48,
+        336,
+        324
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.4840579710144928,
+      "frame_rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          54,
+          51,
+          458,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.5734
+      },
+      "sha256": "376facaff3d2cee60cbf13d30040efa05f74dbb300d38d48a9018f110f834498"
+    },
+    {
+      "name": "herb-bush",
+      "file": "herb-bush.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 110,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        360,
+        389,
+        720,
+        728
+      ],
+      "raw_visible_rect_local": [
+        25,
+        28,
+        341,
+        321
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.2962025316455696,
+      "frame_rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          51,
+          81,
+          461,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.6282
+      },
+      "sha256": "fcf1074673a3ed94f5c06d46ae11181293f6a5d2b0fe9662c12aac33b8ea0fea"
+    },
+    {
+      "name": "broken-arch",
+      "file": "broken-arch.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 230,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        720,
+        389,
+        1115,
+        728
+      ],
+      "raw_visible_rect_local": [
+        21,
+        18,
+        371,
+        328
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.1702857142857144,
+      "frame_rect": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          51,
+          98,
+          461,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.6937
+      },
+      "sha256": "27130d535b8a98bb08ddf0ccfca995e1c863b1c70b962e7ffea3f9ff1fd48943"
+    },
+    {
+      "name": "signpost",
+      "file": "signpost.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 130,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        1115,
+        389,
+        1448,
+        728
+      ],
+      "raw_visible_rect_local": [
+        25,
+        17,
+        275,
+        332
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.3003174603174603,
+      "frame_rect": [
+        1536,
+        512,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          94,
+          51,
+          419,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.8049
+      },
+      "sha256": "c522cae10fb0a9c3e294ea4c82dedfc5900c24fe69e1d4311e2738acdc78c509"
+    },
+    {
+      "name": "mushrooms",
+      "file": "mushrooms.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 90,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        0,
+        728,
+        372,
+        1086
+      ],
+      "raw_visible_rect_local": [
+        54,
+        37,
+        340,
+        306
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.4321678321678322,
+      "frame_rect": [
+        0,
+        1024,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          51,
+          76,
+          461,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.5479
+      },
+      "sha256": "3de32a423ff906735f97a1ed1d98373b3da580c8539eebc19c9d9bed49095958"
+    },
+    {
+      "name": "reeds",
+      "file": "reeds.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 150,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        372,
+        728,
+        722,
+        1086
+      ],
+      "raw_visible_rect_local": [
+        34,
+        8,
+        333,
+        311
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.3518151815181518,
+      "frame_rect": [
+        512,
+        1024,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          54,
+          51,
+          458,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.6285
+      },
+      "sha256": "0216c5d3892ce028df1dca249766ecbaf1cc66801a93713e75ec485d251125ec"
+    },
+    {
+      "name": "foreground-branch",
+      "file": "foreground-branch.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 250,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        722,
+        728,
+        1095,
+        1086
+      ],
+      "raw_visible_rect_local": [
+        17,
+        33,
+        352,
+        310
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.2226865671641791,
+      "frame_rect": [
+        1024,
+        1024,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          52,
+          123,
+          461,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.7115
+      },
+      "sha256": "940c4eb43b3c38419bbbe84b8c8ce016cb852b29922d8b0124a8e1c6433776d5"
+    },
+    {
+      "name": "moss-rock",
+      "file": "moss-rock.png",
+      "category": "scene",
+      "status": "candidate",
+      "anchor": [
+        0.5,
+        0.9
+      ],
+      "anchor_px": [
+        256,
+        460.8
+      ],
+      "game_display_px": 95,
+      "game_display_axis": "height",
+      "raw_cell_rect": [
+        1095,
+        728,
+        1448,
+        1086
+      ],
+      "raw_visible_rect_local": [
+        22,
+        75,
+        313,
+        305
+      ],
+      "source": "../../../evidence/v2/world/raw/scene-generated.png",
+      "scale": 1.4075601374570448,
+      "frame_rect": [
+        1536,
+        1024,
+        512,
+        512
+      ],
+      "stats": {
+        "size": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bbox": [
+          51,
+          137,
+          461,
+          461
+        ],
+        "edge_nonzero_alpha": 0,
+        "transparent_fraction": 0.6004
+      },
+      "sha256": "4c981ec948e7aabb1d63053c3a8006dd7a8eebc19ef26571a5d99407fe3e164b"
+    }
+  ]
+}

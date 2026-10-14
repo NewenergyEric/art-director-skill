@@ -63,3 +63,13 @@
 保留失败稿与修正版，记录实际差异。没有改善时定位参考、规则或工具限制；不无止境重抽，也不把目标偷偷改成现有结果。成套交接包含实际文件、适用规则与版本、参考用途、技术检查、视觉观察、未定项及下一步动作。只有需要改变共享基线时回到既有变更流程。
 
 公开仓库的 [原创案例与检查记录](https://github.com/NewenergyEric/art-director-skill/blob/main/docs/CASE-STUDIES.md) 是一次具体试用，三个方向都不是默认画风。它们证明本次生成和检查发生过，不证明所有游戏都能一次生成或自动达到生产标准；使用本流程不依赖下载这些示例。
+
+## 7. Plan asset richness together with sustained play
+
+When a set feels sparse, repetitive or like a presentation, map the playable loop to asset families, uses, states, viewing directions and action phases before adding images. Distinguish functional coverage, delivered resources and uses actually integrated into play. Decoration and catalogue samples can have valid purposes; label them accordingly. Recolours, repeated playback steps and multiple crops do not create new gameplay functions. Report independent generated sources, reusable parts and baked animation frames separately; no case's family or item count is a universal minimum.
+
+Compare the existing first article, adjacent levels and new families together at the same intended display scale, then in their actual cells, order slots or world positions. Shared lighting and materials should preserve the project while silhouettes, structures and material responses distinguish roles and levels. A large contact sheet or palette match does not prove small-size readability. Test the actual interactions that give the assets meaning, including their resource costs and visible results; an inventory entry alone does not establish use.
+
+Before expanding related tasks, agree on the shared pack, camera, scale, contact anchors, attachments and event interfaces. Choose production methods around the missing behavior: separating a fixed base from moving machinery or using drawn parts with editable joints may be appropriate. Neither is a default aesthetic. At a revision checkpoint, preserve unsuccessful frames and reconsider the method instead of repeatedly generating the same defect. A mirrored profile is not a complete turnaround, and aim/release states do not establish a reload sequence.
+
+Judge richness during sustained normal-speed play, including relevant movement, direction changes, action transitions and repeated interactions. UI placement, skins and real typography belong in that review. Keep incomplete directions, contact drift, subtle or unreadable motion and untested devices visible. A short performance sample, a completed gameplay test and a director's decision establish different things. The optional `game-art-production` companion's asset-richness-and-playback guide connects this review to the existing task records; `style-pack.json` remains the shared source of truth.

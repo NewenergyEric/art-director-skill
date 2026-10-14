@@ -6,37 +6,37 @@ This guide governs Art Director’s own README, introduction and film. It does n
 
 The fixed claim is **One team, one visual memory.** Chinese: **一个团队/项目，一份视觉记忆。**
 
-The director turns references, rules and professional decisions into a distributable project Skill. Teammates create, review and deliver from that pack in their own agents. A solo creator can perform both roles. Visual memory includes visual language, component requirements, samples, permitted variation, delivery criteria and review records. Direction and release decisions remain with the director.
+The director makes their judgment reusable: references, samples, what can change and what must remain. Teammates and agents use that shared direction to create consistent components. A solo creator can perform both roles. The point is to carry taste, mood and playfulness into production, not replace them with a checklist. Direction and release decisions remain with the director.
 
-Readers should understand what to provide, what to ask their agent and what they receive. Use concrete starting prompts and actual outputs. Put fingerprints, command details and other engineering mechanics in expandable or specialist documentation.
+Lead with the author's supplied story about the art-director friend and the repeated burden of explaining a project's feel. Preserve its first-person voice and factual limits; do not invent conversations, adoption or results. Follow the story with what the Skill helps the reader do, concrete starting prompts and actual outputs. Keep fingerprints and command details in specialist documentation.
 
-## Chinese primary, English secondary, one introduction
+## English primary, Chinese available, one introduction
 
-`README.md` and `docs/landing.html` are the Chinese defaults. `README.en.md` and `docs/landing.en.html` preserve the complete English alternatives. `README.zh.md` and `docs/landing.zh.html` are maintained compatibility copies of the Chinese defaults. Both languages share the same claims, section IDs, visual system and interaction script. Language switches preserve the current section. The root Skill, agent metadata and default human/agent/workflow guides use Chinese; the guides have `.en.md` reading editions, and `docs/SKILL.en.md` explains the same Skill in English. User replies and project documents follow the user’s requested language. Original project fixtures retain their evidence; label their language in the English edition.
+`README.md` and `docs/landing.html` are the English defaults; `.en` addresses remain English aliases. `README.zh.md` and `docs/landing.zh.html` provide the Chinese editions. Both languages share claims, section IDs, visual direction and interaction code; switches preserve the current section. Skill entrypoints and agent metadata use English, and `docs/SKILL.zh.md` preserves the Chinese mother-Skill reading edition. Existing project fixtures keep their original evidence and language. Replies and project outputs follow the user, not the public website's default language.
 
 The website explains the product and provides the film, installation and starting prompts. Actual work happens in the agent. Legacy showcase and workbench addresses redirect to the corresponding section. Do not recreate competing simulated consoles or imply that a showcase button invokes a live model, approval service or team backend.
 
 ## Shared visual grammar, varied compositions
 
 - Public palette: navy `#001f3f`, teal `#007d86`, mint `#92e4da`, mist white `#f5f9fb`.
-- Use the repository’s OFL variable Noto Sans SC subset. Headers can use weight contrast, skew, rotation and image overlap; body copy stays upright and legible. Rebuild the subset after visible copy changes. Website and render font files must match.
+- Keep public body text legible and use redistributable font files. The repository's Noto Sans SC subset is an available source, not a universal display style. Choose or design display lettering against the actual game art; shape, texture and spacing need to belong to that world. Record new font sources and rebuild subsets when needed. Equivalent website and film treatments must agree.
 - Use layers, occlusion, perspective and continuous object movement to explain how materials become rules, a pack and a task. Floating artwork alone does not demonstrate a function.
-- Vary composition with the work: overlapping input materials, a focused requirement sheet, a distribution diagram, and a specific review change. Consistency does not mean duplicating every layout.
+- Vary composition with the work: source art, related components in their intended context, and a specific revision. Give each surface one point. Remove repeated slogans, forced wordplay and commentary that merely narrates what is visible. Consistency is shared direction, not identical layouts or identical assets.
 - Keep the website static for reading, with a manually played film, captions, transcript, keyboard focus, mobile layouts and reduced-motion behavior.
 
 ## One complete 24-second workflow
 
-`motion/src/DepthShowcase.tsx` produces matched English and Chinese GIF/MP4 versions:
+`motion/src/DepthShowcase.tsx` registers the matched English and Chinese GIF/MP4 compositions in `GameCampaign.tsx`:
 
-1. Lead with “One team, one visual memory.” Show the actual project and its shared delivery problem.
+1. Establish the shared art direction and show the original project.
 2. Establish representative samples and actionable rules, then pack their dependencies.
 3. Show actual member continuations across character, environment, items and UI.
 4. Compose the new assets and operate the same editable UI source: merge, order, inventory and feedback.
 5. Compare actual before/after outputs and carry discovered gaps into a new candidate version.
 
-Each beat shows an input, action or result. Leave stable reading holds and use eased motion when relationships change. Chapter buttons pause on completed scenes rather than halfway through transitions. Keep the full film within the established 18–25 second range. Label the film as an illustrated workflow using original candidate artwork, not an approved production recording.
+Each beat shows an input, action or result. Use the core claim where it introduces or concludes the idea, rather than repeating it over every scene. Leave stable reading holds; actual character actions need their own poses, deformation or animation, not a single transform applied to every image. Chapter buttons pause on completed scenes. Keep the film within 18–25 seconds and label it as an illustrated workflow using original candidate artwork, not an approved production recording.
 
-The default page, README preview, film, poster, captions and social preview are Chinese. English equivalents remain available. Reuse verified language editions when only the default language changes; regenerate any asset whose actual copy changes.
+The default page, README preview, film, poster, captions and social preview are English. Keep the Chinese edition aligned. Reuse verified media when only a default changes; regenerate assets whose visible copy changes.
 
 ## Art is the evidence
 
@@ -52,7 +52,7 @@ Keep the role map the final main-content section in the README and introduction.
 
 ## Build and check
 
-- GIF: 800 × 450, full 24-second story, 20 FPS during motion, 96-color palette and `gifsicle -O3`; budget 6 MiB per language.
+- Current GIF delivery: 800 × 450, full 24-second story, 20 FPS, 128-color palette and `gifsicle -O3`; budget 6 MiB per language. Reassess palette quality against the actual artwork when the film changes.
 - MP4: 1280 × 720, 30 FPS, H.264 faststart; budget 5 MiB per language. Same-origin player sources, `preload="none"`, controls and no autoplay.
 - Use a static reduced-motion fallback for the README. Keep captions and a text workflow beside the player.
 - Use a version query when replacing cached media or fonts. Record file sizes and hashes in the manifest.

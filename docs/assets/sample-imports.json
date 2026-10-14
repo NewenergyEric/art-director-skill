@@ -1,0 +1,793 @@
+{
+  "date": "2026-10-14",
+  "method": "Verified frozen ZIP CRCs and SHA-256; imported runtime bytes without changing independent working copies.",
+  "tidekeeper": {
+    "version": "0.5.0-candidate",
+    "archive": "tidekeeper-playable/tidekeeper-lighthouse-0.5.0.zip",
+    "sha256": "8b9114eaf682574c30db792486f9ffd56802f393c9cc7ffbd3d8bdde42409d8c",
+    "files": [
+      {
+        "path": "animation-manifest.js",
+        "sha256": "b1e872327e7aae1582c75c01de6ffc31f3304dc4694fc73079497486a161b183"
+      },
+      {
+        "path": "art/expansion/asset-records.json",
+        "sha256": "d1cc2913937f5a1ae9220796ec83dd462b45b2db56dbec7a52863b11a340a5f9"
+      },
+      {
+        "path": "art/expansion/coin-pile.png",
+        "sha256": "bea8e90416bf95e9d2fa3b7d4d9c43b029fc1995e3f30994c42c2f68d01c34b9"
+      },
+      {
+        "path": "art/expansion/generation-props.md",
+        "sha256": "2c3171f97c1bac1d571369174208076d57d194cd2ff6c887ec342bcc895d56cf"
+      },
+      {
+        "path": "art/expansion/generation-scenes.md",
+        "sha256": "92458fcd56b56a6688263989db7645000ffb846f98f47426bf5733ca5129ea4c"
+      },
+      {
+        "path": "art/expansion/glass-1.png",
+        "sha256": "4eb18752b4cf65198eba076055682d5f29fc260b008e1d3c4468dcad0a47ae75"
+      },
+      {
+        "path": "art/expansion/glass-2.png",
+        "sha256": "5b588047391ea18bd8398f1760dd7b133dcb62688f7a7127ea529f258b9bee3f"
+      },
+      {
+        "path": "art/expansion/nails-1.png",
+        "sha256": "7963c12b179b5901569564d1169a290fbd88c7412d3cb0fb91c13c5605483b90"
+      },
+      {
+        "path": "art/expansion/nails-2.png",
+        "sha256": "b99e69bcb3cf685bc1360020ca8005ee28c930ec48e87bbd313184bd6291ed5a"
+      },
+      {
+        "path": "art/expansion/oil-1.png",
+        "sha256": "b37f839ab31123c061aa469c4c9a9824e292c63394e3d78a1e67c252423b1007"
+      },
+      {
+        "path": "art/expansion/oil-2.png",
+        "sha256": "eee759d06ebf840e9ea1c54ef0e7256cb067952a3ab927132213e6ef28a5c46c"
+      },
+      {
+        "path": "art/expansion/rope-1.png",
+        "sha256": "bada44c3c2544465bbd84c7bea1d01f9d489ae82070bbecfa5fd5c61f2bc5e29"
+      },
+      {
+        "path": "art/expansion/rope-2.png",
+        "sha256": "5d8ff28a6e900c0153391f1af0267223dd1eff515280d8b3d45b35fab81be3fd"
+      },
+      {
+        "path": "art/expansion/scene-dock-broken.jpg",
+        "sha256": "f7e68611c67f51c68d5267b53475e53b1494b50de90ca030059650bbc306509d"
+      },
+      {
+        "path": "art/expansion/scene-lens-installed.jpg",
+        "sha256": "07c1403eadcb5c83419b07df60e337497c6a681fb5cf79e7ee0f42272a359de4"
+      },
+      {
+        "path": "art/expansion/scene-night-lit.jpg",
+        "sha256": "1209eaaecf779abc7a2b89ad2d89a4122947b57d8e21e2a7ad1abbc2bf6001c3"
+      },
+      {
+        "path": "art/expansion/scene-tower-broken.jpg",
+        "sha256": "5844fb37cd74aa71042df8dfa38e24c8f7f216572894bd017384c07f913b9fcb"
+      },
+      {
+        "path": "art/expansion/scene-tower-repaired.jpg",
+        "sha256": "d59523fe1b45adbeaff1abe8b815d435c4445d4129c4bbf0b20865743cdbc61e"
+      },
+      {
+        "path": "art/expansion/shipping-token.png",
+        "sha256": "cbb2f468fa5f48cceb1b8a60714c8aacffde95a2df37da3d29c093a1d553f196"
+      },
+      {
+        "path": "art/expansion/source/coin-pile-v1.png",
+        "sha256": "2684c57ac1572a41c1e847f3f77ca2465aa3b847a2a5bd31c7e0f75034e00ee1"
+      },
+      {
+        "path": "art/expansion/source/glass-1-v1.png",
+        "sha256": "ec47549671b1b107a2fbb837cb044fb7bdef68b563f5a560712496e0d8f50906"
+      },
+      {
+        "path": "art/expansion/source/glass-2-v1.png",
+        "sha256": "ae6f78640241be74cdd85dfbe4352c35a3068b15bb542cbe5b01c1319a4317ae"
+      },
+      {
+        "path": "art/expansion/source/nails-1-v1.png",
+        "sha256": "a011906201f3f8ea6b506c1b6db2cb66b6438abf19c698e71e0169ebb9674598"
+      },
+      {
+        "path": "art/expansion/source/nails-2-v1.png",
+        "sha256": "581f38ab3f2adb122c0f50e7b2edec70264fba081539577140750a4416646a99"
+      },
+      {
+        "path": "art/expansion/source/oil-1-v1.png",
+        "sha256": "d6f63eb8d3b22d9dd6def93229530cea374802ade77dc94c9f3091e003ce6105"
+      },
+      {
+        "path": "art/expansion/source/oil-2-v1.png",
+        "sha256": "25822e10c299c3fb437e5c304ef6e952f3ae036efc5a187b38a28830df67feee"
+      },
+      {
+        "path": "art/expansion/source/rope-1-v1.png",
+        "sha256": "3f143ee966b9735cf7f41795bddbdbf3f32c4774e66ad71bf62b15d3c2c13a4f"
+      },
+      {
+        "path": "art/expansion/source/rope-2-v1.png",
+        "sha256": "fd58ec7287482f483834eb271144c9cdb0f530b267883afccedee86a8f1f1ed9"
+      },
+      {
+        "path": "art/expansion/source/scene-dock-broken-final.png",
+        "sha256": "f442c3ea106fb4e721e0df6dd26378844bcf7e4b0a5fe1fc0dd48788528973ad"
+      },
+      {
+        "path": "art/expansion/source/scene-dock-broken-v1.png",
+        "sha256": "0b54285b74e7f3b17cc4ce0710c6d3097b5520fb1455dc5eb42bfa3df6bf3700"
+      },
+      {
+        "path": "art/expansion/source/scene-dock-broken-v2.png",
+        "sha256": "961218b7bfcfe01982dcab1b522017b0d05f08e445108f97534d053d162b5617"
+      },
+      {
+        "path": "art/expansion/source/scene-lens-installed-original.png",
+        "sha256": "08a1d537ca4f75bd957a8b19b9a3c754854972355c757f76493ddcbb9800d49a"
+      },
+      {
+        "path": "art/expansion/source/scene-night-lit-original.png",
+        "sha256": "67391fa3b3c103fc836c0ab008bec181c57667b8419b876de3999dbb99b3b7f3"
+      },
+      {
+        "path": "art/expansion/source/scene-tower-broken-original.png",
+        "sha256": "5bdf593b18ceb25d3a1ecc88fa4196e5fdf3c7992ac4b9d0ef5e0d6d479de5c1"
+      },
+      {
+        "path": "art/expansion/source/scene-tower-repaired-original.png",
+        "sha256": "254bf6817625a010169f1578932967c6fcc5728ac605e712a377fad5d553f894"
+      },
+      {
+        "path": "art/expansion/source/shipping-token-v1.png",
+        "sha256": "262067a70759def151c51c6d63ffcc99120a6a945a785ebb33b69e2170bcd1da"
+      },
+      {
+        "path": "art/expansion/source/tool-1-v1.png",
+        "sha256": "1b0e660df7b79b3463192d157ab8efe4709bcf94861074352ecb54f78941f81b"
+      },
+      {
+        "path": "art/expansion/source/tool-2-v1.png",
+        "sha256": "03eb771fced9574a5ee0e205257b937b100683e5c5ede0175875b11e55002e7e"
+      },
+      {
+        "path": "art/expansion/tool-1.png",
+        "sha256": "46c91afb5c37d5ac7968735238dfd85313a28ce1aa9f7e9dea7ca45752f26dce"
+      },
+      {
+        "path": "art/expansion/tool-2.png",
+        "sha256": "7ce459e76f17ce84b43d1273bedadf0c876cce427de6be26ad737cf142b116d6"
+      },
+      {
+        "path": "art/generation-record.md",
+        "sha256": "dd7161066c14e5678cd71618e65a8316e0d04c3161e77287fb66f205e0e0e115"
+      },
+      {
+        "path": "art/repair/repair-01.png",
+        "sha256": "827441117eddb38a8e4ebe6a0a4e155f7c5f0d4e072d61155f5c4f47cf80f556"
+      },
+      {
+        "path": "art/repair/repair-02.png",
+        "sha256": "3286b7c9c56fbf5eb966a4f7d26274ae01d877952a34c6ca7dc3f46e89c2c1cb"
+      },
+      {
+        "path": "art/repair/repair-03.png",
+        "sha256": "686e5eb9c57ba7d1862b14c700de6b5534396790fe6224822927b4e6b837cc0e"
+      },
+      {
+        "path": "art/repair/repair-04.png",
+        "sha256": "8dac8a7663e1b8026151a64fa8e43d6d47c671f6bad954622c789fb7acf52dea"
+      },
+      {
+        "path": "art/repair/repair-05.png",
+        "sha256": "b0a0975c19fcf000b0bb9acfd498ad420ef0a4b6c99524ab9777165a24f5454c"
+      },
+      {
+        "path": "art/repair/repair-06.png",
+        "sha256": "aec123e1d9f80617654c57590f1ebaf78354940828c85f450b1a8fdd29b5c9d7"
+      },
+      {
+        "path": "art/repair/repair-07.png",
+        "sha256": "dcd49df8de7fdcb99b2fe61b2f34a8c501576f7e8942165127cebfc5a72ad056"
+      },
+      {
+        "path": "art/repair/repair-08.png",
+        "sha256": "1d4bebed26744dd0b179bf9048b4d8388ab3b93004f2038b839ebc9ebdb0661a"
+      },
+      {
+        "path": "art/source/repair-eight-v1.png",
+        "sha256": "b95a1fa638a860d63703366f645c033913e8dc33ae135c53d01686da68cf3a1c"
+      },
+      {
+        "path": "art/source/repair-eight-v2.png",
+        "sha256": "374cd0a8c665c029730928a087594b9f996f8598ae6bc468b15a3ba3b8d72220"
+      },
+      {
+        "path": "font-source.md",
+        "sha256": "7571414844040b98b459aef72459e23a0ce664ec4efa75561a84120632b36b36"
+      },
+      {
+        "path": "game-core.js",
+        "sha256": "a51d948fd53a3a0be188b9da07dbb53e3301d402ec09c6fd8ebded9886188f66"
+      },
+      {
+        "path": "game.css",
+        "sha256": "3facf56961f09b482134b6bc2d0b0610d4b47432add99479a5176404406f9416"
+      },
+      {
+        "path": "game.js",
+        "sha256": "2414372138e22ec03d6a3db69ecbf5837d460b0e716665528dddb1c55baee780"
+      },
+      {
+        "path": "OFL.txt",
+        "sha256": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded"
+      },
+      {
+        "path": "play.html",
+        "sha256": "c0787ce7f8b42a402322e17feec8f55d478b5c78277ddb4a508a094b9fe5c6e4"
+      },
+      {
+        "path": "tide-sans.woff2",
+        "sha256": "18f31b532143d8be8283522447d56bb3deb64bcbbacbf4dda294f8f7475a6b2e"
+      }
+    ],
+    "previousArchiveRetained": "tidekeeper-playable/tidekeeper-first-light-0.4.0.zip"
+  },
+  "duskwood": {
+    "version": "0.4.0-draft",
+    "archive": "duskwood-watch/project-pack.zip",
+    "sha256": "d09b1c32040b5a5668287d260f9123ffc8eb3cd613df88a72ab82b6063d4713f",
+    "packFingerprint": "f3a9dcbcc15bb89bd56eb4e366ebd5eb3baa2e71bced6a1de1b9bfd2ec802ec7",
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "7d6ca7f41b2f26bcb385abe03c151e2d8b2cee0c22ed4316f389db799cc9d521"
+      },
+      {
+        "path": "SOURCES.md",
+        "sha256": "b8bf06b0c8be9a9ce4d019209742a2ed3d4aea4ef2d3330d5694223e52f6e76b"
+      },
+      {
+        "path": "assets/arrow.png",
+        "sha256": "b6953e1c10d682fee16ad7910b4054ca2e8b19c8404de73eeeecac8e3cc0c525"
+      },
+      {
+        "path": "assets/enemy-animation.json",
+        "sha256": "a91426dfd70960cff1aef81c86ce80b8e79681152e4d2ea140fc2c7c74899130"
+      },
+      {
+        "path": "assets/enemy-walk.png",
+        "sha256": "a98ba425782f18bd7efa9ce5f56387ee5ff67c290ed859ab508379cb06380f0f"
+      },
+      {
+        "path": "assets/enemy.png",
+        "sha256": "b4ed0c4f6802109afac2b88717dee32e6f3e253ab3be79d51a712f36e5c05251"
+      },
+      {
+        "path": "assets/hit.png",
+        "sha256": "19c39aa5f589f7c47ad2d629b03599d7688d58c0956b65955cae67b1d0e60c25"
+      },
+      {
+        "path": "assets/keeper-base.png",
+        "sha256": "a065164530e0bc3c2dc2eac1ac475a2f3ea23a21e7161ad50d47b0b8df945070"
+      },
+      {
+        "path": "assets/life.png",
+        "sha256": "c13fce870e83a775f0d1e9caef249814d3e1d4a649639b7171ded68554f124d8"
+      },
+      {
+        "path": "assets/notosanssc-OFL.txt",
+        "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+      },
+      {
+        "path": "assets/shrine.png",
+        "sha256": "ac4adbb8b70dccefa55c0974f70f557f9577488880404c789a00144b51119777"
+      },
+      {
+        "path": "assets/ui.woff2",
+        "sha256": "3ea7c15ca2144b7126501875836dbe77528bcef15d5dfe7811af2997ad756e8e"
+      },
+      {
+        "path": "assets/v2/actors/actors-manifest.json",
+        "sha256": "13c60a51c34c660207c03cf50dc3e8f9205c0281ec4a3bea9eb92cf9428e0513"
+      },
+      {
+        "path": "assets/v2/actors/keeper-animation.json",
+        "sha256": "e9a2e4a442c58e64fe814cf44b9d39f2005e5260bf88fab3490253a7b8d5d4d9"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/body.png",
+        "sha256": "8167dc1e9e93ad8008cec1e2a1d299c0c27fe66e502258ba95ba310d3c3cc067"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/far-arm.png",
+        "sha256": "7039d1896f622160b767a71926a5451882fefc40b81ef1c372c677b92874eab9"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/far-boot.png",
+        "sha256": "c8e4547aa28e8b3cb0ac90b0b401bed6b8ef615b9d0f9cd4a590ce9fb1150104"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/far-shin.png",
+        "sha256": "d4100b9c301e507f964c9474c5888012ac38521cad61fbf5782f202357b6e86b"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/far-thigh.png",
+        "sha256": "7c7153930979fdb8ff58483b63f7c58544a36ab431618c3b5fba03493e235b2c"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/lantern.png",
+        "sha256": "6bbe53fc903474b0c3cce2dd109ef0709e2900bf4ae4aa65b07517636851c7a7"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/near-arm.png",
+        "sha256": "4d7b9d0983d4516eeb59da81eed80b930b1cffb95db26fafefad33bdc4943f74"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/near-boot.png",
+        "sha256": "0255439f4ef01beb36eb64c86ee51a908ba831e44a642ea0a5c57449a2dbd1df"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/near-shin.png",
+        "sha256": "5c7bf645502650b18835d5a90f0e5467d02ae820b86ba1e93564307376338917"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/near-thigh.png",
+        "sha256": "522faaf46df2a35becd0496ba82a1757e586fff1fa79f5f0f9f16aa14d45ece0"
+      },
+      {
+        "path": "assets/v2/actors/keeper-parts/staff.png",
+        "sha256": "73673ec8b5c68da1ab93ce3dc150785802f1ed77e3ff6327cba17d08e943e78d"
+      },
+      {
+        "path": "assets/v2/actors/keeper-rig.json",
+        "sha256": "e08e2c666c57a68b8a151735b8b1f64ca63e6f860cbac4006fc7462c5a04f68a"
+      },
+      {
+        "path": "assets/v2/actors/keeper-walk.png",
+        "sha256": "8626eb4ef23705a819be849d2c632d9e0eb0747c7db433cb41c63560913766fd"
+      },
+      {
+        "path": "assets/v2/actors/moonmoth-animation.json",
+        "sha256": "700a13a0868e0247d7e38e9d5a23efe37974ac4235d255acbe0eb6cf5e7e7dac"
+      },
+      {
+        "path": "assets/v2/actors/moonmoth-walk.png",
+        "sha256": "7c6d5b4e774beb5e1abbbd3fa32106975f38a59843a2eb8c3e4cbc418379e9d2"
+      },
+      {
+        "path": "assets/v2/actors/rootguard-animation.json",
+        "sha256": "26576c39fdc6152199b6d70738acdae9520eef74babf91d3a14668e656ff3147"
+      },
+      {
+        "path": "assets/v2/actors/rootguard-walk.png",
+        "sha256": "0198bd2c8e2bbb771a5628b2d70031c31a84f748f3b3bd752c46fd697cfd9661"
+      },
+      {
+        "path": "assets/v2/actors/sporepod-animation.json",
+        "sha256": "688db5314841f081f576ad832163ed4d795118f49dd755307e404da8e0686a4b"
+      },
+      {
+        "path": "assets/v2/actors/sporepod-walk.png",
+        "sha256": "0a58aea8389e84435c7d06d3fd0fe7ba98f323f79bdaeb335f005b34e782d9bb"
+      },
+      {
+        "path": "assets/v2/map.png",
+        "sha256": "8dcbe7279fdfcd43e7063a5d8ac6ed2efbe7ea8e75cd8b5107fe3843e25ad4fe"
+      },
+      {
+        "path": "assets/v2/title.png",
+        "sha256": "99e4a677a84774fafee7be84092a4de6cc41684500c6a917a48e3bd55ee4756f"
+      },
+      {
+        "path": "assets/v2/weapons/ballista-aim.png",
+        "sha256": "47cb7f9f1232140a1e74ac6c4d4df88bcd691d1bf4117b7513c8854d248a7ef6"
+      },
+      {
+        "path": "assets/v2/weapons/ballista-base.png",
+        "sha256": "c50ae04a7cabde0912258359772c70271abe92a3ee891cfaa48e8ce6c8425ebc"
+      },
+      {
+        "path": "assets/v2/weapons/ballista-release.png",
+        "sha256": "5e823d2fb77e50c6ac369b92f582be1cbbd8535077c29f40826f22f3f5978840"
+      },
+      {
+        "path": "assets/v2/weapons/bell-stand.png",
+        "sha256": "fd8df3636b59ff7ec33adab7eba4b585a14d845e32d7e32e9a95f27b5174bec4"
+      },
+      {
+        "path": "assets/v2/weapons/bell-swing.png",
+        "sha256": "b5c037484f86411cfbb26f7cb926e0387bc4e0f211fd0f6b66467a6b1f8238f1"
+      },
+      {
+        "path": "assets/v2/weapons/empty-base.png",
+        "sha256": "a286c0fac1aaa4adb8f7acaf1fc9bc50ccda3ebf8b409a5de062c06b353d00f7"
+      },
+      {
+        "path": "assets/v2/weapons/empty-stump.png",
+        "sha256": "3f0e76357f912f3d3b7918ab0b6e036c786cded0bc0570a2df444056fff07e98"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-aim-E.png",
+        "sha256": "137a69bcaf4f0d7637a8ebd36c36cb04784bd93f4557c78d76fcbb5ef42b65a5"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-aim-N.png",
+        "sha256": "409cb288408c30eba03cd9a3d8350e43ea771b3f1b940ed4cb8afc7e60622b2d"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-aim-NE.png",
+        "sha256": "be78c59d29709865c3e7415f6869368d20baa5baa5da4ae3ead11dab6411249b"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-aim-NW.png",
+        "sha256": "a1b9abc6475aac0fd8541b2e6cf268e4c53216a5381b3b75d7453e40575f0162"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-aim-S.png",
+        "sha256": "6a0a9e65fe22b74823585a72c3adf361f4677408a3a0ff89d119d249fbff45e4"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-aim-SE.png",
+        "sha256": "82a54b1931ec96497ecb7e27f14480ceacfc8eb78f8aa55d4643afeeff6e82b4"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-aim-SW.png",
+        "sha256": "f7b0789eef63200c411c9e805b6e37ca03f97fb546fce3a0b313c33f2d048afc"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-aim-W.png",
+        "sha256": "97e8939a38489dec94890cfd11e1e48e9165d44481906ebcfd42069de6663d43"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-release-E.png",
+        "sha256": "5de00148fcb7cebb2a3be6c553b7c5de0a1aa0d8c47bfd8c224d7c363bd55914"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-release-N.png",
+        "sha256": "023f2a9bbd8235596e9f5cdf7502fc90c0ef11c6f800c6ddbf246abc8a14c2a0"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-release-NE.png",
+        "sha256": "09372fd6047c1b0734423cdc4e8a3e074c29b5305df0b7c750285ded4c7927d7"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-release-NW.png",
+        "sha256": "fb790e9ccb6171e2e773d026b819857b617b71a0b38105df7e0537821b9c0cfc"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-release-S.png",
+        "sha256": "be408246349643f41ab56f2a7cb0006431be3fc206c419238868f6c19ed53f21"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-release-SE.png",
+        "sha256": "b8a9e663bfc3ddf940e7d78b873521d71d6bfa3770e5bc55560b16a8fff5952c"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-release-SW.png",
+        "sha256": "c9956b63e16802dabbac969c330011acebb8961bd34b60445de0de4311a6994c"
+      },
+      {
+        "path": "assets/v2/weapons/frames/ballista-release-W.png",
+        "sha256": "3b2ae78771422926c2571237eeb723692c4bf933d3a3b4014e5373d546c11f6b"
+      },
+      {
+        "path": "assets/v2/weapons/frames/bell-swing-00.png",
+        "sha256": "43be26b073215e9b707a3c8d85d03aef5236893de18eb710aa8a623189c0de5b"
+      },
+      {
+        "path": "assets/v2/weapons/frames/bell-swing-01.png",
+        "sha256": "b0fd291ad8578bc2c60e28876d9ce2918474b16b3ff69da2d5b10b4a058c8c94"
+      },
+      {
+        "path": "assets/v2/weapons/frames/bell-swing-02.png",
+        "sha256": "b7b8f0a8e5aba457c2a51cb8eefc74fcb13f3496e5d237438b4a8f21eb946527"
+      },
+      {
+        "path": "assets/v2/weapons/frames/bell-swing-03.png",
+        "sha256": "7e8f106d7f33129e1d9f9437870fc9328fded1529fab3ad5a4f2da1074916294"
+      },
+      {
+        "path": "assets/v2/weapons/frames/bell-swing-04.png",
+        "sha256": "1b1d1d9126d34e496e0e132d8f4df91d7c57bce5eebd4c38a7265058cca64032"
+      },
+      {
+        "path": "assets/v2/weapons/frames/bell-swing-05.png",
+        "sha256": "829b321d300cbb4e6d7586168ba962167b4400dbe71abc2d5f755e4184c561df"
+      },
+      {
+        "path": "assets/v2/weapons/frames/bell-swing-06.png",
+        "sha256": "342b6d5c82208d33883e22d9ddb65ef22b1cbfcc405e16d869150aaeee53e746"
+      },
+      {
+        "path": "assets/v2/weapons/frames/bell-swing-07.png",
+        "sha256": "7a1e6a12d1efb0857c4cc9a44e87e2e4cb50e02f189f5bbffaf6339c2bc1d802"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-aim-E.png",
+        "sha256": "ddac8ad41e64cc738db67f6847bb9c3be4cbfc693a821dc2c93b753cc09ecf1c"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-aim-N.png",
+        "sha256": "628751ad993b399c676aebbc3dc0929054c56b1f6d01fd8cf4888de732abbbbc"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-aim-NE.png",
+        "sha256": "3342d8afbf1807c70723b0af1a348bb1c4d464bc731581ad7cd33394bd66cafd"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-aim-NW.png",
+        "sha256": "6343b928bc2c2e5b06f12dd8286457b5ed03a8cf2d0ac25fa371d32946e6a5e1"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-aim-S.png",
+        "sha256": "0e2e4937d46e77d0c5e11ef41cf52e419cb93ab082fc70577c8639081a9d6ce5"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-aim-SE.png",
+        "sha256": "8c16199c7ab53f15967d1ba8135e383ca8d87ddf1e095e948c0badc4904e137e"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-aim-SW.png",
+        "sha256": "322a80bdd63358ac5867b4d5b40b9310efa95d789af9ddd230ecacb708935178"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-aim-W.png",
+        "sha256": "58c9816d39c7746220eef197df7f83e938b796801aba019c61a1ef447d407736"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-release-E.png",
+        "sha256": "4ec07376351226ecc3404e7ea39a65a9183f4d3316294f789251d5399e767809"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-release-N.png",
+        "sha256": "c233dd668f35418f68103154c209d0654f1cd3b2538be6c57d69035a6c4c90da"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-release-NE.png",
+        "sha256": "307892a22294520cb79ca14005ab2f55b691cc6373250cd5b145650ae03a65b3"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-release-NW.png",
+        "sha256": "0160fb0a84f8da8d464b66c09bd072f68430da296a0929289aeb466bd21ce26e"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-release-S.png",
+        "sha256": "c272101f78d337ee80c5adb4d2a4eb9391f2f7a5db3c1acd6ffe00280710f0d8"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-release-SE.png",
+        "sha256": "6fb25ba9abfe2fe1d68548492c77750648f4a70f6a14a96ebddc887c1c8a306e"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-release-SW.png",
+        "sha256": "4f291dff175c73376d0d987220534e2f1048bdf6983376a2b7baae7eb9cc6540"
+      },
+      {
+        "path": "assets/v2/weapons/frames/mortar-release-W.png",
+        "sha256": "7fd9fe09ba6b2e65c8d5e09ec83f1b8033ae13c6c25a3f4ab5200eb824c6e5c5"
+      },
+      {
+        "path": "assets/v2/weapons/mortar-aim.png",
+        "sha256": "9f877dc03b7698fb15111aa169bd18827fd63297d3045783b61cd95d09d9f8d6"
+      },
+      {
+        "path": "assets/v2/weapons/mortar-base.png",
+        "sha256": "15fe0cf25df5b0e7c05f6f1b71f997933a88046fafe0dfb9f772900fc6ff9659"
+      },
+      {
+        "path": "assets/v2/weapons/mortar-release.png",
+        "sha256": "c64710b8083a193e3a0ef513b784ea3c0bdc899169308b8f48c0f495ac9da1d7"
+      },
+      {
+        "path": "assets/v2/weapons/pinecone-shell.png",
+        "sha256": "cb0a45863d5257277fac6943330b38b29f3be1547a77754db04681d2f8e516ad"
+      },
+      {
+        "path": "assets/v2/weapons/weapons.json",
+        "sha256": "54549bfd186185840bdd02b6ef55ed04cedaf9ecefa414c1abbaea93f092f77f"
+      },
+      {
+        "path": "assets/v2/world/amber-resin.png",
+        "sha256": "ea8b556b4427316501bd469b2f2d069d62656ade8479398173d7a73c1fc9108a"
+      },
+      {
+        "path": "assets/v2/world/branch-bundle.png",
+        "sha256": "b8dfa2fafc3c961922ddcff2c3b577de0144002ede52920f66430ce84377e73a"
+      },
+      {
+        "path": "assets/v2/world/broken-arch.png",
+        "sha256": "27130d535b8a98bb08ddf0ccfca995e1c863b1c70b962e7ffea3f9ff1fd48943"
+      },
+      {
+        "path": "assets/v2/world/build-wheel.png",
+        "sha256": "72ae2c4d1b70e58b3baf7d7718eaea18af312959a4cb36e108d07d18c529b711"
+      },
+      {
+        "path": "assets/v2/world/copper-gear.png",
+        "sha256": "0d07993f780be1f354260fdb5bd2ab8151422a5d7aae3c2ce05baa950e278a58"
+      },
+      {
+        "path": "assets/v2/world/copper-hammer.png",
+        "sha256": "8e9bb61df81bdb0869d203bbe1f3492fe2d75674e470c23d85a32b58e64cea6d"
+      },
+      {
+        "path": "assets/v2/world/crystal-cluster.png",
+        "sha256": "376facaff3d2cee60cbf13d30040efa05f74dbb300d38d48a9018f110f834498"
+      },
+      {
+        "path": "assets/v2/world/foreground-branch.png",
+        "sha256": "940c4eb43b3c38419bbbe84b8c8ce016cb852b29922d8b0124a8e1c6433776d5"
+      },
+      {
+        "path": "assets/v2/world/herb-bush.png",
+        "sha256": "fcf1074673a3ed94f5c06d46ae11181293f6a5d2b0fe9662c12aac33b8ea0fea"
+      },
+      {
+        "path": "assets/v2/world/herbal-potion.png",
+        "sha256": "7848e97d7b93847b6d2e26e566654703046b12b503b4d75b74d8fb2e35e3bd68"
+      },
+      {
+        "path": "assets/v2/world/inventory-tray.png",
+        "sha256": "9cd3ce2984fbb23c5ad5e07e041c280b9cffe8f1494c68f9461a863a0fa262fd"
+      },
+      {
+        "path": "assets/v2/world/items-atlas.png",
+        "sha256": "314b5003cad879b9b71703800d65dce0017a5813b0ea309aa3ff4c24a907965a"
+      },
+      {
+        "path": "assets/v2/world/items-manifest.json",
+        "sha256": "b1a89f119f043c226f113c4203c68f6690ce38c5efa1241d44300017fb434d61"
+      },
+      {
+        "path": "assets/v2/world/lamp-off.png",
+        "sha256": "da081a96a1cd8a9af280517637015ebfc128a3befe4e960fa9cbcd7a134fef8b"
+      },
+      {
+        "path": "assets/v2/world/lamp-on.png",
+        "sha256": "213a940216b63e612c310f9293914aae6e821d64c081df869bf59f722d82468f"
+      },
+      {
+        "path": "assets/v2/world/lamp-seed-coin.png",
+        "sha256": "5a71ab09e3ef53a67638bf1efdb28fd61dfba9474e2b85a1f68d3b684ce53265"
+      },
+      {
+        "path": "assets/v2/world/lamp-states.json",
+        "sha256": "f52c25d0d53de75e694cfd9ab23dc85d4d1209fb246ad9240bcb2dbbff8647f0"
+      },
+      {
+        "path": "assets/v2/world/lamp-states.png",
+        "sha256": "ebf02c8d3b5693d7c85c8eb362c022c0ab73169f6dbfcb2c930151e36d4249de"
+      },
+      {
+        "path": "assets/v2/world/moon-crystal.png",
+        "sha256": "d3a8f8bf3c5a4a57737652b9afc0975ad199e6f94eebf4ffa03c976a8935f7ee"
+      },
+      {
+        "path": "assets/v2/world/moss-oil.png",
+        "sha256": "d966cfce348774eb2d1d7ac6ab1554dc8989188ee7fa6e172260e4a63d2a19e3"
+      },
+      {
+        "path": "assets/v2/world/moss-rock.png",
+        "sha256": "4c981ec948e7aabb1d63053c3a8006dd7a8eebc19ef26571a5d99407fe3e164b"
+      },
+      {
+        "path": "assets/v2/world/mushrooms.png",
+        "sha256": "3de32a423ff906735f97a1ed1d98373b3da580c8539eebc19c9d9bed49095958"
+      },
+      {
+        "path": "assets/v2/world/night-charm.png",
+        "sha256": "867aeba8284d06bf3dbf0e9b852f995bb8d49e15ad0430ca3e2d93354b9e6f44"
+      },
+      {
+        "path": "assets/v2/world/pruning-hook.png",
+        "sha256": "0bb7164d183c00ba6353d5abb3546f44a3ae93e9c802c1b528787d72a8e7545f"
+      },
+      {
+        "path": "assets/v2/world/reeds.png",
+        "sha256": "0216c5d3892ce028df1dca249766ecbaf1cc66801a93713e75ec485d251125ec"
+      },
+      {
+        "path": "assets/v2/world/resource-plaque.png",
+        "sha256": "a7df08525e8d22ba631fc632b2503901792fba91a98e3bd9c326e6c57012328b"
+      },
+      {
+        "path": "assets/v2/world/rune-stone.png",
+        "sha256": "0ba8dca2f6d0671e96bc848a19972facf0c70af8d5c3695874774159f283c43f"
+      },
+      {
+        "path": "assets/v2/world/scene-atlas.png",
+        "sha256": "22340d9fbb8fb825c300a554ed4a2ec352174f5a96a5ce3191a717ea221fd1d1"
+      },
+      {
+        "path": "assets/v2/world/scene-manifest.json",
+        "sha256": "f001c6840cca04f76e8e1edf76c77dbe317ce4ce853aad8d25b9d724b2d6b731"
+      },
+      {
+        "path": "assets/v2/world/shovel.png",
+        "sha256": "fd7b35fcfb3901952df14b2310d895af3cf69eb42b3bc152ff6d80d3ba369d69"
+      },
+      {
+        "path": "assets/v2/world/signpost.png",
+        "sha256": "c522cae10fb0a9c3e294ea4c82dedfc5900c24fe69e1d4311e2738acdc78c509"
+      },
+      {
+        "path": "assets/v2/world/skill-medallion.png",
+        "sha256": "7f72ae5682f59064c094b6ca26158049b08dbc337460cdf4ae288a8b2c16b245"
+      },
+      {
+        "path": "assets/v2/world/toolbox.png",
+        "sha256": "473659b7e6dea292a54e9538eaefd16b3abf563c7ea9e407d2c201e61ae53e2d"
+      },
+      {
+        "path": "assets/v2/world/ui-atlas.png",
+        "sha256": "f54e53102a0471646e9ad2e424cc3472d4fe0a069c11ebf3b1e5802b3e116443"
+      },
+      {
+        "path": "assets/v2/world/ui-manifest.json",
+        "sha256": "c04ce0eb6367ee87aa6469995717e1b6bd07dd4436b0270bd58ea34541263c6b"
+      },
+      {
+        "path": "assets/v2/world/woodpile.png",
+        "sha256": "33dfa3eb8dc4972ab8703eacc41be6d4b6b4549cc5b169fc140a1d23365a777b"
+      },
+      {
+        "path": "assets/v2/world/world-batch.json",
+        "sha256": "fd234581c62db50dd25f893a47f64a4ef595962279858d98ad6e2f56d6d7abca"
+      },
+      {
+        "path": "assets/v2/world/world-manifest.json",
+        "sha256": "00eac32c408ada23da6812d0a24d4009e984430fcbe01b54f32cab1936177aa4"
+      },
+      {
+        "path": "game-v2-config.js",
+        "sha256": "c586ac4e453f79c4ab11e3e536d6f3b34066dde57e2562e4b4d0831caba3ec08"
+      },
+      {
+        "path": "game-v2.js",
+        "sha256": "7cebe7fe538620059d5e309e2b16762093e39afb762ac8a8c955757a5af67e1e"
+      },
+      {
+        "path": "index.html",
+        "sha256": "d30281df1db3a2a553a7f8330dd839c161510fe0edfaa5b1cc5fd183258a3369"
+      },
+      {
+        "path": "server.mjs",
+        "sha256": "66cd6f3d4d8e9a59c1feb7db3858a846c0c732104b12e4da9855985bee4852cb"
+      },
+      {
+        "path": "v2.css",
+        "sha256": "9ded3c05f9d92bb0a7e5c3bea4cdee6d981d6931277b5e37c19691c5c8234ad2"
+      },
+      {
+        "path": "v2.html",
+        "sha256": "d30281df1db3a2a553a7f8330dd839c161510fe0edfaa5b1cc5fd183258a3369"
+      },
+      {
+        "path": "combat.png",
+        "sha256": "c0ff41d59ceab21d2e7a1fd2800a9907688f22b72e4b6e632d717579745b2995"
+      },
+      {
+        "path": "gameplay.mp4",
+        "sha256": "33b174fe3c48ca7c8aa098361355c23d0349bf949a6a9c53e84abdb129b7ff99"
+      },
+      {
+        "path": "integration-review.md",
+        "sha256": "c20f2c0e0a3a7404d4fd7366df24890bfd30edfe1355807e68fb00881e6f7704"
+      },
+      {
+        "path": "integration-review.json",
+        "sha256": "e3d044b71d409a78c79e5e1f2dc6c9d99fa983aa64a5d7b2106b0cab2bf8b74f"
+      }
+    ]
+  },
+  "humanApproval": null
+}

@@ -1,10 +1,10 @@
 # Agent guide · art-director
 
-English · [中文](AGENT-GUIDE.md)
+English · [中文](AGENT-GUIDE.zh.md)
 
 ## Entry and reading order
 
-Read the root `SKILL.md`, then select `references/director-workflow.md`, `references/member-workflow.md`, `references/review.md` or `references/pack-contract.md` for the current work. For a specific project, read its `PROJECT.md`, `style-pack.json` and version fingerprint. Some detailed reference methods and fictional project fixtures retain their original Chinese; the primary Skill and public guides are Chinese, with English reading editions available. Respond in the user’s requested language.
+Read the root `SKILL.md`, then select `references/director-workflow.md`, `references/member-workflow.md`, `references/review.md` or `references/pack-contract.md` for the current work. For a specific project, read its `PROJECT.md`, `style-pack.json` and version fingerprint. Some detailed reference methods and fictional project fixtures retain their original Chinese; the public introduction and guides are English-first, with complete Chinese reading editions available. Respond in the user’s requested language.
 
 ## Director workflow
 
@@ -38,4 +38,4 @@ A dress-up demo is only one member task. Image dimensions are not automatically 
 
 ## Related roles
 
-Use [the four-role workflow](WORKFLOW.en.md) when the user needs market evidence, competitor analysis or production assessment. Hand over the question, evidence/version, decisions, constraints, work scope, owner and acceptance requirements. The map describes responsibilities, not a built-in automatic multi-agent dispatcher.
+Use [the four-role workflow](WORKFLOW.md) when the user needs market evidence, competitor analysis or production assessment. Hand over the question, evidence/version, decisions, constraints, work scope, owner and acceptance requirements. The map describes responsibilities, not a built-in automatic multi-agent dispatcher.

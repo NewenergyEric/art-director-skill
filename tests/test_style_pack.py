@@ -167,10 +167,10 @@ class StylePackContractTests(unittest.TestCase):
         }
         self.write()
 
-    def cli(self, *args, ok=True):
+    def cli(self, *args, ok=True, cwd=None, script=CLI):
         proc = subprocess.run(
-            [sys.executable, str(CLI), *(str(arg) for arg in args)],
-            cwd=self.work,
+            [sys.executable, str(script), *(str(arg) for arg in args)],
+            cwd=self.work if cwd is None else cwd,
             capture_output=True,
             text=True,
             encoding="utf-8",
@@ -182,8 +182,8 @@ class StylePackContractTests(unittest.TestCase):
             self.assertNotEqual(proc.returncode, 0, proc.stdout + "\n" + proc.stderr)
         return proc
 
-    def json_cli(self, *args, ok=True):
-        proc = self.cli(*args, ok=ok)
+    def json_cli(self, *args, ok=True, cwd=None, script=CLI):
+        proc = self.cli(*args, ok=ok, cwd=cwd, script=script)
         try:
             return json.loads(proc.stdout)
         except ValueError:
@@ -535,6 +535,91 @@ class StylePackContractTests(unittest.TestCase):
         self.assertEqual(target.read_text(encoding="utf-8"), "preserve")
         before = self.snapshot()
         self.cli(*args, "--out", self.pack / "style-pack.json", ok=False)
+        self.assertEqual(before, self.snapshot())
+
+    def test_frozen_brief_accepts_external_relative_output_from_pack_directory(self):
+        built = self.work / "artifacts" / "frozen-pack"
+        built.parent.mkdir()
+        target = self.work / "evidence" / "asset-briefs" / "props.json"
+        target.parent.mkdir(parents=True)
+        self.cli("build", self.pack, "--out", built)
+        before = self.snapshot(built)
+        result = self.json_cli("brief", ".", "--category", "prop", "--task", "Test tool.",
+                               "--out", "../../evidence/asset-briefs/props.json",
+                               cwd=built, script=built / "scripts" / "style_pack.py")
+        self.assertEqual(result["out"], str(target))
+        brief = json.loads(target.read_text(encoding="utf-8"))
+        self.assertEqual(brief["category"], "prop")
+        self.assertEqual(brief["pack"], result["pack"])
+        self.assertEqual(before, self.snapshot(built))
+        self.assertTrue(self.json_cli("verify", built)["ok"])
+
+    def test_build_and_archive_accept_external_relative_outputs_from_pack_directory(self):
+        before = self.snapshot()
+        built = self.work / "relative-built"
+        self.cli("build", ".", "--out", "../relative-built", cwd=self.pack)
+        self.assertEqual(before, self.snapshot())
+        built_before = self.snapshot(built)
+        archive = self.work / "relative-archive.zip"
+        result = self.json_cli("archive", ".", "--out", "../relative-archive.zip", cwd=built,
+                               script=built / "scripts" / "style_pack.py")
+        self.assertEqual(result["out"], str(archive))
+        with zipfile.ZipFile(archive) as zipped:
+            self.assertIn("style-pack.json", zipped.namelist())
+            self.assertIsNone(zipped.testzip())
+        self.assertEqual(built_before, self.snapshot(built))
+        self.assertTrue(self.json_cli("verify", built)["ok"])
+
+    def test_relative_pack_path_cannot_bypass_internal_output_rejection(self):
+        launcher = self.work / "launcher"
+        launcher.mkdir()
+        before = self.snapshot()
+        for command, extras, code in (
+            ("brief", ("--category", "prop", "--task", "Test tool."), "output_inside_pack"),
+            ("build", (), "destination_inside_source"),
+            ("archive", (), "destination_inside_source"),
+        ):
+            with self.subTest(command=command):
+                target = self.pack / ("new-" + command)
+                result = self.json_cli(command, "../source", *extras, "--out", target,
+                                       cwd=launcher, ok=False)
+                self.assertEqual(result["errors"][0]["code"], code)
+                self.assertFalse(target.exists())
+                self.assertEqual(before, self.snapshot())
+
+    def test_external_output_symlink_into_pack_is_rejected_when_supported(self):
+        link = self.work / "outside-alias"
+        try:
+            link.symlink_to(self.pack, target_is_directory=True)
+        except (OSError, NotImplementedError) as exc:
+            self.skipTest("Host does not permit creating symlinks: " + str(exc))
+        before = self.snapshot()
+        for command, extras, code in (
+            ("brief", ("--category", "prop", "--task", "Test tool."), "output_inside_pack"),
+            ("build", (), "destination_inside_source"),
+            ("archive", (), "destination_inside_source"),
+        ):
+            with self.subTest(command=command):
+                target = link / ("new-" + command)
+                result = self.json_cli(command, self.pack, *extras, "--out", target, ok=False)
+                self.assertEqual(result["errors"][0]["code"], code)
+                self.assertFalse(target.exists())
+                self.assertEqual(before, self.snapshot())
+
+    @unittest.skipIf(sys.platform == "win32", "POSIX resolves symlinks before parent traversal; Windows normalizes traversal first.")
+    def test_output_parent_traversal_preserves_posix_symlink_semantics(self):
+        child = self.pack / "child"
+        child.mkdir()
+        link = self.work / "outside-alias"
+        try:
+            link.symlink_to(child, target_is_directory=True)
+        except (OSError, NotImplementedError) as exc:
+            self.skipTest("Host does not permit creating symlinks: " + str(exc))
+        before = self.snapshot()
+        result = self.json_cli("brief", self.pack, "--category", "prop", "--task", "Test tool.",
+                               "--out", "outside-alias/../new-brief.json", ok=False)
+        self.assertEqual(result["errors"][0]["code"], "output_inside_pack")
+        self.assertFalse((self.work / "new-brief.json").exists())
         self.assertEqual(before, self.snapshot())
 
     def test_diff_reports_change_without_mutating_either_pack(self):

@@ -5,49 +5,75 @@
   "readme_duration_seconds": 24,
   "master_duration_seconds": 24,
   "readme_preview": "depth-preview",
-  "font": "Noto Sans SC, OFL variable subset",
+  "font": "Bree Serif (English display); Harbor Brush Display, a renamed LXGW WenKai subset (Chinese display); Noto Sans SC (UI and body). All OFL.",
   "visual_system": "One team, one visual memory.",
   "story": [
-    "shared-memory",
-    "director-baseline",
-    "member-continuation",
-    "ui-interaction",
-    "repair-light-arrival",
-    "shared-delivery"
+    "define-style",
+    "share-art-direction",
+    "team-components",
+    "review-in-context",
+    "coherent-scene-and-action",
+    "one-visual-memory"
   ],
+  "chapters_seconds": [
+    0,
+    3.5,
+    7,
+    10.5,
+    14.5,
+    21
+  ],
+  "action": {
+    "type": "six-drawing sprite sequence",
+    "source": "docs/assets/tidekeeper-campaign/repair-six-poses.png",
+    "cell_layout": [
+      3,
+      2
+    ],
+    "cycle_frames_at_30fps": 39,
+    "exposures": [
+      8,
+      7,
+      3,
+      3,
+      6,
+      12
+    ],
+    "status": "candidate promotional animation; not a frozen production-pack asset"
+  },
   "depth_showcase": {
     "duration_seconds": 24,
     "fps": 30,
     "preview_seconds": 24,
     "preview_fps": 20,
     "preview_width": 800,
-    "gif_optimizer": "gifsicle -O3 (lossless optimization); 96 colors, no dithering"
+    "gif_optimizer": "gifsicle -O3 (lossless optimization); 128 colors, no dithering"
   },
   "assets": [
     {
       "path": "assets/readme/depth-preview-en.gif",
-      "bytes": 5677807,
-      "sha256": "7fa9798fc365adf0e5722ba4927086591b7ad8ddcaafdf12913b424ab59427ac"
+      "bytes": 6095317,
+      "sha256": "ba530719cfd35e225c527303d49faec0418bcbdad080d8523820da4a0289bf9a"
     },
     {
       "path": "assets/readme/depth-preview-en.jpg",
-      "bytes": 92830,
-      "sha256": "307c648a52758024acc2e2943e410663e00424d51ceaa7ac995a83a087edd5a7"
+      "bytes": 66891,
+      "sha256": "bd0a561166f7de70458a1294eecb63520eaec8c8f200e1453eac46e21c770065"
     },
     {
       "path": "assets/readme/depth-preview-zh.gif",
-      "bytes": 5666293,
-      "sha256": "283867a397b7602bdf85969d28ca85897ffd6539b1df2fbb921847c7f3ce366b"
+      "bytes": 4803365,
+      "sha256": "c76300e42888f57c05d80dca1387a5f5fe848ca40c5956dbebd708bcda6b306f"
     },
     {
       "path": "assets/readme/depth-preview-zh.jpg",
-      "bytes": 93675,
-      "sha256": "1f80b7c0b2faba79bfccd2d902a104db6c93e35b4449d0d1ac5b04d5e0d44ee6"
+      "bytes": 68243,
+      "sha256": "12b764aafaa84a7128bcf36369374959cd9f8efaf75ae7dc5106ae6d06ca9634"
     },
     {
       "path": "assets/readme/social-preview.png",
-      "bytes": 1402780,
-      "sha256": "b4ded3f1591c2125aab593f954a4a82a030c7b58f3eddcb13ce23b26b28e324d"
+      "bytes": 1286209,
+      "sha256": "64f99a9c5bb91305dc3d5ac580ee824b5c8b51c6610f13349ae0c739f070c863"
     },
     {
       "path": "docs/assets/motion/depth-comic.webp",
@@ -61,23 +87,23 @@
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.jpg",
-      "bytes": 92830,
-      "sha256": "307c648a52758024acc2e2943e410663e00424d51ceaa7ac995a83a087edd5a7"
+      "bytes": 66891,
+      "sha256": "bd0a561166f7de70458a1294eecb63520eaec8c8f200e1453eac46e21c770065"
     },
     {
       "path": "docs/assets/motion/depth-showcase-en.mp4",
-      "bytes": 2265741,
-      "sha256": "3434f9b12919d067453786895072d672622aa4428cab8f903480ec764724c0c9"
+      "bytes": 2084087,
+      "sha256": "ec142e950059572ba93ec7dc6a2cd20d0dc91d4e62710c2e56fc3cbbccddb7c3"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.jpg",
-      "bytes": 93675,
-      "sha256": "1f80b7c0b2faba79bfccd2d902a104db6c93e35b4449d0d1ac5b04d5e0d44ee6"
+      "bytes": 68243,
+      "sha256": "12b764aafaa84a7128bcf36369374959cd9f8efaf75ae7dc5106ae6d06ca9634"
     },
     {
       "path": "docs/assets/motion/depth-showcase-zh.mp4",
-      "bytes": 2277019,
-      "sha256": "5d15e8959997ce99d9ff7f2c95d1d39df8bfb3a62ba99de0fd58ad6b4d5e8650"
+      "bytes": 2104322,
+      "sha256": "84972c5da2e54e6d62fb3e43b8b5a19e77b4af944be1f1187ed2770bd6f9cbff"
     },
     {
       "path": "docs/assets/motion/depth-traditional.webp",

@@ -1,0 +1,1174 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "duskwood-world-v2-28",
+  "mode": "demonstration",
+  "baseline": {
+    "project_id": "duskwood-watch",
+    "version": "0.3.1",
+    "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+  },
+  "assignments": [
+    {
+      "task_id": "supplies",
+      "category": "prop",
+      "family": "field-supplies",
+      "asset_ids": [
+        "lamp-seed-coin",
+        "moon-crystal",
+        "branch-bundle",
+        "rune-stone",
+        "amber-resin",
+        "copper-gear",
+        "moss-oil",
+        "copper-hammer",
+        "pruning-hook",
+        "shovel",
+        "herbal-potion",
+        "night-charm"
+      ],
+      "owner": {
+        "id": "forest-assets-agent",
+        "kind": "internal"
+      },
+      "required_checks": [
+        "style-self-review",
+        "rgba-and-export",
+        "target-size-readability",
+        "in-game-assembly"
+      ]
+    },
+    {
+      "task_id": "lamps",
+      "category": "prop",
+      "family": "wood-defense",
+      "asset_ids": [
+        "lamp-off",
+        "lamp-on"
+      ],
+      "owner": {
+        "id": "forest-assets-agent",
+        "kind": "internal"
+      },
+      "required_checks": [
+        "style-self-review",
+        "rgba-and-export",
+        "target-size-readability",
+        "in-game-assembly"
+      ]
+    },
+    {
+      "task_id": "scene",
+      "category": "environment",
+      "family": "forest-map",
+      "asset_ids": [
+        "toolbox",
+        "woodpile",
+        "crystal-cluster",
+        "herb-bush",
+        "broken-arch",
+        "signpost",
+        "mushrooms",
+        "reeds",
+        "foreground-branch",
+        "moss-rock"
+      ],
+      "owner": {
+        "id": "forest-assets-agent",
+        "kind": "internal"
+      },
+      "required_checks": [
+        "style-self-review",
+        "rgba-and-export",
+        "target-size-readability",
+        "in-game-assembly"
+      ]
+    },
+    {
+      "task_id": "ui",
+      "category": "ui",
+      "family": "watch-hud",
+      "asset_ids": [
+        "resource-plaque",
+        "skill-medallion",
+        "build-wheel",
+        "inventory-tray"
+      ],
+      "owner": {
+        "id": "forest-assets-agent",
+        "kind": "internal"
+      },
+      "required_checks": [
+        "style-self-review",
+        "rgba-and-export",
+        "target-size-readability",
+        "in-game-assembly"
+      ]
+    }
+  ],
+  "deliveries": [
+    {
+      "asset_id": "lamp-seed-coin",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "lamp-seed-coin.png",
+          "sha256": "5a71ab09e3ef53a67638bf1efdb28fd61dfba9474e2b85a1f68d3b684ce53265"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "moon-crystal",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "moon-crystal.png",
+          "sha256": "d3a8f8bf3c5a4a57737652b9afc0975ad199e6f94eebf4ffa03c976a8935f7ee"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "branch-bundle",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "branch-bundle.png",
+          "sha256": "b8dfa2fafc3c961922ddcff2c3b577de0144002ede52920f66430ce84377e73a"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "rune-stone",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "rune-stone.png",
+          "sha256": "0ba8dca2f6d0671e96bc848a19972facf0c70af8d5c3695874774159f283c43f"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "amber-resin",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "amber-resin.png",
+          "sha256": "ea8b556b4427316501bd469b2f2d069d62656ade8479398173d7a73c1fc9108a"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "copper-gear",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "copper-gear.png",
+          "sha256": "0d07993f780be1f354260fdb5bd2ab8151422a5d7aae3c2ce05baa950e278a58"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "moss-oil",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "moss-oil.png",
+          "sha256": "d966cfce348774eb2d1d7ac6ab1554dc8989188ee7fa6e172260e4a63d2a19e3"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "copper-hammer",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "copper-hammer.png",
+          "sha256": "8e9bb61df81bdb0869d203bbe1f3492fe2d75674e470c23d85a32b58e64cea6d"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "pruning-hook",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "pruning-hook.png",
+          "sha256": "0bb7164d183c00ba6353d5abb3546f44a3ae93e9c802c1b528787d72a8e7545f"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "shovel",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "shovel.png",
+          "sha256": "fd7b35fcfb3901952df14b2310d895af3cf69eb42b3bc152ff6d80d3ba369d69"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "herbal-potion",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "herbal-potion.png",
+          "sha256": "7848e97d7b93847b6d2e26e566654703046b12b503b4d75b74d8fb2e35e3bd68"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "night-charm",
+      "task_id": "supplies",
+      "family": "field-supplies",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "night-charm.png",
+          "sha256": "867aeba8284d06bf3dbf0e9b852f995bb8d49e15ad0430ca3e2d93354b9e6f44"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "lamp-off",
+      "task_id": "lamps",
+      "family": "wood-defense",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "lamp-off.png",
+          "sha256": "da081a96a1cd8a9af280517637015ebfc128a3befe4e960fa9cbcd7a134fef8b"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "lamp-on",
+      "task_id": "lamps",
+      "family": "wood-defense",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "lamp-on.png",
+          "sha256": "213a940216b63e612c310f9293914aae6e821d64c081df869bf59f722d82468f"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "toolbox",
+      "task_id": "scene",
+      "family": "forest-map",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "toolbox.png",
+          "sha256": "473659b7e6dea292a54e9538eaefd16b3abf563c7ea9e407d2c201e61ae53e2d"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "woodpile",
+      "task_id": "scene",
+      "family": "forest-map",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "woodpile.png",
+          "sha256": "33dfa3eb8dc4972ab8703eacc41be6d4b6b4549cc5b169fc140a1d23365a777b"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "crystal-cluster",
+      "task_id": "scene",
+      "family": "forest-map",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "crystal-cluster.png",
+          "sha256": "376facaff3d2cee60cbf13d30040efa05f74dbb300d38d48a9018f110f834498"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "herb-bush",
+      "task_id": "scene",
+      "family": "forest-map",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "herb-bush.png",
+          "sha256": "fcf1074673a3ed94f5c06d46ae11181293f6a5d2b0fe9662c12aac33b8ea0fea"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "broken-arch",
+      "task_id": "scene",
+      "family": "forest-map",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "broken-arch.png",
+          "sha256": "27130d535b8a98bb08ddf0ccfca995e1c863b1c70b962e7ffea3f9ff1fd48943"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "signpost",
+      "task_id": "scene",
+      "family": "forest-map",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "signpost.png",
+          "sha256": "c522cae10fb0a9c3e294ea4c82dedfc5900c24fe69e1d4311e2738acdc78c509"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "mushrooms",
+      "task_id": "scene",
+      "family": "forest-map",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "mushrooms.png",
+          "sha256": "3de32a423ff906735f97a1ed1d98373b3da580c8539eebc19c9d9bed49095958"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "reeds",
+      "task_id": "scene",
+      "family": "forest-map",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "reeds.png",
+          "sha256": "0216c5d3892ce028df1dca249766ecbaf1cc66801a93713e75ec485d251125ec"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "foreground-branch",
+      "task_id": "scene",
+      "family": "forest-map",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "foreground-branch.png",
+          "sha256": "940c4eb43b3c38419bbbe84b8c8ce016cb852b29922d8b0124a8e1c6433776d5"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "moss-rock",
+      "task_id": "scene",
+      "family": "forest-map",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "moss-rock.png",
+          "sha256": "4c981ec948e7aabb1d63053c3a8006dd7a8eebc19ef26571a5d99407fe3e164b"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "resource-plaque",
+      "task_id": "ui",
+      "family": "watch-hud",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "resource-plaque.png",
+          "sha256": "a7df08525e8d22ba631fc632b2503901792fba91a98e3bd9c326e6c57012328b"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "skill-medallion",
+      "task_id": "ui",
+      "family": "watch-hud",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "skill-medallion.png",
+          "sha256": "7f72ae5682f59064c094b6ca26158049b08dbc337460cdf4ae288a8b2c16b245"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "build-wheel",
+      "task_id": "ui",
+      "family": "watch-hud",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "build-wheel.png",
+          "sha256": "72ae2c4d1b70e58b3baf7d7718eaea18af312959a4cb36e108d07d18c529b711"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    },
+    {
+      "asset_id": "inventory-tray",
+      "task_id": "ui",
+      "family": "watch-hud",
+      "baseline": {
+        "project_id": "duskwood-watch",
+        "version": "0.3.1",
+        "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+      },
+      "files": [
+        {
+          "path": "inventory-tray.png",
+          "sha256": "9cd3ce2984fbb23c5ad5e07e041c280b9cffe8f1494c68f9461a863a0fa262fd"
+        }
+      ],
+      "reviews": [
+        {
+          "criterion": "style-self-review",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "rgba-and-export",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "target-size-readability",
+          "result": "pass",
+          "evidence_path": "world-review.md"
+        },
+        {
+          "criterion": "in-game-assembly",
+          "result": "unknown",
+          "evidence_path": "world-review.md"
+        }
+      ]
+    }
+  ]
+}

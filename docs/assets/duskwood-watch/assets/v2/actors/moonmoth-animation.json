@@ -1,0 +1,294 @@
+{
+  "assetId": "DW-V2-MOONMOTH",
+  "status": "candidate",
+  "approval": null,
+  "file": "moonmoth-walk.png",
+  "frameWidth": 448,
+  "frameHeight": 448,
+  "count": 8,
+  "fps": 10,
+  "loop": true,
+  "idleFrame": 0,
+  "anchor": {
+    "x": 0.5,
+    "y": 0.9419642857142857
+  },
+  "anchorPx": {
+    "x": 224,
+    "y": 422
+  },
+  "registrationRootPx": {
+    "x": 224,
+    "y": 288
+  },
+  "displayHeight": 112,
+  "contentHeightAtDisplay": [
+    67.0,
+    60.2,
+    40.8,
+    42.8,
+    41.5,
+    51.2,
+    58.8,
+    66.8
+  ],
+  "contentWidthAtDisplay": [
+    41.2,
+    51.5,
+    65.5,
+    52.8,
+    44.5,
+    57.0,
+    55.8,
+    41.8
+  ],
+  "facing": "right-three-quarter",
+  "behavior": "fast flying; articulated wing flap; thorax registration, ground projection anchor",
+  "frames": [
+    {
+      "x": 0,
+      "y": 0,
+      "w": 448,
+      "h": 448,
+      "durationMs": 100.0,
+      "sourceCrop": [
+        66,
+        17,
+        332,
+        445
+      ],
+      "sourceRoot": [
+        236,
+        369
+      ],
+      "uniformScale": 0.64,
+      "destinationOffset": [
+        115,
+        63
+      ],
+      "boundsAlphaGt96": [
+        118,
+        66,
+        283,
+        334
+      ],
+      "phase": "upstroke apex"
+    },
+    {
+      "x": 448,
+      "y": 0,
+      "w": 448,
+      "h": 448,
+      "durationMs": 100.0,
+      "sourceCrop": [
+        388,
+        60,
+        720,
+        445
+      ],
+      "sourceRoot": [
+        604,
+        369
+      ],
+      "uniformScale": 0.64,
+      "destinationOffset": [
+        86,
+        90
+      ],
+      "boundsAlphaGt96": [
+        89,
+        92,
+        295,
+        333
+      ],
+      "phase": "downstroke begins"
+    },
+    {
+      "x": 896,
+      "y": 0,
+      "w": 448,
+      "h": 448,
+      "durationMs": 100.0,
+      "sourceCrop": [
+        738,
+        182,
+        1155,
+        445
+      ],
+      "sourceRoot": [
+        1020,
+        368
+      ],
+      "uniformScale": 0.64,
+      "destinationOffset": [
+        44,
+        169
+      ],
+      "boundsAlphaGt96": [
+        47,
+        171,
+        309,
+        334
+      ],
+      "phase": "wide downstroke"
+    },
+    {
+      "x": 1344,
+      "y": 0,
+      "w": 448,
+      "h": 448,
+      "durationMs": 100.0,
+      "sourceCrop": [
+        1177,
+        249,
+        1515,
+        522
+      ],
+      "sourceRoot": [
+        1383,
+        367
+      ],
+      "uniformScale": 0.64,
+      "destinationOffset": [
+        92,
+        212
+      ],
+      "boundsAlphaGt96": [
+        94,
+        214,
+        305,
+        385
+      ],
+      "phase": "swept below body"
+    },
+    {
+      "x": 1792,
+      "y": 0,
+      "w": 448,
+      "h": 448,
+      "durationMs": 100.0,
+      "sourceCrop": [
+        55,
+        743,
+        341,
+        1008
+      ],
+      "sourceRoot": [
+        240,
+        861
+      ],
+      "uniformScale": 0.64,
+      "destinationOffset": [
+        106,
+        212
+      ],
+      "boundsAlphaGt96": [
+        108,
+        214,
+        286,
+        380
+      ],
+      "phase": "lowest wings"
+    },
+    {
+      "x": 2240,
+      "y": 0,
+      "w": 448,
+      "h": 448,
+      "durationMs": 100.0,
+      "sourceCrop": [
+        388,
+        615,
+        753,
+        944
+      ],
+      "sourceRoot": [
+        635,
+        868
+      ],
+      "uniformScale": 0.64,
+      "destinationOffset": [
+        66,
+        126
+      ],
+      "boundsAlphaGt96": [
+        69,
+        129,
+        297,
+        334
+      ],
+      "phase": "recovery flex"
+    },
+    {
+      "x": 2688,
+      "y": 0,
+      "w": 448,
+      "h": 448,
+      "durationMs": 100.0,
+      "sourceCrop": [
+        780,
+        571,
+        1135,
+        946
+      ],
+      "sourceRoot": [
+        1016,
+        869
+      ],
+      "uniformScale": 0.64,
+      "destinationOffset": [
+        73,
+        97
+      ],
+      "boundsAlphaGt96": [
+        75,
+        99,
+        298,
+        334
+      ],
+      "phase": "rising spread"
+    },
+    {
+      "x": 3136,
+      "y": 0,
+      "w": 448,
+      "h": 448,
+      "durationMs": 100.0,
+      "sourceCrop": [
+        1228,
+        522,
+        1496,
+        946
+      ],
+      "sourceRoot": [
+        1396,
+        869
+      ],
+      "uniformScale": 0.64,
+      "destinationOffset": [
+        116,
+        66
+      ],
+      "boundsAlphaGt96": [
+        118,
+        67,
+        285,
+        334
+      ],
+      "phase": "near apex"
+    }
+  ],
+  "projectPack": {
+    "id": "duskwood-watch",
+    "generatedAgainstVersion": "0.3.0",
+    "generatedAgainstFingerprint": "48e6130af23163006c00f453dffc6e2d5456558fac1d79098b46615d75616d0c",
+    "compatibleVersion": "0.3.1",
+    "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88",
+    "status": "draft"
+  },
+  "source": "../../../evidence/v2/actors/raw/moonmoth-flight-raw-v1.png",
+  "sourceSha256": "588062538916a95a5a0452e5bbbba686e1e5b6f4e93c216cba042b3fdfe60266",
+  "sha256": "7c6d5b4e774beb5e1abbbd3fa32106975f38a59843a2eb8c3e4cbc418379e9d2",
+  "production": "8 original image_gen poses; deterministic slicing, one uniform scale, root registration only",
+  "review": "../../../evidence/v2/actors/actors-review.md"
+}

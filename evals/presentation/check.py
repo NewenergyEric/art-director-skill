@@ -84,16 +84,16 @@ def main():
               path.is_file() and path.stat().st_size == item['bytes']
               and hashlib.sha256(path.read_bytes()).hexdigest() == item['sha256'])
 
-    check('Chinese README compatibility copy stays synchronized with the default',
-          (ROOT / 'README.zh.md').read_bytes() == (ROOT / 'README.md').read_bytes())
-    for lang, readme in [('zh', 'README.md'), ('en', 'README.en.md')]:
+    check('English README compatibility copy stays synchronized with the default',
+          (ROOT / 'README.en.md').read_bytes() == (ROOT / 'README.md').read_bytes())
+    for lang, readme in [('en', 'README.md'), ('en', 'README.en.md'), ('zh', 'README.zh.md')]:
         text = (ROOT / readme).read_text(encoding='utf-8')
         images = re.findall(r'<img\b[^>]*src="([^"]+)"', text)
         gifs = [urlsplit(src).path for src in images if urlsplit(src).path.endswith('.gif')]
         check(readme + ': one canonical repository-hosted GIF',
               gifs == [f'assets/readme/depth-preview-{lang}.gif'])
         check(readme + ': one introduction instead of competing web interfaces',
-              ('docs/landing.en.html' if lang == 'en' else 'docs/landing.html') in text
+              ('docs/landing.html' if lang == 'en' else 'docs/landing.zh.html') in text
               and not any(name in text for name in ('workbench.html', 'showcase.html', 'call-flow.html', 'team-production.html')))
         expected_claim = '一个团队/项目，一份视觉记忆。' if lang == 'zh' else 'One team, one visual memory.'
         check(readme + ': uses the shared core claim', expected_claim in text)
@@ -127,7 +127,7 @@ def main():
         public_text += '\n' + text
         if name in ('landing.html', 'landing.en.html', 'landing.zh.html'):
             check(name + ': loads the shared visual-memory stylesheet', 'assets/visual-memory.css' in text)
-            lang = 'en' if name == 'landing.en.html' else 'zh'
+            lang = 'zh' if name == 'landing.zh.html' else 'en'
             check(name + ': player and captions match its language',
                   f'depth-showcase-{lang}.mp4' in text
                   and f'workflow-{lang}.vtt' in text
@@ -168,17 +168,17 @@ def main():
           all(token in stylesheet for token in ('#001f3f', '#007d86', '#92e4da',
                                                 'prefers-reduced-motion', ':focus-visible')))
     landing = (ROOT / 'docs/landing.html').read_text(encoding='utf-8')
-    english_landing = (ROOT / 'docs/landing.en.html').read_text(encoding='utf-8')
-    check('Chinese default and complete English alternate declare their languages',
-          '<html lang="zh-CN">' in landing and '<html lang="en">' in english_landing)
-    check('Chinese page compatibility copy stays synchronized with the default',
-          (ROOT / 'docs/landing.zh.html').read_bytes() == (ROOT / 'docs/landing.html').read_bytes())
+    chinese_landing = (ROOT / 'docs/landing.zh.html').read_text(encoding='utf-8')
+    check('English default and complete Chinese alternate declare their languages',
+          '<html lang="en">' in landing and '<html lang="zh-CN">' in chinese_landing)
+    check('English page compatibility copy stays synchronized with the default',
+          (ROOT / 'docs/landing.en.html').read_bytes() == (ROOT / 'docs/landing.html').read_bytes())
     check('language links open the opposite edition',
-          'data-language-link href="landing.en.html"' in landing
-          and 'data-language-link href="landing.html"' in english_landing)
+          'data-language-link href="landing.zh.html"' in landing
+          and 'data-language-link href="landing.html"' in chinese_landing)
     check('language editions keep the same section and control IDs',
           set(re.findall(r'\bid="([^"]+)"', landing))
-          == set(re.findall(r'\bid="([^"]+)"', english_landing)))
+          == set(re.findall(r'\bid="([^"]+)"', chinese_landing)))
     ids = re.findall(r'\bid="([^"]+)"', landing)
     check('introduction IDs are unique', len(ids) == len(set(ids)))
     for anchor in re.findall(r'href="#([^"]+)"', landing):

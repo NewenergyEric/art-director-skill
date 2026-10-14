@@ -1,0 +1,1172 @@
+{
+  "status": "candidate",
+  "human_approval": null,
+  "project_version": "0.3.0",
+  "project_pack": "examples/tidekeeper-production/style-pack.json",
+  "assets": [
+    {
+      "asset_id": "nails-1",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: single transparent merge-game item sprite, Tidekeeper shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 is the existing teal lamp showing camera and broad form; image 2 is the toolbox showing the timber and steel treatment; image 3 is bundled wood showing warm light and chunky small-scale readability. Do not reproduce the reference objects.\nCreate ONE small bundle of FOUR sturdy short iron nails, fanned very slightly, with broad flattened circular heads and clean pointed shafts, held together by one short teal cloth binding. The steel is muted blue-gray iron with a broad warm bevel highlight; the cloth is matte sea-green, with one tiny coral fastening knot. Iron must look different from cloth. Keep the nails individually understandable and the bundle compact.\nMatch the existing casual harbor merge-game illustration: slightly elevated three-quarter view, rounded chunky silhouettes, broad painted gradients, restrained edge definition, warm upper-left light, soft cool lower-right shading. Honey-gold, teal, coral accents only where functional. Friendly, rich color; hand-painted game sprite finish, not a photograph, not a flat vector, not glossy plastic.\nSquare canvas, centered entire object, 78–86% occupied width/height, generous clean margin. One item only. All outlines fully visible. Actual transparent background with clean alpha edges; no floor, no display base, no cast shadow, no atmospheric glow, no UI, no lettering, no numerals, no watermark. This is the level-1 nails item, visibly simple and smaller in silhouette than a future hardware box.",
+      "source": "source/nails-1-v1.png",
+      "final": "nails-1.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "a011906201f3f8ea6b506c1b6db2cb66b6438abf19c698e71e0169ebb9674598"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          512,
+          512
+        ],
+        "offset_px": [
+          0,
+          0
+        ],
+        "padding_correction": false
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.645905,
+        "alpha_ge_32_bbox": [
+          60,
+          52,
+          459,
+          451
+        ],
+        "max_dimension_occupancy": 0.779297,
+        "outermost_border_alpha_max": 0,
+        "bytes": 199920,
+        "sha256": "7963c12b179b5901569564d1169a290fbd88c7412d3cb0fb91c13c5605483b90",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Three front nail heads and the partly hidden fourth nail read as one compact steel bundle. Broad pointed shafts remain visible at 46/50px; matte binding and steel are visually distinct."
+      }
+    },
+    {
+      "asset_id": "nails-2",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png",
+        "docs/assets/tidekeeper-playable/art/expansion/nails-1.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: A level-2 harbor hardware box, wider and more substantial than the level-1 nail bundle. One short open honey-colored wooden compartment box with rounded teal metal corner bands and a single coral clasp. Inside, a clearly visible group of large blue-gray iron nails and ONE broad L-shaped steel repair bracket. Three or four chunky parts total, readable at 50px. The solid wooden front lip partly hides the nail shafts. Nails must match the steel-gray broad nail heads of input image 4, which is the level-1 item style reference. Box grain is broad and sparse; steel has one smooth bevel highlight. No cloth binding, no hammer, no wrench, no lid floating behind. This is one box of hardware, not an arrangement of separate inventory icons.",
+      "source": "source/nails-2-v1.png",
+      "final": "nails-2.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "581f38ab3f2adb122c0f50e7b2edec70264fba081539577140750a4416646a99"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          512,
+          512
+        ],
+        "offset_px": [
+          0,
+          0
+        ],
+        "padding_correction": false
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.482563,
+        "alpha_ge_32_bbox": [
+          29,
+          66,
+          483,
+          470
+        ],
+        "max_dimension_occupancy": 0.886719,
+        "outermost_border_alpha_max": 0,
+        "bytes": 257026,
+        "sha256": "b99e69bcb3cf685bc1360020ca8005ee28c930ec48e87bbd313184bd6291ed5a",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Open timber hardware box has a wider, heavier silhouette than nails-1. Large bracket and nail heads remain identifiable at 50px; wood and steel separate by hue and broad highlights."
+      }
+    },
+    {
+      "asset_id": "rope-1",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: ONE compact flat coil of thick warm golden hemp rope, four generously sized loops with a small visible center opening; a short curved rope end rests against the coil. One sea-green retaining strap with a small coral wooden toggle holds the coil at the lower right. Broad stylized diagonal rope twist marks, matte coarse fiber material suggested sparingly, no hundreds of fine hairs. Warm buff rope distinct from green cloth. The coil is clearly a circular rope bundle, low and oval in the shared three-quarter view, sturdy rounded form. No anchor, hook, knots spilling far outside, or other tools.",
+      "source": "source/rope-1-v1.png",
+      "final": "rope-1.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "3f143ee966b9735cf7f41795bddbdbf3f32c4774e66ad71bf62b15d3c2c13a4f"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          487,
+          487
+        ],
+        "offset_px": [
+          12,
+          12
+        ],
+        "padding_correction": true
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.550335,
+        "alpha_ge_32_bbox": [
+          36,
+          89,
+          476,
+          425
+        ],
+        "max_dimension_occupancy": 0.859375,
+        "outermost_border_alpha_max": 0,
+        "bytes": 254700,
+        "sha256": "bada44c3c2544465bbd84c7bea1d01f9d489ae82070bbecfa5fd5c61f2bc5e29",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Round low coil, broad hemp twist and small teal binding are clear at 46/50px; the warm matte rope remains distinct from the brass objects."
+      }
+    },
+    {
+      "asset_id": "rope-2",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png",
+        "docs/assets/tidekeeper-playable/art/expansion/rope-1.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: ONE compact level-2 pulley rig: a thick teal-painted metal single-sheave block with a large honey-brass grooved wheel visibly inside its oval open housing; a short broad steel hanging hook above; thick warm golden hemp rope runs correctly over that wheel and gathers into a small tidy coil below and to the left. Match the matte broad-twist rope in input image 4, which is the level-1 rope style reference. One coral axle cap. This is one connected usable hoisting rig, with a taller distinct silhouette than the simple coil. Keep load-bearing attachments clear; no thin suspended lines, no giant anchors, no duplicate wheels, no tiny hardware. Teal painted metal, brass wheel, and fibrous rope must have different material highlights.",
+      "source": "source/rope-2-v1.png",
+      "final": "rope-2.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "fd58ec7287482f483834eb271144c9cdb0f530b267883afccedee86a8f1f1ed9"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          453,
+          453
+        ],
+        "offset_px": [
+          29,
+          29
+        ],
+        "padding_correction": true
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.723316,
+        "alpha_ge_32_bbox": [
+          101,
+          36,
+          396,
+          477
+        ],
+        "max_dimension_occupancy": 0.861328,
+        "outermost_border_alpha_max": 0,
+        "bytes": 168775,
+        "sha256": "5d8ff28a6e900c0153391f1af0267223dd1eff515280d8b3d45b35fab81be3fd",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Tall hook/block/coil silhouette clearly differs from the simple coil; rope enters the visible sheave channel. Thin-looking at 46px but hook and teal housing are still identifiable. Full canvas was padded to preserve clean margins."
+      }
+    },
+    {
+      "asset_id": "tool-1",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: ONE sturdy small carpenter's claw hammer, shown diagonally rising from lower-left handle to upper-right head, fully visible. Thick honey-colored wooden handle with broad warm grain and rounded end, short matte sea-green grip wrap at the very bottom secured with one coral peg. Head is blue-gray forged steel with a round striking face to the left and a single broad split claw at right, the two claw tips clearly joined at the hammerhead. Simplified broad planes, rounded safe-looking game proportions, functional recognizable hammer; no long thin claw, nails, saw or extra tools. Wood is matte and warm; steel is smooth muted gray with a broad upper-left bevel highlight.",
+      "source": "source/tool-1-v1.png",
+      "final": "tool-1.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "1b0e660df7b79b3463192d157ab8efe4709bcf94861074352ecb54f78941f81b"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          512,
+          512
+        ],
+        "offset_px": [
+          0,
+          0
+        ],
+        "padding_correction": false
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.702766,
+        "alpha_ge_32_bbox": [
+          85,
+          43,
+          474,
+          480
+        ],
+        "max_dimension_occupancy": 0.853516,
+        "outermost_border_alpha_max": 0,
+        "bytes": 157761,
+        "sha256": "46c91afb5c37d5ac7968735238dfd85313a28ce1aa9f7e9dea7ca45752f26dce",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Single diagonal hammer remains recognizable at 46px. Head, claw, wood and grip are separated without fine hardware."
+      }
+    },
+    {
+      "asset_id": "tool-2",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png",
+        "docs/assets/tidekeeper-playable/art/expansion/tool-1.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: ONE compact installation tool kit for repairing a harbor lighthouse's WOODEN lamp-room frame, timber railings and maintenance ladder. A folded thick sea-green canvas tool roll holds a chunky wood-handled steel hammer and one short carpenter's hand saw with a broad blue-gray blade, six clear blunt teeth and a honey wooden closed handle. Hammer matches input image 4, the level-1 tool style reference. A small group of two or three spare steel nails and one folded cream wiping cloth are tucked in the front pocket. A coral strap with a broad brass buckle securely ties the kit into ONE cohesive inventory item; tool heads rise visibly above it. No decorative toolbox, no extra wrench, no stonework tools. Hammer, saw, usable consumables; balanced, larger and wider than a single hammer. Make the canvas matte, wood softly grained, steel gently beveled. Do not cram in tiny parts.",
+      "source": "source/tool-2-v1.png",
+      "final": "tool-2.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "03eb771fced9574a5ee0e205257b937b100683e5c5ede0175875b11e55002e7e"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          477,
+          477
+        ],
+        "offset_px": [
+          17,
+          17
+        ],
+        "padding_correction": true
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.492481,
+        "alpha_ge_32_bbox": [
+          40,
+          58,
+          481,
+          465
+        ],
+        "max_dimension_occupancy": 0.861328,
+        "outermost_border_alpha_max": 0,
+        "bytes": 291304,
+        "sha256": "7ce459e76f17ce84b43d1273bedadf0c876cce427de6be26ad737cf142b116d6",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Installation kit shows hammer and saw as its two primary tools, with spare nails and cloth as secondary contents. Canvas roll stays one cohesive inventory shape at 50px. Full canvas was padded."
+      }
+    },
+    {
+      "asset_id": "glass-1",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: TWO broad smooth pieces of tumbled sea-blue glass, slightly overlapping as ONE inventory item. One larger softly rounded irregular quadrilateral in pale turquoise at back, one smaller rounded triangular piece in deeper aqua in front. These are thick translucent beach glass panes with blunt wave-worn rims, softly glowing light TRANSMITTED INSIDE the glass only, subtle broad cream upper-left reflection and darker cyan edges. Frosted glass surfaces, minimal texture, distinctly translucent rather than plastic or gems. No cut crystal facets, no cracks, no sparkles outside, no sand, no holder, no metal frame, no colored cloth. The overlap remains readable at tiny size; simple two-part silhouette.",
+      "source": "source/glass-1-v1.png",
+      "final": "glass-1.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "ec47549671b1b107a2fbb837cb044fb7bdef68b563f5a560712496e0d8f50906"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          512,
+          512
+        ],
+        "offset_px": [
+          0,
+          0
+        ],
+        "padding_correction": false
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.527317,
+        "alpha_ge_32_bbox": [
+          42,
+          65,
+          475,
+          459
+        ],
+        "max_dimension_occupancy": 0.845703,
+        "outermost_border_alpha_max": 1,
+        "bytes": 227938,
+        "sha256": "4eb18752b4cf65198eba076055682d5f29fc260b008e1d3c4468dcad0a47ae75",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Two rounded frosted blue panes retain their overlap and distinct two-piece silhouette at 46/50px. Pale upper-left highlight is internal to glass; no detached sparkle or backdrop."
+      }
+    },
+    {
+      "asset_id": "glass-2",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png",
+        "docs/assets/tidekeeper-playable/art/expansion/glass-1.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: ONE circular lighthouse optical lens with a thick rounded honey-brass rim, angled gently into the shared slightly elevated three-quarter view. Its large sea-blue convex glass face has three broad concentric optical rings and a pale cream upper-left reflection. Glass color and softly translucent feel match the tumbled sea glass in input image 4; now refined into a useful lens with distinct glass-and-metal materials. A slim teal rear band visible on the lower-right rim; one restrained coral alignment mark on the brass rim, no writing. The full circular rim remains unbroken. No stand, handle, lamp body, backing board, pedestal, light beam, extra objects or external glow. Clean broad disc silhouette, visibly different from the two loose glass pieces.",
+      "source": "source/glass-2-v1.png",
+      "final": "glass-2.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "ae6f78640241be74cdd85dfbe4352c35a3068b15bb542cbe5b01c1319a4317ae"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          512,
+          512
+        ],
+        "offset_px": [
+          0,
+          0
+        ],
+        "padding_correction": false
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.462849,
+        "alpha_ge_32_bbox": [
+          49,
+          37,
+          467,
+          464
+        ],
+        "max_dimension_occupancy": 0.833984,
+        "outermost_border_alpha_max": 1,
+        "bytes": 279404,
+        "sha256": "5b588047391ea18bd8398f1760dd7b133dcb62688f7a7127ea529f258b9bee3f",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Concentric optical face, broad brass bezel and teal back ring form one circular lens. It is distinct from loose glass and gold coins at all checked sizes."
+      }
+    },
+    {
+      "asset_id": "oil-1",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: ONE short stout amber-glass lamp-oil bottle with softly squared round shoulders, a small thick neck, and a broad natural cork stopper. Amber golden liquid visible through warm translucent glass with a simple horizontal fill level, single broad cream reflection on upper-left. A narrow matte teal cloth band wraps the lower neck and is secured by one small coral wax-like clasp, blank and unlettered. Rounded stable bottom, no separate base, no handle, no pouring spout, no paper label or label-shaped empty rectangle. Cork has a few broad soft grain marks, glass is translucent rather than plastic, cloth is matte. Simple compact level-1 supply bottle.",
+      "source": "source/oil-1-v1.png",
+      "final": "oil-1.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "d6f63eb8d3b22d9dd6def93229530cea374802ade77dc94c9f3091e003ce6105"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          512,
+          512
+        ],
+        "offset_px": [
+          0,
+          0
+        ],
+        "padding_correction": false
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.545967,
+        "alpha_ge_32_bbox": [
+          72,
+          35,
+          439,
+          483
+        ],
+        "max_dimension_occupancy": 0.875,
+        "outermost_border_alpha_max": 0,
+        "bytes": 213452,
+        "sha256": "b37f839ab31123c061aa469c4c9a9824e292c63394e3d78a1e67c252423b1007",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Amber bottle, cork and horizontal oil level are clear at 50px. Glass has broad transmitted-light shapes and differs from metal cans and matte canvas."
+      }
+    },
+    {
+      "asset_id": "oil-2",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png",
+        "docs/assets/tidekeeper-playable/art/expansion/oil-1.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: ONE large sturdy harbor lamp-oil pouring can, the level-2 upgrade to the small amber oil bottle in image 4. A rounded pear-shaped sea-green enameled METAL reservoir, wide honey-brass upper shoulder and base band, one thick loop carry handle on the left, and one short substantial curved brass pouring spout rising to the upper right with a clearly open round tip. Small snug brass filler lid on top with a coral thumb tab. One compact amber glass oil-level window inset in the front, blank and unlettered, with golden oil visible. Must read as a useful oil can, not a kettle: no steam, no flame, no cup. Friendly large silhouette, visibly more capable than the bottle. Broad smooth painted-metal shading distinct from brass and the tiny amber window; no uniform plastic shine. Entire spout and handle safely inside wide clean margins, no drip, no detached parts.",
+      "source": "source/oil-2-v1.png",
+      "final": "oil-2.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "25822e10c299c3fb437e5c304ef6e952f3ae036efc5a187b38a28830df67feee"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          468,
+          468
+        ],
+        "offset_px": [
+          22,
+          22
+        ],
+        "padding_correction": true
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.521618,
+        "alpha_ge_32_bbox": [
+          38,
+          48,
+          479,
+          468
+        ],
+        "max_dimension_occupancy": 0.861328,
+        "outermost_border_alpha_max": 0,
+        "bytes": 235210,
+        "sha256": "eee759d06ebf840e9ea1c54ef0e7256cb067952a3ab927132213e6ef28a5c46c",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Large spout and loop handle make the metal pouring can distinct from oil-1; amber level window helps identify it as a reservoir. Full canvas was padded to keep the spout within safe margins."
+      }
+    },
+    {
+      "asset_id": "coin-pile",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png",
+        "docs/assets/tidekeeper-production/coin.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: ONE small compact pile of FIVE gold harbor coins. Image 4 is the exact existing coin identity reference: keep its broad round golden rim, warm inset center, and raised simple scallop-shell emblem with five broad lobes. Two short overlapping stacks and one tilted face coin at the front make a single cohesive pile, with only two clearly exposed shell faces. Vary coin orientations naturally, not a grid. Match the coin's honey gold and buttery highlight exactly, smooth broad metallic planes, crisp readable shell, no extra engravings or numbers. No bag, chest, ribbon, gems, dust, sparkles, text, banknotes or extra props. Distinct pile silhouette, restrained count, actual transparent background without cast shadow.",
+      "source": "source/coin-pile-v1.png",
+      "final": "coin-pile.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "2684c57ac1572a41c1e847f3f77ca2465aa3b847a2a5bd31c7e0f75034e00ee1"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          512,
+          512
+        ],
+        "offset_px": [
+          0,
+          0
+        ],
+        "padding_correction": false
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.513168,
+        "alpha_ge_32_bbox": [
+          33,
+          65,
+          486,
+          451
+        ],
+        "max_dimension_occupancy": 0.884766,
+        "outermost_border_alpha_max": 1,
+        "bytes": 231687,
+        "sha256": "bea8e90416bf95e9d2fa3b7d4d9c43b029fc1995e3f30994c42c2f68d01c34b9",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Two exposed shell faces retain the original coin emblem and warm gold. Five overlapping coins form a compact pile instead of repeated separate icons."
+      }
+    },
+    {
+      "asset_id": "shipping-token",
+      "status": "candidate",
+      "human_approval": null,
+      "tool": "image_gen",
+      "tool_model_version": null,
+      "tool_seed": null,
+      "transparent_background": true,
+      "input_references": [
+        "docs/assets/tidekeeper-production/lamp-l1.png",
+        "docs/assets/tidekeeper-production/producer.png",
+        "docs/assets/tidekeeper-production/wood-l2.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: ONE independent transparent item sprite for Tidekeeper, a warm casual harbor merge game, shared style pack 0.3.0, candidate.\nInput images are STYLE REFERENCES ONLY: image 1 lamp = broad volume, camera, warm light; image 2 toolbox = material treatment; image 3 bundled wood = silhouette and broad color blocks. Do not reproduce the reference objects.\nStyle: slightly elevated three-quarter view, rounded chunky usable forms, broad painted shading, restrained edges, warm upper-left light and cool lower-right shade. Sea-green/teal, honey gold, a small coral accent. Friendly polished hand-painted casual-game sprite, not a photograph, not flat vector. Distinct materials, not uniform plastic.\nComposition: square, centered whole item, 78–86% of frame occupied in maximum dimension, complete clear silhouette and clean margin. Actual transparent RGBA background. NO floor, base, cast shadow, UI, text, numerals, watermark, outer glow, thin fussy parts or photographic texture.\nSubject: ONE physical harbor shipping token, a thick rounded rectangular metal badge with gently clipped corners, angled slightly into the shared three-quarter view. Sea-blue enamel face within a broad honey-brass rim; one large simple raised brass ANCHOR emblem centered, with a clear round top ring, horizontal stock and two balanced curved flukes. A short coral cloth tab loops through a small brass eye at the upper-left corner, attached to the badge as one cohesive object. The anchor silhouette must be bold and readable at 50 pixels. This token is a tangible collectible port pass, not a UI button or a logo graphic. No letter, number, fake text, perforation text, paper ticket, shell emblem, coins, extra medallions or sparkles. Enamel, brushed brass and cloth have separate material response. Keep its compact wide silhouette distinct from round coins and a circular lens.",
+      "source": "source/shipping-token-v1.png",
+      "final": "shipping-token.png",
+      "source_technical": {
+        "size_px": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "sha256": "262067a70759def151c51c6d63ffcc99120a6a945a785ebb33b69e2170bcd1da"
+      },
+      "export": {
+        "size_px": [
+          512,
+          512
+        ],
+        "mode": "RGBA",
+        "method": "Entire original canvas uniformly resized and centered on transparent 512x512; no crop, recoloring, repainting, or background replacement.",
+        "resized_canvas_px": [
+          512,
+          512
+        ],
+        "offset_px": [
+          0,
+          0
+        ],
+        "padding_correction": false
+      },
+      "technical": {
+        "size_px": [
+          512,
+          512
+        ],
+        "alpha_range": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.48827,
+        "alpha_ge_32_bbox": [
+          42,
+          39,
+          479,
+          482
+        ],
+        "max_dimension_occupancy": 0.865234,
+        "outermost_border_alpha_max": 0,
+        "bytes": 277227,
+        "sha256": "cbb2f468fa5f48cceb1b8a60714c8aacffde95a2df37da3d29c093a1d553f196",
+        "checks": {
+          "square_512": true,
+          "actual_transparency": true,
+          "occupancy_70_to_90_percent": true,
+          "no_solid_edge_clipping": true
+        }
+      },
+      "visual_review": {
+        "status": "agent_checked_candidate",
+        "human_approval": null,
+        "tool_output_seen": true,
+        "checked_sizes_px": [
+          46,
+          50,
+          64,
+          96
+        ],
+        "backgrounds": [
+          "cream #fff3d4",
+          "existing board colors #bdd8ba and #adceb0"
+        ],
+        "evidence": [
+          "evals/tidekeeper-expansion/props-review.png",
+          "evals/tidekeeper-expansion/props-scale-review.png"
+        ],
+        "observation": "Raised anchor has a clear top ring, stock and two flukes. Rectangular enamel badge and coral tab remain distinct from round coin and lens at 46/50px."
+      }
+    }
+  ],
+  "independent_generation_calls": 12,
+  "generated_sheet_slicing": false,
+  "date": "2026-10-13",
+  "technical_verification": "passed",
+  "visual_review": "agent_checked_candidate",
+  "padding_corrections": [
+    {
+      "id": "rope-1",
+      "source_natural_occupancy": 0.904,
+      "final_occupancy": 0.859
+    },
+    {
+      "id": "rope-2",
+      "source_natural_occupancy": 0.973,
+      "final_occupancy": 0.861
+    },
+    {
+      "id": "tool-2",
+      "source_natural_occupancy": 0.923,
+      "final_occupancy": 0.861
+    },
+    {
+      "id": "oil-2",
+      "source_natural_occupancy": 0.942,
+      "final_occupancy": 0.861
+    }
+  ],
+  "project_pack_sha256_at_verification": "41206e0c8284d2423dcc8645bc06dae077b68ee32f11ce660195e2269d4032af",
+  "scope": "12 independent prop sprites. Runtime, fonts, environments and parent repository were not edited by this task.",
+  "review_summary": {
+    "technical_checks": "12/12 passed",
+    "actual_image_review": "Each returned tool output and both final contact sheets opened and observed.",
+    "style_comparison": "Original lamp-l1, producer, wood-l2 and coin were compared in the same scale sheet. Broad shape, slight top view, upper-left light and teal/coral/honey accents are compatible; steel, fiber, canvas, glass and enamel were differentiated.",
+    "generation_correction_rounds": 0,
+    "export_padding_corrections": 4,
+    "limitations": [
+      "Candidate art, not human approval.",
+      "Runtime integration and normal gameplay interaction checks belong to the parent task.",
+      "Pulley has the narrowest silhouette; inspect its final placement in the actual board before adopting smaller cells than 46px.",
+      "Raw image output includes some very low-alpha fringe pixels; the reviewed 46–96px exports showed no distracting halo on cream and game-board backgrounds."
+    ]
+  }
+}

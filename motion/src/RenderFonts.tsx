@@ -19,12 +19,19 @@ export const RenderFonts: React.FC<{enabled?: boolean}> = ({enabled = false}) =>
 };
 
 export const fieldFont = '"AD Field", "Noto Sans SC", sans-serif';
+export const displayFont = (language: 'en' | 'zh') => language === 'en'
+  ? '"Bree Serif", Georgia, serif'
+  : '"Harbor Brush Display", "AD Field", sans-serif';
 export const FieldFonts: React.FC = () => {
   const [handle] = useState(() => delayRender('Load the OFL variable presentation font'));
   useEffect(() => {
-    const face = new FontFace('AD Field', `url("${staticFile('fonts/field-sans.woff2')}")`, {weight: '100 900'});
-    face.load().then(font => {
-      document.fonts.add(font);
+    const faces = [
+      new FontFace('AD Field', `url("${staticFile('fonts/field-sans.woff2')}")`, {weight: '100 900'}),
+      new FontFace('Bree Serif', `url("${staticFile('fonts/BreeSerif-Regular.ttf')}")`, {weight: '400'}),
+      new FontFace('Harbor Brush Display', `url("${staticFile('fonts/harbor-brush.woff2')}")`, {weight: '500'}),
+    ];
+    Promise.all(faces.map(face => face.load())).then(fonts => {
+      fonts.forEach(font => document.fonts.add(font));
       continueRender(handle);
     }).catch(error => cancelRender(new Error(`Unable to load the presentation font: ${error}`)));
   }, [handle]);

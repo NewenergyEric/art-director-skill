@@ -1,45 +1,45 @@
-[English](HUMAN-GUIDE.en.md) · 中文
+# Use Art Director in your agent
 
-# 在你的 Agent 里使用 Art Director
+English · [中文](HUMAN-GUIDE.zh.md)
 
-Art Director 帮主美逐步建立规范，再把规则、样板与交付要求打包给团队。成员在自己的 Agent 中使用这个包，制作和检查具体设计。个人创作者也可以轮流承担两种角色，跨任务保留已经确认的决定。
+Art Director helps a design lead establish professional rules, then share the rules, samples and delivery requirements as a project pack. Teammates use that pack in their own agents to create and review designs. Solo creators can take both roles and preserve decisions across sessions.
 
-## 1. 安装
+## 1. Install
 
 ```sh
-npx skills add https://github.com/NewenergyEric/art-director-skill
+npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-director
 ```
 
-也可以下载[当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=chinese-primary-20261011)，交给 Agent 安装。核心脚本需要 Python 3.10+。生成或编辑设计使用宿主中已有的工具；Skill 不附带图像模型。
+You can also download a Skill ZIP as the [current build](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-memory-20261013) and ask your agent to install it. Core helpers require Python 3.10+. Creation and editing use tools available in the host; this Skill does not include an image model.
 
-## 2. 主美从现有资料开始
+## 2. Establish direction from existing materials
 
-把作品、参考图、批注和项目目标放进 Agent 能访问的文件夹。不用先准备完整规范。
+Put existing work, reference images, notes and project goals in a folder your agent can access. You do not need a complete specification to begin.
 
-> 使用 `$art-director`。先把这些资料整理成一版美术规范，再带我补齐各类资产和组件要求，用代表样板校准，最后打包给团队。
+> Use `$art-director`. Organize these materials into a first art-direction draft. Help me define the asset and component requirements, calibrate with representative samples, and package the result for the team.
 
-Agent 会先给出具体初稿，说明哪些来自已有决定、哪些是建议、哪些缺少依据。你可以直接说“按钮边缘再厚一些”“角色比例沿用这张”。Agent 负责更新文件，你负责判断方向。
+The agent gives you substantive content and distinguishes existing decisions, proposed rules and missing evidence. Respond naturally: “Make the button edge thicker” or “Keep the proportions from this character.” The agent updates the files; you decide the direction.
 
-最后会形成五份手册：资料索引、项目定位、设计规范、交付与验收、参考与反例。确认的规范、样板、资料与项目专属 Skill 放进同一个包。正式发布前，需要有真实确认记录和必要样板。
+The result includes five guides: material index, project brief, design rules, delivery and review, references and counterexamples. Confirmed rules, samples, materials and the project-specific Skill travel in one pack. A production release requires actual decision records and the necessary samples.
 
-## 3. 成员接收完整项目包
+## 3. Give teammates the complete project pack
 
-主美把导出的完整包压缩分发。成员交给 Agent：
+The director exports and shares the full pack. A teammate gives it to their agent:
 
-> 读取这个项目包。按 UI 规范做默认、按下、禁用三态按钮，先给首件，并说明用了哪些规则、还有哪些检查没做。
+> Read this project pack. Create the default, pressed and disabled button states using its UI rules. Show me a first sample, the rules you used, and anything still needing a check.
 
-Agent 将任务接到相关类别、组件、参考和项目版本。之后继续说“放进主界面检查”“按批注修正”即可。不需要复制主美全部聊天记录，也不用手工填 JSON。
+The agent connects the task to relevant categories, components, references and the project version. Continue with “Check it in the main screen” or “Revise it from these notes.” No need to copy the director’s whole conversation or hand-edit JSON.
 
-只安装通用 Art Director 并不能拿到私有项目规则，成员必须同时收到对应项目包。
+Installing the general Art Director Skill does not provide private project rules. Teammates also need the corresponding project pack.
 
-## 4. 检查、返修和更新
+## 4. Review, revise and update
 
-> 对照规范检查这批结果，列出问题位置、依据和修改建议。先修正这个按钮，再看同类组件有没有同样的问题。
+> Check these assets against the rules. List each issue, its location, the rule behind it and a specific fix. Correct this button, then check related components for the same issue.
 
-结构、尺寸等技术检查与视觉判断分别记录。没检查的内容不会自动通过。影响整个项目的改变交回主美；新任务读取新版本，进行中的任务保留原版本。
+Technical checks and visual judgments have separate records. Unchecked work stays visible. Project-wide changes return to the director; new tasks use the new version while existing tasks retain their original version.
 
-## 5. 接上其他岗位
+## 5. Connect the next role
 
-市场研究判断什么值得做，游戏拆解梳理竞对与资产家族，制作管理评估体量、产能和工作包，美术总监建立原创方向与共享规范。样板、原型反馈和实际工时会反过来修正前面的判断。
+Market Intelligence explores what is worth making. Reverse Analyst examines competitors and asset families. Production Manager assesses scope, capacity and work packages. Art Director develops original visual direction and the shared rules for production. Samples, prototype results and actual effort inform earlier decisions.
 
-[四岗位交接关系](WORKFLOW.md) · [24 秒演示与开场白](landing.html) · [项目包示例](../examples/harbor-studio-draft/guides/00-index.md) · [Agent 与工程接入](AGENT-GUIDE.md)
+[24-second film and prompts](landing.html) · [Four-role handoff map](WORKFLOW.md) · [Example project pack, in Chinese](../examples/harbor-studio-draft/guides/00-index.md) · [Agent and engineering guide](AGENT-GUIDE.md)

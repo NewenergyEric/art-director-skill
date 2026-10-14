@@ -1,4 +1,4 @@
-<p align="right"><strong>中文</strong> · <a href="README.en.md">English</a></p>
+<p align="right"><a href="README.md">English</a> · <strong>中文</strong></p>
 
 [**Game Dev Skills**](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.md) · [市场研究](https://github.com/NewenergyEric/game-market-intelligence) · [游戏拆解](https://github.com/NewenergyEric/game-reverse-analyst) · [制作管理](https://github.com/NewenergyEric/game-production-manager) · **美术总监**
 
@@ -6,16 +6,44 @@
 
 ### 一个团队/项目，一份视觉记忆。
 
-**单张都不错，放在一起却不像同一款游戏？**
+让团队成员与 Agent 按同一套美术判断，为一款游戏制作组件。
 
-Art Director 帮主美把参考、作品和批注，变成团队能沿用的设计规范。先做代表样板，再扩展角色、物品、场景和 UI；每次制作都带上该项目的规则、参考与检查要求。个人制作，也能把上次做对的判断留给下一次。
+## 我和一个美术总监朋友的故事
 
-<a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film"><picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=production-20261013">
-  <img src="assets/readme/depth-preview-zh.gif?v=production-20261013" width="100%" alt="24 秒潮灯小镇：主美建立规范，成员接包续作四类资产，组合、操作、返修。">
+他是我认识的人里，最像 "艺术家" 的那类人。
+
+做游戏这行，很多人聊管线、工具、效率。但他聊的是 —— 一群人怎么通过一个作品跟彼此说话。他在意的是那个很微妙的 "感觉"。
+
+有段时间我们常约饭、喝咖啡。每次聊到工作，他都在吐槽同一件事：又花了一整天，跟人解释 "我们想要的是什么"—— 跟新来的队友，跟外包，跟越来越听话、却越来越没主见的各种 AI。
+
+我问他：你烦的到底是哪一部分？
+
+他想了一下说：不是他们做得不好，是我每次都要从头讲一遍。这一版讲完，下一版又得重来。而且一旦一个游戏被做成纯 "工程"—— 按流程、按参数、按清单 —— 它原本的艺术性、游戏性、那种好玩，就没了。
+
+这句话我记了很久。
+
+因为我既是游戏爱好者，也是个 FDE—— 我的工作本来就是帮人把一件事 "接起来"。我突然意识到：他的问题从来不是品味。他的品味很好。问题是 ——**他的品味没法交接、没法复用**。它只活在他脑子里，活在他每次重新开口的那几分钟里。
+
+所以我们又聊了几轮、做了几场访谈，把他脑子里那套判断 —— 参考、样板、什么能改、什么不能改 —— 一点点捞出来，变成一份别人、甚至 AI 都能接着用的东西。
+
+它不替他设计，也不替他审美。它只是让他的 "感觉"，第一次有了一个可以被传递的载体。
+
+后来，他真的在用了。
+
+这就是我做一个 "视觉记忆" 的原因 —— 让艺术家的感性，不被工程吞掉。
+
+— Eric
+
+## Art Director 做什么
+
+Art Director 帮主美建立视觉语言、代表样板和各类资产的设计要求。团队成员与 Agent 拿到有版本的项目包，明确各自要做的组件、应该遵守的规则和参考，共同产出风格一致的角色、场景、物品与 UI。个人制作时，也能在不同会话中沿用这些判断。
+
+<a href="https://newenergyeric.github.io/art-director-skill/docs/landing.zh.html#film"><picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/depth-preview-zh.jpg?v=human-story-20261013">
+  <img src="assets/readme/depth-preview-zh.gif?v=human-story-20261013" width="100%" alt="24 秒潮灯小镇：主美建立规范，成员接包续作四类资产，组合、操作、返修。">
 </picture></a>
 
-<p align="center"><sub>24 秒：从主美建规范，到成员交付 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a> · <a href="docs/CASE-STUDIES.md">看案例与检查记录</a></sub></p>
+<p align="center"><sub>24 秒：从主美建规范，到成员交付 · <a href="https://newenergyeric.github.io/art-director-skill/docs/landing.zh.html#film">播放清晰版</a> · <a href="docs/assets/motion/depth-showcase-zh.mp4">下载 MP4</a> · <a href="docs/CASE-STUDIES.md">看案例与检查记录</a></sub></p>
 
 ## 装好，在你的 Agent 里开始
 
@@ -29,13 +57,34 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-d
 
 已有规范就接着完善，不必重做。绘图与编辑由 Agent 调用当前可用工具完成；Skill 不附带图像模型。
 
-## 同一份规范，下一位能接着做吗？
+## 试试两个游戏样例
 
-![潮灯小镇：同一角色的不同姿势与完整灯具升级链，按项目规范继续。](docs/assets/tidekeeper-campaign/team-world.png)
+### 潮灯小镇 · 合成与修缮
 
-我们用 **潮灯小镇** 做了一次完整交接：先建立角色、灯房、灯具与 UI 样板，打包后在新目录开始五个任务，继续制作阿澜的新动作、灯房修复状态、L3/L4 灯具和新订单。
+![潮灯小镇 0.5.0 实际游戏：灯塔、修缮订单与合成棋盘。](docs/assets/tidekeeper-playable/gameplay.png?v=lighthouse-20261014)
 
-**第一次没有全通过。** 道具和角色能接上，UI 却像空卡片；横版场景放进竖屏，还裁掉了门窗。于是把这些问题带回规范：补齐订单角色、资源图标、修缮材料、按钮状态和竖版适配，再把实际输出放进同一画面检查。
+用七个合成家族完成修缮订单。**0.5.0 候选版**从修栈桥、修灯塔木构件，到安装透镜、注油点灯、迎接归船，把新物品与连续场景接进原有的港湾美术方向。
+
+[试玩潮灯小镇](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-playable/play.html)
+
+### 暮林守望 · 探索与塔防
+
+![暮林守望：手绘林地、守灯人、森林生物与防御设施。](docs/assets/duskwood-watch/combat.png?v=duskwood-v2-20261014)
+
+提灯巡林、采集物资、布置防线，在同一张地图守过四夜。移动光源能破除暗甲，燃料、物品与升级影响你的布防。这是从同一份项目包继续制作的 **0.4.0 草案**。
+
+[试玩暮林守望](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.html)
+
+两者都是原创浏览器候选样例，尚未经真人主美批准，也未完成真机与生产引擎验收。[查看各 Agent 如何使用 Skill、实际检查与仍存边界](docs/AGENT-ART-TEAM.zh.md)。
+
+<details>
+<summary><strong>潮灯小镇的前次交接与 0.3.0 分层交付</strong></summary>
+
+前次交接先建立角色、灯房、灯具与 UI 样板，打包后在新目录开始五个任务：阿澜的新动作、灯房修复状态、L3/L4 灯具和新订单。这是一位 Agent 在隔离目录里的交接自测。
+
+![潮灯小镇前次角色姿势与灯具家族，按项目规范继续。](docs/assets/tidekeeper-campaign/team-world.png)
+
+第一次没有全通过。道具和角色能接上，UI 却像空卡片；横版场景放进竖屏，还裁掉了门窗。随后补齐订单角色、资源图标、修缮材料、按钮状态和竖版适配。
 
 <p align="center">
   <img src="docs/assets/tidekeeper/lamp-l1.png" width="21%" alt="L1 口袋油灯">
@@ -44,13 +93,13 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-d
   <img src="docs/assets/tidekeeper/lamp-l4.png" width="21%" alt="L4 小小航标灯">
 </p>
 
-现在，交木料会触发修缮，交灯具后点亮夜晚，再招呼补给船靠岸。角色动作、昼夜、扬尘、灯光和水纹跟着同一段故事变化。**一致性要在连续的使用画面里成立。**
+![潮灯小镇前次修缮、点灯与归航场景研究。](docs/assets/tidekeeper-production/states-proof.png)
 
-[看前次交接与修正](docs/TIDEKEEPER-HANDOFF.md) · [试试修缮、点灯与归航](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-production/play.html) · [本轮生成与交付记录](docs/TIDEKEEPER-PRODUCTION.md)
+冻结的 **0.3.0** 交付包包含 19 张美术素材、27 项受检查的资产与依赖、5 个场景配方。Compositor 文件格式与换目录交付检查已通过，Mac 原生打开尚未验证。这个存档早于 0.4.0 的八帧修缮动作。
 
-![同一项目规范下的修缮、点灯与归航；共享场景配方。](docs/assets/tidekeeper-production/states-proof.png)
+[前次交接与修正](docs/TIDEKEEPER-HANDOFF.md) · [0.3.0 生成与交付记录](docs/TIDEKEEPER-PRODUCTION.md) · [0.3.0 候选交付包](docs/assets/tidekeeper-production/tidekeeper-production-0.3.0.zip) · [此前的画风探索](docs/CASE-STUDIES.md)
 
-这是一位 Agent 在隔离目录里的交接自测，素材为原创候选；真实主美审阅、设备与引擎验收仍待进行。[此前的冒险场景、建筑升级与灯具探索](docs/CASE-STUDIES.md)也保留了原稿和修改记录。
+</details>
 
 ## 从主美的判断，到团队的交付
 
@@ -86,22 +135,14 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill game-
 
 > 使用 `$game-art-production`，读取这个完整项目包。继续做修缮动作、傍晚场景和归航效果，先检查同屏比例与接触点，再交付可继续编辑的分层场景。
 
-潮灯案例已有 **19 张美术素材、27 项受检查的资产与依赖、5 个场景配方**。生成使用 Agent 的图像工具；Compositor 负责图层编辑，不生成图片或播放游戏动画。目前验证了文件格式与换目录交付，Mac 原生打开尚未验证。[查看制作 Skill](skills/game-art-production/SKILL.md) · [下载本轮候选交付包](docs/assets/tidekeeper-production/tidekeeper-production-0.3.0.zip)
-
-## 为什么做这个
-
-这个 Skill 起于和一位主美朋友的讨论。他在意角色的气质、画面的感觉，也在意游戏里人与人的连接；但许多时间花在重复解释参考、组件与返工原因。
-
-我想让这些判断跟着作品交到下一位手里。主美保留创作与判断，Agent 负责整理、关联与交接。从这个问题出发，又连接到市场研究、竞品拆解和制作安排，成为 Game Dev Skills。
-
-<!-- Testimonial reserved: no customer endorsement is claimed. -->
+生成使用 Agent 的图像工具；Compositor 负责图层编辑，不生成图片或播放游戏动画。[查看制作 Skill](skills/game-art-production/SKILL.md) · [样例制作与检查记录](docs/AGENT-ART-TEAM.zh.md)
 
 <details>
 <summary><strong>项目包、说明书与安装要求</strong></summary>
 
-核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可[下载当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=production-20261013)。仅安装通用 Skill，不会自动获得团队私有资料。
+核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可[下载当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=human-story-20261013)。仅安装通用 Skill，不会自动获得团队私有资料。
 
-[人类上手说明](docs/HUMAN-GUIDE.md) · [Agent 与工程接入](docs/AGENT-GUIDE.md) · [Skill 入口](SKILL.md) · [游戏美术质量流程](references/game-art-quality.md)
+[人类上手说明](docs/HUMAN-GUIDE.zh.md) · [Agent 与工程接入](docs/AGENT-GUIDE.zh.md) · [Skill 入口](docs/SKILL.zh.md) · [游戏美术质量流程](references/game-art-quality.md)
 
 [潮灯首件草案](examples/tidekeeper-draft/style-pack.json) · [港湾工作室完整建项示例](examples/harbor-studio-draft/guides/00-index.md) · [品牌与活动设计示例](examples/campaign-studio-draft/guides/00-index.md)
 
@@ -129,7 +170,7 @@ python scripts/style_pack.py build examples/tidekeeper-draft --out NEW_PACK
 
 个人制作者可以轮流承担四个岗位；团队通过同一份资料交接：什么值得做、竞对做了什么、资源和体量如何评估，以及如何创作自己的核心美术。
 
-[岗位如何交接证据、范围与美术资产](docs/WORKFLOW.md) · [四岗位总览](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.md)
+[岗位如何交接证据、范围与美术资产](docs/WORKFLOW.zh.md) · [四岗位总览](https://github.com/NewenergyEric/NewenergyEric/blob/main/GAME-DEV-SKILLS.md)
 
 | 眼前的问题 | 从这个岗位开始 | 带到下一步的资料 |
 |---|---|---|

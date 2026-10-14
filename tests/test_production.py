@@ -53,6 +53,22 @@ class ProductionTests(unittest.TestCase):
         m=prod.read(self.pack/'manifest.json');m['pack']['version']='0.2';prod.write(self.pack/'manifest.json',m)
         self.assertFalse(self.check()['ok'])
 
+    def test_runtime_change_with_same_pack_identity_cannot_silently_rebase(self):
+        runtime = self.pack / 'scripts/style_pack.py'; runtime.parent.mkdir()
+        runtime.write_bytes(b'# frozen runtime\n')
+        manifest = prod.read(self.pack / 'manifest.json')
+        manifest['files']['scripts/style_pack.py'] = prod.digest(runtime)
+        prod.write(self.pack / 'manifest.json', manifest)
+        self.plan['pack']['manifest_sha256'] = prod.digest(self.pack / 'manifest.json')
+        self.assertTrue(self.check()['ok'])
+
+        runtime.write_bytes(b'# updated runtime\n')
+        manifest['files']['scripts/style_pack.py'] = prod.digest(runtime)
+        prod.write(self.pack / 'manifest.json', manifest)
+        report = self.check()
+        self.assertFalse(report['ok'])
+        self.assertEqual(report['errors'], ['Pack manifest hash changed; rebase through a new candidate, not an in-place edit'])
+
     def test_rejected_and_approval_evidence(self):
         for status in ('rejected', 'approved'):
             self.plan['assets'][0]['status']=status;self.assertFalse(self.check()['ok'])

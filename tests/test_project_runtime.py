@@ -49,8 +49,8 @@ class ProjectRuntimeTests(unittest.TestCase):
         self.workspace = self.work / "project"
         self.request_number = 0
 
-    def cli(self, *args, expected=0, script=CLI):
-        result = subprocess.run([sys.executable, str(script), *(str(arg) for arg in args)], cwd=self.work,
+    def cli(self, *args, expected=0, script=CLI, cwd=None):
+        result = subprocess.run([sys.executable, str(script), *(str(arg) for arg in args)], cwd=self.work if cwd is None else cwd,
                                 capture_output=True, text=True, encoding="utf-8", timeout=30)
         self.assertEqual(result.returncode, expected, result.stdout + "\n" + result.stderr)
         try:
@@ -101,6 +101,16 @@ class ProjectRuntimeTests(unittest.TestCase):
 
     def error(self, result, code):
         self.assertEqual(result["errors"][0]["code"], code)
+
+    def test_frozen_runtime_init_accepts_external_relative_output_from_pack_directory(self):
+        before = self.snapshots(self.pack)
+        result = self.cli("init", "--pack", ".", "--out", "../project", "--allow-draft",
+                          script=self.pack / "scripts" / "project_runtime.py", cwd=self.pack)
+        self.assertEqual(result["workspace"], str(self.workspace))
+        self.assertEqual(before, self.snapshots(self.pack))
+        status = self.cli("status", self.workspace, script=self.workspace / "tools" / "project_runtime.py")
+        self.assertEqual(status["current"], result["current"])
+        self.assertTrue(status["candidate_workspace"])
 
     def test_draft_requires_explicit_opt_in_then_production_is_saved_blocked(self):
         self.error(self.init(draft=False, expected=2), "draft_requires_opt_in")

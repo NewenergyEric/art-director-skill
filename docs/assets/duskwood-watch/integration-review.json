@@ -1,0 +1,131 @@
+{
+  "version": "0.4.0",
+  "status": "candidate",
+  "humanApproval": null,
+  "worldAssets": {
+    "items": 12,
+    "environment": 12,
+    "ui": 4,
+    "integrated": 28
+  },
+  "weapons": {
+    "families": 3,
+    "generatedDirectionalStateCells": 40,
+    "staticPieces": 6,
+    "bakedFrames": 0,
+    "repeatedBellPlaybackStepsAreNotNewArt": true
+  },
+  "actors": {
+    "newEnemyFamilies": 3,
+    "newGeneratedEnemyFrames": 24,
+    "keeperGeneratedParts": 11,
+    "keeperBakedFrames": 12,
+    "previousBoarFramesReused": 8
+  },
+  "mapAndTitle": {
+    "newImages": 2
+  },
+  "items": [
+    {
+      "id": "lamp-seed-coin",
+      "type": "货币",
+      "use": "HUD、行囊、建造、无油时添灯",
+      "file": "assets/v2/world/lamp-seed-coin.png"
+    },
+    {
+      "id": "moon-crystal",
+      "type": "货币",
+      "use": "采矿、暮钟、夜行符",
+      "file": "assets/v2/world/moon-crystal.png"
+    },
+    {
+      "id": "branch-bundle",
+      "type": "材料",
+      "use": "采集、设施升级、缠根消耗",
+      "file": "assets/v2/world/branch-bundle.png"
+    },
+    {
+      "id": "rune-stone",
+      "type": "材料",
+      "use": "E缠根陷阱与地面埋设图",
+      "file": "assets/v2/world/rune-stone.png"
+    },
+    {
+      "id": "amber-resin",
+      "type": "材料",
+      "use": "Q照明灼伤消耗",
+      "file": "assets/v2/world/amber-resin.png"
+    },
+    {
+      "id": "copper-gear",
+      "type": "材料",
+      "use": "工箱采集、弩塔/臼炮升级消耗",
+      "file": "assets/v2/world/copper-gear.png"
+    },
+    {
+      "id": "moss-oil",
+      "type": "消耗品",
+      "use": "灯台补满燃料",
+      "file": "assets/v2/world/moss-oil.png"
+    },
+    {
+      "id": "copper-hammer",
+      "type": "永久工具",
+      "use": "已建塔点击/U升级",
+      "file": "assets/v2/world/copper-hammer.png"
+    },
+    {
+      "id": "pruning-hook",
+      "type": "永久工具",
+      "use": "朽木堆额外+2枝材",
+      "file": "assets/v2/world/pruning-hook.png"
+    },
+    {
+      "id": "shovel",
+      "type": "永久工具",
+      "use": "E掘土布置陷阱",
+      "file": "assets/v2/world/shovel.png"
+    },
+    {
+      "id": "herbal-potion",
+      "type": "消耗品",
+      "use": "R恢复生命并扩大光圈",
+      "file": "assets/v2/world/herbal-potion.png"
+    },
+    {
+      "id": "night-charm",
+      "type": "消耗品",
+      "use": "X消耗月晶，暂停耗油15秒",
+      "file": "assets/v2/world/night-charm.png"
+    }
+  ],
+  "runtimeChecks": {
+    "fourNights": "pass",
+    "enemyKills": 100,
+    "lifeRemaining": 12,
+    "browserErrors": 0,
+    "allEightWeaponDirectionsObserved": true,
+    "defeatRestart": "pass",
+    "relocatedRuntime": "pass",
+    "typographyCoverage": "pass"
+  },
+  "evidence": {
+    "fullLoop": "runtime/result.json",
+    "edgeCasesAndVideo": "runtime/edges-result.json",
+    "relocation": "runtime/relocation-result.json",
+    "sourceReceipts": [
+      "actors/generation-log.json",
+      "weapons/receipt.json",
+      "world/world-receipt.json",
+      "map/receipt.json",
+      "typography/receipt.json"
+    ]
+  },
+  "limitations": [
+    "Weapon states are aim/release, no complete reload in-betweens",
+    "Keeper/enemies use profile animation and mirroring, not full direction turnarounds",
+    "Rootguard leg animation is restrained",
+    "Keeper nearest-frame foot quantization <= about3.63 world pixels at current display scale",
+    "One map, no save system or mobile-specific interaction layout"
+  ]
+}

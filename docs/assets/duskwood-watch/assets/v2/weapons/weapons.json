@@ -1,0 +1,1696 @@
+{
+  "schema": "duskwood-weapons/1",
+  "status": "candidate",
+  "humanApproval": "unknown",
+  "sourcePack": {
+    "version": "0.3.0",
+    "fingerprint": "48e6130af23163006c00f453dffc6e2d5456558fac1d79098b46615d75616d0c"
+  },
+  "compatiblePack": {
+    "version": "0.3.1",
+    "fingerprint": "dbcc2d5434b6e9a902c47f9eb986fcfb8674ef5f711484099fa6ac3fedb45b88"
+  },
+  "coordinateSystem": "Image pixels; top-left origin, x right, y down. Use frame anchor, not frame bottom. Direction order is screen-facing E,SE,S,SW,W,NW,N,NE.",
+  "registration": "Uniform 1:1 pixel slicing and translation only within a family; no per-frame scale, rotation, mirroring, warping or invented intermediate poses.",
+  "directions": [
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE"
+  ],
+  "sheets": {
+    "ballista-aim": {
+      "image": "assets/v2/weapons/ballista-aim.png",
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "columns": 8,
+      "rows": 1,
+      "count": 8,
+      "recommendedScale": 0.23,
+      "frames": [
+        {
+          "index": 0,
+          "direction": "E",
+          "x": 0,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            484,
+            247
+          ],
+          "sourceBox": [
+            0,
+            0,
+            470,
+            443
+          ],
+          "sourcePivot": [
+            226,
+            337
+          ],
+          "visibleBox": [
+            66,
+            186,
+            492,
+            401
+          ]
+        },
+        {
+          "index": 1,
+          "direction": "SE",
+          "x": 512,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            442,
+            337
+          ],
+          "sourceBox": [
+            470,
+            0,
+            880,
+            443
+          ],
+          "sourcePivot": [
+            661,
+            354
+          ],
+          "visibleBox": [
+            73,
+            155,
+            453,
+            457
+          ]
+        },
+        {
+          "index": 2,
+          "direction": "S",
+          "x": 1024,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            259,
+            353
+          ],
+          "sourceBox": [
+            880,
+            0,
+            1330,
+            443
+          ],
+          "sourcePivot": [
+            1100,
+            340
+          ],
+          "visibleBox": [
+            46,
+            160,
+            470,
+            402
+          ]
+        },
+        {
+          "index": 3,
+          "direction": "SW",
+          "x": 1536,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            74,
+            338
+          ],
+          "sourceBox": [
+            1330,
+            0,
+            1774,
+            443
+          ],
+          "sourcePivot": [
+            1542,
+            352
+          ],
+          "visibleBox": [
+            64,
+            157,
+            441,
+            459
+          ]
+        },
+        {
+          "index": 4,
+          "direction": "W",
+          "x": 2048,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            34,
+            253
+          ],
+          "sourceBox": [
+            0,
+            443,
+            470,
+            887
+          ],
+          "sourcePivot": [
+            254,
+            760
+          ],
+          "visibleBox": [
+            27,
+            184,
+            449,
+            402
+          ]
+        },
+        {
+          "index": 5,
+          "direction": "NW",
+          "x": 2560,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            114,
+            168
+          ],
+          "sourceBox": [
+            470,
+            443,
+            880,
+            887
+          ],
+          "sourcePivot": [
+            677,
+            751
+          ],
+          "visibleBox": [
+            57,
+            164,
+            439,
+            401
+          ]
+        },
+        {
+          "index": 6,
+          "direction": "N",
+          "x": 3072,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            261,
+            139
+          ],
+          "sourceBox": [
+            880,
+            443,
+            1330,
+            887
+          ],
+          "sourcePivot": [
+            1100,
+            767
+          ],
+          "visibleBox": [
+            47,
+            132,
+            469,
+            402
+          ]
+        },
+        {
+          "index": 7,
+          "direction": "NE",
+          "x": 3584,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            406,
+            186
+          ],
+          "sourceBox": [
+            1330,
+            443,
+            1774,
+            887
+          ],
+          "sourcePivot": [
+            1534,
+            750
+          ],
+          "visibleBox": [
+            72,
+            162,
+            458,
+            402
+          ]
+        }
+      ]
+    },
+    "ballista-release": {
+      "image": "assets/v2/weapons/ballista-release.png",
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "columns": 8,
+      "rows": 1,
+      "count": 8,
+      "recommendedScale": 0.23,
+      "frames": [
+        {
+          "index": 0,
+          "direction": "E",
+          "x": 0,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            488,
+            240
+          ],
+          "sourceBox": [
+            0,
+            0,
+            470,
+            443
+          ],
+          "sourcePivot": [
+            222,
+            344
+          ],
+          "visibleBox": [
+            71,
+            165,
+            456,
+            401
+          ]
+        },
+        {
+          "index": 1,
+          "direction": "SE",
+          "x": 512,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            443,
+            333
+          ],
+          "sourceBox": [
+            470,
+            0,
+            880,
+            443
+          ],
+          "sourcePivot": [
+            660,
+            358
+          ],
+          "visibleBox": [
+            78,
+            140,
+            465,
+            414
+          ]
+        },
+        {
+          "index": 2,
+          "direction": "S",
+          "x": 1024,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            259,
+            346
+          ],
+          "sourceBox": [
+            880,
+            0,
+            1330,
+            443
+          ],
+          "sourcePivot": [
+            1100,
+            347
+          ],
+          "visibleBox": [
+            42,
+            168,
+            476,
+            402
+          ]
+        },
+        {
+          "index": 3,
+          "direction": "SW",
+          "x": 1536,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            74,
+            331
+          ],
+          "sourceBox": [
+            1330,
+            0,
+            1774,
+            443
+          ],
+          "sourcePivot": [
+            1542,
+            359
+          ],
+          "visibleBox": [
+            54,
+            141,
+            441,
+            412
+          ]
+        },
+        {
+          "index": 4,
+          "direction": "W",
+          "x": 2048,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            36,
+            269
+          ],
+          "sourceBox": [
+            0,
+            443,
+            470,
+            887
+          ],
+          "sourcePivot": [
+            252,
+            744
+          ],
+          "visibleBox": [
+            50,
+            166,
+            474,
+            402
+          ]
+        },
+        {
+          "index": 5,
+          "direction": "NW",
+          "x": 2560,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            113,
+            171
+          ],
+          "sourceBox": [
+            470,
+            443,
+            880,
+            887
+          ],
+          "sourcePivot": [
+            678,
+            748
+          ],
+          "visibleBox": [
+            48,
+            154,
+            456,
+            402
+          ]
+        },
+        {
+          "index": 6,
+          "direction": "N",
+          "x": 3072,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            261,
+            144
+          ],
+          "sourceBox": [
+            880,
+            443,
+            1330,
+            887
+          ],
+          "sourcePivot": [
+            1100,
+            762
+          ],
+          "visibleBox": [
+            55,
+            157,
+            463,
+            402
+          ]
+        },
+        {
+          "index": 7,
+          "direction": "NE",
+          "x": 3584,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            410,
+            191
+          ],
+          "sourceBox": [
+            1330,
+            443,
+            1774,
+            887
+          ],
+          "sourcePivot": [
+            1530,
+            745
+          ],
+          "visibleBox": [
+            62,
+            153,
+            476,
+            402
+          ]
+        }
+      ]
+    },
+    "mortar-aim": {
+      "image": "assets/v2/weapons/mortar-aim.png",
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "columns": 8,
+      "rows": 1,
+      "count": 8,
+      "recommendedScale": 0.21,
+      "frames": [
+        {
+          "index": 0,
+          "direction": "E",
+          "x": 0,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            371,
+            182
+          ],
+          "sourceBox": [
+            0,
+            0,
+            452,
+            470
+          ],
+          "sourcePivot": [
+            240,
+            405
+          ],
+          "visibleBox": [
+            37,
+            78,
+            451,
+            402
+          ]
+        },
+        {
+          "index": 1,
+          "direction": "SE",
+          "x": 512,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            331,
+            200
+          ],
+          "sourceBox": [
+            452,
+            0,
+            851,
+            470
+          ],
+          "sourcePivot": [
+            641,
+            414
+          ],
+          "visibleBox": [
+            75,
+            89,
+            433,
+            404
+          ]
+        },
+        {
+          "index": 2,
+          "direction": "S",
+          "x": 1024,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            259,
+            209
+          ],
+          "sourceBox": [
+            851,
+            0,
+            1234,
+            470
+          ],
+          "sourcePivot": [
+            1036,
+            417
+          ],
+          "visibleBox": [
+            96,
+            82,
+            420,
+            403
+          ]
+        },
+        {
+          "index": 3,
+          "direction": "SW",
+          "x": 1536,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            187,
+            193
+          ],
+          "sourceBox": [
+            1234,
+            0,
+            1672,
+            470
+          ],
+          "sourcePivot": [
+            1448,
+            417
+          ],
+          "visibleBox": [
+            83,
+            90,
+            452,
+            402
+          ]
+        },
+        {
+          "index": 4,
+          "direction": "W",
+          "x": 2048,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            132,
+            184
+          ],
+          "sourceBox": [
+            0,
+            470,
+            452,
+            941
+          ],
+          "sourcePivot": [
+            236,
+            816
+          ],
+          "visibleBox": [
+            70,
+            84,
+            469,
+            402
+          ]
+        },
+        {
+          "index": 5,
+          "direction": "NW",
+          "x": 2560,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            194,
+            125
+          ],
+          "sourceBox": [
+            452,
+            470,
+            851,
+            941
+          ],
+          "sourcePivot": [
+            660,
+            819
+          ],
+          "visibleBox": [
+            85,
+            82,
+            428,
+            402
+          ]
+        },
+        {
+          "index": 6,
+          "direction": "N",
+          "x": 3072,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            255,
+            100
+          ],
+          "sourceBox": [
+            851,
+            470,
+            1234,
+            941
+          ],
+          "sourcePivot": [
+            1042,
+            830
+          ],
+          "visibleBox": [
+            97,
+            72,
+            417,
+            402
+          ]
+        },
+        {
+          "index": 7,
+          "direction": "NE",
+          "x": 3584,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            303,
+            132
+          ],
+          "sourceBox": [
+            1234,
+            470,
+            1672,
+            941
+          ],
+          "sourcePivot": [
+            1438,
+            826
+          ],
+          "visibleBox": [
+            76,
+            88,
+            433,
+            402
+          ]
+        }
+      ]
+    },
+    "mortar-release": {
+      "image": "assets/v2/weapons/mortar-release.png",
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "columns": 8,
+      "rows": 1,
+      "count": 8,
+      "recommendedScale": 0.21,
+      "frames": [
+        {
+          "index": 0,
+          "direction": "E",
+          "x": 0,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            375,
+            171
+          ],
+          "sourceBox": [
+            0,
+            0,
+            452,
+            470
+          ],
+          "sourcePivot": [
+            236,
+            416
+          ],
+          "visibleBox": [
+            71,
+            48,
+            472,
+            403
+          ]
+        },
+        {
+          "index": 1,
+          "direction": "SE",
+          "x": 512,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            326,
+            195
+          ],
+          "sourceBox": [
+            452,
+            0,
+            851,
+            470
+          ],
+          "sourcePivot": [
+            646,
+            419
+          ],
+          "visibleBox": [
+            87,
+            39,
+            458,
+            401
+          ]
+        },
+        {
+          "index": 2,
+          "direction": "S",
+          "x": 1024,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            260,
+            206
+          ],
+          "sourceBox": [
+            851,
+            0,
+            1234,
+            470
+          ],
+          "sourcePivot": [
+            1035,
+            420
+          ],
+          "visibleBox": [
+            103,
+            22,
+            410,
+            402
+          ]
+        },
+        {
+          "index": 3,
+          "direction": "SW",
+          "x": 1536,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            185,
+            192
+          ],
+          "sourceBox": [
+            1234,
+            0,
+            1672,
+            470
+          ],
+          "sourcePivot": [
+            1450,
+            418
+          ],
+          "visibleBox": [
+            67,
+            56,
+            446,
+            402
+          ]
+        },
+        {
+          "index": 4,
+          "direction": "W",
+          "x": 2048,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            127,
+            144
+          ],
+          "sourceBox": [
+            0,
+            470,
+            452,
+            941
+          ],
+          "sourcePivot": [
+            241,
+            856
+          ],
+          "visibleBox": [
+            67,
+            41,
+            456,
+            402
+          ]
+        },
+        {
+          "index": 5,
+          "direction": "NW",
+          "x": 2560,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            190,
+            95
+          ],
+          "sourceBox": [
+            452,
+            470,
+            851,
+            941
+          ],
+          "sourcePivot": [
+            664,
+            849
+          ],
+          "visibleBox": [
+            69,
+            39,
+            437,
+            404
+          ]
+        },
+        {
+          "index": 6,
+          "direction": "N",
+          "x": 3072,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            257,
+            74
+          ],
+          "sourceBox": [
+            851,
+            470,
+            1234,
+            941
+          ],
+          "sourcePivot": [
+            1040,
+            856
+          ],
+          "visibleBox": [
+            102,
+            15,
+            410,
+            402
+          ]
+        },
+        {
+          "index": 7,
+          "direction": "NE",
+          "x": 3584,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            400
+          ],
+          "anchor": [
+            0.5,
+            0.78125
+          ],
+          "muzzlePx": [
+            311,
+            108
+          ],
+          "sourceBox": [
+            1234,
+            470,
+            1672,
+            941
+          ],
+          "sourcePivot": [
+            1430,
+            850
+          ],
+          "visibleBox": [
+            76,
+            49,
+            451,
+            402
+          ]
+        }
+      ]
+    },
+    "bell-swing": {
+      "image": "assets/v2/weapons/bell-swing.png",
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "columns": 8,
+      "rows": 1,
+      "count": 8,
+      "fps": 10,
+      "idleFrame": 0,
+      "recommendedScale": 0.18,
+      "playback": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1,
+        7,
+        4,
+        6,
+        5,
+        6,
+        4,
+        7,
+        0
+      ],
+      "trigger": "Play the supplied sequence for a bell pulse, then rest at frame0. Playback intentionally revisits genuine drawn key poses; it does not claim 14 unique source frames.",
+      "frames": [
+        {
+          "index": 0,
+          "sourceIndex": 0,
+          "x": 0,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            64
+          ],
+          "anchor": [
+            0.5,
+            0.125
+          ],
+          "sourceBox": [
+            0,
+            0,
+            384,
+            512
+          ],
+          "sourcePivot": [
+            189,
+            118
+          ],
+          "durationMs": 100,
+          "visibleBox": [
+            113,
+            24,
+            396,
+            404
+          ]
+        },
+        {
+          "index": 1,
+          "sourceIndex": 3,
+          "x": 512,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            64
+          ],
+          "anchor": [
+            0.5,
+            0.125
+          ],
+          "sourceBox": [
+            1152,
+            0,
+            1536,
+            512
+          ],
+          "sourcePivot": [
+            1348,
+            118
+          ],
+          "durationMs": 70,
+          "visibleBox": [
+            96,
+            24,
+            388,
+            398
+          ]
+        },
+        {
+          "index": 2,
+          "sourceIndex": 4,
+          "x": 1024,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            64
+          ],
+          "anchor": [
+            0.5,
+            0.125
+          ],
+          "sourceBox": [
+            0,
+            512,
+            384,
+            1024
+          ],
+          "sourcePivot": [
+            212,
+            600
+          ],
+          "durationMs": 75,
+          "visibleBox": [
+            73,
+            23,
+            363,
+            371
+          ]
+        },
+        {
+          "index": 3,
+          "sourceIndex": 2,
+          "x": 1536,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            64
+          ],
+          "anchor": [
+            0.5,
+            0.125
+          ],
+          "sourceBox": [
+            768,
+            0,
+            1152,
+            512
+          ],
+          "sourcePivot": [
+            1004,
+            119
+          ],
+          "durationMs": 95,
+          "visibleBox": [
+            35,
+            23,
+            318,
+            399
+          ]
+        },
+        {
+          "index": 4,
+          "sourceIndex": 7,
+          "x": 2048,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            64
+          ],
+          "anchor": [
+            0.5,
+            0.125
+          ],
+          "sourceBox": [
+            1152,
+            512,
+            1536,
+            1024
+          ],
+          "sourcePivot": [
+            1338,
+            600
+          ],
+          "durationMs": 60,
+          "visibleBox": [
+            122,
+            24,
+            408,
+            396
+          ]
+        },
+        {
+          "index": 5,
+          "sourceIndex": 5,
+          "x": 2560,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            64
+          ],
+          "anchor": [
+            0.5,
+            0.125
+          ],
+          "sourceBox": [
+            384,
+            512,
+            768,
+            1024
+          ],
+          "sourcePivot": [
+            545,
+            603
+          ],
+          "durationMs": 100,
+          "visibleBox": [
+            173,
+            22,
+            458,
+            378
+          ]
+        },
+        {
+          "index": 6,
+          "sourceIndex": 1,
+          "x": 3072,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            64
+          ],
+          "anchor": [
+            0.5,
+            0.125
+          ],
+          "sourceBox": [
+            384,
+            0,
+            768,
+            512
+          ],
+          "sourcePivot": [
+            545,
+            119
+          ],
+          "durationMs": 75,
+          "visibleBox": [
+            167,
+            22,
+            451,
+            386
+          ]
+        },
+        {
+          "index": 7,
+          "sourceIndex": 6,
+          "x": 3584,
+          "y": 0,
+          "w": 512,
+          "h": 512,
+          "anchorPx": [
+            256,
+            64
+          ],
+          "anchor": [
+            0.5,
+            0.125
+          ],
+          "sourceBox": [
+            768,
+            512,
+            1152,
+            1024
+          ],
+          "sourcePivot": [
+            951,
+            603
+          ],
+          "durationMs": 140,
+          "visibleBox": [
+            119,
+            21,
+            400,
+            392
+          ]
+        }
+      ]
+    }
+  },
+  "pieces": {
+    "empty-base": {
+      "image": "assets/v2/weapons/empty-base.png",
+      "width": 515,
+      "height": 352,
+      "anchorPx": [
+        263,
+        321
+      ],
+      "recommendedScale": 0.17,
+      "sourceBox": [
+        0,
+        100,
+        513,
+        470
+      ],
+      "sourceVisibleBox": [
+        27,
+        42,
+        494,
+        346
+      ]
+    },
+    "empty-stump": {
+      "image": "assets/v2/weapons/empty-stump.png",
+      "width": 552,
+      "height": 356,
+      "anchorPx": [
+        280,
+        326
+      ],
+      "recommendedScale": 0.17,
+      "sourceBox": [
+        516,
+        95,
+        1040,
+        470
+      ],
+      "sourceVisibleBox": [
+        14,
+        24,
+        518,
+        332
+      ]
+    },
+    "ballista-base": {
+      "image": "assets/v2/weapons/ballista-base.png",
+      "width": 500,
+      "height": 408,
+      "anchorPx": [
+        247,
+        380
+      ],
+      "recommendedScale": 0.17,
+      "sourceBox": [
+        1042,
+        60,
+        1536,
+        470
+      ],
+      "sourceVisibleBox": [
+        16,
+        20,
+        468,
+        380
+      ],
+      "socketPx": [
+        247,
+        55
+      ]
+    },
+    "mortar-base": {
+      "image": "assets/v2/weapons/mortar-base.png",
+      "width": 574,
+      "height": 478,
+      "anchorPx": [
+        294,
+        449
+      ],
+      "recommendedScale": 0.15,
+      "sourceBox": [
+        0,
+        520,
+        548,
+        1015
+      ],
+      "sourceVisibleBox": [
+        17,
+        42,
+        543,
+        472
+      ],
+      "socketPx": [
+        296,
+        52
+      ]
+    },
+    "bell-stand": {
+      "image": "assets/v2/weapons/bell-stand.png",
+      "width": 396,
+      "height": 625,
+      "anchorPx": [
+        206,
+        593
+      ],
+      "recommendedScale": 0.22,
+      "sourceBox": [
+        578,
+        410,
+        1035,
+        1024
+      ],
+      "sourceVisibleBox": [
+        31,
+        17,
+        379,
+        594
+      ],
+      "socketPx": [
+        283,
+        176
+      ]
+    },
+    "pinecone-shell": {
+      "image": "assets/v2/weapons/pinecone-shell.png",
+      "width": 277,
+      "height": 375,
+      "anchorPx": [
+        133,
+        341
+      ],
+      "recommendedScale": 0.065,
+      "sourceBox": [
+        1065,
+        605,
+        1505,
+        1010
+      ],
+      "sourceVisibleBox": [
+        109,
+        25,
+        338,
+        352
+      ]
+    }
+  },
+  "assembly": {
+    "ballista": {
+      "base": "ballista-base",
+      "aim": "ballista-aim",
+      "release": "ballista-release",
+      "headAt": "base.socketPx",
+      "headAnchor": "frame.anchorPx",
+      "attackStateMs": {
+        "aim": 140,
+        "release": 140,
+        "recoveryToAim": 220
+      }
+    },
+    "mortar": {
+      "base": "mortar-base",
+      "aim": "mortar-aim",
+      "release": "mortar-release",
+      "headAt": "base.socketPx",
+      "headAnchor": "frame.anchorPx",
+      "projectile": "pinecone-shell",
+      "attackStateMs": {
+        "aim": 180,
+        "release": 200,
+        "recoveryToAim": 300
+      }
+    },
+    "bell": {
+      "base": "bell-stand",
+      "animated": "bell-swing",
+      "headAt": "base.socketPx",
+      "headAnchor": "frame.anchorPx"
+    }
+  }
+}

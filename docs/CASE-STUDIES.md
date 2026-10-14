@@ -1,4 +1,4 @@
-[English](CASE-STUDIES.en.md) · [返回介绍](https://newenergyeric.github.io/art-director-skill/docs/landing.html#cases)
+[English](CASE-STUDIES.en.md) · [返回介绍](https://newenergyeric.github.io/art-director-skill/docs/landing.zh.html#cases)
 
 # 三个游戏问题，三种美术解法
 

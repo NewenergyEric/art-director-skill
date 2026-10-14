@@ -17,7 +17,8 @@ def main() -> int:
     repository = source
     if args.skill == "game-art-production":
         source = source / "skills/game-art-production"
-    destination = args.out.resolve()
+    # Match style_pack.resolve_path without changing POSIX symlink/.. semantics.
+    destination = args.out.absolute().resolve()
     if destination == source or source in destination.parents:
         parser.error("Archive must be outside the source skill folder")
     if destination.exists():

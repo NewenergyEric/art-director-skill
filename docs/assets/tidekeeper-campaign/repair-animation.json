@@ -1,0 +1,32 @@
+{
+  "status": "candidate promotional animation",
+  "source": "repair-six-poses.png",
+  "source_sha256": "5c450e70cb9608d6b1f68b672752997b127c66409e8d5bdbb6783e320f64637e",
+  "canvas": [1536, 1024],
+  "layout": {"columns": 3, "rows": 2, "cell_width": 512, "cell_height": 512},
+  "frame_order": "row-major",
+  "poses": ["preparation", "anticipation", "downstroke", "contact", "rebound", "settle"],
+  "exposures_at_30fps": [8, 7, 3, 3, 6, 12],
+  "registration": {
+    "anchor": "nail shaft, measured in each nominal 512 px cell",
+    "pose_anchor_xy": [[334.3,451.5],[341.6,451.5],[321.0,449.7],[335.2,436.4],[341.5,436.4],[314.0,436.6]],
+    "target_anchor_xy": [334.3,451.5],
+    "viewport_height": {"top_row": 530, "bottom_row": 512},
+    "note": "Top-row crop includes the 18 px gutter below the nominal cell so the plank edge is retained. Source pixels are never repainted. Contact dust starts on the contact drawing (cycle frame 18) at the nail, not on an independent loop."
+  },
+  "reference_assets": ["../tidekeeper-production/character-repair.png", "../tidekeeper-production/character-base.png"],
+  "generation": {
+    "date": "2026-10-13",
+    "tool": "built-in imagegen",
+    "generation_id": "exec-2c398e8a-8a1c-4aae-9f49-c12293ed3b69",
+    "alpha_edit_id": "exec-bd979217-9561-4733-a593-acfd03b7548e",
+    "prompt": "Create a precise 6-frame animation sprite atlas. Reference images show ONE existing Tidekeeper character; preserve her identity, clothing, colors, proportions, soft casual-game painting style. Asset intended for six discrete keyed drawings of one natural hammer stroke, no background. Output exactly 1536x1024 (landscape 3:2); exactly THREE equal columns and TWO equal rows, giving SIX SQUARE 512x512 cells. IMPORTANT production constraint: in every cell, the entire kneeling character + plank fits within the central 82% of the cell, with at least 9% fully transparent padding on LEFT, RIGHT and TOP, and all soles and plank bottom aligned at 90% cell height. No part or shadow may cross a cell boundary. NO grid lines, NO numbers/text. Identical camera and fixed knee/feet/plank location each cell. Read left-to-right then next row: (1) ready pose, hammer just above the nail, eyes focused; (2) anticipation, torso straighter, elbow folded back, mallet raised high beside head; (3) downstroke, mallet halfway descending, wrist articulated, torso leaning forward; (4) contact, mallet meets nail, shoulders compress, eyes gently squeezed, wood/nail contact obvious; (5) rebound, mallet rises slightly, hair/loose jacket lag by a small amount; (6) settle, wrist relaxes and body returns to ready. One hand always supports the plank safely clear of nail; knees and feet remain planted. Six genuinely distinct motion drawings, especially shoulder/elbow/wrist/head/torso, not six shifted copies. Must retain navy bob hair, yellow cropped rain jacket, blue cuffed overalls, coral boots, brown utility belt, warm brown skin. Include the same wood plank and single nail. No sparks or effects. True clean alpha all around every figure, no checkerboard, no watermark.",
+    "alpha_edit_prompt": "Use case: background-extraction. Edit target is this exact six-frame sprite atlas. Remove ONLY the entire colored/blurred/glowing background and make all background pixels fully transparent alpha. Preserve the six characters, their tools, planks, poses, exact relative coordinates, sizes, three-column two-row cell arrangement, canvas dimensions and every detail of the painted foreground. Do not redesign, repaint, move or crop any subject. No new shadows, glow, text, grid or checkerboard. Must be an actual transparent PNG, not an opaque depiction of transparency. Keep clean natural antialiasing on the foreground edges."
+  },
+  "review": {
+    "distinct_pose_count": 6,
+    "background_sample_alpha": 0,
+    "source_pixels": "preserved; CSS viewport crops cells at render time",
+    "limitations": ["Candidate art, not human-approved", "Nail registration corrects generated offsets; small silhouette variations remain", "Not a skeletal animation or a frozen production-pack asset"]
+  }
+}

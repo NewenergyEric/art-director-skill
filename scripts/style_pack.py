@@ -98,6 +98,13 @@ def within(path: Path, root: Path) -> bool:
         return False
 
 
+def resolve_path(path: Path) -> Path:
+    # Windows non-strict realpath can retain cwd/.. when final-path handles
+    # are unavailable. Supply the absolute path before resolving it. Unlike
+    # abspath/normpath, Path.absolute preserves POSIX symlink/.. semantics.
+    return path.absolute().resolve()
+
+
 def safe_file(root: Path, relative: str, *, must_exist: bool = True) -> Path:
     """Require a portable relative path, then resolve filesystem containment."""
     if not isinstance(relative, str) or not relative or "\\" in relative or "\x00" in relative:
@@ -127,7 +134,7 @@ def resolve_pack(argument: str) -> Path:
     candidate = Path(argument).expanduser()
     if candidate.name == "style-pack.json" and candidate.is_file():
         candidate = candidate.parent
-    root = candidate.resolve()
+    root = resolve_path(candidate)
     if not root.is_dir():
         raise PackError(f"PACK must be an existing directory or style-pack.json: {argument}", "missing_pack")
     safe_file(root, "style-pack.json")
@@ -775,7 +782,7 @@ def destination_new(argument: str, root: Path) -> Path:
     candidate = Path(argument).expanduser()
     if candidate.exists() or candidate.is_symlink():
         raise PackError(f"Destination already exists; it will not be overwritten: {candidate}", "destination_exists")
-    out = candidate.resolve()
+    out = resolve_path(candidate)
     if within(out, root):
         raise PackError("Destination must be outside the source pack directory.", "destination_inside_source")
     if not out.parent.is_dir():
@@ -1012,7 +1019,7 @@ def brief_pack(root: Path, category: str, task: str, entity_id: str | None = Non
              "review": [{"rule_id": r["id"], "strength": r["strength"], "verification": r["verification"], "result": "unknown", "evidence": "", "correction": ""} for r in rules],
              "workflow": ["Read applicable confirmed rules and approved references; mark candidate/proposed inputs explicitly.", "Inspect image contents before claiming visual understanding; unavailable observations remain unknown.", "Bind identity for a reused entity; keep role-specific references separate and exclude counterexamples from positive references.", "Use only available production tools; if unavailable, hand off this brief without claiming asset generation.", "Record tool/model/settings/seed when available and preserve originals outside the immutable pack.", "Review style, identity, context, readability and technical constraints using pass/fail/unknown with evidence.", "Return version/fingerprint, task, source references, assets, review and unresolved items; structural validation is not artistic approval."]}
     if out:
-        target = Path(out).expanduser().resolve()
+        target = resolve_path(Path(out).expanduser())
         if target.exists():
             raise PackError(f"Brief output already exists; it will not be overwritten: {target}", "destination_exists")
         if within(target, root):
