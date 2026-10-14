@@ -61,7 +61,12 @@ Continue existing direction without rebuilding it. Your agent uses its available
 
 ### Tidekeeper · Merge and restore
 
-![Tidekeeper 0.5.0: the lighthouse, repair order and merge board in the playable game.](docs/assets/tidekeeper-playable/gameplay.png?v=lighthouse-20261014)
+<table>
+  <tr>
+    <td width="70%" valign="top"><img src="docs/assets/tidekeeper-playable/gameplay.png?v=asset-proof-20261014" alt="Tidekeeper gameplay with the lighthouse, repair order and merge board."><br><sub><strong>IN-GAME RESULT</strong> · Restore the lighthouse</sub></td>
+    <td width="30%" valign="top"><strong>SAME PROJECT PACK</strong><br><img src="docs/assets/tidekeeper-production/character-base.png" width="43%" alt="Tidekeeper character asset"> <img src="docs/assets/tidekeeper-production/lamp-l4.png" width="43%" alt="Tidekeeper beacon asset"><br><img src="docs/assets/tidekeeper-playable/art/expansion/rope-2.png" width="43%" alt="Tidekeeper rope asset"> <img src="docs/assets/tidekeeper-playable/art/expansion/glass-2.png" width="43%" alt="Tidekeeper lens asset"><br><sub>Character · Beacon · Material · Object</sub></td>
+  </tr>
+</table>
 
 Merge seven item families into repair orders. The **0.5.0 candidate** follows the job from fixing the dock and lighthouse timberwork to fitting the lens, adding oil, lighting the tower and welcoming the supply boat. New items and scene states continue the harbor's existing art direction.
 
@@ -69,11 +74,16 @@ Merge seven item families into repair orders. The **0.5.0 candidate** follows th
 
 ### Duskwood Watch · Explore and defend
 
-![Duskwood Watch: a hand-painted forest with a lantern keeper, forest creatures and defensive structures.](docs/assets/duskwood-watch/combat.png?v=duskwood-v2-20261014)
+<table>
+  <tr>
+    <td width="70%" valign="top"><img src="docs/assets/duskwood-watch/combat.png?v=asset-proof-20261014" alt="Duskwood Watch gameplay with a lantern keeper, forest creatures and defensive structures."><br><sub><strong>IN-GAME RESULT</strong> · Carry the light</sub></td>
+    <td width="30%" valign="top"><strong>SAME PROJECT PACK</strong><br><img src="docs/assets/duskwood-watch/assets/keeper-base.png" width="43%" alt="Duskwood Watch keeper asset"> <img src="docs/assets/duskwood-watch/assets/enemy.png" width="43%" alt="Duskwood Watch creature asset"><br><img src="docs/assets/duskwood-watch/assets/v2/world/lamp-on.png" width="43%" alt="Duskwood Watch lamp asset"> <img src="docs/assets/duskwood-watch/assets/v2/weapons/ballista-base.png" width="43%" alt="Duskwood Watch defense asset"><br><sub>Keeper · Creature · Light · Defense</sub></td>
+  </tr>
+</table>
 
 Carry your lantern through a hand-painted forest, gather supplies and build defenses for four nights on one map. Moving the light strips dark armor; fuel, items and upgrades shape how you defend the clearing. This is the **0.4.0 draft**, developed from one shared project pack.
 
-[Play Duskwood Watch](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.en.html)
+[View the Duskwood Watch case](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.en.html) · [Load the full game (~33 MB)](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/play.en.html)
 
 Both are original browser candidates. Human art-direction approval and production device/engine acceptance remain open. [How the agents used the Skill, what was checked and what remains](docs/AGENT-ART-TEAM.en.md).
 

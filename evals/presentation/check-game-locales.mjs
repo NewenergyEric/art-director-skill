@@ -139,8 +139,20 @@ assert.ok(drawnEn.some(text => text.includes('Night 1')));
 assert.ok(drawnEn.every(text => !chinese.test(text)), 'English canvas rendered Chinese text');
 assert.ok(drawnZh.some(text => chinese.test(text)), 'Original Chinese rendering remains available');
 
-for (const path of ['docs/assets/tidekeeper-playable/play.en.html', 'docs/assets/duskwood-watch/index.en.html']) {
+for (const path of [
+  'docs/assets/tidekeeper-playable/play.en.html',
+  'docs/assets/duskwood-watch/index.en.html',
+  'docs/assets/duskwood-watch/play.en.html'
+]) {
   assert.match(read(path), /<html lang="en">/);
   assert.ok(!chinese.test(read(path)), `English HTML has Chinese copy: ${path}`);
+}
+const duskCase = read('docs/assets/duskwood-watch/index.en.html');
+assert.match(duskCase, /class="consistency-board"/);
+assert.match(duskCase, /SAME PROJECT PACK/);
+assert.match(duskCase, /href="play\.en\.html"/);
+for (const asset of ['combat.png', 'assets/keeper-base.png', 'assets/enemy.png', 'assets/v2/world/lamp-on.png', 'assets/v2/weapons/ballista-base.png']) {
+  assert.ok(duskCase.includes(asset), `Duskwood case is missing ${asset}`);
+  assert.ok(fs.existsSync(new URL(`docs/assets/duskwood-watch/${asset}`, root)), `Duskwood case asset does not exist: ${asset}`);
 }
 console.log('PASS: four repair chapters, notices, rewards, cross-language saves, unchanged Duskwood world data, bilingual Canvas rendering and English entry points.');
