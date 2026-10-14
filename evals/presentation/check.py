@@ -96,6 +96,10 @@ def main():
               ('docs/landing.html' if lang == 'en' else 'docs/landing.zh.html') in text
               and not any(name in text for name in ('workbench.html', 'showcase.html', 'call-flow.html', 'team-production.html')))
         expected_claim = '一个团队/项目，一份视觉记忆。' if lang == 'zh' else 'One team, one visual memory.'
+        for folder, page in [('tidekeeper-playable', 'play'), ('duskwood-watch', 'index')]:
+            expected_game = f'docs/assets/{folder}/{page}' + ('.en.html' if lang == 'en' else '.html')
+            check(readme + ': game entry matches language: ' + folder,
+                  expected_game + ')' in text and (ROOT / expected_game).is_file())
         check(readme + ': uses the shared core claim', expected_claim in text)
         check(readme + ': contains no legacy public media reference',
               not any(name in text for name in LEGACY_MEDIA) and '70 秒' not in text and '70-second' not in text)
@@ -128,6 +132,10 @@ def main():
         if name in ('landing.html', 'landing.en.html', 'landing.zh.html'):
             check(name + ': loads the shared visual-memory stylesheet', 'assets/visual-memory.css' in text)
             lang = 'zh' if name == 'landing.zh.html' else 'en'
+            for folder, page in [('tidekeeper-playable', 'play'), ('duskwood-watch', 'index')]:
+                expected_game = f'assets/{folder}/{page}' + ('.en.html' if lang == 'en' else '.html')
+                check(name + ': game entry matches language: ' + folder,
+                      f'href="{expected_game}"' in text)
             check(name + ': player and captions match its language',
                   f'depth-showcase-{lang}.mp4' in text
                   and f'workflow-{lang}.vtt' in text

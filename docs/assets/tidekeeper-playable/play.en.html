@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#184e57">
+  <meta name="description" content="Merge supplies, restore the pier and lighthouse, and light the way for the first boat home.">
+  <title>Tidekeeper · Rekindle the light</title>
+  <link rel="icon" href="../tidekeeper-production/lamp-l4.png">
+  <link rel="preload" href="tide-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="game.css?v=locale-20261014">
+</head>
+<body>
+  <main id="game" class="game" aria-label="Tidekeeper">
+    <header class="topbar">
+      <a class="wordmark" href="play.en.html" aria-label="Tidekeeper">Tidekeeper<span>Rekindle the light</span></a>
+      <div class="topbar-right">
+        <div class="wallet" aria-label="Shell coins"><img src="art/expansion/coin-pile.png" alt=""><span id="coins">0</span></div>
+        <div class="wallet token-wallet" aria-label="Shipping tokens"><img src="art/expansion/shipping-token.png" alt=""><span id="tokens">2</span></div>
+        <button class="icon-button" id="catalog-button" aria-label="Material guide" title="Material guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15"/></svg></button>
+        <button class="icon-button" id="sound-button" aria-label="Mute sound" title="Sound"></button>
+        <button class="icon-button" id="help-button" aria-label="Help and settings" title="Help and settings">?</button>
+      </div>
+    </header>
+    <div class="play-space">
+      <section class="harbor" aria-label="Lighthouse and pier">
+        <canvas id="scene" width="900" height="1600" aria-label="The lighthouse awaits repair">Please use a browser that supports Canvas to explore the harbor.</canvas>
+        <div class="harbor-vignette" aria-hidden="true"></div>
+        <div class="chapter"><span id="chapter-label">Chapter 1</span><span id="chapter-name">Repair the pier</span></div>
+        <div class="scene-caption" id="scene-caption"></div>
+        <div class="scene-controls" id="scene-controls"></div>
+      </section>
+      <section class="workbench" id="workbench" aria-label="Keeper's workbench">
+        <div class="order" id="order"></div>
+        <div class="bench-heading"><h2>Workbench</h2><div class="bench-tools"><button id="supply-button" aria-label="Open harbor supplies" title="Supplies">Supplies</button><button id="hint-button" aria-label="Find a matching pair to merge" title="Find a pair">Hint</button><button id="undo-button" aria-label="Undo last move" title="Undo last move" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 4-5 5 5 5M3 9h10a6 6 0 0 1 0 12"/></svg></button></div></div>
+        <div class="board-frame">
+          <div class="board" id="board" role="group" aria-label="Merge board, five rows and five columns"></div>
+          <div class="board-effects" id="board-effects" aria-hidden="true"></div>
+        </div>
+        <div class="item-info" id="item-info" aria-live="polite"></div>
+      </section>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <div class="overlay" id="overlay" hidden></div>
+  <div class="drag-ghost" id="drag-ghost" hidden aria-hidden="true"></div>
+  <noscript><div class="noscript">Enable JavaScript to rekindle the lighthouse with Arlan.</div></noscript>
+  <script src="../game-locale.js"></script>
+  <script src="locale-en.js"></script>
+  <script src="game-core.js?v=locale-20261014"></script>
+  <script src="animation-manifest.js" onerror="window.TIDEKEEPER_ANIMATION = null"></script>
+  <script src="game.js?v=locale-20261014"></script>
+</body>
+</html>

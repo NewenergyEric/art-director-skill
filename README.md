@@ -65,7 +65,7 @@ Continue existing direction without rebuilding it. Your agent uses its available
 
 Merge seven item families into repair orders. The **0.5.0 candidate** follows the job from fixing the dock and lighthouse timberwork to fitting the lens, adding oil, lighting the tower and welcoming the supply boat. New items and scene states continue the harbor's existing art direction.
 
-[Play Tidekeeper (Chinese UI)](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-playable/play.html)
+[Play Tidekeeper](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-playable/play.en.html)
 
 ### Duskwood Watch · Explore and defend
 
@@ -73,7 +73,7 @@ Merge seven item families into repair orders. The **0.5.0 candidate** follows th
 
 Carry your lantern through a hand-painted forest, gather supplies and build defenses for four nights on one map. Moving the light strips dark armor; fuel, items and upgrades shape how you defend the clearing. This is the **0.4.0 draft**, developed from one shared project pack.
 
-[Play Duskwood Watch (Chinese UI)](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.html)
+[Play Duskwood Watch](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.en.html)
 
 Both are original browser candidates. Human art-direction approval and production device/engine acceptance remain open. [How the agents used the Skill, what was checked and what remains](docs/AGENT-ART-TEAM.en.md).
 
