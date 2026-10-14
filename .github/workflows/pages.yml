@@ -20,6 +20,7 @@ on:
       - "skills/game-art-production/**"
       - "evals/tidekeeper-handoff/**"
       - "evals/tidekeeper-production/**"
+      - "evals/tidekeeper-continuity/**"
       - "examples/game-art-studies/**"
       - "evals/director-workflow-v0.5/**"
       - "evals/public-demo/**"
@@ -70,6 +71,7 @@ jobs:
           cp -R examples/tidekeeper-production _site/examples/
           cp -R skills _site/
           cp -R evals/tidekeeper-production _site/evals/
+          cp -R evals/tidekeeper-continuity _site/evals/
           cp -R evals/tidekeeper-handoff _site/evals/
           cp -R examples/game-art-studies _site/examples/
           cp -R evals/director-workflow-v0.5 _site/evals/

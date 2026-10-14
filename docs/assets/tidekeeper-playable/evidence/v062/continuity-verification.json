@@ -1,0 +1,126 @@
+{
+  "status": "passed",
+  "date": "2026-10-14T13:03:54.938Z",
+  "runtimeSha256": {
+    "play.html": "ded443a5a424652f3d2b680726171a09e4a251cf12122332df02e02baeaec8a1",
+    "play.en.html": "96d9ea1a8bfff001c47fd8682d0bc9e20c6dd43493dbab6b6354ff58ecb23438",
+    "locale-en.js": "e2409747619efa99c441f1874690de72b55e6398eaf86ec398d2e8a4a514c9cc",
+    "game.js": "71c88a37f68a9681787ca13c742af0f579162e1a2979d1ac5b43f0affef2659a",
+    "game-core.js": "fc06f8af66ca1b055891ab9488d4ae3562ee0d2307b6dbc0f7b92f67e1979a79",
+    "game.css": "554c31bda588f67ad3e20c17d2f51ba862520dd29fabd959fc53b87df8187135",
+    "animation-manifest.js": "65a6da540543b686a69ad6a6f188ebafe3d070aeaaf16a838088d207bae79488",
+    "continuous-motion.js": "2fa5cf52ba9b71435d63001e2cdf79732fbff98cf0f5d472592fa1a2b6b6ea40",
+    "tide-sans.woff2": "18f31b532143d8be8283522447d56bb3deb64bcbbacbf4dda294f8f7475a6b2e"
+  },
+  "invariants": {
+    "repair": {
+      "sampleCount": 105,
+      "regions": {
+        "face": [
+          178,
+          226,
+          65,
+          60
+        ],
+        "clothes": [
+          120,
+          480,
+          40,
+          40
+        ],
+        "boot": [
+          55,
+          510,
+          40,
+          30
+        ]
+      },
+      "changed": {
+        "face": [],
+        "clothes": [],
+        "boot": []
+      }
+    },
+    "ignition": {
+      "sampleCount": 105,
+      "regions": {
+        "face": [
+          110,
+          95,
+          50,
+          45
+        ],
+        "clothes": [
+          95,
+          355,
+          40,
+          55
+        ],
+        "lampBase": [
+          370,
+          350,
+          70,
+          160
+        ]
+      },
+      "changed": {
+        "face": [],
+        "clothes": [],
+        "lampBase": []
+      }
+    },
+    "beckon": {
+      "sampleCount": 105,
+      "regions": {
+        "face": [
+          165,
+          114,
+          45,
+          45
+        ],
+        "clothes": [
+          177,
+          280,
+          40,
+          70
+        ],
+        "boots": [
+          100,
+          510,
+          170,
+          35
+        ]
+      },
+      "changed": {
+        "face": [],
+        "clothes": [],
+        "boots": []
+      }
+    }
+  },
+  "seams": {
+    "repair": 0,
+    "beckon": 0,
+    "ignition-1200": {
+      "hand": 0.10169768585206025,
+      "taper": 0,
+      "jugRotation": 1.0890830630937531e-11
+    },
+    "ignition-1450": {
+      "hand": 2.8478746365843272e-9,
+      "taper": 0,
+      "jugRotation": 0
+    },
+    "ignition-3000": {
+      "hand": 0,
+      "taper": 0,
+      "jugRotation": 0
+    },
+    "ignitionReturn": 0.1016976861247272
+  },
+  "maxIgnitionForearmScaleError": 0.01083175488517829,
+  "paintedFrames": 0,
+  "wickContact": 0.0909302627410934,
+  "errors": [],
+  "scope": "315 raster samples verify selected fixed regions and handoff coordinates. Supporting evidence; not automatic anatomical or natural-motion approval."
+}

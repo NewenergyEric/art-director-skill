@@ -1,203 +1,510 @@
-// Generated export metadata; real poses were generated with imagegen.
+// Continuous same-source motion. Timing keys are not new painted frames.
 window.TIDEKEEPER_ANIMATION = {
-  "version": "0.4.0-candidate",
+  "version": "0.6.2-candidate",
   "humanApproval": null,
-  "repair": {
-    "source": "art/source/repair-eight-v2.png",
-    "frameSize": [
-      400,
-      600
-    ],
-    "frames": [
-      {
-        "src": "art/repair/repair-01.png",
-        "duration": 180,
-        "phase": "ready",
-        "sourceRect": [
-          0,
-          0,
-          371,
-          574
-        ],
-        "sourceOrigin": [
-          0,
-          0
-        ],
-        "contactLocal": [
-          277,
-          518
-        ],
-        "impact": false,
-        "sha256": "827441117eddb38a8e4ebe6a0a4e155f7c5f0d4e072d61155f5c4f47cf80f556"
-      },
-      {
-        "src": "art/repair/repair-02.png",
-        "duration": 140,
-        "phase": "anticipation",
-        "sourceRect": [
-          371,
-          0,
-          362,
-          574
-        ],
-        "sourceOrigin": [
-          360,
-          0
-        ],
-        "contactLocal": [
-          277,
-          518
-        ],
-        "impact": false,
-        "sha256": "3286b7c9c56fbf5eb966a4f7d26274ae01d877952a34c6ca7dc3f46e89c2c1cb"
-      },
-      {
-        "src": "art/repair/repair-03.png",
-        "duration": 180,
-        "phase": "high-lift",
-        "sourceRect": [
-          733,
-          0,
-          360,
-          574
-        ],
-        "sourceOrigin": [
-          720,
-          0
-        ],
-        "contactLocal": [
-          277,
-          518
-        ],
-        "impact": false,
-        "sha256": "686e5eb9c57ba7d1862b14c700de6b5534396790fe6224822927b4e6b837cc0e"
-      },
-      {
-        "src": "art/repair/repair-04.png",
-        "duration": 70,
-        "phase": "downswing",
-        "sourceRect": [
-          1093,
-          0,
-          355,
-          574
-        ],
-        "sourceOrigin": [
-          1080,
-          0
-        ],
-        "contactLocal": [
-          277,
-          518
-        ],
-        "impact": false,
-        "sha256": "8dac8a7663e1b8026151a64fa8e43d6d47c671f6bad954622c789fb7acf52dea"
-      },
-      {
-        "src": "art/repair/repair-05.png",
-        "duration": 85,
-        "phase": "contact",
-        "sourceRect": [
-          0,
-          574,
-          371,
-          512
-        ],
-        "sourceOrigin": [
-          0,
-          494
-        ],
-        "contactLocal": [
-          277,
-          518
-        ],
-        "impact": true,
-        "sha256": "b0a0975c19fcf000b0bb9acfd498ad420ef0a4b6c99524ab9777165a24f5454c"
-      },
-      {
-        "src": "art/repair/repair-06.png",
-        "duration": 100,
-        "phase": "follow-through",
-        "sourceRect": [
-          371,
-          574,
-          362,
-          512
-        ],
-        "sourceOrigin": [
-          360,
-          494
-        ],
-        "contactLocal": [
-          277,
-          518
-        ],
-        "impact": false,
-        "sha256": "aec123e1d9f80617654c57590f1ebaf78354940828c85f450b1a8fdd29b5c9d7"
-      },
-      {
-        "src": "art/repair/repair-07.png",
-        "duration": 150,
-        "phase": "recoil",
-        "sourceRect": [
-          733,
-          574,
-          360,
-          512
-        ],
-        "sourceOrigin": [
-          720,
-          494
-        ],
-        "contactLocal": [
-          277,
-          518
-        ],
-        "impact": false,
-        "sha256": "dcd49df8de7fdcb99b2fe61b2f34a8c501576f7e8942165127cebfc5a72ad056"
-      },
-      {
-        "src": "art/repair/repair-08.png",
-        "duration": 195,
-        "phase": "settle",
-        "sourceRect": [
-          1093,
-          574,
-          355,
-          512
-        ],
-        "sourceOrigin": [
-          1080,
-          494
-        ],
-        "contactLocal": [
-          277,
-          518
-        ],
-        "impact": false,
-        "sha256": "1d4bebed26744dd0b179bf9048b4d8388ab3b93004f2038b839ebc9ebdb0661a"
-      }
-    ],
-    "loops": 2,
-    "displayBox": [
-      385,
-      540,
-      225,
-      337.5
-    ],
-    "contact": [
-      540.8125,
-      831.375
-    ],
-    "contactLocal": [
-      277,
-      518
-    ],
-    "groundLocal": [
-      205,
-      569
-    ],
-    "contactFrame": 4,
-    "cycleDuration": 1100
-  }
+  "projectFingerprint": "fc586948fa3f8e059f42c5710729e4aa531e1781f0ffe91f0ef2104842e21e3a",
+  "actions": {
+    "repair": {
+      "displayBox": [
+        385.5,
+        543.9375,
+        225,
+        337.5
+      ],
+      "groundLocal": [
+        200,
+        569
+      ],
+      "contactLocal": [
+        256.8,
+        517.2
+      ],
+      "loops": 2,
+      "status": "candidate; same-source continuous 2D action",
+      "rig": "TidekeeperMotion",
+      "method": "fixed clean underlay, localized elbow mesh, rigid hand and tool, explicit tool ownership",
+      "source": "art/actions-v062/repair-master.png",
+      "sourceSha256": "95632c2caa587f7710e4f84cbba06bd2ea6966d7a24499e84102708cf3aa8cf0",
+      "frameSize": [
+        400,
+        600
+      ],
+      "frames": [
+        {
+          "src": "art/actions-v062/repair-master.png",
+          "duration": 180,
+          "phase": "ready",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/repair-master.png",
+          "duration": 260,
+          "phase": "backswing",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/repair-master.png",
+          "duration": 90,
+          "phase": "downstroke",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/repair-master.png",
+          "duration": 120,
+          "phase": "impact",
+          "keyType": "timing-key; not a painted animation frame",
+          "event": "impact"
+        },
+        {
+          "src": "art/actions-v062/repair-master.png",
+          "duration": 170,
+          "phase": "recoil",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/repair-master.png",
+          "duration": 380,
+          "phase": "settle",
+          "keyType": "timing-key; not a painted animation frame"
+        }
+      ],
+      "paintedSourceFrames": 1,
+      "newPaintedAnimationFrames": 0,
+      "keyType": "timing markers for continuous motion; not newly drawn frames",
+      "events": []
+    },
+    "lens": {
+      "status": "candidate / exported; runtime acceptance pending",
+      "asset": "lens",
+      "source": "art/actions-v060/source/lens-v1.png",
+      "sourceSha256": "a64e3f955bd1c1af1bd0ef1b978e85fbf4365ed0c11382590e44bea5c5eef83d",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "requestedSourceSize": [
+        1536,
+        1536
+      ],
+      "sourceCount": 1,
+      "distinctSourceCells": 6,
+      "exportedFrames": 6,
+      "frameSize": [
+        400,
+        600
+      ],
+      "uniformScale": 0.88,
+      "display": "lamp-inset",
+      "groundLocal": [
+        310,
+        560
+      ],
+      "registrationAnchorRole": "bottom center of stationary lamp pedestal; manually measured in each source cell",
+      "cropReview": "Actual alpha>=16 content checked against measured inter-cell gaps. Per-row crop boxes account for sheet-grid drift. Faint alpha retained. No per-frame bbox fit.",
+      "duration": 2200,
+      "frames": [
+        {
+          "src": "art/actions-v060/lens/lens-01.png",
+          "duration": 300,
+          "phase": "anticipation",
+          "startMs": 0,
+          "endMs": 300,
+          "cropBox": [
+            0,
+            0,
+            418,
+            627
+          ],
+          "sourceVisibleBoxAlpha16": [
+            27,
+            34,
+            401,
+            605
+          ],
+          "sourceRegistrationAnchor": [
+            320,
+            596
+          ],
+          "scale": 0.88,
+          "offset": [
+            28,
+            36
+          ],
+          "registrationTarget": [
+            310,
+            560
+          ],
+          "visibleBoxAlpha16": [
+            52,
+            66,
+            382,
+            568
+          ],
+          "sha256": "0f6d12b47e1f9277c3e45102c13fb413421679ac14238800ca120cd520159a90"
+        },
+        {
+          "src": "art/actions-v060/lens/lens-02.png",
+          "duration": 350,
+          "phase": "approach",
+          "startMs": 300,
+          "endMs": 650,
+          "cropBox": [
+            418,
+            0,
+            836,
+            627
+          ],
+          "sourceVisibleBoxAlpha16": [
+            24,
+            61,
+            408,
+            602
+          ],
+          "sourceRegistrationAnchor": [
+            324,
+            596
+          ],
+          "scale": 0.88,
+          "offset": [
+            25,
+            36
+          ],
+          "registrationTarget": [
+            310,
+            560
+          ],
+          "visibleBoxAlpha16": [
+            46,
+            90,
+            384,
+            566
+          ],
+          "sha256": "80aac3e9963a311f9bab9a36f6414a3d3cf134a7f22ee4039b0582a65effa5fe"
+        },
+        {
+          "src": "art/actions-v060/lens/lens-03.png",
+          "duration": 450,
+          "phase": "seat",
+          "startMs": 650,
+          "endMs": 1100,
+          "cropBox": [
+            836,
+            0,
+            1254,
+            627
+          ],
+          "sourceVisibleBoxAlpha16": [
+            19,
+            43,
+            400,
+            604
+          ],
+          "sourceRegistrationAnchor": [
+            314,
+            596
+          ],
+          "scale": 0.88,
+          "offset": [
+            34,
+            36
+          ],
+          "registrationTarget": [
+            310,
+            560
+          ],
+          "visibleBoxAlpha16": [
+            51,
+            74,
+            386,
+            568
+          ],
+          "sha256": "975aa3f31f9c98f98be10fa4e1a475c0a544a5aa60827cfb80f088553301d8b2",
+          "contactLocal": [
+            303,
+            267
+          ],
+          "event": "seat"
+        },
+        {
+          "src": "art/actions-v060/lens/lens-04.png",
+          "duration": 350,
+          "phase": "latch",
+          "startMs": 1100,
+          "endMs": 1450,
+          "cropBox": [
+            0,
+            627,
+            418,
+            1254
+          ],
+          "sourceVisibleBoxAlpha16": [
+            37,
+            30,
+            395,
+            596
+          ],
+          "sourceRegistrationAnchor": [
+            312,
+            588
+          ],
+          "scale": 0.88,
+          "offset": [
+            35,
+            43
+          ],
+          "registrationTarget": [
+            310,
+            560
+          ],
+          "visibleBoxAlpha16": [
+            67,
+            70,
+            382,
+            568
+          ],
+          "sha256": "544733e4c080254274fc648e50d2182264342d96e79f9d51db91637fd122a0b0",
+          "contactLocal": [
+            347,
+            260
+          ],
+          "event": "latch"
+        },
+        {
+          "src": "art/actions-v060/lens/lens-05.png",
+          "duration": 350,
+          "phase": "release",
+          "startMs": 1450,
+          "endMs": 1800,
+          "cropBox": [
+            418,
+            627,
+            836,
+            1254
+          ],
+          "sourceVisibleBoxAlpha16": [
+            19,
+            30,
+            407,
+            595
+          ],
+          "sourceRegistrationAnchor": [
+            323,
+            588
+          ],
+          "scale": 0.88,
+          "offset": [
+            26,
+            43
+          ],
+          "registrationTarget": [
+            310,
+            560
+          ],
+          "visibleBoxAlpha16": [
+            43,
+            69,
+            385,
+            567
+          ],
+          "sha256": "466a7ce389228b02a955464e95db915652dab219ac12973225cbec97921dd029",
+          "contactLocal": [
+            303,
+            267
+          ],
+          "event": "release"
+        },
+        {
+          "src": "art/actions-v060/lens/lens-06.png",
+          "duration": 400,
+          "phase": "recovery",
+          "startMs": 1800,
+          "endMs": 2200,
+          "cropBox": [
+            836,
+            627,
+            1254,
+            1254
+          ],
+          "sourceVisibleBoxAlpha16": [
+            25,
+            22,
+            399,
+            596
+          ],
+          "sourceRegistrationAnchor": [
+            314,
+            588
+          ],
+          "scale": 0.88,
+          "offset": [
+            34,
+            43
+          ],
+          "registrationTarget": [
+            310,
+            560
+          ],
+          "visibleBoxAlpha16": [
+            56,
+            62,
+            386,
+            568
+          ],
+          "sha256": "98c25591664ee0ea652ff108760d2a3a46e02f6deac35e4ba50b5bf9dceb8625"
+        }
+      ],
+      "events": [
+        {
+          "name": "seat",
+          "time": 650
+        },
+        {
+          "name": "latch",
+          "time": 1100
+        },
+        {
+          "name": "release",
+          "time": 1450
+        }
+      ],
+      "loops": 1,
+      "contactLocal": [
+        303,
+        267
+      ]
+    },
+    "ignition": {
+      "groundLocal": [
+        240,
+        558
+      ],
+      "contactLocal": [
+        347,
+        235
+      ],
+      "display": "lamp-inset",
+      "loops": 1,
+      "status": "candidate; same-source continuous 2D action",
+      "rig": "TidekeeperMotion",
+      "method": "fixed clean underlay, localized elbow mesh, rigid hand and tool, explicit tool ownership",
+      "source": "art/actions-v062/lamp-master.png",
+      "sourceSha256": "6574305398b0539b19f898b9bc4902d35a541ac1e2f5cad49037088ac63ceb38",
+      "frameSize": [
+        500,
+        600
+      ],
+      "frames": [
+        {
+          "src": "art/actions-v062/lamp-master.png",
+          "duration": 300,
+          "phase": "grip",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/lamp-master.png",
+          "duration": 900,
+          "phase": "pour-and-set-down",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/lamp-master.png",
+          "duration": 350,
+          "phase": "pick-up-taper",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/lamp-master.png",
+          "duration": 500,
+          "phase": "reach-wick",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/lamp-master.png",
+          "duration": 250,
+          "phase": "ignite",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/lamp-master.png",
+          "duration": 900,
+          "phase": "return-and-release",
+          "keyType": "timing-key; not a painted animation frame"
+        }
+      ],
+      "paintedSourceFrames": 1,
+      "newPaintedAnimationFrames": 0,
+      "keyType": "timing markers for continuous motion; not newly drawn frames",
+      "events": [
+        {
+          "name": "ignite",
+          "time": 2050
+        }
+      ]
+    },
+    "beckon": {
+      "displayBox": [
+        391.125,
+        550.125,
+        225,
+        337.5
+      ],
+      "groundLocal": [
+        190,
+        558
+      ],
+      "loops": 3,
+      "status": "candidate; same-source continuous 2D action",
+      "rig": "TidekeeperMotion",
+      "method": "fixed clean underlay, localized elbow mesh, rigid hand and tool, explicit tool ownership",
+      "source": "art/actions-v062/beckon-master.png",
+      "sourceSha256": "4b96e432d71f2665fe91563c9c3cf40f94b383dd7fbd8b60e658041f54a3265b",
+      "frameSize": [
+        400,
+        600
+      ],
+      "frames": [
+        {
+          "src": "art/actions-v062/beckon-master.png",
+          "duration": 200,
+          "phase": "attention",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/beckon-master.png",
+          "duration": 180,
+          "phase": "lift",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/beckon-master.png",
+          "duration": 260,
+          "phase": "signal-out",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/beckon-master.png",
+          "duration": 240,
+          "phase": "signal-in",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/beckon-master.png",
+          "duration": 260,
+          "phase": "second-greeting",
+          "keyType": "timing-key; not a painted animation frame"
+        },
+        {
+          "src": "art/actions-v062/beckon-master.png",
+          "duration": 260,
+          "phase": "settle",
+          "keyType": "timing-key; not a painted animation frame"
+        }
+      ],
+      "paintedSourceFrames": 1,
+      "newPaintedAnimationFrames": 0,
+      "keyType": "timing markers for continuous motion; not newly drawn frames",
+      "events": []
+    }
+  },
+  "anatomyCorrection": "0.6 repair/beckon rig visual acceptance withdrawn after user identified displaced/detached arm structure. Replaced with complete anatomically connected poses; corrected ignition hand continuity."
 };

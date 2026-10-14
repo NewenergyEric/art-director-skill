@@ -1,4 +1,4 @@
-/* Tidekeeper 0.5: deterministic merge, staged delivery, supply, and save rules. */
+/* Tidekeeper 0.6: deterministic merge, staged delivery, supply, and compatible v2 saves. */
 (function (root, factory) {
   const api = factory();
   if (typeof module === 'object' && module.exports) module.exports = api;

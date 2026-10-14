@@ -161,5 +161,6 @@ GameLocale.register({
   "这两件可以合成。": "These two items can merge.",
   "点补给箱，取出当前需要的材料。": "Tap the supply crate for the materials you need.",
   "这个窗口暂时不能进入全屏。": "Fullscreen isn't available in this window.",
-  "潮灯小镇 · 重燃灯塔": "Tidekeeper · Rekindle the light"
+  "潮灯小镇 · 重燃灯塔": "Tidekeeper · Rekindle the light",
+  "灯室": "Lantern room"
 });

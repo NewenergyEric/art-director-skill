@@ -6,24 +6,24 @@ These are original candidate game slices made with Art Director and its producti
 
 ## Tidekeeper — relight the lighthouse
 
-[Play · Chinese UI](assets/tidekeeper-playable/play.html) · [Download the 0.5.0 runtime](assets/tidekeeper-playable/tidekeeper-lighthouse-0.5.0.zip)
+[Play 0.6.2 · English](assets/tidekeeper-playable/play.en.html?v=0.6.2) · [Continuous-motion inspector · Chinese UI](assets/tidekeeper-playable/motion-review.html?v=0.6.2) · [Production and revision record](TIDEKEEPER-CONTINUITY.en.md) · [Historical 0.5.0 runtime](assets/tidekeeper-playable/tidekeeper-lighthouse-0.5.0.zip)
 
-Merge seven item families into orders that repair the dock and lighthouse timberwork, install the lens, add oil and light the tower. Welcome the supply boat and collect the final reward. The 0.5.0 candidate supports saving, undo, restart and reduced motion; free supplies are enough to finish.
+Merge seven item families to repair the dock and lighthouse, install the lens, add oil, light the tower and welcome the boat. Candidate 0.6.2 continues the 0.3.0 visual baseline and its materials, tools, items and currencies. Free supplies are sufficient to finish.
 
-The expansion continues the 0.3.0 visual baseline. The lighthouse is an explicit task change, developed through edits of the same first scene. New props have individual generation records; rejected scene edits that moved the dock posts remain in the source record. The existing eight repair poses serve the two carpentry stages. Installation, lighting and greeting still use static poses; this release adds no new character animation.
+Repair, lighting and beckoning now use continuous local motion from fixed source artwork. Faces, clothing and proportions stay fixed; hands and tools remain rigid. Lighting shows pouring, setting down the oil can, taking the taper, contacting the wick and returning the taper. Lens installation retains six drawn poses. The inspector supports sequential playback, slow motion, pause and phase inspection.
 
-The creator checked the actual board, orders and catalog at desktop and simulated mobile sizes, plus materials, saving, supply vouchers and reward timing. A normal-speed four-chapter playthrough used no time injection, skips or state changes. The frozen ZIP was also extracted and run separately. These are Windows Chromium and simulated-touch checks, not real iOS/Android, Mac or engine acceptance.
+Complete Chinese and English normal-speed runs each finish with 17 merges and 225 coins, without injected resources, skips or accelerated time. Seven browser scenarios pass 431 checks. Evidence also includes the full 11.2-second action sequence, 315 raster samples of selected fixed regions, and tool-handoff checks. Windows Chromium and simulated touch do not constitute real-device or human art approval.
 
-Small differences remain in foliage, glass and highlights between scene states, and fingers, clothing and boards drift slightly across repair frames. The opening phone view prioritizes the dock; the full tower becomes visible during construction focus and the second chapter. There is no long-term economy or coin shop.
+This remains limited local 2D motion with a mostly fixed torso, without a native 3D model, armature or skinning. Detached limbs in the early cutouts and drift between full-body drawings are recorded as failures requiring revision. Structural continuity, prop ownership, clean underlays and complete playback now have explicit guidance in the production Skill.
 
-[Prop generation](assets/tidekeeper-playable/art/expansion/generation-props.md) · [Scene edits and rejected drafts](assets/tidekeeper-playable/art/expansion/generation-scenes.md) · [Font source and coverage](assets/tidekeeper-playable/font-source.md) · [Lighthouse state comparison](assets/tidekeeper-playable/lighthouse-states.png)
+[Prop generation](assets/tidekeeper-playable/art/expansion/generation-props.md) · [Scene edits and rejected drafts](assets/tidekeeper-playable/art/expansion/generation-scenes.md) · [Motion sources, prompts and receipt](assets/tidekeeper-playable/art/actions-v062/receipt.json) · [Font source and coverage](assets/tidekeeper-playable/font-source.md)
 
 <details>
 <summary><strong>Earlier 0.4.0 first-light candidate</strong></summary>
 
 [Download the frozen 0.4.0 runtime](assets/tidekeeper-playable/tidekeeper-first-light-0.4.0.zip)
 
-The first-light sequence merged timber, fulfilled an order, repaired the dock, made a lamp, lit the harbor and welcomed the supply boat. Its frozen ZIP preserves that earlier runtime; the live play link now opens 0.5.0.
+The first-light sequence merged timber, fulfilled an order, repaired the dock, made a lamp, lit the harbor and welcomed the supply boat. Its frozen ZIP preserves that earlier runtime; the live play link now opens 0.6.2.
 
 The director/integration agent used the existing Tidekeeper 0.3.0 draft. Specialists handled gameplay, production review and typography. That runtime preserved 18 existing images, added eight repair poses and extended the same licensed UI font to cover its copy. The fifth pose drives impact effects from the same action timeline. The original 0.3.0 project pack and runtime remain unchanged.
 

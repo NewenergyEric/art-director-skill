@@ -6,24 +6,24 @@
 
 ## 潮灯小镇：重燃灯塔
 
-[试玩](assets/tidekeeper-playable/play.html) · [下载 0.5.0 运行包](assets/tidekeeper-playable/tidekeeper-lighthouse-0.5.0.zip)
+[试玩 0.6.2](assets/tidekeeper-playable/play.html?v=0.6.2) · [完整连续动作检查](assets/tidekeeper-playable/motion-review.html?v=0.6.2) · [制作与返修记录](TIDEKEEPER-CONTINUITY.zh.md) · [历史 0.5.0 运行包](assets/tidekeeper-playable/tidekeeper-lighthouse-0.5.0.zip)
 
-用七个合成家族完成订单，修栈桥、修灯塔木构件、安装透镜、注油点灯，最后迎接归船并领奖。0.5.0 候选版支持保存、撤销、重来与减少动态；免费补给足以完成全程。
+用七个合成家族完成订单，修栈桥、修灯塔木构件、安装透镜、注油点灯，最后迎接归船并领奖。0.6.2 候选版沿用 0.3.0 视觉基线与已有材料、工具、物品和货币；免费补给足以完成全程。
 
-扩展沿用 0.3.0 视觉基线。灯塔改造来自用户明确的任务要求，各场景从同一首件定向编辑。新道具有逐件生成记录；两张移动了栈桥木桩的场景未采用，原图仍保留。两段木工叙事沿用已有八帧修缮姿态；安装、点灯和招呼仍是静态姿势，本轮没有新增角色动画。
+维修、点灯和招手改为同母版连续局部运动。固定脸、服装与身体比例，手与工具保留刚性；点灯完整展示倒油、放壶、取引火杆、接触灯芯及回放。透镜安装保留六张姿势。连续动作检查页支持顺序播放、慢放、暂停与逐相位查看，不能只凭单张姿势验收。
 
-制作者检查了实际棋盘、订单、图鉴及桌面和手机视口，覆盖材料提交、存档、补给券与奖励时机。正常速度四章通关没有时间注入、跳过或状态改写，冻结 ZIP 也另行解压运行。检查环境是 Windows Chromium 与触摸模拟，不代表真实 iOS/Android、Mac 或生产引擎验收。
+中英文正常速度通关均为 17 次合成、225 金币，没有注入资源、跳过或加速。七种浏览器场景通过 431 项检查；另有完整 11.2 秒顺序动作录像、315 次指定固定区域光栅采样和工具交接检查。Windows Chromium 与触摸模拟通过不等于真实手机或人工美术批准。
 
-各场景的树叶、玻璃和高光仍有局部差异，修缮帧中仍有轻微手指、衣褶和木板漂移。手机开场侧重码头特写，施工聚焦和第二章才完整展示塔体。目前没有金币商店或长期经济系统。
+当前仍是身体较静、幅度受限的二维局部动作，没有真实三维模型、骨骼和蒙皮。早期分件断臂与整身逐帧漂移均记录为返修原因，不再称为可容忍的小问题。已将结构连续、工具归属、底板残影和完整播放要求补进制作 Skill。
 
-[道具生成](assets/tidekeeper-playable/art/expansion/generation-props.md) · [场景编辑与未采用稿](assets/tidekeeper-playable/art/expansion/generation-scenes.md) · [字体来源与覆盖](assets/tidekeeper-playable/font-source.md) · [灯塔状态对照](assets/tidekeeper-playable/lighthouse-states.png)
+[道具生成](assets/tidekeeper-playable/art/expansion/generation-props.md) · [场景编辑与未采用稿](assets/tidekeeper-playable/art/expansion/generation-scenes.md) · [连续动作源图、提示与回执](assets/tidekeeper-playable/art/actions-v062/receipt.json) · [字体来源与覆盖](assets/tidekeeper-playable/font-source.md)
 
 <details>
 <summary><strong>此前 0.4.0：第一盏归航灯</strong></summary>
 
 [下载冻结的 0.4.0 运行包](assets/tidekeeper-playable/tidekeeper-first-light-0.4.0.zip)
 
-第一段流程包括合成木料、交订单、修栈桥、合成灯具、点亮港湾与迎接归船。旧 ZIP 保留该版本；当前试玩入口已更新为 0.5.0。
+第一段流程包括合成木料、交订单、修栈桥、合成灯具、点亮港湾与迎接归船。旧 ZIP 保留该版本；当前试玩入口已更新为 0.6.2。
 
 主 Agent 沿用 Tidekeeper 0.3.0 草案，负责美术方向、生成与组合；成员分担玩法、制作审查和字体。运行包保留 18 张旧素材，新增八帧修缮姿势，沿用同一授权字体补齐新文案。第五帧的接触事件与扬尘共用动作时间轴。旧规范包、旧运行版本均未改写。
 

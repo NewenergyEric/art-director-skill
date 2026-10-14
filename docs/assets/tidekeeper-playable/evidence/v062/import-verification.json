@@ -1,0 +1,360 @@
+{
+  "version": "0.6.2-candidate",
+  "baseCommit": "00fbd6075da76a260ff2e338b73ac29f9c550d4c",
+  "runtimeFiles": [
+    {
+      "path": "docs/assets/tidekeeper-playable/animation-manifest.js",
+      "bytes": 13878,
+      "sha256": "65a6da540543b686a69ad6a6f188ebafe3d070aeaaf16a838088d207bae79488"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/PROVENANCE.md",
+      "bytes": 3100,
+      "sha256": "9683570c23a3fd95a25edf22cc0b5873af9ab7adb33dbbbd7742760043a0cbd4"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/beckon/beckon-01.png",
+      "bytes": 146652,
+      "sha256": "3233113d0f8bd1050cb5be2cc01d684f6742e89f00e7640d9fdf69f0017e613b"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/beckon/beckon-02.png",
+      "bytes": 147199,
+      "sha256": "2ec15d54bb98aff9c2249dcf865390ef2720af3ec00135465ae07f82fc74185d"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/beckon/beckon-03.png",
+      "bytes": 146883,
+      "sha256": "eea85810c05d84148a130c5e5c72417938d984f713cba576e35508f0cb370e7d"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/beckon/beckon-04.png",
+      "bytes": 146371,
+      "sha256": "2899a877a9b08d8f270c0d543efae7517b77173cbb6e17d0eaea8f5b91fc933a"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/beckon/beckon-05.png",
+      "bytes": 147004,
+      "sha256": "e1e38ef9656305469a11c43a373a8b17fefffa982a8bfa9edeb472fbdd96d605"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/beckon/beckon-06.png",
+      "bytes": 146100,
+      "sha256": "a59195f36a422ef047f323b54bad55a5bb91bdc790632b1d60e0486ad6136625"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/ignition/ignition-01.png",
+      "bytes": 246139,
+      "sha256": "0ea6c504575fd6bc8d15bd693149738424ce984a51f384f47eb290f9448a158d"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/ignition/ignition-02.png",
+      "bytes": 242099,
+      "sha256": "1ee5d4b479898008812db238f5539b1a2e7d1a51e6ea15cd9b2b0965c58b79e1"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/ignition/ignition-03.png",
+      "bytes": 238832,
+      "sha256": "269d5e0e880e927376ee4885e41048fbbfb5cfd4664c3bf7e02ed04c466c3814"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/ignition/ignition-04.png",
+      "bytes": 262806,
+      "sha256": "ac1bea77ac5078d58c68d365f05c806e678ee48b0e954e016949a4bd60d6e627"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/ignition/ignition-05.png",
+      "bytes": 233440,
+      "sha256": "5a8bd25a008f40b645a6bcc07afb3d4e8ee09a14031d0afa8025bc5c6b1448d7"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/ignition/ignition-06.png",
+      "bytes": 261054,
+      "sha256": "8424cc8f8c022c6730baf614ffe987fc45efb8f4ce75959fc4cf32c92d4c774c"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/lens/lens-01.png",
+      "bytes": 236052,
+      "sha256": "0f6d12b47e1f9277c3e45102c13fb413421679ac14238800ca120cd520159a90"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/lens/lens-02.png",
+      "bytes": 232230,
+      "sha256": "80aac3e9963a311f9bab9a36f6414a3d3cf134a7f22ee4039b0582a65effa5fe"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/lens/lens-03.png",
+      "bytes": 243428,
+      "sha256": "975aa3f31f9c98f98be10fa4e1a475c0a544a5aa60827cfb80f088553301d8b2"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/lens/lens-04.png",
+      "bytes": 241197,
+      "sha256": "544733e4c080254274fc648e50d2182264342d96e79f9d51db91637fd122a0b0"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/lens/lens-05.png",
+      "bytes": 252670,
+      "sha256": "466a7ce389228b02a955464e95db915652dab219ac12973225cbec97921dd029"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/lens/lens-06.png",
+      "bytes": 260199,
+      "sha256": "98c25591664ee0ea652ff108760d2a3a46e02f6deac35e4ba50b5bf9dceb8625"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/repair/repair-01.png",
+      "bytes": 190368,
+      "sha256": "fff85f69edbaa237d17da21b70a753c7236fad24b1a2bf25259642c024b26f7d"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/repair/repair-02.png",
+      "bytes": 207178,
+      "sha256": "0f3aeeb5e642e0ddb8b1115075ccac0f18c46d260f6d67ca5bca4f657be617df"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/repair/repair-03.png",
+      "bytes": 206520,
+      "sha256": "1b1c1ed0de1cc9eef70ef118da8b90cc7faeecc4eefc75fd2479444994e9e4f1"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/repair/repair-04.png",
+      "bytes": 188475,
+      "sha256": "b2d0c31fe36148d46be9649402354e41abfdd006458cbc8830e675c543495808"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/repair/repair-05.png",
+      "bytes": 193401,
+      "sha256": "bdd79000daf1d88dfeccf7e03598968cd41891170265ca0005a42543be276c80"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/repair/repair-06.png",
+      "bytes": 188016,
+      "sha256": "ae14a538656ced4dc6ce9846c2bdb5e334d8ca5a41bc4aa6cf0bbd267f35879d"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/repair/repair-07.png",
+      "bytes": 190173,
+      "sha256": "79ee7043caee082c20d5c18a3153b71cc089f286196a4189f03a699369619289"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/repair/repair-08.png",
+      "bytes": 191239,
+      "sha256": "682cba17d1e2b74a5769c8069fccc2c26ec680e3e3f1b9c29fe96f333f318055"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/beckon-arm-v1.png",
+      "bytes": 1167446,
+      "sha256": "f4776ef064b7ad1c3e6a11fda6fc3106804bd88fffb6010bc1050b24dff4c329"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/beckon-base-v1.png",
+      "bytes": 1452427,
+      "sha256": "dc2515f165ebce74c3ddaa623301033e1d36c468cfb554c4ab0a4a4135346f70"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/ignition-contact-target.png",
+      "bytes": 256468,
+      "sha256": "48d08b9c0aa9144d7a2128a637dd98fdaf5be01d69e9756a0833665b4fab563d"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/ignition-contact-v3-400.png",
+      "bytes": 233440,
+      "sha256": "5a8bd25a008f40b645a6bcc07afb3d4e8ee09a14031d0afa8025bc5c6b1448d7"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/ignition-contact-v3.png",
+      "bytes": 1737815,
+      "sha256": "5c3f837c77bb18c15f8f311e04298d5d7d1e2aa9d12cd14a258df63cfa8cdb5e"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/ignition-v1.png",
+      "bytes": 1826271,
+      "sha256": "ddf0d5554c691065ebb44dfc30bf99dbbae7b719e5eba13a5b2757b2a372ce78"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/ignition-v2.png",
+      "bytes": 1843633,
+      "sha256": "ef04439d9c550cb5b5263df46abcf3210dc220c613f431d53902f9fe724842a5"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/lens-v1.png",
+      "bytes": 1771996,
+      "sha256": "a64e3f955bd1c1af1bd0ef1b978e85fbf4365ed0c11382590e44bea5c5eef83d"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/repair-arm-continuous-v2.png",
+      "bytes": 1161865,
+      "sha256": "d23525fa55d99cbffa573a9c7b9573aa4afd8b05b3be65647378e32a4635bb05"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/repair-arm-parts-v1.png",
+      "bytes": 1363084,
+      "sha256": "68bc6b1127354d7c0855d7aaf3a4963869f16bc96f03492f60f9f73b630fa8e0"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v060/source/repair-base-v1.png",
+      "bytes": 1838894,
+      "sha256": "e7deda507da8d7c2b2aea4067a181405d2efb8dad7179f9c330f8c277fe1744e"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/PROVENANCE.md",
+      "bytes": 2071,
+      "sha256": "62c0e344786bdebf4716346ece3978b617d092a6805752663fd05a10c83b2b0a"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/beckon/beckon-01.png",
+      "bytes": 156012,
+      "sha256": "6c145a15dca84eddf4bbb958a09768b6d05eba59eaadff8bd123f898dfd2f0ef"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/beckon/beckon-02.png",
+      "bytes": 158267,
+      "sha256": "3b71536869d8c44e7c829df8122106f8bc6f97c8170c30ef9140bae0106e0bfa"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/beckon/beckon-03.png",
+      "bytes": 160471,
+      "sha256": "4b96e432d71f2665fe91563c9c3cf40f94b383dd7fbd8b60e658041f54a3265b"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/beckon/beckon-04.png",
+      "bytes": 157589,
+      "sha256": "3bbf595ea1863859b3741d5a5382ce96c95b78fa33823639196a336b57206dc2"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/beckon/beckon-05.png",
+      "bytes": 159062,
+      "sha256": "db5f95dada691ef5247d85cbf6136c9e64392511a557cb9b23b037c9bf7b0e72"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/beckon/beckon-06.png",
+      "bytes": 158636,
+      "sha256": "5e1595323c88571175dd0847a3a72183a9d9738816b8d8b55d3d7cdb45725ee4"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/ignition/ignition-06.png",
+      "bytes": 243990,
+      "sha256": "18e2e1643e6a32df54ac16426a5164f6ffcd598b5c7b9c20f061456a61c93f89"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/repair/repair-01.png",
+      "bytes": 192248,
+      "sha256": "5111bf05f55a9f47188a4667b6bd25b4a858f53ad904e99a31cdaad9d44e62fd"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/repair/repair-02.png",
+      "bytes": 196873,
+      "sha256": "8ea250c1201d3944947258f60e570007c9d69bd3cd2286022fda72ad1a6ca83b"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/repair/repair-03.png",
+      "bytes": 190192,
+      "sha256": "6008e5be945c2a35d67764ec7ba835b8b6ff93430232b2ff5c869e3a4f1bbc5b"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/repair/repair-04.png",
+      "bytes": 193908,
+      "sha256": "95632c2caa587f7710e4f84cbba06bd2ea6966d7a24499e84102708cf3aa8cf0"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/repair/repair-05.png",
+      "bytes": 192629,
+      "sha256": "d4f178fb5fdc725c531fc88cceb7cd469c2f111257947846e152d159aed83cf0"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/repair/repair-06.png",
+      "bytes": 190506,
+      "sha256": "2ae60725fd63a250ac661736089c432d9936221df87777038fe2240a505c65a6"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/source/beckon-full-body-v1.png",
+      "bytes": 1363776,
+      "sha256": "38ab9c4a8ee4e3a379cc81a56f8452aba6a39b9a679285ea1ac2203bfe8013ff"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/source/ignition-recovery-v1.png",
+      "bytes": 1203481,
+      "sha256": "114dc86bd72ddbb73198d01c3203a1ab9cce50f4bfddab70dcc469b4540bd800"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v061/source/repair-full-body-v1.png",
+      "bytes": 1802233,
+      "sha256": "4488a45df0063b543e241b67894366da02a7b9fa87b0f5e896ceeaf3ac6a95f2"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v062/beckon-master.png",
+      "bytes": 160471,
+      "sha256": "4b96e432d71f2665fe91563c9c3cf40f94b383dd7fbd8b60e658041f54a3265b"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v062/lamp-clean.png",
+      "bytes": 1358911,
+      "sha256": "33e1b05fb80b81ba2d8b68fac1fd5b708c7f68c70bfa7c26c7d10e15fda15940"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v062/lamp-master.png",
+      "bytes": 1476636,
+      "sha256": "6574305398b0539b19f898b9bc4902d35a541ac1e2f5cad49037088ac63ceb38"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v062/repair-clean.png",
+      "bytes": 1595639,
+      "sha256": "cd2caf0ef6b82d999119738bb9328ef6e11ef455af21b7aaffe5df256f6c630f"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/art/actions-v062/repair-master.png",
+      "bytes": 193908,
+      "sha256": "95632c2caa587f7710e4f84cbba06bd2ea6966d7a24499e84102708cf3aa8cf0"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/continuous-motion.js",
+      "bytes": 10432,
+      "sha256": "2fa5cf52ba9b71435d63001e2cdf79732fbff98cf0f5d472592fa1a2b6b6ea40"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/game-core.js",
+      "bytes": 17819,
+      "sha256": "fc06f8af66ca1b055891ab9488d4ae3562ee0d2307b6dbc0f7b92f67e1979a79"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/game.css",
+      "bytes": 34331,
+      "sha256": "554c31bda588f67ad3e20c17d2f51ba862520dd29fabd959fc53b87df8187135"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/game.js",
+      "bytes": 56565,
+      "sha256": "7b991e90753757bdf3698313362f231388343fb1a77bcc0eaaf1eac0019420b8",
+      "sourceSha256": "71c88a37f68a9681787ca13c742af0f579162e1a2979d1ac5b43f0affef2659a"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/locale-en.js",
+      "bytes": 8865,
+      "sha256": "e2409747619efa99c441f1874690de72b55e6398eaf86ec398d2e8a4a514c9cc"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/motion-review.html",
+      "bytes": 3600,
+      "sha256": "2c7d5d55cb4c51fc06a4cb544ed0fcdf86cacfab639427217c932ed0694cc789"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/play.en.html",
+      "bytes": 4082,
+      "sha256": "96d9ea1a8bfff001c47fd8682d0bc9e20c6dd43493dbab6b6354ff58ecb23438"
+    },
+    {
+      "path": "docs/assets/tidekeeper-playable/play.html",
+      "bytes": 4057,
+      "sha256": "ded443a5a424652f3d2b680726171a09e4a251cf12122332df02e02baeaec8a1"
+    }
+  ],
+  "publicationAdjustments": [
+    {
+      "path": "game.js",
+      "sourceSha256": "71c88a37f68a9681787ca13c742af0f579162e1a2979d1ac5b43f0affef2659a",
+      "publicationSha256": "7b991e90753757bdf3698313362f231388343fb1a77bcc0eaaf1eac0019420b8",
+      "reason": "Use literal translation calls for both repair titles so the existing localization check can identify them; displayed strings and motion are unchanged."
+    }
+  ]
+}

@@ -68,7 +68,7 @@ Continue existing direction without rebuilding it. Your agent uses its available
   </tr>
 </table>
 
-Merge seven item families into repair orders. The **0.5.0 candidate** follows the job from fixing the dock and lighthouse timberwork to fitting the lens, adding oil, lighting the tower and welcoming the supply boat. New items and scene states continue the harbor's existing art direction.
+Merge seven item families into repair orders. The **0.6.2 candidate** repairs the dock and lighthouse, fits the lens, adds oil, lights the tower and welcomes the supply boat. Repair, lighting and beckoning now use continuous motion from fixed source artwork, preserving character proportions, clothing and rigid tools within a limited range. [Playback and production review](docs/TIDEKEEPER-CONTINUITY.en.md) records the corrections, evidence and remaining limits.
 
 [Play Tidekeeper](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-playable/play.en.html)
 
