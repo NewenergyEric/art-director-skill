@@ -16,7 +16,11 @@ def main():
         if (result.returncode==0)==fail:raise AssertionError(data)
         return data
     pack=out/'pack'
-    run(ROOT/'scripts/style_pack.py','build',ROOT/'examples/tidekeeper-production','--out',pack)
+    fixture=ROOT/'examples/tidekeeper-production';plan=fixture/'production-plan.json'
+    builder=fixture/'scripts/style_pack.py'
+    # This historical plan pins the bundled runtime as well as the art inputs.
+    # Rebuild with that frozen runtime; current mother tools produce a new manifest.
+    run(builder,'build',fixture,'--out',pack)
     archive=out/'tidekeeper-0.3.0-candidate.zip'
     run(pack/'scripts/style_pack.py','archive',pack,'--out',archive)
     received=out/'received';received.mkdir()
@@ -24,7 +28,7 @@ def main():
     run(received/'scripts/style_pack.py','verify',received)
     motion=run(received/'scripts/style_pack.py','brief',received,'--category','motion','--task','Continue the repair, lighting and arrival effects from this pack.')
     assert {'TK-STATE','TK-ACTION','TK-FX'}.issubset({rule['id'] for rule in motion['rules']})
-    tool=ROOT/'skills/game-art-production/scripts/production.py';plan=ROOT/'examples/tidekeeper-production/production-plan.json'
+    tool=ROOT/'skills/game-art-production/scripts/production.py'
     run(tool,'check',plan,'--pack',received,fail=True)
     checked=run(tool,'check',plan,'--pack',received,'--allow-candidate')
     run(tool,'tasks',plan,'--pack',received,'--out',out/'tasks')
@@ -43,7 +47,13 @@ def main():
             assert layer['transform']['origin']==recipe['box'][:2] and layer['transform']['size']==recipe['box'][2:]
             with Image.open(folder/'images'/layer['imageFile']) as im:assert im.mode=='RGBA';im.verify()
         exports.append({'scene':scene['id'],'layers':len(manifest['layers']),'rgba8':True,'recipe_placement':True})
-    result={'method':'One-agent self-test, rebuilt and relocated received pack; file/schema and actual PNG decoding, not native Mac acceptance.',
+    manifest_bytes=(received/'manifest.json').read_bytes()
+    rebuild={'mode':'frozen_fixture','source_plan':plan.relative_to(ROOT).as_posix(),
+             'source_pack':json.loads(plan.read_text(encoding='utf-8'))['pack'],
+             'builder':builder.relative_to(ROOT).as_posix(),'builder_sha256':hashlib.sha256(builder.read_bytes()).hexdigest(),
+             'rebuilt_pack':{**json.loads(manifest_bytes)['pack'],'manifest_sha256':hashlib.sha256(manifest_bytes).hexdigest()}}
+    result={'method':'One-agent self-test, rebuilt with the frozen fixture runtime and relocated received pack; file/schema and actual PNG decoding, not native Mac acceptance.',
+            'rebuild':rebuild,
             'pack':checked['pack'],'assets':len(checked['order']),'exports':exports,'files':built['files'],
             'director_approval':'pending','native_compositor_open':'not_tested','engine_and_device':'not_tested'}
     (out/'verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
@@ -54,7 +64,7 @@ def main():
     # A modified layer must fail after relocation; original delivery stays intact.
     broken=out/'changed';shutil.copytree(moved,broken);next((broken/'compositor').rglob('*.png')).write_bytes(b'changed')
     run(tool,'verify',broken,fail=True)
-    print(json.dumps({'ok':True,'assets':result['assets'],'scene_exports':len(exports),'files':built['files']}))
+    print(json.dumps({'ok':True,'assets':result['assets'],'scene_exports':len(exports),'files':built['files'],'rebuild':rebuild}))
 
 
 if __name__=='__main__':main()
