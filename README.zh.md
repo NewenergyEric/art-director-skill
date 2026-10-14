@@ -61,7 +61,12 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-d
 
 ### 潮灯小镇 · 合成与修缮
 
-![潮灯小镇 0.5.0 实际游戏：灯塔、修缮订单与合成棋盘。](docs/assets/tidekeeper-playable/gameplay.png?v=lighthouse-20261014)
+<table>
+  <tr>
+    <td width="70%" valign="top"><img src="docs/assets/tidekeeper-playable/gameplay.png?v=asset-proof-20261014" alt="潮灯小镇游戏实景：灯塔、修缮订单与合成棋盘。"><br><sub><strong>游戏内结果</strong> · 修复并点亮灯塔</sub></td>
+    <td width="30%" valign="top"><strong>同一项目包</strong><br><img src="docs/assets/tidekeeper-production/character-base.png" width="43%" alt="潮灯小镇角色素材"> <img src="docs/assets/tidekeeper-production/lamp-l4.png" width="43%" alt="潮灯小镇海岸灯素材"><br><img src="docs/assets/tidekeeper-playable/art/expansion/rope-2.png" width="43%" alt="潮灯小镇绳索素材"> <img src="docs/assets/tidekeeper-playable/art/expansion/glass-2.png" width="43%" alt="潮灯小镇透镜素材"><br><sub>角色 · 灯具 · 材料 · 物件</sub></td>
+  </tr>
+</table>
 
 用七个合成家族完成修缮订单。**0.5.0 候选版**从修栈桥、修灯塔木构件，到安装透镜、注油点灯、迎接归船，把新物品与连续场景接进原有的港湾美术方向。
 
@@ -69,11 +74,16 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-d
 
 ### 暮林守望 · 探索与塔防
 
-![暮林守望：手绘林地、守灯人、森林生物与防御设施。](docs/assets/duskwood-watch/combat.png?v=duskwood-v2-20261014)
+<table>
+  <tr>
+    <td width="70%" valign="top"><img src="docs/assets/duskwood-watch/combat.png?v=asset-proof-20261014" alt="暮林守望游戏实景：守灯人、森林生物与防御设施。"><br><sub><strong>游戏内结果</strong> · 提灯穿过长夜</sub></td>
+    <td width="30%" valign="top"><strong>同一项目包</strong><br><img src="docs/assets/duskwood-watch/assets/keeper-base.png" width="43%" alt="暮林守望守灯人素材"> <img src="docs/assets/duskwood-watch/assets/enemy.png" width="43%" alt="暮林守望森林生物素材"><br><img src="docs/assets/duskwood-watch/assets/v2/world/lamp-on.png" width="43%" alt="暮林守望灯具素材"> <img src="docs/assets/duskwood-watch/assets/v2/weapons/ballista-base.png" width="43%" alt="暮林守望防御素材"><br><sub>守灯人 · 生物 · 灯光 · 防御</sub></td>
+  </tr>
+</table>
 
 提灯巡林、采集物资、布置防线，在同一张地图守过四夜。移动光源能破除暗甲，燃料、物品与升级影响你的布防。这是从同一份项目包继续制作的 **0.4.0 草案**。
 
-[试玩暮林守望](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.html)
+[查看暮林守望英文案例](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.en.html) · [中文完整试玩（约 33 MB）](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.html)
 
 两者都是原创浏览器候选样例，尚未经真人主美批准，也未完成真机与生产引擎验收。[查看各 Agent 如何使用 Skill、实际检查与仍存边界](docs/AGENT-ART-TEAM.zh.md)。
 

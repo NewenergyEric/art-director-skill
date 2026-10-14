@@ -1,5 +1,6 @@
 /* Keep resource IDs and world data language independent. */
 GameLocale.register({
+  "正在载入森林素材 {0}/{1}": "Loading forest assets {0}/{1}",
   "朽木堆": "Timber pile",
   "月露草": "Moondew herbs",
   "月晶簇": "Mooncrystal cluster",

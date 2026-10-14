@@ -150,6 +150,10 @@ def main():
                   all('https://github.com/NewenergyEric/' + repo in text for repo in (
                       'game-market-intelligence', 'game-reverse-analyst',
                       'game-production-manager', 'art-director-skill')))
+            check(name + ': shows each gameplay result beside four project assets',
+                  text.count('class="project-assets"') == 2
+                  and text.count('class="project-asset project-asset-main"') == 2
+                  and text.count('class="project-asset"') == 6)
         else:
             redirect = re.search(r'http-equiv="refresh" content="0; url=([^"]+)"', text)
             check(name + ': redirects to the unified introduction',
@@ -184,6 +188,16 @@ def main():
     check('language links open the opposite edition',
           'data-language-link href="landing.zh.html"' in landing
           and 'data-language-link href="landing.html"' in chinese_landing)
+    dusk_case_path = ROOT / 'docs/assets/duskwood-watch/index.en.html'
+    dusk_case = dusk_case_path.read_text(encoding='utf-8')
+    check('Duskwood English entry is an instant screenshot-and-assets case',
+          'class="consistency-board"' in dusk_case
+          and 'SAME PROJECT PACK' in dusk_case
+          and 'href="play.en.html"' in dusk_case
+          and 'game-v2.js' not in dusk_case)
+    for src, target in local_links(dusk_case_path, dusk_case):
+        check('Duskwood case local link ' + src,
+              target.is_relative_to(ROOT) and target.is_file())
     check('language editions keep the same section and control IDs',
           set(re.findall(r'\bid="([^"]+)"', landing))
           == set(re.findall(r'\bid="([^"]+)"', chinese_landing)))

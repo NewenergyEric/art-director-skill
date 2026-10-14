@@ -1,1 +1,76 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath fill=%27%23d7ad62%27 d=%27M12 3h8v5h4v21H8V8h4zm0 9v13h8V12z%27/%3E%3C/svg%3E"><title>Duskwood Watch · Carry the light</title><link rel="stylesheet" href="v2.css?v=locale-20261014"></head><body><main><canvas id="game" width="1600" height="1000" tabindex="0" aria-label="Duskwood Watch battlefield. Click to move the keeper; click ruins to build. Space: begin night. Q: flare. E: root trap. R: potion. Tab: inventory. H: help. P: pause."></canvas><p id="loading">Lighting the forest lamps…</p><div id="status" class="sr-only" aria-live="polite"></div><nav class="sr-only" aria-label="Game controls"><button id="start-accessible">Enter the forest</button><button id="night-accessible">Begin night</button><button id="help-accessible">How to play</button></nav></main><script src="../game-locale.js"></script><script src="locale-en.js"></script><script src="game-v2-config.js?v=locale-20261014"></script><script src="game-v2.js?v=locale-20261014"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Duskwood Watch shown as one playable scene beside the original character, creature, light and defense assets from the same project pack.">
+  <meta property="og:title" content="Duskwood Watch · One game view, one project pack">
+  <meta property="og:description" content="See the playable result beside the source art that keeps it visually consistent.">
+  <meta property="og:image" content="https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/combat.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath fill=%27%23d7ad62%27 d=%27M12 3h8v5h4v21H8V8h4zm0 9v13h8V12z%27/%3E%3C/svg%3E">
+  <link rel="preload" href="combat.png" as="image">
+  <link rel="stylesheet" href="case.css?v=visual-memory-20261014">
+  <title>Duskwood Watch · Gameplay and project assets</title>
+</head>
+<body>
+  <header class="case-nav">
+    <a class="case-brand" href="../../landing.html#cases" aria-label="Back to Art Director case studies">ART DIRECTOR <span>●</span></a>
+    <div><span>PROJECT CASE / 02</span><a href="index.html" lang="zh-CN">Chinese build</a></div>
+  </header>
+
+  <main>
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-title">
+        <p>ORIGINAL BROWSER GAME · 0.4.0 DRAFT</p>
+        <h1 id="case-title"><span>Duskwood</span><strong>Watch</strong></h1>
+        <p class="case-lede">One game view, one project pack. The playable scene sits beside the actual character, creature, lighting and defense assets used to build it.</p>
+      </div>
+
+      <div class="consistency-board">
+        <figure class="game-view">
+          <img src="combat.png?v=visual-memory-20261014" width="1600" height="1000" alt="Duskwood Watch gameplay: a lantern keeper defends a hand-painted forest path at night.">
+          <figcaption><span>IN-GAME RESULT</span><strong>Explore · gather · defend</strong></figcaption>
+        </figure>
+
+        <aside class="asset-rail" aria-label="Assets from the same Duskwood Watch project pack">
+          <div class="asset-rail-head"><span>SAME PROJECT PACK</span><strong>04 FILES</strong></div>
+          <figure class="asset asset-main">
+            <img src="assets/keeper-base.png" width="1166" height="1349" alt="Lantern keeper character asset">
+            <figcaption><span>01</span> Keeper</figcaption>
+          </figure>
+          <figure class="asset">
+            <img src="assets/enemy.png" width="321" height="256" alt="Brambleback forest creature asset">
+            <figcaption><span>02</span> Creature</figcaption>
+          </figure>
+          <figure class="asset">
+            <img src="assets/v2/world/lamp-on.png" width="512" height="512" alt="Lit forest lamp asset">
+            <figcaption><span>03</span> Light</figcaption>
+          </figure>
+          <figure class="asset">
+            <img src="assets/v2/weapons/ballista-base.png" width="500" height="408" alt="Branch bow defense base asset">
+            <figcaption><span>04</span> Defense</figcaption>
+          </figure>
+        </aside>
+      </div>
+    </section>
+
+    <section class="case-proof" aria-labelledby="proof-title">
+      <div>
+        <p class="proof-kicker">WHAT STAYS CONSISTENT</p>
+        <h2 id="proof-title">The same visual decisions survive from file to screen.</h2>
+      </div>
+      <ol>
+        <li><span>01</span><strong>Shape</strong><p>Carved wood, weighted silhouettes and softened edges.</p></li>
+        <li><span>02</span><strong>Palette</strong><p>Deep teal shadows, moss greens and lantern amber.</p></li>
+        <li><span>03</span><strong>Material</strong><p>Painterly facets stay readable at gameplay scale.</p></li>
+        <li><span>04</span><strong>Function</strong><p>Light, enemy and defense roles remain distinct in play.</p></li>
+      </ol>
+    </section>
+
+    <section class="case-action" aria-label="Duskwood Watch links">
+      <div><p>FULL PLAYABLE BUILD</p><h2>Carry the light yourself.</h2><p>The complete prototype loads about 33 MB of art on first visit. A visible counter now shows its progress.</p></div>
+      <div class="case-links"><a class="play-link" href="play.en.html">Load the full game <span>↗</span></a><a href="../../landing.html#cases">Back to both cases</a></div>
+    </section>
+  </main>
+</body>
+</html>
