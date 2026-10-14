@@ -1,5 +1,6 @@
 (function () {
   'use strict';
+  const T = globalThis.GameLocale?.text || ((source, ...values) => source.replace(/\{(\d+)\}/g, (_, i) => values[i]));
   const C = window.TidekeeperCore;
   if (!C) return;
   const ART = '../tidekeeper-production/';
@@ -137,7 +138,7 @@
   }
   function renderSound() {
     $('sound-button').innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/>${soundEnabled ? '<path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14"/>' : '<path d="m16 9 5 6m0-6-5 6"/>'}</svg>`;
-    $('sound-button').setAttribute('aria-label', soundEnabled ? '关闭声音' : '打开声音');
+    $('sound-button').setAttribute('aria-label', soundEnabled ? T("关闭声音") : T("打开声音"));
     $('sound-button').setAttribute('aria-pressed', String(soundEnabled));
   }
 
@@ -185,8 +186,8 @@
       sound('supply');
       (event.slots || [event.to]).forEach(slot => board.querySelector(`[data-cell="${slot}"]`)?.classList.add('supply-pop'));
     }
-    if (event.type === 'submitted') { sound('supply'); if (event.ready) tell('材料交齐了，可以开工。', 1800); }
-    if (event.type === 'stage-complete') { sound(event.stage === 'fuel' ? 'lit' : 'merge'); if (event.stage !== 'fuel') tell(`${C.STAGES[event.stage].name} · +${event.coins} 金币`, 2200); }
+    if (event.type === 'submitted') { sound('supply'); if (event.ready) tell(T("材料交齐了，可以开工。"), 1800); }
+    if (event.type === 'stage-complete') { sound(event.stage === 'fuel' ? 'lit' : 'merge'); if (event.stage !== 'fuel') tell(T("{0} · +{1} 金币", C.STAGES[event.stage].name, event.coins), 2200); }
     if (event.type === 'arrived' || event.type === 'start') sound(event.type);
     if (event.type === 'win') { sound('win'); showDialog('win'); }
     if (event.type === 'start') { hideDialog(); $('board').querySelector('[data-cell="1"]')?.focus({ preventScroll: true }); }
@@ -196,9 +197,9 @@
     const stage = C.stageFor(state);
     if (!stage || isFocusedScene()) { $('order').replaceChildren(); return; }
     const config = C.STAGES[stage], active = C.isBoardPhase(state);
-    $('order').innerHTML = `<div class="order-summary"><span class="order-person">${config.person}的订单</span><h1>${config.name}</h1><span class="stage-count">${C.STAGE_KEYS.indexOf(stage) + 1}/4</span></div><div class="requirements">${C.requirements(state).map(req => {
+    $('order').innerHTML = `<div class="order-summary"><span class="order-person">${config.person}${T("的订单")}</span><h1>${config.name}</h1><span class="stage-count">${C.STAGE_KEYS.indexOf(stage) + 1}/4</span></div><div class="requirements">${C.requirements(state).map(req => {
       const done = req.submitted === req.need, can = active && !done && req.available > 0;
-      return `<button class="requirement ${done ? 'delivered' : can ? 'available' : ''}" data-action="submit" data-item="${req.item}" ${can ? '' : 'disabled'} aria-label="${C.ITEMS[req.item].name}，已交付${req.submitted}/${req.need}${can ? '，点击交付一件' : ''}">${itemImage(req.item)}<span class="requirement-copy"><strong>${C.ITEMS[req.item].name}</strong><span>${req.submitted}/${req.need} <em>${done ? '已交齐' : can ? req.item === 't2' ? '配发工具' : '交付' : '待合成'}</em></span></span></button>`;
+      return `<button class="requirement ${done ? 'delivered' : can ? 'available' : ''}" data-action="submit" data-item="${req.item}" ${can ? '' : 'disabled'} aria-label="${C.ITEMS[req.item].name}${T("，已交付")}${req.submitted}/${req.need}${can ? T("，点击交付一件") : ''}">${itemImage(req.item)}<span class="requirement-copy"><strong>${C.ITEMS[req.item].name}</strong><span>${req.submitted}/${req.need} <em>${done ? T("已交齐") : can ? req.item === 't2' ? T("配发工具") : T("交付") : T("待合成")}</em></span></span></button>`;
     }).join('')}</div><div class="order-bottom"><span class="order-reward">${currencyImage('coins')}+${config.reward}${config.tokens ? `${currencyImage('tokens')}+${config.tokens}` : ''}</span><button class="action-button" data-action="build" ${C.orderReady(state) ? '' : 'disabled'}>${config.verb}</button></div>`;
   }
 
@@ -213,7 +214,7 @@
       const matches = selected && selected === value && index !== state.selected && info?.next;
       const order = C.requirements(state).some(req => req.item === value && req.submitted < req.need);
       const classes = ['cell', value === 'locked' ? 'locked' : '', value === 'producer' ? 'producer' : '', isSelected ? 'selected' : '', matches ? 'match' : '', hintPair?.includes(index) && hintUntil > presentationTime ? 'hint' : ''].filter(Boolean).join(' ');
-      return `<button class="${classes}" data-cell="${index}" tabindex="${index === focusedCell ? 0 : -1}" ${value === 'locked' || !interactive ? 'disabled' : ''} aria-label="第${Math.floor(index / 5) + 1}行第${index % 5 + 1}格，${info?.name || '空位'}${info?.level ? `，${info.level}级` : ''}${order ? '，订单需要' : ''}" aria-pressed="${isSelected}">${value ? itemImage(value) : ''}${info?.level ? `<span class="level" aria-hidden="true">${info.level}</span>` : ''}${value === 'producer' ? '<span class="producer-plus" aria-hidden="true">+</span>' : ''}${order ? '<span class="order-check" aria-hidden="true">✓</span>' : ''}</button>`;
+      return `<button class="${classes}" data-cell="${index}" tabindex="${index === focusedCell ? 0 : -1}" ${value === 'locked' || !interactive ? 'disabled' : ''} aria-label="${T("第")}${Math.floor(index / 5) + 1}${T("行第")}${index % 5 + 1}${T("格，")}${info?.name || T("空位")}${info?.level ? T("，{0}级", info.level) : ''}${order ? T("，订单需要") : ''}" aria-pressed="${isSelected}">${value ? itemImage(value) : ''}${info?.level ? `<span class="level" aria-hidden="true">${info.level}</span>` : ''}${value === 'producer' ? '<span class="producer-plus" aria-hidden="true">+</span>' : ''}${order ? '<span class="order-check" aria-hidden="true">✓</span>' : ''}</button>`;
     }).join('');
     if (previousFocus !== undefined && interactive) board.querySelector(`[data-cell="${previousFocus}"]`)?.focus({ preventScroll: true });
     $('undo-button').disabled = !state.undo || !interactive;
@@ -227,31 +228,31 @@
     const item = selected || C.FAMILIES[familyId].items[0];
     const info = C.ITEMS[item];
     const max = !info.next && !!info.family;
-    const description = max ? item === 't2' ? '配发给这次施工，下一次另备一包。' : '做好了，点击上方材料交付。' : item === 'producer' ? '轻点取一件，补给页可用航运券。' : '点击两件相同物品，或拖到一起合成。';
+    const description = max ? item === 't2' ? T("配发给这次施工，下一次另备一包。") : T("做好了，点击上方材料交付。") : item === 'producer' ? T("轻点取一件，补给页可用航运券。") : T("点击两件相同物品，或拖到一起合成。");
     const chain = C.FAMILIES[familyId].items;
-    $('item-info').innerHTML = `${itemImage(item, 'info-image')}<div class="info-copy"><strong>${info.name}</strong><p>${description}</p></div><div class="chain" aria-label="${C.FAMILIES[familyId].name}合成链">${chain.map((value, i) => (i ? '<span>›</span>' : '') + itemImage(value, value === selected ? 'current' : '')).join('')}</div>`;
+    $('item-info').innerHTML = `${itemImage(item, 'info-image')}<div class="info-copy"><strong>${info.name}</strong><p>${description}</p></div><div class="chain" aria-label="${C.FAMILIES[familyId].name}${T("合成链")}">${chain.map((value, i) => (i ? '<span>›</span>' : '') + itemImage(value, value === selected ? 'current' : '')).join('')}</div>`;
   }
   function renderSceneCopy() {
     const phase = state.phase;
     const stage = C.stageFor(state), config = stage ? C.STAGES[stage] : null;
-    const chapters = config ? [config.chapter, config.name] : ['归航', ['reward', 'complete'].includes(phase) ? '欢迎回家' : '等待归航'];
+    const chapters = config ? [config.chapter, config.name] : [T("归航"), ['reward', 'complete'].includes(phase) ? T("欢迎回家") : T("等待归航")];
     $('chapter-label').textContent = chapters[0]; $('chapter-name').textContent = chapters[1];
     const captions = {
-      intro: ['让旧灯塔重新亮起来。', ''], dock: ['先把栈桥修牢。', '新木板和缆绳，缺一不可。'],
-      repairing_dock: ['', ''], tower: ['灯室的木架，需要修补。', '备好木料、铁钉和安装工具。'], repairing_tower: ['', ''],
-      lens: ['透镜，把灯火送得更远。', '磨好的玻璃，要稳稳装入灯室。'], installing_lens: ['', ''],
-      fuel: ['油箱满了，夜路才有光。', '将灯油与四级灯组送进灯室。'],
-      lighting: ['', ''], beacon: ['让船看见这束光。', '海雾里，船长正在寻找码头。'],
-      arriving: ['顺着灯光，回家。', ''], reward: ['欢迎回家。', '船长带来了新木料和灯油。'],
-      complete: ['灯塔重新亮起来了。', '栈桥、灯塔和第一艘归船。']
+      intro: [T("让旧灯塔重新亮起来。"), ''], dock: [T("先把栈桥修牢。"), T("新木板和缆绳，缺一不可。")],
+      repairing_dock: ['', ''], tower: [T("灯室的木架，需要修补。"), T("备好木料、铁钉和安装工具。")], repairing_tower: ['', ''],
+      lens: [T("透镜，把灯火送得更远。"), T("磨好的玻璃，要稳稳装入灯室。")], installing_lens: ['', ''],
+      fuel: [T("油箱满了，夜路才有光。"), T("将灯油与四级灯组送进灯室。")],
+      lighting: ['', ''], beacon: [T("让船看见这束光。"), T("海雾里，船长正在寻找码头。")],
+      arriving: [T("顺着灯光，回家。"), ''], reward: [T("欢迎回家。"), T("船长带来了新木料和灯油。")],
+      complete: [T("灯塔重新亮起来了。"), T("栈桥、灯塔和第一艘归船。")]
     }[phase];
     $('scene-caption').innerHTML = `<h2>${captions[0]}</h2>${captions[1] ? `<p class="secondary-caption">${captions[1]}</p>` : ''}`;
     const controls = $('scene-controls');
-    const busyLabel = { repairing_dock: '更换木板 · 系牢缆绳', repairing_tower: '补好木架 · 固定栏杆', installing_lens: '安装聚光透镜', lighting: '注入灯油 · 点亮灯室', arriving: '缓缓靠岸' }[phase];
-    if (C.DURATIONS[phase]) controls.innerHTML = `<div class="scene-status">${busyLabel}</div><div class="progress" role="progressbar" aria-label="${busyLabel}进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div><button class="skip" data-action="finish">略过</button>`;
-    else if (phase === 'beacon') controls.innerHTML = '<button class="scene-button" data-action="beckon">招呼归船 <span aria-hidden="true">→</span></button>';
-    else if (phase === 'reward') controls.innerHTML = `<button class="scene-button" data-action="claim">${currencyImage('coins')}领取归航礼物 +75</button>`;
-    else if (phase === 'complete') controls.innerHTML = '<button class="scene-button" data-action="restart">再玩一次</button>';
+    const busyLabel = { repairing_dock: T("更换木板 · 系牢缆绳"), repairing_tower: T("补好木架 · 固定栏杆"), installing_lens: T("安装聚光透镜"), lighting: T("注入灯油 · 点亮灯室"), arriving: T("缓缓靠岸") }[phase];
+    if (C.DURATIONS[phase]) controls.innerHTML = `<div class="scene-status">${busyLabel}</div><div class="progress" role="progressbar" aria-label="${busyLabel}${T("进度")}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div><button class="skip" data-action="finish">${T("略过")}</button>`;
+    else if (phase === 'beacon') controls.innerHTML = `<button class="scene-button" data-action="beckon">${T("招呼归船")} <span aria-hidden="true">→</span></button>`;
+    else if (phase === 'reward') controls.innerHTML = `<button class="scene-button" data-action="claim">${currencyImage('coins')}${T("领取归航礼物 +75")}</button>`;
+    else if (phase === 'complete') controls.innerHTML = `<button class="scene-button" data-action="restart">${T("再玩一次")}</button>`;
     else controls.innerHTML = '';
     $('scene-caption').hidden = controls.childElementCount > 0;
     canvas.setAttribute('aria-label', `${chapters[1]}：${captions[0]}`);
@@ -430,20 +431,20 @@
     const overlay = $('overlay');
     overlay.hidden = false; document.body.classList.add('modal-open');
     if (kind === 'intro') {
-      overlay.innerHTML = `<section class="dialog intro-dialog" role="dialog" aria-modal="true" aria-labelledby="intro-title"><div class="intro-scene"><img class="intro-harbor" src="${NEW}scene-dock-broken.jpg" alt="旧灯塔与待修的栈桥"><img class="intro-person" src="${ART}character-base.png" alt="灯匠阿澜"><span class="intro-brand">潮灯小镇</span></div><div class="intro-body"><span class="intro-kicker">一座灯塔的归来</span><h1 id="intro-title">重燃灯塔</h1><p>从一块木板，到灯室里的第一束光。<br>和阿澜一起，迎接归船。</p><div class="intro-actions"><button class="action-button" id="start-button" data-action="start">一起开工 <span aria-hidden="true">→</span></button><span class="intro-controls">点击或拖动<br>合成相同物品</span></div></div></section>`;
+      overlay.innerHTML = `<section class="dialog intro-dialog" role="dialog" aria-modal="true" aria-labelledby="intro-title"><div class="intro-scene"><img class="intro-harbor" src="${NEW}scene-dock-broken.jpg" alt="${T("旧灯塔与待修的栈桥")}"><img class="intro-person" src="${ART}character-base.png" alt="${T("灯匠阿澜")}"><span class="intro-brand">${T("潮灯小镇")}</span></div><div class="intro-body"><span class="intro-kicker">${T("一座灯塔的归来")}</span><h1 id="intro-title">${T("重燃灯塔")}</h1><p>${T("从一块木板，到灯室里的第一束光。")}<br>${T("和阿澜一起，迎接归船。")}</p><div class="intro-actions"><button class="action-button" id="start-button" data-action="start">${T("一起开工")} <span aria-hidden="true">→</span></button><span class="intro-controls">${T("点击或拖动")}<br>${T("合成相同物品")}</span></div></div></section>`;
     } else if (kind === 'help') {
-      overlay.innerHTML = `<section class="dialog" role="dialog" aria-modal="true" aria-labelledby="help-title"><button class="dialog-close" data-action="close-dialog" aria-label="关闭">×</button><h2 id="help-title">灯匠的小手册</h2><ul class="help-steps"><li>${itemImage('w1')}<span><strong>合成</strong><br>先选一件，再点相同物品。也可以拖到一起。</span></li><li>${itemImage('producer')}<span><strong>补给</strong><br>点补给箱免费取材料，航运券可一次取一对。</span></li><li>${itemImage('g2')}<span><strong>施工</strong><br>材料逐件交付，交齐后开始本章施工。</span></li></ul><p class="help-keyboard">方向键移动选择 · 回车或空格操作<br>Esc 取消选择 · F 全屏</p><div class="dialog-footer"><button class="action-button" data-action="close-dialog">继续开工</button><button class="secondary-button" data-action="ask-restart">重新开始</button></div></section>`;
+      overlay.innerHTML = `<section class="dialog" role="dialog" aria-modal="true" aria-labelledby="help-title"><button class="dialog-close" data-action="close-dialog" aria-label="${T("关闭")}">×</button><h2 id="help-title">${T("灯匠的小手册")}</h2><ul class="help-steps"><li>${itemImage('w1')}<span><strong>${T("合成")}</strong><br>${T("先选一件，再点相同物品。也可以拖到一起。")}</span></li><li>${itemImage('producer')}<span><strong>${T("补给")}</strong><br>${T("点补给箱免费取材料，航运券可一次取一对。")}</span></li><li>${itemImage('g2')}<span><strong>${T("施工")}</strong><br>${T("材料逐件交付，交齐后开始本章施工。")}</span></li></ul><p class="help-keyboard">${T("方向键移动选择 · 回车或空格操作")}<br>${T("Esc 取消选择 · F 全屏")}</p><div class="dialog-footer"><button class="action-button" data-action="close-dialog">${T("继续开工")}</button><button class="secondary-button" data-action="ask-restart">${T("重新开始")}</button></div></section>`;
     } else if (kind === 'restart') {
-      overlay.innerHTML = '<section class="dialog" role="dialog" aria-modal="true" aria-labelledby="restart-title"><h2 id="restart-title">重新开工？</h2><p>这次会从旧栈桥重新开始。</p><div class="dialog-footer"><button class="action-button" data-action="restart">重新开始</button><button class="secondary-button" data-action="close-dialog">继续这一局</button></div></section>';
+      overlay.innerHTML = `<section class="dialog" role="dialog" aria-modal="true" aria-labelledby="restart-title"><h2 id="restart-title">${T("重新开工？")}</h2><p>${T("这次会从旧栈桥重新开始。")}</p><div class="dialog-footer"><button class="action-button" data-action="restart">${T("重新开始")}</button><button class="secondary-button" data-action="close-dialog">${T("继续这一局")}</button></div></section>`;
     } else if (kind === 'win') {
-      overlay.innerHTML = `<section class="dialog win-dialog" role="dialog" aria-modal="true" aria-labelledby="win-title">${itemImage('l4', 'win-emblem')}<span class="intro-kicker">四章修缮 · 完成</span><h2 id="win-title">灯塔重新亮起来了。</h2><p>栈桥稳了，透镜映着灯火。<br>第一艘归船，今夜靠岸。</p><div class="win-reward">${currencyImage('coins')}归航礼物 +75</div><div class="win-stat">完成 ${state.merges} 次合成 · 七类材料齐备</div><div class="win-actions"><button class="action-button" data-action="close-dialog">看看港湾</button><button class="secondary-button" data-action="restart">再玩一次</button></div></section>`;
+      overlay.innerHTML = `<section class="dialog win-dialog" role="dialog" aria-modal="true" aria-labelledby="win-title">${itemImage('l4', 'win-emblem')}<span class="intro-kicker">${T("四章修缮 · 完成")}</span><h2 id="win-title">${T("灯塔重新亮起来了。")}</h2><p>${T("栈桥稳了，透镜映着灯火。")}<br>${T("第一艘归船，今夜靠岸。")}</p><div class="win-reward">${currencyImage('coins')}${T("归航礼物 +75")}</div><div class="win-stat">${T("完成 ")}${state.merges}${T(" 次合成 · 七类材料齐备")}</div><div class="win-actions"><button class="action-button" data-action="close-dialog">${T("看看港湾")}</button><button class="secondary-button" data-action="restart">${T("再玩一次")}</button></div></section>`;
     } else if (kind === 'catalog') {
       const stage = C.stageFor(state);
-      overlay.innerHTML = `<section class="dialog catalog-dialog" role="dialog" aria-modal="true" aria-labelledby="catalog-title"><button class="dialog-close" data-action="close-dialog" aria-label="关闭图鉴">×</button><span class="intro-kicker">港湾手册</span><h2 id="catalog-title">材料图鉴</h2><div class="catalog-grid">${Object.entries(C.FAMILIES).map(([family, data]) => `<article class="catalog-family" data-family="${family}"><div class="catalog-family-title"><h3>${data.name}</h3>${data.stages.includes(stage) ? '<span>本章需要</span>' : ''}</div><div class="catalog-chain">${data.items.map((item, index) => `${index ? '<span class="chain-arrow" aria-hidden="true">›</span>' : ''}<div>${itemImage(item, '', C.ITEMS[item].name)}<strong>${C.ITEMS[item].name}</strong><small>${C.ITEMS[item].level}级</small></div>`).join('')}</div><p>${data.use}</p></article>`).join('')}</div><div class="catalog-currencies"><div>${currencyImage('coins')}<span><strong>贝壳金币</strong>完成施工与归航获得</span></div><div>${currencyImage('tokens')}<span><strong>航运券</strong>在补给处一次取一对材料</span></div></div><button class="action-button" data-action="close-dialog">收好图鉴</button></section>`;
+      overlay.innerHTML = `<section class="dialog catalog-dialog" role="dialog" aria-modal="true" aria-labelledby="catalog-title"><button class="dialog-close" data-action="close-dialog" aria-label="${T("关闭图鉴")}">×</button><span class="intro-kicker">${T("港湾手册")}</span><h2 id="catalog-title">${T("材料图鉴")}</h2><div class="catalog-grid">${Object.entries(C.FAMILIES).map(([family, data]) => `<article class="catalog-family" data-family="${family}"><div class="catalog-family-title"><h3>${data.name}</h3>${data.stages.includes(stage) ? `<span>${T("本章需要")}</span>` : ''}</div><div class="catalog-chain">${data.items.map((item, index) => `${index ? '<span class="chain-arrow" aria-hidden="true">›</span>' : ''}<div>${itemImage(item, '', C.ITEMS[item].name)}<strong>${C.ITEMS[item].name}</strong><small>${T("{0}级", C.ITEMS[item].level)}</small></div>`).join('')}</div><p>${data.use}</p></article>`).join('')}</div><div class="catalog-currencies"><div>${currencyImage('coins')}<span><strong>${T("贝壳金币")}</strong>${T("完成施工与归航获得")}</span></div><div>${currencyImage('tokens')}<span><strong>${T("航运券")}</strong>${T("在补给处一次取一对材料")}</span></div></div><button class="action-button" data-action="close-dialog">${T("收好图鉴")}</button></section>`;
     } else if (kind === 'supply') {
-      overlay.innerHTML = `<section class="dialog supply-dialog" role="dialog" aria-modal="true" aria-labelledby="supply-title"><button class="dialog-close" data-action="close-dialog" aria-label="关闭补给">×</button><span class="intro-kicker">港湾补给</span><h2 id="supply-title">这次需要什么？</h2><div class="supply-wallet">${currencyImage('tokens')}<strong>${state.tokens}</strong><span>航运券</span></div><div class="supply-list">${C.supplyOptions(state).map(option => `<article class="supply-option" data-family="${option.family}">${itemImage(option.item)}<div class="supply-copy"><strong>${C.ITEMS[option.item].name}</strong><span>${option.missing ? `还可取 ${option.missing} 件` : '已备齐'}</span></div><div class="supply-actions"><button class="action-button" data-action="supply" data-family="${option.family}" ${option.missing > 0 ? '' : 'disabled'}>免费取一件</button><button class="pair-button" data-action="supply-pair" data-family="${option.family}" ${option.pairAvailable ? '' : 'disabled'}>${currencyImage('tokens')}1 · 取一对</button></div></article>`).join('')}</div><button class="secondary-button" data-action="close-dialog">回到工作台</button></section>`;
+      overlay.innerHTML = `<section class="dialog supply-dialog" role="dialog" aria-modal="true" aria-labelledby="supply-title"><button class="dialog-close" data-action="close-dialog" aria-label="${T("关闭补给")}">×</button><span class="intro-kicker">${T("港湾补给")}</span><h2 id="supply-title">${T("这次需要什么？")}</h2><div class="supply-wallet">${currencyImage('tokens')}<strong>${state.tokens}</strong><span>${T("航运券")}</span></div><div class="supply-list">${C.supplyOptions(state).map(option => `<article class="supply-option" data-family="${option.family}">${itemImage(option.item)}<div class="supply-copy"><strong>${C.ITEMS[option.item].name}</strong><span>${option.missing ? T("还可取 {0} 件", option.missing) : T("已备齐")}</span></div><div class="supply-actions"><button class="action-button" data-action="supply" data-family="${option.family}" ${option.missing > 0 ? '' : 'disabled'}>${T("免费取一件")}</button><button class="pair-button" data-action="supply-pair" data-family="${option.family}" ${option.pairAvailable ? '' : 'disabled'}>${currencyImage('tokens')}1 · ${T("取一对")}</button></div></article>`).join('')}</div><button class="secondary-button" data-action="close-dialog">${T("回到工作台")}</button></section>`;
     } else if (kind === 'load-error') {
-      overlay.innerHTML = '<section class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="load-title"><h2 id="load-title">港湾还没有载入</h2><p>有几件行李还没到，刷新后再试一次。</p><button class="action-button" data-action="reload">重新载入</button></section>';
+      overlay.innerHTML = `<section class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="load-title"><h2 id="load-title">${T("港湾还没有载入")}</h2><p>${T("有几件行李还没到，刷新后再试一次。")}</p><button class="action-button" data-action="reload">${T("重新载入")}</button></section>`;
     }
     requestAnimationFrame(() => overlay.querySelector('.action-button,button')?.focus({ preventScroll: true }));
   }
@@ -467,14 +468,14 @@
     if (!C.isBoardPhase(state)) return;
     if (C.orderReady(state)) {
       $('order').querySelector('.action-button')?.focus({ preventScroll: true });
-      tell('材料交齐了，开始施工吧。'); return;
+      tell(T("材料交齐了，开始施工吧。")); return;
     }
     const available = C.requirements(state).find(req => req.available > 0 && req.submitted < req.need);
-    if (available) { $('order').querySelector(`[data-item="${available.item}"]`)?.focus({ preventScroll: true }); tell('这件材料可以交付了。'); return; }
+    if (available) { $('order').querySelector(`[data-item="${available.item}"]`)?.focus({ preventScroll: true }); tell(T("这件材料可以交付了。")); return; }
     hintPair = C.nextPair(state);
     hintUntil = presentationTime + 2900;
-    if (hintPair) { renderBoard(); tell('这两件可以合成。', 2100); }
-    else { board.querySelector('.producer')?.classList.add('hint'); tell('点补给箱，取出当前需要的材料。'); }
+    if (hintPair) { renderBoard(); tell(T("这两件可以合成。"), 2100); }
+    else { board.querySelector('.producer')?.classList.add('hint'); tell(T("点补给箱，取出当前需要的材料。")); }
   }
   function cancelDrag() {
     if (pointer) {
@@ -552,7 +553,7 @@
     if (event.key.toLowerCase() === 'f' && !event.ctrlKey && !event.metaKey && !event.altKey && !event.repeat) {
       event.preventDefault();
       if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
-      else document.documentElement.requestFullscreen?.().catch(() => tell('这个窗口暂时不能进入全屏。'));
+      else document.documentElement.requestFullscreen?.().catch(() => tell(T("这个窗口暂时不能进入全屏。")));
       return;
     }
     if (event.key === 'Escape') {
@@ -611,7 +612,7 @@
     return window.render_game_to_text();
   };
   window.render_game_to_text = () => JSON.stringify({
-    title: '潮灯小镇 · 重燃灯塔', version: C.VERSION, phase: state.phase, dialog, ready,
+    title: T("潮灯小镇 · 重燃灯塔"), version: C.VERSION, phase: state.phase, dialog, ready,
     coordinates: 'Board row/column indices start at 0; viewport x grows right, y grows down. Scene art is 900×1600.',
     coins: state.coins, tokens: state.tokens, tokensSpent: state.tokensSpent, merges: state.merges, selected: state.selected,
     completed: state.completed, order: C.stageFor(state) ? { stage: C.stageFor(state), requirements: C.requirements(state), ready: C.orderReady(state) } : null,

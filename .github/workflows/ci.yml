@@ -61,6 +61,7 @@ jobs:
         run: |
           node evals/tidekeeper-handoff/check-ui.mjs
           node evals/tidekeeper-production/check-scenes.mjs
+          node evals/presentation/check-game-locales.mjs
       - name: Compile and list compositions
         run: npm run motion:check -- --browser-executable=/usr/bin/google-chrome --chrome-mode=chrome-for-testing
       - name: Render the spatial film with its bundled OFL font
