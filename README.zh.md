@@ -57,7 +57,7 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-d
 
 已有规范就接着完善，不必重做。绘图与编辑由 Agent 调用当前可用工具完成；Skill 不附带图像模型。
 
-## 试试两个游戏样例
+## 看三个游戏，如何长出各自的世界
 
 ### 潮灯小镇 · 合成与修缮
 
@@ -72,6 +72,19 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-d
 
 [试玩潮灯小镇](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-playable/play.html)
 
+### 午夜物归原主 · 哥特式解谜冒险
+
+<table>
+  <tr>
+    <td width="70%" valign="top"><img src="docs/assets/nocturnal-restitution/gameplay-en.webp" alt="午夜物归原主英文游戏实景：展厅中的主角与皮革背包。"><br><sub><strong>游戏内结果 · 巴黎夜访</strong></sub></td>
+    <td width="30%" valign="top"><strong>同源组件</strong><br><img src="docs/assets/nocturnal-restitution/character.webp" width="42%" alt="酒红衣装的角色底稿"> <img src="docs/assets/nocturnal-restitution/brass-button.webp" width="42%" alt="游戏背包中的同一黄铜纽扣"><br><img src="docs/assets/nocturnal-restitution/pocket-watch.webp" width="48%" alt="实际使用的怀表界面组件"><br><img src="docs/assets/nocturnal-restitution/inventory.webp" width="96%" alt="实际使用的皮革背包背景"><br><sub>角色 · 黄铜道具 · 怀表 · 皮革背包</sub></td>
+  </tr>
+</table>
+
+**风格化，要落到每一个组件。** 主角的酒红外衣、旧皮革背包、做旧黄铜道具与冷灰展厅，共同构成克制的哥特式手绘世界。角色进入场景，物品进入背包，机关进入操作界面；每个组件都沿用同一份视觉规范。
+
+[看角色、UI 与机关如何保持一致](docs/NOCTURNAL-RESTITUTION.md)
+
 ### 暮林守望 · 探索与塔防
 
 <table>
@@ -85,7 +98,7 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-d
 
 [查看暮林守望英文案例](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.en.html) · [中文完整试玩（约 33 MB）](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.html)
 
-两者都是原创浏览器候选样例，尚未经真人主美批准，也未完成真机与生产引擎验收。[查看各 Agent 如何使用 Skill、实际检查与仍存边界](docs/AGENT-ART-TEAM.zh.md)。
+三个案例都是原创浏览器游戏原型。《午夜物归原主》已有创作者完整通关反馈；这里展示的是实际画面与组件的一致性，各案例的检查与交付边界另行记录。[查看各 Agent 如何使用 Skill、实际检查与仍存边界](docs/AGENT-ART-TEAM.zh.md)。
 
 <details>
 <summary><strong>潮灯小镇的前次交接与 0.3.0 分层交付</strong></summary>

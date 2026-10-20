@@ -1,5 +1,7 @@
 [中文](CASE-STUDIES.md) · [Back to the introduction](https://newenergyeric.github.io/art-director-skill/docs/landing.en.html#cases)
 
+**New game case:** [Nocturnal Restitution—consistent character, UI and puzzle components](NOCTURNAL-RESTITUTION.en.md).
+
 # Three game problems. Three art approaches.
 
 **Follow-up:** the [four-category Tidekeeper handoff](TIDEKEEPER-HANDOFF.en.md) adds actual character, environment, UI and item continuation, including the sparse-UI and portrait-crop failures. The studies below remain earlier explorations, not the current merge-game baseline.

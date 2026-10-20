@@ -170,10 +170,14 @@ def main():
                   all('https://github.com/NewenergyEric/' + repo in text for repo in (
                       'game-market-intelligence', 'game-reverse-analyst',
                       'game-production-manager', 'art-director-skill')))
+            case_articles = re.findall(
+                r'<article class="visual-proof\b[\s\S]*?</article>', text)
             check(name + ': shows each gameplay result beside four project assets',
-                  text.count('class="project-assets"') == 2
-                  and text.count('class="project-asset project-asset-main"') == 2
-                  and text.count('class="project-asset"') == 6)
+                  len(case_articles) == 3 and all(
+                      case.count('class="project-assets"') == 1
+                      and case.count('class="project-asset project-asset-main"') == 1
+                      and len(re.findall(r'<figure class="project-asset(?:\s[^"]*)?"', case)) == 4
+                      for case in case_articles))
         else:
             redirect = re.search(r'http-equiv="refresh" content="0; url=([^"]+)"', text)
             check(name + ': redirects to the unified introduction',

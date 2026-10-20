@@ -1,5 +1,7 @@
 [English](CASE-STUDIES.en.md) · [返回介绍](https://newenergyeric.github.io/art-director-skill/docs/landing.zh.html#cases)
 
+**新增实际游戏案例：** [午夜物归原主——角色、UI 与机关的组件一致性](NOCTURNAL-RESTITUTION.md)。
+
 # 三个游戏问题，三种美术解法
 
 **后续完整验证：** [潮灯小镇的四类资产交接](TIDEKEEPER-HANDOFF.md)已补上角色、场景、UI 与合成链的实际续作，保留界面太空和竖屏裁切的失败记录。下方是此前的探索，不能替代新版合成游戏样板。
