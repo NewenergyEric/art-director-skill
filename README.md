@@ -57,7 +57,7 @@ Use a tool that supports Agent Skills, such as Codex, Claude Code or Cursor. Giv
 
 Continue existing direction without rebuilding it. Your agent uses its available generation and editing tools; this Skill does not include an image model.
 
-## Play the samples
+## From assets to game worlds
 
 ### Tidekeeper · Merge and restore
 
@@ -72,6 +72,19 @@ Merge seven item families into repair orders. The **0.6.2 candidate** repairs th
 
 [Play Tidekeeper](https://newenergyeric.github.io/art-director-skill/docs/assets/tidekeeper-playable/play.en.html)
 
+### Nocturnal Restitution · A gothic puzzle adventure
+
+<table>
+  <tr>
+    <td width="70%" valign="top"><img src="docs/assets/nocturnal-restitution/gameplay-en.webp" alt="Nocturnal Restitution: actual English gameplay in the Louvre, with the character and leather inventory."><br><sub><strong>IN-GAME RESULT · A night at the museum</strong></sub></td>
+    <td width="30%" valign="top"><strong>THE SAME COMPONENTS</strong><br><img src="docs/assets/nocturnal-restitution/character.webp" width="42%" alt="Original burgundy-coated character"> <img src="docs/assets/nocturnal-restitution/brass-button.webp" width="42%" alt="The same brass button shown in the inventory"><br><img src="docs/assets/nocturnal-restitution/pocket-watch.webp" width="48%" alt="The game's actual pocket-watch HUD component"><br><img src="docs/assets/nocturnal-restitution/inventory.webp" width="96%" alt="The game's actual leather inventory background"><br><sub>Character · Brass prop · Watch · Leather inventory</sub></td>
+  </tr>
+</table>
+
+**A distinct style, down to the last component.** A burgundy coat, worn leather inventory, aged brass props and cool stone galleries share one restrained, illustrated gothic world. The character enters the scene, items enter the inventory, and painted mechanisms become interactive puzzles—all carried by the same art-direction baseline.
+
+[See the character, UI and puzzle consistency](docs/NOCTURNAL-RESTITUTION.en.md)
+
 ### Duskwood Watch · Explore and defend
 
 <table>
@@ -85,7 +98,7 @@ Carry your lantern through a hand-painted forest, gather supplies and build defe
 
 [View the Duskwood Watch case](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/index.en.html) · [Load the full game (~33 MB)](https://newenergyeric.github.io/art-director-skill/docs/assets/duskwood-watch/play.en.html)
 
-Both are original browser candidates. Human art-direction approval and production device/engine acceptance remain open. [How the agents used the Skill, what was checked and what remains](docs/AGENT-ART-TEAM.en.md).
+All three are original browser game prototypes. Nocturnal Restitution has creator-reported full-playthrough feedback; this case shows its actual visual system. Each case records its own validation and delivery limits. [How the agents used the Skill, what was checked and what remains](docs/AGENT-ART-TEAM.en.md).
 
 <details>
 <summary><strong>Tidekeeper's earlier handoff and 0.3.0 layered export</strong></summary>

@@ -129,3 +129,21 @@ html:lang(zh-CN) .game-hero h1 span,html:lang(zh-CN) .game-hero h1 strong,html:l
   .project-assets{grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:auto 174px 116px}.project-asset-main{grid-row:2/4}.project-asset:nth-of-type(2),.project-asset:nth-of-type(3){grid-row:2}.project-asset:nth-of-type(4){grid-column:2/4;grid-row:3}.project-asset figcaption{font-size:8px;left:8px}
   .proof-footer{display:block;padding-top:20px}.proof-footer>p{font-size:14px}.proof-actions{justify-content:flex-start;margin-top:15px}.asset-proof-section>.case-status{padding-top:23px}
 }
+
+
+/* Nocturnal: preserve the complete 16:9 screen and let leather/brass carry the case. */
+.proof-nocturnal{--proof-bg:#17211f;--proof-ink:#f1e6ca;--proof-muted:#c6c3b4;--proof-accent:#d5b777;--proof-rail:#d3c39d}
+.proof-nocturnal:before{background:radial-gradient(ellipse at 80% 10%,#b6924f19,transparent 55%)}
+.proof-nocturnal .proof-intro h3{font-size:clamp(38px,5.2vw,70px);line-height:1.02;max-width:640px}
+.proof-nocturnal .proof-board{grid-template-columns:minmax(0,2.6fr) minmax(255px,.88fr);align-items:stretch}
+.proof-nocturnal .proof-screen{aspect-ratio:16/9;align-self:center;background:#0b1412}
+.proof-nocturnal .proof-screen img{object-fit:contain}
+.proof-nocturnal .proof-screen:after{display:none}
+.proof-nocturnal .project-assets{background:linear-gradient(145deg,#d9cdad,#b8a785);grid-template-rows:auto minmax(100px,1fr) minmax(100px,1fr) 86px;color:#303b31}
+.proof-nocturnal .project-asset-main{grid-row:2/4}
+.proof-nocturnal .project-asset img{position:absolute;inset:8px 8px 29px;width:calc(100% - 16px);height:calc(100% - 37px);margin:0;object-fit:contain}
+.proof-nocturnal .nr-inventory{grid-column:1/-1;grid-row:4;border-left:0}
+.proof-nocturnal .project-asset figcaption span{color:#74512e}
+.proof-nocturnal .proof-actions{flex-shrink:1}
+@media(max-width:950px){.proof-nocturnal .proof-board{grid-template-columns:1fr}.proof-nocturnal .project-assets{grid-template-columns:.8fr .7fr .7fr 1.4fr;grid-template-rows:auto 190px}.proof-nocturnal .project-asset-main{grid-row:2}.proof-nocturnal .nr-inventory{grid-column:4;grid-row:2;border-left:1px solid #284e5730}}
+@media(max-width:620px){.proof-nocturnal .proof-intro h3{font-size:42px}.proof-nocturnal .proof-board{width:100%;margin-inline:0}.proof-nocturnal .project-assets{grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto 170px 96px}.proof-nocturnal .project-asset-main{grid-row:2/4}.proof-nocturnal .nr-inventory{grid-column:2/4;grid-row:3}}

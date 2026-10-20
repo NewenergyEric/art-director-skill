@@ -1,0 +1,132 @@
+{
+  "case": "Nocturnal Restitution",
+  "release": "v31 / 0.31.0",
+  "date": "2026-10-20",
+  "purpose": "Trace the same stylized assets from source art into the actual game.",
+  "screenshots": "English runtime captures from v30; v31 preserves game art, UI and gameplay.",
+  "project_basis": "Art-direction baseline ART-BIBLE-v0.2; identity and UI sprite registries.",
+  "gameplay_acceptance": "The project handoff records the creator completing a full playthrough.",
+  "limits": "A visual case and creator playthrough are not third-party art approval or production-engine acceptance.",
+  "assets": [
+    {
+      "file": "gameplay-en.webp",
+      "role": "Actual English gameplay",
+      "width": 1280,
+      "height": 720,
+      "bytes": 132364,
+      "sha256": "8db851336d5e69f0b1b379e75bd66ef3451c93c143b12aa55374ca00a83020e1",
+      "source_build": "v30 packed English playthrough",
+      "source_file": "captures/04-louvre.png",
+      "source_sha256": "6b74e57f177c3489f76b3360424cce8fe1e75bf9f94f60e767218331fa7177c9",
+      "crop_xywh": null,
+      "operation": "WebP quality 88; original dimensions, no retouching"
+    },
+    {
+      "file": "workshop-en.webp",
+      "role": "Actual English tool and material interface",
+      "width": 1280,
+      "height": 720,
+      "bytes": 58578,
+      "sha256": "a3eaf9d39bb4844c0c3e5a75b7276185d817c37bd427c2b4ac47fdd08729c913",
+      "source_build": "v30 packed English playthrough",
+      "source_file": "captures/05-frame-prepared.png",
+      "source_sha256": "516860f22a1ab7076bdb7c102b3fd43d2bfb565799a04adaab88c651ff452ab9",
+      "crop_xywh": null,
+      "operation": "WebP quality 88; original dimensions, no retouching"
+    },
+    {
+      "file": "optics-en.webp",
+      "role": "Actual English optics puzzle",
+      "width": 1280,
+      "height": 720,
+      "bytes": 60030,
+      "sha256": "fb60fe4340c784dac8f3872f2da85e2956bbdf708ad3945a8eedc397b025eb51",
+      "source_build": "v30 packed English playthrough",
+      "source_file": "captures/06-optical-puzzle.png",
+      "source_sha256": "b4fa461d8d63bb5ce42ce310fe621c2043aa9f18ac2b813780b06bc06b7a2098",
+      "crop_xywh": null,
+      "operation": "WebP quality 88; original dimensions, no retouching"
+    },
+    {
+      "file": "character.webp",
+      "role": "Human character mother artwork",
+      "width": 628,
+      "height": 1459,
+      "bytes": 122984,
+      "sha256": "f3e120a42a093ff3369ffe60b49c14e80d2f17b1026547aa45f990a017662257",
+      "source_build": "v31 source; identical art in v30",
+      "source_file": "assets/animation/lord-idle-style-v2.png",
+      "source_sha256": "ab11608782425399a874740d79cc5f0c5639ae1db6e58a81f7c4fd2ed9f58c1e",
+      "crop_xywh": [
+        171,
+        51,
+        628,
+        1459
+      ],
+      "operation": "Registered sprite rectangle; WebP quality 92, original dimensions and alpha"
+    },
+    {
+      "file": "brass-button.webp",
+      "role": "Brass button visible in the gameplay inventory",
+      "width": 391,
+      "height": 407,
+      "bytes": 55126,
+      "sha256": "8e3a49aac4dc4606f9a295c42b0f6eb47cfc4b4b048ed7d1378f06eec08e21f8",
+      "source_build": "v31 source; identical art in v30",
+      "source_file": "assets/production/mechanisms-v03/paris-replacement-brass-button.png",
+      "source_sha256": "2ebb882efa9876de298d359f84fdfaaf307043023d0f3c95f4505230e10298a8",
+      "crop_xywh": null,
+      "operation": "WebP quality 92, original dimensions and alpha"
+    },
+    {
+      "file": "calcite-lens.webp",
+      "role": "Calcite assembly visible in the optics puzzle",
+      "width": 466,
+      "height": 416,
+      "bytes": 63894,
+      "sha256": "e23fe8e065bf0c1d2e949f15a1a8f3ac1f8390be8f5465c71530a5dc0b5e93d0",
+      "source_build": "v31 source; identical art in v30",
+      "source_file": "assets/production/mechanisms-v03/paris-calcite-lens-ring.png",
+      "source_sha256": "dda8767d5aeeba95e668a66ff4ea7aab3193c1265a1eda2b2f4fca9aa9bd16a5",
+      "crop_xywh": null,
+      "operation": "WebP quality 92, original dimensions and alpha"
+    },
+    {
+      "file": "inventory.webp",
+      "role": "Leather inventory background",
+      "width": 1502,
+      "height": 443,
+      "bytes": 255442,
+      "sha256": "05a6eefd9759615474f156c1572bde6543e6fde5f57c32e32e6676cb87ff44b0",
+      "source_build": "v31 source; identical art in v30",
+      "source_file": "assets/production/ui-objects-raw-v1.png",
+      "source_sha256": "1532a4c38269334c2f411dd490ec28889ec46b43dda50fef46dee63f0eb00672",
+      "crop_xywh": [
+        26,
+        67,
+        1502,
+        443
+      ],
+      "operation": "Registered sprite rectangle; WebP quality 92, original dimensions and alpha"
+    },
+    {
+      "file": "pocket-watch.webp",
+      "role": "Pocket-watch HUD component",
+      "width": 522,
+      "height": 487,
+      "bytes": 108954,
+      "sha256": "6449098c25fb297d0dce3fa365639ee22f53cf65731813f7fa717ad341c1ca6e",
+      "source_build": "v31 source; identical art in v30",
+      "source_file": "assets/production/ui-objects-raw-v1.png",
+      "source_sha256": "1532a4c38269334c2f411dd490ec28889ec46b43dda50fef46dee63f0eb00672",
+      "crop_xywh": [
+        22,
+        513,
+        522,
+        487
+      ],
+      "operation": "Registered sprite rectangle; WebP quality 92, original dimensions and alpha"
+    }
+  ],
+  "total_media_bytes": 857372
+}
