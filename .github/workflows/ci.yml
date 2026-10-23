@@ -41,7 +41,7 @@ jobs:
       - name: Verify public handoff evidence
         run: python evals/tidekeeper-handoff/check-evidence.py
       - name: Package the mother skill
-        run: python scripts/package_release.py --out "${{ runner.temp }}/art-director-v0.5.1.zip"
+        run: python scripts/package_release.py --out "${{ runner.temp }}/art-director-current.zip"
       - name: Verify continuous scenes and Compositor delivery
         run: python evals/tidekeeper-production/reproduce.py --out "${{ runner.temp }}/tidekeeper-production"
       - name: Package the optional production Skill

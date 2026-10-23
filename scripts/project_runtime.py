@@ -400,6 +400,7 @@ def generation_markdown(task, brief):
         lines.append(f"- {slot}：{value}（{'本次显式修改' if slot in task['changes'] else '继承默认值'}）；边界：{task['controls']['slots'][slot]['guidance']}")
     for component in brief.get("component_briefs", []):
         lines += ["", f"组合组件：{component['category']} / {component['entity']['id'] if component['entity'] else '类别规范'}；同一冻结版本与指纹。", "固定类目要求：", sp.bullets(component["profile"]["fixed"]), "固定实体特征：", sp.bullets(component["entity"]["fixed_features"] if component["entity"] else [])]
+        lines += ["组件技术要求：", "```json", sp.json_text(component["profile"]["technical"]).rstrip(), "```"]
         if component.get("family"):
             lines += [f"家族：{component['family']['id']} · {component['family']['status']}", sp.bullets(component["family"]["fixed"]), "家族技术约束：", "```json", sp.json_text(component["family"]["technical"]).rstrip(), "```"]
     if task["exploration"]:
@@ -409,6 +410,16 @@ def generation_markdown(task, brief):
     for reference in task["references"]:
         lines.append(f"- {reference['id']} · {reference['role']} / {reference['usage']}\n  - 路径：`{reference['workspace_path']}`\n  - 当前绝对路径：`{reference['absolute_path']}`\n  - SHA256：`{reference['sha256']}`\n  - 用法：{reference['notes']}")
     lines += ["", "反例只用于否定和质检；不要当正向参考。候选图只能作为候选探索来源。调用前实际查看参考；没有图片读取或图像模型时交接本 brief，不能声称已经生成。", "", "## 技术要求", "", "```json", json.dumps(brief["profile"]["technical"], ensure_ascii=False, indent=2), "```", "", "所有结果仍须按 review.json 中的 unknown 检查逐项提供真实证据。脚本不验证面孔相似度、颜色风格或语义矛盾。"]
+    if brief.get("workflow"):
+        lines += ["", "## 随任务携带的制作与验收方法", "",
+                  "这是执行方法；项目要求和确认状态以上面的冻结规则为准。", "",
+                  *[f"{index}. {step}" for index, step in enumerate(brief["workflow"], 1)]]
+    if brief.get("judgment_tools"):
+        lines += ["", "## 按需补充判断证据", "",
+                  "以下链接指向本任务冻结包内的方法与简表。记录写在任务工作目录，已有表可直接补充；不修改冻结包，也不自动批准或更改项目要求。"]
+        for record in brief["judgment_tools"]:
+            target = "../../" + task["baseline"]["path"] + "/" + record["guide"]
+            lines.append(f"- [{record['title']}]({target})：{record['when']}。")
     if brief.get("direction_checks"):
         lines += ["", "## 家族、样板与渠道验收", "", *[f"- `{check['criterion']}` · 来源状态 {check['source_status']} · unknown：{check['statement']}" for check in brief["direction_checks"]]]
     if task["blockers"]:
@@ -483,6 +494,7 @@ def start_workspace(argument, request_path):
             component_briefs.append(component_brief)
             component_entities.append({"category": component_category, "subject": component["subject"], "entity_id": component_entity["id"] if component_entity else None, "family_id": component.get("family")})
         brief["component_briefs"] = component_briefs
+        brief["workflow"] = sp.production_protocol([category, *[item["category"] for item in component_briefs]])
         for key in ("rules", "references", "review", "direction_checks"):
             id_key = "rule_id" if key == "review" else ("criterion" if key == "direction_checks" else "id")
             unique = {item[id_key]: copy.deepcopy(item) for item in brief[key]}

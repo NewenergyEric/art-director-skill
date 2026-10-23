@@ -10,7 +10,7 @@ Art Director helps a design lead establish professional rules, then share the ru
 npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-director
 ```
 
-You can also download a Skill ZIP as the [current build](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-memory-20261013) and ask your agent to install it. Core helpers require Python 3.10+. Creation and editing use tools available in the host; this Skill does not include an image model.
+You can also download a Skill ZIP as the [current build](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-judgment-20261023) and ask your agent to install it. Core helpers require Python 3.10+. Creation and editing use tools available in the host; this Skill does not include an image model.
 
 ## 2. Establish direction from existing materials
 

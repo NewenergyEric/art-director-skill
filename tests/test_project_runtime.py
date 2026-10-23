@@ -102,6 +102,96 @@ class ProjectRuntimeTests(unittest.TestCase):
     def error(self, result, code):
         self.assertEqual(result["errors"][0]["code"], code)
 
+    def test_relocated_protocol_reaches_tile_components_without_changing_project_facts(self):
+        self.data["scope"]["asset_types"].append("tile")
+        self.data["profiles"]["tile"] = {
+            "brief": "TEST ONLY board item",
+            "fixed": ["TEST ONLY reference complexity boundary."],
+            "variable": [],
+            "technical": {
+                "footprint_cells": [1, 1],
+                "trial_cell_px": [72, 88],
+                "engine": None,
+            },
+        }
+        self.pack = self.build()
+        before = self.snapshots(self.pack)
+        received = self.work / "received-without-mother"
+        shutil.copytree(self.pack, received)
+        style = received / "scripts/style_pack.py"
+        runtime = received / "scripts/project_runtime.py"
+        tile = self.cli("brief", received, "--category", "tile", "--task", "TEST ONLY tile", script=style)
+        ui = self.cli("brief", received, "--category", "ui", "--task", "TEST ONLY UI", script=style)
+        tile_only = set(tile["workflow"]) - set(ui["workflow"])
+        self.assertTrue(tile_only)
+        self.assertEqual(tile["profile"]["technical"], self.data["profiles"]["tile"]["technical"])
+        guide = (received / "guides/03-delivery-review.md").read_text(encoding="utf-8")
+        self.assertTrue(all(step in guide for step in tile["workflow"]))
+        self.assertEqual({record["id"] for record in tile["judgment_tools"]},
+                         {"visual-judgment", "family-design", "revision-comparison"})
+        self.assertEqual(ui["judgment_tools"], tile["judgment_tools"])
+        for record in tile["judgment_tools"]:
+            relative, anchor = record["guide"].split("#")
+            content = (received / relative).read_text(encoding="utf-8")
+            self.assertIn(f'<a id="{anchor}"></a>', content)
+
+        self.cli("init", "--pack", received, "--out", self.workspace, "--allow-draft", script=runtime)
+        request = self.request(
+            category="ui", subject=None, changes={}, exploration={"slots": [], "candidates": 1},
+            components=[{"category": "tile", "subject": None}],
+        )
+        self.start(request, script=runtime)
+        frozen = self.read(f"tasks/{request['task_id']}/brief.json")
+        self.assertEqual(set(frozen["workflow"]), set(ui["workflow"]) | set(tile["workflow"]))
+        self.assertEqual(len(frozen["workflow"]), len(set(frozen["workflow"])))
+        self.assertEqual(frozen["component_briefs"][0]["profile"]["technical"], tile["profile"]["technical"])
+        readable = (self.workspace / f"tasks/{request['task_id']}/generation-brief.md").read_text(encoding="utf-8")
+        self.assertTrue(all(step in readable for step in frozen["workflow"]))
+        task = self.read(f"tasks/{request['task_id']}/task.json")
+        self.assertEqual(frozen["judgment_tools"], tile["judgment_tools"])
+        for record in frozen["judgment_tools"]:
+            target = "../../" + task["baseline"]["path"] + "/" + record["guide"]
+            self.assertIn("](" + target + ")", readable)
+            relative, anchor = target.split("#")
+            resolved = (self.workspace / "tasks" / request["task_id"] / relative).resolve()
+            self.assertTrue(resolved.is_relative_to(self.workspace))
+            self.assertIn(f'<a id="{anchor}"></a>', resolved.read_text(encoding="utf-8"))
+        review = self.read(f"tasks/{request['task_id']}/review.json")
+        self.assertTrue(all(check["result"] == "unknown" for check in review["checks"]))
+        self.assertFalse(review["production_approved"])
+
+        ui_request = self.request(category="ui", subject=None, changes={}, exploration={"slots": [], "candidates": 1})
+        self.start(ui_request, script=runtime)
+        ui_frozen = self.read(f"tasks/{ui_request['task_id']}/brief.json")
+        self.assertEqual(ui_frozen["workflow"], ui["workflow"])
+        self.assertTrue(tile_only.isdisjoint(ui_frozen["workflow"]))
+        self.assertEqual(before, self.snapshots(self.pack))
+        self.assertEqual(before, self.snapshots(received))
+
+        rebuilt = self.work / "rebuilt-with-portable-tools"
+        self.cli("build", received, "--out", rebuilt, script=style)
+        self.assertTrue(self.cli("verify", rebuilt, script=rebuilt / "scripts/style_pack.py")["ok"])
+        rebuilt_brief = self.cli("brief", rebuilt, "--category", "tile", "--task", "TEST ONLY rebuilt", script=rebuilt / "scripts/style_pack.py")
+        self.assertEqual(rebuilt_brief["judgment_tools"], tile["judgment_tools"])
+        self.assertEqual(json.loads((rebuilt / "style-pack.json").read_text(encoding="utf-8")), self.data)
+
+    def test_legacy_pack_remains_valid_without_advertising_missing_judgment_forms(self):
+        # Synthetic historical guide: update its unsigned manifest, not project facts.
+        legacy = self.work / "legacy-team-v1"
+        shutil.copytree(self.pack, legacy)
+        guide = legacy / "guides/03-delivery-review.md"
+        guide.write_text("# TEST ONLY historical delivery guide without new methods\n", encoding="utf-8")
+        manifest_path = legacy / "manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["files"]["guides/03-delivery-review.md"] = hashlib.sha256(guide.read_bytes()).hexdigest()
+        manifest_path.write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
+        before = self.snapshots(legacy)
+        self.assertTrue(self.cli("verify", legacy, script=STYLE)["ok"])
+        brief = self.cli("brief", legacy, "--category", "ui", "--task", "TEST ONLY legacy", script=STYLE)
+        self.assertEqual(brief["judgment_tools"], [])
+        self.assertTrue(all(item["result"] == "unknown" for item in brief["review"]))
+        self.assertEqual(before, self.snapshots(legacy))
+
     def test_frozen_runtime_init_accepts_external_relative_output_from_pack_directory(self):
         before = self.snapshots(self.pack)
         result = self.cli("init", "--pack", ".", "--out", "../project", "--allow-draft",

@@ -67,6 +67,29 @@ class PackageReleaseTests(unittest.TestCase):
     def test_companion_archive_accepts_external_relative_output(self):
         self.assert_external_archive("game-art-production", "../../../dist/game-art-production.zip", self.companion)
 
+    def test_archives_keep_teaching_examples_but_exclude_development_byproducts(self):
+        unwanted = (
+            "tests/run.json", "evals/report.json", "planning/notes.md", "output/proof.png",
+            "references/__pycache__/reader.pyc", "references/.tmp-review/record.json",
+            "references/trace.log", "references/preview.tmp", "templates/form.bak",
+            "references/.DS_Store", "references/Thumbs.db",
+        )
+        teaching = "references/learning-cases/assets/before.png"
+        for skill, source in (("art-director", self.source), ("game-art-production", self.companion)):
+            with self.subTest(skill=skill):
+                for relative in (*unwanted, teaching):
+                    path = source / relative
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_bytes(b"TEST ONLY synthetic packaging content")
+                before = self.snapshot()
+                target = self.work / (skill + "-curated.zip")
+                self.cli("--skill", skill, "--out", target)
+                with zipfile.ZipFile(target) as archive:
+                    names = set(archive.namelist())
+                    self.assertIn(skill + "/" + teaching, names)
+                    self.assertTrue(all(skill + "/" + relative not in names for relative in unwanted))
+                self.assertEqual(before, self.snapshot())
+
     def test_archive_rejects_destination_inside_selected_skill(self):
         before = self.snapshot()
         for skill, source in (("art-director", self.source), ("game-art-production", self.companion)):

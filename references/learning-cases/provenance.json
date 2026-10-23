@@ -1,0 +1,101 @@
+{
+  "compiled_at": "2026-10-23",
+  "scope": "Original fictional studies and microwave production in this project; teaching evidence, not art approval. External reference originals and full production archives are excluded.",
+  "models_and_seeds": "Not exposed by the historical generation tool.",
+  "source_records": [
+    "Own 2026-10-20 microwave delivery record and saved grid screenshot",
+    "Repository docs/CASE-STUDIES.md and examples/game-art-studies records, 2026-10-13"
+  ],
+  "files": [
+    {
+      "path": "assets/microwave-before.png",
+      "sha256": "8a51bd11cee5b135e5211431f55bb92f68552cdecbb93e479a54b81ad7b6d6da",
+      "bytes": 1120671,
+      "production_date": "2026-10-20",
+      "role": "Original generated microwave before the grid revision",
+      "status": "candidate / visual observations only",
+      "packaging": "byte-for-byte copy of an existing own-project file"
+    },
+    {
+      "path": "assets/microwave-after.png",
+      "sha256": "2ffc94058cf69b8d62ea4c78c437e48e99ffa572ed71067843a012d890c8f0e4",
+      "bytes": 1092494,
+      "production_date": "2026-10-20",
+      "role": "Original returned PNG after the grid revision",
+      "status": "candidate / visual observations only",
+      "packaging": "byte-for-byte copy of an existing own-project file"
+    },
+    {
+      "path": "assets/microwave-grid.png",
+      "sha256": "84a43084ad9079fae2120a40bf58d81b24126742749aa5c949abbf91231a4c29",
+      "bytes": 369945,
+      "production_date": "2026-10-20",
+      "role": "Previously captured static grid composition; not game runtime",
+      "status": "candidate / visual observations only",
+      "packaging": "byte-for-byte copy of an existing own-project file"
+    },
+    {
+      "path": "assets/lamp-readability.png",
+      "sha256": "96d71e11f64c96fa788e6a3a94d91c10b9e56170953f0234962e126106b0f206",
+      "bytes": 183837,
+      "production_date": "2026-10-13",
+      "role": "Previously captured browser composition; not player or device validation",
+      "status": "candidate / visual observations only",
+      "packaging": "byte-for-byte copy of an existing own-project file"
+    },
+    {
+      "path": "assets/depot-before.jpg",
+      "sha256": "a0e8e1e31dd6f4cadcdf7014a37b357d85e6b356074bd7bfd996f623e48cd310",
+      "bytes": 278545,
+      "production_date": "2026-10-13",
+      "role": "Existing distribution copy of the first concept board",
+      "status": "candidate / visual observations only",
+      "packaging": "byte-for-byte copy of an existing own-project file"
+    },
+    {
+      "path": "assets/depot-after.jpg",
+      "sha256": "199cba23daad35b3234224fcb31bc340e0924b15b49ec0f1e3269122c92c1e99",
+      "bytes": 275134,
+      "production_date": "2026-10-13",
+      "role": "Existing distribution copy after targeted rotor revision",
+      "status": "candidate / visual observations only",
+      "packaging": "byte-for-byte copy of an existing own-project file"
+    },
+    {
+      "path": "assets/lantern-l1.png",
+      "sha256": "e7407707734ea24d162c1052dac8fdd89b7f3da5004f2172252521bc5800db14",
+      "bytes": 136002,
+      "production_date": "2026-10-13",
+      "role": "Existing distribution export; not an original generator canvas",
+      "status": "candidate / visual observations only",
+      "packaging": "byte-for-byte copy of an existing own-project file"
+    },
+    {
+      "path": "assets/lantern-l2.png",
+      "sha256": "ec78d7d410f3ddced5edc2ae043ab968a2e4d504a80c9263e4ce17a585057ddb",
+      "bytes": 122902,
+      "production_date": "2026-10-13",
+      "role": "Existing distribution export; not an original generator canvas",
+      "status": "candidate / visual observations only",
+      "packaging": "byte-for-byte copy of an existing own-project file"
+    },
+    {
+      "path": "assets/lantern-l3.png",
+      "sha256": "64316cfef9e4d06c3fb4a767e48389a8ca1b795004ab9dab1dc2778a6096986a",
+      "bytes": 155346,
+      "production_date": "2026-10-13",
+      "role": "Existing distribution export; not an original generator canvas",
+      "status": "candidate / visual observations only",
+      "packaging": "byte-for-byte copy of an existing own-project file"
+    },
+    {
+      "path": "assets/lantern-l4.png",
+      "sha256": "78456c7330e89af0555712420bdb78dd3e04d55f36001098af358854f296b954",
+      "bytes": 85776,
+      "production_date": "2026-10-13",
+      "role": "Existing distribution export; not an original generator canvas",
+      "status": "candidate / visual observations only",
+      "packaging": "byte-for-byte copy of an existing own-project file"
+    }
+  ]
+}

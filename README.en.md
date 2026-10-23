@@ -57,6 +57,20 @@ Use a tool that supports Agent Skills, such as Codex, Claude Code or Cursor. Giv
 
 Continue existing direction without rebuilding it. Your agent uses its available generation and editing tools; this Skill does not include an image model.
 
+## Make the director's judgment easier to use
+
+“Simpler” or “more consistent” becomes useful when the team can see what to change and what to preserve. Three working records now connect direction, production and review:
+
+| When the team needs help | Use | Original worked example |
+|---|---|---|
+| Understand a visual judgment | An illustrated card: point to the evidence, explain the reason and order of changes | A microwave revised for use inside a game cell |
+| Extend a coherent family with distinct members | A family table: shared rules, visible differences and checks in context | Tidekeeper's four lamp forms |
+| Fix a problem without losing other qualities | A before/after record: actual improvement, preserved features and remaining checks | The depot's targeted rotor revision |
+
+[Method and annotated examples](references/learning-cases/index.md) (Chinese) · [Templates](references/visual-judgment.md) · [Download the updated Skill ZIP, about 3.6 MB](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-judgment-20261023) · [SHA-256](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip.sha256?v=visual-judgment-20261023)
+
+Use only the records the task needs. The method also applies to UI states, component series and channel variants; example styles and measurements are not universal standards. New project packs carry compact versions of the methods. The download includes selected original teaching examples, without test runs, temporary workspaces or build logs.
+
 ## From assets to game worlds
 
 ### Tidekeeper · Merge and restore
@@ -163,7 +177,7 @@ The agent's tools generate images; Compositor edits layers and does not run game
 <details>
 <summary><strong>Project packs, guides and requirements</strong></summary>
 
-Core tools use Python 3.10+ and its standard library; Pillow is optional for pixel checks. You can also [download the current Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=human-story-20261013). Installing the general Skill does not grant access to private team materials.
+Core tools use Python 3.10+ and its standard library; Pillow is optional for pixel checks. You can also [download the current Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-judgment-20261023). Installing the general Skill does not grant access to private team materials.
 
 [Human guide](docs/HUMAN-GUIDE.en.md) · [Agent integration](docs/AGENT-GUIDE.en.md) · [Skill reading edition](docs/SKILL.en.md) · [Game-art quality method](references/game-art-quality.md)
 

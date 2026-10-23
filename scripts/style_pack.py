@@ -578,6 +578,71 @@ def bullets(values) -> str:
     return "\n".join(f"- {markdown_text(value)}" for value in values) or "- 无 / 尚未定义"
 
 
+def production_protocol(categories):
+    """Portable execution method; project facts still come from the pack."""
+    steps = [
+        "用途与范围：先明确做什么、用在哪里、继承什么、可改什么及如何交付。按用途选类别，不按物体名称猜测。后续纠正替代旧清单时记录变化，保留仍有效的项目要求。",
+        "参考与工具：实际查看参考，区分风格、身份、构图、上下文与反例，并记录实际参考输入。跨题材只继承适用的视觉语言，重新设计新对象的识别结构；反例不作为正向风格输入。工具或图像不可用时交付任务书，未观察项保持 unknown。",
+        "表现边界：对照参考分别限制结构层数、厚度与折叠、纹理、明暗与高光。高分辨率不要求更多细节；具体复杂度来自项目，不默认简化或添加写实、精细、3D 等美化词。屏摄噪点、编号和模糊不作为画风继承。",
+        "首件与使用：实际生成或编辑一个有代表性的结果，在同使用尺寸和相近可见主体尺度下比较，再放回目标环境。分开记录源图尺寸、画布内主体大小和显示大小，不能靠缩小或裁剪预览掩盖偏离。首件仍有关键问题时先修正再扩量；已有认可样板和日常授权可复用，不新增逐件审批。",
+    ]
+    if "tile" in categories:
+        steps.append("棋盘检查：按项目声明的单格或多格占位，在实际或注明的试验格子中检查完整轮廓、有效大小、重心、识别部件与邻格间距。同一棋子相邻重复，再与已有种类、等级和状态混排；不只看大图或靠换色区分，也不强迫所有物件变方。静态合成标为示意，未运行不能称为游戏或设备验证。")
+    steps += [
+        "定向修正：记录问题、只改什么、保留什么与实际改善。去纹理后仍有厚结构或强高光时继续修对应层；失败稿持续带偏时回到原参考或仅保留必要身份输入。遵守已有预算与修正检查点，满足任务后交付，不无止境重抽。",
+        "可复用判断：难以传达的取舍用图解判断卡；成套等级、状态或渠道用整链／家族设计表；定向修改用返修前后对照。按需补进已有任务记录，不逐件强填三表。用实际图片说明局部依据、调整顺序与保持项，复查受影响的组合；示例参数、局部改善和用户选中不自动成为全项目标准或批准。",
+        "记录与交付：保存实际工具、可得的模型/参数、提示、参考输入与原始输出，未知值不编造。原始文件、编辑源、导出和使用证据分别记录；PNG 不冒充分层源文件，技术实测、视觉自查、使用验证与主美决定分开。按适用规则留存 pass/fail/unknown 和证据，结构校验不代替艺术批准。",
+        "规则回流：共性缺口回写项目工作版并重新构建和按授权启用，单件瑕疵只修单件。选定交付与过程稿分开，保留版本和未定项；母 Skill 更新不会自动更新成员的旧 ZIP，已固定任务不静默迁移。",
+    ]
+    return steps
+
+
+def judgment_tools(root=None):
+    """Link only to methods actually carried by this pack, including legacy packs."""
+    records = [
+        {"id": "visual-judgment", "title": "图解判断卡", "when": "某个判断难以执行或容易被误解", "guide": "guides/03-delivery-review.md#visual-judgment"},
+        {"id": "family-design", "title": "整链／家族设计表", "when": "等级、状态、分支或渠道需共同继承且可辨", "guide": "guides/03-delivery-review.md#family-design"},
+        {"id": "revision-comparison", "title": "返修前后对照", "when": "验证定向修改及受影响的保持项", "guide": "guides/03-delivery-review.md#revision-comparison"},
+    ]
+    if root is not None:
+        guide = safe_file(root, "guides/03-delivery-review.md", must_exist=False)
+        content = guide.read_text(encoding="utf-8") if guide.is_file() else ""
+        records = [record for record in records if f'<a id="{record["id"]}"></a>' in content]
+    return records
+
+
+def judgment_record_lines():
+    """Small, portable working forms; no new project rules or approval states."""
+    return [
+        "", "## 三种按需使用的判断记录", "",
+        "Agent 先依据已有资料填写，不把空表交给主美。已有任务书可直接补充；单件任务不强造整链，不要求每件资产填写全部记录。图片不可访问时保留文字草案，不能声称已完成图解或视觉验收。",
+        "把记录写在包外的任务工作目录，绑定本任务冻结版本。实际插入图片并指明区域、帧或状态，保留完整图入口；比较时声明缩放、背景与裁切。缩略图或剪影只支持对应问题，不能替代材质、文字、动态或真实运行检查。",
+        "", '<a id="visual-judgment"></a>', "### 图解判断卡", "",
+        "用于把模糊反馈变成可观察、可操作的判断。减少细节时说明应保留的识别、体积和功能；强化某处不能自动给全部部件加对比。局部认可不等于整图批准，参数和画法由本项目决定。", "",
+        "| 填写项 | 实际内容 |", "|---|---|",
+        "| 范围与状态 | 卡片 ID、冻结版本、规则／家族、用途；既有规则解释、新建议或限定例外 |",
+        "| 图例与观察 | 实际文件、完整图入口、区域、比较条件；可见事实与成因假设分开 |",
+        "| 调整与保持 | 为什么调整，先改什么，必要时再改什么；哪些身份、结构与主次必须保留 |",
+        "| 复查与边界 | 用什么视图／组合检查；什么情境不能照用；真实结论、未检查项与决定来源 |",
+        "", '<a id="family-design"></a>', "### 整链／家族设计表", "",
+        "先说明关系：等级、分支、并列、状态转换或渠道适配；不强排高低或预设数量。记录共同继承的规则、参考、用途和参数依据，再按实际成员增删行。", "",
+        "| 成员 ID／实际图 | 用途或状态含义 | 主要识别差异 | 继承／允许变化 | 易混淆对象与依赖 | 组合检查／证据状态 |",
+        "|---|---|---|---|---|---|",
+        "| 据实际清单填写；未产出写计划 | 用户要理解什么 | 在目标环境可感知什么 | 引用共同要求，补差异 | 相邻成员、其他家族或真实内容 | 未观察保留 unknown |", "",
+        "按风险挑选代表成员或组合，例如最简成员、重复结构、易混淆的一对、复杂组合或关键状态转换；仅选适用项，不固定样板数量。升级不能仅依赖编号、数小装饰或换色；非等级状态按自身语义判断。检查单件、成对、整组及必要的跨家族混排；复杂组合增加配件时复查主体是否被挤小。试验尺度不成为正式规格。",
+        "", '<a id="revision-comparison"></a>', "### 返修前后对照", "",
+        "使用实际修前与修后文件；未返修保持未产出，不补造历史失败稿。把计划只改哪里与实际改变哪里分开，不用编辑指令证明其他像素不变。", "",
+        "| 填写项 | 实际内容 |", "|---|---|",
+        "| 输入与目标 | 冻结版本、任务、反馈来源、修前文件、成因假设和授权范围 |",
+        "| 操作与对照 | 实际工具／参考输入／提示或编辑记录，修后文件、观察区域和可比条件 |",
+        "| 改善与保持 | 目标是否改善；身份、功能和主次是否仍成立；新问题与未解决项 |",
+        "| 关系复查 | 依据依赖复查相邻等级、UI 状态、页面或镜头；与单件结论分开 |",
+        "| 结论与去向 | 技术、视觉、真实使用与批准分别记录；继续、回退或换方法按已有预算和授权 |", "",
+        "保留部分改善与错误判断的追加更正，不抹去旧证据。单件修正留任务记录；复用判断回写工作版 rules，家族关系回 direction.families，实际样板回 direction.exemplars，决定和缺口回 decisions / open_questions。没有真实决定不升级批准状态。",
+        "要随包分发，先在工作副本 references 登记选定记录及其引用的每个本地文件，使用相对路径再构建新版；文本说明用 context 供阅读，不能作为图像模型输入。仅引用一份 Markdown 不会自动收集里面的图片。过程稿不必全部进入成员包，已冻结任务不静默升级。",
+    ]
+
+
 def direction_guides(data, fp, release=False):
     """Five views of the same canonical document; never a second rule source."""
     direction = data.get("direction", {})
@@ -588,6 +653,7 @@ def direction_guides(data, fp, release=False):
         return ("\n".join(["# " + title, "", *header, *lines]) + "\n").encode("utf-8")
     index = ["## 入口与责任", "", "主美建立定位、视觉语言、类别/家族与代表样板，再确认交付和发布；成员接收同一个包，按类别与家族创建任务。", "",
              "- [项目定位](01-positioning.md)", "- [美术与组件规范](02-design-system.md)", "- [交付与验收](03-delivery-review.md)", "- [参考与反例](04-reference-guide.md)",
+             "- [图解判断卡](03-delivery-review.md#visual-judgment) · [整链设计表](03-delivery-review.md#family-design) · [返修对照](03-delivery-review.md#revision-comparison)",
              "- [规范源](../style-pack.json)", "- [完整规范](../STYLE.md)", "- [团队执行入口](../SKILL.md)", "",
              "## 当前缺口", "", bullets(data["open_questions"]), "", "## 代表样板计划", "",
              "样板数量和职责由项目决定；计划或候选不能冒充批准样板。组合样板可覆盖多个家族，仍须分别检查各家族要求。"]
@@ -615,19 +681,21 @@ def direction_guides(data, fp, release=False):
     delivery = ["首件确认后再扩批；原始生成、编辑源文件、单件导出、组合检查和批次记录分别留证。以下是项目声明的要求，工具没有自动执行编辑器或艺术验收。", "",
                 "## 检查与批次", "", "成员任务生成的 review.json 初始均为 unknown。实际记录 pass/fail/unknown 与对应证据；unknown 不能当通过。运行包内 scripts/team_batch.py 检查指纹、文件和评审记录，艺术批准由真实负责人作出。"]
     delivery += ["", "## 拿包后实际做一次新任务", "",
-                 "以下是随包携带的制作方法，不是新增项目规则。具体参数仍来自本包类别、家族、实体与交付要求。",
-                 "1. 用收到的包和本次需求制作，逐项记录实际参考输入。需要回原聊天找身份图、字体或隐藏参数时，记为交接缺口，补包升版；不在成员任务中另造共享规范。",
-                 "2. 区分宣传画面与实际使用画面。宣传图中的人物动作、镜头、背景位置不自动成为所有类别的固定要求。先看目标类型、用途、显示尺寸与信息职责。",
-                 "3. 角色的新动作与身份样板并排看脸、发块、比例和固定装饰；场景的前后状态并排看镜头、结构、地面和交互位置。不要因动作或修复而改掉无关身份。",
-                 "4. 物品在目标格内看相邻等级轮廓、有效占比、光源与材料；UI 带上项目自己的资源图标、角色、组件皮肤及真实可编辑文字，检查缺件、可提交、禁用、选中与长文案。字体、按钮质感与玩法职责一起设计；样板截图不替代源文件和依赖。",
-                 "5. 用实际新输出做一次组合，注明任务和版本，检查角色锚点、场景裁切安全区、物品与格子、文字遮挡、焦点和真实密度。横版转竖版另做适配，不直接铺满裁掉交互点。操作生产、合成或交付等本次关键路径，图标、文案和数值必须同步。单件通过不代表组合通过。",
-                 "6. 透明图在浅深背景上实际合成；alpha=0 的 RGB 色晕与可见边缘分开判断。PNG 不冒充有图层源文件，技术通过不代替视觉或引擎通过。",
-                 "7. 记录问题对应的规则与部位、保留项、修改前后文件和复查。共性缺口回写项目包，单件瑕疵只修单件；一个 Agent 的交接自测不称为真人团队或独立盲测。"]
+                 "以下是随包携带的制作方法，不是新增项目规则。具体参数仍来自本包类别、家族、实体与交付要求。需要回原聊天找必要参考或隐藏参数时，记为交接缺口，补包升版。",
+                 *[f"{index}. {step}" for index, step in enumerate(production_protocol(data["scope"]["asset_types"]), 1)],
+                 "", "## 按实际类别补充组合检查", "",
+                 "- 区分宣传画面与实际使用画面。宣传图中的人物动作、镜头、背景位置不自动成为所有类别的固定要求。",
+                 "- 角色的新动作与身份样板并排看脸、发块、比例和固定装饰；场景前后状态并排看镜头、结构、地面和交互位置。",
+                 "- 棋子看相邻等级轮廓与功能差异；UI 带上项目自己的资源图标、角色、组件皮肤及真实可编辑文字，检查缺件、可提交、禁用、选中与长文案。样板截图不替代源文件和依赖。",
+                 "- 用实际新输出做组合，注明任务和版本，检查锚点、裁切安全区、文字遮挡、焦点与真实密度。横版转竖版另做适配。操作本次关键路径，图标、文案和数值同步；单件通过不代表组合通过。",
+                 "- 透明图在浅深背景上实际合成；alpha=0 的 RGB 色晕与可见边缘分开判断。",
+                 "- 一个 Agent 的交接自测不称为真人团队或独立盲测。"]
     for item in direction.get("delivery", []):
         delivery += ["", f"## {item['id']} · {item['name']} · {item['status']}", "类别：" + ", ".join(item["categories"]), "渠道：" + ", ".join(item["channels"]),
                      bullets(item["requirements"]), "```json", json_text(item["technical"]).rstrip(), "```", "来源：" + markdown_text(item["source"])]
     if not direction.get("delivery"):
         delivery += ["", "渠道与交付记录尚未建立；沿用类别 technical 中已有要求，其余由主美明确，不能猜测正式尺寸。"]
+    delivery += judgment_record_lines()
     refs = ["style 决定视觉语言，identity 绑定同一对象，composition 指导布局，context 用于真实尺寸/用途检视；counterexample 仅用于排除，不送入正向图像生成。", "", "批准状态与来源记录不等于工具已检验图像质量或授权人身份。"]
     for item in data["references"]:
         refs += ["", f"## {item['id']} · {item['role']} · {item['status']}", f"[打开材料](../{item['path']})", "适用：" + ", ".join(item["applies_to"]),
@@ -691,7 +759,7 @@ description: {json.dumps(description, ensure_ascii=False)}
 交付状态：{state}。
 内容指纹：`{fp}`。
 
-先读 [资料索引与样板计划](guides/00-index.md)，按需要读取定位、类别/家族、交付和参考手册。五份手册都由同一份 style-pack.json 生成。此包已包含成员运行工具和批次检查器，可以整体解压到新位置使用，无需母 skill 目录。
+先读 [资料索引与样板计划](guides/00-index.md)，按需要读取定位、类别/家族、交付和参考手册。五份手册的项目要求都由同一份 style-pack.json 生成；交付手册另带图解判断卡、整链／家族设计表、返修对照的通用方法与简表，按当前问题选用，不是新增项目标准。此包已包含成员运行工具和批次检查器，可以整体解压到新位置使用，无需母 skill 目录。
 
 若从带 `project.json` 的项目工作区进入，先按工作区 `PROJECT.md` 新建或恢复任务：新任务读取 current，恢复任务读取已固定版本。首次接收包时用包内 `python scripts/project_runtime.py init --pack . --out ../team-workspace` 建立独立工作区；草案必须显式加 `--allow-draft`，只能用于候选探索。此包自身是快照，不自动追踪最新版本。成员描述本次设计需求；结构化任务、类别/家族路由和检查由 Agent 处理。
 
@@ -1017,7 +1085,7 @@ def brief_pack(root: Path, category: str, task: str, entity_id: str | None = Non
              "direction_checks": direction_checks(data, category, family_id),
              "recipes": recipes, "decisions": [d for d in data["decisions"] if d["status"] == "accepted"], "unresolved": unresolved,
              "review": [{"rule_id": r["id"], "strength": r["strength"], "verification": r["verification"], "result": "unknown", "evidence": "", "correction": ""} for r in rules],
-             "workflow": ["Read applicable confirmed rules and approved references; mark candidate/proposed inputs explicitly.", "Inspect image contents before claiming visual understanding; unavailable observations remain unknown.", "Bind identity for a reused entity; keep role-specific references separate and exclude counterexamples from positive references.", "Use only available production tools; if unavailable, hand off this brief without claiming asset generation.", "Record tool/model/settings/seed when available and preserve originals outside the immutable pack.", "Review style, identity, context, readability and technical constraints using pass/fail/unknown with evidence.", "Return version/fingerprint, task, source references, assets, review and unresolved items; structural validation is not artistic approval."]}
+             "workflow": production_protocol([category]), "judgment_tools": judgment_tools(root)}
     if out:
         target = resolve_path(Path(out).expanduser())
         if target.exists():
