@@ -57,6 +57,20 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-d
 
 已有规范就接着完善，不必重做。绘图与编辑由 Agent 调用当前可用工具完成；Skill 不附带图像模型。
 
+## 让主美的判断更容易被执行
+
+“再简洁一点”“保持一致”需要落到具体画面：改哪里、为什么改、哪些部分必须保留。这次新增三种记录，串起建规范、制作和评审：
+
+| 团队遇到的问题 | 使用什么 | 我们自己的案例 |
+|---|---|---|
+| 不理解某个美术判断 | 图解判断卡：指出证据、说明原因和调整顺序 | 微波炉如何调整到格子里 |
+| 整组既要统一，又要分得清 | 整链／家族设计表：共同规则、可辨差异和组合检查 | 潮灯小镇的四种灯具 |
+| 修好一个问题，又破坏了别处 | 返修前后对照：实际改善、保持项复查和未定项 | 补给站的风轮定向返修 |
+
+[看方法与图解案例](references/learning-cases/index.md) · [使用模板](references/visual-judgment.md) · [下载更新包，约 3.6 MB](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-judgment-20261023) · [SHA-256 校验值](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip.sha256?v=visual-judgment-20261023)
+
+按任务需要选用，也适用于 UI 状态、组件系列和渠道适配；案例画风与尺寸不作为通用标准。新构建的项目包会携带简版方法。下载包保留精选原创教学案例，排除测试运行产物、临时工作区和构建日志。
+
 ## 看三个游戏，如何长出各自的世界
 
 ### 潮灯小镇 · 合成与修缮
@@ -163,7 +177,7 @@ npx skills add https://github.com/NewenergyEric/art-director-skill --skill game-
 <details>
 <summary><strong>项目包、说明书与安装要求</strong></summary>
 
-核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可[下载当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=human-story-20261013)。仅安装通用 Skill，不会自动获得团队私有资料。
+核心工具需要 Python 3.10+，使用标准库；像素检查可另装 Pillow。也可[下载当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-judgment-20261023)。仅安装通用 Skill，不会自动获得团队私有资料。
 
 [人类上手说明](docs/HUMAN-GUIDE.zh.md) · [Agent 与工程接入](docs/AGENT-GUIDE.zh.md) · [Skill 入口](docs/SKILL.zh.md) · [游戏美术质量流程](references/game-art-quality.md)
 

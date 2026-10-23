@@ -85,6 +85,7 @@ jobs:
           python scripts/package_release.py --out "$RUNNER_TEMP/art-director-pages.zip"
           mkdir -p _site/downloads
           cp "$RUNNER_TEMP/art-director-pages.zip" _site/downloads/art-director.zip
+          (cd _site/downloads && sha256sum art-director.zip > art-director.zip.sha256)
           python scripts/package_release.py --skill game-art-production --out "$RUNNER_TEMP/game-art-production-pages.zip"
           cp "$RUNNER_TEMP/game-art-production-pages.zip" _site/downloads/game-art-production.zip
       - uses: actions/configure-pages@v5

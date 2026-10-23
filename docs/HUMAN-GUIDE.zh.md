@@ -10,7 +10,7 @@ Art Director 帮主美逐步建立规范，再把规则、样板与交付要求�
 npx skills add https://github.com/NewenergyEric/art-director-skill --skill art-director
 ```
 
-也可以下载[当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-memory-20261013)，交给 Agent 安装。核心脚本需要 Python 3.10+。生成或编辑设计使用宿主中已有的工具；Skill 不附带图像模型。
+也可以下载[当前 Skill ZIP](https://newenergyeric.github.io/art-director-skill/downloads/art-director.zip?v=visual-judgment-20261023)，交给 Agent 安装。核心脚本需要 Python 3.10+。生成或编辑设计使用宿主中已有的工具；Skill 不附带图像模型。
 
 ## 2. 主美从现有资料开始
 

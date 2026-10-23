@@ -8,6 +8,15 @@ import sys
 import zipfile
 
 
+def distribution_file(path: Path, source: Path) -> bool:
+    """Keep intentional teaching resources, not development byproducts."""
+    relative = path.relative_to(source)
+    excluded = {"tests", "evals", "planning", "output", "node_modules", "__pycache__", ".pytest_cache", ".git"}
+    if any(part.lower() in excluded or part.startswith(".tmp-") for part in relative.parts):
+        return False
+    return path.name not in {".DS_Store", "Thumbs.db"} and path.suffix.lower() not in {".pyc", ".pyo", ".log", ".tmp", ".bak"}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", required=True, type=Path)
@@ -38,7 +47,7 @@ def main() -> int:
         files.extend(path for path in (source / folder).rglob("*") if path.is_file())
     if args.skill == "game-art-production":
         files = [path for path in source.rglob("*") if path.is_file() and "__pycache__" not in path.parts and path.suffix != ".pyc"]
-    files = sorted(set(files))
+    files = sorted(path for path in set(files) if distribution_file(path, source))
     for path in files:
         if path.is_symlink():
             parser.error(f"Symlinks are not packaged: {path}")

@@ -18,6 +18,8 @@
 
 这是同一规范的不同阅读视图。编译器忠实整理已有数据；专业内容由 Agent 按[总监工作流](director-workflow.md)结合资料起草和完善，不能用空数组生成几份文档就宣布建项完成。
 
+新构建包的交付手册还携带图解判断卡、整链／家族设计表、返修前后对照的通用方法与简表，成员 brief 的 `judgment_tools` 只链接该包内实际存在的章节。方法不新增项目参数、规则或批准；旧包缺少这些章节时不伪造链接，也不静默改写旧包。母 Skill 的原创教学图不默认进入项目包。要交接本项目的判断案例，先在工作副本 `references` 登记说明及它引用的每个本地文件，再构建新版本；只登记 Markdown 不会递归收集内嵌图片。
+
 实际字段以 [JSON 模板](../templates/style-pack.template.json) 和 `scripts/style_pack.py` 的校验为准。本版 schema 为 `1.0`，色彩和字体是项目自有的简单 token 表达，不声明 DTCG 兼容。
 
 `project.domain` 是非空业务场景，例如 `game-art`、`ecommerce` 或 `brand-ui`。类别可选 character/environment/prop/ui/tile/motion/product/graphic/layout/typography，只使用项目声明的部分。可选的 `profiles.*.task_controls`、`direction.families[].task_controls`、`entities[].task_controls` 与 `entities[].aliases` 仍在唯一 JSON 中并进入包指纹；运行层另行校验变量、别名、探索预算和组合任务。单独的 `style_pack validate` 不证明所有运行请求有效。
@@ -98,6 +100,8 @@ python scripts/style_pack.py build PACK --out NEW_RELEASE_DIR --release
 ## 版本与交付
 
 当前新构建包的 manifest `format` 为 `team-v1`，自带 `scripts/style_pack.py`、`scripts/project_runtime.py`、`scripts/team_batch.py`，可解压到另一目录按包内入口使用。旧版无 format 的已构建包仍按旧格式核验；它不会因母 skill 更新就自动长出新工具和手册。使用新功能时，从源数据另建新包，保留旧包。
+
+参考制作的执行方法随新构建包进入交付手册、`brief.workflow` 和成员任务书；其中棋盘检查仅在任务涉及 `tile` 时接入，包括组合中的棋子组件。方法不增加项目规格或批准状态。复杂度边界、显示条件及依据仍来自原有规则和 `technical` 等字段，schema 继续为 `1.0`；旧包和旧任务不会被自动改写。
 
 Agent 可直接用新包内的 `project_runtime.py init --pack BUILT --out NEW_WORKSPACE` 接入项目，生成 PROJECT.md、AGENTS.md、current 指针与工具副本；[成员指南](member-workflow.md)说明后续操作。包固定一版规范，工作区选择新任务所用版本并保存旧任务。草稿试用显式加 `--allow-draft`，不将其改称已批准生产包。生图、PS/Figma、引擎等工具按实际任务和环境接入；运行层管理任务，不自动安装宿主配置或跨电脑同步。
 
